@@ -152,6 +152,14 @@ bash scripts/restore-deps.sh  # 恢复 feedparser + setuptools
 配置：`~/.zshrc`、`~/.bashrc`、`/etc/passwd`、`/etc/bash.bashrc`、`/etc/profile.d/aliases.sh`
 Playwright：`npx playwright install chromium` + `npx playwright install-deps chromium`
 
+## Git 仓库
+
+- **远程仓库**：https://github.com/alloevil/openclaw-workspace
+- **分支**：master
+- **认证**：token 存于 `~/.openclaw/.git_token`（chmod 600），已嵌入 remote URL
+- **容器重建恢复**：重新执行 `git remote add origin https://$(cat ~/.openclaw/.git_token)@github.com/alloevil/openclaw-workspace.git`
+- **Changelog 同步**：cron 10:00 自动 fetch + commit + push
+
 ## 软件工程工具
 
 ### 技术偏好
