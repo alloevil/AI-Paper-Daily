@@ -37,3 +37,5 @@ knowledge/
 pretext-term/
 .git-credentials
 .zincconfig
+.git_token
+*.key
