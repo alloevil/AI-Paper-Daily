@@ -2,6 +2,151 @@ export default [
   // ==================== OpenClaw ====================
   {
     project: "openclaw",
+    version: "2026.6.6",
+    date: "2026-06-12",
+    tag: "v2026.6.6",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.6",
+    prerelease: false,
+    highlights_zh: [
+      "安全边界全面收紧：涵盖转录、沙箱绑定、主机环境继承、MCP stdio、Codex HTTP 访问、原生搜索策略、提权发送者检查、已删除 Agent ACP 绕过、环回工具、Discord 审核和 Teams 群操作；exec 审批超时现在默认拒绝",
+      "Telegram 投递更安全：账户作用域 topic 路由到正确 Agent、流式文本在工具调用后存活、/compact 在通用入口工作、持久化 dispatch 去重移入 SDK、未授权 DM 文本不再进入缓存和 prompt 上下文",
+      "iMessage 恢复和投递改进：常驻入站重启、持久化 echo 标记、块流式传输、空闲审批发现、加固出站传输和可操作入站启动诊断",
+      "浏览器和 MCP 连接性增强：现有会话 CDP 支持、发现的 WebSocket 验证、默认配置文件 cdpUrl 处理、更安全的浏览器输出边界、Streamable HTTP 环回传输、OAuth/SSE 授权修正和更广泛 schema 兼容性",
+      "Control UI 启动和首回复延迟降低：缓存模型元数据、移除启动目录等待、延迟加载斜杠命令和首事件追踪及慢回复诊断",
+      "Provider 支持扩展：新增 OpenRouter OAuth 引导和 Claude Fable 5 自适应思考，Codex 会话保持正确压缩所有权，本地模型跳过 guardian 审查，动态工具进度正常化，Gemma 4 推理回放保留"
+    ]
+  },
+  {
+    project: "openclaw",
+    version: "2026.6.6-beta.2",
+    date: "2026-06-12",
+    tag: "v2026.6.6-beta.2",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.6-beta.2",
+    prerelease: true,
+    highlights_zh: [
+      "安全边界全面收紧：涵盖转录、沙箱绑定、主机环境继承、MCP stdio、Codex HTTP 访问、原生搜索策略、提权发送者检查、已删除 Agent ACP 绕过、环回工具、Discord 审核和 Teams 群操作；exec 审批超时现在默认拒绝",
+      "Telegram 投递更安全：账户作用域 topic 路由到正确 Agent、流式文本在工具调用后存活、/compact 在通用入口工作、持久化 dispatch 去重移入 SDK、未授权 DM 文本不再进入缓存和 prompt 上下文",
+      "iMessage 恢复和投递改进：常驻入站重启、持久化 echo 标记、块流式传输、空闲审批发现、加固出站传输和可操作入站启动诊断",
+      "浏览器和 MCP 连接性增强：现有会话 CDP 支持、发现的 WebSocket 验证、默认配置文件 cdpUrl 处理、更安全的浏览器输出边界、Streamable HTTP 环回传输、OAuth/SSE 授权修正和更广泛 schema 兼容性",
+      "Control UI 启动和首回复延迟降低：缓存模型元数据、移除启动目录等待、延迟加载斜杠命令和首事件追踪及慢回复诊断",
+      "Provider 支持扩展：新增 OpenRouter OAuth 引导和 Claude Fable 5 自适应思考，Codex 会话保持正确压缩所有权，本地模型跳过 guardian 审查，动态工具进度正常化，Gemma 4 推理回放保留"
+    ]
+  },
+  {
+    project: "openclaw",
+    version: "2026.6.6-beta.1",
+    date: "2026-06-10",
+    tag: "v2026.6.6-beta.1",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.6-beta.1",
+    prerelease: true,
+    highlights_zh: [
+      "安全边界全面收紧：涵盖转录、沙箱绑定、主机环境继承、MCP stdio、Codex HTTP 访问、原生搜索策略、提权发送者检查、已删除 Agent ACP 绕过、环回工具、Discord 审核和 Teams 群操作；exec 审批超时现在默认拒绝",
+      "Telegram 投递更安全：账户作用域 topic 路由到正确 Agent、流式文本在工具调用后存活、/compact 在通用入口工作、持久化 dispatch 去重移入 SDK、未授权 DM 文本不再进入缓存和 prompt 上下文",
+      "iMessage 恢复和投递改进：常驻入站重启、持久化 echo 标记、块流式传输、空闲审批发现、加固出站传输和可操作入站启动诊断",
+      "浏览器和 MCP 连接性增强：现有会话 CDP 支持、发现的 WebSocket 验证、默认配置文件 cdpUrl 处理、更安全的浏览器输出边界、Streamable HTTP 环回传输、OAuth/SSE 授权修正和更广泛 schema 兼容性",
+      "Control UI 启动和首回复延迟降低：缓存模型元数据、移除启动目录等待、延迟加载斜杠命令和首事件追踪",
+      "Provider 支持扩展：新增 OpenRouter OAuth 引导和 Claude Fable 5 自适应思考，Codex 会话保持正确压缩所有权，本地模型跳过 guardian 审查，Gemma 4 推理回放保留"
+    ]
+  },
+  {
+    project: "openclaw",
+    version: "2026.6.5-beta.5",
+    date: "2026-06-08",
+    tag: "v2026.6.5-beta.5",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.5-beta.5",
+    prerelease: true,
+    highlights_zh: [
+      "QQBot 发送前剥离模型推理/思考标签，防止原始 <thinking> 内容泄露到通道回复",
+      "MCP 工具结果在 materialize 边界强制转换 resource_link、resource、audio、格式错误的 image 及未来非文本/图片块，防止 Anthropic 400 错误和污染会话历史",
+      "Anthropic 扩展思考会话在 prompt-cache 过期或 Gateway 重启后恢复，stream start 事件等待 message_start 使预生成签名错误触发现有恢复重试",
+      "Parallel 成为内置 web_search 提供商，支持 PARALLEL_API_KEY 发现、受保护端点处理、缓存安全会话 ID、onboarding picker 和文档",
+      "Google Vertex ADC 用户重新获得静态 catalog 行和运行时模型解析，单提供商冷却恢复和内存适配器状态检查更可靠",
+      "Matrix 支持语音消息预检和线程感知读/回复行为，语音和线程流程有 QA 覆盖",
+      "认证和插件安装状态迁移到 SQLite，官方 npm 插件安装记录保留可信 pin，预发布回退完整性检查避免携带过期完整性",
+      "Agent、工具和 Provider 循环对 MCP lease 时间戳、prompt-cache 工具名、本地工具目录、不可读动态工具、仅所有者 HTTP 工具和 Provider 目录元数据更严格，减少隐藏重试和不安全暴露",
+      "macOS 节点模式不再静默重连离开健康直连 Gateway 会话，减少意外 companion app 会话切换",
+      "升级和服务路径更安全：cron 遗留 JSON 存储在 doctor 预检时迁移到 SQLite，服务 env 占位符不再掩盖 state-dir 密钥，WhatsApp 启动等待有上限，禁用 WhatsApp 账户在配置重载时正确清理"
+    ]
+  },
+  {
+    project: "openclaw",
+    version: "2026.6.5-beta.2",
+    date: "2026-06-07",
+    tag: "v2026.6.5-beta.2",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.5-beta.2",
+    prerelease: true,
+    highlights_zh: [
+      "QQBot 发送前剥离模型推理/思考标签，防止原始 <thinking> 内容泄露到通道回复",
+      "MCP 工具结果在 materialize 边界强制转换 resource_link、resource、audio、格式错误的 image 及未来非文本/图片块，防止 Anthropic 400 错误和工具返回更丰富 MCP 内容时污染会话历史",
+      "Anthropic 扩展思考会话在 prompt-cache 过期或 Gateway 重启后恢复，因为 stream start 事件等待 message_start，使预生成签名错误触发现有恢复重试",
+      "Parallel 成为内置 web_search 提供商，支持 PARALLEL_API_KEY 发现、受保护端点处理、缓存安全会话 ID、onboarding picker 和文档",
+      "Google Vertex ADC 用户重新获得静态 catalog 行和运行时模型解析，单提供商冷却恢复和内存适配器状态检查更可靠",
+      "Matrix 支持语音消息预检和线程感知读/回复行为，语音和线程流程有 QA 覆盖",
+      "认证和插件安装状态更持久：认证配置文件迁移到 SQLite，官方 npm 插件安装记录保留可信 pin，预发布回退完整性检查避免携带过期完整性",
+      "macOS 节点模式不再静默重连离开健康直连 Gateway 会话，减少意外 companion app 会话切换",
+      "升级和服务路径更安全：cron 遗留 JSON 存储在 doctor 预检时迁移，服务 env 占位符不再掩盖 state-dir 密钥，WhatsApp 启动等待有上限，禁用 WhatsApp 账户在配置重载时正确清理"
+    ]
+  },
+  {
+    project: "openclaw",
+    version: "2026.6.5",
+    date: "2026-06-09",
+    tag: "v2026.6.5",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.5",
+    prerelease: false,
+    highlights_zh: [
+      "QQBot 发送前剥离模型推理/思考标签，防止原始 <thinking> 内容泄露到通道回复",
+      "MCP 工具结果在 materialize 边界强制转换非文本/图片块，防止 Anthropic 400 错误",
+      "Anthropic 扩展思考会话在 prompt-cache 过期或 Gateway 重启后恢复",
+      "Parallel 成为内置 web_search 提供商，支持 PARALLEL_API_KEY 发现和受保护端点处理",
+      "Google Vertex ADC 用户重新获得静态 catalog 行和运行时模型解析",
+      "Matrix 支持语音消息预检和线程感知读/回复行为",
+      "认证和插件安装状态迁移到 SQLite，更持久可靠",
+      "macOS 节点模式不再静默重连离开健康直连 Gateway 会话",
+      "ClawHub 技能支持通过 GitHub 仓库安装，保留 install-policy 检查和遥测报告",
+      "Google Chat 原生审批卡片操作和点击处理",
+      "版本命名切换为 YYYY.M.PATCH 月度补丁编号"
+    ]
+  },
+  {
+    project: "openclaw",
+    version: "2026.6.2-beta.1",
+    date: "2026-06-03",
+    tag: "v2026.6.2-beta.1",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.2-beta.1",
+    prerelease: true,
+    highlights_zh: [
+      "插件和技能安装改用 operator install policy 替代旧的危险代码扫描路径，doctor、CLI、ClawHub 和故障排除界面更清晰",
+      "Telegram、飞书、Discord、WhatsApp 等通道的投递路径更安全，修复了重复转录镜像、Telegram 管理员回写、流式预览、审批白名单等问题",
+      "聊天、Control UI、Skill Workshop、Workboard、Android 伴侣和 WebChat 流程改进：保留可见流式文本、协调完成发送、暴露 ACK 计时、新增 Workboard 键盘移动、强化对话框可访问性、延迟加载用量视图",
+      "安全、策略和配置恢复现在拒绝损坏的 shell 快照、不支持的策略键、不安全的 exec 审批预检环境和可疑的网关启动配置",
+      "网关、Agent、Codex、Provider、模型和内存路径恢复了会话写锁释放失败、废弃的 Codex app-server 启动、stream-to-parent ACP spawn、自定义 Provider 运行时扇出、bundled Provider 别名、prompt-cache 边界、Gemini stop sequences 和 Kimi cache markers",
+      "发布、CI、Docker、Crabbox/Testbox 和 E2E 验证流水线对更多网络调用、数字限制、进程组、清理泄漏和 Windows 安装发布进行了边界限制"
+    ]
+  },
+  {
+    project: "openclaw",
+    version: "2026.6.1",
+    date: "2026-06-03",
+    tag: "v2026.6.1",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.1",
+    prerelease: false,
+    highlights_zh: [
+      "Agent 和 CLI 运行时对中断的工具调用、过期会话绑定、压缩交接和媒体投递重试的恢复更加稳定",
+      "跨 Telegram、WhatsApp、iMessage、Slack、Discord、Microsoft Teams、Google Chat、Google Meet 和 iOS 实时 Talk 的通道和移动端投递更加可靠",
+      "Provider 和插件请求现在对定时器、重试、OAuth/设备码生命周期、媒体下载、本地服务探测和生成内容轮询路径进行了更严格的限制，防止运行挂起",
+      "Skills、会话元数据、网关运行时状态、插件元数据、内存监视器和存储写入在热路径上减少了重复工作，同时保持配置、分发和 Linux 文件监视行为稳定",
+      "Skills 和插件加载现在更清晰地处理过期的禁用快照和加载器失败，通道轮次避免使用禁用的 SecretRef，运维人员获得更好的恢复指引",
+      "Workboard、SecretRef 插件清单、托管 iOS 推送中继和外部 Copilot/Tokenjuice 打包新增更广泛的编排、集成和插件投递能力",
+      "Skill Workshop 现在拥有更完整的 Control UI 流程：提案列表、今日操作、修订交接、可搜索文件预览、审查状态、本地化覆盖和可复用会话路由",
+      "聊天和 Control UI 启动路径在历史加载期间保持发送活跃、增量流式传输、跳过 Markdown 解析、保持本地草稿、追踪首输出延迟并暴露更平和的编辑器控件",
+      "Provider 覆盖和模型元数据新增 MiniMax M3、账户 OAuth 端点、Google/Vertex 目录修复、OpenRouter SQLite 模型缓存、Copilot Claude 1M 能力、Foundry 推理对齐和 OpenAI 响应重放保护",
+      "iMessage 监控状态、入站队列和插件安装账本迁移到 SQLite 支持的状态，重启和本地监控恢复时减少重复的文件系统扫描",
+      "发布、CI、Docker、E2E、插件安装和诊断流水线现在对日志、响应体、就绪探针、制品检查、状态轮询、子工作流等待、Docker 包清理和回滚快照进行上限限制，失败时报告有界证据而非挂起"
+    ]
+  },
+  {
+    project: "openclaw",
     version: "2026.6.1-beta.2",
     date: "2026-06-02",
     tag: "v2026.6.1-beta.2",
@@ -186,5 +331,24 @@ export default [
   },
 
   // ==================== Hermes Agent ====================
-  // hermes-agent/hermes-agent 仓库不存在（GitHub API 返回 404），跳过
+  {
+    project: "hermes-agent",
+    version: "0.16.0",
+    date: "2026-06-05",
+    tag: "v2026.6.5",
+    url: "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.5",
+    prerelease: false,
+    highlights_zh: [
+      "全新 Hermes Desktop 原生桌面应用：基于 Electron 构建，支持 macOS/Linux/Windows，一键安装、应用内自更新、拖拽文件到聊天、Cmd+K 命令面板、状态栏内联模型选择器、多配置文件并发会话、完整简体中文翻译",
+      "桌面应用支持远程网关连接：可连接远程 Hermes 网关（家庭服务器、托管服务器等），通过 OAuth 或用户名/密码认证，无需手动配置 session token，每个配置文件可指向不同远程主机",
+      "Web 仪表板升级为完整管理面板：新增 MCP 目录管理、消息通道配置、凭据管理、Webhook 创建、内存配置、网关控制等，无需 SSH 编辑 config.yaml",
+      "精简默认技能集：移除冗余技能（spotify、linear 等），重技能移至可选安装，新增 environments 相关性过滤门控，技能选择器噪音更少",
+      "NVIDIA/skills 成为内置信任技能源：与 OpenAI、Anthropic、HuggingFace 并列，CUDA-X、AIQ、cuOpt 等 NVIDIA 技能一键安装",
+      "快速设置通过 Nous Portal：首次设置简化为两条路径——快速设置（Nous Portal 登录即聊）和完整设置（高级用户向导）",
+      "模糊搜索模型选择器：桌面/Web/TUI/CLI 全端支持模糊搜索，新增 deepseek-v4-flash、MiniMax-M3（1M 上下文）、qwen3.7-plus，模型目录每小时刷新",
+      "/undo [N] 支持撤销最近 N 轮对话：CLI、TUI 和消息平台（Telegram、Discord 等）均支持",
+      "默认界面可选：可设置 hermes chat 默认进入 CLI 或 TUI，--cli 标志可按次覆盖",
+      "安全修复：Starlette 版本固定（CVE-2026-48710）、SSRF 离环加固、子进程凭据剥离，关闭 2 个 P0 和 62 个 P1 issue"
+    ]
+  }
 ];

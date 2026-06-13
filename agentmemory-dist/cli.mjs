@@ -1,0 +1,3284 @@
+#!/usr/bin/env node
+import { createRequire } from "node:module";
+import { execFileSync, spawn, spawnSync } from "node:child_process";
+import { closeSync, constants, copyFileSync, existsSync, fsyncSync, mkdirSync, openSync, readFileSync, readdirSync, readlinkSync, renameSync, rmSync, statSync, unlinkSync, writeFileSync, writeSync } from "node:fs";
+import { delimiter, dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { homedir, platform } from "node:os";
+import * as p from "@clack/prompts";
+import { createHash } from "node:crypto";
+import { copyFile, mkdir } from "node:fs/promises";
+
+//#region \0rolldown/runtime.js
+var __defProp = Object.defineProperty;
+var __exportAll = (all, no_symbols) => {
+	let target = {};
+	for (var name in all) {
+		__defProp(target, name, {
+			get: all[name],
+			enumerable: true
+		});
+	}
+	if (!no_symbols) {
+		__defProp(target, Symbol.toStringTag, { value: "Module" });
+	}
+	return target;
+};
+
+//#endregion
+//#region src/state/schema.ts
+const KV = {
+	sessions: "mem:sessions",
+	observations: (sessionId) => `mem:obs:${sessionId}`,
+	memories: "mem:memories",
+	summaries: "mem:summaries",
+	config: "mem:config",
+	metrics: "mem:metrics",
+	health: "mem:health",
+	embeddings: (obsId) => `mem:emb:${obsId}`,
+	bm25Index: "mem:index:bm25",
+	relations: "mem:relations",
+	profiles: "mem:profiles",
+	claudeBridge: "mem:claude-bridge",
+	graphNodes: "mem:graph:nodes",
+	graphEdges: "mem:graph:edges",
+	semantic: "mem:semantic",
+	procedural: "mem:procedural",
+	teamShared: (teamId) => `mem:team:${teamId}:shared`,
+	teamUsers: (teamId, userId) => `mem:team:${teamId}:users:${userId}`,
+	teamProfile: (teamId) => `mem:team:${teamId}:profile`,
+	audit: "mem:audit",
+	actions: "mem:actions",
+	actionEdges: "mem:action-edges",
+	leases: "mem:leases",
+	routines: "mem:routines",
+	routineRuns: "mem:routine-runs",
+	signals: "mem:signals",
+	checkpoints: "mem:checkpoints",
+	mesh: "mem:mesh",
+	sketches: "mem:sketches",
+	facets: "mem:facets",
+	sentinels: "mem:sentinels",
+	crystals: "mem:crystals",
+	lessons: "mem:lessons",
+	insights: "mem:insights",
+	graphEdgeHistory: "mem:graph:edge-history",
+	enrichedChunks: (sessionId) => `mem:enriched:${sessionId}`,
+	latentEmbeddings: (obsId) => `mem:latent:${obsId}`,
+	retentionScores: "mem:retention",
+	accessLog: "mem:access",
+	imageRefs: "mem:image-refs",
+	imageEmbeddings: "mem:image-embeddings",
+	slots: "mem:slots",
+	globalSlots: "mem:slots:global",
+	state: "mem:state",
+	commits: "mem:commits"
+};
+const STREAM = {
+	name: "mem-live",
+	group: (sessionId) => sessionId,
+	viewerGroup: "viewer"
+};
+function generateId(prefix) {
+	return `${prefix}_${Date.now().toString(36)}_${crypto.randomUUID().replace(/-/g, "").slice(0, 12)}`;
+}
+function fingerprintId(prefix, content) {
+	return `${prefix}_${createHash("sha256").update(content).digest("hex").slice(0, 16)}`;
+}
+function jaccardSimilarity(a, b) {
+	const setA = new Set(a.split(/\s+/).filter((t) => t.length > 2));
+	const setB = new Set(b.split(/\s+/).filter((t) => t.length > 2));
+	if (setA.size === 0 && setB.size === 0) return 1;
+	if (setA.size === 0 || setB.size === 0) return 0;
+	let intersection = 0;
+	for (const word of setA) if (setB.has(word)) intersection++;
+	return intersection / (setA.size + setB.size - intersection);
+}
+
+//#endregion
+//#region src/cli/doctor-diagnostics.ts
+/** Common placeholder values shipped in .env.example. */
+const PLACEHOLDER_VALUES = new Set([
+	"",
+	"your-key-here",
+	"sk-ant-...",
+	"sk-...",
+	"changeme",
+	"todo",
+	"xxx"
+]);
+const PROVIDER_KEY_NAMES = [
+	"ANTHROPIC_API_KEY",
+	"OPENAI_API_KEY",
+	"GEMINI_API_KEY",
+	"GOOGLE_API_KEY",
+	"OPENROUTER_API_KEY",
+	"MINIMAX_API_KEY"
+];
+function parseEnvFile(content) {
+	const out = {};
+	for (const rawLine of content.split(/\r?\n/)) {
+		const line = rawLine.trim();
+		if (!line || line.startsWith("#")) continue;
+		const eq = line.indexOf("=");
+		if (eq < 0) continue;
+		const key = line.slice(0, eq).trim();
+		let value = line.slice(eq + 1).trim();
+		if (value.startsWith("\"") && value.endsWith("\"") || value.startsWith("'") && value.endsWith("'")) value = value.slice(1, -1);
+		out[key] = value;
+	}
+	return out;
+}
+/** Returns the list of provider keys that look real (non-placeholder). */
+function realProviderKeys(env) {
+	return PROVIDER_KEY_NAMES.filter((k) => {
+		const v = (env[k] ?? "").trim();
+		if (!v) return false;
+		if (PLACEHOLDER_VALUES.has(v.toLowerCase())) return false;
+		if (/^x+$/i.test(v.replace(/[-_]/g, ""))) return false;
+		return true;
+	});
+}
+/** Returns the list of provider key NAMES that exist but are placeholders. */
+function placeholderProviderKeys(env) {
+	return PROVIDER_KEY_NAMES.filter((k) => {
+		const v = (env[k] ?? "").trim();
+		if (!v) return false;
+		if (PLACEHOLDER_VALUES.has(v.toLowerCase())) return true;
+		if (/^x+$/i.test(v.replace(/[-_]/g, ""))) return true;
+		return false;
+	});
+}
+function buildDiagnostics(effects) {
+	return [
+		{
+			id: "env-missing",
+			message: "~/.agentmemory/.env is missing.",
+			fixPreview: "Copy .env.example into ~/.agentmemory/.env (your keys file).",
+			moreInfo: "agentmemory reads provider API keys (Anthropic, OpenAI, Gemini, …) from ~/.agentmemory/.env. Without this file the daemon falls back to BM25-only search and no LLM-backed enrichment runs.",
+			check: async () => ({
+				ok: effects.envFileExists(),
+				detail: effects.envFileExists() ? void 0 : "no env file"
+			}),
+			fix: () => effects.runInit()
+		},
+		{
+			id: "no-llm-provider-key",
+			message: "No LLM provider API key found in ~/.agentmemory/.env.",
+			fixPreview: "Open ~/.agentmemory/.env in $EDITOR and paste your key, then re-check.",
+			moreInfo: "Set at least one of: ANTHROPIC_API_KEY, OPENAI_API_KEY, GEMINI_API_KEY, OPENROUTER_API_KEY, MINIMAX_API_KEY. The daemon picks the first that resolves to a real (non-placeholder) value at startup.",
+			check: async () => {
+				if (!effects.envFileExists()) return {
+					ok: false,
+					detail: "env file missing (run env-missing fix first)"
+				};
+				const real = realProviderKeys(effects.readEnvFile());
+				return {
+					ok: real.length > 0,
+					detail: real.length > 0 ? `found: ${real.join(", ")}` : "no provider key set"
+				};
+			},
+			fix: (ctx) => effects.openEditor(ctx.envPath)
+		},
+		{
+			id: "engine-version-mismatch",
+			message: "iii binary on PATH doesn't match the version agentmemory pins to.",
+			fixPreview: "Re-run the iii installer for the pinned version and restart the engine.",
+			moreInfo: "agentmemory pins the iii engine to a specific release because newer engines use a different worker model. Running a mismatched binary surfaces as EPIPE reconnect loops and empty search results.",
+			check: async (ctx) => {
+				const bin = effects.findIiiBinary();
+				if (!bin) return {
+					ok: false,
+					detail: "iii not on PATH"
+				};
+				const v = effects.iiiBinaryVersion(bin);
+				if (!v) return {
+					ok: false,
+					detail: "iii on PATH but --version failed"
+				};
+				return {
+					ok: v === ctx.pinnedVersion,
+					detail: `${v} (pinned ${ctx.pinnedVersion})`
+				};
+			},
+			fix: async () => {
+				const r = await effects.runIiiInstaller();
+				if (!r.ok) return r;
+				await effects.runStop();
+				return effects.runStart();
+			}
+		},
+		{
+			id: "viewer-unreachable",
+			message: "Viewer port not reachable.",
+			fixPreview: "Stop the engine, restart it, and retry the viewer probe.",
+			moreInfo: "The viewer is served on REST port + 2 (default 3113). If it never came up the most common cause is port collision; a sibling PR ships auto-bump for this case. If that lands first this check just verifies; otherwise restart the engine to retry binding.",
+			check: async () => ({
+				ok: await effects.viewerReachable(),
+				detail: void 0
+			}),
+			fix: async () => {
+				const stopped = await effects.runStop();
+				if (!stopped.ok) return stopped;
+				return effects.runStart();
+			}
+		},
+		{
+			id: "stale-pidfile",
+			message: "Stale pidfile: pid recorded but the process is gone.",
+			fixPreview: "Clear ~/.agentmemory/iii.pid + engine-state.json, then restart.",
+			moreInfo: "When the engine crashes hard (kill -9, OOM, host reboot) the pidfile sticks around. agentmemory refuses to start a second engine on top of a stale pid, so this state must be cleared explicitly.",
+			check: async () => {
+				if (!effects.pidfileExists()) return {
+					ok: true,
+					detail: "no pidfile"
+				};
+				const alive = effects.pidfilePidIsAlive();
+				if (alive === null) return {
+					ok: true,
+					detail: "pidfile unreadable"
+				};
+				return {
+					ok: alive,
+					detail: alive ? "pid is alive" : "pid is gone"
+				};
+			},
+			fix: async () => {
+				effects.clearEnginePidAndState();
+				return effects.runStart();
+			}
+		},
+		{
+			id: "env-placeholder-keys",
+			message: "~/.agentmemory/.env contains placeholder/empty API keys.",
+			fixPreview: "Open ~/.agentmemory/.env in $EDITOR to paste real values.",
+			moreInfo: "Lines like ANTHROPIC_API_KEY=sk-ant-... or =your-key-here are treated as absent. The daemon will fall back to BM25-only search. Replace placeholders with real keys or comment the line out.",
+			check: async () => {
+				if (!effects.envFileExists()) return {
+					ok: true,
+					detail: "env file missing (handled by env-missing)"
+				};
+				const placeholders = placeholderProviderKeys(effects.readEnvFile());
+				return {
+					ok: placeholders.length === 0,
+					detail: placeholders.length === 0 ? void 0 : `placeholder: ${placeholders.join(", ")}`
+				};
+			},
+			fix: (ctx) => effects.openEditor(ctx.envPath)
+		},
+		{
+			id: "iii-on-path-not-local-bin",
+			message: "iii is on PATH but not in ~/.local/bin/iii (where we install).",
+			fixPreview: "Suggest re-installing the pinned version via the installer — won't touch your PATH.",
+			moreInfo: "agentmemory's installer writes to ~/.local/bin/iii. When a user-managed iii lives somewhere else (homebrew, cargo, $XDG_BIN) we don't auto-overwrite it. If you want our pinned build, run the installer; otherwise this is informational.",
+			manualOnly: true,
+			check: async () => {
+				const bin = effects.findIiiBinary();
+				if (!bin) return {
+					ok: true,
+					detail: "iii not on PATH (handled elsewhere)"
+				};
+				const localBin = effects.localBinIiiPath();
+				return {
+					ok: bin === localBin,
+					detail: bin === localBin ? void 0 : `iii at: ${bin}`
+				};
+			},
+			fix: async () => effects.runIiiInstaller().then((r) => ({
+				ok: r.ok,
+				message: r.message ?? "Installer wrote to ~/.local/bin/iii. Your PATH wasn't modified — adjust it yourself if needed."
+			}))
+		}
+	];
+}
+/**
+* Dry-run output: each failing check's fix preview, prefixed by the diagnostic
+* message. Pure function so we can snapshot-test the format.
+*/
+function dryRunPlan(ctx, results) {
+	const lines = [];
+	let n = 0;
+	for (const { diagnostic, status } of results) {
+		if (status.ok) continue;
+		n++;
+		lines.push(`${n}. [${diagnostic.id}] ${diagnostic.message}`);
+		lines.push(`   would fix: ${diagnostic.fixPreview}`);
+		if (status.detail) lines.push(`   detail: ${status.detail}`);
+	}
+	if (lines.length === 0) lines.push(`All checks passing for ${ctx.baseUrl} — no fixes to run.`);
+	return lines;
+}
+
+//#endregion
+//#region src/cli/remove-plan.ts
+function pidfilePath(home) {
+	return join(home, ".agentmemory", "iii.pid");
+}
+function enginePath(home) {
+	return join(home, ".agentmemory", "engine-state.json");
+}
+function envPath(home) {
+	return join(home, ".agentmemory", ".env");
+}
+function preferencesPath(home) {
+	return join(home, ".agentmemory", "preferences.json");
+}
+function backupsDir$1(home) {
+	return join(home, ".agentmemory", "backups");
+}
+function dataDir(home) {
+	return join(home, ".agentmemory", "data");
+}
+function localBinIii(home) {
+	return join(home, ".local", "bin", "iii");
+}
+function safeSize(path) {
+	try {
+		return statSync(path).size;
+	} catch {
+		return -1;
+	}
+}
+function pathExists(path) {
+	try {
+		return existsSync(path);
+	} catch {
+		return false;
+	}
+}
+/**
+* Build the destruction plan for `agentmemory remove`.
+*
+* Plan items are returned regardless of whether `applicable` is true — the
+* caller can decide whether to skip-and-log or hide entirely. This keeps
+* the structure stable for tests.
+*/
+function buildRemovePlan(ctx, options) {
+	const { home, pinnedVersion, localBinIiiVersion, connectManifest } = ctx;
+	const plan = [];
+	plan.push({
+		id: "stop-engine",
+		description: "Stop running iii-engine (if any) cleanly",
+		path: null,
+		alwaysAsk: false,
+		applicable: pathExists(pidfilePath(home)) || pathExists(enginePath(home)),
+		sizeBytes: -1
+	});
+	plan.push({
+		id: "pidfile",
+		description: "Delete pidfile",
+		path: pidfilePath(home),
+		alwaysAsk: false,
+		applicable: pathExists(pidfilePath(home)),
+		sizeBytes: safeSize(pidfilePath(home))
+	});
+	plan.push({
+		id: "engine-state",
+		description: "Delete engine-state.json",
+		path: enginePath(home),
+		alwaysAsk: false,
+		applicable: pathExists(enginePath(home)),
+		sizeBytes: safeSize(enginePath(home))
+	});
+	plan.push({
+		id: "env",
+		description: "Delete .env (your API keys) — will ask separately",
+		path: envPath(home),
+		alwaysAsk: true,
+		applicable: !options.keepData && pathExists(envPath(home)),
+		sizeBytes: safeSize(envPath(home))
+	});
+	plan.push({
+		id: "preferences",
+		description: "Delete preferences.json",
+		path: preferencesPath(home),
+		alwaysAsk: false,
+		applicable: !options.keepData && pathExists(preferencesPath(home)),
+		sizeBytes: safeSize(preferencesPath(home))
+	});
+	plan.push({
+		id: "backups",
+		description: "Delete backups/ directory (connect manifest + backups)",
+		path: backupsDir$1(home),
+		alwaysAsk: false,
+		applicable: !options.keepData && pathExists(backupsDir$1(home)),
+		sizeBytes: -1
+	});
+	if (connectManifest?.installed?.length) for (const entry of connectManifest.installed) plan.push({
+		id: `connect:${entry.target}`,
+		description: `Remove agent connection (${entry.agent ?? "unknown"})`,
+		path: entry.target,
+		alwaysAsk: false,
+		applicable: pathExists(entry.target),
+		sizeBytes: safeSize(entry.target)
+	});
+	const localIii = localBinIii(home);
+	if (pathExists(localIii)) {
+		const matches = localBinIiiVersion === pinnedVersion;
+		plan.push({
+			id: "local-bin-iii",
+			description: matches ? `Delete ~/.local/bin/iii (matches pinned v${pinnedVersion})` : `Delete ~/.local/bin/iii (version ${localBinIiiVersion ?? "unknown"} != pinned v${pinnedVersion}) — will ask`,
+			path: localIii,
+			alwaysAsk: !matches,
+			applicable: true,
+			sizeBytes: safeSize(localIii)
+		});
+	}
+	plan.push({
+		id: "data-dir",
+		description: "Delete memory data directory (~/.agentmemory/data/) — will ask separately",
+		path: dataDir(home),
+		alwaysAsk: true,
+		applicable: !options.keepData && pathExists(dataDir(home)),
+		sizeBytes: -1
+	});
+	return plan;
+}
+/** Format a plan for the user — one line per item. */
+function formatPlan(plan) {
+	return plan.filter((p) => p.applicable).map((p, i) => {
+		const tag = p.alwaysAsk ? " [asks]" : "";
+		const sz = p.sizeBytes > 0 ? ` (${humanBytes(p.sizeBytes)})` : "";
+		return `  ${i + 1}. ${p.description}${tag}${sz}${p.path ? `\n     ${p.path}` : ""}`;
+	}).join("\n");
+}
+function humanBytes(n) {
+	if (n < 1024) return `${n} B`;
+	if (n < 1024 * 1024) return `${(n / 1024).toFixed(1)} KB`;
+	return `${(n / (1024 * 1024)).toFixed(1)} MB`;
+}
+
+//#endregion
+//#region src/cli/splash.ts
+const IS_COLOR_TTY = !!process.stdout.isTTY && !process.env["NO_COLOR"];
+function accent(s) {
+	return IS_COLOR_TTY ? `\x1b[38;5;208m${s}\x1b[0m` : s;
+}
+function dim(s) {
+	return IS_COLOR_TTY ? `\x1b[2m${s}\x1b[22m` : s;
+}
+function bold(s) {
+	return IS_COLOR_TTY ? `\x1b[1m${s}\x1b[22m` : s;
+}
+function getTerminalWidth() {
+	const w = process.stdout.columns;
+	return typeof w === "number" && w > 0 ? w : 80;
+}
+const TAGLINE = "Persistent memory for AI coding agents";
+function fullBanner(version) {
+	const lines = ["", ...[
+		"                        _                                             ",
+		"  __ _  __ _  ___ _ __ | |_ _ __ ___   ___ _ __ ___   ___  _ __ _   _ ",
+		" / _` |/ _` |/ _ \\ '_ \\| __| '_ ` _ \\ / _ \\ '_ ` _ \\ / _ \\| '__| | | |",
+		"| (_| | (_| |  __/ | | | |_| | | | | |  __/ | | | | | (_) | |  | |_| |",
+		" \\__,_|\\__, |\\___|_| |_|\\__|_| |_| |_|\\___|_| |_| |_|\\___/|_|   \\__, |",
+		"       |___/                                                    |___/ "
+	].map((line) => "  " + accent(line))];
+	lines.push("");
+	lines.push("  " + bold(TAGLINE) + "  " + dim(`v${version}`));
+	lines.push("");
+	return lines.join("\n");
+}
+function compactBanner(version) {
+	return [
+		"",
+		"  " + bold(accent("agentmemory")),
+		"  " + dim(`v${version} · ${TAGLINE}`),
+		""
+	].join("\n");
+}
+function minimalBanner(version) {
+	return `${accent("agentmemory")} ${dim(`v${version}`)}`;
+}
+function renderSplash(version) {
+	const width = getTerminalWidth();
+	let out;
+	if (width >= 120) out = fullBanner(version);
+	else if (width >= 80) out = compactBanner(version);
+	else out = minimalBanner(version);
+	process.stdout.write(out + "\n");
+}
+
+//#endregion
+//#region src/cli/preferences.ts
+const DEFAULTS = {
+	schemaVersion: 1,
+	lastAgent: null,
+	lastAgents: [],
+	lastProvider: null,
+	skipSplash: false,
+	skipNpxHint: false,
+	skipGlobalInstall: false,
+	skipConsoleInstall: false,
+	firstRunAt: null
+};
+function prefsDir() {
+	return join(homedir(), ".agentmemory");
+}
+function prefsPath() {
+	return join(prefsDir(), "preferences.json");
+}
+function readPrefs() {
+	try {
+		if (!existsSync(prefsPath())) return { ...DEFAULTS };
+		const raw = readFileSync(prefsPath(), "utf-8");
+		const parsed = JSON.parse(raw);
+		return {
+			...DEFAULTS,
+			...parsed,
+			schemaVersion: 1
+		};
+	} catch {
+		return { ...DEFAULTS };
+	}
+}
+function writePrefs(p) {
+	try {
+		mkdirSync(prefsDir(), { recursive: true });
+		const next = {
+			...readPrefs(),
+			...p,
+			schemaVersion: 1
+		};
+		const target = prefsPath();
+		const tmp = target + ".tmp";
+		const fd = openSync(tmp, "w", 384);
+		try {
+			writeSync(fd, JSON.stringify(next, null, 2) + "\n");
+			try {
+				fsyncSync(fd);
+			} catch {}
+		} finally {
+			closeSync(fd);
+		}
+		renameSync(tmp, target);
+	} catch {}
+}
+function resetPrefs() {
+	try {
+		unlinkSync(prefsPath());
+	} catch {}
+}
+function isFirstRun() {
+	if (!existsSync(prefsPath())) return true;
+	return readPrefs().firstRunAt === null;
+}
+
+//#endregion
+//#region src/cli/connect/util.ts
+const AGENTMEMORY_MCP_BLOCK = {
+	command: "npx",
+	args: ["-y", "@agentmemory/mcp"],
+	env: {
+		AGENTMEMORY_URL: "${AGENTMEMORY_URL}",
+		AGENTMEMORY_SECRET: "${AGENTMEMORY_SECRET}"
+	}
+};
+function backupsDir() {
+	return join(homedir(), ".agentmemory", "backups");
+}
+function ensureBackupsDir() {
+	const dir = backupsDir();
+	mkdirSync(dir, { recursive: true });
+	return dir;
+}
+function timestampSlug() {
+	return (/* @__PURE__ */ new Date()).toISOString().replace(/[:.]/g, "-");
+}
+function backupFile(sourcePath, agent, ext = "json") {
+	ensureBackupsDir();
+	const stamp = timestampSlug();
+	const target = join(backupsDir(), `${agent}-${stamp}.${ext}`);
+	copyFileSync(sourcePath, target);
+	return target;
+}
+function readJsonSafe(path) {
+	if (!existsSync(path)) return null;
+	try {
+		return JSON.parse(readFileSync(path, "utf-8"));
+	} catch {
+		return null;
+	}
+}
+function writeJsonAtomic(path, value) {
+	mkdirSync(dirname(path), { recursive: true });
+	const tmp = `${path}.tmp-${process.pid}-${Date.now()}`;
+	writeFileSync(tmp, `${JSON.stringify(value, null, 2)}\n`, "utf-8");
+	renameSync(tmp, path);
+}
+function logInstalled(label, target) {
+	p.log.success(`${label} → wired into ${target}`);
+}
+function logAlreadyWired(label, target) {
+	p.log.info(`${label} already wired in ${target} (use --force to re-install)`);
+}
+function logBackup(target) {
+	p.log.info(`Backup: ${target}`);
+}
+
+//#endregion
+//#region src/cli/connect/claude-code.ts
+const CLAUDE_DIR = join(homedir(), ".claude");
+const CLAUDE_JSON = join(homedir(), ".claude.json");
+function entryMatches$1(entry) {
+	if (!entry || typeof entry !== "object") return false;
+	const e = entry;
+	if (e["command"] !== "npx") return false;
+	return (Array.isArray(e["args"]) ? e["args"] : []).includes("@agentmemory/mcp");
+}
+const adapter$7 = {
+	name: "claude-code",
+	displayName: "Claude Code",
+	docs: "https://github.com/rohitg00/agentmemory#claude-code-one-block-paste-it",
+	protocolNote: "→ Using MCP. Hooks are also available — see docs/claude-code.md.",
+	detect() {
+		return existsSync(CLAUDE_DIR);
+	},
+	async install(opts) {
+		const existing = readJsonSafe(CLAUDE_JSON);
+		const next = existing ? { ...existing } : {};
+		const servers = { ...next.mcpServers ?? {} };
+		const alreadyHas = entryMatches$1(servers["agentmemory"]);
+		if (alreadyHas && !opts.force) {
+			logAlreadyWired("Claude Code", CLAUDE_JSON);
+			return {
+				kind: "already-wired",
+				mutatedPath: CLAUDE_JSON
+			};
+		}
+		if (opts.dryRun) {
+			p.log.info(`[dry-run] Would ${alreadyHas ? "overwrite" : "add"} mcpServers.agentmemory in ${CLAUDE_JSON}`);
+			return {
+				kind: "installed",
+				mutatedPath: CLAUDE_JSON
+			};
+		}
+		let backupPath;
+		if (existsSync(CLAUDE_JSON)) {
+			backupPath = backupFile(CLAUDE_JSON, "claude-code");
+			logBackup(backupPath);
+		} else {
+			mkdirSync(CLAUDE_DIR, { recursive: true });
+			writeFileSync(CLAUDE_JSON, "{}\n", "utf-8");
+		}
+		servers["agentmemory"] = AGENTMEMORY_MCP_BLOCK;
+		next.mcpServers = servers;
+		writeJsonAtomic(CLAUDE_JSON, next);
+		if (!entryMatches$1(readJsonSafe(CLAUDE_JSON)?.mcpServers?.["agentmemory"])) {
+			p.log.error(`Verification failed: ${CLAUDE_JSON} did not contain mcpServers.agentmemory after write.`);
+			return {
+				kind: "skipped",
+				reason: "verification-failed"
+			};
+		}
+		logInstalled("Claude Code", CLAUDE_JSON);
+		p.log.info("Restart Claude Code (or run `/mcp` inside a session) to pick up the new server.");
+		return {
+			kind: "installed",
+			mutatedPath: CLAUDE_JSON,
+			backupPath
+		};
+	}
+};
+
+//#endregion
+//#region src/cli/connect/codex.ts
+const CODEX_DIR = join(homedir(), ".codex");
+const CODEX_TOML = join(CODEX_DIR, "config.toml");
+const TOML_BLOCK = `[mcp_servers.agentmemory]
+command = "npx"
+args = ["-y", "@agentmemory/mcp"]
+
+[mcp_servers.agentmemory.env]
+AGENTMEMORY_URL = "http://localhost:3111"
+`;
+const SECTION_HEADER = "[mcp_servers.agentmemory]";
+function isWiredText(toml) {
+	return toml.includes(SECTION_HEADER);
+}
+function stripExistingBlock(toml) {
+	const lines = toml.split(/\r?\n/);
+	const out = [];
+	let skipping = false;
+	for (const line of lines) {
+		const trimmed = line.trim();
+		if (trimmed === SECTION_HEADER || trimmed === "[mcp_servers.agentmemory.env]") {
+			skipping = true;
+			continue;
+		}
+		if (skipping && trimmed.startsWith("[") && trimmed !== "[mcp_servers.agentmemory.env]") skipping = false;
+		if (!skipping) out.push(line);
+	}
+	return out.join("\n").replace(/\n{3,}$/, "\n\n").trimEnd() + "\n";
+}
+const adapter$6 = {
+	name: "codex",
+	displayName: "Codex CLI",
+	docs: "https://github.com/rohitg00/agentmemory#codex-cli-codex-plugin-platform",
+	protocolNote: "→ Using MCP. Hooks are also available — see docs/codex.md.",
+	detect() {
+		return existsSync(CODEX_DIR);
+	},
+	async install(opts) {
+		const exists = existsSync(CODEX_TOML);
+		const current = exists ? readFileSync(CODEX_TOML, "utf-8") : "";
+		const wired = isWiredText(current);
+		if (wired && !opts.force) {
+			logAlreadyWired("Codex CLI", CODEX_TOML);
+			return {
+				kind: "already-wired",
+				mutatedPath: CODEX_TOML
+			};
+		}
+		if (opts.dryRun) {
+			p.log.info(`[dry-run] Would ${wired ? "rewrite" : "append"} [mcp_servers.agentmemory] in ${CODEX_TOML}`);
+			return {
+				kind: "installed",
+				mutatedPath: CODEX_TOML
+			};
+		}
+		let backupPath;
+		if (exists) {
+			backupPath = backupFile(CODEX_TOML, "codex", "toml");
+			logBackup(backupPath);
+		} else mkdirSync(dirname(CODEX_TOML), { recursive: true });
+		const cleaned = wired ? stripExistingBlock(current) : current;
+		writeFileSync(CODEX_TOML, `${cleaned}${cleaned.length === 0 || cleaned.endsWith("\n") ? "" : "\n"}${cleaned.length > 0 ? "\n" : ""}${TOML_BLOCK}`, "utf-8");
+		if (!isWiredText(readFileSync(CODEX_TOML, "utf-8"))) {
+			p.log.error(`Verification failed: ${CODEX_TOML} did not contain ${SECTION_HEADER} after write.`);
+			return {
+				kind: "skipped",
+				reason: "verification-failed"
+			};
+		}
+		logInstalled("Codex CLI", CODEX_TOML);
+		p.log.info("Codex picks up MCP servers on next launch. For the deeper plugin install, run: codex plugin marketplace add rohitg00/agentmemory && codex plugin install agentmemory");
+		return {
+			kind: "installed",
+			mutatedPath: CODEX_TOML,
+			...backupPath !== void 0 && { backupPath }
+		};
+	}
+};
+
+//#endregion
+//#region src/cli/connect/json-mcp-adapter.ts
+function entryMatches(entry) {
+	if (!entry || typeof entry !== "object") return false;
+	const e = entry;
+	if (e["command"] !== "npx") return false;
+	return (Array.isArray(e["args"]) ? e["args"] : []).includes("@agentmemory/mcp");
+}
+function createJsonMcpAdapter(config) {
+	return {
+		name: config.name,
+		displayName: config.displayName,
+		...config.docs !== void 0 && { docs: config.docs },
+		...config.protocolNote !== void 0 && { protocolNote: config.protocolNote },
+		detect() {
+			return existsSync(config.detectDir);
+		},
+		async install(opts) {
+			const existing = readJsonSafe(config.configPath);
+			const next = existing ? { ...existing } : {};
+			const servers = { ...next.mcpServers ?? {} };
+			const alreadyHas = entryMatches(servers["agentmemory"]);
+			if (alreadyHas && !opts.force) {
+				logAlreadyWired(config.displayName, config.configPath);
+				return {
+					kind: "already-wired",
+					mutatedPath: config.configPath
+				};
+			}
+			if (opts.dryRun) {
+				p.log.info(`[dry-run] Would ${alreadyHas ? "overwrite" : "add"} mcpServers.agentmemory in ${config.configPath}`);
+				return {
+					kind: "installed",
+					mutatedPath: config.configPath
+				};
+			}
+			let backupPath;
+			if (existsSync(config.configPath)) {
+				backupPath = backupFile(config.configPath, config.name);
+				logBackup(backupPath);
+			} else mkdirSync(dirname(config.configPath), { recursive: true });
+			servers["agentmemory"] = AGENTMEMORY_MCP_BLOCK;
+			next.mcpServers = servers;
+			writeJsonAtomic(config.configPath, next);
+			if (!entryMatches(readJsonSafe(config.configPath)?.mcpServers?.["agentmemory"])) {
+				p.log.error(`Verification failed: ${config.configPath} did not contain mcpServers.agentmemory after write.`);
+				return {
+					kind: "skipped",
+					reason: "verification-failed"
+				};
+			}
+			logInstalled(config.displayName, config.configPath);
+			return {
+				kind: "installed",
+				mutatedPath: config.configPath,
+				...backupPath !== void 0 && { backupPath }
+			};
+		}
+	};
+}
+
+//#endregion
+//#region src/cli/connect/cursor.ts
+const adapter$5 = createJsonMcpAdapter({
+	name: "cursor",
+	displayName: "Cursor",
+	detectDir: join(homedir(), ".cursor"),
+	configPath: join(homedir(), ".cursor", "mcp.json"),
+	docs: "https://github.com/rohitg00/agentmemory#other-agents",
+	protocolNote: "→ Using MCP (the only protocol Cursor speaks). Memory bridge runs at :3111 underneath."
+});
+
+//#endregion
+//#region src/cli/connect/gemini-cli.ts
+const adapter$4 = createJsonMcpAdapter({
+	name: "gemini-cli",
+	displayName: "Gemini CLI",
+	detectDir: join(homedir(), ".gemini"),
+	configPath: join(homedir(), ".gemini", "settings.json"),
+	docs: "https://github.com/rohitg00/agentmemory#other-agents",
+	protocolNote: "→ Using MCP (the only protocol Gemini CLI speaks). Memory bridge runs at :3111 underneath."
+});
+
+//#endregion
+//#region src/cli/connect/hermes.ts
+const HERMES_DIR = join(homedir(), ".hermes");
+const HERMES_CONFIG = join(HERMES_DIR, "config.yaml");
+const DOCS$2 = "https://github.com/rohitg00/agentmemory/tree/main/integrations/hermes";
+const adapter$3 = {
+	name: "hermes",
+	displayName: "Hermes Agent",
+	docs: DOCS$2,
+	protocolNote: "→ Using MCP. Hooks are also available — see docs/hermes.md.",
+	detect() {
+		return existsSync(HERMES_DIR);
+	},
+	async install(_opts) {
+		p.log.warn("Hermes uses YAML config. Automated merge isn't implemented yet — manual install required.");
+		p.note([
+			`Add to ${HERMES_CONFIG}:`,
+			"",
+			"  mcp_servers:",
+			"    agentmemory:",
+			"      command: npx",
+			"      args: [\"-y\", \"@agentmemory/mcp\"]",
+			"",
+			"  memory:",
+			"    provider: agentmemory",
+			"",
+			`Full guide: ${DOCS$2}`
+		].join("\n"), "Hermes manual install");
+		return {
+			kind: "stub",
+			reason: "yaml-merge-not-implemented"
+		};
+	}
+};
+
+//#endregion
+//#region src/cli/connect/openclaw.ts
+const adapter$2 = createJsonMcpAdapter({
+	name: "openclaw",
+	displayName: "OpenClaw",
+	detectDir: join(homedir(), ".openclaw"),
+	configPath: join(homedir(), ".openclaw", "openclaw.json"),
+	docs: "https://github.com/rohitg00/agentmemory/tree/main/integrations/openclaw",
+	protocolNote: "→ Using MCP. Hooks are also available — see docs/openclaw.md."
+});
+
+//#endregion
+//#region src/cli/connect/openhuman.ts
+const OPENHUMAN_DIR = join(homedir(), ".openhuman");
+const DOCS$1 = "https://github.com/tinyhumansai/openhuman";
+const adapter$1 = {
+	name: "openhuman",
+	displayName: "OpenHuman",
+	docs: DOCS$1,
+	protocolNote: "→ Using native hooks (REST API at :3111). MCP not required.",
+	detect() {
+		return existsSync(OPENHUMAN_DIR);
+	},
+	async install(_opts) {
+		p.log.warn("OpenHuman integration is not yet automated. No `integrations/openhuman/` folder exists in the agentmemory repo today.");
+		p.note([
+			"OpenHuman is a Memory-trait host. The expected wiring is the REST",
+			"proxy at http://localhost:3111 plus an OpenHuman-side Memory trait",
+			"impl. Once integrations/openhuman/ lands in agentmemory we'll wire",
+			"this up automatically.",
+			"",
+			`Tracking: ${DOCS$1}`
+		].join("\n"), "OpenHuman manual install");
+		return {
+			kind: "stub",
+			reason: "no-integration-folder-yet"
+		};
+	}
+};
+
+//#endregion
+//#region src/cli/connect/pi.ts
+const PI_DIR = join(homedir(), ".pi");
+const PI_EXT_DIR = join(PI_DIR, "agent", "extensions", "agentmemory");
+const DOCS = "https://github.com/rohitg00/agentmemory/tree/main/integrations/pi";
+const adapter = {
+	name: "pi",
+	displayName: "pi",
+	docs: DOCS,
+	protocolNote: "→ Using native hooks (REST API at :3111). MCP not required.",
+	detect() {
+		return existsSync(PI_DIR);
+	},
+	async install(_opts) {
+		p.log.warn("pi uses a TypeScript extension file. Automated copy + register isn't implemented yet — manual install required.");
+		p.note([
+			"Run these from the agentmemory repo root:",
+			"",
+			`  mkdir -p ${PI_EXT_DIR}`,
+			`  cp integrations/pi/index.ts ${PI_EXT_DIR}/index.ts`,
+			`  cp integrations/pi/security.ts ${PI_EXT_DIR}/security.ts`,
+			"",
+			"Then add to ~/.pi/agent/settings.json:",
+			"  { \"extensions\": [\"~/.pi/agent/extensions/agentmemory\"] }",
+			"",
+			`Full guide: ${DOCS}`
+		].join("\n"), "pi manual install");
+		return {
+			kind: "stub",
+			reason: "ts-extension-copy-not-implemented"
+		};
+	}
+};
+
+//#endregion
+//#region src/cli/connect/index.ts
+var connect_exports = /* @__PURE__ */ __exportAll({
+	ADAPTERS: () => ADAPTERS,
+	knownAgents: () => knownAgents,
+	resolveAdapter: () => resolveAdapter,
+	runAdapter: () => runAdapter,
+	runConnect: () => runConnect
+});
+const ADAPTERS = [
+	adapter$7,
+	adapter$6,
+	adapter$5,
+	adapter$4,
+	adapter$2,
+	adapter$3,
+	adapter,
+	adapter$1
+];
+function resolveAdapter(name) {
+	const lower = name.toLowerCase();
+	return ADAPTERS.find((a) => a.name === lower) ?? null;
+}
+function knownAgents() {
+	return ADAPTERS.map((a) => a.name);
+}
+function parseFlags(args) {
+	const positional = [];
+	let dryRun = false;
+	let force = false;
+	let all = false;
+	for (const a of args) if (a === "--dry-run") dryRun = true;
+	else if (a === "--force") force = true;
+	else if (a === "--all") all = true;
+	else if (!a.startsWith("-")) positional.push(a);
+	return {
+		dryRun,
+		force,
+		all,
+		positional
+	};
+}
+async function runAdapter(adapter, opts) {
+	if (!adapter.detect()) {
+		p.log.warn(`${adapter.displayName}: not detected on this machine (skipping).${adapter.docs ? ` Docs: ${adapter.docs}` : ""}`);
+		return {
+			kind: "skipped",
+			reason: "not-detected"
+		};
+	}
+	p.log.step(`Wiring ${adapter.displayName}…`);
+	if (adapter.protocolNote) p.log.message(adapter.protocolNote);
+	try {
+		return await adapter.install(opts);
+	} catch (err) {
+		p.log.error(`${adapter.displayName}: ${err instanceof Error ? err.message : String(err)}`);
+		return {
+			kind: "skipped",
+			reason: "exception"
+		};
+	}
+}
+async function runConnect(args) {
+	if (platform() === "win32") {
+		p.intro("agentmemory connect");
+		p.log.warn("Windows: automated `connect` is not supported yet. See https://github.com/rohitg00/agentmemory#other-agents for manual install steps.");
+		p.outro("Windows: manual install required — see docs");
+		return;
+	}
+	const { dryRun, force, all, positional } = parseFlags(args);
+	const opts = {
+		dryRun,
+		force
+	};
+	p.intro("agentmemory connect");
+	if (positional.length === 0 && !all) {
+		const detected = ADAPTERS.filter((a) => a.detect());
+		if (detected.length === 0) {
+			p.log.error("No supported agents detected on this machine.");
+			p.outro(`Supported: ${knownAgents().join(", ")}`);
+			process.exit(1);
+		}
+		const picked = await p.multiselect({
+			message: "Wire agentmemory into which agents?",
+			options: detected.map((a) => ({
+				value: a.name,
+				label: a.displayName
+			})),
+			required: true
+		});
+		if (p.isCancel(picked)) {
+			p.cancel("Cancelled.");
+			return;
+		}
+		const results = [];
+		for (const name of picked) {
+			const adapter = resolveAdapter(name);
+			if (!adapter) continue;
+			results.push({
+				name,
+				result: await runAdapter(adapter, opts)
+			});
+		}
+		summarize(results);
+		return;
+	}
+	if (all) {
+		const detected = ADAPTERS.filter((a) => a.detect());
+		if (detected.length === 0) {
+			p.log.error("No supported agents detected on this machine.");
+			process.exit(1);
+		}
+		const results = [];
+		for (const adapter of detected) results.push({
+			name: adapter.name,
+			result: await runAdapter(adapter, opts)
+		});
+		summarize(results);
+		return;
+	}
+	const agentName = positional[0];
+	const adapter = resolveAdapter(agentName);
+	if (!adapter) {
+		p.log.error(`Unknown agent: ${agentName}`);
+		p.outro(`Supported: ${knownAgents().join(", ")}`);
+		process.exit(1);
+	}
+	const result = await runAdapter(adapter, opts);
+	summarize([{
+		name: agentName,
+		result
+	}]);
+	if (result.kind === "skipped" && result.reason !== "not-detected") process.exit(1);
+}
+function summarize(results) {
+	const lines = results.map(({ name, result }) => {
+		switch (result.kind) {
+			case "installed": return `  ✓ ${name}${result.mutatedPath ? ` → ${result.mutatedPath}` : ""}`;
+			case "already-wired": return `  ✓ ${name} (already wired)`;
+			case "stub": return `  ⚠ ${name} (manual install required: ${result.reason})`;
+			case "skipped": return `  ✗ ${name} (skipped: ${result.reason})`;
+		}
+	});
+	p.note(lines.join("\n"), "summary");
+	const stubs = results.filter((r) => r.result.kind === "stub");
+	if (stubs.length > 0) p.log.info(`${stubs.length} agent(s) require manual install — see docs links above.`);
+	p.outro("Restart any wired agent (or open a new session) to pick up agentmemory.");
+}
+
+//#endregion
+//#region src/cli/onboarding.ts
+const __dirname$1 = dirname(fileURLToPath(import.meta.url));
+const NATIVE_AGENTS = [
+	{
+		value: "claude-code",
+		label: "Claude Code",
+		glyph: "⟁"
+	},
+	{
+		value: "codex",
+		label: "Codex",
+		glyph: "◎"
+	},
+	{
+		value: "openhuman",
+		label: "OpenHuman",
+		glyph: "◇"
+	},
+	{
+		value: "openclaw",
+		label: "OpenClaw",
+		glyph: "◇"
+	},
+	{
+		value: "hermes",
+		label: "Hermes",
+		glyph: "◇"
+	},
+	{
+		value: "pi",
+		label: "Pi",
+		glyph: "◇"
+	},
+	{
+		value: "cursor",
+		label: "Cursor",
+		glyph: "◫"
+	},
+	{
+		value: "gemini-cli",
+		label: "Gemini CLI",
+		glyph: "✦"
+	}
+];
+const MCP_AGENTS = [
+	{
+		value: "opencode",
+		label: "OpenCode",
+		glyph: "⬡"
+	},
+	{
+		value: "cline",
+		label: "Cline",
+		glyph: "◇"
+	},
+	{
+		value: "goose",
+		label: "Goose",
+		glyph: "◇"
+	},
+	{
+		value: "kilo",
+		label: "Kilo",
+		glyph: "◇"
+	},
+	{
+		value: "aider",
+		label: "Aider",
+		glyph: "◇"
+	},
+	{
+		value: "claude-desktop",
+		label: "Claude Desktop",
+		glyph: "⟁"
+	},
+	{
+		value: "windsurf",
+		label: "Windsurf",
+		glyph: "◇"
+	},
+	{
+		value: "roo",
+		label: "Roo",
+		glyph: "◇"
+	}
+];
+const PROVIDERS = [
+	{
+		value: "anthropic",
+		label: "Anthropic — claude",
+		envKey: "ANTHROPIC_API_KEY"
+	},
+	{
+		value: "openai",
+		label: "OpenAI — gpt",
+		envKey: "OPENAI_API_KEY"
+	},
+	{
+		value: "gemini",
+		label: "Google — gemini",
+		envKey: "GEMINI_API_KEY"
+	},
+	{
+		value: "openrouter",
+		label: "OpenRouter — multi-model",
+		envKey: "OPENROUTER_API_KEY"
+	},
+	{
+		value: "minimax",
+		label: "MiniMax — minimax-m1",
+		envKey: "MINIMAX_API_KEY"
+	},
+	{
+		value: "skip",
+		label: "Skip — BM25-only mode (no LLM key)",
+		envKey: null
+	}
+];
+function buildAgentOptions() {
+	return [...NATIVE_AGENTS.map((a) => ({
+		value: a.value,
+		label: `${a.glyph} ${a.label}`,
+		hint: "native plugin"
+	})), ...MCP_AGENTS.map((a) => ({
+		value: a.value,
+		label: `${a.glyph} ${a.label}`,
+		hint: "MCP server"
+	}))];
+}
+function findEnvExample$1() {
+	const candidates = [
+		join(__dirname$1, "..", "..", ".env.example"),
+		join(__dirname$1, "..", ".env.example"),
+		join(__dirname$1, ".env.example"),
+		join(process.cwd(), ".env.example")
+	];
+	for (const c of candidates) if (existsSync(c)) return c;
+	return null;
+}
+async function seedEnvFile(provider) {
+	const target = join(homedir(), ".agentmemory", ".env");
+	await mkdir(dirname(target), { recursive: true });
+	const template = findEnvExample$1();
+	if (template && !existsSync(target)) try {
+		await copyFile(template, target, constants.COPYFILE_EXCL);
+	} catch (err) {
+		if (err?.code !== "EEXIST") return null;
+	}
+	else if (!template && !existsSync(target)) {
+		const lines = [
+			"# agentmemory environment — uncomment what you need",
+			"# AGENTMEMORY_URL=http://localhost:3111",
+			""
+		];
+		const envKey = PROVIDERS.find((x) => x.value === provider)?.envKey;
+		if (envKey) lines.push(`# ${envKey}=`);
+		writeFileSync(target, lines.join("\n"), { mode: 384 });
+	}
+	return target;
+}
+async function runOnboarding() {
+	p.note([
+		"Welcome to agentmemory.",
+		"",
+		"Persistent memory for your AI coding agents. We'll pick which",
+		"agents to wire up and which provider (if any) handles compression",
+		"and consolidation. Either step can be changed later in ~/.agentmemory/.env."
+	].join("\n"), "first-run setup");
+	const agentsPicked = await p.multiselect({
+		message: "Which agents will use agentmemory? (space to toggle, enter to confirm)",
+		options: buildAgentOptions(),
+		required: false,
+		initialValues: ["claude-code"]
+	});
+	if (p.isCancel(agentsPicked)) {
+		p.cancel("Setup cancelled. Re-run any time with: agentmemory --reset");
+		process.exit(0);
+	}
+	if ((agentsPicked ?? []).length > 0) p.note([
+		"━ how this works ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+		"All selected agents share the same memory at :3111.",
+		"A memory saved by Claude Code is visible to Codex + Cursor instantly.",
+		"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+	].join("\n"));
+	const providerPicked = await p.select({
+		message: "Which LLM provider should agentmemory use for compress/consolidate?",
+		options: PROVIDERS.map(({ value, label }) => ({
+			value,
+			label
+		})),
+		initialValue: "anthropic"
+	});
+	if (p.isCancel(providerPicked)) {
+		p.cancel("Setup cancelled. Re-run any time with: agentmemory --reset");
+		process.exit(0);
+	}
+	const provider = providerPicked === "skip" ? null : providerPicked;
+	const agents = agentsPicked ?? [];
+	const envPath = await seedEnvFile(provider);
+	writePrefs({
+		lastAgent: agents[0] ?? null,
+		lastAgents: agents,
+		lastProvider: provider,
+		skipSplash: true,
+		firstRunAt: (/* @__PURE__ */ new Date()).toISOString()
+	});
+	const lines = [`✓ Saved preferences to ${join(homedir(), ".agentmemory", "preferences.json")}`];
+	if (envPath) lines.push(`✓ Wrote ${envPath} (edit to add your API key)`);
+	else lines.push(`! Could not write ~/.agentmemory/.env — run \`agentmemory init\` after this completes.`);
+	if (provider) {
+		const envKey = PROVIDERS.find((x) => x.value === provider)?.envKey;
+		if (envKey) lines.push(`  Uncomment ${envKey}= in that file to enable ${provider}.`);
+	} else lines.push("  No provider chosen — agentmemory will run in BM25-only mode.");
+	p.note(lines.join("\n"), "ready");
+	if (agents.length > 0) await wireSelectedAgents(agents);
+	return {
+		agents,
+		provider
+	};
+}
+async function wireSelectedAgents(agents) {
+	p.note("Wire selected agents now?", "next step");
+	const confirmed = await p.confirm({
+		message: "Run `agentmemory connect <agent>` for each selected agent now? [Y/n]",
+		initialValue: true
+	});
+	if (p.isCancel(confirmed) || confirmed === false) {
+		const cmds = agents.map((a) => `  agentmemory connect ${a}`);
+		p.note(["Wire later with:", ...cmds].join("\n"), "later");
+		return;
+	}
+	const wired = [];
+	const manual = [];
+	const failed = [];
+	for (const name of agents) {
+		const adapter = resolveAdapter(name);
+		if (!adapter) {
+			failed.push({
+				name,
+				reason: "no adapter available"
+			});
+			p.log.warn(`Wiring ${name}… no adapter available (skipped).`);
+			continue;
+		}
+		p.log.step(`Wiring ${name}...`);
+		let result;
+		try {
+			result = await runAdapter(adapter, {
+				dryRun: false,
+				force: false
+			});
+		} catch (err) {
+			const reason = err instanceof Error ? err.message : String(err);
+			failed.push({
+				name,
+				reason
+			});
+			p.log.error(`${name}: ${reason}`);
+			continue;
+		}
+		switch (result.kind) {
+			case "installed":
+			case "already-wired":
+				wired.push(name);
+				break;
+			case "stub":
+				manual.push({
+					name,
+					docs: adapter.docs
+				});
+				break;
+			case "skipped":
+				failed.push({
+					name,
+					reason: result.reason
+				});
+				break;
+		}
+	}
+	const summary = [];
+	if (wired.length > 0) summary.push(`Wired: ${wired.join(", ")}.`);
+	if (manual.length > 0 || failed.length > 0) {
+		const parts = [];
+		for (const m of manual) parts.push(`${m.name} (manual install required${m.docs ? ` — see ${m.docs}` : ""})`);
+		for (const f of failed) parts.push(`${f.name} (${f.reason})`);
+		summary.push(`Skipped/failed: ${parts.join(", ")}.`);
+	}
+	if (summary.length === 0) summary.push("No agents were wired.");
+	p.note(summary.join("\n"), "wire summary");
+}
+
+//#endregion
+//#region src/logger.ts
+function fmt(level, msg, fields) {
+	if (!fields || Object.keys(fields).length === 0) return `[agentmemory] ${level} ${msg}`;
+	try {
+		return `[agentmemory] ${level} ${msg} ${JSON.stringify(fields)}`;
+	} catch {
+		return `[agentmemory] ${level} ${msg}`;
+	}
+}
+function emit(level, msg, fields) {
+	try {
+		process.stderr.write(fmt(level, msg, fields) + "\n");
+	} catch {}
+}
+const logger = {
+	info(msg, fields) {
+		emit("info", msg, fields);
+	},
+	warn(msg, fields) {
+		emit("warn", msg, fields);
+	},
+	error(msg, fields) {
+		emit("error", msg, fields);
+	}
+};
+let bootVerbose = process.env["AGENTMEMORY_VERBOSE"] === "1" || process.env["AGENTMEMORY_VERBOSE"] === "true";
+const bootBuffer = [];
+function setBootVerbose(enabled) {
+	bootVerbose = enabled;
+}
+function bootLog(msg) {
+	if (bootVerbose) {
+		try {
+			process.stderr.write(`[agentmemory] ${msg}\n`);
+		} catch {}
+		return;
+	}
+	if (bootBuffer.length < 500) bootBuffer.push(msg);
+}
+
+//#endregion
+//#region src/version.ts
+const VERSION = "0.9.19";
+
+//#endregion
+//#region src/cli.ts
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const args = process.argv.slice(2);
+const IS_WINDOWS = platform() === "win32";
+const IS_VERBOSE = args.includes("--verbose") || args.includes("-v") || process.env["AGENTMEMORY_VERBOSE"] === "1" || process.env["AGENTMEMORY_VERBOSE"] === "true";
+setBootVerbose(IS_VERBOSE);
+const IS_RESET = args.includes("--reset");
+const IIPINNED_VERSION = process.env["AGENTMEMORY_III_VERSION"] || "0.11.2";
+function iiiReleaseAsset() {
+	const p = platform();
+	const a = process.arch;
+	if (p === "darwin" && a === "arm64") return "iii-aarch64-apple-darwin.tar.gz";
+	if (p === "darwin" && a === "x64") return "iii-x86_64-apple-darwin.tar.gz";
+	if (p === "linux" && a === "x64") return "iii-x86_64-unknown-linux-gnu.tar.gz";
+	if (p === "linux" && a === "arm64") return "iii-aarch64-unknown-linux-gnu.tar.gz";
+	if (p === "linux" && a === "arm") return "iii-armv7-unknown-linux-gnueabihf.tar.gz";
+	if (p === "win32" && a === "x64") return "iii-x86_64-pc-windows-msvc.zip";
+	if (p === "win32" && a === "arm64") return "iii-aarch64-pc-windows-msvc.zip";
+	return null;
+}
+function iiiReleaseUrl() {
+	const asset = iiiReleaseAsset();
+	if (!asset) return null;
+	return `https://github.com/iii-hq/iii/releases/download/iii/v${IIPINNED_VERSION}/${asset}`;
+}
+function vlog(msg) {
+	if (IS_VERBOSE) p.log.info(`[verbose] ${msg}`);
+}
+if (args.includes("--help") || args.includes("-h")) {
+	console.log(`
+agentmemory — persistent memory for AI coding agents
+
+Usage: agentmemory [command] [options]
+
+Commands:
+  (default)          Start agentmemory worker
+  init               Copy bundled .env.example to ~/.agentmemory/.env if absent
+  connect [agent]    Wire agentmemory into an installed agent (claude-code, codex,
+                     cursor, gemini-cli, openclaw, hermes, pi, openhuman).
+                     No arg = interactive picker. --all wires every detected agent.
+                     --dry-run shows what would change. --force re-installs.
+  status             Show connection status, memory count, flags, and health
+  doctor             Interactive diagnostic + fixer. [F]ix · [S]kip · [?]more · [Q]uit
+                     --all: apply every fix without prompting (CI)
+                     --dry-run: show what each fix would do, don't execute
+  remove             Cleanly uninstall agentmemory (pidfile, state, .env, binaries).
+                     --force: skip confirmations · --keep-data: keep memory data
+  demo               Seed sample sessions and show recall in action
+  upgrade            Upgrade local deps + iii runtime (best effort)
+  stop [--force]     Stop the running iii-engine started by this CLI.
+                     --force bypasses the Docker-heuristic guard and signals
+                     whatever pidfile+lsof report on the REST port (use when
+                     the engine was started natively but state file is missing).
+  mcp                Start standalone MCP shim — opt-in surface for MCP-only clients
+                     (Cursor, Gemini CLI, etc). REST always available at :3111.
+  import-jsonl [p]   Import Claude Code JSONL transcripts (default: ~/.claude/projects)
+                     --max-files <N> | --max-files=<N>: override scan cap (default 200, max 1000;
+                     out-of-range is rejected; for trees >1000 files, batch by subdirectory)
+
+Options:
+  --help, -h         Show this help
+  --verbose, -v      Show engine stderr, boot log, and diagnostic info
+  --reset            Wipe ~/.agentmemory/preferences.json and re-run onboarding
+  --tools all|core   Tool visibility (default: core = 7 tools)
+  --no-engine        Skip auto-starting iii-engine
+  --port <N>         Override REST port (default: 3111)
+
+Environment:
+  AGENTMEMORY_URL              Full REST base URL (e.g. http://localhost:3111).
+                               Honored by status, doctor, and MCP shim commands.
+  AGENTMEMORY_USE_DOCKER=1     Prefer the bundled docker-compose path over the
+                               native iii-engine binary on first run.
+  AGENTMEMORY_III_VERSION      Override pinned iii-engine version (default ${IIPINNED_VERSION}).
+
+Quick start:
+  npx @agentmemory/agentmemory          # start with local iii-engine or Docker
+  npx @agentmemory/agentmemory demo     # see semantic recall in 30 seconds
+  npx @agentmemory/agentmemory doctor   # diagnose config + feature flags
+  npx @agentmemory/agentmemory status   # health + memory count + flags
+  npx @agentmemory/agentmemory upgrade  # upgrade agentmemory + iii runtime
+  npx @agentmemory/agentmemory mcp      # standalone MCP server (no engine)
+  npx @agentmemory/mcp                  # same as above (shim package)
+`);
+	process.exit(0);
+}
+const toolsIdx = args.indexOf("--tools");
+if (toolsIdx !== -1 && args[toolsIdx + 1]) process.env["AGENTMEMORY_TOOLS"] = args[toolsIdx + 1];
+const portIdx = args.indexOf("--port");
+if (portIdx !== -1 && args[portIdx + 1]) process.env["III_REST_PORT"] = args[portIdx + 1];
+const skipEngine = args.includes("--no-engine");
+function getRestPort() {
+	const url = process.env["AGENTMEMORY_URL"];
+	if (url) try {
+		const parsed = new URL(url).port;
+		if (parsed) return parseInt(parsed, 10);
+	} catch {}
+	return parseInt(process.env["III_REST_PORT"] || "3111", 10) || 3111;
+}
+function getBaseUrl() {
+	const url = process.env["AGENTMEMORY_URL"];
+	if (url) return url.replace(/\/+$/, "");
+	return `http://localhost:${getRestPort()}`;
+}
+function getViewerUrl() {
+	const envUrl = process.env["AGENTMEMORY_VIEWER_URL"];
+	if (envUrl) return envUrl.replace(/\/+$/, "");
+	try {
+		const u = new URL(getBaseUrl());
+		const vPort = parseInt(process.env["III_VIEWER_PORT"] || "", 10) || (parseInt(u.port || "3111", 10) || 3111) + 2;
+		return `${u.protocol}//${u.hostname}:${vPort}`;
+	} catch {
+		return `http://localhost:${parseInt(process.env["III_VIEWER_PORT"] || "", 10) || getRestPort() + 2}`;
+	}
+}
+function getStreamPort() {
+	return parseInt(process.env["III_STREAM_PORT"] || "", 10) || parseInt(process.env["III_STREAMS_PORT"] || "", 10) || 3112;
+}
+function getEnginePort() {
+	const explicit = parseInt(process.env["III_ENGINE_PORT"] || "", 10);
+	if (explicit) return explicit;
+	const url = process.env["III_ENGINE_URL"];
+	if (url) try {
+		const parsed = new URL(url).port;
+		if (parsed) return parseInt(parsed, 10);
+	} catch {}
+	return 49134;
+}
+async function isEngineRunning() {
+	try {
+		await fetch(`${getBaseUrl()}/`, { signal: AbortSignal.timeout(2e3) });
+		return true;
+	} catch {
+		return false;
+	}
+}
+async function isAgentmemoryReady() {
+	try {
+		return (await fetch(`${getBaseUrl()}/agentmemory/livez`, { signal: AbortSignal.timeout(2e3) })).ok;
+	} catch {
+		return false;
+	}
+}
+function findIiiConfig() {
+	const candidates = [
+		join(__dirname, "iii-config.yaml"),
+		join(__dirname, "..", "iii-config.yaml"),
+		join(process.cwd(), "iii-config.yaml")
+	];
+	for (const c of candidates) if (existsSync(c)) return c;
+	return "";
+}
+function whichBinary(name) {
+	const cmd = IS_WINDOWS ? "where" : "which";
+	try {
+		return execFileSync(cmd, [name], {
+			encoding: "utf-8",
+			stdio: [
+				"ignore",
+				"pipe",
+				"pipe"
+			]
+		}).split(/\r?\n/).map((line) => line.trim()).find((line) => line.length > 0) ?? null;
+	} catch {
+		return null;
+	}
+}
+function fallbackIiiPaths() {
+	if (IS_WINDOWS) {
+		const userProfile = process.env["USERPROFILE"];
+		if (!userProfile) return [];
+		return [join(userProfile, ".local", "bin", "iii.exe"), join(userProfile, "bin", "iii.exe")];
+	}
+	const home = process.env["HOME"];
+	if (!home) return ["/usr/local/bin/iii"];
+	return [join(home, ".local", "bin", "iii"), "/usr/local/bin/iii"];
+}
+function iiiBinVersion(binPath) {
+	try {
+		const match = execFileSync(binPath, ["--version"], {
+			encoding: "utf-8",
+			stdio: [
+				"ignore",
+				"pipe",
+				"ignore"
+			],
+			timeout: 3e3
+		}).match(/(\d+\.\d+\.\d+(?:[-+][\w.]+)?)/);
+		return match ? match[1] : null;
+	} catch {
+		return null;
+	}
+}
+let warnedVersionMismatch = false;
+function warnIfEngineVersionMismatch(iiiBinPath) {
+	if (!iiiBinPath || warnedVersionMismatch) return;
+	const detected = iiiBinVersion(iiiBinPath);
+	if (!detected || detected === IIPINNED_VERSION) return;
+	warnedVersionMismatch = true;
+	const asset = iiiReleaseAsset();
+	const downloadHint = asset ? `curl -fsSL https://github.com/iii-hq/iii/releases/download/iii/v${IIPINNED_VERSION}/${asset} | tar -xz -C ~/.local/bin` : `download v${IIPINNED_VERSION} from https://github.com/iii-hq/iii/releases/tag/iii%2Fv${IIPINNED_VERSION}`;
+	p.log.warn(`iii-engine on PATH is v${detected} but agentmemory v${VERSION} pins v${IIPINNED_VERSION}. Set AGENTMEMORY_III_VERSION=${detected} to silence, or downgrade with: \`${downloadHint}\``);
+}
+function enginePidfilePath() {
+	return join(homedir(), ".agentmemory", "iii.pid");
+}
+function engineStatePath() {
+	return join(homedir(), ".agentmemory", "engine-state.json");
+}
+function writeEnginePidfile(pid) {
+	try {
+		const pidPath = enginePidfilePath();
+		mkdirSync(dirname(pidPath), { recursive: true });
+		writeFileSync(pidPath, `${pid}\n`, { encoding: "utf-8" });
+	} catch (err) {
+		vlog(`writeEnginePidfile: ${err instanceof Error ? err.message : String(err)}`);
+	}
+}
+function readEnginePidfile() {
+	try {
+		const pidStr = readFileSync(enginePidfilePath(), "utf-8").trim();
+		const pid = parseInt(pidStr, 10);
+		return Number.isFinite(pid) && pid > 0 ? pid : null;
+	} catch {
+		return null;
+	}
+}
+function clearEnginePidfile() {
+	try {
+		unlinkSync(enginePidfilePath());
+	} catch {}
+}
+function writeEngineState(state) {
+	try {
+		const statePath = engineStatePath();
+		mkdirSync(dirname(statePath), { recursive: true });
+		writeFileSync(statePath, `${JSON.stringify(state)}\n`, { encoding: "utf-8" });
+	} catch (err) {
+		vlog(`writeEngineState: ${err instanceof Error ? err.message : String(err)}`);
+	}
+}
+function readEngineState() {
+	try {
+		const raw = readFileSync(engineStatePath(), "utf-8");
+		const parsed = JSON.parse(raw);
+		if (parsed && (parsed.kind === "native" || parsed.kind === "docker")) return parsed;
+		return null;
+	} catch {
+		return null;
+	}
+}
+function clearEngineState() {
+	try {
+		unlinkSync(engineStatePath());
+	} catch {}
+}
+function discoverComposeFile() {
+	return [
+		join(__dirname, "..", "docker-compose.yml"),
+		join(__dirname, "docker-compose.yml"),
+		join(process.cwd(), "docker-compose.yml")
+	].find((c) => existsSync(c)) ?? null;
+}
+function isInvokedViaNpx() {
+	if (process.env["npm_lifecycle_event"] === "npx") return true;
+	if ((process.argv[1] ?? "").includes("_npx")) return true;
+	const ua = process.env["npm_config_user_agent"] ?? "";
+	if (ua.startsWith("npm/") || ua.includes(" npm/")) return true;
+	return false;
+}
+async function maybeOfferGlobalInstall() {
+	if (!isInvokedViaNpx()) return;
+	if (!process.stdin.isTTY) return;
+	if (process.env["CI"]) return;
+	const prefs = readPrefs();
+	if (prefs.skipGlobalInstall || prefs.skipNpxHint) return;
+	const answer = await p.confirm({
+		message: "Install agentmemory globally so the bare `agentmemory` command works in any shell? [Y/n]",
+		initialValue: true
+	});
+	if (p.isCancel(answer)) return;
+	if (answer === false) {
+		writePrefs({ skipGlobalInstall: true });
+		p.log.info("Skipped. Re-run via `npx @agentmemory/agentmemory` or install later with: npm install -g @agentmemory/agentmemory");
+		return;
+	}
+	const npmBin = whichBinary("npm");
+	if (!npmBin) {
+		p.log.warn("npm not found on PATH. Install manually: npm install -g @agentmemory/agentmemory");
+		return;
+	}
+	if (runCommand(npmBin, [
+		"install",
+		"-g",
+		`@agentmemory/agentmemory@${VERSION}`
+	], { label: `Installing @agentmemory/agentmemory@${VERSION} globally` })) {
+		p.log.success("Installed globally. `agentmemory stop` etc. will now work in new shells.");
+		writePrefs({ skipGlobalInstall: true });
+	} else p.log.warn("Global install failed. Try manually: npm install -g @agentmemory/agentmemory");
+}
+function detectIiiConsole() {
+	const onPath = whichBinary("iii-console");
+	if (onPath) return {
+		kind: "installed",
+		binPath: onPath
+	};
+	const fallback = IS_WINDOWS ? join(process.env["USERPROFILE"] ?? "", ".local", "bin", "iii-console.exe") : join(homedir(), ".local", "bin", "iii-console");
+	if (fallback && existsSync(fallback)) return {
+		kind: "installed",
+		binPath: fallback
+	};
+	return { kind: "missing" };
+}
+const III_CONSOLE_INSTALL_CMD = "curl -fsSL https://install.iii.dev/console/main/install.sh | bash -s -- --next";
+async function ensureIiiConsole() {
+	const state = detectIiiConsole();
+	if (state.kind === "installed") return state;
+	if (!process.stdin.isTTY || process.env["CI"]) return state;
+	if (readPrefs().skipConsoleInstall) return state;
+	const answer = await p.confirm({
+		message: "iii console gives engine-level visibility (workers, functions, queues, traces). Install now?",
+		initialValue: true
+	});
+	if (p.isCancel(answer)) return state;
+	if (answer === false) {
+		writePrefs({ skipConsoleInstall: true });
+		return state;
+	}
+	const shBin = whichBinary("sh");
+	const curlBin = whichBinary("curl");
+	if (!shBin || !curlBin) {
+		p.log.warn(`curl or sh not found. Install manually:\n  ${III_CONSOLE_INSTALL_CMD}`);
+		return state;
+	}
+	if (!runCommand(shBin, ["-c", III_CONSOLE_INSTALL_CMD], { label: "Installing iii console" })) {
+		p.log.warn(`iii console install failed. Re-run manually:\n  ${III_CONSOLE_INSTALL_CMD}`);
+		return state;
+	}
+	return detectIiiConsole();
+}
+function adoptRunningEngine() {
+	try {
+		const existingState = readEngineState();
+		const existingPid = readEnginePidfile();
+		if (existingState && existingPid) return;
+		const enginePid = findEnginePidsByPort(getRestPort())[0];
+		if (enginePid && !existingPid) writeEnginePidfile(enginePid);
+		if (!existingState) writeEngineState({
+			kind: "native",
+			configPath: findIiiConfig() || "",
+			attached: true
+		});
+		if (enginePid && !existingPid) p.log.info(`Attached to existing iii-engine (pid ${enginePid})`);
+	} catch (err) {
+		vlog(`adoptRunningEngine: ${err instanceof Error ? err.message : String(err)}`);
+	}
+}
+async function runIiiInstaller() {
+	const releaseUrl = iiiReleaseUrl();
+	const asset = iiiReleaseAsset();
+	const isZipAsset = asset?.endsWith(".zip") === true;
+	if (!releaseUrl) {
+		p.log.warn(`iii-engine binary not available for ${platform()}/${process.arch}. Use Docker (\`docker pull iiidev/iii:${IIPINNED_VERSION}\`) or download manually from https://github.com/iii-hq/iii/releases/tag/iii%2Fv${IIPINNED_VERSION}.`);
+		return {
+			ok: false,
+			binPath: null
+		};
+	}
+	if (IS_WINDOWS || isZipAsset) {
+		p.log.info(`Auto-install unavailable on ${platform()} — ${asset} isn't tar-compatible. Install manually:\n  1. Download ${releaseUrl}\n  2. Extract iii.exe and place it on PATH (e.g. %USERPROFILE%\\.local\\bin)\nOr use Docker: docker pull iiidev/iii:${IIPINNED_VERSION}`);
+		return {
+			ok: false,
+			binPath: null
+		};
+	}
+	const shBin = whichBinary("sh");
+	const curlBin = whichBinary("curl");
+	if (!shBin || !curlBin) {
+		p.log.warn("curl or sh not found. Cannot auto-install iii-engine.");
+		return {
+			ok: false,
+			binPath: null
+		};
+	}
+	const binDir = join(homedir(), ".local", "bin");
+	const binPath = join(binDir, "iii");
+	if (!runCommand(shBin, ["-c", [
+		`mkdir -p "${binDir}"`,
+		`curl -fsSL "${releaseUrl}" | tar -xz -C "${binDir}"`,
+		`chmod +x "${binPath}"`
+	].join(" && ")], {
+		label: `Installing iii-engine v${IIPINNED_VERSION} (pinned)`,
+		optional: true
+	})) {
+		p.log.warn(`iii-engine installer failed. Fallbacks: Docker (\`docker pull iiidev/iii:${IIPINNED_VERSION}\`) or download manually from https://github.com/iii-hq/iii/releases/tag/iii%2Fv${IIPINNED_VERSION}.`);
+		return {
+			ok: false,
+			binPath: null
+		};
+	}
+	return {
+		ok: true,
+		binPath
+	};
+}
+let startupFailure = null;
+function spawnEngineBackground(bin, spawnArgs, label) {
+	vlog(`spawn: ${bin} ${spawnArgs.join(" ")}`);
+	const child = spawn(bin, spawnArgs, {
+		detached: true,
+		stdio: [
+			"ignore",
+			"ignore",
+			"pipe"
+		],
+		windowsHide: true
+	});
+	const isDocker = label.includes("Docker");
+	if (!isDocker && typeof child.pid === "number") writeEnginePidfile(child.pid);
+	const stderrChunks = [];
+	let stderrBytes = 0;
+	const MAX_STDERR_CAPTURE = 16 * 1024;
+	child.stderr?.on("data", (chunk) => {
+		if (stderrBytes >= MAX_STDERR_CAPTURE) return;
+		const slice = chunk.subarray(0, MAX_STDERR_CAPTURE - stderrBytes);
+		stderrChunks.push(slice);
+		stderrBytes += slice.length;
+	});
+	child.on("exit", (code, signal) => {
+		if (code !== null && code !== 0 || code === null && signal !== null) {
+			const stderr = Buffer.concat(stderrChunks).toString("utf-8");
+			startupFailure = {
+				kind: isDocker ? "docker-crashed" : "engine-crashed",
+				stderr: stderr.trim() || (signal ? `process killed by signal ${signal}` : `process exited with code ${code}`),
+				binary: bin
+			};
+			vlog(`engine exited early: code=${code} signal=${signal}`);
+			if (IS_VERBOSE && stderr.trim()) p.log.error(`engine stderr:\n${stderr}`);
+			if (!isDocker) clearEnginePidfile();
+			clearEngineState();
+		}
+	});
+	child.unref();
+	return child;
+}
+function startIiiBin(iiiBin, configPath) {
+	warnIfEngineVersionMismatch(iiiBin);
+	const s = p.spinner();
+	s.start(`Starting iii-engine: ${iiiBin}`);
+	writeEngineState({
+		kind: "native",
+		configPath
+	});
+	spawnEngineBackground(iiiBin, ["--config", configPath], "iii-engine");
+	s.stop("iii-engine process started");
+	return true;
+}
+async function startEngine() {
+	const configPath = findIiiConfig();
+	let iiiBin = whichBinary("iii");
+	vlog(`iii binary: ${iiiBin ?? "(not on PATH)"}, config: ${configPath || "(not found)"}`);
+	if (iiiBin && configPath) return startIiiBin(iiiBin, configPath);
+	for (const iiiPath of fallbackIiiPaths()) if (existsSync(iiiPath)) {
+		const v = iiiBinVersion(iiiPath);
+		vlog(`fallback iii at ${iiiPath} reports version: ${v ?? "unknown"}`);
+		p.log.info(`Found iii at: ${iiiPath}${v ? ` (v${v})` : ""}`);
+		process.env["PATH"] = `${dirname(iiiPath)}${delimiter}${process.env["PATH"] ?? ""}`;
+		iiiBin = iiiPath;
+		break;
+	}
+	if (iiiBin && configPath) return startIiiBin(iiiBin, configPath);
+	if (!configPath) {
+		startupFailure = { kind: "no-engine" };
+		return false;
+	}
+	const dockerBin = whichBinary("docker");
+	vlog(`docker binary: ${dockerBin ?? "(not on PATH)"}`);
+	const composeFile = [
+		join(__dirname, "..", "docker-compose.yml"),
+		join(__dirname, "docker-compose.yml"),
+		join(process.cwd(), "docker-compose.yml")
+	].find((c) => existsSync(c));
+	vlog(`docker-compose.yml: ${composeFile ?? "(not found)"}`);
+	const dockerOptIn = process.env["AGENTMEMORY_USE_DOCKER"] === "1" || process.env["AGENTMEMORY_USE_DOCKER"] === "true";
+	const interactive = !!process.stdin.isTTY && !process.env["CI"];
+	let choice;
+	if (dockerOptIn && dockerBin && composeFile) choice = "docker";
+	else if (!interactive) {
+		choice = "install";
+		p.log.info("Non-interactive environment detected — auto-installing iii-engine.");
+	} else {
+		p.log.warn(`iii-engine binary not found locally.`);
+		const options = [{
+			value: "install",
+			label: `Install iii v${IIPINNED_VERSION} to ~/.local/bin (~6MB, ~5s)`,
+			hint: "recommended"
+		}];
+		if (dockerBin && composeFile) options.push({
+			value: "docker",
+			label: "Use Docker compose",
+			hint: "advanced"
+		});
+		options.push({
+			value: "manual",
+			label: "Show manual install steps and exit"
+		});
+		const picked = await p.select({
+			message: "How would you like to start iii-engine?",
+			options,
+			initialValue: "install"
+		});
+		if (p.isCancel(picked)) {
+			startupFailure = { kind: "no-engine" };
+			return false;
+		}
+		choice = picked;
+	}
+	if (choice === "manual") {
+		startupFailure = { kind: "no-engine" };
+		return false;
+	}
+	if (choice === "install") {
+		const result = await runIiiInstaller();
+		if (result.ok && result.binPath) {
+			process.env["PATH"] = `${dirname(result.binPath)}${delimiter}${process.env["PATH"] ?? ""}`;
+			iiiBin = result.binPath;
+			return startIiiBin(iiiBin, configPath);
+		}
+		if (dockerBin && composeFile && interactive) {
+			const fallback = await p.confirm({
+				message: "Auto-install failed. Try Docker compose instead?",
+				initialValue: true
+			});
+			if (p.isCancel(fallback) || fallback !== true) {
+				startupFailure = { kind: "no-engine" };
+				return false;
+			}
+			choice = "docker";
+		} else {
+			startupFailure = { kind: "no-engine" };
+			return false;
+		}
+	}
+	if (choice === "docker" && dockerBin && composeFile) {
+		const s = p.spinner();
+		s.start("Starting iii-engine via Docker...");
+		writeEngineState({
+			kind: "docker",
+			composeFile
+		});
+		spawnEngineBackground(dockerBin, [
+			"compose",
+			"-f",
+			composeFile,
+			"up",
+			"-d"
+		], "iii-engine via Docker");
+		s.stop("Docker compose started");
+		return true;
+	}
+	if (!composeFile && dockerBin) startupFailure = { kind: "no-docker-compose" };
+	else startupFailure = { kind: "no-engine" };
+	return false;
+}
+async function waitForEngine(timeoutMs) {
+	const start = Date.now();
+	while (Date.now() - start < timeoutMs) {
+		if (await isEngineRunning()) return true;
+		await new Promise((r) => setTimeout(r, 500));
+	}
+	return false;
+}
+function installInstructions() {
+	const releaseUrl = iiiReleaseUrl();
+	if (IS_WINDOWS) return [
+		`agentmemory needs iii-engine v${IIPINNED_VERSION}. Pick one:`,
+		"",
+		"  A) Download the prebuilt Windows binary:",
+		`     1. Open https://github.com/iii-hq/iii/releases/tag/iii%2Fv${IIPINNED_VERSION}`,
+		`     2. Download iii-x86_64-pc-windows-msvc.zip (or iii-aarch64-pc-windows-msvc.zip on ARM)`,
+		"     3. Extract iii.exe to %USERPROFILE%\\.local\\bin\\iii.exe (or add to PATH)",
+		"     4. Re-run: npx @agentmemory/agentmemory",
+		"",
+		`  B) Docker: docker pull iiidev/iii:${IIPINNED_VERSION}`,
+		"     Re-run with AGENTMEMORY_USE_DOCKER=1 npx @agentmemory/agentmemory",
+		"",
+		"Or skip the engine entirely (standalone MCP):  npx @agentmemory/agentmemory mcp",
+		"",
+		"Docs: https://iii.dev/docs"
+	];
+	const linuxInstall = releaseUrl ? `  A) curl -fsSL "${releaseUrl}" | tar -xz -C ~/.local/bin && chmod +x ~/.local/bin/iii` : `  A) Manual download: https://github.com/iii-hq/iii/releases/tag/iii%2Fv${IIPINNED_VERSION}`;
+	return [
+		`agentmemory needs iii-engine v${IIPINNED_VERSION}. Pick one:`,
+		"",
+		linuxInstall,
+		"     Then re-run: npx @agentmemory/agentmemory",
+		"",
+		`  B) Docker: docker pull iiidev/iii:${IIPINNED_VERSION}`,
+		"     Re-run with AGENTMEMORY_USE_DOCKER=1 npx @agentmemory/agentmemory",
+		"",
+		"Or skip the engine entirely (standalone MCP):  npx @agentmemory/agentmemory mcp",
+		"",
+		"Docs: https://iii.dev/docs"
+	];
+}
+function portInUseDiagnostic(port) {
+	return IS_WINDOWS ? `  netstat -ano | findstr :${port}` : `  lsof -i :${port}   # or: ss -tlnp | grep :${port}`;
+}
+async function waitForAgentmemoryReady(timeoutMs) {
+	const start = Date.now();
+	while (Date.now() - start < timeoutMs) {
+		if (await isAgentmemoryReady()) return true;
+		await new Promise((r) => setTimeout(r, 250));
+	}
+	return false;
+}
+function getEngineHost() {
+	for (const envKey of ["III_ENGINE_URL", "AGENTMEMORY_URL"]) {
+		const raw = process.env[envKey];
+		if (!raw) continue;
+		try {
+			const parsed = new URL(raw);
+			if (parsed.hostname) return parsed.hostname;
+		} catch {}
+	}
+	return "localhost";
+}
+function printReadyHint(consoleState) {
+	const restUrl = getBaseUrl();
+	const viewerUrl = getViewerUrl();
+	const engineHost = getEngineHost();
+	const streamUrl = `ws://${engineHost}:${getStreamPort()}`;
+	const engineUrl = `ws://${engineHost}:${getEnginePort()}`;
+	const consoleLine = consoleState.kind === "installed" ? `iii console  ${consoleState.binPath}  (run: ${consoleState.binPath} -p <port>)` : `iii console  (install: ${III_CONSOLE_INSTALL_CMD})`;
+	const lines = [
+		`REST API     ${restUrl}`,
+		`Viewer       ${viewerUrl}`,
+		`Streams      ${streamUrl}`,
+		`Engine       ${engineUrl}`,
+		consoleLine
+	];
+	p.note(lines.join("\n"), `agentmemory v${VERSION}`);
+	const demoCommand = isInvokedViaNpx() ? "npx @agentmemory/agentmemory demo" : "agentmemory demo";
+	process.stdout.write(`\nTry: ${demoCommand}\n`);
+}
+async function main() {
+	if (IS_RESET) resetPrefs();
+	const firstRun = isFirstRun();
+	const prefs = readPrefs();
+	if (firstRun || IS_RESET || IS_VERBOSE || !prefs.skipSplash) renderSplash(VERSION);
+	if (firstRun || IS_RESET) await runOnboarding();
+	if (skipEngine) {
+		if (IS_VERBOSE) p.log.info("Skipping engine check (--no-engine)");
+		await import("./src-2wwYDPGA.mjs");
+		if (await waitForAgentmemoryReady(15e3)) {
+			const consoleState = await ensureIiiConsole();
+			await maybeOfferGlobalInstall();
+			printReadyHint(consoleState);
+		}
+		return;
+	}
+	if (await isEngineRunning()) {
+		if (IS_VERBOSE) p.log.success("iii-engine is running");
+		warnIfEngineVersionMismatch(whichBinary("iii") ?? fallbackIiiPaths().find((p) => existsSync(p)) ?? null);
+		adoptRunningEngine();
+		await import("./src-2wwYDPGA.mjs");
+		if (await waitForAgentmemoryReady(15e3)) {
+			const consoleState = await ensureIiiConsole();
+			await maybeOfferGlobalInstall();
+			printReadyHint(consoleState);
+		}
+		return;
+	}
+	if (!await startEngine()) {
+		p.log.error("Could not start iii-engine.");
+		const lines = installInstructions();
+		if (startupFailure?.kind === "no-docker-compose") lines.unshift("Docker is installed but docker-compose.yml is missing from this", "install. Re-install with: npm install -g @agentmemory/agentmemory", "");
+		p.note(lines.join("\n"), "Setup required");
+		process.exit(1);
+	}
+	const s = p.spinner();
+	s.start("Waiting for iii-engine to be ready...");
+	if (!await waitForEngine(15e3)) {
+		const port = getRestPort();
+		s.stop("iii-engine did not become ready within 15s");
+		if (startupFailure?.kind === "engine-crashed" || startupFailure?.kind === "docker-crashed") {
+			p.log.error("The iii-engine process crashed on startup.");
+			if (startupFailure.binary) p.log.info(`Binary: ${startupFailure.binary}`);
+			if (startupFailure.stderr) p.note(startupFailure.stderr, "engine stderr");
+			else p.log.info("No stderr was captured. Re-run with --verbose for more detail.");
+			p.note([
+				"Common causes:",
+				"  - iii-engine version mismatch — reinstall the latest binary",
+				"    (sh script on macOS/Linux, GitHub release zip on Windows)",
+				"  - Docker Desktop not running (if you're using the Docker path)",
+				"  - Port already in use (see below)",
+				"",
+				"See https://iii.dev/docs for current install instructions."
+			].join("\n"), "Troubleshooting");
+		} else {
+			p.log.error("The engine process started but the REST API never responded.");
+			p.note([
+				`Check whether port ${port} is already bound by another process:`,
+				portInUseDiagnostic(port),
+				"",
+				"If it is, free the port or override: agentmemory --port <N>",
+				"",
+				"If it isn't, a firewall may be blocking 127.0.0.1:" + port + ".",
+				"Re-run with --verbose to see engine stderr."
+			].join("\n"), "Troubleshooting");
+		}
+		process.exit(1);
+	}
+	s.stop("iii-engine is ready");
+	await import("./src-2wwYDPGA.mjs");
+	if (await waitForAgentmemoryReady(15e3)) {
+		const consoleState = await ensureIiiConsole();
+		await maybeOfferGlobalInstall();
+		printReadyHint(consoleState);
+	}
+	writePrefs({ skipSplash: true });
+}
+async function apiFetch(base, path, timeoutMs = 5e3) {
+	try {
+		const headers = {};
+		const secret = process.env["AGENTMEMORY_SECRET"];
+		if (secret) headers["Authorization"] = `Bearer ${secret}`;
+		return await (await fetch(`${base}/agentmemory/${path}`, {
+			signal: AbortSignal.timeout(timeoutMs),
+			headers
+		})).json();
+	} catch {
+		return null;
+	}
+}
+async function runStatus() {
+	getRestPort();
+	const base = getBaseUrl();
+	p.intro("agentmemory status");
+	if (!await isEngineRunning()) {
+		p.log.error(`Not running — no response at ${base}`);
+		p.log.info("Start with: npx @agentmemory/agentmemory");
+		process.exit(1);
+	}
+	try {
+		const [healthRes, sessionsRes, graphRes, memoriesRes, flagsRes] = await Promise.all([
+			apiFetch(base, "health"),
+			apiFetch(base, "sessions"),
+			apiFetch(base, "graph/stats"),
+			apiFetch(base, "export"),
+			apiFetch(base, "config/flags")
+		]);
+		const h = healthRes?.health;
+		const status = healthRes?.status || "unknown";
+		const version = healthRes?.version || "?";
+		const sessions = Array.isArray(sessionsRes?.sessions) ? sessionsRes.sessions.length : 0;
+		const nodes = Number(graphRes?.totalNodes ?? graphRes?.nodes ?? graphRes?.nodeCount ?? 0);
+		const edges = Number(graphRes?.totalEdges ?? graphRes?.edges ?? graphRes?.edgeCount ?? 0);
+		const cb = healthRes?.circuitBreaker?.state || "closed";
+		const heapMB = h?.memory ? Math.round(h.memory.heapUsed / 1048576) : 0;
+		const uptime = h?.uptimeSeconds ? Math.round(h.uptimeSeconds) : 0;
+		const obsCount = memoriesRes?.observations?.length || 0;
+		const memCount = memoriesRes?.memories?.length || 0;
+		const estFullTokens = obsCount * 80;
+		const estInjectedTokens = Math.min(obsCount, 50) * 38;
+		const tokensSaved = estFullTokens - estInjectedTokens;
+		const pctSaved = estFullTokens > 0 ? Math.round(tokensSaved / estFullTokens * 100) : 0;
+		p.log.success(`Connected — v${version} at ${base}`);
+		const lines = [
+			`Health:       ${status === "healthy" ? "✓ healthy" : status}`,
+			`Sessions:     ${sessions}`,
+			`Observations: ${obsCount}`,
+			`Memories:     ${memCount}`,
+			`Graph:        ${nodes} nodes, ${edges} edges`,
+			`Circuit:      ${cb}`,
+			`Heap:         ${heapMB} MB`,
+			`Uptime:       ${uptime}s`,
+			`Viewer:       ${getViewerUrl()}`
+		];
+		if (obsCount > 0) {
+			lines.push("");
+			lines.push(`Token savings: ~${tokensSaved.toLocaleString()} tokens saved (${pctSaved}% reduction)`);
+			lines.push(`  Full context: ~${estFullTokens.toLocaleString()} tokens`);
+			lines.push(`  Injected:     ~${estInjectedTokens.toLocaleString()} tokens`);
+		}
+		if (flagsRes) {
+			const provider = flagsRes.provider === "llm" ? "✓ llm" : "✗ noop (no key)";
+			const embed = flagsRes.embeddingProvider === "embeddings" ? "✓ embeddings" : "bm25-only";
+			const flagRows = (flagsRes.flags || []).map((f) => `  ${f.enabled ? "✓" : "✗"} ${f.key.padEnd(32)} ${f.label}`);
+			lines.push("");
+			lines.push(`Provider:     ${provider}`);
+			lines.push(`Embeddings:   ${embed}`);
+			lines.push(`Flags:`);
+			flagRows.forEach((r) => lines.push(r));
+		}
+		p.note(lines.join("\n"), "agentmemory");
+	} catch (err) {
+		p.log.error(err instanceof Error ? err.message : String(err));
+		process.exit(1);
+	}
+}
+function formatChecks(checks) {
+	return checks.map((c) => `${c.ok ? "✓" : "✗"} ${c.name}${c.hint ? `\n   ${c.hint}` : ""}`).join("\n");
+}
+function findLatestDebugLog(debugDir) {
+	const latestLink = join(debugDir, "latest");
+	try {
+		if (existsSync(latestLink)) {
+			const target = readlinkSync(latestLink);
+			const resolved = target.startsWith("/") ? target : join(debugDir, target);
+			if (existsSync(resolved)) return resolved;
+		}
+	} catch {}
+	try {
+		const newest = readdirSync(debugDir).filter((f) => f.endsWith(".txt")).map((f) => ({
+			f,
+			m: statSync(join(debugDir, f)).mtimeMs
+		})).sort((a, b) => b.m - a.m)[0];
+		if (newest) return join(debugDir, newest.f);
+	} catch {}
+}
+function checkClaudeCodeHooks() {
+	const debugDir = join(homedir(), ".claude", "debug");
+	if (!existsSync(debugDir)) return { state: "no-cc-dir" };
+	const logPath = findLatestDebugLog(debugDir);
+	if (!logPath) return { state: "no-debug-log" };
+	let content;
+	try {
+		content = readFileSync(logPath, "utf8");
+	} catch {
+		return { state: "no-debug-log" };
+	}
+	const match = content.match(/Loaded hooks from standard location for plugin agentmemory:\s*(\S+)/);
+	if (match) return {
+		state: "loaded",
+		manifestPath: match[1]
+	};
+	if (content.includes("Loading hooks from plugin: agentmemory")) return { state: "loaded" };
+	return { state: "not-loaded" };
+}
+function buildDoctorContext() {
+	return {
+		baseUrl: getBaseUrl(),
+		viewerUrl: getViewerUrl(),
+		envPath: join(homedir(), ".agentmemory", ".env"),
+		pidfilePath: enginePidfilePath(),
+		enginePath: engineStatePath(),
+		pinnedVersion: IIPINNED_VERSION
+	};
+}
+function buildDoctorEffects() {
+	return {
+		envFileExists: () => existsSync(join(homedir(), ".agentmemory", ".env")),
+		readEnvFile: () => {
+			try {
+				return parseEnvFile(readFileSync(join(homedir(), ".agentmemory", ".env"), "utf-8"));
+			} catch {
+				return {};
+			}
+		},
+		pidfileExists: () => existsSync(enginePidfilePath()),
+		pidfilePidIsAlive: () => {
+			const pid = readEnginePidfile();
+			if (pid === null) return null;
+			return pidAlive(pid);
+		},
+		findIiiBinary: () => whichBinary("iii"),
+		localBinIiiPath: () => join(homedir(), ".local", "bin", IS_WINDOWS ? "iii.exe" : "iii"),
+		iiiBinaryVersion: (binPath) => iiiBinVersion(binPath),
+		viewerReachable: async (timeoutMs = 2e3) => {
+			try {
+				return (await fetch(getViewerUrl(), { signal: AbortSignal.timeout(timeoutMs) })).ok;
+			} catch {
+				return false;
+			}
+		},
+		runInit: async () => {
+			try {
+				await runInit();
+				return {
+					ok: true,
+					message: "Wrote ~/.agentmemory/.env"
+				};
+			} catch (err) {
+				return {
+					ok: false,
+					message: err instanceof Error ? err.message : String(err)
+				};
+			}
+		},
+		openEditor: async (path) => {
+			const editor = process.env["EDITOR"] || process.env["VISUAL"] || "nano";
+			p.log.info(`Opening ${path} in ${editor}…`);
+			try {
+				const result = spawnSync(editor, [path], { stdio: "inherit" });
+				if (result.error) return {
+					ok: false,
+					message: `Failed to launch ${editor}: ${result.error.message}`
+				};
+				if ((result.status ?? 0) !== 0) return {
+					ok: false,
+					message: `${editor} exited with code ${result.status}`
+				};
+				return {
+					ok: true,
+					message: `Saved ${path}`
+				};
+			} catch (err) {
+				return {
+					ok: false,
+					message: err instanceof Error ? err.message : String(err)
+				};
+			}
+		},
+		runIiiInstaller: async () => {
+			const r = await runIiiInstaller();
+			return {
+				ok: r.ok,
+				message: r.ok ? `Installed iii v${IIPINNED_VERSION} to ${r.binPath}` : "iii installer failed (see warnings above)"
+			};
+		},
+		runStop: async () => {
+			try {
+				const portPids = findEnginePidsByPort(getRestPort());
+				const pidfilePid = readEnginePidfile();
+				if (portPids.length === 0 && pidfilePid === null) {
+					clearEnginePidfile();
+					clearEngineState();
+					return {
+						ok: true,
+						message: "Nothing to stop."
+					};
+				}
+				const candidates = /* @__PURE__ */ new Set();
+				if (pidfilePid) candidates.add(pidfilePid);
+				for (const pid of portPids) candidates.add(pid);
+				let allStopped = true;
+				for (const pid of candidates) if (!await signalAndWait(pid, "SIGTERM", 3e3)) allStopped = false;
+				clearEnginePidfile();
+				clearEngineState();
+				return {
+					ok: allStopped,
+					message: allStopped ? "Engine stopped." : "Some engine pids survived."
+				};
+			} catch (err) {
+				return {
+					ok: false,
+					message: err instanceof Error ? err.message : String(err)
+				};
+			}
+		},
+		runStart: async () => {
+			try {
+				if (!await startEngine()) return {
+					ok: false,
+					message: "startEngine() returned false"
+				};
+				const ready = await waitForEngine(15e3);
+				return {
+					ok: ready,
+					message: ready ? "Engine ready" : "Engine did not become ready within 15s"
+				};
+			} catch (err) {
+				return {
+					ok: false,
+					message: err instanceof Error ? err.message : String(err)
+				};
+			}
+		},
+		clearEnginePidAndState: () => {
+			clearEnginePidfile();
+			clearEngineState();
+		}
+	};
+}
+async function passiveServerChecks() {
+	const base = getBaseUrl();
+	const checks = [];
+	const serverUp = await isEngineRunning();
+	checks.push({
+		name: "Server reachable",
+		ok: serverUp,
+		hint: serverUp ? void 0 : `Start with: npx @agentmemory/agentmemory (tried ${base})`
+	});
+	if (!serverUp) return checks;
+	const [health, flags, graph] = await Promise.all([
+		apiFetch(base, "health", 3e3),
+		apiFetch(base, "config/flags", 3e3),
+		apiFetch(base, "graph/stats", 3e3)
+	]);
+	const hasLlm = flags?.provider === "llm";
+	const hasEmbed = flags?.embeddingProvider === "embeddings";
+	const graphHas = Number(graph?.totalNodes ?? graph?.nodes ?? graph?.nodeCount ?? 0) > 0;
+	checks.push({
+		name: "Health status",
+		ok: health?.status === "healthy",
+		hint: health?.status === "healthy" ? void 0 : `Status: ${health?.status || "unknown"}`
+	}, {
+		name: "LLM provider",
+		ok: hasLlm,
+		hint: hasLlm ? void 0 : "set ANTHROPIC_API_KEY (or GEMINI/OPENROUTER/MINIMAX) in ~/.agentmemory/.env"
+	}, {
+		name: "Embedding provider",
+		ok: hasEmbed,
+		hint: hasEmbed ? void 0 : "Running BM25-only. Add OPENAI_API_KEY / VOYAGE_API_KEY / COHERE_API_KEY / OLLAMA_HOST"
+	});
+	for (const f of flags?.flags || []) checks.push({
+		name: f.label,
+		ok: f.enabled,
+		hint: f.enabled ? void 0 : f.enableHow
+	});
+	const cc = checkClaudeCodeHooks();
+	const ccCheck = (() => {
+		switch (cc.state) {
+			case "loaded": return {
+				ok: true,
+				hint: cc.manifestPath ? `manifest: ${cc.manifestPath}` : void 0
+			};
+			case "not-loaded": return {
+				ok: false,
+				hint: "Plugin enabled but hooks not loaded by Claude Code. Try: /plugin uninstall agentmemory@agentmemory && /plugin install agentmemory@agentmemory, then restart the session."
+			};
+			case "no-debug-log": return {
+				ok: false,
+				hint: "Cannot verify — no Claude Code debug log found. Run once with `claude --debug -p \"x\"`, then re-run doctor."
+			};
+			case "no-cc-dir": return;
+		}
+	})();
+	if (ccCheck) checks.push({
+		name: "Claude Code plugin hooks registered",
+		...ccCheck
+	});
+	checks.push({
+		name: "Knowledge graph populated",
+		ok: graphHas,
+		hint: graphHas ? void 0 : "Graph is empty. Run a session with GRAPH_EXTRACTION_ENABLED=true."
+	});
+	return checks;
+}
+async function askFixAction(d) {
+	const choice = await p.select({
+		message: `[${d.id}] ${d.message}`,
+		options: [
+			{
+				value: "fix",
+				label: "F  Fix",
+				hint: d.fixPreview
+			},
+			{
+				value: "skip",
+				label: "S  Skip"
+			},
+			{
+				value: "more",
+				label: "?  More info"
+			},
+			{
+				value: "quit",
+				label: "Q  Quit doctor"
+			}
+		],
+		initialValue: "fix"
+	});
+	if (p.isCancel(choice)) return "quit";
+	return choice;
+}
+async function applyFixWithReport(d, ctx, dryRun) {
+	if (dryRun) {
+		p.log.info(`[dry-run] would: ${d.fixPreview}`);
+		return {
+			ok: true,
+			message: "(dry-run)"
+		};
+	}
+	const result = await d.fix(ctx);
+	if (result.ok) p.log.success(result.message ?? `${d.id} fixed.`);
+	else p.log.error(result.message ?? `${d.id} fix failed.`);
+	return result;
+}
+async function runDoctor() {
+	p.intro("agentmemory doctor");
+	const applyAll = args.includes("--all");
+	const dryRun = args.includes("--dry-run");
+	if (applyAll && dryRun) {
+		p.log.error("Cannot combine --all and --dry-run.");
+		process.exit(2);
+	}
+	const passive = await passiveServerChecks();
+	const passivePassed = passive.filter((c) => c.ok).length;
+	p.note(formatChecks(passive), `server: ${passivePassed}/${passive.length} passing`);
+	const ctx = buildDoctorContext();
+	const diagnostics = buildDiagnostics(buildDoctorEffects());
+	if (dryRun) {
+		const results = [];
+		for (const d of diagnostics) results.push({
+			diagnostic: d,
+			status: await d.check(ctx)
+		});
+		const lines = dryRunPlan(ctx, results);
+		p.note(lines.join("\n"), "dry-run plan");
+		p.outro("Dry-run complete. Re-run without --dry-run to apply.");
+		return;
+	}
+	let failed = 0;
+	let fixed = 0;
+	let skipped = 0;
+	let quit = false;
+	for (const d of diagnostics) {
+		if (quit) {
+			skipped++;
+			continue;
+		}
+		const status = await d.check(ctx);
+		if (status.ok) {
+			p.log.success(`${d.id} ✓${status.detail ? ` (${status.detail})` : ""}`);
+			continue;
+		}
+		failed++;
+		p.log.warn(`${d.id} ✗ ${status.detail ?? ""}`.trim());
+		p.log.info(`why: ${d.fixPreview}`);
+		if (d.manualOnly) p.log.info(`(manual fix only — see "${d.id}" docs)`);
+		if (applyAll) {
+			if ((await applyFixWithReport(d, ctx, false)).ok) fixed++;
+			if (!(await d.check(ctx)).ok) p.log.warn(`${d.id} still failing after fix.`);
+			continue;
+		}
+		while (true) {
+			const action = await askFixAction(d);
+			if (action === "fix") {
+				if ((await applyFixWithReport(d, ctx, false)).ok) {
+					const after = await d.check(ctx);
+					if (after.ok) fixed++;
+					else p.log.warn(`${d.id} still failing after fix: ${after.detail ?? ""}`);
+				}
+				break;
+			}
+			if (action === "skip") {
+				skipped++;
+				break;
+			}
+			if (action === "more") {
+				p.note(d.moreInfo, `[${d.id}] more info`);
+				continue;
+			}
+			if (action === "quit") {
+				quit = true;
+				break;
+			}
+		}
+	}
+	const summary = `${diagnostics.length} checks · ${failed} failing · ${fixed} fixed · ${skipped} skipped`;
+	if (quit) {
+		p.outro(`Quit early. ${summary}`);
+		process.exit(1);
+	}
+	if (failed === 0) {
+		p.outro("All diagnostics passing. agentmemory is healthy.");
+		return;
+	}
+	if (failed - fixed === 0) {
+		p.outro(`All fixes applied. ${summary}`);
+		return;
+	}
+	p.outro(summary);
+	process.exit(1);
+}
+function buildDemoSessions() {
+	return [
+		{
+			id: generateId("demo"),
+			title: "Session 1: JWT auth setup",
+			observations: [
+				{
+					toolName: "Write",
+					toolInput: { file_path: "src/middleware/auth.ts" },
+					toolOutput: "Created JWT middleware using jose library. Tokens expire after 30 days. Chose jose over jsonwebtoken for Edge compatibility."
+				},
+				{
+					toolName: "Write",
+					toolInput: { file_path: "test/auth.test.ts" },
+					toolOutput: "Added token validation tests covering expired, malformed, and valid cases."
+				},
+				{
+					toolName: "Bash",
+					toolInput: { command: "npm test" },
+					toolOutput: "All 12 auth tests passing."
+				}
+			]
+		},
+		{
+			id: generateId("demo"),
+			title: "Session 2: Database migration debugging",
+			observations: [{
+				toolName: "Read",
+				toolInput: { file_path: "prisma/schema.prisma" },
+				toolOutput: "Found N+1 query issue in user relations. Need to add include on posts query."
+			}, {
+				toolName: "Edit",
+				toolInput: { file_path: "src/api/users.ts" },
+				toolOutput: "Fixed N+1 by adding Prisma include. Query time dropped from 450ms to 28ms."
+			}]
+		},
+		{
+			id: generateId("demo"),
+			title: "Session 3: Rate limiting",
+			observations: [{
+				toolName: "Write",
+				toolInput: { file_path: "src/middleware/ratelimit.ts" },
+				toolOutput: "Added rate limiting middleware with 100 req/min default. Uses in-memory store for dev, Redis for prod."
+			}]
+		}
+	];
+}
+async function postJson(url, body, timeoutMs = 5e3) {
+	try {
+		const res = await fetch(url, {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(body),
+			signal: AbortSignal.timeout(timeoutMs)
+		});
+		if (!res.ok) return null;
+		return await res.json().catch(() => null);
+	} catch {
+		return null;
+	}
+}
+async function postJsonStrict(url, body, timeoutMs = 5e3) {
+	const res = await fetch(url, {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify(body),
+		signal: AbortSignal.timeout(timeoutMs)
+	});
+	if (!res.ok) {
+		const errBody = await res.text().catch(() => "");
+		const suffix = errBody ? ` — ${errBody.slice(0, 200)}` : "";
+		throw new Error(`POST ${url} failed: ${res.status} ${res.statusText}${suffix}`);
+	}
+	return await res.json().catch(() => null);
+}
+async function seedDemoSession(base, project, session) {
+	await postJsonStrict(`${base}/agentmemory/session/start`, {
+		sessionId: session.id,
+		project,
+		cwd: project
+	});
+	let stored = 0;
+	for (const obs of session.observations) {
+		const url = `${base}/agentmemory/observe`;
+		const payload = {
+			hookType: "post_tool_use",
+			sessionId: session.id,
+			project,
+			cwd: project,
+			timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+			data: {
+				tool_name: obs.toolName,
+				tool_input: obs.toolInput,
+				tool_output: obs.toolOutput
+			}
+		};
+		try {
+			const res = await fetch(url, {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(payload),
+				signal: AbortSignal.timeout(5e3)
+			});
+			if (res.ok) stored++;
+			else {
+				const body = await res.text().catch(() => "");
+				p.log.warn(`observe failed for ${obs.toolName}: ${res.status} ${res.statusText}${body ? ` — ${body.slice(0, 160)}` : ""}`);
+			}
+		} catch (err) {
+			p.log.warn(`observe request failed for ${obs.toolName}: ${err instanceof Error ? err.message : String(err)}`);
+		}
+	}
+	await postJsonStrict(`${base}/agentmemory/session/end`, { sessionId: session.id });
+	return stored;
+}
+async function runDemoSearch(base, query) {
+	const items = (await postJson(`${base}/agentmemory/smart-search`, {
+		query,
+		limit: 5
+	}, 1e4))?.results ?? [];
+	return {
+		query,
+		hits: items.length,
+		topTitle: items[0]?.title ?? "(no results)"
+	};
+}
+function findEnvExample() {
+	const candidates = [
+		join(__dirname, "..", ".env.example"),
+		join(__dirname, ".env.example"),
+		join(process.cwd(), ".env.example")
+	];
+	for (const c of candidates) if (existsSync(c)) return c;
+	return null;
+}
+async function runInit() {
+	p.intro("agentmemory init");
+	const target = join(homedir(), ".agentmemory", ".env");
+	const template = findEnvExample();
+	if (!template) {
+		p.log.error("Could not locate .env.example in the package. Re-install with: npm i -g @agentmemory/agentmemory");
+		process.exit(1);
+	}
+	const dir = dirname(target);
+	const { mkdir, copyFile } = await import("node:fs/promises");
+	const { constants: fsConstants } = await import("node:fs");
+	try {
+		await mkdir(dir, { recursive: true });
+		await copyFile(template, target, fsConstants.COPYFILE_EXCL);
+	} catch (err) {
+		if (err?.code === "EEXIST") {
+			p.log.warn(`${target} already exists — leaving it untouched.`);
+			p.log.info(`Compare against the latest template: diff ${target} ${template}`);
+			p.outro("Nothing changed.");
+			return;
+		}
+		p.log.error(`Failed to copy template: ${err instanceof Error ? err.message : String(err)}`);
+		process.exit(1);
+	}
+	p.log.success(`Wrote ${target}`);
+	p.note([
+		"All keys are commented out by default. Uncomment the ones you want.",
+		"",
+		"Common next steps:",
+		"  1. Pick an LLM provider key (ANTHROPIC_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY / etc.)",
+		"  2. Run `npx @agentmemory/agentmemory doctor` to verify the daemon sees them",
+		"  3. Run `npx @agentmemory/agentmemory` to start the worker"
+	].join("\n"), "Next steps");
+	p.outro(`Edit ${target} and you're set.`);
+}
+async function runDemo() {
+	const port = getRestPort();
+	const base = `http://localhost:${port}`;
+	p.intro("agentmemory demo");
+	if (!await isAgentmemoryReady()) {
+		p.log.error(`agentmemory worker not reachable on port ${port} (livez probe failed). Something may be on the port but it isn't serving /agentmemory/*.`);
+		p.log.info("Start it with: npx @agentmemory/agentmemory");
+		process.exit(1);
+	}
+	const demoProject = "/tmp/agentmemory-demo";
+	const sessions = buildDemoSessions();
+	const sSeed = p.spinner();
+	sSeed.start("Seeding 3 demo sessions with realistic observations...");
+	let totalObs = 0;
+	for (const session of sessions) totalObs += await seedDemoSession(base, demoProject, session);
+	sSeed.stop(`Seeded ${totalObs} observations across ${sessions.length} sessions`);
+	const queries = [
+		"jwt auth middleware",
+		"database performance optimization",
+		"rate limiting"
+	];
+	const sQuery = p.spinner();
+	sQuery.start(`Running ${queries.length} smart-search queries...`);
+	const results = [];
+	for (const query of queries) results.push(await runDemoSearch(base, query));
+	sQuery.stop("Search complete");
+	const lines = [
+		`Project:       ${demoProject}`,
+		`Sessions:      ${sessions.length} seeded (${totalObs} observations)`,
+		"",
+		"Search results:",
+		...results.flatMap((r) => [`  "${r.query}"`, `    → ${r.hits} hit(s), top: ${r.topTitle.slice(0, 60)}`]),
+		"",
+		`Notice: searching "database performance optimization"`,
+		`found the N+1 query fix — keyword matching can't do that.`,
+		"",
+		`Viewer:        ${getViewerUrl()}`,
+		`Clean up with: curl -X DELETE "${base}/agentmemory/sessions?project=${demoProject}"`
+	];
+	p.note(lines.join("\n"), "demo complete");
+	p.log.success("agentmemory is working. Point your agent at it and get back to coding.");
+}
+function runCommand(command, commandArgs, options = { label: "command" }) {
+	const spinner = p.spinner();
+	spinner.start(options.label);
+	const result = spawnSync(command, commandArgs, {
+		cwd: options.cwd || process.cwd(),
+		stdio: "pipe",
+		encoding: "utf-8"
+	});
+	if (result.status === 0) {
+		spinner.stop(`${options.label} ✓`);
+		return true;
+	}
+	const stderr = (result.stderr || "").toString().trim();
+	const stdout = (result.stdout || "").toString().trim();
+	const msg = stderr || stdout || "unknown error";
+	if (options.optional) {
+		spinner.stop(`${options.label} (skipped)`);
+		p.log.warn(msg.slice(0, 300));
+		return false;
+	}
+	spinner.stop(`${options.label} ✗`);
+	p.log.error(msg.slice(0, 300));
+	return false;
+}
+async function runUpgrade() {
+	p.intro("agentmemory upgrade");
+	const cwd = process.cwd();
+	const hasPackageJson = existsSync(join(cwd, "package.json"));
+	const hasPnpmLock = existsSync(join(cwd, "pnpm-lock.yaml"));
+	const pnpmBin = whichBinary("pnpm");
+	const npmBin = whichBinary("npm");
+	const dockerBin = whichBinary("docker");
+	p.log.info(`Working directory: ${cwd}`);
+	const requireSuccess = (ok, label) => {
+		if (!ok) {
+			p.log.error(`Upgrade aborted: ${label} failed.`);
+			process.exit(1);
+		}
+	};
+	if (hasPackageJson) if (!!pnpmBin && hasPnpmLock && pnpmBin) {
+		requireSuccess(runCommand(pnpmBin, ["install"], { label: "Refreshing dependencies (pnpm install)" }), "pnpm install");
+		runCommand(pnpmBin, ["up", "iii-sdk@latest"], {
+			label: "Upgrading iii-sdk to latest",
+			optional: true
+		});
+	} else if (npmBin) {
+		requireSuccess(runCommand(npmBin, ["install"], { label: "Refreshing dependencies (npm install)" }), "npm install");
+		runCommand(npmBin, ["install", "iii-sdk@latest"], {
+			label: "Upgrading iii-sdk to latest",
+			optional: true
+		});
+	} else p.log.warn("No package manager found (pnpm/npm). Skipping JS dependency upgrade.");
+	else p.log.warn("No package.json in current directory. Skipping JS dependency upgrade.");
+	const upgradeEngine = await p.confirm({
+		message: "Re-run the iii-engine install script (curl | sh)?",
+		initialValue: true
+	});
+	if (p.isCancel(upgradeEngine)) {
+		p.cancel("Cancelled.");
+		return process.exit(0);
+	}
+	if (upgradeEngine === true) await runIiiInstaller();
+	else p.log.info("Skipped iii-engine installer.");
+	if (dockerBin) runCommand(dockerBin, ["pull", `iiidev/iii:${IIPINNED_VERSION}`], {
+		label: `Pulling iii Docker image v${IIPINNED_VERSION} (pinned)`,
+		optional: true
+	});
+	else p.log.info("Docker not found. Skipping Docker image refresh.");
+	p.note([
+		"Upgrade flow completed.",
+		"",
+		"Recommended next steps:",
+		"  1) agentmemory status",
+		"  2) npm/pnpm test",
+		"  3) restart agentmemory process"
+	].join("\n"), "agentmemory upgrade");
+}
+function pidAlive(pid) {
+	try {
+		process.kill(pid, 0);
+		return true;
+	} catch (err) {
+		return err?.code === "EPERM";
+	}
+}
+async function signalAndWait(pid, initialSignal, timeoutMs) {
+	try {
+		process.kill(pid, initialSignal);
+	} catch (err) {
+		const code = err?.code;
+		if (code === "ESRCH") return true;
+		if (code === "EPERM") {
+			p.log.warn(`No permission to signal pid ${pid}. Try: kill ${pid}`);
+			return false;
+		}
+		vlog(`${initialSignal} ${pid}: ${err instanceof Error ? err.message : String(err)}`);
+		return false;
+	}
+	const deadline = Date.now() + timeoutMs;
+	while (Date.now() < deadline) {
+		if (!pidAlive(pid)) return true;
+		await new Promise((r) => setTimeout(r, 200));
+	}
+	if (!pidAlive(pid)) return true;
+	try {
+		process.kill(pid, "SIGKILL");
+	} catch (err) {
+		if (err?.code === "ESRCH") return true;
+		vlog(`SIGKILL ${pid}: ${err instanceof Error ? err.message : String(err)}`);
+		return false;
+	}
+	await new Promise((r) => setTimeout(r, 200));
+	return !pidAlive(pid);
+}
+function findEnginePidsByPort(port) {
+	if (IS_WINDOWS) return [];
+	const lsof = whichBinary("lsof");
+	if (!lsof) return [];
+	const selfPid = process.pid;
+	try {
+		return execFileSync(lsof, [
+			"-i",
+			`:${port}`,
+			"-sTCP:LISTEN",
+			"-t"
+		], {
+			encoding: "utf-8",
+			stdio: [
+				"ignore",
+				"pipe",
+				"ignore"
+			]
+		}).split(/\s+/).map((s) => parseInt(s, 10)).filter((n) => Number.isFinite(n) && n > 0 && n !== selfPid);
+	} catch (err) {
+		vlog(`lsof :${port}: ${err instanceof Error ? err.message : String(err)}`);
+		return [];
+	}
+}
+async function stopDockerEngine(composeFile, port) {
+	const dockerBin = whichBinary("docker");
+	if (!dockerBin) {
+		p.log.error(`Engine was started via Docker compose, but \`docker\` is no longer on PATH. Stop it manually:\n  docker compose -f ${composeFile} down`);
+		process.exit(1);
+	}
+	if (!existsSync(composeFile)) {
+		p.log.error(`Engine state references ${composeFile}, but the file is gone. Stop it manually:\n  docker compose down  (from the dir holding the original docker-compose.yml)`);
+		process.exit(1);
+	}
+	const ok = runCommand(dockerBin, [
+		"compose",
+		"-f",
+		composeFile,
+		"down"
+	], { label: `docker compose -f ${composeFile} down` });
+	clearEnginePidfile();
+	clearEngineState();
+	if (!ok) {
+		p.log.error(`docker compose down failed. The engine may still be running on :${port}. Inspect with:\n  docker compose -f ${composeFile} ps`);
+		process.exit(1);
+	}
+	p.outro("Stopped. Memories persisted to disk; restart anytime with: npx @agentmemory/agentmemory");
+}
+async function runStop() {
+	p.intro("agentmemory stop");
+	const port = getRestPort();
+	const state = readEngineState();
+	const running = await isEngineRunning();
+	const force = args.includes("--force");
+	if (state?.kind === "docker") {
+		if (!running) {
+			p.log.info(`No engine responding on port ${port}.`);
+			clearEnginePidfile();
+			clearEngineState();
+			p.outro("Nothing to stop.");
+			return;
+		}
+		await stopDockerEngine(state.composeFile, port);
+		return;
+	}
+	const portPids = findEnginePidsByPort(port);
+	const pidfilePid = readEnginePidfile();
+	if (!running) {
+		if (portPids.length === 0 && pidfilePid === null) {
+			clearEnginePidfile();
+			clearEngineState();
+			p.outro("Nothing to stop.");
+			return;
+		}
+		const survivors = new Set(portPids);
+		if (pidfilePid) survivors.add(pidfilePid);
+		p.log.warn(`Engine not responding on :${port}, but ${survivors.size} process(es) still hold the port or pidfile: ${[...survivors].join(", ")}`);
+		p.log.info(`Preserving ~/.agentmemory/iii.pid. Investigate before manual cleanup:\n  ps -p ${[...survivors].join(",")} -o pid,ppid,comm,etime\n  ${IS_WINDOWS ? "netstat -ano | findstr :" + port : "lsof -i :" + port}`);
+		process.exit(1);
+	}
+	if (!state) {
+		const compose = discoverComposeFile();
+		if (compose && pidfilePid === null) if (force) p.log.warn(`--force: bypassing Docker-heuristic guard. Falling back to native pidfile + lsof on :${port}.`);
+		else {
+			p.log.error(`Engine is running on :${port} but no pidfile or state file is present. It may have been started via Docker compose by a different shell. Refusing to signal host PIDs.\n\nStop it with:\n  docker compose -f ${compose} down\n\nOr re-run with --force to signal whatever lsof finds on :${port}, or AGENTMEMORY_USE_DOCKER=1 to record state next time.`);
+			process.exit(1);
+		}
+	}
+	const candidates = /* @__PURE__ */ new Set();
+	if (pidfilePid) candidates.add(pidfilePid);
+	for (const pid of portPids) candidates.add(pid);
+	if (candidates.size === 0) {
+		p.log.error(`Could not locate engine process. Try:\n  ${IS_WINDOWS ? "netstat -ano | findstr :" + port : "lsof -i :" + port + " -t | xargs kill -9"}`);
+		process.exit(1);
+	}
+	let allStopped = true;
+	for (const pid of candidates) {
+		const s = p.spinner();
+		s.start(`Stopping iii-engine (pid ${pid})...`);
+		const ok = await signalAndWait(pid, "SIGTERM", 3e3);
+		s.stop(ok ? `Stopped pid ${pid}` : `Failed to stop pid ${pid}`);
+		if (!ok) allStopped = false;
+	}
+	clearEnginePidfile();
+	clearEngineState();
+	if (!allStopped) {
+		p.log.error("One or more engine processes survived SIGKILL. Investigate with `ps`.");
+		process.exit(1);
+	}
+	p.outro("Stopped. Memories persisted to disk; restart anytime with: npx @agentmemory/agentmemory");
+}
+async function runMcp() {
+	await import("./standalone-DMLk7YxP.mjs");
+}
+async function runConnectCmd() {
+	const { runConnect } = await Promise.resolve().then(() => connect_exports);
+	await runConnect(args.slice(1));
+}
+async function runImportJsonl() {
+	const VALUE_FLAGS = new Set(["--port", "--tools"]);
+	let maxFiles;
+	const tail = args.slice(1);
+	const positional = [];
+	for (let i = 0; i < tail.length; i++) {
+		const a = tail[i];
+		if (a === "--max-files") {
+			const raw = tail[i + 1];
+			const parsed = raw !== void 0 ? parseInt(raw, 10) : NaN;
+			if (Number.isInteger(parsed) && parsed > 0) maxFiles = parsed;
+			else if (raw !== void 0) p.log.warn(`Ignoring --max-files ${raw}: expected a positive integer.`);
+			i++;
+			continue;
+		}
+		if (a.startsWith("--max-files=")) {
+			const raw = a.slice(12);
+			const parsed = parseInt(raw, 10);
+			if (Number.isInteger(parsed) && parsed > 0) maxFiles = parsed;
+			else p.log.warn(`Ignoring --max-files=${raw}: expected a positive integer.`);
+			continue;
+		}
+		if (VALUE_FLAGS.has(a)) {
+			i++;
+			continue;
+		}
+		if (a.startsWith("-")) continue;
+		positional.push(a);
+	}
+	const pathArg = positional[0];
+	const port = getRestPort();
+	const base = `http://localhost:${port}`;
+	let probeOk = false;
+	let probeDetail = "";
+	try {
+		const probe = await fetch(`${base}/agentmemory/livez`, { signal: AbortSignal.timeout(2e3) });
+		probeOk = probe.ok;
+		if (!probeOk) {
+			const probeBody = await probe.text().catch(() => "");
+			probeDetail = `reachable but unhealthy (HTTP ${probe.status}${probeBody ? `: ${probeBody.slice(0, 200)}` : ""})`;
+		}
+	} catch (err) {
+		probeOk = false;
+		probeDetail = `unreachable (${err instanceof Error ? err.message : String(err)})`;
+	}
+	if (!probeOk) {
+		p.log.error(`agentmemory livez probe failed on port ${port}: ${probeDetail}. Start it with \`npx @agentmemory/agentmemory\` in another terminal, then re-run this command.`);
+		process.exit(1);
+	}
+	const body = {};
+	if (pathArg) body["path"] = pathArg;
+	if (maxFiles !== void 0) body["maxFiles"] = maxFiles;
+	const headers = { "content-type": "application/json" };
+	const secret = process.env["AGENTMEMORY_SECRET"];
+	if (secret) headers["authorization"] = `Bearer ${secret}`;
+	p.log.info(`Importing JSONL from ${pathArg || "~/.claude/projects"}…`);
+	const spinner = p.spinner();
+	spinner.start("scanning files");
+	try {
+		const res = await fetch(`${base}/agentmemory/replay/import-jsonl`, {
+			method: "POST",
+			headers,
+			body: JSON.stringify(body),
+			signal: AbortSignal.timeout(12e4)
+		});
+		const text = await res.text();
+		let json = {};
+		if (text.length > 0) try {
+			json = JSON.parse(text);
+		} catch {
+			spinner.stop("failed");
+			p.log.error(`server returned non-JSON response (HTTP ${res.status}): ${text.slice(0, 200)}`);
+			process.exit(1);
+		}
+		if (!res.ok || json.success !== true) {
+			spinner.stop("failed");
+			const detail = json.error || (text.length === 0 ? "empty response body" : json.success === void 0 ? `HTTP ${res.status} (response missing success field)` : `HTTP ${res.status}`);
+			if (res.status === 401) p.log.error(`${detail}. Set AGENTMEMORY_SECRET to match the server's secret and re-run.`);
+			else if (res.status === 404) p.log.error(`${detail}. The running agentmemory server does not expose /agentmemory/replay/import-jsonl — upgrade to v0.8.13 or later.`);
+			else p.log.error(detail);
+			process.exit(1);
+		}
+		spinner.stop(`imported ${json.imported ?? 0} file(s), ${json.observations ?? 0} observation(s) across ${json.sessionIds?.length || 0} session(s)`);
+		if (json.truncated) {
+			const cap = json.maxFiles ?? 200;
+			const upper = json.maxFilesUpperBound ?? 1e3;
+			const discovered = json.discovered ?? 0;
+			const baseMsg = `Hit the ${cap}-file scan cap; ${discovered - (json.imported ?? 0)} of ${json.traversalCapped ? `${discovered}+ (traversal halted at safety cap)` : String(discovered)} discovered file(s) were skipped.`;
+			if (discovered > upper || json.traversalCapped) p.log.warn(`${baseMsg} Tree exceeds the server's --max-files limit of ${upper}; batch by subdirectory (run import-jsonl once per project under ~/.claude/projects).`);
+			else {
+				const suggested = Math.min(Math.max((discovered || cap) + 100, cap * 2), upper);
+				p.log.warn(`${baseMsg} Re-run with --max-files=${suggested} (max ${upper}) or batch by subdirectory.`);
+			}
+		}
+		if (json.sessionIds && json.sessionIds.length > 0) p.log.info(`View at ${getViewerUrl()} → Replay tab`);
+	} catch (err) {
+		spinner.stop("failed");
+		if (err instanceof Error && err.name === "TimeoutError") p.log.error("import timed out after 2 minutes");
+		else p.log.error(err instanceof Error ? err.message : String(err));
+		process.exit(1);
+	}
+}
+function loadConnectManifest(home) {
+	const path = join(home, ".agentmemory", "backups", "connect-manifest.json");
+	try {
+		const raw = readFileSync(path, "utf-8");
+		const parsed = JSON.parse(raw);
+		if (Array.isArray(parsed?.installed)) return { installed: parsed.installed };
+		return null;
+	} catch {
+		return null;
+	}
+}
+function probeLocalBinIiiVersion(home) {
+	const path = localBinIii(home);
+	if (!existsSync(path)) return null;
+	return iiiBinVersion(path);
+}
+function safeDelete(path) {
+	try {
+		if (!existsSync(path)) return {
+			ok: true,
+			message: `not present (${path})`
+		};
+		if (statSync(path).isDirectory()) rmSync(path, {
+			recursive: true,
+			force: true
+		});
+		else unlinkSync(path);
+		return {
+			ok: true,
+			message: `deleted ${path}`
+		};
+	} catch (err) {
+		return {
+			ok: false,
+			message: `failed ${path}: ${err instanceof Error ? err.message : String(err)}`
+		};
+	}
+}
+async function runRemove() {
+	p.intro("agentmemory remove");
+	const force = args.includes("--force");
+	const keepData = args.includes("--keep-data");
+	const home = homedir();
+	const connectManifest = loadConnectManifest(home);
+	const plan = buildRemovePlan({
+		home,
+		pinnedVersion: IIPINNED_VERSION,
+		localBinIiiVersion: probeLocalBinIiiVersion(home),
+		connectManifest
+	}, {
+		force,
+		keepData
+	});
+	if (plan.filter((it) => it.applicable).length === 0) {
+		p.outro("Nothing to remove. agentmemory is already gone.");
+		return;
+	}
+	p.note(formatPlan(plan), "destruction plan");
+	if (!force) {
+		const proceed = await p.confirm({
+			message: "Proceed with these deletions?",
+			initialValue: false
+		});
+		if (p.isCancel(proceed) || proceed !== true) {
+			p.cancel("Cancelled. Nothing was deleted.");
+			return;
+		}
+		const sure = await p.confirm({
+			message: "This is irreversible. Continue?",
+			initialValue: false
+		});
+		if (p.isCancel(sure) || sure !== true) {
+			p.cancel("Cancelled. Nothing was deleted.");
+			return;
+		}
+	}
+	for (const item of plan) {
+		if (!item.applicable) continue;
+		if (item.alwaysAsk) {
+			const ok = await p.confirm({
+				message: `${item.description} — really delete${item.path ? ` ${item.path}` : ""}?`,
+				initialValue: false
+			});
+			if (p.isCancel(ok) || ok !== true) {
+				p.log.info(`skipped: ${item.id}`);
+				continue;
+			}
+		}
+		if (item.id === "stop-engine") {
+			try {
+				const portPids = findEnginePidsByPort(getRestPort());
+				const pidfilePid = readEnginePidfile();
+				const cands = /* @__PURE__ */ new Set();
+				if (pidfilePid) cands.add(pidfilePid);
+				for (const pid of portPids) cands.add(pid);
+				for (const pid of cands) await signalAndWait(pid, "SIGTERM", 3e3);
+				clearEnginePidfile();
+				clearEngineState();
+				p.log.success(cands.size > 0 ? `stopped engine (${cands.size} pid${cands.size === 1 ? "" : "s"})` : "no engine running");
+			} catch (err) {
+				p.log.warn(`engine stop best-effort: ${err instanceof Error ? err.message : String(err)}`);
+			}
+			continue;
+		}
+		if (!item.path) continue;
+		const r = safeDelete(item.path);
+		if (r.ok) p.log.success(r.message);
+		else p.log.error(r.message);
+	}
+	p.outro("Done. agentmemory cleanly removed. The npm package itself: npm uninstall -g @agentmemory/agentmemory");
+}
+({
+	init: runInit,
+	connect: runConnectCmd,
+	status: runStatus,
+	doctor: runDoctor,
+	demo: runDemo,
+	upgrade: runUpgrade,
+	stop: runStop,
+	remove: runRemove,
+	mcp: runMcp,
+	"import-jsonl": runImportJsonl
+}[args[0] ?? ""] ?? main)().catch((err) => {
+	p.log.error(err instanceof Error ? err.message : String(err));
+	process.exit(1);
+});
+
+//#endregion
+export { STREAM as a, jaccardSimilarity as c, KV as i, bootLog as n, fingerprintId as o, logger as r, generateId as s, VERSION as t };
+//# sourceMappingURL=cli.mjs.map

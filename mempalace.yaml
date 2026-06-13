@@ -1,0 +1,135 @@
+wing: workspace
+rooms:
+- name: agentxray
+  description: Files from AgentXRay/
+  keywords:
+  - agentxray
+  - agentxray
+- name: openspace
+  description: Files from OpenSpace/
+  keywords:
+  - openspace
+  - openspace
+- name: backups
+  description: Files from backups/
+  keywords:
+  - backups
+  - backups
+- name: bb_browser
+  description: Files from bb-browser/
+  keywords:
+  - bb_browser
+  - bb-browser
+- name: bin
+  description: Files from bin/
+  keywords:
+  - bin
+  - bin
+- name: browser_harness
+  description: Files from browser-harness/
+  keywords:
+  - browser_harness
+  - browser-harness
+- name: evolver
+  description: Files from evolver/
+  keywords:
+  - evolver
+  - evolver
+- name: feishu_evolver_wrapper
+  description: Files from feishu-evolver-wrapper/
+  keywords:
+  - feishu_evolver_wrapper
+  - feishu-evolver-wrapper
+- name: hermes_agent_docs_output
+  description: Files from hermes-agent-docs-output/
+  keywords:
+  - hermes_agent_docs_output
+  - hermes-agent-docs-output
+- name: kg_research_v3_auto
+  description: Files from kg-research-v3-auto/
+  keywords:
+  - kg_research_v3_auto
+  - kg-research-v3-auto
+- name: knowledge
+  description: Files from knowledge/
+  keywords:
+  - knowledge
+  - knowledge
+- name: llm_eval
+  description: Files from llm-eval/
+  keywords:
+  - llm_eval
+  - llm-eval
+- name: memory
+  description: Files from memory/
+  keywords:
+  - memory
+  - memory
+- name: openclaw_changelog
+  description: Files from openclaw-changelog/
+  keywords:
+  - openclaw_changelog
+  - openclaw-changelog
+- name: output
+  description: Files from output/
+  keywords:
+  - output
+  - output
+- name: pretext_term
+  description: Files from pretext-term/
+  keywords:
+  - pretext_term
+  - pretext-term
+- name: projects
+  description: Files from projects/
+  keywords:
+  - projects
+  - projects
+- name: scripts
+  description: Files from scripts/
+  keywords:
+  - scripts
+  - scripts
+- name: skills
+  description: Files from skills/
+  keywords:
+  - skills
+  - skills
+- name: state
+  description: Files from state/
+  keywords:
+  - state
+  - state
+- name: tmp
+  description: Files from tmp/
+  keywords:
+  - tmp
+  - tmp
+- name: design
+  description: Files from assets/
+  keywords:
+  - design
+  - assets
+- name: frontend
+  description: Files from frontend/
+  keywords:
+  - frontend
+  - frontend
+- name: documentation
+  description: Files from docs/
+  keywords:
+  - documentation
+  - docs
+- name: testing
+  description: Files from test/
+  keywords:
+  - testing
+  - test
+- name: research
+  description: Files from research/
+  keywords:
+  - research
+  - research
+- name: general
+  description: Files that don't fit other rooms
+  keywords: []

@@ -1,0 +1,33 @@
+# HEARTBEAT.md
+
+## 每次心跳检查事项
+
+### 1. 知识库整理
+如果今天还没整理过（检查 `knowledge/` 下今天的更新），每天早上 8 点把值得记录的内容写入 `knowledge/`，做好分类。
+
+### 2. 每日复盘汇报
+向瑞林汇报：今天的矛盾点、优化点，覆盖逻辑能力、搜索能力、开发能力。
+
+> ⚠️ 复盘已有 cron 任务在 09:30 执行（isolated session），心跳里如当天已汇报则跳过，避免重复。
+
+### 3. 每周知识库 Lint
+扫描 `knowledge/wiki/`，检查过时/矛盾/孤岛/缺失/死链。全部正常不发消息，有问题发报告给瑞林确认。
+
+---
+
+## 当前 Cron 任务（2026-04-10）
+
+| 任务 | 时间 | 模式 | 模型 | 状态 |
+|------|------|------|------|------|
+| 每日会话统计 | 00:00 | isolated | mimo | ✅ 正常 |
+| 每日工作空间备份 | 09:00 | isolated | mimo | ✅ 正常（curl 两步法，4/10 验证成功）|
+| 每日科技情报 | 09:00 | isolated | mimo | ✅ 正常（4/9 偶发失败，4/10 自愈）|
+| 每日复盘 | 09:30 | isolated | mimo | ✅ 正常 |
+
+> ⚠️ isolated session 仅有 tenant_access_token，无用户身份。需要用户身份的操作（日历/任务/个人云盘）不适合在 cron isolated 里跑。
+
+## 记忆查询方式（2026-04-10）
+
+- `memorySearch` 已关闭（mify 不支持 embedding）
+- 当前方案：直接 `read` MEMORY.md + memory/YYYY-MM-DD.md，关键词靠上下文匹配
+- 如需恢复向量搜索：需配置支持 embedding 的 provider（gemini/voyage/mistral）

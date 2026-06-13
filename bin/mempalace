@@ -1,0 +1,5 @@
+#!/bin/bash
+WORKSPACE="/root/.openclaw/workspace"
+export PYTHONPATH="$WORKSPACE/.mempalace-install"
+export HOME="$WORKSPACE/.mempalace-home"
+exec "$WORKSPACE/.mempalace-install/bin/mempalace" "$@"

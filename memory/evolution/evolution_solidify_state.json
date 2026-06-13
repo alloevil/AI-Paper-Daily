@@ -1,0 +1,90 @@
+{
+  "last_run": {
+    "run_id": "run_1777004089135",
+    "created_at": "2026-04-24T04:14:49.420Z",
+    "parent_event_id": null,
+    "selected_gene_id": null,
+    "selected_capsule_id": null,
+    "selector": {
+      "selected": null,
+      "reason": [
+        "no matching gene found; new gene may be required",
+        "signals: repeated_tool_usage:exec, tool_bypass",
+        "memory_graph: memory_prefer:gene_gep_repair_from_errors | gene_prior:0.703",
+        "drift_intensity: 0.577",
+        "selection_path: none"
+      ],
+      "alternatives": [],
+      "selectionPath": "none",
+      "memoryUsed": false
+    },
+    "signals": [
+      "repeated_tool_usage:exec",
+      "tool_bypass"
+    ],
+    "mutation": {
+      "type": "Mutation",
+      "id": "mut_1777004089070",
+      "category": "innovate",
+      "trigger_signals": [
+        "repeated_tool_usage:exec",
+        "tool_bypass"
+      ],
+      "target": "behavior:protocol",
+      "expected_effect": "explore new strategy combinations to escape local optimum",
+      "risk_level": "medium"
+    },
+    "mutation_id": "mut_1777004089070",
+    "personality_state": {
+      "type": "PersonalityState",
+      "rigor": 0.7,
+      "creativity": 0.35,
+      "verbosity": 0.25,
+      "risk_tolerance": 0.4,
+      "obedience": 0.85
+    },
+    "personality_key": "rigor=0.7|creativity=0.3|verbosity=0.3|risk_tolerance=0.4|obedience=0.9",
+    "personality_known": false,
+    "personality_mutations": [],
+    "drift": false,
+    "selected_by": "memory_graph+selector",
+    "source_type": "generated",
+    "reused_asset_id": null,
+    "reused_source_node": null,
+    "reused_chain_id": null,
+    "baseline_untracked": [
+      "scripts/validate-modules.js",
+      "scripts/validate-suite.js",
+      "test/smoke.test.js"
+    ],
+    "baseline_git_head": "cf650ea3ca804f0f9ec88d4b0b8779e1dc2f5b71",
+    "blast_radius_estimate": {
+      "files": 12,
+      "lines": 960
+    },
+    "strategy_policy": {
+      "name": "balanced",
+      "label": "Balanced",
+      "description": "Normal operation. Steady growth with stability.",
+      "forceInnovate": false,
+      "cautiousExecution": false,
+      "highRiskGene": false,
+      "repairStreak": 0,
+      "failureStreak": 0,
+      "blastRadiusMaxFiles": 12,
+      "directives": [
+        "Base strategy: Balanced (Normal operation. Steady growth with stability.)",
+        "Target max files for this cycle: 12."
+      ]
+    },
+    "active_task_id": null,
+    "active_task_title": null,
+    "worker_assignment_id": null,
+    "worker_pending": false,
+    "commitment_deadline": null,
+    "applied_lessons": [],
+    "hub_lessons": [],
+    "cycleId": "0006",
+    "initial_user_prompt": "[cron:b4ec087b-9085-4617-a04e-b27d644631b4 Evolver 每日进化] 运行 Evolver 每日进化。执行命令：cd /root/.openclaw/workspace/evolver && MEMORY_DIR=/root/.openclaw/workspace/memory node index.js 2>&1\n\n执行后汇报：1) 选定了哪个 Gene 2) 提取了哪些信号 3) 输出的 GEP 提示词的核心建议（不超过 5 条）\nCurrent time: Friday, April 24th, 2026 - 12:13 PM (Asia/Shanghai) / 2026-04-24 04:13 UTC\n\nUse the message tool if you need to notify the user directly for the current chat. If you do not send directly, your final plain-text reply will be delivered automatically.\n\n[Bootstrap truncation warning]\nSome workspace bootstrap files were truncated before injection.\nTreat Project Context as partial and read the relevant files directly if details seem missing.\n- MEMORY.md: 24477 raw -> 11999 injected (~51% removed; max/file).\n- If unintentional, raise agents.defaults.bootstrapMaxChars and/or agents.defaults.bootstrapTotalMaxChars."
+  }
+}

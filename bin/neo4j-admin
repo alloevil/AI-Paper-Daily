@@ -1,0 +1,5 @@
+#!/bin/bash
+export NEO4J_HOME="/root/.openclaw/workspace/.neo4j"
+export JAVA_HOME="/root/.openclaw/workspace/.jdk"
+export PATH="$JAVA_HOME/bin:$PATH"
+exec "$NEO4J_HOME/bin/neo4j-admin" "$@"
