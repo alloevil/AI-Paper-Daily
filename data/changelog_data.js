@@ -2,6 +2,21 @@ export default [
   // ==================== OpenClaw ====================
   {
     project: "openclaw",
+    version: "2026.6.7-beta.1",
+    date: "2026-06-13",
+    tag: "v2026.6.7-beta.1",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.7-beta.1",
+    prerelease: true,
+    highlights_zh: [
+      "通道投递更严格：Slack 同通道最终回复保留到转录、顶层 image 消息工具发送附带媒体、Telegram 可折叠引用块和池化回放在投递后存活、显式静默助手回复保持静默、进度草稿启动失败被报告、通道操作结果页可增量获取",
+      "Provider 和模型处理更健壮：Kimi K2.7 Code 可用、Kimi 原生工具调用 ID 和 reasoning_content 回放修复、Mistral 跳过不可读工具 schema、Fireworks 目录参数来自 manifest、DeepSeek 保持配置的静态传输、Anthropic thinking 回放修复",
+      "用户可见的上下文和认证边界更安全：飞书不再泄露 prompt-preface 运行时上下文到回复、WebSocket 载荷处理加固、CLI 后端 /btw 回退失败关闭、Skill Workshop 符号链接写入在回滚元数据前进行门控验证",
+      "Agent、内存、Codex、cron 和更新恢复路径保留有用的失败：无效插件模型目录被隔离、QMD 启动失败在回退错误后存活、Codex 内存提示保持注册、Linux 服务更新干净交接",
+      "UI、文档、QA 和发布验证改进：无障碍对比度/焦点/字体修复、空 Workboard 列可隐藏、设计系统文档化、QA 证据和计分卡产物生成、QA Lab 打包进 Docker 镜像"
+    ]
+  },
+  {
+    project: "openclaw",
     version: "2026.6.8-beta.1",
     date: "2026-06-14",
     tag: "v2026.6.8-beta.1",
