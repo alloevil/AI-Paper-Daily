@@ -2,6 +2,22 @@ export default [
   // ==================== OpenClaw ====================
   {
     project: "openclaw",
+    version: "2026.6.8-beta.1",
+    date: "2026-06-14",
+    tag: "v2026.6.8-beta.1",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.8-beta.1",
+    prerelease: true,
+    highlights_zh: [
+      "Telegram 和 WhatsApp 通道投递更丰富更稳定：Telegram 支持结构化富文本（表格、列表、可折叠引用块）、CLI 后端 prompt 保留投递、更安全的富媒体边界；WhatsApp 支持配置的 ACP 绑定",
+      "Agent 和 Gateway 恢复能力全面提升：涵盖账户作用域 DM 发送、生成媒体完成、自动回复消息工具最终回复、重置归档回退读取、重启关闭中止、yielded 子代理暂停、心跳去重、会话身份提示等",
+      "Provider/模型处理扩展和加固：新增 GLM-5.2 和 Claude Haiku 4.5 目录条目、OpenRouter 和 Google Vertex 前缀规范化、SecretRef 认证、OAuth 图片默认路由、LM Studio 二进制 thinking-off 投递、Claude 4.5 Copilot 工具流安全等",
+      "/usage 和回复负载钩子新增原生完整页脚渲染、默认模板、固定小数格式、凭据感知限制和损坏模板警告",
+      "UI 和移动端流程更稳定：工作区文件可折叠、WebChat 回滚支持流式传输、侧边栏会话选择器保持交互、iOS 重连过期前台网关",
+      "内存、状态和诊断恢复更干净：超大 OpenAI 嵌入批次自动拆分、QMD 内存搜索在 transient 模式可用、SQLite 避免 NFS 上的 WAL、卡住会话恢复调度不再重置警告退避"
+    ]
+  },
+  {
+    project: "openclaw",
     version: "2026.6.6",
     date: "2026-06-12",
     tag: "v2026.6.6",
