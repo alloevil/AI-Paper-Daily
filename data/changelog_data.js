@@ -2,6 +2,40 @@ export default [
   // ==================== OpenClaw ====================
   {
     project: "openclaw",
+    version: "2026.6.8",
+    date: "2026-06-16",
+    tag: "v2026.6.8",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.8",
+    prerelease: false,
+    highlights_zh: [
+      "Telegram 和 WhatsApp 通道投递更丰富更稳定：Telegram 支持结构化富文本（表格、列表、可折叠引用块、保留换行、CLI 后端回复），WhatsApp 支持配置的 ACP 绑定",
+      "Agent 运行更可靠：账户作用域 DM 发送、生成媒体完成、自动回复消息工具最终回复、重置归档回退、重启关闭中止、yielded 子代理暂停、会话身份提示等均保持在正确恢复路径",
+      "模型路由更安全：新增 GLM-5.2 和 Claude Haiku 4.5 目录支持，提供商标识归一化、SecretRef 认证管理、模型浏览限制、OpenAI/Anthropic 工具 schema 恢复加固",
+      "原生 /usage 完整页脚渲染：默认模板、固定小数格式、凭据感知限制、部分计数处理、损坏模板警告",
+      "Web 搜索默认更可预测：Parallel Free、DuckDuckGo、Ollama、Codex Hosted Search 等免密钥提供商保持显式 opt-in 而非自动回退",
+      "UI 和移动端更平静：工作区文件默认折叠、WebChat 回滚支持流式传输、桌面会话选择器保持交互、/reset 参数在 dispatch 中存活、iOS 重连过期前台网关",
+      "内存和状态更健壮：超大 OpenAI 嵌入批次自动拆分避免 431 错误、QMD 搜索在 transient 模式可用、SQLite 避免 NFS 卷上的 WAL、全量重索引保留回滚/缓存恢复",
+      "Hono 升级到 4.12.25 安全补丁版本，已发布的 OpenClaw 和 ACPX 包使用修补后的运行时"
+    ]
+  },
+  {
+    project: "openclaw",
+    version: "2026.6.8-beta.2",
+    date: "2026-06-16",
+    tag: "v2026.6.8-beta.2",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.8-beta.2",
+    prerelease: true,
+    highlights_zh: [
+      "Telegram 和 WhatsApp 通道投递更丰富更稳定：Telegram 支持结构化富文本（表格、列表、可折叠引用块）、CLI 后端 prompt 保留投递、更安全的富媒体边界；WhatsApp 支持配置的 ACP 绑定",
+      "Agent 和 Gateway 恢复能力全面提升：涵盖账户作用域 DM 发送、生成媒体完成、自动回复消息工具最终回复、重置归档回退读取、重启关闭中止、yielded 子代理暂停、心跳去重、会话身份提示等",
+      "Provider/模型处理扩展和加固：新增 GLM-5.2 和 Claude Haiku 4.5 目录条目、OpenRouter 和 Google Vertex 前缀规范化、SecretRef 认证、OAuth 图片默认路由、LM Studio 二进制 thinking-off 投递、Claude 4.5 Copilot 工具流安全等",
+      "/usage 和回复负载钩子新增原生完整页脚渲染、默认模板、固定小数格式、凭据感知限制和损坏模板警告",
+      "UI 和移动端流程更稳定：工作区文件可折叠、WebChat 回滚支持流式传输、侧边栏会话选择器保持交互、iOS 重连过期前台网关",
+      "内存、状态和诊断恢复更干净：超大 OpenAI 嵌入批次自动拆分、QMD 内存搜索在 transient 模式可用、SQLite 避免 NFS 上的 WAL、卡住会话恢复调度不再重置警告退避"
+    ]
+  },
+  {
+    project: "openclaw",
     version: "2026.6.7-beta.1",
     date: "2026-06-13",
     tag: "v2026.6.7-beta.1",
