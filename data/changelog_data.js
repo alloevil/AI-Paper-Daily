@@ -2,6 +2,22 @@ export default [
   // ==================== OpenClaw ====================
   {
     project: "openclaw",
+    version: "2026.6.9-beta.1",
+    date: "2026-06-19",
+    tag: "v2026.6.9-beta.1",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.9-beta.1",
+    prerelease: true,
+    highlights_zh: [
+      "Telegram 投递更丰富：支持富 HTML、保留 Markdown 和贴纸路径、进度草稿和命令输出渲染更忠实、提及和缓存处理保持在正确投递路径",
+      "Agent 恢复更可靠：重试、终端结果、压缩后用量、会话历史修复和回复协调使更多中断或部分轮次走向可见最终结果",
+      "Codex 集成增强：自动插件审批、GPT-5.3 Spark OAuth 路由、远程节点 exec 作为动态工具、更可靠的 app-server 拆卸和终端结果",
+      "独立官方 Provider 插件：外部 Provider 包作为一等 npm 发布，外部安装的通道插件在 Gateway 启动时加载",
+      "Web 和原生客户端增强：Control UI 新增会话工作区轨道和扩展健康度、iOS 新增 Watch 控件、Android 显示聊天上下文",
+      "搜索和技能改进：Codex Hosted Search 可用、免密钥搜索提供商保持显式 opt-in、ClawHub 技能安装保留验证来源出处"
+    ]
+  },
+  {
+    project: "openclaw",
     version: "2026.6.8",
     date: "2026-06-16",
     tag: "v2026.6.8",
@@ -396,6 +412,29 @@ export default [
   },
 
   // ==================== Hermes Agent ====================
+  {
+    project: "hermes-agent",
+    version: "0.17.0",
+    date: "2026-06-19",
+    tag: "v2026.6.19",
+    url: "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.19",
+    prerelease: false,
+    highlights_zh: [
+      "Hermes 接入 iMessage：基于 Photon Spectrum 平台插件，无需 Mac 中继，运行 hermes photon login 认证即可收发 iMessage",
+      "Raft 代理网络集成：通过 Raft 平台适配器作为外部 Agent 连接到 Raft 网络，唤醒载荷仅携带元数据不传消息体",
+      "桌面应用大幅增强：可重绑快捷键、原生 OS 通知、子代理实时 watch-window、模型选择器+预设、自动 RTL 文本方向、可调整大小的 VS Code 终端面板、支持安装 VS Code Marketplace 主题",
+      "后台/异步子代理：delegate_task(background=true) 立即返回句柄，子代理后台运行完成后结果重新进入对话",
+      "图片编辑能力：image_generate 支持图生图编辑和转换，同一工具同一模式支持所有图片 Provider",
+      "自动化蓝图：按名称选择自动化，Hermes 询问所需参数，无需 cron 语法，蓝图在仪表板/CLI/TUI/消息平台统一渲染",
+      "Cursor Composer 模型可通过 xAI Grok 订阅访问：grok-composer-2.5-fast 加入 xAI OAuth 模型选择器，200k 上下文窗口",
+      "仪表板完整配置文件构建器：浏览器中构建完整 Hermes 配置——选模型、选技能、挂 MCP 服务器，无需手编 config.yaml",
+      "Skills Hub 浏览器全面改版：连接 Hub、精选区域、安装前完整预览、安全扫描",
+      "memory 工具重大升级：原子批量操作——单次调用中添加/替换/删除编辑原子执行，自动处理字符预算溢出",
+      "官方 WhatsApp Business Cloud API 适配器：Meta 官方托管路径，无需 QR 扫描的桥接进程",
+      "Telegram 富文本：通过 Bot API 10.1 渲染富消息，默认开启",
+      "Curator 成本优化：常规运行不再消耗辅助模型 token，确定性不活跃扫描免费运行"
+    ]
+  },
   {
     project: "hermes-agent",
     version: "0.16.0",
