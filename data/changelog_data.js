@@ -2,6 +2,22 @@ export default [
   // ==================== OpenClaw ====================
   {
     project: "openclaw",
+    version: "2026.6.9",
+    date: "2026-06-21",
+    tag: "v2026.6.9",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.9",
+    prerelease: false,
+    highlights_zh: [
+      "Telegram 投递更丰富：支持富 HTML、保留 Markdown 和贴纸路径、进度草稿和命令输出渲染更忠实、HTML 表格安全规范化、提及和缓存处理保持在正确投递路径",
+      "Agent 恢复更可靠：重试、终端结果、压缩后用量、会话历史修复和回复协调使更多中断或部分轮次走向可见最终结果",
+      "Codex 集成增强：自动插件审批、GPT-5.3 Spark OAuth 路由、远程节点 exec 作为动态工具、更可靠的 app-server 拆卸和终端结果",
+      "独立官方 Provider 插件：外部 Provider 包作为一等 npm 发布，外部安装的通道插件在 Gateway 启动时加载",
+      "Web 和原生客户端增强：Control UI 新增会话工作区轨道和扩展健康度、iOS 新增 Watch 控件、Android 显示聊天上下文",
+      "搜索和技能改进：Codex Hosted Search 可用、免密钥搜索提供商保持显式 opt-in、ClawHub 技能安装保留验证来源出处"
+    ]
+  },
+  {
+    project: "openclaw",
     version: "2026.6.9-beta.1",
     date: "2026-06-19",
     tag: "v2026.6.9-beta.1",
