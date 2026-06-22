@@ -2,6 +2,23 @@ export default [
   // ==================== OpenClaw ====================
   {
     project: "openclaw",
+    version: "2026.6.10-beta.1",
+    date: "2026-06-21",
+    tag: "v2026.6.10-beta.1",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.10-beta.1",
+    prerelease: true,
+    highlights_zh: [
+      "Agent 轮次和会话状态更可靠：保留待完成的子代理完成公告、保持聊天历史转录非空、维护媒体索引对齐、重启休眠的 follow-up drain、一致地解析压缩模型别名",
+      "Codex 和审批流程增强：Codex app-server SecretRef、线程上下文、有界轮次文本、路由审批上下文和类型化 SDK 审批/会话助手协同工作更可预测",
+      "通道投递更丰富：Telegram/Discord/Slack 保留更丰富的进度/推理/线程输出、处理结构化发送错误、支持 Slack shortcuts、更可靠地记录规范发送线程",
+      "发布和网络边界更安全：SSH 隧道预检限定为环回范围、移除设备配对节点、doctor 暴露易失 SQLite 状态、修复遗留 Codex 路由而非静默保留过期状态",
+      "CLI 和状态工作流更实用：支持从聊天重命名会话、显式压缩会话、显示会话时长、保留命令进度详情、dry-run 预览消息发送/投票",
+      "移动端和桌面客户端更强：Android 设置按意图分组、iOS 通知状态更干净、Watch 应用使用 Xcode 27 兼容目标布局、macOS 文件输入通过原生面板打开",
+      "插件和技能覆盖更广：Zalo 作为外部通道入口可用、Trello 技能声明 curl 依赖、过期托管技能链接重定向、工具发现不再清除活跃 Provider"
+    ]
+  },
+  {
+    project: "openclaw",
     version: "2026.6.9",
     date: "2026-06-21",
     tag: "v2026.6.9",
