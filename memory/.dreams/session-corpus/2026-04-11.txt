@@ -1,1 +1,0 @@
-[main/sessions/b07e4775-e068-4016-8686-80e4075779c8.jsonl.reset.2026-04-11T17-11-49.012Z#L189] Assistant: 20260411 芯片/竞争格局 1. Anthropic 评估自研 AI 芯片，亚马逊考虑对外出售自研芯片 - AI芯片市场格局面临结构性重塑。Anthropic 正探索自行设计芯片以应对算力短缺，同时亚马逊 CEO Andy Jassy 表示正权衡向外部客户出售内部芯片。两大动向同时指向科技公司加速绕开英伟达的趋势。 - 来源：[华尔街见闻](https://wallstreetcn.com/articles/3760782917288705) 2. DeepSeek

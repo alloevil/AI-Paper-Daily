@@ -2,6 +2,20 @@ export default [
   // ==================== OpenClaw ====================
   {
     project: "openclaw",
+    version: "2026.6.10-beta.2",
+    date: "2026-06-22",
+    tag: "v2026.6.10-beta.2",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.10-beta.2",
+    prerelease: true,
+    highlights_zh: [
+      "对话快速模式自动切换：短对话轮次自动启用 fast mode，长任务自动切回 normal mode，带边界回退和投递行为",
+      "模型路由更可靠：Zai 模型合成、GLM 过载故障转移和原生推理级别选择更一致地遵循活跃模型目录",
+      "会话和通道状态更安全：通道切换重置过期 origin 字段，cron 投递感知保持附着在目标会话上",
+      "可信策略在 hook 组合后存活：组合的 hook 注册表保留审批敏感流程所需的可信工具策略"
+    ]
+  },
+  {
+    project: "openclaw",
     version: "2026.6.10-beta.1",
     date: "2026-06-21",
     tag: "v2026.6.10-beta.1",

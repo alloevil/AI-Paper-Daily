@@ -1,6 +1,0 @@
-[main/sessions/5e74d2b9-d415-4edb-aa73-e1e0c5a47765.jsonl#L5] User: [cron:1d4a4f34-e463-4523-9a6e-4ce78e36077f 每日会话统计] 执行每日会话统计任务。 步骤： 1. 计算昨天的日期（北京时间，即当前日期 -1 天） 2. 解析 ~/.openclaw/agents/main/sessions/ 下所有 .jsonl 文件（含 .deleted. 文件） 3. 统计昨天（北京时间）的： - 用户消息数（role=user 的消息） - 工具调用次数（message 中有 tool_calls 或 tool_use 的） - 子代理调用次数（tool name 包含 se
-[main/sessions/5e74d2b9-d415-4edb-aa73-e1e0c5a47765.jsonl#L10] Assistant: Let me verify the timestamp format — 0 across the board is suspicious.
-[main/sessions/5e74d2b9-d415-4edb-aa73-e1e0c5a47765.jsonl#L12] Assistant: Timestamps are ISO strings, not unix. Let me fix.
-[main/sessions/5e74d2b9-d415-4edb-aa73-e1e0c5a47765.jsonl#L14] Assistant: Let me check the actual structure of tool call messages and usage fields.
-[main/sessions/5e74d2b9-d415-4edb-aa73-e1e0c5a47765.jsonl#L30] Assistant: Now I have the full picture. Let me write the correct stats script.
-[main/sessions/5e74d2b9-d415-4edb-aa73-e1e0c5a47765.jsonl#L36] Assistant: 数据确认无误，已写入 `session_stats.jsonl`。 📊 **每日会话统计 | 2026-04-15** - 用户消息: 108 条 - 活跃会话: 9 个 - 工具调用: 257 次（exec 180 / process 26 / gateway 18 / web_fetch 13 / web_search 8 / 其他 12） - 子代理: 0 次 - input tokens: 5,231,127 - output tokens: 74,232 - cache read: 28,075,584
