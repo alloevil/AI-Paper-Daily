@@ -1,0 +1,51 @@
+name: Daily Discovery
+
+on:
+  schedule:
+    - cron: '0 10 * * *'  # 18:00 CST (10:00 UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache discovery DB
+        uses: actions/cache@v4
+        with:
+          path: discovery.db
+          key: discovery-db-${{ github.run_id }}
+          restore-keys: |
+            discovery-db-
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run Discovery
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          cd scripts/github-discovery
+          python3 main.py
+
+      - name: Generate Site
+        run: |
+          cd scripts/github-discovery
+          python3 generate_site.py
+
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "📊 Daily discovery $(date +%Y-%m-%d)"
+          git push
