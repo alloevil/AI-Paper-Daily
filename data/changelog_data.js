@@ -2,6 +2,41 @@ export default [
   // ==================== OpenClaw ====================
   {
     project: "openclaw",
+    version: "2026.6.11-beta.1",
+    date: "2026-06-24",
+    tag: "v2026.6.11-beta.1",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.11-beta.1",
+    prerelease: true,
+    highlights_zh: [
+      "通道控制更强：Slack 中继模式、原生 Mattermost /oc_queue 命令、每 DM 模型覆盖，通道操作更易自动化调优",
+      "运维工作流更实用：openclaw agent --message-file 支持文件驱动任务、RAFT CLI 唤醒桥接通道",
+      "插件分发更安全：更多官方插件外部化、捆绑插件图标元数据对已安装客户端可用",
+      "移动端操作更强：Android 设置详情面板改善配置可见性和控制",
+      "Agent 轮次更可靠：Codex 部分增量流、harness 激活、长上下文 prompt-cache 稳定性减少丢失进度和不一致运行",
+      "网关和插件工具增强：通道身份 hook 上下文和每代理用量成本报告提供更精确的路由和计量",
+      "Provider 和模型覆盖扩展：目录解析、推理控制、Provider 模型解析和加密推理支持覆盖更多实时 Provider 变体",
+      "通道投递修复：Telegram 进度渲染、webhook 生命周期、reaction 指令、重复镜像写入、WhatsApp 持久回复目标等更可靠",
+      "网关和会话安全修复：卡住的 release claim、draining 状态报告、远程探针超时、畸形配对访问列表等处理更安全",
+      "Agent 和回退行为修复：中止运行干净停止、Provider 响应体有界、Claude CLI 额度失败继续回退、Codex 用量限制正确分类",
+      "Cron 和投递验证修复：无配置投递检查、线程感知去重、待处理循环运行保留预期目标"
+    ]
+  },
+  {
+    project: "openclaw",
+    version: "2026.6.10",
+    date: "2026-06-24",
+    tag: "v2026.6.10",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.10",
+    prerelease: false,
+    highlights_zh: [
+      "对话快速模式自动切换：短对话轮次自动启用 fast mode，长任务自动切回 normal mode，带边界回退和投递行为",
+      "模型路由更可靠：Zai 模型合成、GLM 过载故障转移和原生推理级别选择更一致地遵循活跃模型目录",
+      "会话和通道状态更安全：通道切换重置过期 origin 字段，cron 投递感知保持附着在目标会话上",
+      "可信策略在 hook 组合后存活：组合的 hook 注册表保留审批敏感流程所需的可信工具策略"
+    ]
+  },
+  {
+    project: "openclaw",
     version: "2026.6.10-beta.2",
     date: "2026-06-22",
     tag: "v2026.6.10-beta.2",
