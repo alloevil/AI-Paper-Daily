@@ -1,0 +1,48 @@
+# Paper Discovery 配置
+
+# 关注的关键词（arXiv 搜索用）
+keywords:
+  - "LLM agent"
+  - "knowledge graph"
+  - "knowledge base"
+  - "RAG retrieval augmented generation"
+  - "multi-agent system"
+  - "tool use language model"
+  - "agentic AI"
+
+# arXiv 分类（会和关键词组合搜索）
+categories:
+  - "cs.AI"    # Artificial Intelligence
+  - "cs.CL"    # Computation and Language
+  - "cs.IR"    # Information Retrieval
+  - "cs.MA"    # Multiagent Systems
+
+# 每日推送数量上限
+max_papers: 10
+
+# 推送时间（cron 表达式，UTC）
+schedule_cron: "0 4 * * *"  # 北京时间 12:00
+
+# 摘要语言
+language: "zh"  # zh=中文, en=英文
+
+# 数据源开关
+sources:
+  arxiv: true
+  huggingface: true
+  paperswithcode: true
+
+# 推送渠道
+notify:
+  feishu: true
+  email: false
+
+# 飞书 Webhook
+feishu_webhook: ""  # 通过 GitHub Secret 注入
+
+# 邮件配置
+smtp:
+  host: ""
+  port: 465
+  user: ""
+  pass: ""

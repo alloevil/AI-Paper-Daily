@@ -1,0 +1,44 @@
+name: Daily Paper Discovery
+
+on:
+  schedule:
+    - cron: '0 4 * * *'  # UTC 4:00 = 北京时间 12:00
+  workflow_dispatch:  # 手动触发
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install pyyaml
+
+      - name: Run Paper Discovery
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+        run: |
+          python scripts/main.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "Paper Discovery Bot"
+          git config user.email "bot@paper-discovery"
+          git add -A
+          git diff --staged --quiet || git commit -m "📄 Daily discovery $(date +%Y-%m-%d)"
+          git push
