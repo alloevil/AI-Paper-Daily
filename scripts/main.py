@@ -143,7 +143,7 @@ def generate_report(papers: list, date: str):
         lines.append(" | ".join(links))
         lines.append("")
 
-    lines.append(f"\n---\n_由 [AI Paper Daily](https://github.com/alloevil/paper-discovery) 自动生成_")
+    lines.append(f"\n---\n_由 [AI Paper Daily](https://github.com/alloevil/AI-Paper-Daily) 自动生成_")
 
     report_path = docs_dir / f"{date}.md"
     report_path.write_text("\n".join(lines), encoding="utf-8")

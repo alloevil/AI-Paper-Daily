@@ -38,7 +38,7 @@ jobs:
       - name: Commit and push
         run: |
           git config user.name "AI Paper Daily Bot"
-          git config user.email "bot@paper-discovery"
+          git config user.email "bot@AI-Paper-Daily"
           git add -A
           git diff --staged --quiet || git commit -m "📄 Daily discovery $(date +%Y-%m-%d)"
           git push

@@ -4,10 +4,10 @@
 
 **Automated daily discovery of cutting-edge AI papers, delivered to Feishu / Email**
 
-[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/alloevil/paper-discovery/daily.yml?label=daily%20discovery&logo=github-actions&logoColor=white)](https://github.com/alloevil/paper-discovery/actions)
-[![License](https://img.shields.io/github/license/alloevil/paper-discovery)](LICENSE)
+[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/alloevil/AI-Paper-Daily/daily.yml?label=daily%20discovery&logo=github-actions&logoColor=white)](https://github.com/alloevil/AI-Paper-Daily/actions)
+[![License](https://img.shields.io/github/license/alloevil/AI-Paper-Daily)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.11+-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![Stars](https://img.shields.io/github/stars/alloevil/paper-discovery?style=social)](https://github.com/alloevil/paper-discovery/stargazers)
+[![Stars](https://img.shields.io/github/stars/alloevil/AI-Paper-Daily?style=social)](https://github.com/alloevil/AI-Paper-Daily/stargazers)
 
 [Quick Start](#-quick-start) · [How It Works](#-how-it-works) · [Configuration](#-configuration) · [Custom Sources](#-custom-sources)
 
@@ -196,7 +196,7 @@ notify:
 ## 📁 Project Structure
 
 ```
-paper-discovery/
+AI-Paper-Daily/
 ├── scripts/
 │   ├── sources/              # Data source collectors
 │   │   ├── arxiv_source.py   # arXiv API
@@ -296,9 +296,9 @@ SQLite database at `data/papers.db`, auto-created. Push logs are in the same dat
 
 Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
-- 🐛 [Report a Bug](https://github.com/alloevil/paper-discovery/issues/new?template=bug_report.md)
-- 💡 [Request a Feature](https://github.com/alloevil/paper-discovery/issues/new?template=feature_request.md)
-- 🔧 [Submit a PR](https://github.com/alloevil/paper-discovery/pulls)
+- 🐛 [Report a Bug](https://github.com/alloevil/AI-Paper-Daily/issues/new?template=bug_report.md)
+- 💡 [Request a Feature](https://github.com/alloevil/AI-Paper-Daily/issues/new?template=feature_request.md)
+- 🔧 [Submit a PR](https://github.com/alloevil/AI-Paper-Daily/pulls)
 
 ## 📄 License
 
@@ -310,6 +310,6 @@ Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
 **Found it useful? Give it a ⭐ Star!**
 
-[![Star History Chart](https://api.star-history.com/svg?repos=alloevil/paper-discovery&type=Date)](https://star-history.com/#alloevil/paper-discovery&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=alloevil/AI-Paper-Daily&type=Date)](https://star-history.com/#alloevil/AI-Paper-Daily&Date)
 
 </div>
