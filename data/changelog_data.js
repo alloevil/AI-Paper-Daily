@@ -537,4 +537,112 @@ export default [
       "安全修复：Starlette 版本固定（CVE-2026-48710）、SSRF 离环加固、子进程凭据剥离，关闭 2 个 P0 和 62 个 P1 issue"
     ]
   }
+  {
+    project: "hermes-agent",
+    version: "0.15.2",
+    date: "2026-05-29",
+    tag: "v2026.5.29.2",
+    url: "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.5.29.2",
+    prerelease: false,
+    highlights_zh: [
+      "修复打包问题：wheel 和 sdist 中遗漏捆绑的 plugin.yaml 清单"
+    ]
+  },
+  {
+    project: "hermes-agent",
+    version: "0.15.1",
+    date: "2026-05-29",
+    tag: "v2026.5.29",
+    url: "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.5.29",
+    prerelease: false,
+    highlights_zh: [
+      "修复仪表板 401 无限重载循环：回环模式下 /api/auth/me 返回 401 导致页面不断刷新",
+      "Docker 仪表板 --insecure 现为显式环境变量 HERMES_DASHBOARD_INSECURE=1，不再从绑定主机推断",
+      "MCP 裸命令在 Docker 中正确解析：npx/npm/node 现在对 /usr/local/bin 解析，容器内不再静默失败",
+      "技能页面侧边栏和来源标签恢复",
+      "看板工作者 SIGTERM 处理、/model 选择器统一、/yolo 会话绕过、skills.sh 完整 19932 条目录等修复"
+    ]
+  },
+  {
+    project: "hermes-agent",
+    version: "0.14.0",
+    date: "2026-05-16",
+    tag: "v2026.5.16",
+    url: "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.5.16",
+    prerelease: false,
+    highlights_zh: [
+      "xAI Grok 通过 SuperGrok OAuth 接入：无需 API Key，grok-4.3 上下文窗口升至 1M token",
+      "OpenAI 兼容本地代理：hermes proxy 启动本地端点，将 OAuth Provider（Claude Pro/ChatGPT Pro/SuperGrok）转为 OpenAI 兼容 API，Codex/Aider/Cline/Continue 可直接调用",
+      "x_search 工具：一等 X(Twitter) 搜索工具，支持 OAuth 或 API Key 认证",
+      "Microsoft Teams 全栈接入：Graph 认证 + webhook 监听 + 管道运行时 + 出站投递",
+      "安装大幅精简：重量级后端改为懒安装，[all] extras 覆盖懒依赖，pip install hermes-agent 直接可用",
+      "冷启动优化：启动时间减少约 19 秒，浏览器 CDP 调用提速 180 倍",
+      "新增 LINE 和 SimpleX Chat 两个消息平台，总数达 22 个",
+      "跨会话 1 小时 Claude prompt 缓存、/handoff 实时会话转移、Telegram/Discord 原生按钮 UI",
+      "LSP 语义诊断、统一可插拔 video_generate、computer_use 支持非 Anthropic Provider",
+      "原生 Windows 测试版、9 个新可选技能、OpenRouter Pareto Code 路由器"
+    ]
+  },
+  {
+    project: "hermes-agent",
+    version: "0.13.0",
+    date: "2026-05-07",
+    tag: "v2026.5.7",
+    url: "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.5.7",
+    prerelease: false,
+    highlights_zh: [
+      "多代理看板：持久化多代理任务板，支持心跳、回收、僵尸检测、不完整退出自动阻塞、每任务重试、幻觉恢复",
+      "/goal 目标锁定：Agent 跨轮次保持目标不偏离，Ralph 循环作为一等原语",
+      "视频分析：video_analyze 工具支持 Gemini 等多模态模型的原生视频理解",
+      "语音克隆：xAI Custom Voices 作为 TTS Provider，支持语音克隆",
+      "国际化：静态网关和 CLI 消息翻译为 7 种语言（中日德西法乌土）",
+      "Checkpoints v2 重写状态持久化，支持真实剪枝",
+      "网关自动恢复中断会话，Cron 新增 no_agent 看门狗模式",
+      "安全加固：脱敏默认开启、Discord 角色白名单限定 guild、WhatsApp 默认拒绝陌生人、TOCTOU 窗口关闭",
+      "Google Chat 成为第 20 个平台，Provider 变为可插拔架构"
+    ]
+  },
+  {
+    project: "hermes-agent",
+    version: "0.12.0",
+    date: "2026-04-30",
+    tag: "v2026.4.30",
+    url: "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.4.30",
+    prerelease: false,
+    highlights_zh: [
+      "自主 Curator 技能管理器：后台 cron 定期评分、整合、修剪技能库，输出运行报告",
+      "自我改进循环大幅升级：改为 rubric 评分制、偏向活跃更新技能、处理 references/templates 子文件",
+      "技能集成大扩展：ComfyUI v5 和 TouchDesigner-MCP 从可选改为内置，新增 Spotify 和 Google Meet 原生集成",
+      "TUI 冷启动缩减约 57%",
+      "新增 4 个推理 Provider、第 18 个消息平台、Teams 插件作为第 19 个"
+    ]
+  },
+  {
+    project: "hermes-agent",
+    version: "0.11.0",
+    date: "2026-04-23",
+    tag: "v2026.4.23",
+    url: "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.4.23",
+    prerelease: false,
+    highlights_zh: [
+      "全新 Ink TUI：React/Ink 重写的交互式 CLI，粘性编辑器、实时流式、OSC-52 剪贴板、状态栏秒表和 git 分支",
+      "可插拔传输架构：Anthropic/ChatCompletions/ResponsesApi/Bedrock 传输层各自独立，原生 AWS Bedrock Converse API 支持",
+      "5 个新推理路径：原生 NVIDIA NIM、Arcee AI、Step Plan、Google Gemini CLI OAuth、Vercel ai-gateway",
+      "GPT-5.5 通过 Codex OAuth 可用，新 OpenAI 发布自动出现在模型选择器",
+      "QQBot 成为第 17 个支持平台",
+      "插件架构大改：两阶段注册、内部目录架构、全面工具调用日志、插件来源追踪"
+    ]
+  },
+  {
+    project: "hermes-agent",
+    version: "0.10.0",
+    date: "2026-04-16",
+    tag: "v2026.4.16",
+    url: "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.4.16",
+    prerelease: false,
+    highlights_zh: [
+      "Nous Tool Gateway：付费 Nous Portal 订阅者自动获得网络搜索(Firecrawl)、图片生成(FAL/FLUX 2 Pro)、TTS(OpenAI)、浏览器自动化(Browser Use)，无需额外 API Key",
+      "工具通过 use_gateway 配置逐个启用，与 hermes tools 和 hermes status 完整集成"
+    ]
+  },
 ];
