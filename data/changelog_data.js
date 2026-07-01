@@ -669,4 +669,30 @@ export default [
       "Cron 和投递验证修复：无配置投递检查、线程感知去重、待处理循环运行保留预期目标"
     ]
   },
+  {
+    project: "openclaw",
+    version: "2026.6.11",
+    date: "2026-06-30",
+    tag: "v2026.6.11",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.6.11",
+    prerelease: false,
+    highlights_zh: [
+      "专注可靠性打磨：修复错位回复、卡住发送、重连失败、模型配置故障和管理员默认值安全问题",
+      "跨通道投递修复覆盖 Telegram/WhatsApp/Matrix/Google Chat/iMessage/飞书/Mattermost/WebChat/Control UI/TUI 等十余个通道",
+      "WhatsApp 群聊回复在重试、重连和群组变更时保持正确消息和群组上下文",
+      "Telegram webhook 用户在短暂通道重启和配置重载期间不再丢失 DM 和群消息",
+      "Matrix E2EE 网关长时间运行不再因内存泄漏崩溃",
+      "Telegram 进度模式在新工具输出前清除旧气泡，保持对话清晰可读",
+      "iMessage 命令和链接消息在延迟预览到达时保持合并为一个 turn",
+      "飞书语音回复现在在聊天气泡中显示时长",
+      "共享网关可为不同 DM 联系人分配不同模型",
+      "Mattermost 原生 /oc_queue 命令支持调节活跃运行队列模式、去抖时间和丢弃处理",
+      "Provider 和模型恢复更清晰：OpenAI/Google/Mistral 等不再泄露内部 cache-boundary marker 到 prompt",
+      "OpenRouter 用户可正常选择 DeepSeek V4 短模型 ID，不再因重复前缀导致 model_not_found",
+      "/reasoning on 时 DeepSeek 兼容模型的答案与推理分离显示",
+      "Codex 订阅额度耗尽时自动切换到配置的回退模型而非停止",
+      "Google Gemini 3.5 Flash 可选完整 1M token 上下文窗口",
+      "Cron 任务在本地 Provider 返回 LLM request failed 时可重试或切换回退模型"
+    ]
+  },
 ];
