@@ -695,4 +695,27 @@ export default [
       "Cron 任务在本地 Provider 返回 LLM request failed 时可重试或切换回退模型"
     ]
   },
+  {
+    project: "hermes-agent",
+    version: "0.18.0",
+    date: "2026-07-01",
+    tag: "v2026.7.1",
+    url: "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.1",
+    prerelease: false,
+    highlights_zh: [
+      "P0/P1 全面清零：12 天内解决约 692 个最高优先级项（496 issues + 196 PRs），整个仓库 P0/P1 归零并计划持续保持",
+      "Mixture-of-Agents 升级为一等模型：每个 MoA 预设作为可选虚拟模型出现在 moa provider 下，CLI/TUI/桌面端均可直接选择",
+      "MoA 可视化推理过程：每个参考模型（GPT-5、Claude、Grok 等）的完整输出作为带标签块展示，聚合器答案实时流式传输",
+      "Agent 自我验证机制：通过 completion contracts 判定任务完成，/goal 支持基于证据的完成判定而非模型主观断言",
+      "/learn 一键技能化：描述任意工作流即可自动提取为可复用技能，写入 CONTRIBUTING.md 标准",
+      "/journey 学习时间线：可查看/编辑/删除 Agent 积累的记忆和技能，配合桌面端记忆图（径向时间线）可视化",
+      "后台并行扇出：delegate_task 支持后台多子代理并行执行，完成后汇总为单次回复，不阻塞当前对话",
+      "桌面端一等 Projects：按配置文件管理代码仓库、编码轨道、审查面板、git worktree，桌面端变为编码驾驶舱",
+      "网关可伸缩部署：支持 scale-to-zero 空闲休眠和 drain coordination 优雅排空，重启/迁移不中断进行中的对话",
+      "自我改进成本优化：后台审查改用辅助模型、摘要上下文替代全量回放、自适应节奏，大幅降低 token 消耗",
+      "/prompt 编辑器撰稿：通过 $EDITOR 在外部编辑器编写多行 prompt，告别单行输入限制",
+      "Google Vertex AI 一等支持：通过服务账号 JSON 或 ADC 自动铸造和刷新 OAuth2 token，Gemini 模型开箱即用",
+      "安全加固：MCP 配置持久化攻击面收紧、cron base_url 凭据外泄阻断、Slack xapp- token 脱敏、浏览器云元数据强制执行、aiohttp CVE 修复"
+    ]
+  },
 ];
