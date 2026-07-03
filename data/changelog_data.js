@@ -718,4 +718,33 @@ export default [
       "安全加固：MCP 配置持久化攻击面收紧、cron base_url 凭据外泄阻断、Slack xapp- token 脱敏、浏览器云元数据强制执行、aiohttp CVE 修复"
     ]
   },
+  {
+    project: "openclaw",
+    version: "2026.7.1-beta.1",
+    date: "2026-07-02",
+    tag: "v2026.7.1-beta.1",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-beta.1",
+    prerelease: true,
+    highlights_zh: [
+      "OpenAI GPT-5.6 模型支持：目录、能力和运行时选择路径全面识别 GPT-5.6 系列",
+      "外部 harness 附加：openclaw attach 可对已有 Gateway 会话启动外部 harness，交互式 Codex 工作流更易恢复和检查",
+      "Telegram Codex 工作流：Telegram 支持通过 /login 发起 Codex 配对、控制活跃 Codex 运行、跨瞬态 API 故障恢复最终回复",
+      "事件驱动 cron 运行：新增 on-exit 调度类型，监听命令退出时唤醒 Agent；session-targeted 运行可干净分离",
+      "原生应用刷新：iOS 采用 iOS 26 视觉系统，导航、设置、Chat、Talk 和引导流程更清晰；原生应用本地化扩展至 Apple 和 Android",
+      "更丰富的消息能力：iMessage 支持原生投票创建/阅读/投票，内置用量页脚提供更清晰的每轮用量统计",
+      "更安全的作用域对话：capability profiles 为每对话准备工具和访问边界，不削弱现有默认配置",
+      "模型和 Provider 覆盖：GPT-5.6、Nemotron Super 1M 上下文窗口、保留显式 OpenRouter 认证头",
+      "CLI 和节点工作流：openclaw attach、节点上下文路径支持、设备审批恢复指引、插件安装退出诊断更清晰",
+      "Cron 和用量：退出触发调度、分离的 session-targeted 运行、进行中任务 doctor 警告、内置完整用量页脚",
+      "原生应用和本地化：iOS 导航/设置/演示/Talk 控件现代化、Gateway 语音 Provider、QR 引导改进、瑞典语移动端本地化",
+      "Doctor 和诊断：暴露 auth-profile、工作空间、设备配对、通道插件、内存 Provider、systemd 耗尽和 Windows LAN 防火墙发现",
+      "对话和审查控件：准备作用域对话 capability profiles、新增 Cursor Agent 作为自动审查引擎",
+      "Telegram 耐久性修复：恢复卡住的 ingress claims、重试重启丢失的媒体、存活瞬态轮询错误、死信有毒更新、保留转发富文本",
+      "Agent 和上下文可靠性：保留运行时覆盖和引导的子代理任务、改善 harness 感知的上下文估计和压缩预检、超时静默本地流",
+      "Provider 和网络安全：约束跨 Moonshot/MiniMax/Anthropic OAuth/Discord/Matrix 等路径的超大或畸形响应",
+      "通道投递和路由：Slack 回复保持在活跃线程、保留账户绑定投递路由、保留 WeChat 会话路由",
+      "Cron 正确性：超时时保留 Provider 和模型选择、保留启动追赶延迟、清除空白 thinking 覆盖",
+      "内存和会话恢复：检测未索引的转录、笔记更新和 ChatGPT 导入时保留手编辑 frontmatter、避免跨目录恢复"
+    ]
+  },
 ];
