@@ -536,7 +536,7 @@ export default [
       "默认界面可选：可设置 hermes chat 默认进入 CLI 或 TUI，--cli 标志可按次覆盖",
       "安全修复：Starlette 版本固定（CVE-2026-48710）、SSRF 离环加固、子进程凭据剥离，关闭 2 个 P0 和 62 个 P1 issue"
     ]
-  }
+  },
   {
     project: "hermes-agent",
     version: "0.15.2",
@@ -745,6 +745,32 @@ export default [
       "通道投递和路由：Slack 回复保持在活跃线程、保留账户绑定投递路由、保留 WeChat 会话路由",
       "Cron 正确性：超时时保留 Provider 和模型选择、保留启动追赶延迟、清除空白 thinking 覆盖",
       "内存和会话恢复：检测未索引的转录、笔记更新和 ChatGPT 导入时保留手编辑 frontmatter、避免跨目录恢复"
+    ]
+  },
+  {
+    project: "openclaw",
+    version: "2026.7.1-beta.2",
+    date: "2026-07-05",
+    tag: "v2026.7.1-beta.2",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-beta.2",
+    prerelease: true,
+    highlights_zh: [
+      "OpenAI GPT-5.6 模型支持：目录、能力和运行时选择路径全面识别 GPT-5.6 系列",
+      "外部 harness 附加：openclaw attach 可对已有 Gateway 会话启动外部 harness，交互式 Codex 工作流更易恢复和检查",
+      "Telegram Codex 工作流：支持通过 /login 发起 Codex 配对、控制活跃 Codex 运行、跨瞬态 API 故障恢复最终回复",
+      "事件驱动 cron 运行：新增 on-exit 调度类型，监听命令退出时唤醒 Agent；session-targeted 运行可干净分离",
+      "原生应用刷新：iOS 采用 iOS 26 视觉系统，Chat、Talk、引导和重连流程更清晰；原生应用本地化扩展至 Apple 和 Android",
+      "更丰富的消息能力：iMessage 支持原生投票创建/阅读/投票，内置用量页脚提供更清晰的每轮用量统计",
+      "更安全的作用域对话：capability profiles 为每对话准备工具和访问边界，不削弱现有默认配置",
+      "Mac 本地 Gateway 自动安装：macOS 应用可自动安装和启动本地 Gateway，减少首次使用前的手动配置",
+      "ClawRouter Provider 插件：内置凭证作用域动态模型发现、OpenAI 兼容和原生 Anthropic/Gemini 传输、跨用量面的预算报告",
+      "Control UI 导航改进：会话优先侧边栏、紧凑上下文指示器、暖色浅色主题、推理力度滑块、斜杠命令选择器",
+      "Ollama 本地推理节点自动发现",
+      "Doctor 和诊断增强：暴露 auth-profile、工作空间、设备配对、通道插件、内存 Provider、systemd 耗尽和 Windows 防火墙发现",
+      "Telegram 耐久性修复：恢复卡住的 ingress claims、重试重启丢失的媒体、存活瞬态轮询错误、保留转发富文本",
+      "Agent 和上下文可靠性：保留运行时覆盖和引导的子代理任务、改善 harness 感知的上下文估计和压缩预检",
+      "Provider 和网络安全：约束跨 Moonshot/MiniMax/Anthropic OAuth/Discord/Matrix 等路径的超大或畸形响应",
+      "Cron 正确性：超时时保留 Provider 和模型选择、保留启动追赶延迟、清除空白 thinking 覆盖"
     ]
   },
 ];
