@@ -773,4 +773,16 @@ export default [
       "Cron 正确性：超时时保留 Provider 和模型选择、保留启动追赶延迟、清除空白 thinking 覆盖"
     ]
   },
+  {
+    project: "hermes-agent",
+    version: "0.18.1",
+    date: "2026-07-08",
+    tag: "v2026.7.7",
+    url: "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.7",
+    prerelease: false,
+    highlights_zh: [
+      "基础设施补丁版本：汇总 v0.18.0 以来约 660 个 PR，含安装器/更新器 Windows 自修复、仪表板和网关修复、WhatsApp 仪表板配对、MCP 和 Provider 修复等大量稳定性工作",
+      "667 个提交、约 990 个文件变更（+89.5k/-10.4k 行），完整策划发布说明将在 v0.19.0 中发布"
+    ]
+  },
 ];
