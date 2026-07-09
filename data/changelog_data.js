@@ -785,4 +785,15 @@ export default [
       "667 个提交、约 990 个文件变更（+89.5k/-10.4k 行），完整策划发布说明将在 v0.19.0 中发布"
     ]
   },
+  {
+    project: "hermes-agent",
+    version: "0.18.2",
+    date: "2026-07-08",
+    tag: "v2026.7.7.2",
+    url: "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.7.2",
+    prerelease: false,
+    highlights_zh: [
+      "WhatsApp Baileys 依赖修复：解除 git commit 固定版本，改用已发布的 npm 包 7.0.0-rc13，确保安装和 Docker 镜像构建可靠性"
+    ]
+  },
 ];
