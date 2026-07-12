@@ -796,4 +796,31 @@ export default [
       "WhatsApp Baileys 依赖修复：解除 git commit 固定版本，改用已发布的 npm 包 7.0.0-rc13，确保安装和 Docker 镜像构建可靠性"
     ]
   },
+  {
+    project: "openclaw",
+    version: "2026.7.1-beta.5",
+    date: "2026-07-11",
+    tag: "v2026.7.1-beta.5",
+    url: "https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-beta.5",
+    prerelease: true,
+    highlights_zh: [
+      "对话式引导安装：Crestodian 现在在 CLI、Web 安装和 macOS 应用中运行真正的 agent-loop 设置流程，AI 引导 Provider 配置、模型审批绑定到精确操作、凭据遮罩提示、无模型时确定性回退",
+      "ClawRouter 路由和配额：新增内置 ClawRouter Provider，支持凭据作用域动态模型发现、OpenAI 兼容和原生 Anthropic/Gemini 传输、认证配置文件模型解析、托管用量和预算报告",
+      "Control UI 和原生 macOS 聊天：会话为主视图、可搜索侧边栏、紧凑上下文指示器、推理力度滑块、更简洁仪表板；原生 macOS 会话浏览器支持模型和思考选择器、斜杠命令、转录导出、上下文用量",
+      "离线和语音移动端聊天：iOS 和 Android 预缓存每网关会话和转录支持离线；Apple Watch 获得完整语音轮次，iOS 可通过配置的 Gateway TTS 朗读回复并带回退",
+      "会话组织和生成标题：通过 utility-model 路由生成简洁会话标题，新增 Gateway 支持的分组、未读状态、重命名、fork、归档和删除控制",
+      "OpenAI GPT-5.6 支持：识别 Sol/Terra/Luna 模型族，覆盖 API key、ChatGPT/Codex OAuth、simple-completion 和 Codex app-server 路径",
+      "外部 harness 附加：openclaw attach 对已有 Gateway 会话启动 Claude Code，带作用域可撤销 TTL 绑定 MCP 授权、临时配置清理、退出自动撤销",
+      "Telegram Codex 工作流：Telegram 支持通过 /login 私聊配对 Codex、/steer 和 /tell 控制运行、跨拒绝富实体/标题/引用/洪泛等待恢复最终发送",
+      "Meta provider：新增内置 muse-spark-1.1 Responses API 支持，含流式、工具调用、加密推理回放、精确模型验证，可独立 npm/ClawHub 分发",
+      "Android 聊天 Agent 选择器：从活跃聊天界面直接切换 Agent，保持聊天/Talk 模式/主页在同一规范会话",
+      "Gateway 主机状态：Control UI 设置中显示连接的 Gateway 主机、网络地址、OS、运行时、CPU、内存和磁盘详情",
+      "Gateway 崩溃循环恢复：持久化启动结果、多次不洁启动后进入控制平面安全模式、致命配置错误以 EX_CONFIG 退出",
+      "iOS 离线聊天：从受保护的每网关缓存预加载最近会话和转录，离线时禁用发送，配对重置时清除缓存",
+      "Slack 进度指示：默认使用 Slack 原生助手线程状态和旋转加载消息，确认反应保持静态",
+      "Cron 模型选择：在 Control UI 快速创建中选择 agent-turn 模型，cron 任务行和详情显示配置或默认模型",
+      "Logbook 工作日志：新增默认禁用的内置插件，将配对节点屏幕快照转为私有时间线、每日站会和时间线问答",
+      "Control UI 侧边栏导航：显示小型可定制固定目标集，其余页面收在 More 下，设置移至页脚，持久化浏览器自定义"
+    ]
+  },
 ];
