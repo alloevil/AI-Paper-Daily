@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Paper Daily — Daily AI Paper Discovery</title>
+<meta name="description" content="Daily AI Paper Discovery · Agent / RAG / Knowledge Graph">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --primary: #6366f1;
+    --primary-hover: #818cf8;
+    --primary-dim: rgba(99,102,241,0.15);
+    --primary-border: rgba(99,102,241,0.3);
+    --blue: #3b82f6;
+    --blue-dim: rgba(59,130,246,0.15);
+    --blue-border: rgba(59,130,246,0.3);
+    --on-primary: #ffffff;
+    --ink: #f7f8f8;
+    --ink-muted: #d0d6e0;
+    --ink-subtle: #8a8f98;
+    --ink-tertiary: #62666d;
+    --canvas: #010102;
+    --surface-1: #0f1011;
+    --surface-2: #141516;
+    --surface-3: #18191a;
+    --hairline: #23252a;
+    --hairline-strong: #34343a;
+    --success: #27a644;
+    --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--canvas);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  /* Masthead */
+  .masthead {
+    padding: 20px 0 16px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .masthead-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .brand-icon { font-size: 22px; }
+  .brand h1 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+    color: var(--ink);
+  }
+  .brand .tagline {
+    font-size: 13px;
+    color: var(--ink-subtle);
+  }
+  .header-links {
+    display: flex;
+    gap: 8px;
+  }
+  .header-links a {
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-muted);
+    text-decoration: none;
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    transition: all 0.15s;
+  }
+  .header-links a:hover {
+    color: var(--ink);
+    border-color: var(--hairline-strong);
+  }
+
+  /* Meta bar */
+  .meta-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 0;
+    font-size: 12px;
+    color: var(--ink-tertiary);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .meta-stats {
+    display: inline-flex;
+    gap: 14px;
+  }
+  .stat-num {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  /* Filters */
+  .filters {
+    padding: 16px 0;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter-group {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-subtle);
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: var(--font-sans);
+  }
+  .filter-btn:hover { color: var(--ink-muted); }
+  .filter-btn.active {
+    color: var(--ink);
+    background: var(--surface-2);
+    border-color: var(--hairline);
+  }
+  .date-select {
+    padding: 6px 28px 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    background: var(--surface-2);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%238a8f98' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }
+  .date-select:hover { border-color: var(--hairline-strong); }
+
+  /* Relevance filter */
+  .relevance-filters {
+    padding: 0 0 8px;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  /* Date Section */
+  .date-section { margin-bottom: 40px; }
+  .date-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: 4px;
+  }
+  .date-header h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.2px;
+  }
+  .date-count {
+    font-size: 13px;
+    color: var(--ink-tertiary);
+  }
+
+  /* Paper Card */
+  .paper-card {
+    display: flex;
+    padding: 16px 0;
+    transition: background 0.15s;
+    border-radius: 8px;
+  }
+  .paper-card:hover {
+    background: var(--surface-1);
+  }
+  .paper-card + .paper-card {
+    border-top: 1px solid var(--hairline);
+  }
+  .relevance-bar {
+    width: 4px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-right: 16px;
+    align-self: stretch;
+  }
+  .relevance-bar.high { background: var(--primary); }
+  .relevance-bar.mid { background: var(--blue); }
+  .relevance-bar.low { background: var(--ink-tertiary); }
+  .paper-content {
+    flex: 1;
+    min-width: 0;
+  }
+  .paper-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+  }
+  .paper-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    line-height: 1.4;
+  }
+  .paper-title:hover { color: var(--primary-hover); }
+  .paper-tag {
+    display: inline-block;
+    padding: 1px 8px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--ink-muted);
+    background: var(--surface-2);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .paper-abstract {
+    font-size: 14px;
+    color: var(--ink-subtle);
+    margin-bottom: 8px;
+    line-height: 1.55;
+  }
+  .paper-links {
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+  }
+  .paper-links a {
+    color: var(--ink-tertiary);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .paper-links a:hover { color: var(--primary-hover); }
+
+  /* Empty state */
+  .empty-state {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--ink-tertiary);
+    font-size: 14px;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 48px;
+    padding: 24px 0;
+    border-top: 1px solid var(--hairline);
+    text-align: center;
+  }
+  .footer p {
+    font-size: 12px;
+    color: var(--ink-tertiary);
+  }
+  .footer a {
+    color: var(--ink-subtle);
+    text-decoration: none;
+  }
+  .footer a:hover { color: var(--ink); }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .container { padding: 0 16px; }
+    .brand { flex-wrap: wrap; gap: 6px; }
+    .brand .tagline { display: block; width: 100%; }
+    .paper-header { flex-direction: column; gap: 4px; }
+    .relevance-bar { margin-right: 12px; }
+    .paper-links { flex-wrap: wrap; }
+    .filters { gap: 12px; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <!-- Masthead -->
+    <header class="masthead">
+      <div class="masthead-top">
+        <div class="brand">
+          <span class="brand-icon">📄</span>
+          <h1>AI Paper Daily</h1>
+          <span class="tagline">Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</span>
+        </div>
+        <nav class="header-links">
+          <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a>
+          <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Meta bar -->
+    <div class="meta-bar">
+      <span class="meta-stats">
+        <span><span class="stat-num" id="stat-papers">0</span> 篇论文</span>
+        <span><span class="stat-num" id="stat-dates">0</span> 天</span>
+      </span>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <div class="filter-group">
+        <select class="date-select" id="date-select" onchange="switchDate(this.value)">
+          <option value="2026-07-28" selected>2026-07-28</option>
+        </select>
+      </div>
+      <div class="filter-group" id="relevance-filters">
+        <button class="filter-btn active" onclick="filterRelevance('all')">全部</button>
+        <button class="filter-btn" onclick="filterRelevance(3)">⭐⭐⭐ 高度相关</button>
+        <button class="filter-btn" onclick="filterRelevance(2)">⭐⭐ 中度相关</button>
+        <button class="filter-btn" onclick="filterRelevance(1)">⭐ 其他</button>
+      </div>
+      <div class="filter-group" id="tag-filters">
+        <!-- TAG_FILTERS -->
+        <!-- /TAG_FILTERS -->
+      </div>
+    </div>
+
+    <!-- CONTENT_MARKER -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Built by <a href="https://github.com/alloevil">alloevil</a> · <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a> · <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a></p>
+    </footer>
+  </div>
+
+<script>
+function switchDate(date) {
+  document.querySelectorAll('.date-section').forEach(s => s.style.display = 'none');
+  const sec = document.querySelector('[data-date="' + date + '"]');
+  if (sec) sec.style.display = '';
+  // Reset filters when switching date
+  resetFilters();
+}
+
+function filterRelevance(level) {
+  const btns = document.querySelectorAll('#relevance-filters .filter-btn');
+  btns.forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+
+  document.querySelectorAll('.paper-card').forEach(card => {
+    if (level === 'all') {
+      card.style.display = '';
+    } else {
+      const cardRel = parseInt(card.getAttribute('data-relevance') || '1');
+      card.style.display = (cardRel === level) ? '' : 'none';
+    }
+  });
+}
+
+function filterTag(tag) {
+  const btns = document.querySelectorAll('#tag-filters .filter-btn');
+  btns.forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+
+  document.querySelectorAll('.paper-card').forEach(card => {
+    if (tag === 'all') {
+      card.style.display = '';
+    } else {
+      const cardTags = (card.getAttribute('data-tags') || '').split(',');
+      card.style.display = cardTags.includes(tag) ? '' : 'none';
+    }
+  });
+}
+
+function resetFilters() {
+  document.querySelectorAll('#relevance-filters .filter-btn').forEach((b, i) => {
+    b.classList.toggle('active', i === 0);
+  });
+  document.querySelectorAll('#tag-filters .filter-btn').forEach((b, i) => {
+    b.classList.toggle('active', i === 0);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {});
+</script>
+</body>
+</html>
