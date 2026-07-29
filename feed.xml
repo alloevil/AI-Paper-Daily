@@ -5,20 +5,20 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 29 Jul 2026 02:23:47 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 06:39:07 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>📄 Visual prompt engineering for video models (2026-07-29)</title>
-      <description>In the age of foundation models, a model is only as good as its prompt. For this reason, prompt engineering has become an essential technique for improving language model performance. Since video mode...</description>
-      <link>https://arxiv.org/abs/2607.25537</link>
-      <guid>https://arxiv.org/abs/2607.25537#2026-07-29</guid>
+      <title>📄 HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone (2026-07-29)</title>
+      <description>Learning deployable manipulation policies is bottlenecked by the scarcity of data that is both high-fidelity and scalable. Real-robot teleoperation is accurate but costly to scale; robot-free UMI capt...</description>
+      <link>https://arxiv.org/abs/2607.25895</link>
+      <guid>https://arxiv.org/abs/2607.25895#2026-07-29</guid>
       <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 OmniDelta: Skill-Driven Budget Allocation for Token Compression in OmniLLMs (2026-07-29)</title>
-      <description>Emerging Omni-modal Large Language Models (OmniLLMs) enable unified understanding of text, audio, and video, but their long audio-video token sequences introduce substantial memory and inference costs...</description>
-      <link>https://arxiv.org/abs/2607.25669</link>
-      <guid>https://arxiv.org/abs/2607.25669#2026-07-29</guid>
+      <title>📄 ReDesign: Recovering Editable Design Structures from Images via Agentic Decomposition (2026-07-29)</title>
+      <description>Recovering an editable design file from a raster image is a common and costly bottleneck in modern design workflows, yet remains challenging since editability depends on recovering multi-modal attribu...</description>
+      <link>https://arxiv.org/abs/2607.25565</link>
+      <guid>https://arxiv.org/abs/2607.25565#2026-07-29</guid>
       <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
@@ -33,6 +33,27 @@
       <description>We introduce Shieldstral, a 3B-parameter policy-adaptive multimodal safety classifier that matches or outperforms models nearly 7times its size on text safety benchmarks and sets a new state of the ar...</description>
       <link>https://arxiv.org/abs/2607.25857</link>
       <guid>https://arxiv.org/abs/2607.25857#2026-07-29</guid>
+      <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Visual prompt engineering for video models (2026-07-29)</title>
+      <description>In the age of foundation models, a model is only as good as its prompt. For this reason, prompt engineering has become an essential technique for improving language model performance. Since video mode...</description>
+      <link>https://arxiv.org/abs/2607.25537</link>
+      <guid>https://arxiv.org/abs/2607.25537#2026-07-29</guid>
+      <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Mapping CVEs to MITRE ATT&amp;CK Techniques: A Curated Gold-Set Classifier and the Limits of LLM-Assisted Label Expansion (2026-07-29)</title>
+      <description>We present a reproducible pipeline for mapping Common Vulnerabilities and Exposures (CVEs) to MITRE ATT&amp;CK Enterprise techniques from free-text vulnerability descriptions. Rather than relying on the C...</description>
+      <link>https://arxiv.org/abs/2607.25572</link>
+      <guid>https://arxiv.org/abs/2607.25572#2026-07-29</guid>
+      <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 OmniDelta: Skill-Driven Budget Allocation for Token Compression in OmniLLMs (2026-07-29)</title>
+      <description>Emerging Omni-modal Large Language Models (OmniLLMs) enable unified understanding of text, audio, and video, but their long audio-video token sequences introduce substantial memory and inference costs...</description>
+      <link>https://arxiv.org/abs/2607.25669</link>
+      <guid>https://arxiv.org/abs/2607.25669#2026-07-29</guid>
       <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
@@ -334,27 +355,6 @@
       <description>Text-to-image diffusion transformers (DiTs) jointly process text and image tokens, yet their internal computation during denoising remains poorly understood. We introduce a causal interpretability fra...</description>
       <link>https://arxiv.org/abs/2607.19139</link>
       <guid>https://arxiv.org/abs/2607.19139#2026-07-22</guid>
-      <pubDate>Wed, 22 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report (2026-07-22)</title>
-      <description>Unlike conventional video game development, which relies on labor-intensive pipelines for asset production, animation, physics, and programming, video world models generate interactive environments fr...</description>
-      <link>https://arxiv.org/abs/2607.18367</link>
-      <guid>https://arxiv.org/abs/2607.18367#2026-07-22</guid>
-      <pubDate>Wed, 22 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Stale but Stable: Staleness-Adaptive Trust Regions for Stabilizing Asynchronous Reinforcement Learning (2026-07-22)</title>
-      <description>Asynchronous reinforcement learning improves throughput by decoupling rollout generation from optimization, but staleness is an inevitable byproduct compounded by policy lag, engine delays, and mixtur...</description>
-      <link>https://arxiv.org/abs/2607.18722</link>
-      <guid>https://arxiv.org/abs/2607.18722#2026-07-22</guid>
-      <pubDate>Wed, 22 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Graph-Based Agentic AI with LangGraph: Workflow Pathways for Long-Running Stateful Business Processes 📦代码 (2026-07-22)</title>
-      <description>This paper is a practitioner guide to graph-based workflow pathways for long-running, stateful, multi-step generative AI systems in business processes. Rather than treating LangGraph, a low-level orch...</description>
-      <link>http://arxiv.org/abs/2607.19297v1</link>
-      <guid>http://arxiv.org/abs/2607.19297v1#2026-07-22</guid>
       <pubDate>Wed, 22 Jul 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
