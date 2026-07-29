@@ -8,8 +8,9 @@
 [![License](https://img.shields.io/github/license/alloevil/AI-Paper-Daily)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.11+-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![Stars](https://img.shields.io/github/stars/alloevil/AI-Paper-Daily?style=social)](https://github.com/alloevil/AI-Paper-Daily/stargazers)
+[![GitHub Pages](https://img.shields.io/badge/🌐_Website-GitHub_Pages-6366f1?logo=githubpages&logoColor=white)](https://alloevil.github.io/AI-Paper-Daily/)
 
-[Quick Start](#-quick-start) · [How It Works](#-how-it-works) · [Configuration](#-configuration) · [Custom Sources](#-custom-sources)
+🌐 [Live Website](https://alloevil.github.io/AI-Paper-Daily/) · [Quick Start](#-quick-start) · [How It Works](#-how-it-works) · [Configuration](#-configuration) · [Custom Sources](#-custom-sources)
 
 </div>
 
