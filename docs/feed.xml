@@ -5,8 +5,36 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 29 Jul 2026 02:19:16 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 02:23:47 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📄 Visual prompt engineering for video models (2026-07-29)</title>
+      <description>In the age of foundation models, a model is only as good as its prompt. For this reason, prompt engineering has become an essential technique for improving language model performance. Since video mode...</description>
+      <link>https://arxiv.org/abs/2607.25537</link>
+      <guid>https://arxiv.org/abs/2607.25537#2026-07-29</guid>
+      <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 OmniDelta: Skill-Driven Budget Allocation for Token Compression in OmniLLMs (2026-07-29)</title>
+      <description>Emerging Omni-modal Large Language Models (OmniLLMs) enable unified understanding of text, audio, and video, but their long audio-video token sequences introduce substantial memory and inference costs...</description>
+      <link>https://arxiv.org/abs/2607.25669</link>
+      <guid>https://arxiv.org/abs/2607.25669#2026-07-29</guid>
+      <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Wonder: Video World Model Done Better (2026-07-29)</title>
+      <description>We present Wonder, a general-purpose video world model for real-time, camera-controllable world exploration. Given an image or a conditional video, Wonder constructs a playable world where users can n...</description>
+      <link>https://arxiv.org/abs/2607.26037</link>
+      <guid>https://arxiv.org/abs/2607.26037#2026-07-29</guid>
+      <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Shieldstral (2026-07-29)</title>
+      <description>We introduce Shieldstral, a 3B-parameter policy-adaptive multimodal safety classifier that matches or outperforms models nearly 7times its size on text safety benchmarks and sets a new state of the ar...</description>
+      <link>https://arxiv.org/abs/2607.25857</link>
+      <guid>https://arxiv.org/abs/2607.25857#2026-07-29</guid>
+      <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 Kimi K3: Open Frontier Intelligence (2026-07-28)</title>
       <description>We introduce Kimi K3, a 2.8T parameter Mixture-of-Experts model with 104 billion activated parameters, native vision capabilities, and a 1-million-token context window. Kimi K3 is built on Kimi Delta ...</description>
@@ -327,34 +355,6 @@
       <description>This paper is a practitioner guide to graph-based workflow pathways for long-running, stateful, multi-step generative AI systems in business processes. Rather than treating LangGraph, a low-level orch...</description>
       <link>http://arxiv.org/abs/2607.19297v1</link>
       <guid>http://arxiv.org/abs/2607.19297v1#2026-07-22</guid>
-      <pubDate>Wed, 22 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AI Tour Meeting: Group Travel Planning by LLM Agents 📦代码 (2026-07-22)</title>
-      <description>This paper proposes AI Tour Meeting, a group travel planning framework powered by multiple Large Language Model (LLM)-based agents. The agents are instantiated with distinct personas and collaborative...</description>
-      <link>http://arxiv.org/abs/2607.18806v1</link>
-      <guid>http://arxiv.org/abs/2607.18806v1#2026-07-22</guid>
-      <pubDate>Wed, 22 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AgentDebugX: An Open-Source Toolkit for Failure Observability, Attribution, and Recovery in LLM Agents (2026-07-22)</title>
-      <description>LLM agent failures are difficult to debug because the step where an error surfaces is often not the one that caused it. Existing observability tools replay execution traces but provide little support ...</description>
-      <link>https://arxiv.org/abs/2607.18754</link>
-      <guid>https://arxiv.org/abs/2607.18754#2026-07-22</guid>
-      <pubDate>Wed, 22 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU (2026-07-22)</title>
-      <description>We present ABot-World-0, an action-conditioned video world model for real-time, long-horizon closed-loop interaction, supported by a multi-source data infrastructure spanning AAA games, simulation eng...</description>
-      <link>https://arxiv.org/abs/2607.19191</link>
-      <guid>https://arxiv.org/abs/2607.19191#2026-07-22</guid>
-      <pubDate>Wed, 22 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 HPD-Parsing: Hierarchical Parallel Document Parsing (2026-07-22)</title>
-      <description>Efficient teamwork typically combines global coordination with parallel execution, a principle not yet fully reflected in unified Vision-Language Model (VLM)-based document parsers. Existing unified p...</description>
-      <link>https://arxiv.org/abs/2607.18839</link>
-      <guid>https://arxiv.org/abs/2607.18839#2026-07-22</guid>
       <pubDate>Wed, 22 Jul 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
