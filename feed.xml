@@ -5,8 +5,78 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 29 Jul 2026 06:39:07 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 06:34:07 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📄 TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with &lt;1 GB VRAM (2026-07-30)</title>
+      <description>Vision-language-action (VLA) models commonly adopt an LLM-centric V to L to A pathway, where visual observations are projected into the representation space of a large language model before being deco...</description>
+      <link>https://arxiv.org/abs/2607.27205</link>
+      <guid>https://arxiv.org/abs/2607.27205#2026-07-30</guid>
+      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 HumanCLAW: Can Vision-Language Models Act Through a Body? (2026-07-30)</title>
+      <description>Evaluating whether a vision-language model (VLM) can act through a physical body is challenging. The outcome of an action couples the VLM's decision with motor control. When a task fails, it is hard t...</description>
+      <link>https://arxiv.org/abs/2607.27180</link>
+      <guid>https://arxiv.org/abs/2607.27180#2026-07-30</guid>
+      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SkillRise: Agentic Reinforcement Learning for Cross-Task Skill Evolution (2026-07-30)</title>
+      <description>Large language model agents often encounter related yet distinct tasks that share reusable solution patterns. Yet standard agentic reinforcement learning treats tasks as independent episodes, while ex...</description>
+      <link>https://arxiv.org/abs/2607.26784</link>
+      <guid>https://arxiv.org/abs/2607.26784#2026-07-30</guid>
+      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TREK: A Travel Reasoning and Evaluation Kit for LLM Agents in Complex Trip Planning 📦代码 (2026-07-30)</title>
+      <description>Travel planning is a demanding stress test for tool-using LLM agents: a usable itinerary is a single artifact that must be right along many axes at once - every flight, hotel, and attraction must exis...</description>
+      <link>http://arxiv.org/abs/2607.26977v1</link>
+      <guid>http://arxiv.org/abs/2607.26977v1#2026-07-30</guid>
+      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SARC-DQ: Runtime Data-Quality Gating for Agentic AI: Silent Evidence Defects, the Incompetence Shield, and Downstream-Only Remediation 📦代码 (2026-07-30)</title>
+      <description>Agentic systems act, so a defect in the evidence they retrieve becomes a wrong action with a currency cost. The most dangerous enterprise defects are metadata-borne: a stale price or a superseded reco...</description>
+      <link>http://arxiv.org/abs/2607.26313v1</link>
+      <guid>http://arxiv.org/abs/2607.26313v1#2026-07-30</guid>
+      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 A Control System, a Dataset, and a Recipe for Making Frozen LLM Agents Learn a Domain 📦代码 (2026-07-30)</title>
+      <description>Production LLM agents are increasingly assembled from a frozen model wrapped in a harness: a prompt template, a tool set, a memory/retrieval layer, a planning strategy, and a verification policy. Two ...</description>
+      <link>http://arxiv.org/abs/2607.25415v1</link>
+      <guid>http://arxiv.org/abs/2607.25415v1#2026-07-30</guid>
+      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Context Assembly as the Controlled Variable: A Control-Theoretic View of Harness Policies for Frozen LLM Agents 📦代码 (2026-07-30)</title>
+      <description>A growing body of 2026 work applies control theory to LLM agents: Lyapunov-certified stability for tool-mediated controllers (Prinos et al., &quot;Stable Agentic Control&quot;, 2026), sample-complexity bounds f...</description>
+      <link>http://arxiv.org/abs/2607.25408v1</link>
+      <guid>http://arxiv.org/abs/2607.25408v1#2026-07-30</guid>
+      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding (2026-07-30)</title>
+      <description>Large language model (LLM) agents are increasingly expected to assist users in completing tasks. However, existing benchmarks provide limited support for evaluating whether agents can carry out office...</description>
+      <link>https://arxiv.org/abs/2607.27155</link>
+      <guid>https://arxiv.org/abs/2607.27155#2026-07-30</guid>
+      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Can AI agents conduct open-ended AI research? Early evidence from two case studies (2026-07-30)</title>
+      <description>Forecasts of explosive AI progress hinge on AI agents automating AI research. But evidence on whether agents can carry out open-ended AI research is thin. Current evaluations either test agents on nar...</description>
+      <link>https://arxiv.org/abs/2607.27191</link>
+      <guid>https://arxiv.org/abs/2607.27191#2026-07-30</guid>
+      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding (2026-07-30)</title>
+      <description>Large language model (LLM) agents are increasingly expected to assist users in completing tasks. However, existing benchmarks provide limited support for evaluating whether agents can carry out office...</description>
+      <link>http://arxiv.org/abs/2607.27155v1</link>
+      <guid>http://arxiv.org/abs/2607.27155v1#2026-07-30</guid>
+      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone (2026-07-29)</title>
       <description>Learning deployable manipulation policies is bottlenecked by the scarcity of data that is both high-fidelity and scalable. Real-robot teleoperation is accurate but costly to scale; robot-free UMI capt...</description>
@@ -286,76 +356,6 @@
       <link>https://arxiv.org/abs/2607.20368</link>
       <guid>https://arxiv.org/abs/2607.20368#2026-07-23</guid>
       <pubDate>Thu, 23 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Graph-Based Agentic AI with LangGraph: Workflow Pathways for Long-Running Stateful Business Processes 📦代码 (2026-07-23)</title>
-      <description>This paper is a practitioner guide to graph-based workflow pathways for long-running, stateful, multi-step generative AI systems in business processes. Rather than treating LangGraph, a low-level orch...</description>
-      <link>http://arxiv.org/abs/2607.19297v1</link>
-      <guid>http://arxiv.org/abs/2607.19297v1#2026-07-23</guid>
-      <pubDate>Thu, 23 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AI Tour Meeting: Group Travel Planning by LLM Agents 📦代码 (2026-07-23)</title>
-      <description>This paper proposes AI Tour Meeting, a group travel planning framework powered by multiple Large Language Model (LLM)-based agents. The agents are instantiated with distinct personas and collaborative...</description>
-      <link>http://arxiv.org/abs/2607.18806v1</link>
-      <guid>http://arxiv.org/abs/2607.18806v1#2026-07-23</guid>
-      <pubDate>Thu, 23 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 NexForge: Scaling Agent Capabilities through Requirement-Driven Task Synthesis for LLMs (2026-07-23)</title>
-      <description>Scaling executable agent training data for LLM post-training is bottlenecked by substrate-bound methods that tie task generation to predefined tools, repositories, or skill graphs: expanding coverage ...</description>
-      <link>https://arxiv.org/abs/2607.14186</link>
-      <guid>https://arxiv.org/abs/2607.14186#2026-07-23</guid>
-      <pubDate>Thu, 23 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ISO: An RLVR-Native Optimization Stack (2026-07-23)</title>
-      <description>Reinforcement learning with verifiable rewards (RLVR) is rapidly advancing the reasoning capabilities of language models, yet the optimization layer that converts reward feedback into weight-space upd...</description>
-      <link>https://arxiv.org/abs/2607.19331</link>
-      <guid>https://arxiv.org/abs/2607.19331#2026-07-23</guid>
-      <pubDate>Thu, 23 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Beyond Relevance-Centric Retrieval: Rubric-Oriented Document Set Selection and Ranking (2026-07-23)</title>
-      <description>As large language models and AI agents become the primary consumers of search results, document set quality determines the upper bound of downstream generation. Yet existing evaluation systems remain ...</description>
-      <link>https://arxiv.org/abs/2607.19747</link>
-      <guid>https://arxiv.org/abs/2607.19747#2026-07-23</guid>
-      <pubDate>Thu, 23 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Trace: A Taxonomy-Guided Environment for Multidomain Visual Reasoning (2026-07-23)</title>
-      <description>Reinforcement learning with verifiable rewards (RLVR) has substantially improved language-model reasoning, yet its extension to vision-language models remains constrained by the lack of training data ...</description>
-      <link>https://arxiv.org/abs/2607.19790</link>
-      <guid>https://arxiv.org/abs/2607.19790#2026-07-23</guid>
-      <pubDate>Thu, 23 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SLPO: Scaling Latent Reasoning via a Surrogate Policy (2026-07-23)</title>
-      <description>Reinforcement learning with verifiable rewards has become the predominant recipe for eliciting test-time scaling in explicit Chain-of-Thought reasoners. Yet this scaling path remains computationally c...</description>
-      <link>https://arxiv.org/abs/2607.19691</link>
-      <guid>https://arxiv.org/abs/2607.19691#2026-07-23</guid>
-      <pubDate>Thu, 23 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Generative World Renderer at the Speed of Play (2026-07-22)</title>
-      <description>Generative world renderer AlayaRenderer receives structured world states exported from physics engines and synthesizes RGB frames. Unlike models that generate frames from text/control-hints prompts, A...</description>
-      <link>https://arxiv.org/abs/2607.18703</link>
-      <guid>https://arxiv.org/abs/2607.18703#2026-07-22</guid>
-      <pubDate>Wed, 22 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Mage-Flow: An Efficient Native-Resolution Foundation Model for Image Generation and Editing (2026-07-22)</title>
-      <description>Large-scale visual generators are increasingly capable but costly to train, fine-tune, and deploy. We introduce Mage-Flow, a compact 4B-scale generative stack for efficient text-to-image generation an...</description>
-      <link>https://arxiv.org/abs/2607.19064</link>
-      <guid>https://arxiv.org/abs/2607.19064#2026-07-22</guid>
-      <pubDate>Wed, 22 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Text Template Tokens Are Implicit Semantic Registers in Diffusion Transformers (2026-07-22)</title>
-      <description>Text-to-image diffusion transformers (DiTs) jointly process text and image tokens, yet their internal computation during denoising remains poorly understood. We introduce a causal interpretability fra...</description>
-      <link>https://arxiv.org/abs/2607.19139</link>
-      <guid>https://arxiv.org/abs/2607.19139#2026-07-22</guid>
-      <pubDate>Wed, 22 Jul 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
