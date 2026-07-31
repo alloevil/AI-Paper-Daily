@@ -5,8 +5,78 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 30 Jul 2026 06:34:07 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 06:50:47 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📄 Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering (2026-07-31)</title>
+      <description>Recursive self-improvement (RSI) requires AI systems that improve the process of building AI (i.e., AI4AI); machine learning engineering (MLE) offers a concrete, executable testbed for studying this c...</description>
+      <link>https://arxiv.org/abs/2607.28568</link>
+      <guid>https://arxiv.org/abs/2607.28568#2026-07-31</guid>
+      <pubDate>Fri, 31 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis (2026-07-31)</title>
+      <description>Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists. As a resul...</description>
+      <link>https://arxiv.org/abs/2607.28618</link>
+      <guid>https://arxiv.org/abs/2607.28618#2026-07-31</guid>
+      <pubDate>Fri, 31 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PhiZero: A World Model Built Around Physical Language (2026-07-31)</title>
+      <description>We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions. Existing physical world models typically predict future video...</description>
+      <link>https://arxiv.org/abs/2607.28624</link>
+      <guid>https://arxiv.org/abs/2607.28624#2026-07-31</guid>
+      <pubDate>Fri, 31 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Beacon: Knowing When and How to Perform Agentic Visual Reasoning (2026-07-31)</title>
+      <description>The fundamental goal of agentic visual reasoning is to improve the success rate of multimodal large language models (MLLMs) on complex tasks, rather than merely equipping them with a sophisticated yet...</description>
+      <link>https://arxiv.org/abs/2607.28595</link>
+      <guid>https://arxiv.org/abs/2607.28595#2026-07-31</guid>
+      <pubDate>Fri, 31 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 BM25 Wins at Scale: A Scaling Study of Retrieval-Augmented Generation Paradigms (2026-07-31)</title>
+      <description>Retrieval-augmented generation (RAG) spans lexical and dense retrieval, graph-based indexing, and agentic search, but these paradigms are usually evaluated on different benchmarks at one corpus size, ...</description>
+      <link>https://arxiv.org/abs/2607.26497</link>
+      <guid>https://arxiv.org/abs/2607.26497#2026-07-31</guid>
+      <pubDate>Fri, 31 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MPIE-Bench: Benchmarking Anatomically Plausible Multi-Person Interaction Editing (2026-07-31)</title>
+      <description>Text-to-image and personalized editing models now synthesize high-fidelity single-subject images with ease. Yet placing multiple named people into shared contact actions such as embrace, carry, or gra...</description>
+      <link>https://arxiv.org/abs/2607.27616</link>
+      <guid>https://arxiv.org/abs/2607.27616#2026-07-31</guid>
+      <pubDate>Fri, 31 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ACE-Data-0: Human-Centric Ambient Capture as Embodied Data Engine (2026-07-31)</title>
+      <description>Embodied intelligence faces a fundamental data bottleneck. Models must capture how first-person perception, whole-body motion, dexterous manipulation, object state, sound, and touch evolve together as...</description>
+      <link>https://arxiv.org/abs/2607.28625</link>
+      <guid>https://arxiv.org/abs/2607.28625#2026-07-31</guid>
+      <pubDate>Fri, 31 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Beyond Borrowed Histories: Person-Aligned User Simulation for Interactive Role-Playing Evaluation (2026-07-31)</title>
+      <description>Role-playing agents (RPAs) have become one of the most important consumer applications of large language models. Users engage in multi-turn conversations with RPAs for experiences such as emotional co...</description>
+      <link>https://arxiv.org/abs/2607.27816</link>
+      <guid>https://arxiv.org/abs/2607.27816#2026-07-31</guid>
+      <pubDate>Fri, 31 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Memory Decoder at Scale: A Pretrained, Parametric Long-Term Memory (2026-07-31)</title>
+      <description>Decoder-only language models entangle long-term memory and reasoning in a single parameter set, making it difficult to scale memory capacity independently. Memory Decoder introduces a parametric long-...</description>
+      <link>https://arxiv.org/abs/2607.27919</link>
+      <guid>https://arxiv.org/abs/2607.27919#2026-07-31</guid>
+      <pubDate>Fri, 31 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Flux-OPD: On-Policy Distillation with Evolving Contexts (2026-07-31)</title>
+      <description>Large language model training in open-ended domains lacks verifiable rewards, making task preferences difficult to formalize as effective supervision. Contexts can convey such preferences, yet provide...</description>
+      <link>https://arxiv.org/abs/2607.28022</link>
+      <guid>https://arxiv.org/abs/2607.28022#2026-07-31</guid>
+      <pubDate>Fri, 31 Jul 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with &lt;1 GB VRAM (2026-07-30)</title>
       <description>Vision-language-action (VLA) models commonly adopt an LLM-centric V to L to A pathway, where visual observations are projected into the representation space of a large language model before being deco...</description>
@@ -286,76 +356,6 @@
       <link>https://arxiv.org/abs/2607.20911</link>
       <guid>https://arxiv.org/abs/2607.20911#2026-07-24</guid>
       <pubDate>Fri, 24 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Show, Don't Tell: Evaluating Spatial Cognition in Generative Pixels Rather Than LLM Text (2026-07-24)</title>
-      <description>Spatial intelligence is essential for agents to move from static semantic understanding toward interacting with the physical world. Many spatial tasks are grounded in continuous visual scenes, where l...</description>
-      <link>https://arxiv.org/abs/2607.21072</link>
-      <guid>https://arxiv.org/abs/2607.21072#2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Recurrent Sinusoidal INRs for Efficient High-Fidelity Representation (2026-07-24)</title>
-      <description>We study sinusoidal recurrence as an iterative mechanism for harmonic spectral enrichment in implicit neural representations (INRs). Our analysis reveals that sinusoidal activations induce a harmonic ...</description>
-      <link>https://arxiv.org/abs/2607.21485</link>
-      <guid>https://arxiv.org/abs/2607.21485#2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Sample-Efficient Learning from Agent Experience (2026-07-24)</title>
-      <description>Real-world agent learning is often constrained by costly environment interactions, such as running time-consuming experiments or obtaining human feedback. In-context learning offers a highly sample-ef...</description>
-      <link>https://arxiv.org/abs/2607.21051</link>
-      <guid>https://arxiv.org/abs/2607.21051#2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ICAE-Bench: Evaluating Coding Agents as Interactive Project Builders (2026-07-24)</title>
-      <description>The recent emergence of vibe-coding workflows is changing what coding agents are expected to do. Instead of merely completing code under fully specified instructions, agents are increasingly expected ...</description>
-      <link>https://arxiv.org/abs/2607.21217</link>
-      <guid>https://arxiv.org/abs/2607.21217#2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 TableVerse: A Large-scale Tabletop Dataset with Real-world Grounded Layouts for Generalizable Manipulation (2026-07-24)</title>
-      <description>The development of generalizable robotic manipulation policies is inherently bounded by the availability of large-scale, high-fidelity scene data. While recent automated synthesis methods attempt to b...</description>
-      <link>https://arxiv.org/abs/2607.21017</link>
-      <guid>https://arxiv.org/abs/2607.21017#2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Streaming Multi-Agent Autoregressive Diffusion Model with World State Registers (2026-07-24)</title>
-      <description>Multi-agent interactive world models should not only generate consistent observations, but also maintain world states that persist across agents and evolve across views. Existing autoregressive video ...</description>
-      <link>https://arxiv.org/abs/2607.21594</link>
-      <guid>https://arxiv.org/abs/2607.21594#2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 GraphVid: Interactive Graph-Controllable Video Generation (2026-07-24)</title>
-      <description>Controllable video generation remains challenging due to the difficulty of specifying precise multi-object interactions using text prompts or motion-control inputs that primarily constrain pixel movem...</description>
-      <link>https://arxiv.org/abs/2607.21580</link>
-      <guid>https://arxiv.org/abs/2607.21580#2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU (2026-07-23)</title>
-      <description>We present ABot-World-0, an action-conditioned video world model for real-time, long-horizon closed-loop interaction, supported by a multi-source data infrastructure spanning AAA games, simulation eng...</description>
-      <link>https://arxiv.org/abs/2607.19191</link>
-      <guid>https://arxiv.org/abs/2607.19191#2026-07-23</guid>
-      <pubDate>Thu, 23 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD (2026-07-23)</title>
-      <description>Full-parameter post-training of trillion-parameter-scale MoE models introduces substantial system-level challenges for large-scale distributed training, including severe memory pressure, non-overlappe...</description>
-      <link>https://arxiv.org/abs/2607.20145</link>
-      <guid>https://arxiv.org/abs/2607.20145#2026-07-23</guid>
-      <pubDate>Thu, 23 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Self Gradient Forcing: Native Long Video Extrapolation (2026-07-23)</title>
-      <description>Recent autoregressive video diffusion methods are increasingly built upon Self Forcing, where the student is trained on histories produced by its own rollout rather than ground-truth video contexts. T...</description>
-      <link>https://arxiv.org/abs/2607.20368</link>
-      <guid>https://arxiv.org/abs/2607.20368#2026-07-23</guid>
-      <pubDate>Thu, 23 Jul 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
