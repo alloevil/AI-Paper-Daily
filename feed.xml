@@ -5,8 +5,78 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 31 Jul 2026 06:50:47 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 06:36:06 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📄 PAIChecker: Uncovering and Checking PR-Issue Misalignment in SWE-Bench-Like Benchmarks (2026-08-01)</title>
+      <description>SWE-bench-like benchmarks are widely used for evaluating LLM's issue resolution capability. They typically follow a common construction pipeline: each PR (Pull Request) is paired with its linked issue...</description>
+      <link>http://arxiv.org/abs/2607.28587v1</link>
+      <guid>http://arxiv.org/abs/2607.28587v1#2026-08-01</guid>
+      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems (2026-08-01)</title>
+      <description>Large language model-based multi-agent systems improve complex problem solving through task decomposition, agent specialization, information exchange, and intermediate validation. However, existing sy...</description>
+      <link>http://arxiv.org/abs/2607.28527v1</link>
+      <guid>http://arxiv.org/abs/2607.28527v1#2026-08-01</guid>
+      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AgentRadio: Passive Awareness for Long-Horizon Multi-Agent Collaboration (2026-08-01)</title>
+      <description>Understanding large codebases is a long-horizon task for Large Language Model (LLM) agents: answering a single question can require building and running the software, tracing execution across files, a...</description>
+      <link>http://arxiv.org/abs/2607.28430v1</link>
+      <guid>http://arxiv.org/abs/2607.28430v1#2026-08-01</guid>
+      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 GLM-RAG: Graph Language Models for Graph-Based Retrieval-Augmented Generation (2026-08-01)</title>
+      <description>Retrieval-augmented generation (RAG) over knowledge graphs requires retrievers that can effectively capture both graph structure and semantic information. Recent approaches have explored graph neural ...</description>
+      <link>http://arxiv.org/abs/2607.28397v1</link>
+      <guid>http://arxiv.org/abs/2607.28397v1#2026-08-01</guid>
+      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Paying for Honesty Without Knowing the Truth: Reputation-Penalty Design for LLM Marketplace Agents (2026-08-01)</title>
+      <description>LLM agents increasingly act as autonomous merchants that write their own product listings, and under competitive pressure, they fabricate attributes to win sales. Even under instructions to be honest,...</description>
+      <link>http://arxiv.org/abs/2607.28330v1</link>
+      <guid>http://arxiv.org/abs/2607.28330v1#2026-08-01</guid>
+      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 One Human, $N$ Agents: Audit-Budget Allocation for LLM Agent Fleets under Miscalibrated, Correlated Confidence (2026-08-01)</title>
+      <description>A single human must audit $N$ LLM agents under a budget of $B \ll N$ audits per round, guided by self-reported confidence that may be adversarially miscalibrated and by correlated errors. We model thi...</description>
+      <link>http://arxiv.org/abs/2607.28317v1</link>
+      <guid>http://arxiv.org/abs/2607.28317v1#2026-08-01</guid>
+      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MemHarness: Memory Is Reconstructed, Not Replayed (2026-08-01)</title>
+      <description>Retrieving past experiences has become a common strategy to enhance large language model agents. However, most existing memory-augmented agents treat retrieved experiences as static records to be repl...</description>
+      <link>http://arxiv.org/abs/2607.28272v1</link>
+      <guid>http://arxiv.org/abs/2607.28272v1#2026-08-01</guid>
+      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Agentic Metaverse Services: A New As-a-Service Paradigm (2026-08-01)</title>
+      <description>Generative Artificial Intelligence (GenAI) is reconstructing the digital virtual world, upgrading agents through enhancing their abilities in autonomous learning, multi-modal interaction, content gene...</description>
+      <link>http://arxiv.org/abs/2607.28242v1</link>
+      <guid>http://arxiv.org/abs/2607.28242v1#2026-08-01</guid>
+      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Vibe-FDTR: An agent-oriented framework for reproducible frequency-domain thermoreflectance data analysis (2026-08-01)</title>
+      <description>Frequency-domain thermoreflectance (FDTR) is a laser pump-probe technique widely used to measure thermal properties at the micro- and nanoscale; however, it relies on a complex data analysis procedure...</description>
+      <link>http://arxiv.org/abs/2607.28200v1</link>
+      <guid>http://arxiv.org/abs/2607.28200v1#2026-08-01</guid>
+      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Integrating AI into Requirements Quality Learning in Software Engineering Education: A TPACK-Guided Empirical Study (2026-08-01)</title>
+      <description>The rapid adoption of generative Artificial Intelligence (AI) in software engineering (SE) practice creates a need for pedagogically grounded approaches to AI integration in SE education, especially i...</description>
+      <link>http://arxiv.org/abs/2607.28176v1</link>
+      <guid>http://arxiv.org/abs/2607.28176v1#2026-08-01</guid>
+      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering (2026-07-31)</title>
       <description>Recursive self-improvement (RSI) requires AI systems that improve the process of building AI (i.e., AI4AI); machine learning engineering (MLE) offers a concrete, executable testbed for studying this c...</description>
@@ -286,76 +356,6 @@
       <link>http://arxiv.org/abs/2607.21412v1</link>
       <guid>http://arxiv.org/abs/2607.21412v1#2026-07-25</guid>
       <pubDate>Sat, 25 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Regulating autonomous and agentic AI (2026-07-25)</title>
-      <description>Regulating activities where regulatees use autonomous and agentic AI is challenging. Regulatory assumptions about regulatee knowledge and control no longer hold true; much of that lies elsewhere in th...</description>
-      <link>http://arxiv.org/abs/2607.21345v1</link>
-      <guid>http://arxiv.org/abs/2607.21345v1#2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 From Static Bibliometrics to Dynamic Knowledge Graphs: An LLM-Powered Framework for Modernizing Science, Technology, and Innovation (STI) Analytics (2026-07-25)</title>
-      <description>Bibliometric indicators - citation counts, h-indexes, co-authorship networks - have long anchored science, technology, and innovation (STI) analytics, yet suffer from temporal lag, semantic shallownes...</description>
-      <link>http://arxiv.org/abs/2607.21327v1</link>
-      <guid>http://arxiv.org/abs/2607.21327v1#2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 GRADRAG: Cross-Component Prompt Adaptation for Coordinated Multi-Agent RAG (2026-07-25)</title>
-      <description>Retrieval-Augmented Generation (RAG) systems increasingly employ multiple LLM agents. Yet, most prior work optimizes components in isolation rather than coordinating improvements across the pipeline. ...</description>
-      <link>http://arxiv.org/abs/2607.21324v1</link>
-      <guid>http://arxiv.org/abs/2607.21324v1#2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 pAI-Econ-claude: A Gated Human-in-the-Loop Multi-Agent Architecture for AI-Assisted Economic Theory Development (2026-07-25)</title>
-      <description>In many social-science research tasks, such as economics, LLM-based agents must produce outputs for which no cheap, task-complete, machine-readable correctness signal exists. This creates a distinctiv...</description>
-      <link>http://arxiv.org/abs/2607.21268v1</link>
-      <guid>http://arxiv.org/abs/2607.21268v1#2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Explainable Belief Harmonization under Dynamic Epistemic Partitions (2026-07-25)</title>
-      <description>Existing approaches to multi-agent belief combination have established mature foundations for combining uncertain beliefs under common assumptions: consensus methods use iterative averaging, logic-bas...</description>
-      <link>http://arxiv.org/abs/2607.21210v1</link>
-      <guid>http://arxiv.org/abs/2607.21210v1#2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Hybrid MKNF with Classical Negation in the Rule Component (2026-07-25)</title>
-      <description>Hybrid MKNF knowledge bases under the well-founded semantics integrate Description Logics with Logic Programming. However, they do not support classical negation in the rule component, limiting their ...</description>
-      <link>http://arxiv.org/abs/2607.21202v1</link>
-      <guid>http://arxiv.org/abs/2607.21202v1#2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AttriMem: Attribution-Guided Process Feedback for Agent Memory Learning (2026-07-25)</title>
-      <description>Effective memory is crucial for LLM agents, yet constructing it effectively remains challenging. A memory-construction policy decides what information to extract, store, update, compress, or discard a...</description>
-      <link>http://arxiv.org/abs/2607.21106v1</link>
-      <guid>http://arxiv.org/abs/2607.21106v1#2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AREX: Towards a Recursively Self-Improving Agent for Deep Research (2026-07-24)</title>
-      <description>Deep research requires agents to find answers that jointly satisfy multiple constraints. Discovering such answers is costly, whereas verifying a candidate can often be decomposed into tractable constr...</description>
-      <link>https://arxiv.org/abs/2607.21461</link>
-      <guid>https://arxiv.org/abs/2607.21461#2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Visual Contrastive Self-Distillation (2026-07-24)</title>
-      <description>On-policy self-distillation (OPSD) is promising as it removes the external teacher required by on-policy distillation (OPD), yet it still needs asymmetric information between teacher and student to en...</description>
-      <link>https://arxiv.org/abs/2607.21556</link>
-      <guid>https://arxiv.org/abs/2607.21556#2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Tencent WorkBuddy Bench: A Multi-Domain Coding-Agent Benchmark with Contamination-Resistant Task Construction (2026-07-24)</title>
-      <description>We introduce Tencent WorkBuddy Bench, a multi-domain evaluation suite for coding agents; this report documents its construction methodology, scoring protocol, and a cross-model leaderboard. At its cor...</description>
-      <link>https://arxiv.org/abs/2607.20911</link>
-      <guid>https://arxiv.org/abs/2607.20911#2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
