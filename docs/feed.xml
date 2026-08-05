@@ -5,8 +5,78 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 04 Aug 2026 06:34:27 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 06:35:19 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📄 JoyAI-Video-Edit: Real-Time Open-Ended Video Editing with Autoregressive Diffusion (2026-08-05)</title>
+      <description>Real-time video editing requires low-latency causal generation with bounded computational resources while preserving source fidelity and long-term temporal consistency. We present JoyAI-Video-Edit, a ...</description>
+      <link>https://arxiv.org/abs/2608.03974</link>
+      <guid>https://arxiv.org/abs/2608.03974#2026-08-05</guid>
+      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PAST-Bench: Benchmarking the Foundations of Recursive Self-Improvement in Personal Agents (2026-08-05)</title>
+      <description>Recursive self-improvement requires agents to turn accumulated experience into better future behavior. Personal AI agents offer a concrete setting for studying this capability because they retain pref...</description>
+      <link>https://arxiv.org/abs/2608.04003</link>
+      <guid>https://arxiv.org/abs/2608.04003#2026-08-05</guid>
+      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models (2026-08-05)</title>
+      <description>Omni-modal large language models (Omni-LLMs) have achieved remarkable performance on audio-visual understanding tasks, but processing long and highly redundant visual and audio token sequences incurs ...</description>
+      <link>https://arxiv.org/abs/2608.03812</link>
+      <guid>https://arxiv.org/abs/2608.03812#2026-08-05</guid>
+      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 UniWorld-Design: From Pixel Generation to Layer-Native Design (2026-08-05)</title>
+      <description>We introduce UniWorld-Design, a framework that redefines image generation from flat pixel synthesis to structured visual composition, with semantic RGBA layers as the atomic units of generation, under...</description>
+      <link>https://arxiv.org/abs/2608.03971</link>
+      <guid>https://arxiv.org/abs/2608.03971#2026-08-05</guid>
+      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Any-OPD: Heterogeneous On-Policy Distillation for Flow-Matching Models via Representation-Space Bridging (2026-08-05)</title>
+      <description>On-policy distillation, in which a teacher corrects samples that the student itself generates, presupposes that the two models speak the same language: identical VAE latents, matching architectures, a...</description>
+      <link>https://arxiv.org/abs/2608.03316</link>
+      <guid>https://arxiv.org/abs/2608.03316#2026-08-05</guid>
+      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SkillJack: Persistent Skill Backdoors in Self-Evolving Agents (2026-08-05)</title>
+      <description>Self-evolving agents increasingly convert interaction histories into reusable skills that persist beyond individual tasks. While prior work studies memory and retrieval poisoning, such attacks only af...</description>
+      <link>https://arxiv.org/abs/2608.03509</link>
+      <guid>https://arxiv.org/abs/2608.03509#2026-08-05</guid>
+      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Real-Time Detection and Repair of LLM Agent Failures 📦代码 (2026-08-05)</title>
+      <description>LLM agents fail mid-episode -- they loop, cascade tool errors, drift off goal, fabricate results, or silently absorb corrupted content -- and the standard remedy, judging every step with a second LLM,...</description>
+      <link>http://arxiv.org/abs/2608.02464v1</link>
+      <guid>http://arxiv.org/abs/2608.02464v1#2026-08-05</guid>
+      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Video-DeepResearch: Towards the Next-Generation Multimodal Deepresearch Agent (2026-08-05)</title>
+      <description>We introduce Video-DeepResearch (Video-DR), extending multimodal agents from static images to continuous video streams, a setting that demands dense spatiotemporal grounding coupled with open-web expl...</description>
+      <link>https://arxiv.org/abs/2608.03979</link>
+      <guid>https://arxiv.org/abs/2608.03979#2026-08-05</guid>
+      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TurnSight: Turn-Level Hindsight Self-Distillation for Tool-Integrated Reasoning (2026-08-05)</title>
+      <description>Tool-Integrated Reasoning (TIR) enables LLMs to solve complex tasks through iterative tool interactions. However, existing reinforcement learning methods often rely on trajectory-level supervision, li...</description>
+      <link>https://arxiv.org/abs/2608.04007</link>
+      <guid>https://arxiv.org/abs/2608.04007#2026-08-05</guid>
+      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 When Agents Learn to Be You: Benchmarking Privacy Leakage, Impersonation Risk, and Defenses in Persona Skills (2026-08-05)</title>
+      <description>Persona skills distill personal interaction histories into portable and executable artifacts for downstream agents. While enabling flexible personalization, this process concentrates fragmented person...</description>
+      <link>https://arxiv.org/abs/2608.03700</link>
+      <guid>https://arxiv.org/abs/2608.03700#2026-08-05</guid>
+      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 SwanTale: Unified Multi-Speaker Speech and Audio Generation for Instruct and Zero-Shot Tasks (2026-08-04)</title>
       <description>Speech and audio generation is often needed in animation dubbing, audio drama, movies, advertising, games, podcasts, and short-video production. In these scenarios, creators may need to design voices ...</description>
@@ -286,76 +356,6 @@
       <link>http://arxiv.org/abs/2607.27155v1</link>
       <guid>http://arxiv.org/abs/2607.27155v1#2026-07-30</guid>
       <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone (2026-07-29)</title>
-      <description>Learning deployable manipulation policies is bottlenecked by the scarcity of data that is both high-fidelity and scalable. Real-robot teleoperation is accurate but costly to scale; robot-free UMI capt...</description>
-      <link>https://arxiv.org/abs/2607.25895</link>
-      <guid>https://arxiv.org/abs/2607.25895#2026-07-29</guid>
-      <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ReDesign: Recovering Editable Design Structures from Images via Agentic Decomposition (2026-07-29)</title>
-      <description>Recovering an editable design file from a raster image is a common and costly bottleneck in modern design workflows, yet remains challenging since editability depends on recovering multi-modal attribu...</description>
-      <link>https://arxiv.org/abs/2607.25565</link>
-      <guid>https://arxiv.org/abs/2607.25565#2026-07-29</guid>
-      <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Wonder: Video World Model Done Better (2026-07-29)</title>
-      <description>We present Wonder, a general-purpose video world model for real-time, camera-controllable world exploration. Given an image or a conditional video, Wonder constructs a playable world where users can n...</description>
-      <link>https://arxiv.org/abs/2607.26037</link>
-      <guid>https://arxiv.org/abs/2607.26037#2026-07-29</guid>
-      <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Shieldstral (2026-07-29)</title>
-      <description>We introduce Shieldstral, a 3B-parameter policy-adaptive multimodal safety classifier that matches or outperforms models nearly 7times its size on text safety benchmarks and sets a new state of the ar...</description>
-      <link>https://arxiv.org/abs/2607.25857</link>
-      <guid>https://arxiv.org/abs/2607.25857#2026-07-29</guid>
-      <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Visual prompt engineering for video models (2026-07-29)</title>
-      <description>In the age of foundation models, a model is only as good as its prompt. For this reason, prompt engineering has become an essential technique for improving language model performance. Since video mode...</description>
-      <link>https://arxiv.org/abs/2607.25537</link>
-      <guid>https://arxiv.org/abs/2607.25537#2026-07-29</guid>
-      <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Mapping CVEs to MITRE ATT&amp;CK Techniques: A Curated Gold-Set Classifier and the Limits of LLM-Assisted Label Expansion (2026-07-29)</title>
-      <description>We present a reproducible pipeline for mapping Common Vulnerabilities and Exposures (CVEs) to MITRE ATT&amp;CK Enterprise techniques from free-text vulnerability descriptions. Rather than relying on the C...</description>
-      <link>https://arxiv.org/abs/2607.25572</link>
-      <guid>https://arxiv.org/abs/2607.25572#2026-07-29</guid>
-      <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OmniDelta: Skill-Driven Budget Allocation for Token Compression in OmniLLMs (2026-07-29)</title>
-      <description>Emerging Omni-modal Large Language Models (OmniLLMs) enable unified understanding of text, audio, and video, but their long audio-video token sequences introduce substantial memory and inference costs...</description>
-      <link>https://arxiv.org/abs/2607.25669</link>
-      <guid>https://arxiv.org/abs/2607.25669#2026-07-29</guid>
-      <pubDate>Wed, 29 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Kimi K3: Open Frontier Intelligence (2026-07-28)</title>
-      <description>We introduce Kimi K3, a 2.8T parameter Mixture-of-Experts model with 104 billion activated parameters, native vision capabilities, and a 1-million-token context window. Kimi K3 is built on Kimi Delta ...</description>
-      <link>https://arxiv.org/abs/2607.24653</link>
-      <guid>https://arxiv.org/abs/2607.24653#2026-07-28</guid>
-      <pubDate>Tue, 28 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 From Proprietary to Open-Source: Bridging the Distribution Gap via Multi-Agent Protocol Distillation in Agentic Search (2026-07-28)</title>
-      <description>Agentic search enables large language models to solve knowledge-intensive tasks by interleaving multi-step reasoning with retrieval, yet optimizing this with outcome-based reinforcement learning (RL) ...</description>
-      <link>https://arxiv.org/abs/2607.24280</link>
-      <guid>https://arxiv.org/abs/2607.24280#2026-07-28</guid>
-      <pubDate>Tue, 28 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Data Pyramid for Embodied Manipulation (2026-07-28)</title>
-      <description>Multimodal foundation models learned to see and to speak by consuming the whole internet. Embodied agents admit no such shortcut, since they require data that couple observations with physical states ...</description>
-      <link>https://arxiv.org/abs/2607.24744</link>
-      <guid>https://arxiv.org/abs/2607.24744#2026-07-28</guid>
-      <pubDate>Tue, 28 Jul 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
