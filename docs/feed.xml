@@ -5,8 +5,78 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 05 Aug 2026 06:35:19 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 06:38:15 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📄 ToolArtist: Tool-Using Unified Multimodal Models for Agentic Image Generation (2026-08-06)</title>
+      <description>Text-to-image (T2I) models can produce visually compelling images, yet they remain limited on open-world tasks that require complex semantic understanding, multi-step reasoning, and the integration of...</description>
+      <link>https://arxiv.org/abs/2608.04436</link>
+      <guid>https://arxiv.org/abs/2608.04436#2026-08-06</guid>
+      <pubDate>Thu, 06 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 The Personalization Mirage: How LLMs Fabricate User Profiles, and Why Self-Monitoring Misleads (2026-08-06)</title>
+      <description>Personalized LLMs with persistent memory are increasingly deployed, yet the faithfulness of their user models remains unexamined. We study over-inference (OI): the phenomenon where LLMs fabricate user...</description>
+      <link>https://arxiv.org/abs/2608.04570</link>
+      <guid>https://arxiv.org/abs/2608.04570#2026-08-06</guid>
+      <pubDate>Thu, 06 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes (2026-08-06)</title>
+      <description>Vision offers a critical axis for advancing foundation models, driving a shift towards natively unified multimodal pretraining. Despite this momentum, the design space and the fundamental mechanisms o...</description>
+      <link>https://arxiv.org/abs/2608.05000</link>
+      <guid>https://arxiv.org/abs/2608.05000#2026-08-06</guid>
+      <pubDate>Thu, 06 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 NOLLI: A Difficulty-Calibrated Puzzle Benchmark for Diagnosing the English-Korean Performance Gap (2026-08-06)</title>
+      <description>We introduce NOLLI, a procedurally generated English-Korean puzzle benchmark designed to diagnose where Korean performance gaps arise. It comprises 15 puzzle types (25 tasks; 7,500 items), with every ...</description>
+      <link>https://arxiv.org/abs/2608.04397</link>
+      <guid>https://arxiv.org/abs/2608.04397#2026-08-06</guid>
+      <pubDate>Thu, 06 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Toward Skill-Native LLMs: Skill Entropy for Benchmarking and Training Long-Horizon Reasoning (2026-08-06)</title>
+      <description>Long-horizon reasoning in recent LLMs demands that the model switch between distinct skills inside a reasoning chain, such as first doing a math derivation, then using the result to plan a schedule. W...</description>
+      <link>https://arxiv.org/abs/2608.05139</link>
+      <guid>https://arxiv.org/abs/2608.05139#2026-08-06</guid>
+      <pubDate>Thu, 06 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 When Memory Lies: An Empirical Study of Spatial Memory Staleness in VLM Agents (2026-08-06)</title>
+      <description>Memory-augmented VLM agents act on persistent spatial knowledge, yet that knowledge silently goes stale as the environment changes. We ask what happens when an agent must reconcile a confident memory ...</description>
+      <link>https://arxiv.org/abs/2608.04574</link>
+      <guid>https://arxiv.org/abs/2608.04574#2026-08-06</guid>
+      <pubDate>Thu, 06 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WorldCycle: Self-Verifiable Reinforcement Learning for Long-Horizon Video World Models (2026-08-06)</title>
+      <description>Interactive video world models are essential for long-horizon planning and exploration, yet they suffer from compounding errors. Post-training methods such as reinforcement learning (RL) can improve t...</description>
+      <link>https://arxiv.org/abs/2608.04964</link>
+      <guid>https://arxiv.org/abs/2608.04964#2026-08-06</guid>
+      <pubDate>Thu, 06 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 HelloWorld: Enabling Socially Interactive Characters in Video World Models (2026-08-06)</title>
+      <description>Despite the remarkable recent progress of video world models, social interaction between users and the characters within these worlds remains unsupported. To fill this gap, we present HelloWorld, a vi...</description>
+      <link>https://arxiv.org/abs/2608.05070</link>
+      <guid>https://arxiv.org/abs/2608.05070#2026-08-06</guid>
+      <pubDate>Thu, 06 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 K-EXAONE 2.0 Technical Report (2026-08-06)</title>
+      <description>This technical report presents K-EXAONE 2.0, an open-weight multilingual foundation model developed by LG AI Research as a step in our effort toward global frontier-scale foundation models. Rather tha...</description>
+      <link>https://arxiv.org/abs/2608.04505</link>
+      <guid>https://arxiv.org/abs/2608.04505#2026-08-06</guid>
+      <pubDate>Thu, 06 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation (2026-08-06)</title>
+      <description>Leveraging pre-trained vision-language models (VLMs) to construct vision-language-action (VLA) models has emerged as a promising paradigm for 3D robot manipulation. However, existing 3D VLA methods re...</description>
+      <link>https://arxiv.org/abs/2608.05042</link>
+      <guid>https://arxiv.org/abs/2608.05042#2026-08-06</guid>
+      <pubDate>Thu, 06 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 JoyAI-Video-Edit: Real-Time Open-Ended Video Editing with Autoregressive Diffusion (2026-08-05)</title>
       <description>Real-time video editing requires low-latency causal generation with bounded computational resources while preserving source fidelity and long-term temporal consistency. We present JoyAI-Video-Edit, a ...</description>
@@ -286,76 +356,6 @@
       <link>https://arxiv.org/abs/2607.28022</link>
       <guid>https://arxiv.org/abs/2607.28022#2026-07-31</guid>
       <pubDate>Fri, 31 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with &lt;1 GB VRAM (2026-07-30)</title>
-      <description>Vision-language-action (VLA) models commonly adopt an LLM-centric V to L to A pathway, where visual observations are projected into the representation space of a large language model before being deco...</description>
-      <link>https://arxiv.org/abs/2607.27205</link>
-      <guid>https://arxiv.org/abs/2607.27205#2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 HumanCLAW: Can Vision-Language Models Act Through a Body? (2026-07-30)</title>
-      <description>Evaluating whether a vision-language model (VLM) can act through a physical body is challenging. The outcome of an action couples the VLM's decision with motor control. When a task fails, it is hard t...</description>
-      <link>https://arxiv.org/abs/2607.27180</link>
-      <guid>https://arxiv.org/abs/2607.27180#2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SkillRise: Agentic Reinforcement Learning for Cross-Task Skill Evolution (2026-07-30)</title>
-      <description>Large language model agents often encounter related yet distinct tasks that share reusable solution patterns. Yet standard agentic reinforcement learning treats tasks as independent episodes, while ex...</description>
-      <link>https://arxiv.org/abs/2607.26784</link>
-      <guid>https://arxiv.org/abs/2607.26784#2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 TREK: A Travel Reasoning and Evaluation Kit for LLM Agents in Complex Trip Planning 📦代码 (2026-07-30)</title>
-      <description>Travel planning is a demanding stress test for tool-using LLM agents: a usable itinerary is a single artifact that must be right along many axes at once - every flight, hotel, and attraction must exis...</description>
-      <link>http://arxiv.org/abs/2607.26977v1</link>
-      <guid>http://arxiv.org/abs/2607.26977v1#2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SARC-DQ: Runtime Data-Quality Gating for Agentic AI: Silent Evidence Defects, the Incompetence Shield, and Downstream-Only Remediation 📦代码 (2026-07-30)</title>
-      <description>Agentic systems act, so a defect in the evidence they retrieve becomes a wrong action with a currency cost. The most dangerous enterprise defects are metadata-borne: a stale price or a superseded reco...</description>
-      <link>http://arxiv.org/abs/2607.26313v1</link>
-      <guid>http://arxiv.org/abs/2607.26313v1#2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 A Control System, a Dataset, and a Recipe for Making Frozen LLM Agents Learn a Domain 📦代码 (2026-07-30)</title>
-      <description>Production LLM agents are increasingly assembled from a frozen model wrapped in a harness: a prompt template, a tool set, a memory/retrieval layer, a planning strategy, and a verification policy. Two ...</description>
-      <link>http://arxiv.org/abs/2607.25415v1</link>
-      <guid>http://arxiv.org/abs/2607.25415v1#2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Context Assembly as the Controlled Variable: A Control-Theoretic View of Harness Policies for Frozen LLM Agents 📦代码 (2026-07-30)</title>
-      <description>A growing body of 2026 work applies control theory to LLM agents: Lyapunov-certified stability for tool-mediated controllers (Prinos et al., &quot;Stable Agentic Control&quot;, 2026), sample-complexity bounds f...</description>
-      <link>http://arxiv.org/abs/2607.25408v1</link>
-      <guid>http://arxiv.org/abs/2607.25408v1#2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding (2026-07-30)</title>
-      <description>Large language model (LLM) agents are increasingly expected to assist users in completing tasks. However, existing benchmarks provide limited support for evaluating whether agents can carry out office...</description>
-      <link>https://arxiv.org/abs/2607.27155</link>
-      <guid>https://arxiv.org/abs/2607.27155#2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Can AI agents conduct open-ended AI research? Early evidence from two case studies (2026-07-30)</title>
-      <description>Forecasts of explosive AI progress hinge on AI agents automating AI research. But evidence on whether agents can carry out open-ended AI research is thin. Current evaluations either test agents on nar...</description>
-      <link>https://arxiv.org/abs/2607.27191</link>
-      <guid>https://arxiv.org/abs/2607.27191#2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding (2026-07-30)</title>
-      <description>Large language model (LLM) agents are increasingly expected to assist users in completing tasks. However, existing benchmarks provide limited support for evaluating whether agents can carry out office...</description>
-      <link>http://arxiv.org/abs/2607.27155v1</link>
-      <guid>http://arxiv.org/abs/2607.27155v1#2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
