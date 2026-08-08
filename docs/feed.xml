@@ -5,8 +5,78 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 07 Aug 2026 05:45:51 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 05:04:29 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📄 Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering (2026-08-08)</title>
+      <description>Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure...</description>
+      <link>http://arxiv.org/abs/2608.06366v1</link>
+      <guid>http://arxiv.org/abs/2608.06366v1#2026-08-08</guid>
+      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games (2026-08-08)</title>
+      <description>Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed...</description>
+      <link>http://arxiv.org/abs/2608.06362v1</link>
+      <guid>http://arxiv.org/abs/2608.06362v1#2026-08-08</guid>
+      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 QuanTiMedAI: Quantum-Enhanced Time-Series Model guided by Agentic AI for Cardiac Arrest Mortality Prediction (2026-08-08)</title>
+      <description>Cardiac arrest remains one of the most lethal conditions encountered in intensive care units. Despite the growing availability of electronic health record data, existing mortality prediction studies i...</description>
+      <link>http://arxiv.org/abs/2608.06294v1</link>
+      <guid>http://arxiv.org/abs/2608.06294v1#2026-08-08</guid>
+      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TS-RAG: Retrieval Augmented Generation for Time Series Forecasting (2026-08-08)</title>
+      <description>While deep learning models, particularly transformer-based architectures, have shown impressive performance in time series forecasting, the application of retrieval-augmented generation (RAG) in this ...</description>
+      <link>http://arxiv.org/abs/2608.06223v1</link>
+      <guid>http://arxiv.org/abs/2608.06223v1#2026-08-08</guid>
+      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Continual Learning in Transition (2026-08-08)</title>
+      <description>Classical continual learning (CL) has primarily focused on enabling models to update and retain knowledge through parameter-centric mechanisms, e.g., training strategies, architectural designs, and we...</description>
+      <link>http://arxiv.org/abs/2608.06216v1</link>
+      <guid>http://arxiv.org/abs/2608.06216v1#2026-08-08</guid>
+      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning (2026-08-08)</title>
+      <description>Training large language model agents for long-horizon tool use typically relies on interactions with real or synthesized executable environments, whose construction and verification are costly, or on ...</description>
+      <link>http://arxiv.org/abs/2608.06197v1</link>
+      <guid>http://arxiv.org/abs/2608.06197v1#2026-08-08</guid>
+      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Comparative Approaches to Agent Retrieval over Large Skill Libraries (2026-08-08)</title>
+      <description>Agents backed by large skill libraries must decide which skills to load and in what order. Loading the entire library into context is expensive and provides no structure for autonomous sequencing. We ...</description>
+      <link>http://arxiv.org/abs/2608.06196v1</link>
+      <guid>http://arxiv.org/abs/2608.06196v1#2026-08-08</guid>
+      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Learning Globally Reusable Skills for Coding Agents (2026-08-08)</title>
+      <description>Automated skill evolution enables Large Language Model (LLM) agents to continuously improve without expensive retraining. However, existing approaches typically treat skill evolution as a sequence of ...</description>
+      <link>http://arxiv.org/abs/2608.06153v1</link>
+      <guid>http://arxiv.org/abs/2608.06153v1#2026-08-08</guid>
+      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 From Siloed Algorithms to Compliance-First Agentic Platforms: A Multi-Layered Architecture for Hospital AI Systems (2026-08-08)</title>
+      <description>Hospitals are rapidly adopting artificial intelligence for triage, imaging, scheduling etc., yet most deployments remain isolated point solutions locked inside departmental silos, resulting in duplica...</description>
+      <link>http://arxiv.org/abs/2608.06112v1</link>
+      <guid>http://arxiv.org/abs/2608.06112v1#2026-08-08</guid>
+      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ECHO: A Locally-Deployable Agentic Health Assistant with Temporal Memory, Safety Guardrails, and Speech Assessment (2026-08-08)</title>
+      <description>This paper presents ECHO (Enhanced Care \&amp; Health Observer), a locally-deployable conversational health assistant for long-term chronic care management. ECHO integrates three complementary software mo...</description>
+      <link>http://arxiv.org/abs/2608.06110v1</link>
+      <guid>http://arxiv.org/abs/2608.06110v1#2026-08-08</guid>
+      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 AgentOPSD: Recursive Self-Distillation for Agentic Reinforcement Learning (2026-08-07)</title>
       <description>Reinforcement learning (RL) with verifiable rewards constructs trajectory-level advantage estimates, yet it often fails to credit the few pivotal decisions that determine outcomes in long-horizon, mul...</description>
@@ -286,76 +356,6 @@
       <link>http://arxiv.org/abs/2608.01543v1</link>
       <guid>http://arxiv.org/abs/2608.01543v1#2026-08-04</guid>
       <pubDate>Tue, 04 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PAIChecker: Uncovering and Checking PR-Issue Misalignment in SWE-Bench-Like Benchmarks (2026-08-01)</title>
-      <description>SWE-bench-like benchmarks are widely used for evaluating LLM's issue resolution capability. They typically follow a common construction pipeline: each PR (Pull Request) is paired with its linked issue...</description>
-      <link>http://arxiv.org/abs/2607.28587v1</link>
-      <guid>http://arxiv.org/abs/2607.28587v1#2026-08-01</guid>
-      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems (2026-08-01)</title>
-      <description>Large language model-based multi-agent systems improve complex problem solving through task decomposition, agent specialization, information exchange, and intermediate validation. However, existing sy...</description>
-      <link>http://arxiv.org/abs/2607.28527v1</link>
-      <guid>http://arxiv.org/abs/2607.28527v1#2026-08-01</guid>
-      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AgentRadio: Passive Awareness for Long-Horizon Multi-Agent Collaboration (2026-08-01)</title>
-      <description>Understanding large codebases is a long-horizon task for Large Language Model (LLM) agents: answering a single question can require building and running the software, tracing execution across files, a...</description>
-      <link>http://arxiv.org/abs/2607.28430v1</link>
-      <guid>http://arxiv.org/abs/2607.28430v1#2026-08-01</guid>
-      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 GLM-RAG: Graph Language Models for Graph-Based Retrieval-Augmented Generation (2026-08-01)</title>
-      <description>Retrieval-augmented generation (RAG) over knowledge graphs requires retrievers that can effectively capture both graph structure and semantic information. Recent approaches have explored graph neural ...</description>
-      <link>http://arxiv.org/abs/2607.28397v1</link>
-      <guid>http://arxiv.org/abs/2607.28397v1#2026-08-01</guid>
-      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Paying for Honesty Without Knowing the Truth: Reputation-Penalty Design for LLM Marketplace Agents (2026-08-01)</title>
-      <description>LLM agents increasingly act as autonomous merchants that write their own product listings, and under competitive pressure, they fabricate attributes to win sales. Even under instructions to be honest,...</description>
-      <link>http://arxiv.org/abs/2607.28330v1</link>
-      <guid>http://arxiv.org/abs/2607.28330v1#2026-08-01</guid>
-      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 One Human, $N$ Agents: Audit-Budget Allocation for LLM Agent Fleets under Miscalibrated, Correlated Confidence (2026-08-01)</title>
-      <description>A single human must audit $N$ LLM agents under a budget of $B \ll N$ audits per round, guided by self-reported confidence that may be adversarially miscalibrated and by correlated errors. We model thi...</description>
-      <link>http://arxiv.org/abs/2607.28317v1</link>
-      <guid>http://arxiv.org/abs/2607.28317v1#2026-08-01</guid>
-      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MemHarness: Memory Is Reconstructed, Not Replayed (2026-08-01)</title>
-      <description>Retrieving past experiences has become a common strategy to enhance large language model agents. However, most existing memory-augmented agents treat retrieved experiences as static records to be repl...</description>
-      <link>http://arxiv.org/abs/2607.28272v1</link>
-      <guid>http://arxiv.org/abs/2607.28272v1#2026-08-01</guid>
-      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Agentic Metaverse Services: A New As-a-Service Paradigm (2026-08-01)</title>
-      <description>Generative Artificial Intelligence (GenAI) is reconstructing the digital virtual world, upgrading agents through enhancing their abilities in autonomous learning, multi-modal interaction, content gene...</description>
-      <link>http://arxiv.org/abs/2607.28242v1</link>
-      <guid>http://arxiv.org/abs/2607.28242v1#2026-08-01</guid>
-      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Vibe-FDTR: An agent-oriented framework for reproducible frequency-domain thermoreflectance data analysis (2026-08-01)</title>
-      <description>Frequency-domain thermoreflectance (FDTR) is a laser pump-probe technique widely used to measure thermal properties at the micro- and nanoscale; however, it relies on a complex data analysis procedure...</description>
-      <link>http://arxiv.org/abs/2607.28200v1</link>
-      <guid>http://arxiv.org/abs/2607.28200v1#2026-08-01</guid>
-      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Integrating AI into Requirements Quality Learning in Software Engineering Education: A TPACK-Guided Empirical Study (2026-08-01)</title>
-      <description>The rapid adoption of generative Artificial Intelligence (AI) in software engineering (SE) practice creates a need for pedagogically grounded approaches to AI integration in SE education, especially i...</description>
-      <link>http://arxiv.org/abs/2607.28176v1</link>
-      <guid>http://arxiv.org/abs/2607.28176v1#2026-08-01</guid>
-      <pubDate>Sat, 01 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
