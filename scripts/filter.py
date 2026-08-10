@@ -2,6 +2,7 @@
 
 import json
 import os
+import re
 import urllib.request
 from typing import List, Dict, Optional
 
@@ -91,14 +92,12 @@ def filter_papers(papers: List[Dict], keywords: List[str],
 
     # 解析 LLM 返回
     try:
-        # 提取 JSON（处理可能的 markdown 包裹）
-        json_str = result.strip()
-        if json_str.startswith("```"):
-            json_str = json_str.split("```")[1]
-            if json_str.startswith("json"):
-                json_str = json_str[4:]
-        selections = json.loads(json_str)
-    except (json.JSONDecodeError, IndexError):
+        # 提取 JSON 数组（容忍 markdown 代码块或前后杂文）
+        m = re.search(r"\[.*\]", result, re.DOTALL)
+        if not m:
+            raise json.JSONDecodeError("no JSON array found", result, 0)
+        selections = json.loads(m.group(0))
+    except json.JSONDecodeError:
         print(f"[Filter] Failed to parse LLM response: {result[:200]}")
         sorted_papers = sorted(papers, key=lambda x: x.get("votes", 0) + x.get("stars", 0), reverse=True)
         selected = sorted_papers[:max_papers]
@@ -106,11 +105,15 @@ def filter_papers(papers: List[Dict], keywords: List[str],
             p["reason"] = "AI 筛选失败，按热度排序"
         return selected
 
-    # 应用筛选结果
+    # 应用筛选结果（去重索引，截断到 max_papers）
     selected = []
+    used = set()
     for sel in selections:
-        idx = sel.get("index", 0)
-        if 0 <= idx < len(papers):
+        if len(selected) >= max_papers:
+            break
+        idx = sel.get("index", -1)
+        if isinstance(idx, int) and 0 <= idx < len(papers) and idx not in used:
+            used.add(idx)
             paper = papers[idx]
             paper["reason"] = sel.get("reason", "")
             selected.append(paper)

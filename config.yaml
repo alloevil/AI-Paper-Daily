@@ -20,8 +20,7 @@ categories:
 # 每日推送数量上限
 max_papers: 10
 
-# 推送时间（cron 表达式，UTC）
-schedule_cron: "0 4 * * *"  # 北京时间 12:00
+# 推送时间：修改 .github/workflows/daily.yml 中的 cron 表达式
 
 # 摘要语言
 language: "zh"  # zh=中文, en=英文
@@ -30,19 +29,12 @@ language: "zh"  # zh=中文, en=英文
 sources:
   arxiv: true
   huggingface: true
-  paperswithcode: true
 
 # 推送渠道
 notify:
   feishu: true
   email: false
 
-# 飞书 Webhook
-feishu_webhook: ""  # 通过 GitHub Secret 注入
-
-# 邮件配置
-smtp:
-  host: ""
-  port: 465
-  user: ""
-  pass: ""
+# 凭据通过 GitHub Secrets 注入环境变量，不写在这里：
+# LLM_API_KEY / LLM_BASE_URL / FEISHU_WEBHOOK
+# SMTP_HOST / SMTP_PORT / SMTP_USER / SMTP_PASS

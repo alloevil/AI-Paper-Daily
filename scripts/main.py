@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """AI Paper Daily - 每日论文发现与推送"""
 
+import re
 import sys
 import yaml
 from pathlib import Path
@@ -11,7 +12,6 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from sources.arxiv_source import fetch_arxiv
 from sources.huggingface_source import fetch_huggingface
-from sources.paperswithcode_source import fetch_paperswithcode
 from filter import filter_papers
 from notifier import send_feishu, send_email
 from storage import save_papers, mark_pushed, log_push, get_subscribers
@@ -26,6 +26,35 @@ def load_config() -> dict:
     return {}
 
 
+def norm_id(paper_id: str) -> str:
+    """归一化论文 ID:去掉 arXiv 版本后缀（2608.06366v1 -> 2608.06366）"""
+    return re.sub(r"v\d+$", "", paper_id or "")
+
+
+def get_recent_pushed_ids(days: int = 7) -> set:
+    """从最近 N 天的日报 Markdown 中提取已推送的 arXiv ID（归一化后）。
+
+    日报文件已提交入库，跨 CI 运行持久，比一次性 runner 上的 SQLite 可靠。
+    """
+    docs_dir = Path(__file__).parent.parent / "docs"
+    if not docs_dir.exists():
+        return set()
+
+    cutoff = datetime.now(timezone(timedelta(hours=8))) - timedelta(days=days)
+    pushed = set()
+    for md in docs_dir.glob("????-??-??.md"):
+        try:
+            file_date = datetime.strptime(md.stem, "%Y-%m-%d").replace(
+                tzinfo=timezone(timedelta(hours=8)))
+        except ValueError:
+            continue
+        if file_date < cutoff:
+            continue
+        for m in re.finditer(r"arxiv\.org/abs/([0-9.]+(?:v\d+)?)", md.read_text(encoding="utf-8")):
+            pushed.add(norm_id(m.group(1)))
+    return pushed
+
+
 def main():
     print(f"=== AI Paper Daily {datetime.now(timezone(timedelta(hours=8))).strftime('%Y-%m-%d %H:%M')} ===")
 
@@ -38,41 +67,49 @@ def main():
     notify_config = config.get("notify", {})
 
     # 1. 多源采集
+    # arXiv 周末不发布新论文,周日/周一按需放宽时间窗口,避免空日报
+    now_cn = datetime.now(timezone(timedelta(hours=8)))
+    days = {0: 4, 6: 3}.get(now_cn.weekday(), 2)  # 周一=4天, 周日=3天, 其余=2天
+    print(f"Fetch window: {days} days")
+
     all_papers = []
 
     if sources_config.get("arxiv", True):
         try:
-            arxiv_papers = fetch_arxiv(keywords, categories, max_results=50, days=2)
+            arxiv_papers = fetch_arxiv(keywords, categories, max_results=100, days=days)
             all_papers.extend(arxiv_papers)
         except Exception as e:
             print(f"[arXiv] Failed: {e}")
 
     if sources_config.get("huggingface", True):
         try:
-            hf_papers = fetch_huggingface(days=2)
+            hf_papers = fetch_huggingface(days=days)
             all_papers.extend(hf_papers)
         except Exception as e:
             print(f"[HuggingFace] Failed: {e}")
-
-    if sources_config.get("paperswithcode", True):
-        try:
-            pwc_papers = fetch_paperswithcode(keywords, days=2, max_results=30)
-            all_papers.extend(pwc_papers)
-        except Exception as e:
-            print(f"[PapersWithCode] Failed: {e}")
 
     if not all_papers:
         print("No papers found, exiting")
         return
 
-    # 2. 去重（按 id）
+    # 2. 去重：当天多源去重（归一化 ID，arXiv 带 v1 后缀而 HF 不带）+ 排除近 7 天已推送
+    recent_pushed = get_recent_pushed_ids(days=7)
     seen = set()
     unique_papers = []
     for p in all_papers:
-        if p["id"] and p["id"] not in seen:
-            seen.add(p["id"])
-            unique_papers.append(p)
-    print(f"Total unique papers: {len(unique_papers)}")
+        nid = norm_id(p["id"])
+        if not nid or nid in seen:
+            continue
+        seen.add(nid)
+        if nid in recent_pushed:
+            continue
+        unique_papers.append(p)
+    print(f"Total unique papers: {len(unique_papers)} "
+          f"(excluded {len(seen) - len(unique_papers)} already pushed)")
+
+    if not unique_papers:
+        print("All papers already pushed, exiting")
+        return
 
     # 3. AI 筛选
     selected = filter_papers(unique_papers, keywords, max_papers, language)

@@ -22,7 +22,7 @@ Spending 10 minutes a day scrolling through papers? Too much work. **AI Paper Da
 
 | Feature | Description |
 |:---|:---|
-| 🔍 **Multi-source** | arXiv API + HuggingFace Daily Papers + Papers With Code |
+| 🔍 **Multi-source** | arXiv API + HuggingFace Daily Papers |
 | 🤖 **AI Filtering** | LLM-powered semantic filtering, not just keyword matching |
 | 📬 **Multi-channel** | Feishu messages / Email subscriptions / GitHub Pages |
 | 🏷️ **Smart Tags** | Auto-categorize by Agent, RAG, Knowledge Graph, LLM, etc. |
@@ -75,6 +75,7 @@ Go to `Settings → Secrets and variables → Actions` and add:
 | `LLM_BASE_URL` | ⬚ | LLM API endpoint (default: `https://api.openai.com/v1`) |
 | `FEISHU_WEBHOOK` | ⬚ | Feishu bot webhook URL |
 | `SMTP_HOST` | ⬚ | SMTP server address |
+| `SMTP_PORT` | ⬚ | SMTP SSL port (default: `465`) |
 | `SMTP_USER` | ⬚ | Email account |
 | `SMTP_PASS` | ⬚ | Email password / app password |
 
@@ -137,9 +138,8 @@ Go to `Actions → Daily AI Paper Daily → Run workflow` and trigger a manual r
 
 ### Collection
 
-- **arXiv**: Query via API with keyword + category combinations, fetch papers from the last 2 days
+- **arXiv**: Query via API with keyword + category combinations; fetch window widens automatically on Sunday/Monday to cover the weekend publishing gap
 - **HuggingFace**: Scrape Daily Papers hot list, includes community upvotes
-- **Papers With Code**: Search for papers with code repos, sorted by stars
 
 ### Filtering
 
@@ -179,14 +179,12 @@ categories:        # arXiv categories (combined with keywords)
 
 # ── Delivery Settings ──────────────────────────
 max_papers: 10     # Max papers per day
-schedule_cron: "0 4 * * *"  # UTC, = 12:00 Beijing Time
 language: "zh"     # zh=Chinese summary, en=English summary
 
 # ── Data Sources ───────────────────────────────
 sources:
   arxiv: true
   huggingface: true
-  paperswithcode: true
 
 # ── Delivery Channels ──────────────────────────
 notify:
@@ -201,8 +199,7 @@ AI-Paper-Daily/
 ├── scripts/
 │   ├── sources/              # Data source collectors
 │   │   ├── arxiv_source.py   # arXiv API
-│   │   ├── huggingface_source.py  # HuggingFace Daily Papers
-│   │   └── paperswithcode_source.py  # Papers With Code
+│   │   └── huggingface_source.py  # HuggingFace Daily Papers
 │   ├── filter.py             # AI filtering & summarization
 │   ├── notifier.py           # Delivery (Feishu cards / HTML email)
 │   ├── storage.py            # SQLite storage + push log

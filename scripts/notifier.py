@@ -93,6 +93,7 @@ def send_email(papers: List[Dict], subscribers: List[str] = None) -> bool:
     host = os.environ.get("SMTP_HOST", "")
     user = os.environ.get("SMTP_USER", "")
     passwd = os.environ.get("SMTP_PASS", "")
+    port = int(os.environ.get("SMTP_PORT", "465"))
 
     if not all([host, user, passwd]):
         print("[Email] SMTP not configured, skipping")
@@ -170,19 +171,17 @@ def send_email(papers: List[Dict], subscribers: List[str] = None) -> bool:
 
     html_content = "\n".join(html_parts)
 
-    # 发送邮件
+    # 发送邮件（单次发送，收件人用 BCC 保护隐私）
     msg = MIMEMultipart("alternative")
     msg["Subject"] = f"📄 AI Paper Daily - {today}"
     msg["From"] = user
+    msg["To"] = user
     msg.attach(MIMEText(html_content, "html", "utf-8"))
 
     try:
-        with smtplib.SMTP_SSL(host, 465) as server:
+        with smtplib.SMTP_SSL(host, port) as server:
             server.login(user, passwd)
-            for subscriber in subscribers:
-                msg["To"] = subscriber
-                server.sendmail(user, subscriber, msg.as_string())
-                del msg["To"]
+            server.sendmail(user, subscribers, msg.as_string())
         print(f"[Email] Sent to {len(subscribers)} subscribers")
         return True
     except Exception as e:

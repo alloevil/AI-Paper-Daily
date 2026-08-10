@@ -56,7 +56,7 @@ def save_papers(papers: List[Dict]) -> int:
 
     for p in papers:
         try:
-            conn.execute("""
+            cur = conn.execute("""
                 INSERT OR IGNORE INTO papers
                 (id, title, abstract, authors, url, pdf_url, published,
                  source, categories, has_code, code_url, votes, stars,
@@ -79,7 +79,7 @@ def save_papers(papers: List[Dict]) -> int:
                 p.get("reason", ""),
                 datetime.now(timezone.utc).isoformat(),
             ))
-            if conn.total_changes:
+            if cur.rowcount > 0:
                 new_count += 1
         except sqlite3.IntegrityError:
             pass  # 已存在，跳过

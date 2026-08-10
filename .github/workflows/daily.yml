@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
 
 jobs:
   discover:
@@ -22,7 +21,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pyyaml
+          pip install -r requirements.txt
 
       - name: Run AI Paper Daily
         env:
@@ -30,25 +29,34 @@ jobs:
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
         run: |
           python scripts/main.py
 
+      # 没有新日报（如周末无新论文）时跳过后续步骤，避免只改时间戳的垃圾提交
+      - name: Check for new report
+        id: report
+        run: |
+          if git status --porcelain docs/ | grep -q '\.md$'; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No new report generated, skipping site build and commit"
+          fi
+
       - name: Generate site
+        if: steps.report.outputs.changed == 'true'
         run: |
           python scripts/generate_site.py
 
+      # GitHub Pages 从 main 分支 /docs 目录直接服务，提交即发布
       - name: Commit and push
+        if: steps.report.outputs.changed == 'true'
         run: |
           git config user.name "AI Paper Daily Bot"
           git config user.email "bot@AI-Paper-Daily"
           git add -A
           git diff --staged --quiet || git commit -m "📄 Daily discovery $(date +%Y-%m-%d)"
           git push
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
