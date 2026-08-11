@@ -5,8 +5,78 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 10 Aug 2026 07:58:44 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 05:15:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📄 SWE-Bench ProMax: Benchmarking Agents on Large-Scale Multilingual Code Refactoring (2026-08-11)</title>
+      <description>As AI coding agents take on increasingly complex, long-horizon software engineering tasks, existing benchmarks are rapidly saturating and their evaluation quality has come under serious scrutiny: a re...</description>
+      <link>https://arxiv.org/abs/2608.09802</link>
+      <guid>https://arxiv.org/abs/2608.09802#2026-08-11</guid>
+      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Macaron-V1: Towards Open Continual Learning with Self-Improvement and Mixture-of-LoRA (2026-08-11)</title>
+      <description>Macaron-V1 is an open agent-model family for experiential intelligence: learning from experience in real environments and continuing to learn after deployment. It is organized around two system goals....</description>
+      <link>https://arxiv.org/abs/2608.09819</link>
+      <guid>https://arxiv.org/abs/2608.09819#2026-08-11</guid>
+      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Sci-VBench: Evaluating Knowledge- and Reasoning-Intensive Video Generation in Science Domains (2026-08-11)</title>
+      <description>We introduce Sci-VBench, a comprehensive benchmark for evaluating knowledge- and reasoning-intensive video generation across scientific domains. It contains 1,253 expert-annotated examples spanning 60...</description>
+      <link>https://arxiv.org/abs/2608.09873</link>
+      <guid>https://arxiv.org/abs/2608.09873#2026-08-11</guid>
+      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Motif 3: Technical Report (2026-08-11)</title>
+      <description>We introduce Motif 3, a decoder-only Mixture-of-Experts language model with 314 billion total parameters and 13.2 billion activated per token. Each sparse MoE layer contains 384 routed experts, with e...</description>
+      <link>https://arxiv.org/abs/2608.09119</link>
+      <guid>https://arxiv.org/abs/2608.09119#2026-08-11</guid>
+      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SHE: Trajectory-driven Safety Harness Evolution for LLM Agents 📦代码 (2026-08-11)</title>
+      <description>The safety of large language model (LLM) agents depends not only on model weights but also on the agent harness that manages context, memory, tools, permissions, and runtime control. Existing safety m...</description>
+      <link>http://arxiv.org/abs/2608.09885v1</link>
+      <guid>http://arxiv.org/abs/2608.09885v1#2026-08-11</guid>
+      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Multi-Agent AI Safety as an Institutional Design Problem 📦代码 (2026-08-11)</title>
+      <description>AI agents increasingly work inside systems that govern how they delegate tasks, move information, execute actions, and use shared resources. Recent work already shows that deployment rules can change ...</description>
+      <link>http://arxiv.org/abs/2608.09828v1</link>
+      <guid>http://arxiv.org/abs/2608.09828v1#2026-08-11</guid>
+      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Evidence-Calibrated Runtime Reconstruction for Agent Skills Across Heterogeneous Coding Agents 📦代码 (2026-08-11)</title>
+      <description>Agent Skills package reusable instructions and assets for tool-using language-model agents. Progressive loading creates failure boundaries poorly represented by session-, model-, or tool-centric trace...</description>
+      <link>http://arxiv.org/abs/2608.08793v1</link>
+      <guid>http://arxiv.org/abs/2608.08793v1#2026-08-11</guid>
+      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Evo-Bench: Can Language Models Improve Agent Harness? (2026-08-11)</title>
+      <description>Large Language Models (LLMs) have driven rapid progress in autonomous agents, yet standard evaluations remain confined to static task solving. An emerging frontier is harness evolution---the agent's c...</description>
+      <link>https://arxiv.org/abs/2608.09096</link>
+      <guid>https://arxiv.org/abs/2608.09096#2026-08-11</guid>
+      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Intent Speaks Louder: Controllable User Simulation Beyond Response Imitation (2026-08-11)</title>
+      <description>User simulators are widely used as scalable environments for training and evaluating interactive assistants. Generating the next user turn is inherently one-to-many: the same profile and dialogue cont...</description>
+      <link>https://arxiv.org/abs/2608.09420</link>
+      <guid>https://arxiv.org/abs/2608.09420#2026-08-11</guid>
+      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 RynnValue: Scaling Robotic Value Foundation Models with Temporal Distance (2026-08-11)</title>
+      <description>General-purpose reward models are increasingly the bottleneck for scaling robot learning, yet the recipe for learning value-related capabilities from large-scale heterogeneous corpora remains underexp...</description>
+      <link>https://arxiv.org/abs/2608.09853</link>
+      <guid>https://arxiv.org/abs/2608.09853#2026-08-11</guid>
+      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 SimWAM: A Simple World Action Model for End-to-End Autonomous Driving (2026-08-10)</title>
       <description>World-Action Models (WAMs) improve end-to-end autonomous driving by transferring video dynamics priors to action prediction, but existing methods require costly future generation at inference. We pres...</description>
@@ -286,76 +356,6 @@
       <link>https://arxiv.org/abs/2608.05042</link>
       <guid>https://arxiv.org/abs/2608.05042#2026-08-06</guid>
       <pubDate>Thu, 06 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 JoyAI-Video-Edit: Real-Time Open-Ended Video Editing with Autoregressive Diffusion (2026-08-05)</title>
-      <description>Real-time video editing requires low-latency causal generation with bounded computational resources while preserving source fidelity and long-term temporal consistency. We present JoyAI-Video-Edit, a ...</description>
-      <link>https://arxiv.org/abs/2608.03974</link>
-      <guid>https://arxiv.org/abs/2608.03974#2026-08-05</guid>
-      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PAST-Bench: Benchmarking the Foundations of Recursive Self-Improvement in Personal Agents (2026-08-05)</title>
-      <description>Recursive self-improvement requires agents to turn accumulated experience into better future behavior. Personal AI agents offer a concrete setting for studying this capability because they retain pref...</description>
-      <link>https://arxiv.org/abs/2608.04003</link>
-      <guid>https://arxiv.org/abs/2608.04003#2026-08-05</guid>
-      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models (2026-08-05)</title>
-      <description>Omni-modal large language models (Omni-LLMs) have achieved remarkable performance on audio-visual understanding tasks, but processing long and highly redundant visual and audio token sequences incurs ...</description>
-      <link>https://arxiv.org/abs/2608.03812</link>
-      <guid>https://arxiv.org/abs/2608.03812#2026-08-05</guid>
-      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 UniWorld-Design: From Pixel Generation to Layer-Native Design (2026-08-05)</title>
-      <description>We introduce UniWorld-Design, a framework that redefines image generation from flat pixel synthesis to structured visual composition, with semantic RGBA layers as the atomic units of generation, under...</description>
-      <link>https://arxiv.org/abs/2608.03971</link>
-      <guid>https://arxiv.org/abs/2608.03971#2026-08-05</guid>
-      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Any-OPD: Heterogeneous On-Policy Distillation for Flow-Matching Models via Representation-Space Bridging (2026-08-05)</title>
-      <description>On-policy distillation, in which a teacher corrects samples that the student itself generates, presupposes that the two models speak the same language: identical VAE latents, matching architectures, a...</description>
-      <link>https://arxiv.org/abs/2608.03316</link>
-      <guid>https://arxiv.org/abs/2608.03316#2026-08-05</guid>
-      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SkillJack: Persistent Skill Backdoors in Self-Evolving Agents (2026-08-05)</title>
-      <description>Self-evolving agents increasingly convert interaction histories into reusable skills that persist beyond individual tasks. While prior work studies memory and retrieval poisoning, such attacks only af...</description>
-      <link>https://arxiv.org/abs/2608.03509</link>
-      <guid>https://arxiv.org/abs/2608.03509#2026-08-05</guid>
-      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Real-Time Detection and Repair of LLM Agent Failures 📦代码 (2026-08-05)</title>
-      <description>LLM agents fail mid-episode -- they loop, cascade tool errors, drift off goal, fabricate results, or silently absorb corrupted content -- and the standard remedy, judging every step with a second LLM,...</description>
-      <link>http://arxiv.org/abs/2608.02464v1</link>
-      <guid>http://arxiv.org/abs/2608.02464v1#2026-08-05</guid>
-      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Video-DeepResearch: Towards the Next-Generation Multimodal Deepresearch Agent (2026-08-05)</title>
-      <description>We introduce Video-DeepResearch (Video-DR), extending multimodal agents from static images to continuous video streams, a setting that demands dense spatiotemporal grounding coupled with open-web expl...</description>
-      <link>https://arxiv.org/abs/2608.03979</link>
-      <guid>https://arxiv.org/abs/2608.03979#2026-08-05</guid>
-      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 TurnSight: Turn-Level Hindsight Self-Distillation for Tool-Integrated Reasoning (2026-08-05)</title>
-      <description>Tool-Integrated Reasoning (TIR) enables LLMs to solve complex tasks through iterative tool interactions. However, existing reinforcement learning methods often rely on trajectory-level supervision, li...</description>
-      <link>https://arxiv.org/abs/2608.04007</link>
-      <guid>https://arxiv.org/abs/2608.04007#2026-08-05</guid>
-      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 When Agents Learn to Be You: Benchmarking Privacy Leakage, Impersonation Risk, and Defenses in Persona Skills (2026-08-05)</title>
-      <description>Persona skills distill personal interaction histories into portable and executable artifacts for downstream agents. While enabling flexible personalization, this process concentrates fragmented person...</description>
-      <link>https://arxiv.org/abs/2608.03700</link>
-      <guid>https://arxiv.org/abs/2608.03700#2026-08-05</guid>
-      <pubDate>Wed, 05 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
