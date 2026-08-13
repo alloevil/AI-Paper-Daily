@@ -5,8 +5,78 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 12 Aug 2026 05:41:55 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 05:44:53 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📄 AI4AI at Test-Time: Strong-to-Weak Capability Transfer via Harnesses (2026-08-13)</title>
+      <description>Recent work on distillation transfers the capabilities of large models to smaller ones often by updating the latter's parameters, through teacher forcing, on-policy distillation, and related training-...</description>
+      <link>https://arxiv.org/abs/2608.12307</link>
+      <guid>https://arxiv.org/abs/2608.12307#2026-08-13</guid>
+      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Spark-to-Paper: End-to-End Research Paper Generation as a Composable Skill (2026-08-13)</title>
+      <description>Turning a research idea into a complete paper requires more than text generation: the system must retrieve literature, design and execute experiments, revise claims according to evidence, produce publ...</description>
+      <link>https://arxiv.org/abs/2608.11924</link>
+      <guid>https://arxiv.org/abs/2608.11924#2026-08-13</guid>
+      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 StateFlow: Building, Evolving, and Accessing 3D World States for Previsualization (2026-08-13)</title>
+      <description>Previsualization is an intermediate layer between ideas and production in film, games, architecture, and urban design. It lets creators iteratively refine scenes, actions, cameras, and spatial-tempora...</description>
+      <link>https://arxiv.org/abs/2608.12314</link>
+      <guid>https://arxiv.org/abs/2608.12314#2026-08-13</guid>
+      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Ready Cohorts: Bounding GPU Opportunity and Avoiding Host Round Trips in LLM-Agent Control 📦代码 (2026-08-13)</title>
+      <description>LLM-agent services repeatedly execute small deterministic transitions between model and tool calls: route an outcome, update state, and emit the next effect. We ask when this control path exposes enou...</description>
+      <link>http://arxiv.org/abs/2608.12123v1</link>
+      <guid>http://arxiv.org/abs/2608.12123v1#2026-08-13</guid>
+      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 When the Knowledge Base Becomes the Gold Standard: Measuring Resource-Shared Evaluation Loops in Entity-Level Machine Translation 📦代码 (2026-08-13)</title>
+      <description>The Seungjeongwon Ilgi, a UNESCO Memory of the World record, is only 37.4% translated, and the most conspicuous failure mode in automatic translation is the person name -- a misread name corrupts the ...</description>
+      <link>http://arxiv.org/abs/2608.11843v1</link>
+      <guid>http://arxiv.org/abs/2608.11843v1#2026-08-13</guid>
+      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 From Synthesis to Removal: Physics-Grounded Reflection Simulation and Diffusion-Based Video Dereflection (2026-08-13)</title>
+      <description>Videos captured through glass often contain reflections that degrade visual quality and interfere with downstream vision tasks. Although single-image reflection removal has been extensively studied, v...</description>
+      <link>https://arxiv.org/abs/2608.11562</link>
+      <guid>https://arxiv.org/abs/2608.11562#2026-08-13</guid>
+      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MBA: Multimodal Benchmark and Agents for Real-World Business Ideation (2026-08-13)</title>
+      <description>Agentic systems powered by large language models (LLMs) have opened new opportunities for business ideation. Yet existing approaches remain confined to a text-only paradigm, despite the inherently mul...</description>
+      <link>https://arxiv.org/abs/2608.11616</link>
+      <guid>https://arxiv.org/abs/2608.11616#2026-08-13</guid>
+      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Persistent Recursive Worlds Enable Autonomous Software Evolution (2026-08-13)</title>
+      <description>Complex software systems develop over timescales that exceed the lifespan of any individual coding agent. Most agentic software systems preserve continuity through persistent sessions, memories, manag...</description>
+      <link>https://arxiv.org/abs/2608.10450</link>
+      <guid>https://arxiv.org/abs/2608.10450#2026-08-13</guid>
+      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AVA-Encoder: Towards Agent-Native Video Representation Learning (2026-08-13)</title>
+      <description>Creative agents still lack an effective way to learn from high-quality human films, limiting their ability to produce cinematic-grade videos. A key challenge is the absence of a structured video repre...</description>
+      <link>http://arxiv.org/abs/2608.12313v1</link>
+      <guid>http://arxiv.org/abs/2608.12313v1#2026-08-13</guid>
+      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Constructing Dynamic Master Logic Models as Knowledge Graphs for Complex System Diagnostics Using Retrieval-Augmented Large Language Models (2026-08-13)</title>
+      <description>Dynamic Master Logic (DML) provides a hierarchical framework for representing system behavior by linking functional objectives to underlying structural elements. However, DML construction typically re...</description>
+      <link>http://arxiv.org/abs/2608.12304v1</link>
+      <guid>http://arxiv.org/abs/2608.12304v1#2026-08-13</guid>
+      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 Not a Monolith: Lab-Level Divergence in the Cooperative Equilibria of Chinese Frontier LLM Agents 📦代码 (2026-08-12)</title>
       <description>Does the cooperative bias documented for Western frontier LLM agents extend to a different alignment lineage, and should the Chinese models that embody it be treated as a single bloc or as distinct la...</description>
@@ -286,76 +356,6 @@
       <link>http://arxiv.org/abs/2608.06110v1</link>
       <guid>http://arxiv.org/abs/2608.06110v1#2026-08-08</guid>
       <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AgentOPSD: Recursive Self-Distillation for Agentic Reinforcement Learning (2026-08-07)</title>
-      <description>Reinforcement learning (RL) with verifiable rewards constructs trajectory-level advantage estimates, yet it often fails to credit the few pivotal decisions that determine outcomes in long-horizon, mul...</description>
-      <link>https://arxiv.org/abs/2608.05987</link>
-      <guid>https://arxiv.org/abs/2608.05987#2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Learning from Failures: Retrieval-Centric CoT via Hard Negatives for Unified Multimodal Retrieval (2026-08-07)</title>
-      <description>Unified multimodal retrieval aims to identify candidates that satisfy complex user intent expressed through heterogeneous inputs. Although Large Vision-Language Model (LVLM)-based retrievers are effic...</description>
-      <link>https://arxiv.org/abs/2608.06060</link>
-      <guid>https://arxiv.org/abs/2608.06060#2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ChronoVision: Temporal Reasoning via Latent State Reconstruction (2026-08-07)</title>
-      <description>Multimodal large language models excel at passive perception but struggle with complex visual cognitive tasks requiring multi-step temporal reasoning. This degradation largely stems from the inherent ...</description>
-      <link>https://arxiv.org/abs/2608.05631</link>
-      <guid>https://arxiv.org/abs/2608.05631#2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning (2026-08-07)</title>
-      <description>Training large language model agents for long-horizon tool use typically relies on interactions with real or synthesized executable environments, whose construction and verification are costly, or on ...</description>
-      <link>https://arxiv.org/abs/2608.06197</link>
-      <guid>https://arxiv.org/abs/2608.06197#2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 On-Policy Delta Distillation for Multilingual Math Reasoning (2026-08-07)</title>
-      <description>On-Policy Distillation (OPD) is emerging as a promising alternative to reinforcement learning for LLM post-training, yet its effectiveness in multilingual settings remains underexplored. We study OPD ...</description>
-      <link>https://arxiv.org/abs/2608.05802</link>
-      <guid>https://arxiv.org/abs/2608.05802#2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 HarnessOpt-Bench: Evaluating LLMs at Harness Optimization (2026-08-07)</title>
-      <description>As LLMs are increasingly deployed within agentic systems, their capabilities depend not only on the model weights but also on the harness: the prompts, tools, control flow, memory, and orchestration c...</description>
-      <link>https://arxiv.org/abs/2608.06301</link>
-      <guid>https://arxiv.org/abs/2608.06301#2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 GST-Bench: Can VLMs Develop Global Spatial Awareness from Video? (2026-08-07)</title>
-      <description>Spatial intelligence is fundamental to embodied agents, yet existing benchmarks focus on local spatial perception from single or few viewpoints, overlooking global spatial awareness over continuous, l...</description>
-      <link>https://arxiv.org/abs/2608.05747</link>
-      <guid>https://arxiv.org/abs/2608.05747#2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation (2026-08-07)</title>
-      <description>Vision-Language-Action (VLA) models have become a powerful paradigm for robot manipulation, but training a single generalist policy for heterogeneous robot embodiments remains an open problem. Existin...</description>
-      <link>https://arxiv.org/abs/2608.06374</link>
-      <guid>https://arxiv.org/abs/2608.06374#2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 CalibForge: Adversarial Solver Calibration for Scaling Learnable Terminal Tasks (2026-08-07)</title>
-      <description>Training terminal agents requires executable and verifiable tasks that are not merely solvable, but appropriately challenging for learning. Executable validation establishes feasibility, yet does not ...</description>
-      <link>https://arxiv.org/abs/2608.06352</link>
-      <guid>https://arxiv.org/abs/2608.06352#2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering (2026-08-07)</title>
-      <description>Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure...</description>
-      <link>http://arxiv.org/abs/2608.06366v1</link>
-      <guid>http://arxiv.org/abs/2608.06366v1#2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
