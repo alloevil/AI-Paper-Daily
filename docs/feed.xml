@@ -5,8 +5,78 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 13 Aug 2026 05:44:53 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 05:41:49 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📄 DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation (2026-08-14)</title>
+      <description>We present DreamX-Phi 1.0, an action-conditioned video world model for robotic manipulation that, given an observed frame, a language instruction, and a prescribed action sequence comprising end-effec...</description>
+      <link>https://arxiv.org/abs/2608.13489</link>
+      <guid>https://arxiv.org/abs/2608.13489#2026-08-14</guid>
+      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Intern-S2-Preview: Scientific Agentic Foundation Model (2026-08-14)</title>
+      <description>Scientific discovery increasingly requires AI systems that can reason over scientific evidence of heterogeneous modalities, interact with scientific tools and environments, and sustain progress across...</description>
+      <link>https://arxiv.org/abs/2608.13505</link>
+      <guid>https://arxiv.org/abs/2608.13505#2026-08-14</guid>
+      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Spatial Memory Agent: Experience-Grounded Procedure Memory for Spatial Intelligence (2026-08-14)</title>
+      <description>Spatial intelligence is becoming a foundation for embodied agents, robotic planning, and multimodal assistants. To improve the spatial reasoning ability of VLM agents, existing work has mainly followe...</description>
+      <link>https://arxiv.org/abs/2608.12743</link>
+      <guid>https://arxiv.org/abs/2608.12743#2026-08-14</guid>
+      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design (2026-08-14)</title>
+      <description>Transforming multimodal sources into condensed and structured media outputs can be fundamentally conceptualized as a long-horizon agentic process centered on a model-harness system. While an ideal har...</description>
+      <link>https://arxiv.org/abs/2608.13560</link>
+      <guid>https://arxiv.org/abs/2608.13560#2026-08-14</guid>
+      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PlayWorld: Benchmarking World Models with Agent Players over Long-Horizon Objectives (2026-08-14)</title>
+      <description>Video world models simulate future states conditioned on current observations and user actions. Recent systems have demonstrated impressive video consistency and action controllability over long seque...</description>
+      <link>https://arxiv.org/abs/2608.13552</link>
+      <guid>https://arxiv.org/abs/2608.13552#2026-08-14</guid>
+      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Agent Behavioral Contracts II: Certifying Compositional Reliability Without Assuming Independence 📦代码 (2026-08-14)</title>
+      <description>Compositional reliability bounds for multi-agent systems multiply component reliabilities, a step licensed by a conditional-independence assumption that is routinely stated and rarely tested. We test ...</description>
+      <link>http://arxiv.org/abs/2608.12895v1</link>
+      <guid>http://arxiv.org/abs/2608.12895v1#2026-08-14</guid>
+      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Alaya-EVOKE: From Linear-Scaling Supervision to Endless World (2026-08-14)</title>
+      <description>Interactive world models must support persistent memory, responsive interaction, and long-horizon generation, yet these requirements place conflicting demands on the model. Maintaining history in the ...</description>
+      <link>https://arxiv.org/abs/2608.13546</link>
+      <guid>https://arxiv.org/abs/2608.13546#2026-08-14</guid>
+      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models (2026-08-14)</title>
+      <description>Large-scale manipulation data is essential for robot learning, yet collecting robot demonstrations remains expensive and difficult to scale. Meanwhile, abundant egocentric human manipulation videos pr...</description>
+      <link>https://arxiv.org/abs/2608.13049</link>
+      <guid>https://arxiv.org/abs/2608.13049#2026-08-14</guid>
+      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 OmniScientist: An Omni-Modal Omni-Discipline AI Scientist (2026-08-14)</title>
+      <description>Recent advances in foundation models have enabled AI scientists to automate increasingly complete research workflows, from hypothesis generation and code execution to manuscript preparation. Yet workf...</description>
+      <link>https://arxiv.org/abs/2608.13558</link>
+      <guid>https://arxiv.org/abs/2608.13558#2026-08-14</guid>
+      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 UniSwap: Streaming Audio-Visual Identity Swapping for Talking Videos (2026-08-14)</title>
+      <description>Talking-video character replacement requires coordinated transfer of appearance and voice while preserving the source motion, scene, linguistic content, and audio-video timing. Existing methods use se...</description>
+      <link>https://arxiv.org/abs/2608.11752</link>
+      <guid>https://arxiv.org/abs/2608.11752#2026-08-14</guid>
+      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 AI4AI at Test-Time: Strong-to-Weak Capability Transfer via Harnesses (2026-08-13)</title>
       <description>Recent work on distillation transfers the capabilities of large models to smaller ones often by updating the latter's parameters, through teacher forcing, on-policy distillation, and related training-...</description>
@@ -286,76 +356,6 @@
       <link>http://arxiv.org/abs/2608.07438v1</link>
       <guid>http://arxiv.org/abs/2608.07438v1#2026-08-10</guid>
       <pubDate>Mon, 10 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering (2026-08-08)</title>
-      <description>Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure...</description>
-      <link>http://arxiv.org/abs/2608.06366v1</link>
-      <guid>http://arxiv.org/abs/2608.06366v1#2026-08-08</guid>
-      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games (2026-08-08)</title>
-      <description>Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed...</description>
-      <link>http://arxiv.org/abs/2608.06362v1</link>
-      <guid>http://arxiv.org/abs/2608.06362v1#2026-08-08</guid>
-      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 QuanTiMedAI: Quantum-Enhanced Time-Series Model guided by Agentic AI for Cardiac Arrest Mortality Prediction (2026-08-08)</title>
-      <description>Cardiac arrest remains one of the most lethal conditions encountered in intensive care units. Despite the growing availability of electronic health record data, existing mortality prediction studies i...</description>
-      <link>http://arxiv.org/abs/2608.06294v1</link>
-      <guid>http://arxiv.org/abs/2608.06294v1#2026-08-08</guid>
-      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 TS-RAG: Retrieval Augmented Generation for Time Series Forecasting (2026-08-08)</title>
-      <description>While deep learning models, particularly transformer-based architectures, have shown impressive performance in time series forecasting, the application of retrieval-augmented generation (RAG) in this ...</description>
-      <link>http://arxiv.org/abs/2608.06223v1</link>
-      <guid>http://arxiv.org/abs/2608.06223v1#2026-08-08</guid>
-      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Continual Learning in Transition (2026-08-08)</title>
-      <description>Classical continual learning (CL) has primarily focused on enabling models to update and retain knowledge through parameter-centric mechanisms, e.g., training strategies, architectural designs, and we...</description>
-      <link>http://arxiv.org/abs/2608.06216v1</link>
-      <guid>http://arxiv.org/abs/2608.06216v1#2026-08-08</guid>
-      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning (2026-08-08)</title>
-      <description>Training large language model agents for long-horizon tool use typically relies on interactions with real or synthesized executable environments, whose construction and verification are costly, or on ...</description>
-      <link>http://arxiv.org/abs/2608.06197v1</link>
-      <guid>http://arxiv.org/abs/2608.06197v1#2026-08-08</guid>
-      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Comparative Approaches to Agent Retrieval over Large Skill Libraries (2026-08-08)</title>
-      <description>Agents backed by large skill libraries must decide which skills to load and in what order. Loading the entire library into context is expensive and provides no structure for autonomous sequencing. We ...</description>
-      <link>http://arxiv.org/abs/2608.06196v1</link>
-      <guid>http://arxiv.org/abs/2608.06196v1#2026-08-08</guid>
-      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Learning Globally Reusable Skills for Coding Agents (2026-08-08)</title>
-      <description>Automated skill evolution enables Large Language Model (LLM) agents to continuously improve without expensive retraining. However, existing approaches typically treat skill evolution as a sequence of ...</description>
-      <link>http://arxiv.org/abs/2608.06153v1</link>
-      <guid>http://arxiv.org/abs/2608.06153v1#2026-08-08</guid>
-      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 From Siloed Algorithms to Compliance-First Agentic Platforms: A Multi-Layered Architecture for Hospital AI Systems (2026-08-08)</title>
-      <description>Hospitals are rapidly adopting artificial intelligence for triage, imaging, scheduling etc., yet most deployments remain isolated point solutions locked inside departmental silos, resulting in duplica...</description>
-      <link>http://arxiv.org/abs/2608.06112v1</link>
-      <guid>http://arxiv.org/abs/2608.06112v1#2026-08-08</guid>
-      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ECHO: A Locally-Deployable Agentic Health Assistant with Temporal Memory, Safety Guardrails, and Speech Assessment (2026-08-08)</title>
-      <description>This paper presents ECHO (Enhanced Care \&amp; Health Observer), a locally-deployable conversational health assistant for long-term chronic care management. ECHO integrates three complementary software mo...</description>
-      <link>http://arxiv.org/abs/2608.06110v1</link>
-      <guid>http://arxiv.org/abs/2608.06110v1#2026-08-08</guid>
-      <pubDate>Sat, 08 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
