@@ -5,8 +5,78 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 14 Aug 2026 05:41:49 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 04:38:05 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📄 AaLLM: An End-to-End Analog Circuit Design Framework from Topology Generation to Sizing Using Large Language Models (2026-08-15)</title>
+      <description>Analog circuit design is a time-consuming, iterative process in a nonlinear and high-dimensional design space that relies heavily on expert intuition. Among recent developments, LLMs have introduced a...</description>
+      <link>http://arxiv.org/abs/2608.13472v1</link>
+      <guid>http://arxiv.org/abs/2608.13472v1#2026-08-15</guid>
+      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 StateBridge: Training-free Hidden-state Alignment for Latent Communication in LLM Multi-Agent Systems (2026-08-15)</title>
+      <description>Large language model based multi-agent systems usually communicate in text, i.e., using discrete tokens. However, text introduces a discrete bottleneck. Converting the sender's continuous hidden state...</description>
+      <link>http://arxiv.org/abs/2608.13317v1</link>
+      <guid>http://arxiv.org/abs/2608.13317v1#2026-08-15</guid>
+      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Novel Knowledge-Guided Generative Methods for Synthetic Transcriptomic Data (2026-08-15)</title>
+      <description>As biomedical research increasingly relies on data-intensive tools, the quality and utility of datasets are critical. Challenges such as imbalances, biases, and ethical or legal constraints often limi...</description>
+      <link>http://arxiv.org/abs/2608.13256v1</link>
+      <guid>http://arxiv.org/abs/2608.13256v1#2026-08-15</guid>
+      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Teach the Magnitude, Not the Direction: Verifier-Bounded Credit Assignment for Multi-Turn Multi-step LLM Agents (2026-08-15)</title>
+      <description>Reinforcement learning with verifiable rewards (RLVR) offers a verifier-bounded performance ceiling for training multi-turn tool-use agents, yet its trajectory-level credit assignment conflates hetero...</description>
+      <link>http://arxiv.org/abs/2608.13179v1</link>
+      <guid>http://arxiv.org/abs/2608.13179v1#2026-08-15</guid>
+      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SkillShapley: Boundary-Adaptive Shapley Valuation for Skill Step Attribution in LLM Agents (2026-08-15)</title>
+      <description>Agent skills are crucial external instructions that enable language agents to execute long procedural tasks such as coding or document processing. Existing agent skills are primarily created through h...</description>
+      <link>http://arxiv.org/abs/2608.13173v1</link>
+      <guid>http://arxiv.org/abs/2608.13173v1#2026-08-15</guid>
+      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Operationalizing Cyber Threat Intelligence with GraphRAG (2026-08-15)</title>
+      <description>When a security researcher publishes a report on a cyberattack, detection engineers are supposed to turn it into working detection rules. In practice, most automated attempts at this only extract the ...</description>
+      <link>http://arxiv.org/abs/2608.13050v1</link>
+      <guid>http://arxiv.org/abs/2608.13050v1#2026-08-15</guid>
+      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 BoardroomAI: Dependency-Aware Human-Steerable Multi-Agent Deliberation through Evolving Decision Graphs (2026-08-15)</title>
+      <description>Organizational decisions are co-created while evidence, constraints, and human priorities continue to evolve. In conventional transcript-based multi-agent systems, humans typically provide an initial ...</description>
+      <link>http://arxiv.org/abs/2608.13046v1</link>
+      <guid>http://arxiv.org/abs/2608.13046v1#2026-08-15</guid>
+      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Static analysis-guided agentic AI translation enables Rust as a full stack bioinformatics language (2026-08-15)</title>
+      <description>The field of bioinformatics struggles with legacy code - old code that is commonly used but may no longer have a maintainer, or may be written in an now-unfamiliar language (e.g. Perl, Fortran). This ...</description>
+      <link>http://arxiv.org/abs/2608.13029v1</link>
+      <guid>http://arxiv.org/abs/2608.13029v1#2026-08-15</guid>
+      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 HybridRAG-BN: A Retrieval-Augmented Framework with Fine-Tuned Verification for Bangla KBQA (2026-08-15)</title>
+      <description>Knowledge-base question answering (KBQA) systems rely on effective retrieval and reasoning mechanisms to generate accurate answers from external knowledge sources. However, developing reliable KBQA sy...</description>
+      <link>http://arxiv.org/abs/2608.13004v1</link>
+      <guid>http://arxiv.org/abs/2608.13004v1#2026-08-15</guid>
+      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 LycheeMemory V2: Efficient Long-Term Memory for LLM Agents via Semantic Segment-Level Consolidation (2026-08-15)</title>
+      <description>Long-horizon LLM agents must preserve information from past interactions to support future tasks. Existing memory systems typically rely on eager consolidation, invoking LLMs after each interaction to...</description>
+      <link>http://arxiv.org/abs/2608.12990v1</link>
+      <guid>http://arxiv.org/abs/2608.12990v1#2026-08-15</guid>
+      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation (2026-08-14)</title>
       <description>We present DreamX-Phi 1.0, an action-conditioned video world model for robotic manipulation that, given an observed frame, a language instruction, and a prescribed action sequence comprising end-effec...</description>
@@ -286,76 +356,6 @@
       <link>https://arxiv.org/abs/2608.09853</link>
       <guid>https://arxiv.org/abs/2608.09853#2026-08-11</guid>
       <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SimWAM: A Simple World Action Model for End-to-End Autonomous Driving (2026-08-10)</title>
-      <description>World-Action Models (WAMs) improve end-to-end autonomous driving by transferring video dynamics priors to action prediction, but existing methods require costly future generation at inference. We pres...</description>
-      <link>https://arxiv.org/abs/2608.07468</link>
-      <guid>https://arxiv.org/abs/2608.07468#2026-08-10</guid>
-      <pubDate>Mon, 10 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Does Splitting a Triage Decision Across Agents Hide Bias or Help Catch It? A Multi-Agent Simulation Study of LLM-Based Resource Allocation Under Audit Capacity Constraints 📦代码 (2026-08-10)</title>
-      <description>Prior benchmarking work has shown that a single large language model (LLM), forced to make life-or-death resource-allocation decisions, exhibits measurable demographic bias. Real deployments, however,...</description>
-      <link>http://arxiv.org/abs/2608.06949v1</link>
-      <guid>http://arxiv.org/abs/2608.06949v1#2026-08-10</guid>
-      <pubDate>Mon, 10 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 YOLO-PEFT: Parameter-Efficient Fine-Tuning on YOLO Family (2026-08-10)</title>
-      <description>Generic parameter-efficient fine-tuning (PEFT) methods transferred from language models can fail silently on real-time detectors, whose heterogeneous operators and detection-specific components impose...</description>
-      <link>https://arxiv.org/abs/2608.07051</link>
-      <guid>https://arxiv.org/abs/2608.07051#2026-08-10</guid>
-      <pubDate>Mon, 10 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Addressable Memory for Video World Models (2026-08-10)</title>
-      <description>We study visual persistence in interactive video world models. These models rely on a Key-Value (KV) cache as a growing visual memory to carry forward previously generated frames. However, we find tha...</description>
-      <link>https://arxiv.org/abs/2608.07408</link>
-      <guid>https://arxiv.org/abs/2608.07408#2026-08-10</guid>
-      <pubDate>Mon, 10 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Modular TTT: Rethinking Test-Time Training as Composable Modules (2026-08-10)</title>
-      <description>Test-time training (TTT) views sequence modeling as an online learning problem in which fast weights are updated by an internal learning rule. Despite the growing number of TTT variants, existing appr...</description>
-      <link>https://arxiv.org/abs/2608.07110</link>
-      <guid>https://arxiv.org/abs/2608.07110#2026-08-10</guid>
-      <pubDate>Mon, 10 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Skaling: Chinchilla's Exponents Meet Kaplan's Coupling (2026-08-10)</title>
-      <description>Neural scaling laws are foundational for language model development, yet standard formulations systematically under- and overestimate loss at data-scarce and overtraining extremes. This failure origin...</description>
-      <link>https://arxiv.org/abs/2608.07222</link>
-      <guid>https://arxiv.org/abs/2608.07222#2026-08-10</guid>
-      <pubDate>Mon, 10 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 The Optimizer Is the Agent: Reasoning-Driven Search across Prompts, Programs, and ML Workflows (2026-08-10)</title>
-      <description>Recent systems for optimizing prompts, programs, and ML workflows typically rely on explicit outer-loop controllers such as evolutionary search, bandits, or textual-gradient methods. We ask a fundamen...</description>
-      <link>https://arxiv.org/abs/2608.06714</link>
-      <guid>https://arxiv.org/abs/2608.06714#2026-08-10</guid>
-      <pubDate>Mon, 10 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Zero Gap Is Not Restoration: Stratified Per-Question Probability Evaluation and Step-wise Mitigation of Benchmark Contamination (2026-08-10)</title>
-      <description>Test data from public benchmarks inevitably leaks into pretraining corpora, inflating evaluation scores once memorized. Contamination mitigation evaluation intervenes in the decoding process to suppre...</description>
-      <link>https://arxiv.org/abs/2608.07341</link>
-      <guid>https://arxiv.org/abs/2608.07341#2026-08-10</guid>
-      <pubDate>Mon, 10 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SkillProx: Self-Evolving Agent Skills via Proximal Textual Gradient Descent (2026-08-10)</title>
-      <description>LLM agents increasingly adapt to recurring tasks by accumulating procedural knowledge in skills. These skills are lightweight, reusable textual artifacts that are loaded into the agent's context witho...</description>
-      <link>http://arxiv.org/abs/2608.07449v1</link>
-      <guid>http://arxiv.org/abs/2608.07449v1#2026-08-10</guid>
-      <pubDate>Mon, 10 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PsychoAgent: An Affect-Sensitive Cognitive Architecture for Conflict-Aware Memory in LLM Agents (2026-08-10)</title>
-      <description>Human-like cognition does not select past experience by topical similarity alone: affective significance and unresolved conflict also shape what becomes accessible. We present PsychoAgent, a cognitive...</description>
-      <link>http://arxiv.org/abs/2608.07438v1</link>
-      <guid>http://arxiv.org/abs/2608.07438v1#2026-08-10</guid>
-      <pubDate>Mon, 10 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
