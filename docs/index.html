@@ -319,8 +319,8 @@
     <!-- Meta bar -->
     <div class="meta-bar">
       <span class="meta-stats">
-        <span><span class="stat-num" id="stat-papers">342</span> 篇论文</span>
-        <span><span class="stat-num" id="stat-dates">36</span> 天</span>
+        <span><span class="stat-num" id="stat-papers">346</span> 篇论文</span>
+        <span><span class="stat-num" id="stat-dates">37</span> 天</span>
       </span>
     </div>
 
@@ -328,7 +328,8 @@
     <div class="filters">
       <div class="filter-group">
         <select class="date-select" id="date-select" onchange="switchDate(this.value)">
-        <option value="2026-08-15" selected>2026-08-15</option>
+        <option value="2026-08-16" selected>2026-08-16</option>
+        <option value="2026-08-15">2026-08-15</option>
         <option value="2026-08-14">2026-08-14</option>
         <option value="2026-08-13">2026-08-13</option>
         <option value="2026-08-12">2026-08-12</option>
@@ -357,7 +358,6 @@
         <option value="2026-07-11">2026-07-11</option>
         <option value="2026-07-10">2026-07-10</option>
         <option value="2026-07-08">2026-07-08</option>
-        <option value="2026-07-07">2026-07-07</option>
         </select>
       </div>
       <div class="filter-group" id="relevance-filters">
@@ -376,7 +376,57 @@
       </div>
     </div>
 
-        <div class="date-section" data-date="2026-08-15" style="display:">
+        <div class="date-section" data-date="2026-08-16" style="display:">
+      <div class="date-header">
+        <h3>📄 2026-08-16（周日）</h3>
+        <span class="date-count">4 篇论文</span>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2608.12977v1" target="_blank" rel="noopener">Beyond Handcrafted Security: Towards Self-Evolving Defense for LLM Agents</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">The expanding operational capabilities of large language model (LLM) agents introduce sophisticated security threats. Runtime defenses have emerged as an effective approach to mitigating these risks b...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2608.12977v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.12977v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2608.12921v1" target="_blank" rel="noopener">Discovering Efficient and Explainable Communication Topologies for LLM-based Multi-Agent Systems via Causal Inference</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">The performance of large language model (LLM)-based multi-agent systems (MAS) largely depends on effective communication topologies. Existing topology generation methods, however, typically learn comm...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2608.12921v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.12921v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2608.12888v1" target="_blank" rel="noopener">When Your Agent Opens the Chat App: Agent-Controlled Search over Raw Chat Logs Rivals Structured Memory</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">Agent-memory systems increasingly buy retrieval quality with structure, transforming raw conversation histories into summaries, embeddings, trees, or knowledge graphs before any question is asked. We ...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2608.12888v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.12888v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2608.12851v1" target="_blank" rel="noopener">Practice Makes Unsafe: Skill Misevolution in Self-Improving LLM Agents</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">Self-improving LLM agents convert successful trajectories into persistent cross-task state. An unsafe success can thereby become reusable policy after its triggering input disappears. Skill evolution ...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2608.12851v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.12851v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="date-section" data-date="2026-08-15" style="display:none">
       <div class="date-header">
         <h3>📄 2026-08-15（周六）</h3>
         <span class="date-count">10 篇论文</span>
@@ -3550,122 +3600,6 @@
           </div>
           <p class="paper-abstract">We introduce Nemotron-Labs-Diffusion, a tri-mode language model (LM) that unifies AR, diffusion, and self-speculation decoding within a single architecture. Trained with a joint AR-diffusion objective...</p>
           <div class="paper-links"><a href="https://arxiv.org/abs/2607.05722" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.05722" target="_blank" rel="noopener">📥 PDF</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="date-section" data-date="2026-07-07" style="display:none">
-      <div class="date-header">
-        <h3>📄 2026-07-07（周二）</h3>
-        <span class="date-count">10 篇论文</span>
-      </div>
-      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
-        <div class="relevance-bar high"></div>
-        <div class="paper-content">
-          <div class="paper-header">
-            <a class="paper-title" href="https://arxiv.org/abs/2607.05373" target="_blank" rel="noopener">PixWorld: Unifying 3D Scene Generation and Reconstruction in Pixel Space</a>
-            <span class="paper-tag">高票/有代码</span>
-          </div>
-          <p class="paper-abstract">3D reconstruction and generation are commonly tackled by separate paradigms: pixel-based regression for reconstruction, and latent diffusion for generation. Recent works attempt to unify them in laten...</p>
-          <div class="paper-links"><a href="https://arxiv.org/abs/2607.05373" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.05373" target="_blank" rel="noopener">📥 PDF</a></div>
-        </div>
-      </div>
-      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
-        <div class="relevance-bar high"></div>
-        <div class="paper-content">
-          <div class="paper-header">
-            <a class="paper-title" href="https://arxiv.org/abs/2607.04988" target="_blank" rel="noopener">InternVLA-A1.5: Unifying Understanding, Latent Foresight, and Action for Compositional Generalization</a>
-            <span class="paper-tag">高票/有代码</span>
-          </div>
-          <p class="paper-abstract">Unified models for robot manipulation aim to equip one policy with both the semantic priors of pretrained VLMs and the physical dynamics learned through future prediction. In practice, existing design...</p>
-          <div class="paper-links"><a href="https://arxiv.org/abs/2607.04988" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.04988" target="_blank" rel="noopener">📥 PDF</a></div>
-        </div>
-      </div>
-      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
-        <div class="relevance-bar high"></div>
-        <div class="paper-content">
-          <div class="paper-header">
-            <a class="paper-title" href="http://arxiv.org/abs/2607.04542v1" target="_blank" rel="noopener">Auto: The AGI Compiler 📦代码</a>
-            <span class="paper-tag">高票/有代码</span>
-          </div>
-          <p class="paper-abstract">Every LLM agent run re-derives its behavior token by token on a frontier model: brilliant, expensive, slow, and unbounded. We present Auto, a compiler that records live agent behavior, measures which ...</p>
-          <div class="paper-links"><a href="http://arxiv.org/abs/2607.04542v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.04542v1" target="_blank" rel="noopener">📥 PDF</a> · <a href="https://github.com/RightNow-AI/auto" target="_blank" rel="noopener">💻 代码</a></div>
-        </div>
-      </div>
-      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
-        <div class="relevance-bar high"></div>
-        <div class="paper-content">
-          <div class="paper-header">
-            <a class="paper-title" href="https://arxiv.org/abs/2607.05247" target="_blank" rel="noopener">Vision Pretraining for Dense Spatial Perception</a>
-            <span class="paper-tag">高票/有代码</span>
-          </div>
-          <p class="paper-abstract">Dense spatial perception is essential for physical intelligence, where visual systems are expected to recover structured, metric, and actionable representations from pixel observations. Modern visual ...</p>
-          <div class="paper-links"><a href="https://arxiv.org/abs/2607.05247" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.05247" target="_blank" rel="noopener">📥 PDF</a></div>
-        </div>
-      </div>
-      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
-        <div class="relevance-bar high"></div>
-        <div class="paper-content">
-          <div class="paper-header">
-            <a class="paper-title" href="https://arxiv.org/abs/2607.04605" target="_blank" rel="noopener">Do All Visual Tokens Matter Equally? Object-Evidence Preserving Token Merging for Vision-Language Retrieval</a>
-            <span class="paper-tag">高票/有代码</span>
-          </div>
-          <p class="paper-abstract">Multi-vector vision-language retrieval preserves fine-grained visual evidence through maximum-similarity late interaction, but dense image-side tokens make storage and scoring expensive. Existing toke...</p>
-          <div class="paper-links"><a href="https://arxiv.org/abs/2607.04605" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.04605" target="_blank" rel="noopener">📥 PDF</a></div>
-        </div>
-      </div>
-      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
-        <div class="relevance-bar high"></div>
-        <div class="paper-content">
-          <div class="paper-header">
-            <a class="paper-title" href="https://arxiv.org/abs/2607.05155" target="_blank" rel="noopener">EdgeBench: Unveiling Scaling Laws of Learning from Real-World Environments</a>
-            <span class="paper-tag">高票/有代码</span>
-          </div>
-          <p class="paper-abstract">Pretraining scaling laws reveal that model capability improves predictably with data and compute. But learning from real world environments after deployment remains far less understood. Analyzing roug...</p>
-          <div class="paper-links"><a href="https://arxiv.org/abs/2607.05155" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.05155" target="_blank" rel="noopener">📥 PDF</a></div>
-        </div>
-      </div>
-      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
-        <div class="relevance-bar high"></div>
-        <div class="paper-content">
-          <div class="paper-header">
-            <a class="paper-title" href="https://arxiv.org/abs/2607.05391" target="_blank" rel="noopener">LLM-as-a-Verifier: A General-Purpose Verification Framework</a>
-            <span class="paper-tag">高票/有代码</span>
-          </div>
-          <p class="paper-abstract">Scaling pre-training, post-training, and test-time compute have become the central paradigms for improving the capabilities of LLMs. In this work, we identify verification, the ability to determine th...</p>
-          <div class="paper-links"><a href="https://arxiv.org/abs/2607.05391" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.05391" target="_blank" rel="noopener">📥 PDF</a></div>
-        </div>
-      </div>
-      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
-        <div class="relevance-bar high"></div>
-        <div class="paper-content">
-          <div class="paper-header">
-            <a class="paper-title" href="https://arxiv.org/abs/2607.05352" target="_blank" rel="noopener">Multiplayer Interactive World Models with Representation Autoencoders</a>
-            <span class="paper-tag">高票/有代码</span>
-          </div>
-          <p class="paper-abstract">We introduce the first multiplayer world model for highly dynamic environments governed by complex physical interactions. Whereas single-player world models treat the other agents as part of the envir...</p>
-          <div class="paper-links"><a href="https://arxiv.org/abs/2607.05352" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.05352" target="_blank" rel="noopener">📥 PDF</a></div>
-        </div>
-      </div>
-      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
-        <div class="relevance-bar high"></div>
-        <div class="paper-content">
-          <div class="paper-header">
-            <a class="paper-title" href="https://arxiv.org/abs/2607.05390" target="_blank" rel="noopener">Deform360: A Massive Multi-view Visuotactile Dataset for Deformable World Models</a>
-            <span class="paper-tag">高票/有代码</span>
-          </div>
-          <p class="paper-abstract">Predicting object dynamics (i.e., world modeling) is a fundamental challenge for robotic manipulation, and modeling deformable objects presents a particularly difficult case due to their high-dimensio...</p>
-          <div class="paper-links"><a href="https://arxiv.org/abs/2607.05390" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.05390" target="_blank" rel="noopener">📥 PDF</a></div>
-        </div>
-      </div>
-      <div class="paper-card" data-relevance="2" data-tags="最新论文">
-        <div class="relevance-bar mid"></div>
-        <div class="paper-content">
-          <div class="paper-header">
-            <a class="paper-title" href="http://arxiv.org/abs/2607.05318v1" target="_blank" rel="noopener">PiSAs: Benchmarking Contextual Integrity in Multi-User Agentic Systems</a>
-            <span class="paper-tag">最新论文</span>
-          </div>
-          <p class="paper-abstract">As LLM agents evolve from single-user assistants into shared organizational infrastructure, new privacy risks emerge: inappropriate information may not only be exposed through outputs for external rec...</p>
-          <div class="paper-links"><a href="http://arxiv.org/abs/2607.05318v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.05318v1" target="_blank" rel="noopener">📥 PDF</a></div>
         </div>
       </div>
     </div>

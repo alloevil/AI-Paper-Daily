@@ -5,8 +5,36 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 15 Aug 2026 04:38:05 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 04:41:59 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📄 Beyond Handcrafted Security: Towards Self-Evolving Defense for LLM Agents (2026-08-16)</title>
+      <description>The expanding operational capabilities of large language model (LLM) agents introduce sophisticated security threats. Runtime defenses have emerged as an effective approach to mitigating these risks b...</description>
+      <link>http://arxiv.org/abs/2608.12977v1</link>
+      <guid>http://arxiv.org/abs/2608.12977v1#2026-08-16</guid>
+      <pubDate>Sun, 16 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Discovering Efficient and Explainable Communication Topologies for LLM-based Multi-Agent Systems via Causal Inference (2026-08-16)</title>
+      <description>The performance of large language model (LLM)-based multi-agent systems (MAS) largely depends on effective communication topologies. Existing topology generation methods, however, typically learn comm...</description>
+      <link>http://arxiv.org/abs/2608.12921v1</link>
+      <guid>http://arxiv.org/abs/2608.12921v1#2026-08-16</guid>
+      <pubDate>Sun, 16 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 When Your Agent Opens the Chat App: Agent-Controlled Search over Raw Chat Logs Rivals Structured Memory (2026-08-16)</title>
+      <description>Agent-memory systems increasingly buy retrieval quality with structure, transforming raw conversation histories into summaries, embeddings, trees, or knowledge graphs before any question is asked. We ...</description>
+      <link>http://arxiv.org/abs/2608.12888v1</link>
+      <guid>http://arxiv.org/abs/2608.12888v1#2026-08-16</guid>
+      <pubDate>Sun, 16 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Practice Makes Unsafe: Skill Misevolution in Self-Improving LLM Agents (2026-08-16)</title>
+      <description>Self-improving LLM agents convert successful trajectories into persistent cross-task state. An unsafe success can thereby become reusable policy after its triggering input disappears. Skill evolution ...</description>
+      <link>http://arxiv.org/abs/2608.12851v1</link>
+      <guid>http://arxiv.org/abs/2608.12851v1#2026-08-16</guid>
+      <pubDate>Sun, 16 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 AaLLM: An End-to-End Analog Circuit Design Framework from Topology Generation to Sizing Using Large Language Models (2026-08-15)</title>
       <description>Analog circuit design is a time-consuming, iterative process in a nonlinear and high-dimensional design space that relies heavily on expert intuition. Among recent developments, LLMs have introduced a...</description>
@@ -327,34 +355,6 @@
       <description>AI agents increasingly work inside systems that govern how they delegate tasks, move information, execute actions, and use shared resources. Recent work already shows that deployment rules can change ...</description>
       <link>http://arxiv.org/abs/2608.09828v1</link>
       <guid>http://arxiv.org/abs/2608.09828v1#2026-08-11</guid>
-      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Evidence-Calibrated Runtime Reconstruction for Agent Skills Across Heterogeneous Coding Agents 📦代码 (2026-08-11)</title>
-      <description>Agent Skills package reusable instructions and assets for tool-using language-model agents. Progressive loading creates failure boundaries poorly represented by session-, model-, or tool-centric trace...</description>
-      <link>http://arxiv.org/abs/2608.08793v1</link>
-      <guid>http://arxiv.org/abs/2608.08793v1#2026-08-11</guid>
-      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Evo-Bench: Can Language Models Improve Agent Harness? (2026-08-11)</title>
-      <description>Large Language Models (LLMs) have driven rapid progress in autonomous agents, yet standard evaluations remain confined to static task solving. An emerging frontier is harness evolution---the agent's c...</description>
-      <link>https://arxiv.org/abs/2608.09096</link>
-      <guid>https://arxiv.org/abs/2608.09096#2026-08-11</guid>
-      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Intent Speaks Louder: Controllable User Simulation Beyond Response Imitation (2026-08-11)</title>
-      <description>User simulators are widely used as scalable environments for training and evaluating interactive assistants. Generating the next user turn is inherently one-to-many: the same profile and dialogue cont...</description>
-      <link>https://arxiv.org/abs/2608.09420</link>
-      <guid>https://arxiv.org/abs/2608.09420#2026-08-11</guid>
-      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RynnValue: Scaling Robotic Value Foundation Models with Temporal Distance (2026-08-11)</title>
-      <description>General-purpose reward models are increasingly the bottleneck for scaling robot learning, yet the recipe for learning value-related capabilities from large-scale heterogeneous corpora remains underexp...</description>
-      <link>https://arxiv.org/abs/2608.09853</link>
-      <guid>https://arxiv.org/abs/2608.09853#2026-08-11</guid>
       <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
