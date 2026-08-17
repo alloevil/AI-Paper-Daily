@@ -5,8 +5,78 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 16 Aug 2026 04:41:59 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 04:51:15 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📄 Can We Defend Against AI-Generated Video Attacks on Real-World Crisis Events? A Systematic Evaluation of Detectors, Generators and Social Dissemination (2026-08-17)</title>
+      <description>Recent video generators can fabricate realistic depictions of wars, disasters, public emergencies, and other real-world crises, creating substantial risks of misinformation. Existing benchmarks, howev...</description>
+      <link>https://arxiv.org/abs/2608.14391</link>
+      <guid>https://arxiv.org/abs/2608.14391#2026-08-17</guid>
+      <pubDate>Mon, 17 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Intern-S2-Mobius: Foundation Model with Decoupled Knowledge and Reasoning (2026-08-17)</title>
+      <description>We introduce Mobius-v0, an architecture that comprises a globally shared Memory (FFN) that stores knowledge vectors and multiple Reasoners (Self-Attn) that iteratively achieve compositional reasoning....</description>
+      <link>https://arxiv.org/abs/2608.14290</link>
+      <guid>https://arxiv.org/abs/2608.14290#2026-08-17</guid>
+      <pubDate>Mon, 17 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Implementing Computational Law in Wolfram Language for the Governance of Artificial Intelligence 📦代码 (2026-08-17)</title>
+      <description>How do we govern AI systems whose reasoning we cannot fully inspect? Governance does not require understanding a system's reasoning. It requires stating what the system is obliged, permitted, and forb...</description>
+      <link>http://arxiv.org/abs/2608.13958v1</link>
+      <guid>http://arxiv.org/abs/2608.13958v1#2026-08-17</guid>
+      <pubDate>Mon, 17 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Ontology-Grounded Project Memory for Coding Agents 📦代码 (2026-08-17)</title>
+      <description>Coding agents have become the primary means of generating new code in many software projects, and the resulting velocity of changes makes keeping track of the reasons behind those changes challenging....</description>
+      <link>http://arxiv.org/abs/2608.13662v1</link>
+      <guid>http://arxiv.org/abs/2608.13662v1#2026-08-17</guid>
+      <pubDate>Mon, 17 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CPI-Bench: A Comprehensive,Practical and Intelligent Benchmark for Real-World Image Editing (2026-08-17)</title>
+      <description>With the rapid advancement of image editing models and their widespread application across various domains, there is an increasingly urgent need to deploy these model capabilities directly into real-w...</description>
+      <link>https://arxiv.org/abs/2608.14546</link>
+      <guid>https://arxiv.org/abs/2608.14546#2026-08-17</guid>
+      <pubDate>Mon, 17 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Marionette: Predicting World States, Rendering Geometry, Painting Appearance (2026-08-17)</title>
+      <description>Interactive game world models typically autoregress visual observations directly in pixel or latent space, forcing structured properties such as pose, geometry, and occlusion to be implicitly maintain...</description>
+      <link>https://arxiv.org/abs/2608.14530</link>
+      <guid>https://arxiv.org/abs/2608.14530#2026-08-17</guid>
+      <pubDate>Mon, 17 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PRM-as-a-Judge 1.5: A Toolkit for Robot Process Assessment (2026-08-17)</title>
+      <description>Fine-grained robotic evaluation matters for understanding embodied models, going beyond binary success rates and rule-based process scores. We present PRM-as-a-Judge 1.5, a toolkit for robot process a...</description>
+      <link>https://arxiv.org/abs/2608.14284</link>
+      <guid>https://arxiv.org/abs/2608.14284#2026-08-17</guid>
+      <pubDate>Mon, 17 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Scaling Domain Data Repetition in LLM Pretraining (2026-08-17)</title>
+      <description>As large language models scale, their training-token budgets must also increase to maintain an appropriate tokens-per-parameter ratio (\(TPP\)). However, high-quality domain data is much harder to sca...</description>
+      <link>https://arxiv.org/abs/2608.14071</link>
+      <guid>https://arxiv.org/abs/2608.14071#2026-08-17</guid>
+      <pubDate>Mon, 17 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Submodular Policy Learning for Distributed Task Allocation in Open Multi-Agent Systems (2026-08-17)</title>
+      <description>This paper studies policy learning for distributed task allocation in open multi-agent systems, where agents may join and leave in a time-varying fashion, with submodular stage team utilities. At each...</description>
+      <link>http://arxiv.org/abs/2608.14390v1</link>
+      <guid>http://arxiv.org/abs/2608.14390v1#2026-08-17</guid>
+      <pubDate>Mon, 17 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AgentRewind: Recoverable Execution for Long-Horizon LLM Agents (2026-08-17)</title>
+      <description>Many real-world tasks require LLM agents to interact with their environments over long execution horizons. Errors that occur early in execution may propagate through both the agent context and environ...</description>
+      <link>http://arxiv.org/abs/2608.14380v1</link>
+      <guid>http://arxiv.org/abs/2608.14380v1#2026-08-17</guid>
+      <pubDate>Mon, 17 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 Beyond Handcrafted Security: Towards Self-Evolving Defense for LLM Agents (2026-08-16)</title>
       <description>The expanding operational capabilities of large language model (LLM) agents introduce sophisticated security threats. Runtime defenses have emerged as an effective approach to mitigating these risks b...</description>
@@ -286,76 +356,6 @@
       <link>https://arxiv.org/abs/2608.10692</link>
       <guid>https://arxiv.org/abs/2608.10692#2026-08-12</guid>
       <pubDate>Wed, 12 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Reference-Free Post-Training of Open Large Language Models for Multilingual Machine Translation (2026-08-12)</title>
-      <description>We study reference-free post-training for multilingual machine translation with open large language models. Starting from the supervised-finetuned MiLMMT-46-v0.1 models, we apply Group Relative Policy...</description>
-      <link>https://arxiv.org/abs/2608.10812</link>
-      <guid>https://arxiv.org/abs/2608.10812#2026-08-12</guid>
-      <pubDate>Wed, 12 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DistilVDR: A Compact End-to-End Visual Document Retriever via Dual-Student Distillation (2026-08-12)</title>
-      <description>Visual document retrieval (VDR) is dominated by multi-billion-parameter models that are slow to index at full corpus scale and expensive to serve. Prior compression routes either train a smaller multi...</description>
-      <link>https://arxiv.org/abs/2608.10636</link>
-      <guid>https://arxiv.org/abs/2608.10636#2026-08-12</guid>
-      <pubDate>Wed, 12 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Beyond Pixels: From Video Priors to 4D Worlds (2026-08-12)</title>
-      <description>4D generation synthesizes dynamic 3D scenes from conditions such as text or images. Existing methods either reconstruct generated RGB videos with a separate 4D model or adapt a particular video genera...</description>
-      <link>https://arxiv.org/abs/2608.10744</link>
-      <guid>https://arxiv.org/abs/2608.10744#2026-08-12</guid>
-      <pubDate>Wed, 12 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DSAgentBench: Can Agents Automate End-to-End Data-Science Workflows in Real Computer Environments? (2026-08-12)</title>
-      <description>Real-world data science involves long-horizon workflows that span data wrangling, exploration, modeling, visualization, and validation, and require coordinated use of tools such as notebooks, IDEs, te...</description>
-      <link>https://arxiv.org/abs/2608.10366</link>
-      <guid>https://arxiv.org/abs/2608.10366#2026-08-12</guid>
-      <pubDate>Wed, 12 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SWE-Bench ProMax: Benchmarking Agents on Large-Scale Multilingual Code Refactoring (2026-08-11)</title>
-      <description>As AI coding agents take on increasingly complex, long-horizon software engineering tasks, existing benchmarks are rapidly saturating and their evaluation quality has come under serious scrutiny: a re...</description>
-      <link>https://arxiv.org/abs/2608.09802</link>
-      <guid>https://arxiv.org/abs/2608.09802#2026-08-11</guid>
-      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Macaron-V1: Towards Open Continual Learning with Self-Improvement and Mixture-of-LoRA (2026-08-11)</title>
-      <description>Macaron-V1 is an open agent-model family for experiential intelligence: learning from experience in real environments and continuing to learn after deployment. It is organized around two system goals....</description>
-      <link>https://arxiv.org/abs/2608.09819</link>
-      <guid>https://arxiv.org/abs/2608.09819#2026-08-11</guid>
-      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Sci-VBench: Evaluating Knowledge- and Reasoning-Intensive Video Generation in Science Domains (2026-08-11)</title>
-      <description>We introduce Sci-VBench, a comprehensive benchmark for evaluating knowledge- and reasoning-intensive video generation across scientific domains. It contains 1,253 expert-annotated examples spanning 60...</description>
-      <link>https://arxiv.org/abs/2608.09873</link>
-      <guid>https://arxiv.org/abs/2608.09873#2026-08-11</guid>
-      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Motif 3: Technical Report (2026-08-11)</title>
-      <description>We introduce Motif 3, a decoder-only Mixture-of-Experts language model with 314 billion total parameters and 13.2 billion activated per token. Each sparse MoE layer contains 384 routed experts, with e...</description>
-      <link>https://arxiv.org/abs/2608.09119</link>
-      <guid>https://arxiv.org/abs/2608.09119#2026-08-11</guid>
-      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SHE: Trajectory-driven Safety Harness Evolution for LLM Agents 📦代码 (2026-08-11)</title>
-      <description>The safety of large language model (LLM) agents depends not only on model weights but also on the agent harness that manages context, memory, tools, permissions, and runtime control. Existing safety m...</description>
-      <link>http://arxiv.org/abs/2608.09885v1</link>
-      <guid>http://arxiv.org/abs/2608.09885v1#2026-08-11</guid>
-      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Multi-Agent AI Safety as an Institutional Design Problem 📦代码 (2026-08-11)</title>
-      <description>AI agents increasingly work inside systems that govern how they delegate tasks, move information, execute actions, and use shared resources. Recent work already shows that deployment rules can change ...</description>
-      <link>http://arxiv.org/abs/2608.09828v1</link>
-      <guid>http://arxiv.org/abs/2608.09828v1#2026-08-11</guid>
-      <pubDate>Tue, 11 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
