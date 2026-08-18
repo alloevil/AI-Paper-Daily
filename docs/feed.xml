@@ -5,8 +5,78 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 17 Aug 2026 04:51:15 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2026 04:41:55 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📄 HarnessEval-W: Agentifying the Evaluation of Visual Worlds (2026-08-18)</title>
+      <description>A benchmark should deliver more than a scalar score: what makes an evaluation trustworthy is the reasoning that justifies the score. This is especially critical for world models, where judging a rollo...</description>
+      <link>https://arxiv.org/abs/2608.16859</link>
+      <guid>https://arxiv.org/abs/2608.16859#2026-08-18</guid>
+      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ClawGym II: Exploring Black-Box RL on Agent Harness (2026-08-18)</title>
+      <description>Agent harnesses have substantially improved performance on long-horizon tasks by coordinating agent interactions with the environment. However, reinforcement learning through complex harnesses remains...</description>
+      <link>https://arxiv.org/abs/2608.16798</link>
+      <guid>https://arxiv.org/abs/2608.16798#2026-08-18</guid>
+      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 GenRouter: Unified Workflow Routing for Agentic Image Generation (2026-08-18)</title>
+      <description>The rapid evolution of text-to-image (T2I) generation models has effectively solved the foundational challenge of raw pixel synthesis, shifting the community's focus toward fulfilling increasingly int...</description>
+      <link>https://arxiv.org/abs/2608.16721</link>
+      <guid>https://arxiv.org/abs/2608.16721#2026-08-18</guid>
+      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Quipu: A Governed Bitemporal Knowledge Graph Store 📦代码 (2026-08-18)</title>
+      <description>Agents now write knowledge graphs, but knowledge-graph stores still carry defaults set when humans curated them: accept writes now and clean later, keep one time axis or none, treat every writer's fac...</description>
+      <link>http://arxiv.org/abs/2608.16813v1</link>
+      <guid>http://arxiv.org/abs/2608.16813v1#2026-08-18</guid>
+      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MELD: A Protocol for Merging Knowledge Across Distributed Agentic Memories 📦代码 (2026-08-18)</title>
+      <description>Autonomous agents share a transport and can call each other's tools, but they cannot share what they know: no protocol lets two agents' memories reconcile a fact phrased two ways, link related facts h...</description>
+      <link>http://arxiv.org/abs/2608.16357v1</link>
+      <guid>http://arxiv.org/abs/2608.16357v1#2026-08-18</guid>
+      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Bounded Agents: Delegation Security for Multi-Agent AI Systems 📦代码 (2026-08-18)</title>
+      <description>LLM-based agents can act on behalf of a user to access cloud services, call tools, or invoke agents. At session start, the agent's permissions are set but remain static, and each request is evaluated ...</description>
+      <link>http://arxiv.org/abs/2608.15888v1</link>
+      <guid>http://arxiv.org/abs/2608.15888v1#2026-08-18</guid>
+      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 R^3-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets (2026-08-18)</title>
+      <description>In cognitive science, resource rationality asks how an agent should allocate limited computation to maximize expected value. Most reasoning and agent benchmarks use independent per-task budgets; exist...</description>
+      <link>https://arxiv.org/abs/2608.16033</link>
+      <guid>https://arxiv.org/abs/2608.16033#2026-08-18</guid>
+      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 An Empirical Study of Training Pixel-Space Text-to-Image Diffusion Models (2026-08-18)</title>
+      <description>This paper investigates an increasingly important topic in generative modeling: pixel-space diffusion models. Although numerous studies have explored this topic, most focus on small-scale or class-con...</description>
+      <link>https://arxiv.org/abs/2608.16887</link>
+      <guid>https://arxiv.org/abs/2608.16887#2026-08-18</guid>
+      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AnyTalk: Speech Animation for Arbitrary Characters Leveraging a Video Generation Model (2026-08-18)</title>
+      <description>We present AnyTalk, a novel method for generating 3D speech animations for arbitrary characters without requiring any animation data. While existing audio-driven 3D speech animation methods rely on ch...</description>
+      <link>https://arxiv.org/abs/2608.16143</link>
+      <guid>https://arxiv.org/abs/2608.16143#2026-08-18</guid>
+      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Prior Audit-Repair Context Shifts LLM Verifier Thresholds Toward Leniency (2026-08-18)</title>
+      <description>Automated checking pipelines increasingly place one language model as the checker and another (or the same one) as the fixer. We ask whether that wiring changes what the checker reports. Measuring fal...</description>
+      <link>https://arxiv.org/abs/2608.16003</link>
+      <guid>https://arxiv.org/abs/2608.16003#2026-08-18</guid>
+      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 Can We Defend Against AI-Generated Video Attacks on Real-World Crisis Events? A Systematic Evaluation of Detectors, Generators and Social Dissemination (2026-08-17)</title>
       <description>Recent video generators can fabricate realistic depictions of wars, disasters, public emergencies, and other real-world crises, creating substantial risks of misinformation. Existing benchmarks, howev...</description>
@@ -286,76 +356,6 @@
       <link>https://arxiv.org/abs/2608.11562</link>
       <guid>https://arxiv.org/abs/2608.11562#2026-08-13</guid>
       <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MBA: Multimodal Benchmark and Agents for Real-World Business Ideation (2026-08-13)</title>
-      <description>Agentic systems powered by large language models (LLMs) have opened new opportunities for business ideation. Yet existing approaches remain confined to a text-only paradigm, despite the inherently mul...</description>
-      <link>https://arxiv.org/abs/2608.11616</link>
-      <guid>https://arxiv.org/abs/2608.11616#2026-08-13</guid>
-      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Persistent Recursive Worlds Enable Autonomous Software Evolution (2026-08-13)</title>
-      <description>Complex software systems develop over timescales that exceed the lifespan of any individual coding agent. Most agentic software systems preserve continuity through persistent sessions, memories, manag...</description>
-      <link>https://arxiv.org/abs/2608.10450</link>
-      <guid>https://arxiv.org/abs/2608.10450#2026-08-13</guid>
-      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AVA-Encoder: Towards Agent-Native Video Representation Learning (2026-08-13)</title>
-      <description>Creative agents still lack an effective way to learn from high-quality human films, limiting their ability to produce cinematic-grade videos. A key challenge is the absence of a structured video repre...</description>
-      <link>http://arxiv.org/abs/2608.12313v1</link>
-      <guid>http://arxiv.org/abs/2608.12313v1#2026-08-13</guid>
-      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Constructing Dynamic Master Logic Models as Knowledge Graphs for Complex System Diagnostics Using Retrieval-Augmented Large Language Models (2026-08-13)</title>
-      <description>Dynamic Master Logic (DML) provides a hierarchical framework for representing system behavior by linking functional objectives to underlying structural elements. However, DML construction typically re...</description>
-      <link>http://arxiv.org/abs/2608.12304v1</link>
-      <guid>http://arxiv.org/abs/2608.12304v1#2026-08-13</guid>
-      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Not a Monolith: Lab-Level Divergence in the Cooperative Equilibria of Chinese Frontier LLM Agents 📦代码 (2026-08-12)</title>
-      <description>Does the cooperative bias documented for Western frontier LLM agents extend to a different alignment lineage, and should the Chinese models that embody it be treated as a single bloc or as distinct la...</description>
-      <link>http://arxiv.org/abs/2608.10262v1</link>
-      <guid>http://arxiv.org/abs/2608.10262v1#2026-08-12</guid>
-      <pubDate>Wed, 12 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 The CASE Framework: A Multi-Disciplinary Control Architecture for Governing Enterprise Agentic AI 📦代码 (2026-08-12)</title>
-      <description>Enterprises are deploying autonomous AI agents faster than they can govern them, and prevailing approaches stretch a single discipline, typically DevSecOps built for deterministic automation, across e...</description>
-      <link>http://arxiv.org/abs/2608.10153v1</link>
-      <guid>http://arxiv.org/abs/2608.10153v1#2026-08-12</guid>
-      <pubDate>Wed, 12 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Ex-Omni-2D: Expressive Omni-Modal Dialogue Models with Native Visual Presence (2026-08-12)</title>
-      <description>Omni-modal dialogue models can understand multimodal inputs and synthesize spoken replies, yet their responses remain visually disembodied. We introduce Ex-Omni-2D, an omni-modal dialogue framework th...</description>
-      <link>https://arxiv.org/abs/2608.10720</link>
-      <guid>https://arxiv.org/abs/2608.10720#2026-08-12</guid>
-      <pubDate>Wed, 12 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AdvFD: Boosting Visual Generation via Adversarial Fr'echet Distance Loss (2026-08-12)</title>
-      <description>Fréchet distance has recently emerged as an effective distribution-level objective for generator post-training, complementing the conventional sample-level diffusion and flow-matching losses. However,...</description>
-      <link>https://arxiv.org/abs/2608.11205</link>
-      <guid>https://arxiv.org/abs/2608.11205#2026-08-12</guid>
-      <pubDate>Wed, 12 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SkillZip: Evaluation-Free Skill Compression for Self-Evolving Agents by Discovering Reusable Structure (2026-08-12)</title>
-      <description>Self-evolving agents accumulate reusable skills by appending successful procedures and failure fixes. Over time, the same requirement is often restated in several branches, examples, and warnings, whi...</description>
-      <link>https://arxiv.org/abs/2608.11079</link>
-      <guid>https://arxiv.org/abs/2608.11079#2026-08-12</guid>
-      <pubDate>Wed, 12 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SPIEval: Evaluating Large Language Models as Mobile Assistants over Scattered Personal Information (2026-08-12)</title>
-      <description>Large language models (LLMs) are increasingly deployed as mobile assistants, where a key challenge is leveraging personal information scattered across multiple applications (apps) to complete user ins...</description>
-      <link>https://arxiv.org/abs/2608.10692</link>
-      <guid>https://arxiv.org/abs/2608.10692#2026-08-12</guid>
-      <pubDate>Wed, 12 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
