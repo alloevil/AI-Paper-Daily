@@ -5,8 +5,78 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 18 Aug 2026 04:41:55 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 04:43:39 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📄 ASI-Bench: At the Dawn of Artificial Superintelligence (2026-08-19)</title>
+      <description>Artificial superintelligence (ASI) requires AI to move beyond mastering existing knowledge toward exploring the unknown, creating new knowledge, and turning new ideas into verifiable results. However,...</description>
+      <link>https://arxiv.org/abs/2608.17271</link>
+      <guid>https://arxiv.org/abs/2608.17271#2026-08-19</guid>
+      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Agentic ESOpt: Fine-Tuning Long-Horizon LLM Agents with Minimal GPU Requirements (2026-08-19)</title>
+      <description>Reinforcement Learning (RL) has been promising in single-turn LLM fine-tuning. However, long-horizon agentic reasoning introduces increasingly branching interactions and sparse rewards, exposing sever...</description>
+      <link>https://arxiv.org/abs/2608.17310</link>
+      <guid>https://arxiv.org/abs/2608.17310#2026-08-19</guid>
+      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Embodied-Navigator: Point, Think, Memorize, and Align for Efficient Navigation (2026-08-19)</title>
+      <description>Although Large Vision-Language Models (VLMs) have significantly advanced embodied navigation, their direct deployment remains challenging, as existing methods often force VLMs into unnatural action sp...</description>
+      <link>https://arxiv.org/abs/2608.17512</link>
+      <guid>https://arxiv.org/abs/2608.17512#2026-08-19</guid>
+      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 HarnessRisk: A Lifecycle-Oriented Benchmark for Agent Harness Safety (2026-08-19)</title>
+      <description>Large language models are increasingly deployed through agent harnesses that manage tools, extensions, persistent state, permissions, and external actions. Existing safety benchmarks mainly target ind...</description>
+      <link>https://arxiv.org/abs/2608.17597</link>
+      <guid>https://arxiv.org/abs/2608.17597#2026-08-19</guid>
+      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Agent Lightning v1.0: Towards Harnessed Agentic RL (2026-08-19)</title>
+      <description>Modern agents operate inside agent harnesses that manage tools, context, and control flow, making the harness a critical part of the agent system. Our original Agent Lightning introduced a disaggregat...</description>
+      <link>https://arxiv.org/abs/2608.17528</link>
+      <guid>https://arxiv.org/abs/2608.17528#2026-08-19</guid>
+      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Abra: Scaling Diffusion Image Training (2026-08-19)</title>
+      <description>Compute-optimal scaling laws guide the training of frontier language models yet remain largely unexplored for visual generation. We present a systematic scaling law study for text-to-image diffusion m...</description>
+      <link>https://arxiv.org/abs/2608.17286</link>
+      <guid>https://arxiv.org/abs/2608.17286#2026-08-19</guid>
+      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 GS-Voxel: Fitting-Free Structured Latents for Large-Scale 3DGS Generation (2026-08-19)</title>
+      <description>Many scalable latent 3D generators operate on structured tensors, whereas pre-optimized 3D Gaussian Splatting (3DGS) reconstructions are unordered, spatially irregular, and vary widely in primitive co...</description>
+      <link>https://arxiv.org/abs/2608.17988</link>
+      <guid>https://arxiv.org/abs/2608.17988#2026-08-19</guid>
+      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Security Assessment of DeepSeek Harness with A.I.G: Evaluating Resistance to Indirect Prompt Injection (2026-08-19)</title>
+      <description>We assess indirect prompt injection in DeepSeek Harness (DSH), using AI-Infra-Guard (A.I.G) to construct tests, deliver controlled taint, execute DSH, collect traces, and judge outcomes. The study cov...</description>
+      <link>https://arxiv.org/abs/2608.16393</link>
+      <guid>https://arxiv.org/abs/2608.16393#2026-08-19</guid>
+      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 StartupBench: Benchmarking General-Purpose Agents on Market-Validated End-to-End Workflows (2026-08-19)</title>
+      <description>Recent advances in Large Language Models(LLMs) and agents have substantially improved the ability of AI systems to execute complex tasks. Yet existing benchmarks largely rely on researcher-selected ta...</description>
+      <link>https://arxiv.org/abs/2608.17800</link>
+      <guid>https://arxiv.org/abs/2608.17800#2026-08-19</guid>
+      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 aDSL: Agentic 3D Creation via Joint Agent-Program Design (2026-08-19)</title>
+      <description>Programmatic representations provide a compelling paradigm for 3D content creation, enabling fine-grained edits, interpretability, and explicit structural control. Yet, agentic workflows that rely on ...</description>
+      <link>https://arxiv.org/abs/2608.17975</link>
+      <guid>https://arxiv.org/abs/2608.17975#2026-08-19</guid>
+      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 HarnessEval-W: Agentifying the Evaluation of Visual Worlds (2026-08-18)</title>
       <description>A benchmark should deliver more than a scalar score: what makes an evaluation trustworthy is the reasoning that justifies the score. This is especially critical for world models, where judging a rollo...</description>
@@ -286,76 +356,6 @@
       <link>http://arxiv.org/abs/2608.12895v1</link>
       <guid>http://arxiv.org/abs/2608.12895v1#2026-08-14</guid>
       <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Alaya-EVOKE: From Linear-Scaling Supervision to Endless World (2026-08-14)</title>
-      <description>Interactive world models must support persistent memory, responsive interaction, and long-horizon generation, yet these requirements place conflicting demands on the model. Maintaining history in the ...</description>
-      <link>https://arxiv.org/abs/2608.13546</link>
-      <guid>https://arxiv.org/abs/2608.13546#2026-08-14</guid>
-      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models (2026-08-14)</title>
-      <description>Large-scale manipulation data is essential for robot learning, yet collecting robot demonstrations remains expensive and difficult to scale. Meanwhile, abundant egocentric human manipulation videos pr...</description>
-      <link>https://arxiv.org/abs/2608.13049</link>
-      <guid>https://arxiv.org/abs/2608.13049#2026-08-14</guid>
-      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OmniScientist: An Omni-Modal Omni-Discipline AI Scientist (2026-08-14)</title>
-      <description>Recent advances in foundation models have enabled AI scientists to automate increasingly complete research workflows, from hypothesis generation and code execution to manuscript preparation. Yet workf...</description>
-      <link>https://arxiv.org/abs/2608.13558</link>
-      <guid>https://arxiv.org/abs/2608.13558#2026-08-14</guid>
-      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 UniSwap: Streaming Audio-Visual Identity Swapping for Talking Videos (2026-08-14)</title>
-      <description>Talking-video character replacement requires coordinated transfer of appearance and voice while preserving the source motion, scene, linguistic content, and audio-video timing. Existing methods use se...</description>
-      <link>https://arxiv.org/abs/2608.11752</link>
-      <guid>https://arxiv.org/abs/2608.11752#2026-08-14</guid>
-      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AI4AI at Test-Time: Strong-to-Weak Capability Transfer via Harnesses (2026-08-13)</title>
-      <description>Recent work on distillation transfers the capabilities of large models to smaller ones often by updating the latter's parameters, through teacher forcing, on-policy distillation, and related training-...</description>
-      <link>https://arxiv.org/abs/2608.12307</link>
-      <guid>https://arxiv.org/abs/2608.12307#2026-08-13</guid>
-      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Spark-to-Paper: End-to-End Research Paper Generation as a Composable Skill (2026-08-13)</title>
-      <description>Turning a research idea into a complete paper requires more than text generation: the system must retrieve literature, design and execute experiments, revise claims according to evidence, produce publ...</description>
-      <link>https://arxiv.org/abs/2608.11924</link>
-      <guid>https://arxiv.org/abs/2608.11924#2026-08-13</guid>
-      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 StateFlow: Building, Evolving, and Accessing 3D World States for Previsualization (2026-08-13)</title>
-      <description>Previsualization is an intermediate layer between ideas and production in film, games, architecture, and urban design. It lets creators iteratively refine scenes, actions, cameras, and spatial-tempora...</description>
-      <link>https://arxiv.org/abs/2608.12314</link>
-      <guid>https://arxiv.org/abs/2608.12314#2026-08-13</guid>
-      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Ready Cohorts: Bounding GPU Opportunity and Avoiding Host Round Trips in LLM-Agent Control 📦代码 (2026-08-13)</title>
-      <description>LLM-agent services repeatedly execute small deterministic transitions between model and tool calls: route an outcome, update state, and emit the next effect. We ask when this control path exposes enou...</description>
-      <link>http://arxiv.org/abs/2608.12123v1</link>
-      <guid>http://arxiv.org/abs/2608.12123v1#2026-08-13</guid>
-      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 When the Knowledge Base Becomes the Gold Standard: Measuring Resource-Shared Evaluation Loops in Entity-Level Machine Translation 📦代码 (2026-08-13)</title>
-      <description>The Seungjeongwon Ilgi, a UNESCO Memory of the World record, is only 37.4% translated, and the most conspicuous failure mode in automatic translation is the person name -- a misread name corrupts the ...</description>
-      <link>http://arxiv.org/abs/2608.11843v1</link>
-      <guid>http://arxiv.org/abs/2608.11843v1#2026-08-13</guid>
-      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 From Synthesis to Removal: Physics-Grounded Reflection Simulation and Diffusion-Based Video Dereflection (2026-08-13)</title>
-      <description>Videos captured through glass often contain reflections that degrade visual quality and interfere with downstream vision tasks. Although single-image reflection removal has been extensively studied, v...</description>
-      <link>https://arxiv.org/abs/2608.11562</link>
-      <guid>https://arxiv.org/abs/2608.11562#2026-08-13</guid>
-      <pubDate>Thu, 13 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
