@@ -67,7 +67,9 @@ def papers_from_reports(days: int = 7) -> List[Dict]:
                 "pdf_url": links.get("pdf", ""),
                 "code_url": links.get("code", ""),
                 "has_code": bool(links.get("code")) or "有代码" in tag,
-                "votes": 10 if "高票" in tag else 0,
+                # 日报 tag 行携带真实投票数(👍n),parse_papers 解析回读;
+                # 历史日报没有数值时缺省 0,退回旧的粗粒度信号
+                "votes": p.get("votes", 0) or (10 if "高票" in tag else 0),
                 "stars": 0,
                 "reason": tag,
                 "published": md.stem,

@@ -41,7 +41,14 @@ def parse_papers(filepath: str) -> list[dict]:
 
         # Tag: look for _italic text_ on its own line
         tag_match = re.search(r'^\s*_(.+?)_\s*$', section, re.MULTILINE)
-        paper['tag'] = tag_match.group(1).strip() if tag_match else ''
+        tag = tag_match.group(1).strip() if tag_match else ''
+        # Votes: numeric upvote appended by the renderer (『高票/有代码 👍128』)。
+        # 历史日报没有该数值,缺省 0。剥离后 tag 保持纯文本,
+        # 避免污染站点过滤按钮与周报 reason。
+        votes_match = re.search(r'👍(\d+)', tag)
+        paper['votes'] = int(votes_match.group(1)) if votes_match else 0
+        tag = re.sub(r'\s*👍\d+', '', tag).strip()
+        paper['tag'] = tag
 
         # Abstract: blockquote text
         abstract_lines = []
@@ -84,6 +91,134 @@ def parse_papers(filepath: str) -> list[dict]:
             papers.append(paper)
 
     return papers
+
+
+def parse_weekly_title(filepath: str) -> str:
+    """Extract the date-range part of a weekly report title.
+
+    `# 📄 论文周报 | 2026-W34（2026-08-14 ~ 2026-08-20）` -> `2026-08-14 ~ 2026-08-20`
+    (best-effort; empty string when the header is absent).
+    """
+    with open(filepath, encoding="utf-8") as f:
+        first_line = f.readline()
+    m = re.search(r'（([^）]+)）', first_line)
+    return m.group(1) if m else ''
+
+
+WEEKLY_PAGE_TEMPLATE = '''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title} — AI Paper Daily</title>
+<meta name="description" content="{desc}">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<style>
+  :root {{
+    --primary: #6366f1;
+    --primary-hover: #818cf8;
+    --blue: #3b82f6;
+    --ink: #f7f8f8;
+    --ink-muted: #d0d6e0;
+    --ink-subtle: #8a8f98;
+    --ink-tertiary: #62666d;
+    --canvas: #010102;
+    --surface-1: #0f1011;
+    --surface-2: #141516;
+    --hairline: #23252a;
+    --hairline-strong: #34343a;
+    --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  }}
+  * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+  body {{ font-family: var(--font-sans); background: var(--canvas); color: var(--ink);
+         -webkit-font-smoothing: antialiased; line-height: 1.5; }}
+  .container {{ max-width: 960px; margin: 0 auto; padding: 0 24px; }}
+  .masthead {{ padding: 20px 0 16px; border-bottom: 1px solid var(--hairline);
+               display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; }}
+  .masthead h1 {{ font-size: 20px; font-weight: 600; letter-spacing: -0.4px; }}
+  .masthead .range {{ font-size: 13px; color: var(--ink-subtle); }}
+  .masthead a {{ padding: 6px 14px; font-size: 13px; font-weight: 500; color: var(--ink-subtle);
+                 border: 1px solid var(--hairline); border-radius: 8px; text-decoration: none; }}
+  .masthead a:hover {{ color: var(--ink); border-color: var(--hairline-strong); }}
+  .intro {{ padding: 16px 0 4px; font-size: 14px; color: var(--ink-subtle); }}
+  .paper-card {{ display: flex; padding: 16px 0; border-radius: 8px; }}
+  .paper-card:hover {{ background: var(--surface-1); }}
+  .paper-card + .paper-card {{ border-top: 1px solid var(--hairline); }}
+  .relevance-bar {{ width: 4px; border-radius: 2px; flex-shrink: 0; margin-right: 16px; align-self: stretch; }}
+  .relevance-bar.high {{ background: var(--primary); }}
+  .relevance-bar.mid {{ background: var(--blue); }}
+  .relevance-bar.low {{ background: var(--ink-tertiary); }}
+  .paper-content {{ flex: 1; min-width: 0; }}
+  .paper-header {{ display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }}
+  .paper-title {{ font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; line-height: 1.4; }}
+  .paper-title:hover {{ color: var(--primary-hover); }}
+  .paper-tag {{ display: inline-block; padding: 1px 8px; font-size: 11px; font-weight: 500;
+                color: var(--ink-muted); background: var(--surface-2); border: 1px solid var(--hairline);
+                border-radius: 10px; white-space: nowrap; flex-shrink: 0; }}
+  .paper-abstract {{ font-size: 14px; color: var(--ink-subtle); margin-bottom: 8px; line-height: 1.55; }}
+  .paper-links {{ display: flex; gap: 8px; font-size: 13px; }}
+  .paper-links a {{ color: var(--ink-tertiary); text-decoration: none; }}
+  .paper-links a:hover {{ color: var(--primary-hover); }}
+  .footer {{ margin-top: 48px; padding: 24px 0; border-top: 1px solid var(--hairline);
+             text-align: center; font-size: 12px; color: var(--ink-tertiary); }}
+  .footer a {{ color: var(--ink-subtle); text-decoration: none; }}
+  .footer a:hover {{ color: var(--ink); }}
+  @media (max-width: 640px) {{
+    .container {{ padding: 0 16px; }}
+    .paper-header {{ flex-direction: column; gap: 4px; }}
+    .relevance-bar {{ margin-right: 12px; }}
+    .paper-links {{ flex-wrap: wrap; }}
+  }}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="masthead">
+      <div>
+        <h1>📊 {title}</h1>
+        <span class="range">{range}</span>
+      </div>
+      <a href="./">← 返回日报</a>
+    </header>
+    <p class="intro">{desc}</p>
+{cards}
+    <footer class="footer">
+      <p>Built by <a href="https://github.com/alloevil">alloevil</a> · <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a> · <a href="{site_url}/feed.xml">RSS</a></p>
+    </footer>
+  </div>
+</body>
+</html>
+'''
+
+
+def render_weekly_page(week_label: str, date_range: str, papers: list[dict]) -> str:
+    """Render a standalone HTML page for one weekly-YYYY-WNN.md report."""
+    cards = '\n'.join(paper_card_html(p) for p in papers)
+    return WEEKLY_PAGE_TEMPLATE.format(
+        title=f'论文周报 {week_label}',
+        range=_esc(date_range),
+        desc=f'过去 7 天按热度（投票 / 星标 / 开源代码）重排的 Top {len(papers)}',
+        cards=cards,
+        site_url=SITE_URL,
+    )
+
+
+def collect_weekly_reports() -> list[tuple[str, str, list[dict]]]:
+    """Find weekly-YYYY-WNN.md reports, newest first.
+
+    Returns (week_label, date_range, papers) tuples.
+    """
+    weekly_files = sorted(
+        glob.glob(os.path.join(DIST_DIR, 'weekly-????-W??.md')), reverse=True)
+    out = []
+    for fpath in weekly_files:
+        m = re.search(r'weekly-(\d{4}-W\d{2})\.md$', fpath)
+        if not m:
+            continue
+        papers = parse_papers(fpath)
+        if papers:
+            out.append((m.group(1), parse_weekly_title(fpath), papers))
+    return out
 
 
 def paper_card_html(paper: dict) -> str:
@@ -139,8 +274,14 @@ def _esc(text: str) -> str:
             .replace("'", '&#39;'))
 
 
-def generate_rss(reports: list[tuple[str, list[dict]]], max_items: int = 50) -> str:
-    """Generate RSS 2.0 feed XML."""
+def generate_rss(reports: list[tuple[str, list[dict]]],
+                 weekly_reports: list[tuple[str, str, list[dict]]] = (),
+                 max_items: int = 50) -> str:
+    """Generate RSS 2.0 feed XML.
+
+    Weekly roundups appear as one item each (linking to the rendered
+    weekly page), ahead of the per-paper daily items.
+    """
     rss = Element('rss', version='2.0')
     rss.set('xmlns:atom', 'http://www.w3.org/2005/Atom')
     ch = SubElement(rss, 'channel')
@@ -154,6 +295,23 @@ def generate_rss(reports: list[tuple[str, list[dict]]], max_items: int = 50) -> 
     al.set('href', f'{SITE_URL}/feed.xml')
     al.set('rel', 'self')
     al.set('type', 'application/rss+xml')
+
+    for week_label, date_range, papers in weekly_reports:
+        item = SubElement(ch, 'item')
+        SubElement(item, 'title').text = f"📊 论文周报 {week_label}（{date_range}）"
+        SubElement(item, 'description').text = (
+            f"过去 7 天按热度重排的 Top {len(papers)}："
+            + '；'.join(p['title'] for p in papers[:5]) + '…')
+        page_url = f"{SITE_URL}/weekly-{week_label}.html"
+        SubElement(item, 'link').text = page_url
+        SubElement(item, 'guid').text = page_url
+        end_date = date_range.split('~')[-1].strip() if date_range else ''
+        try:
+            pub_date = datetime.strptime(end_date, '%Y-%m-%d').strftime(
+                '%a, %d %b %Y 18:00:00 +0000')
+        except ValueError:
+            pub_date = ''
+        SubElement(item, 'pubDate').text = pub_date
 
     count = 0
     for date_str, papers in reports:
@@ -261,6 +419,18 @@ def main():
     # Inject into template
     html = template
 
+    # Weekly roundups: render standalone pages, link the latest from the nav
+    weekly_reports = collect_weekly_reports()
+    for week_label, date_range, papers in weekly_reports:
+        page_path = os.path.join(DIST_DIR, f'weekly-{week_label}.html')
+        with open(page_path, 'w', encoding='utf-8') as f:
+            f.write(render_weekly_page(week_label, date_range, papers))
+    if weekly_reports:
+        latest_label = weekly_reports[0][0]
+        html = html.replace(
+            '<!-- WEEKLY_LINK -->',
+            f'<a href="weekly-{latest_label}.html">📊 周报 {latest_label}</a>')
+
     # Update stats
     html = html.replace('id="stat-papers">0<', f'id="stat-papers">{total_papers}<')
     html = html.replace('id="stat-dates">0<', f'id="stat-dates">{len(reports)}<')
@@ -290,11 +460,13 @@ def main():
         f.write(html)
 
     # Generate RSS feed
-    rss_xml = generate_rss(reports)
+    rss_xml = generate_rss(reports, weekly_reports)
     with open(os.path.join(DIST_DIR, 'feed.xml'), 'w', encoding='utf-8') as f:
         f.write(rss_xml)
 
     print(f"[OK] index.html generated ({len(reports)} dates, {total_papers} papers)")
+    if weekly_reports:
+        print(f"[OK] {len(weekly_reports)} weekly page(s) generated")
     print(f"[OK] feed.xml generated")
 
 

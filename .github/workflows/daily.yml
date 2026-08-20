@@ -106,6 +106,12 @@ jobs:
             echo "No weekly report generated, skipping commit"
           fi
 
+      # 周报进站点:渲染 weekly-*.html 页面 + 首页导航链接 + feed 条目
+      - name: Generate site
+        if: steps.report.outputs.changed == 'true'
+        run: |
+          python scripts/generate_site.py
+
       - name: Commit and push
         if: steps.report.outputs.changed == 'true'
         run: |

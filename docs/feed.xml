@@ -5,8 +5,15 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 20 Aug 2026 10:09:53 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 12:56:13 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📊 论文周报 2026-W34（2026-08-14 ~ 2026-08-20）</title>
+      <description>过去 7 天按热度重排的 Top 15：FACET: Preserving Source Intent and Executable State in Terminal Task Synthesis；Co-RL: Unsupervised Reasoning Emerges from Diverse Cohort in Multi-agent RL；SkillForge: Self-Distilling Agents for Project-Specific Issue Resolution；One Gate Is Not Enough: Composing Stateful Pre-Action Controls for Agentic AI；SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation…</description>
+      <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
+      <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
+      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 SemaPLC: A Project-Grounded, Verification-Gated Agent Harness for PLC Code Generation (2026-08-20)</title>
       <description>Programmable logic controllers (PLCs) run industrial plants, and large language models can already generate independent program organization units (POUs) for them. Whether such logic integrates into a...</description>

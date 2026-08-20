@@ -14,7 +14,8 @@ from datetime import datetime, timezone, timedelta
 sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
 
 import storage
-from weekly import rank_papers, weekly_score
+import weekly
+from weekly import rank_papers, weekly_score, papers_from_reports
 
 
 def _insert_paper(conn, pid, title, created_at, votes=0, stars=0,
@@ -102,6 +103,72 @@ class WeeklyRankingTest(unittest.TestCase):
         ]
         ranked = rank_papers(papers, top_n=2)
         self.assertEqual(ranked[0]["id"], "new")
+
+
+class PapersFromReportsTest(unittest.TestCase):
+    """papers_from_reports 用日报 tag 行的真实 👍n 重建 votes(#5)
+
+    修复前所有『高票/有代码』论文一律 votes=10,排序退化为日期序;
+    修复后不同论文的真实票数直接决定周报排名。
+    """
+
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self._orig_docs = weekly.DOCS_DIR
+        weekly.DOCS_DIR = Path(self._tmp.name)
+
+        now = datetime.now(timezone(timedelta(hours=8)))
+        newer = now.strftime("%Y-%m-%d")
+        older = (now - timedelta(days=2)).strftime("%Y-%m-%d")
+
+        # 新文件里是低票论文,老文件里是高票论文:按日期排会颠倒
+        (Path(self._tmp.name) / f"{newer}.md").write_text(
+            f"""# 📄 论文日报 | {newer}（周X）
+
+## 1. Low Votes Recent Paper
+
+_高票/有代码 👍3_
+
+[📄 论文](https://arxiv.org/abs/2608.00001)
+""", encoding="utf-8")
+        (Path(self._tmp.name) / f"{older}.md").write_text(
+            f"""# 📄 论文日报 | {older}（周X）
+
+## 1. High Votes Older Paper
+
+_高票/有代码 👍200_
+
+[📄 论文](https://arxiv.org/abs/2608.00002)
+
+## 2. Legacy Paper Without Votes
+
+_高票/有代码_
+
+[📄 论文](https://arxiv.org/abs/2608.00003)
+""", encoding="utf-8")
+
+    def tearDown(self):
+        weekly.DOCS_DIR = self._orig_docs
+        self._tmp.cleanup()
+
+    def test_votes_recovered_from_reports(self):
+        papers = {p["id"]: p for p in papers_from_reports(days=7)}
+        self.assertEqual(papers["2608.00001"]["votes"], 3)
+        self.assertEqual(papers["2608.00002"]["votes"], 200)
+
+    def test_legacy_report_without_votes_falls_back(self):
+        """历史日报无 👍n 时按旧信号兜底(高票 tag -> 10),不崩溃"""
+        papers = {p["id"]: p for p in papers_from_reports(days=7)}
+        self.assertEqual(papers["2608.00003"]["votes"], 10)
+
+    def test_ranking_follows_votes_not_file_date(self):
+        """周报排序由真实票数决定:老文件里的高票论文排在新文件低票论文之前"""
+        ranked = rank_papers(papers_from_reports(days=7), top_n=3)
+        self.assertEqual(ranked[0]["id"], "2608.00002")
+
+    def test_reason_tag_not_polluted_by_votes(self):
+        papers = {p["id"]: p for p in papers_from_reports(days=7)}
+        self.assertEqual(papers["2608.00002"]["reason"], "高票/有代码")
 
 
 if __name__ == "__main__":

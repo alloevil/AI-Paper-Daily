@@ -25,13 +25,20 @@ def render_paper_md(paper: Dict, ordinal: int) -> str:
 
     标题先剥离已有的『 📦代码』后缀再按 has_code 追加,
     防止周报重渲染日报标题时出现双标签(weekly-2026-W34 bug)。
+
+    投票数写入 tag 行(_理由 👍128_):日报 md 是周报重排的数据源,
+    丢掉数值会让周报热度排序退化为日期序(#5)。
     """
     title = _CODE_TAG_SUFFIX.sub("", paper["title"]).strip()
     code_tag = " 📦代码" if paper.get("has_code") else ""
+    votes = paper.get("votes", 0) or 0
+    tag_text = paper.get("reason", "")
+    if votes > 0:
+        tag_text = f"{tag_text} 👍{votes}".strip()
 
     lines = [
         f"## {ordinal}. {title}{code_tag}\n",
-        f"_{paper.get('reason', '')}_\n",
+        f"_{tag_text}_\n",
     ]
 
     if paper.get("abstract"):
