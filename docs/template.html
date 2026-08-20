@@ -161,6 +161,28 @@
   }
   .date-select:hover { border-color: var(--hairline-strong); }
 
+  /* Search */
+  .search-group {
+    flex: 1;
+    min-width: 200px;
+  }
+  .search-input {
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    background: var(--surface-2);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    font-family: var(--font-sans);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .search-input::placeholder { color: var(--ink-tertiary); }
+  .search-input:hover { border-color: var(--hairline-strong); }
+  .search-input:focus { border-color: var(--primary-border); }
+
   /* Relevance filter */
   .relevance-filters {
     padding: 0 0 8px;
@@ -326,6 +348,10 @@
 
     <!-- Filters -->
     <div class="filters">
+      <div class="filter-group search-group">
+        <input class="search-input" id="search-input" type="search"
+               placeholder="搜索标题 / 摘要…" autocomplete="off">
+      </div>
       <div class="filter-group">
         <select class="date-select" id="date-select" onchange="switchDate(this.value)">
           <option value="2026-07-28" selected>2026-07-28</option>
@@ -343,6 +369,8 @@
       </div>
     </div>
 
+    <div class="empty-state" id="no-match" style="display:none">没有匹配的论文</div>
+
     <!-- CONTENT_MARKER -->
 
     <!-- Footer -->
@@ -352,54 +380,166 @@
   </div>
 
 <script>
+// 过滤状态：日期 / 相关度 / 标签 / 搜索词。所有过滤组合生效,并同步到 URL hash。
+const filterState = { date: '', rel: 'all', tag: 'all', q: '' };
+
 function switchDate(date) {
-  document.querySelectorAll('.date-section').forEach(s => s.style.display = 'none');
-  const sec = document.querySelector('[data-date="' + date + '"]');
-  if (sec) sec.style.display = '';
-  // Reset filters when switching date
-  resetFilters();
+  filterState.date = date;
+  const select = document.getElementById('date-select');
+  if (select && select.value !== date) select.value = date;
+  applyFilters();
+  updateHash();
 }
 
-function filterRelevance(level) {
-  const btns = document.querySelectorAll('#relevance-filters .filter-btn');
-  btns.forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
+function filterRelevance(level, btn) {
+  filterState.rel = level;
+  setActiveButton('relevance-filters', btn || (typeof event !== 'undefined' ? event.target : null));
+  applyFilters();
+  updateHash();
+}
 
-  document.querySelectorAll('.paper-card').forEach(card => {
-    if (level === 'all') {
-      card.style.display = '';
-    } else {
-      const cardRel = parseInt(card.getAttribute('data-relevance') || '1');
-      card.style.display = (cardRel === level) ? '' : 'none';
+function filterTag(tag, btn) {
+  filterState.tag = tag;
+  setActiveButton('tag-filters', btn || (typeof event !== 'undefined' ? event.target : null));
+  applyFilters();
+  updateHash();
+}
+
+function setActiveButton(groupId, btn) {
+  document.querySelectorAll('#' + groupId + ' .filter-btn').forEach(b => {
+    b.classList.toggle('active', b === btn);
+  });
+}
+
+function cardMatches(card) {
+  if (filterState.rel !== 'all') {
+    const rel = parseInt(card.getAttribute('data-relevance') || '1');
+    if (rel !== filterState.rel) return false;
+  }
+  if (filterState.tag !== 'all') {
+    const tags = (card.getAttribute('data-tags') || '').split(',');
+    if (!tags.includes(filterState.tag)) return false;
+  }
+  if (filterState.q) {
+    const title = (card.querySelector('.paper-title') || {}).textContent || '';
+    const abstract = (card.querySelector('.paper-abstract') || {}).textContent || '';
+    if (!(title + ' ' + abstract).toLowerCase().includes(filterState.q.toLowerCase())) return false;
+  }
+  return true;
+}
+
+function applyFilters() {
+  let visible = 0;
+  document.querySelectorAll('.date-section').forEach(sec => {
+    if (sec.getAttribute('data-date') !== filterState.date) {
+      sec.style.display = 'none';
+      return;
     }
+    let sectionVisible = 0;
+    sec.querySelectorAll('.paper-card').forEach(card => {
+      const show = cardMatches(card);
+      card.style.display = show ? '' : 'none';
+      if (show) sectionVisible++;
+    });
+    sec.style.display = sectionVisible > 0 ? '' : 'none';
+    visible = sectionVisible;
   });
+  const hint = document.getElementById('no-match');
+  if (hint) hint.style.display = visible === 0 ? '' : 'none';
 }
 
-function filterTag(tag) {
-  const btns = document.querySelectorAll('#tag-filters .filter-btn');
-  btns.forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
-
-  document.querySelectorAll('.paper-card').forEach(card => {
-    if (tag === 'all') {
-      card.style.display = '';
-    } else {
-      const cardTags = (card.getAttribute('data-tags') || '').split(',');
-      card.style.display = cardTags.includes(tag) ? '' : 'none';
-    }
-  });
+// --- URL hash 状态:#tag=Agent&date=2026-08-18&q=graphrag ---
+function buildHash() {
+  const parts = [];
+  const select = document.getElementById('date-select');
+  const defaultDate = select && select.options.length ? select.options[0].value : '';
+  if (filterState.date && filterState.date !== defaultDate) parts.push('date=' + encodeURIComponent(filterState.date));
+  if (filterState.rel !== 'all') parts.push('rel=' + filterState.rel);
+  if (filterState.tag !== 'all') parts.push('tag=' + encodeURIComponent(filterState.tag));
+  if (filterState.q) parts.push('q=' + encodeURIComponent(filterState.q));
+  return parts.join('&');
 }
 
-function resetFilters() {
-  document.querySelectorAll('#relevance-filters .filter-btn').forEach((b, i) => {
-    b.classList.toggle('active', i === 0);
-  });
-  document.querySelectorAll('#tag-filters .filter-btn').forEach((b, i) => {
-    b.classList.toggle('active', i === 0);
-  });
+function updateHash() {
+  const hash = buildHash();
+  history.replaceState(null, '', hash ? '#' + hash : location.pathname + location.search);
 }
 
-document.addEventListener('DOMContentLoaded', () => {});
+function parseHash(hash) {
+  const out = {};
+  (hash || '').replace(/^#/, '').split('&').forEach(pair => {
+    if (!pair) return;
+    const eq = pair.indexOf('=');
+    if (eq < 0) return;
+    const key = pair.slice(0, eq);
+    const value = decodeURIComponent(pair.slice(eq + 1));
+    if (['date', 'rel', 'tag', 'q'].includes(key)) out[key] = value;
+  });
+  return out;
+}
+
+function restoreFromHash() {
+  const parsed = parseHash(location.hash);
+  const select = document.getElementById('date-select');
+
+  // date: 只接受 selector 里存在的日期
+  let date = select && select.options.length ? select.options[0].value : '';
+  if (parsed.date && select &&
+      Array.from(select.options).some(o => o.value === parsed.date)) {
+    date = parsed.date;
+  }
+  filterState.date = date;
+  if (select) select.value = date;
+
+  // relevance
+  filterState.rel = 'all';
+  const relBtns = document.querySelectorAll('#relevance-filters .filter-btn');
+  let relBtn = relBtns[0];
+  if (parsed.rel && ['1', '2', '3'].includes(parsed.rel)) {
+    filterState.rel = parseInt(parsed.rel);
+    relBtns.forEach(b => {
+      if ((b.getAttribute('onclick') || '').includes('(' + parsed.rel + ')')) relBtn = b;
+    });
+  }
+  setActiveButton('relevance-filters', relBtn);
+
+  // tag: 只接受存在对应按钮的标签
+  filterState.tag = 'all';
+  const tagBtns = document.querySelectorAll('#tag-filters .filter-btn');
+  let tagBtn = tagBtns[0];
+  if (parsed.tag) {
+    tagBtns.forEach(b => {
+      if (b.textContent === parsed.tag) { filterState.tag = parsed.tag; tagBtn = b; }
+    });
+  }
+  setActiveButton('tag-filters', tagBtn);
+
+  // search
+  filterState.q = parsed.q || '';
+  const input = document.getElementById('search-input');
+  if (input) input.value = filterState.q;
+
+  applyFilters();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('search-input');
+  if (input) {
+    let timer;
+    input.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        filterState.q = input.value.trim();
+        applyFilters();
+        updateHash();
+      }, 200);
+    });
+  }
+  restoreFromHash();
+});
+
+// 浏览器前进/后退时恢复过滤状态（replaceState 不触发此事件,不会自循环）
+window.addEventListener('hashchange', restoreFromHash);
 </script>
 </body>
 </html>
