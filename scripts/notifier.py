@@ -6,8 +6,10 @@ import smtplib
 import urllib.request
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from datetime import datetime, timezone, timedelta
+from datetime import datetime
 from typing import List, Dict
+
+from common import CN_TZ
 
 
 def send_feishu(papers: List[Dict], webhook: str = "", title: str = "") -> bool:
@@ -17,9 +19,9 @@ def send_feishu(papers: List[Dict], webhook: str = "", title: str = "") -> bool:
         print("[Feishu] No webhook configured, skipping")
         return False
 
-    today = datetime.now(timezone(timedelta(hours=8))).strftime("%Y.%m.%d")
+    today = datetime.now(CN_TZ).strftime("%Y.%m.%d")
     weekday = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"][
-        datetime.now(timezone(timedelta(hours=8))).weekday()
+        datetime.now(CN_TZ).weekday()
     ]
 
     body_title = title or f"论文日报 | {today}（{weekday}）"
@@ -135,9 +137,9 @@ def send_email(papers: List[Dict], subscribers: List[str] = None, title: str = "
         print("[Email] No subscribers, skipping")
         return False
 
-    today = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d")
+    today = datetime.now(CN_TZ).strftime("%Y-%m-%d")
     weekday = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"][
-        datetime.now(timezone(timedelta(hours=8))).weekday()
+        datetime.now(CN_TZ).weekday()
     ]
 
     header_title = title or "AI Paper Daily"

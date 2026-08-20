@@ -10,13 +10,12 @@ CI runner 上 papers.db 不持久(data/papers.db 在 .gitignore 中),
 
 import re
 from pathlib import Path
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta
 from typing import List, Dict
 
+from common import CN_TZ, DOCS_DIR, render_report, prepend_index_entry
 from storage import get_papers_since, log_push, get_subscribers
 from notifier import send_feishu, send_email
-
-DOCS_DIR = Path(__file__).parent.parent / "docs"
 
 
 def weekly_score(paper: Dict) -> int:
@@ -41,13 +40,13 @@ def papers_from_reports(days: int = 7) -> List[Dict]:
     if not DOCS_DIR.exists():
         return []
 
-    cutoff = datetime.now(timezone(timedelta(hours=8))) - timedelta(days=days)
+    cutoff = datetime.now(CN_TZ) - timedelta(days=days)
     papers = []
     seen = set()
     for md in sorted(DOCS_DIR.glob("????-??-??.md"), reverse=True):
         try:
             file_date = datetime.strptime(md.stem, "%Y-%m-%d").replace(
-                tzinfo=timezone(timedelta(hours=8)))
+                tzinfo=CN_TZ)
         except ValueError:
             continue
         if file_date < cutoff:
@@ -85,40 +84,19 @@ def generate_weekly_report(papers: List[Dict], start: str, end: str,
     iso = datetime.strptime(end, "%Y-%m-%d").isocalendar()
     week_label = f"{iso[0]}-W{iso[1]:02d}"
 
-    lines = [
-        f"# 📄 论文周报 | {week_label}（{start} ~ {end}）\n",
-        f"过去 7 天共推送 {total} 篇论文，以下为按热度（投票 / 星标 / 开源代码）重排的 Top {len(papers)}：\n",
-    ]
-
-    for i, p in enumerate(papers, 1):
-        code_tag = " 📦代码" if p.get("has_code") else ""
-        lines.append(f"## {i}. {p['title']}{code_tag}\n")
-        lines.append(f"_{p.get('reason', '')}_\n")
-        if p.get("abstract"):
-            lines.append(f"> {p['abstract'][:200]}...\n")
-        links = []
-        if p.get("url"):
-            links.append(f"[📄 论文]({p['url']})")
-        if p.get("pdf_url"):
-            links.append(f"[📥 PDF]({p['pdf_url']})")
-        if p.get("code_url"):
-            links.append(f"[💻 代码]({p['code_url']})")
-        lines.append(" | ".join(links))
-        lines.append("")
-
-    lines.append(f"\n---\n_由 [AI Paper Daily](https://github.com/alloevil/AI-Paper-Daily) 自动生成_")
+    content = render_report(
+        papers,
+        title=f"📄 论文周报 | {week_label}（{start} ~ {end}）",
+        header_extra=(f"过去 7 天共推送 {total} 篇论文，"
+                      f"以下为按热度（投票 / 星标 / 开源代码）重排的 Top {len(papers)}："),
+    )
 
     report_path = DOCS_DIR / f"weekly-{week_label}.md"
-    report_path.write_text("\n".join(lines), encoding="utf-8")
+    report_path.write_text(content, encoding="utf-8")
 
     # 更新 index.md（与日报同样的历史记录条目风格）
-    index_path = DOCS_DIR / "index.md"
-    if index_path.exists():
-        existing = index_path.read_text(encoding="utf-8")
-        entry = f"- [📊 周报 {week_label}](weekly-{week_label}.md) - Top {len(papers)}\n"
-        if entry not in existing and "## 历史记录\n\n" in existing:
-            existing = existing.replace("## 历史记录\n\n", f"## 历史记录\n\n{entry}")
-            index_path.write_text(existing, encoding="utf-8")
+    prepend_index_entry(
+        f"- [📊 周报 {week_label}](weekly-{week_label}.md) - Top {len(papers)}\n")
 
     print(f"[Weekly] Generated {report_path}")
     return report_path
@@ -126,7 +104,7 @@ def generate_weekly_report(papers: List[Dict], start: str, end: str,
 
 def run_weekly(config: dict):
     """周报入口：取近 7 天论文 -> 重排 top N -> 报告 + 推送"""
-    now_cn = datetime.now(timezone(timedelta(hours=8)))
+    now_cn = datetime.now(CN_TZ)
     print(f"=== AI Paper Weekly {now_cn.strftime('%Y-%m-%d %H:%M')} ===")
 
     if not config.get("weekly", True):

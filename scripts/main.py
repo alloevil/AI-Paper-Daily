@@ -5,11 +5,12 @@ import re
 import sys
 import yaml
 from pathlib import Path
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta
 
 # 添加项目路径
 sys.path.insert(0, str(Path(__file__).parent))
 
+from common import CN_TZ, render_report, prepend_index_entry
 from sources.arxiv_source import fetch_arxiv
 from sources.huggingface_source import fetch_huggingface
 from filter import filter_papers
@@ -40,12 +41,12 @@ def get_recent_pushed_ids(days: int = 7) -> set:
     if not docs_dir.exists():
         return set()
 
-    cutoff = datetime.now(timezone(timedelta(hours=8))) - timedelta(days=days)
+    cutoff = datetime.now(CN_TZ) - timedelta(days=days)
     pushed = set()
     for md in docs_dir.glob("????-??-??.md"):
         try:
             file_date = datetime.strptime(md.stem, "%Y-%m-%d").replace(
-                tzinfo=timezone(timedelta(hours=8)))
+                tzinfo=CN_TZ)
         except ValueError:
             continue
         if file_date < cutoff:
@@ -64,7 +65,7 @@ def main():
         run_weekly(config)
         return
 
-    print(f"=== AI Paper Daily {datetime.now(timezone(timedelta(hours=8))).strftime('%Y-%m-%d %H:%M')} ===")
+    print(f"=== AI Paper Daily {datetime.now(CN_TZ).strftime('%Y-%m-%d %H:%M')} ===")
 
     keywords = config.get("keywords", ["LLM agent", "knowledge graph", "RAG"])
     categories = config.get("categories", ["cs.AI", "cs.CL"])
@@ -75,7 +76,7 @@ def main():
 
     # 1. 多源采集
     # arXiv 周末不发布新论文,周日/周一按需放宽时间窗口,避免空日报
-    now_cn = datetime.now(timezone(timedelta(hours=8)))
+    now_cn = datetime.now(CN_TZ)
     days = {0: 4, 6: 3}.get(now_cn.weekday(), 2)  # 周一=4天, 周日=3天, 其余=2天
     print(f"Fetch window: {days} days")
 
@@ -129,7 +130,7 @@ def main():
     print(f"Saved {new_count} new papers to database")
 
     # 5. 推送
-    today = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d")
+    today = datetime.now(CN_TZ).strftime("%Y-%m-%d")
 
     if notify_config.get("feishu", True):
         if send_feishu(selected):
@@ -166,50 +167,23 @@ def generate_report(papers: list, date: str, filter_mode: str = "no-key"):
         datetime.strptime(date, "%Y-%m-%d").weekday()
     ]
 
-    lines = [
-        f"# 📄 论文日报 | {date}（{weekday}）\n",
-    ]
-
-    for i, p in enumerate(papers, 1):
-        source_emoji = {"arxiv": "📑", "huggingface": "🤗", "paperswithcode": "💻"}.get(
-            p.get("source", ""), "📄"
-        )
-        code_tag = " 📦代码" if p.get("has_code") else ""
-
-        lines.append(f"## {i}. {p['title']}{code_tag}\n")
-        lines.append(f"_{p.get('reason', '')}_\n")
-
-        if p.get("abstract"):
-            lines.append(f"> {p['abstract'][:200]}...\n")
-
-        links = []
-        if p.get("url"):
-            links.append(f"[📄 论文]({p['url']})")
-        if p.get("pdf_url"):
-            links.append(f"[📥 PDF]({p['pdf_url']})")
-        if p.get("code_url"):
-            links.append(f"[💻 代码]({p['code_url']})")
-        lines.append(" | ".join(links))
-        lines.append("")
-
     filter_label = {
         "ai": "AI 语义筛选",
         "no-key": "热度回退（未配置 LLM）",
         "error": "热度回退（AI 筛选失败）",
     }.get(filter_mode, "热度回退")
-    lines.append(f"\n---\n_本期筛选方式：{filter_label}_\n\n_由 [AI Paper Daily](https://github.com/alloevil/AI-Paper-Daily) 自动生成_")
+
+    content = render_report(
+        papers,
+        title=f"📄 论文日报 | {date}（{weekday}）",
+        footer_extra=f"_本期筛选方式：{filter_label}_",
+    )
 
     report_path = docs_dir / f"{date}.md"
-    report_path.write_text("\n".join(lines), encoding="utf-8")
+    report_path.write_text(content, encoding="utf-8")
 
     # 更新 index.md
-    index_path = docs_dir / "index.md"
-    existing = index_path.read_text(encoding="utf-8") if index_path.exists() else "# 📄 AI Paper Daily\n\n每日论文发现与推送\n\n## 历史记录\n\n"
-    # 在历史记录开头插入新条目
-    entry = f"- [{date}（{weekday}）]({date}.md) - {len(papers)} 篇论文\n"
-    if entry not in existing:
-        existing = existing.replace("## 历史记录\n\n", f"## 历史记录\n\n{entry}")
-        index_path.write_text(existing, encoding="utf-8")
+    prepend_index_entry(f"- [{date}（{weekday}）]({date}.md) - {len(papers)} 篇论文\n")
 
     print(f"[Report] Generated {report_path}")
 
