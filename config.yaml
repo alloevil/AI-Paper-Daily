@@ -35,6 +35,11 @@ notify:
   feishu: true
   email: false
 
+# 周报模式（scripts/main.py --weekly,由 workflow 周一定时触发）
+# 从 SQLite/日报历史取过去 7 天论文,按热度重排取 top N
+weekly: true
+weekly_max_papers: 15
+
 # 凭据通过 GitHub Secrets 注入环境变量，不写在这里：
 # LLM_API_KEY / LLM_BASE_URL / FEISHU_WEBHOOK
 # SMTP_HOST / SMTP_PORT / SMTP_USER / SMTP_PASS

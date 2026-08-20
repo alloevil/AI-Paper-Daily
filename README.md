@@ -190,7 +190,24 @@ sources:
 notify:
   feishu: true     # Requires FEISHU_WEBHOOK secret
   email: false     # Requires SMTP_* secrets
+
+# ── Weekly Digest ──────────────────────────────
+weekly: true            # Monday "top papers of the week" roundup
+weekly_max_papers: 15   # Top N after re-ranking
 ```
+
+## 📊 Weekly Digest
+
+Every Monday the workflow runs `python scripts/main.py --weekly`: it pulls the
+last 7 days of delivered papers from history (SQLite when available, otherwise
+the committed daily reports), re-ranks them by votes / stars / open-source code,
+and delivers a "Weekly Roundup" through the same channels as the daily run —
+Feishu card, email, and a `docs/weekly-YYYY-WW.md` Pages report.
+
+The weekly digest intentionally repeats papers already delivered daily (that's
+the point), so it bypasses the daily push-log dedup. Disable it with
+`weekly: false` in `config.yaml`, or trigger it manually via
+**Actions → Run workflow → mode: weekly**.
 
 ## 📁 Project Structure
 
@@ -203,7 +220,9 @@ AI-Paper-Daily/
 │   ├── filter.py             # AI filtering & summarization
 │   ├── notifier.py           # Delivery (Feishu cards / HTML email)
 │   ├── storage.py            # SQLite storage + push log
-│   └── main.py               # Entry point
+│   ├── weekly.py             # Weekly digest (re-rank last 7 days)
+│   └── main.py               # Entry point (--weekly for weekly mode)
+├── tests/                    # Unit tests (python -m unittest discover tests)
 ├── config.yaml               # Configuration
 ├── data/                     # Data directory (auto-created)
 ├── docs/                     # GitHub Pages reports

@@ -56,9 +56,16 @@ def get_recent_pushed_ids(days: int = 7) -> set:
 
 
 def main():
+    config = load_config()
+
+    # 周报模式：python scripts/main.py --weekly
+    if "--weekly" in sys.argv:
+        from weekly import run_weekly
+        run_weekly(config)
+        return
+
     print(f"=== AI Paper Daily {datetime.now(timezone(timedelta(hours=8))).strftime('%Y-%m-%d %H:%M')} ===")
 
-    config = load_config()
     keywords = config.get("keywords", ["LLM agent", "knowledge graph", "RAG"])
     categories = config.get("categories", ["cs.AI", "cs.CL"])
     max_papers = config.get("max_papers", 10)

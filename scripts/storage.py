@@ -126,6 +126,26 @@ def get_unpushed_papers() -> List[Dict]:
     return papers
 
 
+def get_papers_since(days: int = 7) -> List[Dict]:
+    """获取最近 N 天入库的论文（按 created_at,UTC ISO 字符串比较）"""
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=days)).isoformat()
+    conn = init_db()
+    conn.row_factory = sqlite3.Row
+    rows = conn.execute(
+        "SELECT * FROM papers WHERE created_at >= ? ORDER BY created_at DESC",
+        (cutoff,)).fetchall()
+    conn.close()
+
+    papers = []
+    for row in rows:
+        p = dict(row)
+        p["authors"] = json.loads(p.get("authors") or "[]")
+        p["categories"] = json.loads(p.get("categories") or "[]")
+        p["has_code"] = bool(p.get("has_code"))
+        papers.append(p)
+    return papers
+
+
 def get_subscribers() -> List[str]:
     """获取邮件订阅者列表"""
     sub_file = DATA_DIR / "subscribers.txt"

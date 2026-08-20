@@ -10,8 +10,8 @@ from datetime import datetime, timezone, timedelta
 from typing import List, Dict
 
 
-def send_feishu(papers: List[Dict], webhook: str = "") -> bool:
-    """通过飞书 Webhook 推送论文"""
+def send_feishu(papers: List[Dict], webhook: str = "", title: str = "") -> bool:
+    """通过飞书 Webhook 推送论文；title 为空时使用日报默认标题"""
     webhook = webhook or os.environ.get("FEISHU_WEBHOOK", "")
     if not webhook:
         print("[Feishu] No webhook configured, skipping")
@@ -22,8 +22,11 @@ def send_feishu(papers: List[Dict], webhook: str = "") -> bool:
         datetime.now(timezone(timedelta(hours=8))).weekday()
     ]
 
+    body_title = title or f"论文日报 | {today}（{weekday}）"
+    card_title = title or f"论文日报 | {today}"
+
     # 构建消息内容
-    lines = [f"📄 **论文日报** | {today}（{weekday}）\n"]
+    lines = [f"📄 **{body_title}**\n"]
 
     for i, p in enumerate(papers, 1):
         # 标题行
@@ -58,7 +61,7 @@ def send_feishu(papers: List[Dict], webhook: str = "") -> bool:
             "header": {
                 "title": {
                     "tag": "plain_text",
-                    "content": f"📄 论文日报 | {today}"
+                    "content": f"📄 {card_title}"
                 },
                 "template": "blue"
             },
@@ -88,8 +91,8 @@ def send_feishu(papers: List[Dict], webhook: str = "") -> bool:
         return False
 
 
-def send_email(papers: List[Dict], subscribers: List[str] = None) -> bool:
-    """通过邮件推送论文"""
+def send_email(papers: List[Dict], subscribers: List[str] = None, title: str = "") -> bool:
+    """通过邮件推送论文；title 为空时使用日报默认标题"""
     host = os.environ.get("SMTP_HOST", "")
     user = os.environ.get("SMTP_USER", "")
     passwd = os.environ.get("SMTP_PASS", "")
@@ -109,6 +112,9 @@ def send_email(papers: List[Dict], subscribers: List[str] = None) -> bool:
         datetime.now(timezone(timedelta(hours=8))).weekday()
     ]
 
+    header_title = title or "AI Paper Daily"
+    section_label = "本周精选论文：" if title else "今日精选论文："
+
     # 构建 HTML 邮件（含暗模式适配）
     html_parts = [
         "<!DOCTYPE html>",
@@ -118,12 +124,12 @@ def send_email(papers: List[Dict], subscribers: List[str] = None) -> bool:
         "<div class=\"wrapper\" style=\"font-family:Arial,Helvetica,sans-serif;max-width:680px;margin:0 auto;padding:24px;background:#ffffff;\">",
         # Header
         "<div class=\"header\" style=\"background:#1a73e8;color:#ffffff;padding:20px 24px;border-radius:8px 8px 0 0;\">",
-        f"<h2 style=\"margin:0;font-size:20px;color:#ffffff;\">📄 AI Paper Daily</h2>",
+        f"<h2 style=\"margin:0;font-size:20px;color:#ffffff;\">📄 {header_title}</h2>",
         f"<p style=\"margin:4px 0 0;font-size:14px;color:rgba(255,255,255,0.85);\">{today}（{weekday}）</p>",
         "</div>",
         # Body
         "<div class=\"content\" style=\"padding:20px 24px;border:1px solid #e0e0e0;border-top:none;border-radius:0 0 8px 8px;\">",
-        "<p class=\"section-title\" style=\"margin:0 0 16px;font-size:15px;font-weight:bold;color:#1a1a1a;\">今日精选论文：</p>",
+        f"<p class=\"section-title\" style=\"margin:0 0 16px;font-size:15px;font-weight:bold;color:#1a1a1a;\">{section_label}</p>",
     ]
 
     for i, p in enumerate(papers, 1):
@@ -173,7 +179,7 @@ def send_email(papers: List[Dict], subscribers: List[str] = None) -> bool:
 
     # 发送邮件（单次发送，收件人用 BCC 保护隐私）
     msg = MIMEMultipart("alternative")
-    msg["Subject"] = f"📄 AI Paper Daily - {today}"
+    msg["Subject"] = f"📄 {header_title} - {today}"
     msg["From"] = user
     msg["To"] = user
     msg.attach(MIMEText(html_content, "html", "utf-8"))
