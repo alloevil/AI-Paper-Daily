@@ -5,8 +5,78 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 19 Aug 2026 04:43:39 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 04:44:06 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📄 SemaPLC: A Project-Grounded, Verification-Gated Agent Harness for PLC Code Generation (2026-08-20)</title>
+      <description>Programmable logic controllers (PLCs) run industrial plants, and large language models can already generate independent program organization units (POUs) for them. Whether such logic integrates into a...</description>
+      <link>https://arxiv.org/abs/2608.18565</link>
+      <guid>https://arxiv.org/abs/2608.18565#2026-08-20</guid>
+      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SPADE: Self-Play in Adaptive Synthetic Executable Environments (2026-08-20)</title>
+      <description>Continuous self-improvement requires an ever-expanding pool of self-generated, diverse, adaptive goals. For language agents, existing training environment pools (hand-curated, statically synthesized, ...</description>
+      <link>https://arxiv.org/abs/2608.19197</link>
+      <guid>https://arxiv.org/abs/2608.19197#2026-08-20</guid>
+      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Decision-Metric Alignment in Latent World Models: Diagnostics and Action-Conditioned Objectives for MPC Planning (2026-08-20)</title>
+      <description>JEPA-style latent world models can use Euclidean distance to a goal latent as the cost for model-predictive control (MPC). Strong decoding of task variables, however, does not guarantee that this part...</description>
+      <link>https://arxiv.org/abs/2608.18746</link>
+      <guid>https://arxiv.org/abs/2608.18746#2026-08-20</guid>
+      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Training Chemical Plausibility-Aware Large Language Models for Single-Step Retrosynthesis (2026-08-20)</title>
+      <description>Single-step retrosynthesis is a central component of computer-aided synthesis planning, yet its intrinsically one-to-many nature is poorly captured by single-answer evaluation and benchmarking protoco...</description>
+      <link>https://arxiv.org/abs/2608.18940</link>
+      <guid>https://arxiv.org/abs/2608.18940#2026-08-20</guid>
+      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation (2026-08-20)</title>
+      <description>Physical interaction quality is central to deformable-object manipulation, yet most benchmarks evaluate task success alone. A policy may complete the task while allowing slip or causing excessive comp...</description>
+      <link>https://arxiv.org/abs/2608.18701</link>
+      <guid>https://arxiv.org/abs/2608.18701#2026-08-20</guid>
+      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 One Gate Is Not Enough: Composing Stateful Pre-Action Controls for Agentic AI 📦代码 (2026-08-20)</title>
+      <description>Agentic AI systems take consequential actions governed by more than one pre-action control at once: authority, resource, and evidence gates that can admit, degrade, or remediate an action before it ex...</description>
+      <link>http://arxiv.org/abs/2608.18360v1</link>
+      <guid>http://arxiv.org/abs/2608.18360v1#2026-08-20</guid>
+      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SkillForge: Self-Distilling Agents for Project-Specific Issue Resolution (2026-08-20)</title>
+      <description>Large language model (LLM) based agents have demonstrated remarkable proficiency in automated software issue resolution, yet they often struggle to resolve issues in a specific repository because they...</description>
+      <link>https://arxiv.org/abs/2608.18933</link>
+      <guid>https://arxiv.org/abs/2608.18933#2026-08-20</guid>
+      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Co-RL: Unsupervised Reasoning Emerges from Diverse Cohort in Multi-agent RL (2026-08-20)</title>
+      <description>Reinforcement learning (RL) has emerged as a powerful approach for improving reasoning in language and vision-language models, yet its strongest successes still depend heavily on ground-truth supervis...</description>
+      <link>https://arxiv.org/abs/2608.17253</link>
+      <guid>https://arxiv.org/abs/2608.17253#2026-08-20</guid>
+      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 FACET: Preserving Source Intent and Executable State in Terminal Task Synthesis (2026-08-20)</title>
+      <description>Training terminal agents requires scalable executable supervision, yet synthesizing high-quality terminal tasks remains challenging. Each task couples an instruction, an initialized environment, a ref...</description>
+      <link>https://arxiv.org/abs/2608.18580</link>
+      <guid>https://arxiv.org/abs/2608.18580#2026-08-20</guid>
+      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 What is Missing from AI Post-Training AI: An Empirical Analysis (2026-08-20)</title>
+      <description>Large language model (LLM) agents can now post-train an LLM end-to-end. They can write code, launch training, evaluate checkpoints, and improve downstream performance, raising the prospect of AI-for-A...</description>
+      <link>http://arxiv.org/abs/2608.19072v1</link>
+      <guid>http://arxiv.org/abs/2608.19072v1#2026-08-20</guid>
+      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📄 ASI-Bench: At the Dawn of Artificial Superintelligence (2026-08-19)</title>
       <description>Artificial superintelligence (ASI) requires AI to move beyond mastering existing knowledge toward exploring the unknown, creating new knowledge, and turning new ideas into verifiable results. However,...</description>
@@ -286,76 +356,6 @@
       <link>http://arxiv.org/abs/2608.13050v1</link>
       <guid>http://arxiv.org/abs/2608.13050v1#2026-08-15</guid>
       <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 BoardroomAI: Dependency-Aware Human-Steerable Multi-Agent Deliberation through Evolving Decision Graphs (2026-08-15)</title>
-      <description>Organizational decisions are co-created while evidence, constraints, and human priorities continue to evolve. In conventional transcript-based multi-agent systems, humans typically provide an initial ...</description>
-      <link>http://arxiv.org/abs/2608.13046v1</link>
-      <guid>http://arxiv.org/abs/2608.13046v1#2026-08-15</guid>
-      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Static analysis-guided agentic AI translation enables Rust as a full stack bioinformatics language (2026-08-15)</title>
-      <description>The field of bioinformatics struggles with legacy code - old code that is commonly used but may no longer have a maintainer, or may be written in an now-unfamiliar language (e.g. Perl, Fortran). This ...</description>
-      <link>http://arxiv.org/abs/2608.13029v1</link>
-      <guid>http://arxiv.org/abs/2608.13029v1#2026-08-15</guid>
-      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 HybridRAG-BN: A Retrieval-Augmented Framework with Fine-Tuned Verification for Bangla KBQA (2026-08-15)</title>
-      <description>Knowledge-base question answering (KBQA) systems rely on effective retrieval and reasoning mechanisms to generate accurate answers from external knowledge sources. However, developing reliable KBQA sy...</description>
-      <link>http://arxiv.org/abs/2608.13004v1</link>
-      <guid>http://arxiv.org/abs/2608.13004v1#2026-08-15</guid>
-      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 LycheeMemory V2: Efficient Long-Term Memory for LLM Agents via Semantic Segment-Level Consolidation (2026-08-15)</title>
-      <description>Long-horizon LLM agents must preserve information from past interactions to support future tasks. Existing memory systems typically rely on eager consolidation, invoking LLMs after each interaction to...</description>
-      <link>http://arxiv.org/abs/2608.12990v1</link>
-      <guid>http://arxiv.org/abs/2608.12990v1#2026-08-15</guid>
-      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation (2026-08-14)</title>
-      <description>We present DreamX-Phi 1.0, an action-conditioned video world model for robotic manipulation that, given an observed frame, a language instruction, and a prescribed action sequence comprising end-effec...</description>
-      <link>https://arxiv.org/abs/2608.13489</link>
-      <guid>https://arxiv.org/abs/2608.13489#2026-08-14</guid>
-      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Intern-S2-Preview: Scientific Agentic Foundation Model (2026-08-14)</title>
-      <description>Scientific discovery increasingly requires AI systems that can reason over scientific evidence of heterogeneous modalities, interact with scientific tools and environments, and sustain progress across...</description>
-      <link>https://arxiv.org/abs/2608.13505</link>
-      <guid>https://arxiv.org/abs/2608.13505#2026-08-14</guid>
-      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Spatial Memory Agent: Experience-Grounded Procedure Memory for Spatial Intelligence (2026-08-14)</title>
-      <description>Spatial intelligence is becoming a foundation for embodied agents, robotic planning, and multimodal assistants. To improve the spatial reasoning ability of VLM agents, existing work has mainly followe...</description>
-      <link>https://arxiv.org/abs/2608.12743</link>
-      <guid>https://arxiv.org/abs/2608.12743#2026-08-14</guid>
-      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design (2026-08-14)</title>
-      <description>Transforming multimodal sources into condensed and structured media outputs can be fundamentally conceptualized as a long-horizon agentic process centered on a model-harness system. While an ideal har...</description>
-      <link>https://arxiv.org/abs/2608.13560</link>
-      <guid>https://arxiv.org/abs/2608.13560#2026-08-14</guid>
-      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PlayWorld: Benchmarking World Models with Agent Players over Long-Horizon Objectives (2026-08-14)</title>
-      <description>Video world models simulate future states conditioned on current observations and user actions. Recent systems have demonstrated impressive video consistency and action controllability over long seque...</description>
-      <link>https://arxiv.org/abs/2608.13552</link>
-      <guid>https://arxiv.org/abs/2608.13552#2026-08-14</guid>
-      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Agent Behavioral Contracts II: Certifying Compositional Reliability Without Assuming Independence 📦代码 (2026-08-14)</title>
-      <description>Compositional reliability bounds for multi-agent systems multiply component reliabilities, a step licensed by a conditional-independence assumption that is routinely stated and rarely tested. We test ...</description>
-      <link>http://arxiv.org/abs/2608.12895v1</link>
-      <guid>http://arxiv.org/abs/2608.12895v1#2026-08-14</guid>
-      <pubDate>Fri, 14 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
