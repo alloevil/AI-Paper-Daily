@@ -79,7 +79,7 @@ Go to `Settings → Secrets and variables → Actions` and add:
 | `SMTP_USER` | ⬚ | Email account |
 | `SMTP_PASS` | ⬚ | Email password / app password |
 
-> 💡 **Minimum setup**: Only `LLM_API_KEY` is required. Papers will be saved to the database and published as GitHub Pages.
+> 💡 **Minimum setup**: Only `LLM_API_KEY` is required. Papers will be committed as markdown reports and published as GitHub Pages.
 
 ### Step 3: Enable Actions
 
@@ -123,7 +123,8 @@ Go to `Actions → Daily AI Paper Daily → Run workflow` and trigger a manual r
 │              └──────┬─────┘                             │
 │                     ▼                                   │
 │         ┌──────────────────┐                            │
-│         │   SQLite Storage  │   Persistence             │
+│         │ Markdown Reports │   Persistence              │
+│         │ (docs/*.md, git) │                            │
 │         └────────┬─────────┘                            │
 │                  ▼                                      │
 │    ┌─────────────┼─────────────┐                        │
@@ -198,9 +199,9 @@ weekly_max_papers: 15   # Top N after re-ranking
 
 ## 📊 Weekly Digest
 
-Every Monday the workflow runs `python scripts/main.py --weekly`: it pulls the
-last 7 days of delivered papers from history (SQLite when available, otherwise
-the committed daily reports), re-ranks them by votes / stars / open-source code,
+Every Monday the workflow runs `python scripts/main.py --weekly`: it rebuilds the
+last 7 days of delivered papers from the committed daily reports (markdown is
+the system's database), re-ranks them by votes / stars / open-source code,
 and delivers a "Weekly Roundup" through the same channels as the daily run —
 Feishu card, email, and a `docs/weekly-YYYY-WW.md` Pages report.
 
@@ -218,8 +219,10 @@ AI-Paper-Daily/
 │   │   ├── arxiv_source.py   # arXiv API
 │   │   └── huggingface_source.py  # HuggingFace Daily Papers
 │   ├── filter.py             # AI filtering & summarization
+│   ├── common.py             # Shared renderer (paper block / report / index) + CN_TZ
 │   ├── notifier.py           # Delivery (Feishu cards / HTML email)
-│   ├── storage.py            # SQLite storage + push log
+│   ├── reports.py            # Read layer: parse committed markdown reports
+│   ├── storage.py            # Subscriber list (light file data)
 │   ├── weekly.py             # Weekly digest (re-rank last 7 days)
 │   └── main.py               # Entry point (--weekly for weekly mode)
 ├── tests/                    # Unit tests (python -m unittest discover tests)
@@ -305,7 +308,9 @@ Edit the `schedule_cron` field in `config.yaml`. Standard cron format (UTC). For
 <details>
 <summary><b>Q: Where is the data stored?</b></summary>
 
-SQLite database at `data/papers.db`, auto-created. Push logs are in the same database.
+The committed markdown reports under `docs/` are the system's database: the
+daily run writes them, and the weekly digest and website rebuild everything by
+parsing them back. `data/` only holds light files like the email subscriber list.
 
 </details>
 

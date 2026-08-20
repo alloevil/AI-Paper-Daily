@@ -36,7 +36,7 @@ notify:
   email: false
 
 # 周报模式（scripts/main.py --weekly,由 workflow 周一定时触发）
-# 从 SQLite/日报历史取过去 7 天论文,按热度重排取 top N
+# 从已提交的日报 Markdown 取过去 7 天论文,按热度重排取 top N
 weekly: true
 weekly_max_papers: 15
 

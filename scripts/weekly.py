@@ -1,11 +1,9 @@
 """周报模式 - 过去 7 天 top 论文汇总
 
-从 SQLite 历史中取最近 7 天的论文,按 投票+星标+代码 复合分重排,
-取 top N 生成周报(飞书/邮件/Pages 报告)。周报有意重复日报已推送
-的论文——这正是它的价值——因此不经过日报的推送去重逻辑。
-
-CI runner 上 papers.db 不持久(data/papers.db 在 .gitignore 中),
-此时回退到解析已提交的日报 Markdown,与日报去重逻辑同一思路。
+从已提交的日报 Markdown(系统的事实数据源,见 reports.py)重建最近
+7 天的论文,按 投票+星标+代码 复合分重排,取 top N 生成周报
+(飞书/邮件/Pages 报告)。周报有意重复日报已推送的论文——这正是
+它的价值——因此不经过日报的推送去重逻辑。
 """
 
 import re
@@ -14,7 +12,8 @@ from datetime import datetime, timedelta
 from typing import List, Dict
 
 from common import CN_TZ, DOCS_DIR, render_report, prepend_index_entry
-from storage import get_papers_since, log_push, get_subscribers
+from reports import parse_papers
+from storage import get_subscribers
 from notifier import send_feishu, send_email
 
 
@@ -34,9 +33,7 @@ def rank_papers(papers: List[Dict], top_n: int = 15) -> List[Dict]:
 
 
 def papers_from_reports(days: int = 7) -> List[Dict]:
-    """从最近 N 天的日报 Markdown 重建论文列表（CI 上 SQLite 不持久时的回退）"""
-    from generate_site import parse_papers
-
+    """从最近 N 天的日报 Markdown 重建论文列表(md 是唯一事实数据源)"""
     if not DOCS_DIR.exists():
         return []
 
@@ -116,13 +113,9 @@ def run_weekly(config: dict):
     top_n = config.get("weekly_max_papers", 15)
     notify_config = config.get("notify", {})
 
-    # 1. 取过去 7 天论文：优先 SQLite,CI 上 DB 不持久时回退日报 Markdown
-    papers = get_papers_since(days=7)
-    source = "sqlite"
-    if not papers:
-        papers = papers_from_reports(days=7)
-        source = "markdown reports"
-    print(f"[Weekly] {len(papers)} papers in the last 7 days (from {source})")
+    # 1. 从已提交的日报 Markdown 重建过去 7 天论文
+    papers = papers_from_reports(days=7)
+    print(f"[Weekly] {len(papers)} papers in the last 7 days (from markdown reports)")
 
     if not papers:
         print("[Weekly] No papers in window, exiting")
@@ -139,14 +132,11 @@ def run_weekly(config: dict):
 
     title = f"论文周报 | {start} ~ {end}"
     if notify_config.get("feishu", True):
-        status = "ok" if send_feishu(ranked, title=title) else "failed"
-        log_push(end, len(ranked), "feishu-weekly", status)
+        send_feishu(ranked, title=title)
 
     if notify_config.get("email", False):
         subscribers = get_subscribers()
         if subscribers:
-            status = "ok" if send_email(ranked, subscribers,
-                                        title="AI Paper Weekly") else "failed"
-            log_push(end, len(ranked), "email-weekly", status)
+            send_email(ranked, subscribers, title="AI Paper Weekly")
 
     print(f"\n=== Done! Weekly roundup: {len(ranked)} papers ===")

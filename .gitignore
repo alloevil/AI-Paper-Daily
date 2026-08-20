@@ -22,10 +22,6 @@ env/
 .env
 .env.local
 
-# Data
-data/papers.db
-data/*.db-journal
-
 # OS
 .DS_Store
 Thumbs.db

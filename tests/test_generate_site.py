@@ -1,4 +1,4 @@
-"""站点生成解析测试:日报 md 是事实数据源,标题不得携带展示性标签
+"""站点生成与 md 读取层测试:日报 md 是事实数据源,标题不得携带展示性标签
 
 运行:python -m unittest discover tests
 """
@@ -10,7 +10,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
 
-from generate_site import parse_papers, parse_weekly_title, render_weekly_page, generate_rss
+from reports import parse_papers, parse_weekly_title
+from generate_site import render_weekly_page, generate_rss
+from common import render_report
 
 SAMPLE_MD = """# 📄 论文日报 | 2026-08-20（周四）
 
@@ -133,6 +135,67 @@ class WeeklySitePageTest(unittest.TestCase):
         xml = generate_rss([], [("2026-W34", self.date_range, self.papers)])
         self.assertIn("论文周报 2026-W34", xml)
         self.assertIn("weekly-2026-W34.html", xml)
+
+
+class WriteReadRoundTripTest(unittest.TestCase):
+    """md-as-database 契约:common.render_report 写出的报告,
+    reports.parse_papers 必须无损回读关键字段(#6:parse_papers 是正式读取层)"""
+
+    PAPERS = [
+        {
+            "title": "Round Trip Paper",
+            "reason": "高票/有代码",
+            "abstract": "An abstract for round-trip.",
+            "url": "https://arxiv.org/abs/2608.77777",
+            "pdf_url": "https://arxiv.org/pdf/2608.77777",
+            "code_url": "https://github.com/r/t",
+            "has_code": True,
+            "votes": 42,
+        },
+        {
+            "title": "Zero Votes Paper",
+            "reason": "最新论文",
+            "abstract": "",
+            "url": "https://arxiv.org/abs/2608.88888",
+            "pdf_url": "",
+            "code_url": "",
+            "has_code": False,
+            "votes": 0,
+        },
+    ]
+
+    def setUp(self):
+        md = render_report(self.PAPERS, title="📄 论文日报 | 2026-01-01（周四）",
+                           footer_extra="_本期筛选方式：AI 语义筛选_")
+        self._tmp = tempfile.NamedTemporaryFile(
+            "w", suffix=".md", encoding="utf-8", delete=False)
+        self._tmp.write(md)
+        self._tmp.close()
+        self.parsed = parse_papers(self._tmp.name)
+
+    def tearDown(self):
+        Path(self._tmp.name).unlink(missing_ok=True)
+
+    def test_titles_round_trip(self):
+        self.assertEqual([p["title"] for p in self.parsed],
+                         ["Round Trip Paper", "Zero Votes Paper"])
+
+    def test_links_round_trip(self):
+        links = self.parsed[0]["links"]
+        self.assertEqual(links["paper"], "https://arxiv.org/abs/2608.77777")
+        self.assertEqual(links["pdf"], "https://arxiv.org/pdf/2608.77777")
+        self.assertEqual(links["code"], "https://github.com/r/t")
+        self.assertEqual(self.parsed[1]["links"], {"paper": "https://arxiv.org/abs/2608.88888"})
+
+    def test_tag_and_votes_round_trip(self):
+        self.assertEqual(self.parsed[0]["tag"], "高票/有代码")
+        self.assertEqual(self.parsed[0]["votes"], 42)
+        self.assertEqual(self.parsed[1]["tag"], "最新论文")
+        self.assertEqual(self.parsed[1]["votes"], 0)
+
+    def test_abstract_round_trip(self):
+        self.assertEqual(self.parsed[0]["abstract"][:12], "An abstract ")
+        self.assertEqual(self.parsed[1]["abstract"], "")
 
 
 if __name__ == "__main__":

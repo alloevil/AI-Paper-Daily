@@ -15,7 +15,7 @@ from sources.arxiv_source import fetch_arxiv
 from sources.huggingface_source import fetch_huggingface
 from filter import filter_papers
 from notifier import send_feishu, send_email
-from storage import save_papers, mark_pushed, log_push, get_subscribers
+from storage import get_subscribers
 
 
 def load_config() -> dict:
@@ -35,7 +35,7 @@ def norm_id(paper_id: str) -> str:
 def get_recent_pushed_ids(days: int = 7) -> set:
     """从最近 N 天的日报 Markdown 中提取已推送的 arXiv ID（归一化后）。
 
-    日报文件已提交入库，跨 CI 运行持久，比一次性 runner 上的 SQLite 可靠。
+    日报文件已提交入库，跨 CI 运行持久——docs/*.md 就是系统的数据库。
     """
     docs_dir = Path(__file__).parent.parent / "docs"
     if not docs_dir.exists():
@@ -125,29 +125,18 @@ def main():
         print("No papers selected after filtering")
         return
 
-    # 4. 保存到数据库
-    new_count = save_papers(selected)
-    print(f"Saved {new_count} new papers to database")
-
-    # 5. 推送
-    today = datetime.now(CN_TZ).strftime("%Y-%m-%d")
-
+    # 4. 推送(推送去重靠已提交的日报 md,见 get_recent_pushed_ids;
+    #    原 SQLite 保存/push_log 从未被读回,已随 #6 删除)
     if notify_config.get("feishu", True):
-        if send_feishu(selected):
-            mark_pushed([p["id"] for p in selected])
-            log_push(today, len(selected), "feishu", "ok")
-        else:
-            log_push(today, len(selected), "feishu", "failed")
+        send_feishu(selected)
 
     if notify_config.get("email", False):
         subscribers = get_subscribers()
         if subscribers:
-            if send_email(selected, subscribers):
-                log_push(today, len(selected), "email", "ok")
-            else:
-                log_push(today, len(selected), "email", "failed")
+            send_email(selected, subscribers)
 
-    # 6. 生成 Markdown 报告（用于 GitHub Pages）
+    # 5. 生成 Markdown 报告（用于 GitHub Pages）
+    today = datetime.now(CN_TZ).strftime("%Y-%m-%d")
     generate_report(selected, today, filter_mode)
 
     print(f"\n=== Done! Pushed {len(selected)} papers ===")
