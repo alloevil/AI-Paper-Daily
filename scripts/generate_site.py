@@ -34,7 +34,9 @@ def parse_papers(filepath: str) -> list[dict]:
         if not lines:
             continue
         title = lines[0].strip()
-        # Remove any trailing markdown formatting
+        # 剥离日报标题里拼接的展示性标签（如 " 📦代码"），
+        # 避免污染回流到站点/RSS/周报（周报双标签的根因）
+        title = re.sub(r'(\s*📦代码)+$', '', title).strip()
         paper['title'] = title
 
         # Tag: look for _italic text_ on its own line

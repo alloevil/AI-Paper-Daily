@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 20 Aug 2026 07:00:18 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 10:09:53 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📄 SemaPLC: A Project-Grounded, Verification-Gated Agent Harness for PLC Code Generation (2026-08-20)</title>
@@ -43,7 +43,7 @@
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 One Gate Is Not Enough: Composing Stateful Pre-Action Controls for Agentic AI 📦代码 (2026-08-20)</title>
+      <title>📄 One Gate Is Not Enough: Composing Stateful Pre-Action Controls for Agentic AI (2026-08-20)</title>
       <description>Agentic AI systems take consequential actions governed by more than one pre-action control at once: authority, resource, and evidence gates that can admit, degrade, or remediate an action before it ex...</description>
       <link>http://arxiv.org/abs/2608.18360v1</link>
       <guid>http://arxiv.org/abs/2608.18360v1#2026-08-20</guid>
@@ -169,21 +169,21 @@
       <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 Quipu: A Governed Bitemporal Knowledge Graph Store 📦代码 (2026-08-18)</title>
+      <title>📄 Quipu: A Governed Bitemporal Knowledge Graph Store (2026-08-18)</title>
       <description>Agents now write knowledge graphs, but knowledge-graph stores still carry defaults set when humans curated them: accept writes now and clean later, keep one time axis or none, treat every writer's fac...</description>
       <link>http://arxiv.org/abs/2608.16813v1</link>
       <guid>http://arxiv.org/abs/2608.16813v1#2026-08-18</guid>
       <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 MELD: A Protocol for Merging Knowledge Across Distributed Agentic Memories 📦代码 (2026-08-18)</title>
+      <title>📄 MELD: A Protocol for Merging Knowledge Across Distributed Agentic Memories (2026-08-18)</title>
       <description>Autonomous agents share a transport and can call each other's tools, but they cannot share what they know: no protocol lets two agents' memories reconcile a fact phrased two ways, link related facts h...</description>
       <link>http://arxiv.org/abs/2608.16357v1</link>
       <guid>http://arxiv.org/abs/2608.16357v1#2026-08-18</guid>
       <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 Bounded Agents: Delegation Security for Multi-Agent AI Systems 📦代码 (2026-08-18)</title>
+      <title>📄 Bounded Agents: Delegation Security for Multi-Agent AI Systems (2026-08-18)</title>
       <description>LLM-based agents can act on behalf of a user to access cloud services, call tools, or invoke agents. At session start, the agent's permissions are set but remain static, and each request is evaluated ...</description>
       <link>http://arxiv.org/abs/2608.15888v1</link>
       <guid>http://arxiv.org/abs/2608.15888v1#2026-08-18</guid>
@@ -232,14 +232,14 @@
       <pubDate>Mon, 17 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 Implementing Computational Law in Wolfram Language for the Governance of Artificial Intelligence 📦代码 (2026-08-17)</title>
+      <title>📄 Implementing Computational Law in Wolfram Language for the Governance of Artificial Intelligence (2026-08-17)</title>
       <description>How do we govern AI systems whose reasoning we cannot fully inspect? Governance does not require understanding a system's reasoning. It requires stating what the system is obliged, permitted, and forb...</description>
       <link>http://arxiv.org/abs/2608.13958v1</link>
       <guid>http://arxiv.org/abs/2608.13958v1#2026-08-17</guid>
       <pubDate>Mon, 17 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 Ontology-Grounded Project Memory for Coding Agents 📦代码 (2026-08-17)</title>
+      <title>📄 Ontology-Grounded Project Memory for Coding Agents (2026-08-17)</title>
       <description>Coding agents have become the primary means of generating new code in many software projects, and the resulting velocity of changes makes keeping track of the reasons behind those changes challenging....</description>
       <link>http://arxiv.org/abs/2608.13662v1</link>
       <guid>http://arxiv.org/abs/2608.13662v1#2026-08-17</guid>
