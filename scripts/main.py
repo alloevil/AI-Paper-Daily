@@ -119,7 +119,7 @@ def main():
         return
 
     # 3. AI 筛选
-    selected = filter_papers(unique_papers, keywords, max_papers, language)
+    selected, filter_mode = filter_papers(unique_papers, keywords, max_papers, language)
     if not selected:
         print("No papers selected after filtering")
         return
@@ -147,12 +147,17 @@ def main():
                 log_push(today, len(selected), "email", "failed")
 
     # 6. 生成 Markdown 报告（用于 GitHub Pages）
-    generate_report(selected, today)
+    generate_report(selected, today, filter_mode)
 
     print(f"\n=== Done! Pushed {len(selected)} papers ===")
 
+    # LLM 配置了 key 却调用失败：报告和推送已完成,但以非零退出码让 CI 标红
+    if filter_mode == "error":
+        print("[Main] AI filtering failed (see stderr); exiting non-zero", file=sys.stderr)
+        sys.exit(1)
 
-def generate_report(papers: list, date: str):
+
+def generate_report(papers: list, date: str, filter_mode: str = "no-key"):
     """生成每日 Markdown 报告"""
     docs_dir = Path(__file__).parent.parent / "docs"
     docs_dir.mkdir(parents=True, exist_ok=True)
@@ -187,7 +192,12 @@ def generate_report(papers: list, date: str):
         lines.append(" | ".join(links))
         lines.append("")
 
-    lines.append(f"\n---\n_由 [AI Paper Daily](https://github.com/alloevil/AI-Paper-Daily) 自动生成_")
+    filter_label = {
+        "ai": "AI 语义筛选",
+        "no-key": "热度回退（未配置 LLM）",
+        "error": "热度回退（AI 筛选失败）",
+    }.get(filter_mode, "热度回退")
+    lines.append(f"\n---\n_本期筛选方式：{filter_label}_\n\n_由 [AI Paper Daily](https://github.com/alloevil/AI-Paper-Daily) 自动生成_")
 
     report_path = docs_dir / f"{date}.md"
     report_path.write_text("\n".join(lines), encoding="utf-8")

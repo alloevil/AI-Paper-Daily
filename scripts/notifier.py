@@ -91,6 +91,34 @@ def send_feishu(papers: List[Dict], webhook: str = "", title: str = "") -> bool:
         return False
 
 
+def send_feishu_alert(text: str, webhook: str = "") -> bool:
+    """通过飞书 Webhook 推送纯文本告警（供流水线失败告警使用）；无 webhook 时静默跳过"""
+    webhook = webhook or os.environ.get("FEISHU_WEBHOOK", "")
+    if not webhook:
+        print("[Feishu] No webhook configured, skipping alert")
+        return False
+
+    payload = json.dumps({
+        "msg_type": "text",
+        "content": {"text": text},
+    }).encode()
+
+    try:
+        req = urllib.request.Request(webhook, data=payload, headers={
+            "Content-Type": "application/json",
+        })
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            result = json.loads(resp.read().decode())
+            if result.get("code") == 0 or result.get("StatusCode") == 0:
+                print("[Feishu] Alert sent")
+                return True
+            print(f"[Feishu] Alert error: {result}")
+            return False
+    except Exception as e:
+        print(f"[Feishu] Alert error: {e}")
+        return False
+
+
 def send_email(papers: List[Dict], subscribers: List[str] = None, title: str = "") -> bool:
     """通过邮件推送论文；title 为空时使用日报默认标题"""
     host = os.environ.get("SMTP_HOST", "")

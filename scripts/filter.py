@@ -3,17 +3,25 @@
 import json
 import os
 import re
+import sys
 import urllib.request
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Tuple
+
+from notifier import send_feishu_alert
+
+
+class LLMError(Exception):
+    """LLM 调用失败(配置了 API key 但请求/响应出错)——与无 key 的可接受降级不同,必须可见"""
 
 
 def call_llm(prompt: str, model: str = "gpt-4o-mini") -> str:
-    """调用 LLM API"""
+    """调用 LLM API。无 key 返回空串(可接受降级);有 key 但调用失败抛 LLMError。"""
     api_key = os.environ.get("LLM_API_KEY", "")
     base_url = os.environ.get("LLM_BASE_URL", "https://api.openai.com/v1")
 
     if not api_key:
-        print("[Filter] No LLM_API_KEY, skipping AI filter")
+        print("[Filter] No LLM_API_KEY, skipping AI filter "
+              "(acceptable degradation: falling back to popularity ranking)")
         return ""
 
     payload = json.dumps({
@@ -37,15 +45,29 @@ def call_llm(prompt: str, model: str = "gpt-4o-mini") -> str:
             result = json.loads(resp.read().decode())
             return result["choices"][0]["message"]["content"]
     except Exception as e:
-        print(f"[Filter] LLM error: {e}")
-        return ""
+        raise LLMError(f"LLM request failed: {e}") from e
+
+
+def _report_llm_failure(detail: str) -> None:
+    """LLM 调用/解析失败必须可见:stderr + 飞书告警(webhook 可用时)"""
+    print(f"[Filter] AI filtering FAILED, falling back to popularity ranking: {detail}",
+          file=sys.stderr)
+    send_feishu_alert(
+        f"⚠️ AI Paper Daily: LLM 筛选失败,本期日报为热度回退(未经 AI 筛选)。\n{detail}"
+    )
 
 
 def filter_papers(papers: List[Dict], keywords: List[str],
-                  max_papers: int = 10, language: str = "zh") -> List[Dict]:
-    """用 AI 筛选论文并生成摘要"""
+                  max_papers: int = 10, language: str = "zh") -> Tuple[List[Dict], str]:
+    """用 AI 筛选论文并生成摘要。
+
+    返回 (选中论文, 筛选方式)，筛选方式取值：
+    - "ai"：LLM 语义筛选成功
+    - "no-key"：未配置 LLM_API_KEY，热度回退（可接受降级）
+    - "error"：配置了 key 但 LLM 调用/解析失败，热度回退（已告警，调用方应以非零退出码结束）
+    """
     if not papers:
-        return []
+        return [], "no-key"
 
     # 构建论文列表给 LLM
     paper_list = []
@@ -79,7 +101,14 @@ def filter_papers(papers: List[Dict], keywords: List[str],
 
 只返回 JSON，不要其他内容。"""
 
-    result = call_llm(prompt)
+    mode = "ai"
+    try:
+        result = call_llm(prompt)
+    except LLMError as e:
+        _report_llm_failure(str(e))
+        result = ""
+        mode = "error"
+
     if not result:
         # LLM 不可用时，按投票/星标排序取前 N
         sorted_papers = sorted(papers, key=lambda x: (
@@ -88,7 +117,7 @@ def filter_papers(papers: List[Dict], keywords: List[str],
         selected = sorted_papers[:max_papers]
         for p in selected:
             p["reason"] = "高票/有代码" if p.get("has_code") or p.get("votes", 0) > 0 else "最新论文"
-        return selected
+        return selected, ("error" if mode == "error" else "no-key")
 
     # 解析 LLM 返回
     try:
@@ -98,12 +127,12 @@ def filter_papers(papers: List[Dict], keywords: List[str],
             raise json.JSONDecodeError("no JSON array found", result, 0)
         selections = json.loads(m.group(0))
     except json.JSONDecodeError:
-        print(f"[Filter] Failed to parse LLM response: {result[:200]}")
+        _report_llm_failure(f"Failed to parse LLM response: {result[:200]}")
         sorted_papers = sorted(papers, key=lambda x: x.get("votes", 0) + x.get("stars", 0), reverse=True)
         selected = sorted_papers[:max_papers]
         for p in selected:
             p["reason"] = "AI 筛选失败，按热度排序"
-        return selected
+        return selected, "error"
 
     # 应用筛选结果（去重索引，截断到 max_papers）
     selected = []
@@ -119,4 +148,4 @@ def filter_papers(papers: List[Dict], keywords: List[str],
             selected.append(paper)
 
     print(f"[Filter] Selected {len(selected)} papers from {len(papers)} candidates")
-    return selected
+    return selected, "ai"
