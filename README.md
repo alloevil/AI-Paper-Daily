@@ -59,6 +59,38 @@ Responsive HTML email with dark mode support. Includes paper title, recommendati
 
 </details>
 
+## 📬 Subscribe without forking
+
+Don't want to run your own instance? Two zero-setup ways to follow the digest:
+
+1. **Email** — enter your address in the subscribe box at the top of the
+   [live site](https://alloevil.github.io/AI-Paper-Daily/). You'll get a
+   confirmation email, and the daily digest lands in your inbox from then on.
+2. **RSS** — hit the **📡 RSS 订阅** button on the site (or point your reader at
+   [`feed.xml`](https://alloevil.github.io/AI-Paper-Daily/feed.xml)) for daily
+   papers and weekly roundups.
+
+Under the hood the email form posts to a Google Apps Script endpoint
+([`scripts/subscribe_handler.gs`](scripts/subscribe_handler.gs)) that appends
+your address to [`data/subscribers.txt`](data/subscribers.txt) — the recipient
+list used by the email delivery channel. To unsubscribe, reply to any digest
+email with "unsubscribe".
+
+<details>
+<summary>🔧 Operator setup: deploying the subscription endpoint (one-time)</summary>
+
+1. Create a Google Sheet; copy its ID into `SHEET_ID` in `scripts/subscribe_handler.gs`.
+2. Create a new project at [script.google.com](https://script.google.com) and paste the file in.
+3. In *Project Settings → Script properties*, add `GITHUB_TOKEN` — a token with
+   `contents: write` on this repo (never commit the token).
+4. *Deploy → New deployment → Web app*, access: **Anyone**.
+5. Paste the deployment URL (`/macros/s/<ID>/exec`) into `GAS_ENDPOINT` in
+   `docs/template.html` and re-run site generation.
+6. Set `notify.email: true` in `config.yaml` and configure the `SMTP_*` secrets
+   so the daily workflow actually emails the subscriber list.
+
+</details>
+
 ## 🚀 Quick Start
 
 ### Step 1: Fork this repo
