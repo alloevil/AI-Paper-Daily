@@ -91,68 +91,6 @@
     color: var(--ink);
     border-color: var(--hairline-strong);
   }
-  .header-links a.rss-btn {
-    color: var(--on-primary);
-    background: var(--primary);
-    border-color: var(--primary);
-  }
-  .header-links a.rss-btn:hover {
-    background: var(--primary-hover);
-    border-color: var(--primary-hover);
-  }
-
-  /* Subscribe bar */
-  .subscribe-bar {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 14px;
-  }
-  .subscribe-hint {
-    font-size: 13px;
-    color: var(--ink-subtle);
-  }
-  .subscribe-form {
-    display: flex;
-    gap: 8px;
-  }
-  .subscribe-form input[type="email"] {
-    padding: 8px 14px;
-    background: var(--surface-1);
-    border: 1px solid var(--hairline);
-    border-radius: 6px;
-    color: var(--ink);
-    font-size: 13px;
-    font-family: var(--font-sans);
-    min-width: 220px;
-  }
-  .subscribe-form input[type="email"]:focus {
-    outline: none;
-    border-color: var(--primary);
-  }
-  .subscribe-form input[type="email"]::placeholder {
-    color: var(--ink-tertiary);
-  }
-  .subscribe-form button {
-    padding: 8px 18px;
-    background: var(--primary);
-    border: none;
-    border-radius: 6px;
-    color: var(--on-primary);
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    font-family: var(--font-sans);
-    transition: background 0.15s;
-  }
-  .subscribe-form button:hover { background: var(--primary-hover); }
-  .subscribe-form button:disabled { opacity: 0.6; cursor: default; }
-  .subscribe-success {
-    display: none;
-    font-size: 13px;
-    color: var(--success);
-  }
 
   /* Read-later (#8) */
   .rl-toggle {
@@ -531,16 +469,8 @@
           <a href="weekly-2026-W34.html">📊 周报 2026-W34</a>
           <a href="#" class="rl-toggle" onclick="openReadLater(event)">☆ 稍后读<span class="rl-badge" id="rl-badge"></span></a>
           <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a>
-          <a class="rss-btn" href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">📡 RSS 订阅</a>
+          <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a>
         </nav>
-      </div>
-      <div class="subscribe-bar">
-        <span class="subscribe-hint">📬 每日论文精选直达邮箱：</span>
-        <form class="subscribe-form" onsubmit="handleSubscribe(event)">
-          <input type="email" name="email" placeholder="your@email.com" required>
-          <button type="submit">订阅</button>
-        </form>
-        <div class="subscribe-success">✅ 订阅成功！确认邮件已发送</div>
       </div>
     </header>
 
@@ -4329,36 +4259,6 @@ document.addEventListener('keydown', e => {
 
 // 浏览器前进/后退时恢复过滤状态（replaceState 不触发此事件,不会自循环）
 window.addEventListener('hashchange', restoreFromHash);
-
-// --- 邮箱订阅:提交到 Google Apps Script 端点(scripts/subscribe_handler.gs),
-// 端点把邮箱写入 data/subscribers.txt,邮件通道(scripts/notifier.py)从那里取收件人。
-// 部署新 GAS 后替换下面的 /macros/s/<ID>/exec。
-const GAS_ENDPOINT = 'https://script.google.com/macros/s/REPLACE_WITH_GAS_DEPLOYMENT_ID/exec';
-
-function handleSubscribe(e) {
-  e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('button');
-  const email = form.querySelector('input[name="email"]').value;
-  btn.textContent = '…';
-  btn.disabled = true;
-  fetch(GAS_ENDPOINT, {
-    method: 'POST',
-    body: JSON.stringify({ email: email }),
-    headers: { 'Content-Type': 'application/json' }
-  })
-  .then(r => r.json())
-  .then(() => {
-    form.style.display = 'none';
-    const ok = form.parentElement.querySelector('.subscribe-success');
-    if (ok) ok.style.display = 'block';
-  })
-  .catch(() => {
-    btn.textContent = '订阅';
-    btn.disabled = false;
-    alert('订阅失败,请稍后再试。');
-  });
-}
 </script>
 </body>
 </html>

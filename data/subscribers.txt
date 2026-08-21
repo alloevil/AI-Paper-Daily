@@ -1,3 +1,0 @@
-# AI Paper Daily 邮件订阅者列表
-# 每行一个邮箱。GAS 订阅端点(scripts/subscribe_handler.gs)自动追加;
-# 也可以手动加行。# 开头的行和空行会被忽略(scripts/storage.py)。
