@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 21 Aug 2026 03:25:47 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 04:47:10 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W34（2026-08-14 ~ 2026-08-20）</title>
@@ -13,6 +13,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 4DAnyone: Create Anyone in 4D from a Casual Monocular Video (2026-08-21)</title>
+      <description>We present 4DAnyone, a framework for reconstructing 4D humans from an uncalibrated monocular video by generating reconstruction-grade multiview-consistent videos and lifting them into 4D Gaussian Spla...</description>
+      <link>https://arxiv.org/abs/2608.20335</link>
+      <guid>https://arxiv.org/abs/2608.20335#2026-08-21</guid>
+      <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WithEveryone: Unified Planning and Identity Grounding for Group Image Generation (2026-08-21)</title>
+      <description>Identity-preserving image generation becomes increasingly unreliable when a scene must contain many specified people. Beyond retaining each identity, the model must bind every reference to a distinct ...</description>
+      <link>https://arxiv.org/abs/2608.20336</link>
+      <guid>https://arxiv.org/abs/2608.20336#2026-08-21</guid>
+      <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MemTrapBench: Benchmarking Cognitive Traps in LLM Memory Use (2026-08-21)</title>
+      <description>Memory has become a key component of large language models, enabling them to retain information and learn from long-term interactions. However, existing memory benchmarks mainly evaluate whether infor...</description>
+      <link>https://arxiv.org/abs/2608.20202</link>
+      <guid>https://arxiv.org/abs/2608.20202#2026-08-21</guid>
+      <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Task-CoEvolve: Efficient Harness Optimization via Adaptive Validation Task Selection (2026-08-21)</title>
+      <description>We present a novel approach to efficient LLM agent harness optimization through adaptive validation task selection. Harness optimization iteratively rewrites the harness code based on validation perfo...</description>
+      <link>http://arxiv.org/abs/2608.20169v1</link>
+      <guid>http://arxiv.org/abs/2608.20169v1#2026-08-21</guid>
+      <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Repo0: Design-Driven Zero-to-All Code Generation (2026-08-21)</title>
+      <description>Large language model agents have made substantial progress in code generation, yet most existing systems assume a predefined repository architecture. This assumption does not hold in zero-to-all code ...</description>
+      <link>https://arxiv.org/abs/2608.19854</link>
+      <guid>https://arxiv.org/abs/2608.19854#2026-08-21</guid>
+      <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Inject, Align, Recover: Staged Post-Training for Retrieval-Free Document Knowledge Internalization (2026-08-21)</title>
+      <description>Large language models often fail to answer questions about a bounded document collection when the source documents are not retrieved at inference time. We study this setting as document knowledge inte...</description>
+      <link>https://arxiv.org/abs/2608.20281</link>
+      <guid>https://arxiv.org/abs/2608.20281#2026-08-21</guid>
+      <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 FlashPrefill V2: Block-Sparse Prefill Attention for Long-Context LLM Serving (2026-08-21)</title>
+      <description>Long-context modeling is a pivotal capability for Large Language Models, yet the quadratic complexity of attention remains a critical bottleneck, particularly during the compute-intensive prefilling p...</description>
+      <link>https://arxiv.org/abs/2608.19758</link>
+      <guid>https://arxiv.org/abs/2608.19758#2026-08-21</guid>
+      <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EXIMO: VLM Guided Exploration of VLA Policies (2026-08-21)</title>
+      <description>How to efficiently finetune robot policies to learn new tasks on the fly? State of the art robotic manipulation policies are based on behaviour cloning of large vision-language-action (VLA) models wit...</description>
+      <link>https://arxiv.org/abs/2608.19891</link>
+      <guid>https://arxiv.org/abs/2608.19891#2026-08-21</guid>
+      <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement (2026-08-21)</title>
+      <description>Recursive self-improvement (RSI) asks whether an AI system can improve the process that produces AI systems, so that the next system inherits the improvement. That process is the training algorithm: a...</description>
+      <link>http://arxiv.org/abs/2608.20318v1</link>
+      <guid>http://arxiv.org/abs/2608.20318v1#2026-08-21</guid>
+      <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Break It Down, Pass It On: Cross-Task Skill Transfer in LLM Agents (2026-08-21)</title>
+      <description>Large language model (LLM) agents can induce skills from completed tasks and reuse them later to grow more capable with experience. In practice, induced skills may transfer unreliably and can even har...</description>
+      <link>http://arxiv.org/abs/2608.20274v1</link>
+      <guid>http://arxiv.org/abs/2608.20274v1#2026-08-21</guid>
+      <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 SemaPLC: A Project-Grounded, Verification-Gated Agent Harness for PLC Code Generation (2026-08-20)</title>
@@ -293,76 +363,6 @@
       <link>http://arxiv.org/abs/2608.14380v1</link>
       <guid>http://arxiv.org/abs/2608.14380v1#2026-08-17</guid>
       <pubDate>Mon, 17 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Beyond Handcrafted Security: Towards Self-Evolving Defense for LLM Agents (2026-08-16)</title>
-      <description>The expanding operational capabilities of large language model (LLM) agents introduce sophisticated security threats. Runtime defenses have emerged as an effective approach to mitigating these risks b...</description>
-      <link>http://arxiv.org/abs/2608.12977v1</link>
-      <guid>http://arxiv.org/abs/2608.12977v1#2026-08-16</guid>
-      <pubDate>Sun, 16 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Discovering Efficient and Explainable Communication Topologies for LLM-based Multi-Agent Systems via Causal Inference (2026-08-16)</title>
-      <description>The performance of large language model (LLM)-based multi-agent systems (MAS) largely depends on effective communication topologies. Existing topology generation methods, however, typically learn comm...</description>
-      <link>http://arxiv.org/abs/2608.12921v1</link>
-      <guid>http://arxiv.org/abs/2608.12921v1#2026-08-16</guid>
-      <pubDate>Sun, 16 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 When Your Agent Opens the Chat App: Agent-Controlled Search over Raw Chat Logs Rivals Structured Memory (2026-08-16)</title>
-      <description>Agent-memory systems increasingly buy retrieval quality with structure, transforming raw conversation histories into summaries, embeddings, trees, or knowledge graphs before any question is asked. We ...</description>
-      <link>http://arxiv.org/abs/2608.12888v1</link>
-      <guid>http://arxiv.org/abs/2608.12888v1#2026-08-16</guid>
-      <pubDate>Sun, 16 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Practice Makes Unsafe: Skill Misevolution in Self-Improving LLM Agents (2026-08-16)</title>
-      <description>Self-improving LLM agents convert successful trajectories into persistent cross-task state. An unsafe success can thereby become reusable policy after its triggering input disappears. Skill evolution ...</description>
-      <link>http://arxiv.org/abs/2608.12851v1</link>
-      <guid>http://arxiv.org/abs/2608.12851v1#2026-08-16</guid>
-      <pubDate>Sun, 16 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AaLLM: An End-to-End Analog Circuit Design Framework from Topology Generation to Sizing Using Large Language Models (2026-08-15)</title>
-      <description>Analog circuit design is a time-consuming, iterative process in a nonlinear and high-dimensional design space that relies heavily on expert intuition. Among recent developments, LLMs have introduced a...</description>
-      <link>http://arxiv.org/abs/2608.13472v1</link>
-      <guid>http://arxiv.org/abs/2608.13472v1#2026-08-15</guid>
-      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 StateBridge: Training-free Hidden-state Alignment for Latent Communication in LLM Multi-Agent Systems (2026-08-15)</title>
-      <description>Large language model based multi-agent systems usually communicate in text, i.e., using discrete tokens. However, text introduces a discrete bottleneck. Converting the sender's continuous hidden state...</description>
-      <link>http://arxiv.org/abs/2608.13317v1</link>
-      <guid>http://arxiv.org/abs/2608.13317v1#2026-08-15</guid>
-      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Novel Knowledge-Guided Generative Methods for Synthetic Transcriptomic Data (2026-08-15)</title>
-      <description>As biomedical research increasingly relies on data-intensive tools, the quality and utility of datasets are critical. Challenges such as imbalances, biases, and ethical or legal constraints often limi...</description>
-      <link>http://arxiv.org/abs/2608.13256v1</link>
-      <guid>http://arxiv.org/abs/2608.13256v1#2026-08-15</guid>
-      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Teach the Magnitude, Not the Direction: Verifier-Bounded Credit Assignment for Multi-Turn Multi-step LLM Agents (2026-08-15)</title>
-      <description>Reinforcement learning with verifiable rewards (RLVR) offers a verifier-bounded performance ceiling for training multi-turn tool-use agents, yet its trajectory-level credit assignment conflates hetero...</description>
-      <link>http://arxiv.org/abs/2608.13179v1</link>
-      <guid>http://arxiv.org/abs/2608.13179v1#2026-08-15</guid>
-      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SkillShapley: Boundary-Adaptive Shapley Valuation for Skill Step Attribution in LLM Agents (2026-08-15)</title>
-      <description>Agent skills are crucial external instructions that enable language agents to execute long procedural tasks such as coding or document processing. Existing agent skills are primarily created through h...</description>
-      <link>http://arxiv.org/abs/2608.13173v1</link>
-      <guid>http://arxiv.org/abs/2608.13173v1#2026-08-15</guid>
-      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Operationalizing Cyber Threat Intelligence with GraphRAG (2026-08-15)</title>
-      <description>When a security researcher publishes a report on a cyberattack, detection engineers are supposed to turn it into working detection rules. In practice, most automated attempts at this only extract the ...</description>
-      <link>http://arxiv.org/abs/2608.13050v1</link>
-      <guid>http://arxiv.org/abs/2608.13050v1#2026-08-15</guid>
-      <pubDate>Sat, 15 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
