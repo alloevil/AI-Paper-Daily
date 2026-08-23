@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 22 Aug 2026 04:40:06 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2026 04:44:42 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W34（2026-08-14 ~ 2026-08-20）</title>
@@ -13,6 +13,48 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MileGPO: Milestone Inference with Local Evidence for Graph-Based Policy Optimization of Long-Horizon LLM Agents (2026-08-23)</title>
+      <description>Credit assignment is challenging in long-horizon agentic reinforcement learning, where supervision often comes only from final rewards. Existing methods refine trajectory-level signals into step-level...</description>
+      <link>http://arxiv.org/abs/2608.19803v1</link>
+      <guid>http://arxiv.org/abs/2608.19803v1#2026-08-23</guid>
+      <pubDate>Sun, 23 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Towards general embodied intelligence: integrating large language models, knowledge bases, and reasoning capabilities to build the next generation of AI agents (2026-08-23)</title>
+      <description>The convergence of large language models (LLMs), structured knowledge bases (KBs), and reasoning ability (RA) presents a promising trajectory toward general embodied intelligence (GEI). This paper rev...</description>
+      <link>http://arxiv.org/abs/2608.19794v1</link>
+      <guid>http://arxiv.org/abs/2608.19794v1#2026-08-23</guid>
+      <pubDate>Sun, 23 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Credit Without Ground Truth: Auditing Step-Level Credit Assignment in LLM Agents Against Executed Replay (2026-08-23)</title>
+      <description>Audited against causal ground truth from executed replay in a single-agent tool environment (ALFWorld), none of the step-level credit signals used to train LLM agents -- LLM-judge scores, outcome-cond...</description>
+      <link>http://arxiv.org/abs/2608.19760v1</link>
+      <guid>http://arxiv.org/abs/2608.19760v1#2026-08-23</guid>
+      <pubDate>Sun, 23 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Beyond Memory Majority: Latent-Source Reasoning for Multi-Agent Memory Arbitration (2026-08-23)</title>
+      <description>Long-term multi-agent systems continuously accumulate the memories produced by different agents. Existing memory methods typically treat retrieved memories as independent evidence and combine them thr...</description>
+      <link>http://arxiv.org/abs/2608.19701v1</link>
+      <guid>http://arxiv.org/abs/2608.19701v1#2026-08-23</guid>
+      <pubDate>Sun, 23 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 An Evidence-Grounded Multi-Agent System for High-Level Bio-Robot Design (2026-08-23)</title>
+      <description>In this paper, a bio-robot is an engineered living or biohybrid system in which living cells perform one or more core functions, such as sensing, information processing, actuation or output. We focus ...</description>
+      <link>http://arxiv.org/abs/2608.19699v1</link>
+      <guid>http://arxiv.org/abs/2608.19699v1#2026-08-23</guid>
+      <pubDate>Sun, 23 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents (2026-08-23)</title>
+      <description>Agentic language models repeatedly encode tool and skill schemas that recur across requests in different combinations and orders, preventing standard prefix caching from reusing their key--value (KV) ...</description>
+      <link>http://arxiv.org/abs/2608.19662v1</link>
+      <guid>http://arxiv.org/abs/2608.19662v1#2026-08-23</guid>
+      <pubDate>Sun, 23 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Reward-Guided Autoregressive Graph Generation for Efficient Multi-Agent Communication Topology Design (2026-08-22)</title>
@@ -320,48 +362,6 @@
       <description>Agents now write knowledge graphs, but knowledge-graph stores still carry defaults set when humans curated them: accept writes now and clean later, keep one time axis or none, treat every writer's fac...</description>
       <link>http://arxiv.org/abs/2608.16813v1</link>
       <guid>http://arxiv.org/abs/2608.16813v1#2026-08-18</guid>
-      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MELD: A Protocol for Merging Knowledge Across Distributed Agentic Memories (2026-08-18)</title>
-      <description>Autonomous agents share a transport and can call each other's tools, but they cannot share what they know: no protocol lets two agents' memories reconcile a fact phrased two ways, link related facts h...</description>
-      <link>http://arxiv.org/abs/2608.16357v1</link>
-      <guid>http://arxiv.org/abs/2608.16357v1#2026-08-18</guid>
-      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Bounded Agents: Delegation Security for Multi-Agent AI Systems (2026-08-18)</title>
-      <description>LLM-based agents can act on behalf of a user to access cloud services, call tools, or invoke agents. At session start, the agent's permissions are set but remain static, and each request is evaluated ...</description>
-      <link>http://arxiv.org/abs/2608.15888v1</link>
-      <guid>http://arxiv.org/abs/2608.15888v1#2026-08-18</guid>
-      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 R^3-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets (2026-08-18)</title>
-      <description>In cognitive science, resource rationality asks how an agent should allocate limited computation to maximize expected value. Most reasoning and agent benchmarks use independent per-task budgets; exist...</description>
-      <link>https://arxiv.org/abs/2608.16033</link>
-      <guid>https://arxiv.org/abs/2608.16033#2026-08-18</guid>
-      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 An Empirical Study of Training Pixel-Space Text-to-Image Diffusion Models (2026-08-18)</title>
-      <description>This paper investigates an increasingly important topic in generative modeling: pixel-space diffusion models. Although numerous studies have explored this topic, most focus on small-scale or class-con...</description>
-      <link>https://arxiv.org/abs/2608.16887</link>
-      <guid>https://arxiv.org/abs/2608.16887#2026-08-18</guid>
-      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AnyTalk: Speech Animation for Arbitrary Characters Leveraging a Video Generation Model (2026-08-18)</title>
-      <description>We present AnyTalk, a novel method for generating 3D speech animations for arbitrary characters without requiring any animation data. While existing audio-driven 3D speech animation methods rely on ch...</description>
-      <link>https://arxiv.org/abs/2608.16143</link>
-      <guid>https://arxiv.org/abs/2608.16143#2026-08-18</guid>
-      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Prior Audit-Repair Context Shifts LLM Verifier Thresholds Toward Leniency (2026-08-18)</title>
-      <description>Automated checking pipelines increasingly place one language model as the checker and another (or the same one) as the fixer. We ask whether that wiring changes what the checker reports. Measuring fal...</description>
-      <link>https://arxiv.org/abs/2608.16003</link>
-      <guid>https://arxiv.org/abs/2608.16003#2026-08-18</guid>
       <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
