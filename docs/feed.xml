@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 23 Aug 2026 04:44:42 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 04:53:02 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W34（2026-08-14 ~ 2026-08-20）</title>
@@ -13,6 +13,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Let's Scale Step by Step: Compute-Efficient Hyperparameter Transfer for Large-Scale Mixture-of-Experts (2026-08-24)</title>
+      <description>Mixture-of-Experts (MoE) architectures significantly expand model capacity without a proportional increase in computational cost. However, optimizing their hyperparameters---particularly the learning ...</description>
+      <link>https://arxiv.org/abs/2608.20061</link>
+      <guid>https://arxiv.org/abs/2608.20061#2026-08-24</guid>
+      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 OmniAssistBench: Assistant-style Interaction Benchmark for Omni-LLMs (2026-08-24)</title>
+      <description>Recent omni-modal large language models (Omni-LLMs) show great potential as real-time video assistants, which continuously perceive environments and guide users to achieve specific goals. Unlike tradi...</description>
+      <link>https://arxiv.org/abs/2608.21360</link>
+      <guid>https://arxiv.org/abs/2608.21360#2026-08-24</guid>
+      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ClawSentry: A Progressive Multi-Tier Security Monitor for Safeguarding Autonomous LLM Agents (2026-08-24)</title>
+      <description>As large language model (LLM) agents move from conversation to executing code, reading local files, and orchestrating external tools, a single agent hijacked by a malicious third-party skill can cause...</description>
+      <link>http://arxiv.org/abs/2608.21101v1</link>
+      <guid>http://arxiv.org/abs/2608.21101v1#2026-08-24</guid>
+      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Peer-Voted LLM-Agent Stress Tests Find Feed-Induced Lexical Convergence but No Reliable Matched-Exposure Advantage for Distributed Sources (2026-08-24)</title>
+      <description>Population-level behavior in large-language-model (LLM) agents cannot be characterized by single-agent benchmarks. We introduce PV-SST, a peer-voted social-platform testbed, and report a separately fr...</description>
+      <link>http://arxiv.org/abs/2608.20438v1</link>
+      <guid>http://arxiv.org/abs/2608.20438v1#2026-08-24</guid>
+      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AgentMercury: Your Agent Can Synthesize Verifiable Environments for Business Scenarios at scale (2026-08-24)</title>
+      <description>Agents learn to act through interaction with environments, yet the environments used for training are often manually constructed or synthesized around predefined tasks and benchmarks. This task-centri...</description>
+      <link>https://arxiv.org/abs/2608.20634</link>
+      <guid>https://arxiv.org/abs/2608.20634#2026-08-24</guid>
+      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Towards Faithful Simulation of Human Shopping Behavior (2026-08-24)</title>
+      <description>Simulating realistic user shopping behavior underpins offline evaluation and reinforcement learning in e-commerce scenarios. While recent LLM- and VLM-based simulators have made encouraging progress, ...</description>
+      <link>https://arxiv.org/abs/2608.20707</link>
+      <guid>https://arxiv.org/abs/2608.20707#2026-08-24</guid>
+      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 InfinityEdit: Infinite Video Editing with a Lightweight Edit-Ignition Adapter (2026-08-24)</title>
+      <description>With large pretrained models, existing methods have effectively improved instruction-based video editing. However, most of them rely on an in-place editing assumption. They align the edited video with...</description>
+      <link>https://arxiv.org/abs/2608.20910</link>
+      <guid>https://arxiv.org/abs/2608.20910#2026-08-24</guid>
+      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CLEAR: Continuous Latent Adapter Routing for Utility-Preserving LLM Safety Alignment (2026-08-24)</title>
+      <description>Improving the safety of large language models (LLMs) often comes at the expense of utility, as globally applied safety tuning may affect model responses to both harmful and benign inputs. We propose C...</description>
+      <link>https://arxiv.org/abs/2608.21278</link>
+      <guid>https://arxiv.org/abs/2608.21278#2026-08-24</guid>
+      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Llama-Mobile: Efficient 2.7-Bit Quantization of VLMs (2026-08-24)</title>
+      <description>Deploying vision-language models (VLMs) on mobile devices is challenging due to their significant memory and compute requirements. We present a framework for quantizing VLMs for efficient inference on...</description>
+      <link>https://arxiv.org/abs/2608.21134</link>
+      <guid>https://arxiv.org/abs/2608.21134#2026-08-24</guid>
+      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Adapting Knowledge Graphs for Behavior Denoising in Sequential Recommendation (2026-08-24)</title>
+      <description>Sequential recommendation predicts the next item from a user's interaction history, but not every interaction is equally informative. Real logs combine persistent preferences with temporary needs, exp...</description>
+      <link>http://arxiv.org/abs/2608.21243v1</link>
+      <guid>http://arxiv.org/abs/2608.21243v1#2026-08-24</guid>
+      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 MileGPO: Milestone Inference with Local Evidence for Graph-Based Policy Optimization of Long-Horizon LLM Agents (2026-08-23)</title>
@@ -293,76 +363,6 @@
       <link>https://arxiv.org/abs/2608.17597</link>
       <guid>https://arxiv.org/abs/2608.17597#2026-08-19</guid>
       <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Agent Lightning v1.0: Towards Harnessed Agentic RL (2026-08-19)</title>
-      <description>Modern agents operate inside agent harnesses that manage tools, context, and control flow, making the harness a critical part of the agent system. Our original Agent Lightning introduced a disaggregat...</description>
-      <link>https://arxiv.org/abs/2608.17528</link>
-      <guid>https://arxiv.org/abs/2608.17528#2026-08-19</guid>
-      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Abra: Scaling Diffusion Image Training (2026-08-19)</title>
-      <description>Compute-optimal scaling laws guide the training of frontier language models yet remain largely unexplored for visual generation. We present a systematic scaling law study for text-to-image diffusion m...</description>
-      <link>https://arxiv.org/abs/2608.17286</link>
-      <guid>https://arxiv.org/abs/2608.17286#2026-08-19</guid>
-      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 GS-Voxel: Fitting-Free Structured Latents for Large-Scale 3DGS Generation (2026-08-19)</title>
-      <description>Many scalable latent 3D generators operate on structured tensors, whereas pre-optimized 3D Gaussian Splatting (3DGS) reconstructions are unordered, spatially irregular, and vary widely in primitive co...</description>
-      <link>https://arxiv.org/abs/2608.17988</link>
-      <guid>https://arxiv.org/abs/2608.17988#2026-08-19</guid>
-      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Security Assessment of DeepSeek Harness with A.I.G: Evaluating Resistance to Indirect Prompt Injection (2026-08-19)</title>
-      <description>We assess indirect prompt injection in DeepSeek Harness (DSH), using AI-Infra-Guard (A.I.G) to construct tests, deliver controlled taint, execute DSH, collect traces, and judge outcomes. The study cov...</description>
-      <link>https://arxiv.org/abs/2608.16393</link>
-      <guid>https://arxiv.org/abs/2608.16393#2026-08-19</guid>
-      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 StartupBench: Benchmarking General-Purpose Agents on Market-Validated End-to-End Workflows (2026-08-19)</title>
-      <description>Recent advances in Large Language Models(LLMs) and agents have substantially improved the ability of AI systems to execute complex tasks. Yet existing benchmarks largely rely on researcher-selected ta...</description>
-      <link>https://arxiv.org/abs/2608.17800</link>
-      <guid>https://arxiv.org/abs/2608.17800#2026-08-19</guid>
-      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 aDSL: Agentic 3D Creation via Joint Agent-Program Design (2026-08-19)</title>
-      <description>Programmatic representations provide a compelling paradigm for 3D content creation, enabling fine-grained edits, interpretability, and explicit structural control. Yet, agentic workflows that rely on ...</description>
-      <link>https://arxiv.org/abs/2608.17975</link>
-      <guid>https://arxiv.org/abs/2608.17975#2026-08-19</guid>
-      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 HarnessEval-W: Agentifying the Evaluation of Visual Worlds (2026-08-18)</title>
-      <description>A benchmark should deliver more than a scalar score: what makes an evaluation trustworthy is the reasoning that justifies the score. This is especially critical for world models, where judging a rollo...</description>
-      <link>https://arxiv.org/abs/2608.16859</link>
-      <guid>https://arxiv.org/abs/2608.16859#2026-08-18</guid>
-      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ClawGym II: Exploring Black-Box RL on Agent Harness (2026-08-18)</title>
-      <description>Agent harnesses have substantially improved performance on long-horizon tasks by coordinating agent interactions with the environment. However, reinforcement learning through complex harnesses remains...</description>
-      <link>https://arxiv.org/abs/2608.16798</link>
-      <guid>https://arxiv.org/abs/2608.16798#2026-08-18</guid>
-      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 GenRouter: Unified Workflow Routing for Agentic Image Generation (2026-08-18)</title>
-      <description>The rapid evolution of text-to-image (T2I) generation models has effectively solved the foundational challenge of raw pixel synthesis, shifting the community's focus toward fulfilling increasingly int...</description>
-      <link>https://arxiv.org/abs/2608.16721</link>
-      <guid>https://arxiv.org/abs/2608.16721#2026-08-18</guid>
-      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Quipu: A Governed Bitemporal Knowledge Graph Store (2026-08-18)</title>
-      <description>Agents now write knowledge graphs, but knowledge-graph stores still carry defaults set when humans curated them: accept writes now and clean later, keep one time axis or none, treat every writer's fac...</description>
-      <link>http://arxiv.org/abs/2608.16813v1</link>
-      <guid>http://arxiv.org/abs/2608.16813v1#2026-08-18</guid>
-      <pubDate>Tue, 18 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
