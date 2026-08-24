@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>论文周报 2026-W35 — AI Paper Daily</title>
+<meta name="description" content="过去 7 天按热度（投票 / 星标 / 开源代码）重排的 Top 15">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<style>
+  :root {
+    --primary: #6366f1;
+    --primary-hover: #818cf8;
+    --blue: #3b82f6;
+    --ink: #f7f8f8;
+    --ink-muted: #d0d6e0;
+    --ink-subtle: #8a8f98;
+    --ink-tertiary: #62666d;
+    --canvas: #010102;
+    --surface-1: #0f1011;
+    --surface-2: #141516;
+    --hairline: #23252a;
+    --hairline-strong: #34343a;
+    --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-sans); background: var(--canvas); color: var(--ink);
+         -webkit-font-smoothing: antialiased; line-height: 1.5; }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .masthead { padding: 20px 0 16px; border-bottom: 1px solid var(--hairline);
+               display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .masthead h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.4px; }
+  .masthead .range { font-size: 13px; color: var(--ink-subtle); }
+  .masthead a { padding: 6px 14px; font-size: 13px; font-weight: 500; color: var(--ink-subtle);
+                 border: 1px solid var(--hairline); border-radius: 8px; text-decoration: none; }
+  .masthead a:hover { color: var(--ink); border-color: var(--hairline-strong); }
+  .intro { padding: 16px 0 4px; font-size: 14px; color: var(--ink-subtle); }
+  .paper-card { display: flex; padding: 16px 0; border-radius: 8px; }
+  .paper-card:hover { background: var(--surface-1); }
+  .paper-card + .paper-card { border-top: 1px solid var(--hairline); }
+  .relevance-bar { width: 4px; border-radius: 2px; flex-shrink: 0; margin-right: 16px; align-self: stretch; }
+  .relevance-bar.high { background: var(--primary); }
+  .relevance-bar.mid { background: var(--blue); }
+  .relevance-bar.low { background: var(--ink-tertiary); }
+  .paper-content { flex: 1; min-width: 0; }
+  .paper-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+  .paper-title { font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; line-height: 1.4; }
+  .paper-title:hover { color: var(--primary-hover); }
+  .paper-tag { display: inline-block; padding: 1px 8px; font-size: 11px; font-weight: 500;
+                color: var(--ink-muted); background: var(--surface-2); border: 1px solid var(--hairline);
+                border-radius: 10px; white-space: nowrap; flex-shrink: 0; }
+  .paper-abstract { font-size: 14px; color: var(--ink-subtle); margin-bottom: 8px; line-height: 1.55; }
+  .paper-links { display: flex; gap: 8px; font-size: 13px; }
+  .paper-links a { color: var(--ink-tertiary); text-decoration: none; }
+  .paper-links a:hover { color: var(--primary-hover); }
+  .footer { margin-top: 48px; padding: 24px 0; border-top: 1px solid var(--hairline);
+             text-align: center; font-size: 12px; color: var(--ink-tertiary); }
+  .footer a { color: var(--ink-subtle); text-decoration: none; }
+  .footer a:hover { color: var(--ink); }
+  @media (max-width: 640px) {
+    .container { padding: 0 16px; }
+    .paper-header { flex-direction: column; gap: 4px; }
+    .relevance-bar { margin-right: 12px; }
+    .paper-links { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="masthead">
+      <div>
+        <h1>📊 论文周报 2026-W35</h1>
+        <span class="range">2026-08-18 ~ 2026-08-24</span>
+      </div>
+      <a href="./">← 返回日报</a>
+    </header>
+    <p class="intro">过去 7 天按热度（投票 / 星标 / 开源代码）重排的 Top 15</p>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.20335" target="_blank" rel="noopener">4DAnyone: Create Anyone in 4D from a Casual Monocular Video</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">We present 4DAnyone, a framework for reconstructing 4D humans from an uncalibrated monocular video by generating reconstruction-grade multiview-consistent videos and lifting them into 4D Gaussian Spla...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.20335" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.20335" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.20061" target="_blank" rel="noopener">Let&#39;s Scale Step by Step: Compute-Efficient Hyperparameter Transfer for Large-Scale Mixture-of-Experts</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Mixture-of-Experts (MoE) architectures significantly expand model capacity without a proportional increase in computational cost. However, optimizing their hyperparameters---particularly the learning ...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.20061" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.20061" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.21360" target="_blank" rel="noopener">OmniAssistBench: Assistant-style Interaction Benchmark for Omni-LLMs</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Recent omni-modal large language models (Omni-LLMs) show great potential as real-time video assistants, which continuously perceive environments and guide users to achieve specific goals. Unlike tradi...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.21360" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.21360" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.20336" target="_blank" rel="noopener">WithEveryone: Unified Planning and Identity Grounding for Group Image Generation</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Identity-preserving image generation becomes increasingly unreliable when a scene must contain many specified people. Beyond retaining each identity, the model must bind every reference to a distinct ...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.20336" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.20336" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.20202" target="_blank" rel="noopener">MemTrapBench: Benchmarking Cognitive Traps in LLM Memory Use</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Memory has become a key component of large language models, enabling them to retain information and learn from long-term interactions. However, existing memory benchmarks mainly evaluate whether infor...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.20202" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.20202" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2608.21101v1" target="_blank" rel="noopener">ClawSentry: A Progressive Multi-Tier Security Monitor for Safeguarding Autonomous LLM Agents</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">As large language model (LLM) agents move from conversation to executing code, reading local files, and orchestrating external tools, a single agent hijacked by a malicious third-party skill can cause...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2608.21101v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.21101v1" target="_blank" rel="noopener">📥 PDF</a> · <a href="https://github.com/Elroyper/ClawSentry" target="_blank" rel="noopener">💻 代码</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2608.20438v1" target="_blank" rel="noopener">Peer-Voted LLM-Agent Stress Tests Find Feed-Induced Lexical Convergence but No Reliable Matched-Exposure Advantage for Distributed Sources</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Population-level behavior in large-language-model (LLM) agents cannot be characterized by single-agent benchmarks. We introduce PV-SST, a peer-voted social-platform testbed, and report a separately fr...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2608.20438v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.20438v1" target="_blank" rel="noopener">📥 PDF</a> · <a href="https://github.com/ranausmanai/synthetic-social-networks" target="_blank" rel="noopener">💻 代码</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2608.20169v1" target="_blank" rel="noopener">Task-CoEvolve: Efficient Harness Optimization via Adaptive Validation Task Selection</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">We present a novel approach to efficient LLM agent harness optimization through adaptive validation task selection. Harness optimization iteratively rewrites the harness code based on validation perfo...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2608.20169v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.20169v1" target="_blank" rel="noopener">📥 PDF</a> · <a href="https://github.com/Agent4Science-UTokyo/Task-CoEvolve" target="_blank" rel="noopener">💻 代码</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.18565" target="_blank" rel="noopener">SemaPLC: A Project-Grounded, Verification-Gated Agent Harness for PLC Code Generation</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Programmable logic controllers (PLCs) run industrial plants, and large language models can already generate independent program organization units (POUs) for them. Whether such logic integrates into a...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.18565" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.18565" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.19197" target="_blank" rel="noopener">SPADE: Self-Play in Adaptive Synthetic Executable Environments</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Continuous self-improvement requires an ever-expanding pool of self-generated, diverse, adaptive goals. For language agents, existing training environment pools (hand-curated, statically synthesized, ...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.19197" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.19197" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.18746" target="_blank" rel="noopener">Decision-Metric Alignment in Latent World Models: Diagnostics and Action-Conditioned Objectives for MPC Planning</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">JEPA-style latent world models can use Euclidean distance to a goal latent as the cost for model-predictive control (MPC). Strong decoding of task variables, however, does not guarantee that this part...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.18746" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.18746" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.18940" target="_blank" rel="noopener">Training Chemical Plausibility-Aware Large Language Models for Single-Step Retrosynthesis</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Single-step retrosynthesis is a central component of computer-aided synthesis planning, yet its intrinsically one-to-many nature is poorly captured by single-answer evaluation and benchmarking protoco...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.18940" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.18940" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.18701" target="_blank" rel="noopener">SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Physical interaction quality is central to deformable-object manipulation, yet most benchmarks evaluate task success alone. A policy may complete the task while allowing slip or causing excessive comp...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.18701" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.18701" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2608.18360v1" target="_blank" rel="noopener">One Gate Is Not Enough: Composing Stateful Pre-Action Controls for Agentic AI</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Agentic AI systems take consequential actions governed by more than one pre-action control at once: authority, resource, and evidence gates that can admit, degrade, or remediate an action before it ex...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2608.18360v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.18360v1" target="_blank" rel="noopener">📥 PDF</a> · <a href="https://github.com/besanson/sarc-suite-one-pass" target="_blank" rel="noopener">💻 代码</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.18933" target="_blank" rel="noopener">SkillForge: Self-Distilling Agents for Project-Specific Issue Resolution</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Large language model (LLM) based agents have demonstrated remarkable proficiency in automated software issue resolution, yet they often struggle to resolve issues in a specific repository because they...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.18933" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.18933" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+    <footer class="footer">
+      <p>Built by <a href="https://github.com/alloevil">alloevil</a> · <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a> · <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a></p>
+    </footer>
+  </div>
+</body>
+</html>
