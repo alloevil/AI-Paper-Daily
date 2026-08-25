@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 24 Aug 2026 05:29:26 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 04:46:40 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W35（2026-08-18 ~ 2026-08-24）</title>
@@ -20,6 +20,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Apodex 1.1: Scaling Agentic Intelligence for Complex Work (2026-08-25)</title>
+      <description>General-purpose language models can reason and synthesize knowledge, but complex work also requires sustained interaction with files, information sources, and executable code, together with state main...</description>
+      <link>https://arxiv.org/abs/2608.23283</link>
+      <guid>https://arxiv.org/abs/2608.23283#2026-08-25</guid>
+      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Right-Sizing LLM-Agent Decomposition in VAT Determination: A Pilot Controlled Sweep (2026-08-25)</title>
+      <description>Recent LLM-agent systems make conflicting design bets: decompose work across many narrow agents, or use one strong tool-using agent. This pilot studies that choice on bounded cross-border VAT determin...</description>
+      <link>http://arxiv.org/abs/2608.23395v1</link>
+      <guid>http://arxiv.org/abs/2608.23395v1#2026-08-25</guid>
+      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AutoSaddler: Automatic Harness Optimization with Durable Updates from Agent Execution Traces (2026-08-25)</title>
+      <description>LLM agents remain unreliable on long-horizon tasks, where small local failures can compound over extended interactions and lead to overall task failure. Although external harnesses can substantially i...</description>
+      <link>http://arxiv.org/abs/2608.23041v1</link>
+      <guid>http://arxiv.org/abs/2608.23041v1#2026-08-25</guid>
+      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Minimal Local Simulation Foundations for LLM- and VLM-Driven Agents in 2D and 3D Environments (2026-08-25)</title>
+      <description>Large language models (LLMs) and vision-language models (VLMs) are expanding the range of behaviors that can be represented in agent-based simulations, but many contemporary platforms are difficult to...</description>
+      <link>http://arxiv.org/abs/2608.22833v1</link>
+      <guid>http://arxiv.org/abs/2608.22833v1#2026-08-25</guid>
+      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Prime Agent: A Self-Improving RLM Harness (2026-08-25)</title>
+      <description>Language models are sequential processors, but long-horizon agency requires external information and computation beyond model weights and active context. Prime Agent is an open-source harness for long...</description>
+      <link>https://arxiv.org/abs/2608.23552</link>
+      <guid>https://arxiv.org/abs/2608.23552#2026-08-25</guid>
+      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ReWorld: An Interactive World Model with Long-Horizon Memory (2026-08-25)</title>
+      <description>An interactive world model must follow the user's actions, remember the places it has shown, and stream in real time. The tension is structural: control wants a short horizon, memory wants an unbounde...</description>
+      <link>https://arxiv.org/abs/2608.23565</link>
+      <guid>https://arxiv.org/abs/2608.23565#2026-08-25</guid>
+      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Same Agent, Different Answers: A Repeat-Aware Audit of Corpus-Induced Answer Churn in Retrieval-Augmented QA (2026-08-25)</title>
+      <description>A retrieval-augmented QA system can return different answers after an index expansion even when its requested model identifier, prompt, retrieval policy, evidence depth, rendering, and exposed generat...</description>
+      <link>https://arxiv.org/abs/2608.22856</link>
+      <guid>https://arxiv.org/abs/2608.22856#2026-08-25</guid>
+      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 InjecMEM: Memory Injection Attack on LLM Agent Memory Systems (2026-08-25)</title>
+      <description>Memory is becoming a default subsystem in deployed LLM agents to provide persistent personalization and continuity. This naturally prompts a question: will memory system introduce new vulnerabilities ...</description>
+      <link>http://arxiv.org/abs/2608.23471v1</link>
+      <guid>http://arxiv.org/abs/2608.23471v1#2026-08-25</guid>
+      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Cross-Domain, Multi-Task Data-to-Text Generation without In-Domain Training Data (2026-08-25)</title>
+      <description>Structured data exists in many forms (tables, knowledge graphs, charts, and time series), and converting it into text may involve different generation tasks. However, most prior work on data-to-text (...</description>
+      <link>http://arxiv.org/abs/2608.23391v1</link>
+      <guid>http://arxiv.org/abs/2608.23391v1#2026-08-25</guid>
+      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Walking on the DARKSIDE (2026-08-25)</title>
+      <description>Large Language Models (LLMs) recognise patterns but do not natively track the path of exclusions that a coherent discourse demands. When an input rests on a fabricated authority, a misapplied mechanis...</description>
+      <link>http://arxiv.org/abs/2608.23370v1</link>
+      <guid>http://arxiv.org/abs/2608.23370v1#2026-08-25</guid>
+      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Let's Scale Step by Step: Compute-Efficient Hyperparameter Transfer for Large-Scale Mixture-of-Experts (2026-08-24)</title>
@@ -300,76 +370,6 @@
       <link>https://arxiv.org/abs/2608.18940</link>
       <guid>https://arxiv.org/abs/2608.18940#2026-08-20</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation (2026-08-20)</title>
-      <description>Physical interaction quality is central to deformable-object manipulation, yet most benchmarks evaluate task success alone. A policy may complete the task while allowing slip or causing excessive comp...</description>
-      <link>https://arxiv.org/abs/2608.18701</link>
-      <guid>https://arxiv.org/abs/2608.18701#2026-08-20</guid>
-      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 One Gate Is Not Enough: Composing Stateful Pre-Action Controls for Agentic AI (2026-08-20)</title>
-      <description>Agentic AI systems take consequential actions governed by more than one pre-action control at once: authority, resource, and evidence gates that can admit, degrade, or remediate an action before it ex...</description>
-      <link>http://arxiv.org/abs/2608.18360v1</link>
-      <guid>http://arxiv.org/abs/2608.18360v1#2026-08-20</guid>
-      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SkillForge: Self-Distilling Agents for Project-Specific Issue Resolution (2026-08-20)</title>
-      <description>Large language model (LLM) based agents have demonstrated remarkable proficiency in automated software issue resolution, yet they often struggle to resolve issues in a specific repository because they...</description>
-      <link>https://arxiv.org/abs/2608.18933</link>
-      <guid>https://arxiv.org/abs/2608.18933#2026-08-20</guid>
-      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Co-RL: Unsupervised Reasoning Emerges from Diverse Cohort in Multi-agent RL (2026-08-20)</title>
-      <description>Reinforcement learning (RL) has emerged as a powerful approach for improving reasoning in language and vision-language models, yet its strongest successes still depend heavily on ground-truth supervis...</description>
-      <link>https://arxiv.org/abs/2608.17253</link>
-      <guid>https://arxiv.org/abs/2608.17253#2026-08-20</guid>
-      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 FACET: Preserving Source Intent and Executable State in Terminal Task Synthesis (2026-08-20)</title>
-      <description>Training terminal agents requires scalable executable supervision, yet synthesizing high-quality terminal tasks remains challenging. Each task couples an instruction, an initialized environment, a ref...</description>
-      <link>https://arxiv.org/abs/2608.18580</link>
-      <guid>https://arxiv.org/abs/2608.18580#2026-08-20</guid>
-      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 What is Missing from AI Post-Training AI: An Empirical Analysis (2026-08-20)</title>
-      <description>Large language model (LLM) agents can now post-train an LLM end-to-end. They can write code, launch training, evaluate checkpoints, and improve downstream performance, raising the prospect of AI-for-A...</description>
-      <link>http://arxiv.org/abs/2608.19072v1</link>
-      <guid>http://arxiv.org/abs/2608.19072v1#2026-08-20</guid>
-      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ASI-Bench: At the Dawn of Artificial Superintelligence (2026-08-19)</title>
-      <description>Artificial superintelligence (ASI) requires AI to move beyond mastering existing knowledge toward exploring the unknown, creating new knowledge, and turning new ideas into verifiable results. However,...</description>
-      <link>https://arxiv.org/abs/2608.17271</link>
-      <guid>https://arxiv.org/abs/2608.17271#2026-08-19</guid>
-      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Agentic ESOpt: Fine-Tuning Long-Horizon LLM Agents with Minimal GPU Requirements (2026-08-19)</title>
-      <description>Reinforcement Learning (RL) has been promising in single-turn LLM fine-tuning. However, long-horizon agentic reasoning introduces increasingly branching interactions and sparse rewards, exposing sever...</description>
-      <link>https://arxiv.org/abs/2608.17310</link>
-      <guid>https://arxiv.org/abs/2608.17310#2026-08-19</guid>
-      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Embodied-Navigator: Point, Think, Memorize, and Align for Efficient Navigation (2026-08-19)</title>
-      <description>Although Large Vision-Language Models (VLMs) have significantly advanced embodied navigation, their direct deployment remains challenging, as existing methods often force VLMs into unnatural action sp...</description>
-      <link>https://arxiv.org/abs/2608.17512</link>
-      <guid>https://arxiv.org/abs/2608.17512#2026-08-19</guid>
-      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 HarnessRisk: A Lifecycle-Oriented Benchmark for Agent Harness Safety (2026-08-19)</title>
-      <description>Large language models are increasingly deployed through agent harnesses that manage tools, extensions, persistent state, permissions, and external actions. Existing safety benchmarks mainly target ind...</description>
-      <link>https://arxiv.org/abs/2608.17597</link>
-      <guid>https://arxiv.org/abs/2608.17597#2026-08-19</guid>
-      <pubDate>Wed, 19 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
