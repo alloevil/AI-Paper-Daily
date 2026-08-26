@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 25 Aug 2026 04:46:40 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 04:48:07 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W35（2026-08-18 ~ 2026-08-24）</title>
@@ -20,6 +20,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report (2026-08-26)</title>
+      <description>Universal multimodal embeddings are becoming a core component of modern AI systems, enabling heterogeneous content to be represented in a shared space for applications such as retrieval, recommendatio...</description>
+      <link>https://arxiv.org/abs/2608.24053</link>
+      <guid>https://arxiv.org/abs/2608.24053#2026-08-26</guid>
+      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 On-Policy Self-Distillation in Diffusion Models (2026-08-26)</title>
+      <description>Reinforcement learning can align diffusion models with human preferences and task-specific objectives, but endpoint rewards do not specify how an intermediate denoising prediction should change. We in...</description>
+      <link>https://arxiv.org/abs/2608.24646</link>
+      <guid>https://arxiv.org/abs/2608.24646#2026-08-26</guid>
+      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses (2026-08-26)</title>
+      <description>Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Workin...</description>
+      <link>https://arxiv.org/abs/2608.24876</link>
+      <guid>https://arxiv.org/abs/2608.24876#2026-08-26</guid>
+      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Knowing When to Ask for Help: Bayesian Self-Escalation in Hierarchical LLM Agents (2026-08-26)</title>
+      <description>Current LLM agent systems decide delegation before reasoning begins (a router picks a model) or after a response is complete (a verifier scores it and may retry). We study a third regime: an agent tha...</description>
+      <link>http://arxiv.org/abs/2608.24087v1</link>
+      <guid>http://arxiv.org/abs/2608.24087v1#2026-08-26</guid>
+      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 On-policy Distillation with Verifiable Reward (2026-08-26)</title>
+      <description>Reinforcement Learning with Verifiable Rewards (RLVR) and on-policy distillation (OPD) have become two widely adopted paradigms for post-training large language models. However, RLVR suffers from spar...</description>
+      <link>https://arxiv.org/abs/2608.24696</link>
+      <guid>https://arxiv.org/abs/2608.24696#2026-08-26</guid>
+      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 From Seeing to Acting: Smart Glasses as First-Person Intelligence Platforms (2026-08-26)</title>
+      <description>Smart glasses are evolving from capture and display accessories into first-person intelligence platforms that connect human perception, persistent context, and digital or physical action. Their on-bod...</description>
+      <link>https://arxiv.org/abs/2608.24877</link>
+      <guid>https://arxiv.org/abs/2608.24877#2026-08-26</guid>
+      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training (2026-08-26)</title>
+      <description>We present LAION-BVD, a large-scale open video dataset for multimodal learning, which contains 1.3B platform-specific video URLs collected from CommonCrawl. From these, we download 80M videos with a t...</description>
+      <link>https://arxiv.org/abs/2608.24845</link>
+      <guid>https://arxiv.org/abs/2608.24845#2026-08-26</guid>
+      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Best Practice Critic Optimization (2026-08-26)</title>
+      <description>Group-based reinforcement learning methods such as GRPO for large language models avoid training a critic by sampling multiple responses for each prompt. A reliable critic could instead estimate token...</description>
+      <link>https://arxiv.org/abs/2608.23566</link>
+      <guid>https://arxiv.org/abs/2608.23566#2026-08-26</guid>
+      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CAFE: Self-Improving Search Agents Need Co-Evolving Feedback (2026-08-26)</title>
+      <description>Outcome-supervised search agents learn when and how to retrieve evidence, but terminal rewards neither localize intermediate errors nor redirect an ongoing trajectory before those errors compound. Tre...</description>
+      <link>https://arxiv.org/abs/2608.24794</link>
+      <guid>https://arxiv.org/abs/2608.24794#2026-08-26</guid>
+      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 FedV-KGQA: Multi-Hop Question Answering over Vertically Partitioned Knowledge Graphs (2026-08-26)</title>
+      <description>Real-world data for knowledge graph question answering is often distributed across different organizations due to governance and data sovereignty constraints. While centralized systems exist, they can...</description>
+      <link>http://arxiv.org/abs/2608.24846v1</link>
+      <guid>http://arxiv.org/abs/2608.24846v1#2026-08-26</guid>
+      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Apodex 1.1: Scaling Agentic Intelligence for Complex Work (2026-08-25)</title>
@@ -300,76 +370,6 @@
       <link>http://arxiv.org/abs/2608.20169v1</link>
       <guid>http://arxiv.org/abs/2608.20169v1#2026-08-21</guid>
       <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Repo0: Design-Driven Zero-to-All Code Generation (2026-08-21)</title>
-      <description>Large language model agents have made substantial progress in code generation, yet most existing systems assume a predefined repository architecture. This assumption does not hold in zero-to-all code ...</description>
-      <link>https://arxiv.org/abs/2608.19854</link>
-      <guid>https://arxiv.org/abs/2608.19854#2026-08-21</guid>
-      <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Inject, Align, Recover: Staged Post-Training for Retrieval-Free Document Knowledge Internalization (2026-08-21)</title>
-      <description>Large language models often fail to answer questions about a bounded document collection when the source documents are not retrieved at inference time. We study this setting as document knowledge inte...</description>
-      <link>https://arxiv.org/abs/2608.20281</link>
-      <guid>https://arxiv.org/abs/2608.20281#2026-08-21</guid>
-      <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 FlashPrefill V2: Block-Sparse Prefill Attention for Long-Context LLM Serving (2026-08-21)</title>
-      <description>Long-context modeling is a pivotal capability for Large Language Models, yet the quadratic complexity of attention remains a critical bottleneck, particularly during the compute-intensive prefilling p...</description>
-      <link>https://arxiv.org/abs/2608.19758</link>
-      <guid>https://arxiv.org/abs/2608.19758#2026-08-21</guid>
-      <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EXIMO: VLM Guided Exploration of VLA Policies (2026-08-21)</title>
-      <description>How to efficiently finetune robot policies to learn new tasks on the fly? State of the art robotic manipulation policies are based on behaviour cloning of large vision-language-action (VLA) models wit...</description>
-      <link>https://arxiv.org/abs/2608.19891</link>
-      <guid>https://arxiv.org/abs/2608.19891#2026-08-21</guid>
-      <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement (2026-08-21)</title>
-      <description>Recursive self-improvement (RSI) asks whether an AI system can improve the process that produces AI systems, so that the next system inherits the improvement. That process is the training algorithm: a...</description>
-      <link>http://arxiv.org/abs/2608.20318v1</link>
-      <guid>http://arxiv.org/abs/2608.20318v1#2026-08-21</guid>
-      <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Break It Down, Pass It On: Cross-Task Skill Transfer in LLM Agents (2026-08-21)</title>
-      <description>Large language model (LLM) agents can induce skills from completed tasks and reuse them later to grow more capable with experience. In practice, induced skills may transfer unreliably and can even har...</description>
-      <link>http://arxiv.org/abs/2608.20274v1</link>
-      <guid>http://arxiv.org/abs/2608.20274v1#2026-08-21</guid>
-      <pubDate>Fri, 21 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SemaPLC: A Project-Grounded, Verification-Gated Agent Harness for PLC Code Generation (2026-08-20)</title>
-      <description>Programmable logic controllers (PLCs) run industrial plants, and large language models can already generate independent program organization units (POUs) for them. Whether such logic integrates into a...</description>
-      <link>https://arxiv.org/abs/2608.18565</link>
-      <guid>https://arxiv.org/abs/2608.18565#2026-08-20</guid>
-      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SPADE: Self-Play in Adaptive Synthetic Executable Environments (2026-08-20)</title>
-      <description>Continuous self-improvement requires an ever-expanding pool of self-generated, diverse, adaptive goals. For language agents, existing training environment pools (hand-curated, statically synthesized, ...</description>
-      <link>https://arxiv.org/abs/2608.19197</link>
-      <guid>https://arxiv.org/abs/2608.19197#2026-08-20</guid>
-      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Decision-Metric Alignment in Latent World Models: Diagnostics and Action-Conditioned Objectives for MPC Planning (2026-08-20)</title>
-      <description>JEPA-style latent world models can use Euclidean distance to a goal latent as the cost for model-predictive control (MPC). Strong decoding of task variables, however, does not guarantee that this part...</description>
-      <link>https://arxiv.org/abs/2608.18746</link>
-      <guid>https://arxiv.org/abs/2608.18746#2026-08-20</guid>
-      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Training Chemical Plausibility-Aware Large Language Models for Single-Step Retrosynthesis (2026-08-20)</title>
-      <description>Single-step retrosynthesis is a central component of computer-aided synthesis planning, yet its intrinsically one-to-many nature is poorly captured by single-answer evaluation and benchmarking protoco...</description>
-      <link>https://arxiv.org/abs/2608.18940</link>
-      <guid>https://arxiv.org/abs/2608.18940#2026-08-20</guid>
-      <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
