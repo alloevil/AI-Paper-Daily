@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 28 Aug 2026 08:21:11 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 16:30:22 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W35（2026-08-18 ~ 2026-08-24）</title>
@@ -20,6 +20,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PAWBench: How Far Are We from Probabilistically Aligned World Modeling? (2026-08-29)</title>
+      <description>Recent video generation models are increasingly framed as world models. Many physical processes can unfold in more than one valid way. Therefore, a world model should reproduce not only a plausible tr...</description>
+      <link>https://arxiv.org/abs/2608.27345</link>
+      <guid>https://arxiv.org/abs/2608.27345#2026-08-29</guid>
+      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 UrbanGround: From Local Perception to Spatial Agency in a Real-Scale City (2026-08-29)</title>
+      <description>Multimodal large language models (MLLMs) can interpret a street view, but urban agency depends on whether such local evidence remains useful after the agent starts to move. In this paper, we investiga...</description>
+      <link>https://arxiv.org/abs/2608.27456</link>
+      <guid>https://arxiv.org/abs/2608.27456#2026-08-29</guid>
+      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TTPO: Test-Time Policy Optimization (2026-08-29)</title>
+      <description>Recent prominent post-training methods, such as Reinforcement Learning (RL) and On-Policy Self-Distillation (OPSD), have driven rapid progress in mathematical reasoning for large language models, yet ...</description>
+      <link>https://arxiv.org/abs/2608.27448</link>
+      <guid>https://arxiv.org/abs/2608.27448#2026-08-29</guid>
+      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Self-OPD: On-Policy Distillation for Flow Matching Models without Teacher (2026-08-29)</title>
+      <description>On-policy distillation (OPD), which leverages a pre-trained, specialized teacher model to provide dense supervisory signals, has achieved significant success in Large Language Models (LLMs) and has re...</description>
+      <link>https://arxiv.org/abs/2608.26872</link>
+      <guid>https://arxiv.org/abs/2608.26872#2026-08-29</guid>
+      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 What Makes Good Agentic Data? An ACE Lens on Data Generation for LLM Agents (2026-08-29)</title>
+      <description>LLM agents increasingly rely on generated interaction data to learn how to interact with external environments. Agentic data generation must maintain consistency among environments, tasks, interaction...</description>
+      <link>https://arxiv.org/abs/2608.27260</link>
+      <guid>https://arxiv.org/abs/2608.27260#2026-08-29</guid>
+      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PILOT in the Loop: Live Self-Improvement for Long-Horizon Agents (2026-08-29)</title>
+      <description>Long-horizon agent runs generate experience that can improve both the current run and future work. Most self-improvement methods process this experience only after execution ends, so they cannot redir...</description>
+      <link>https://arxiv.org/abs/2608.26530</link>
+      <guid>https://arxiv.org/abs/2608.26530#2026-08-29</guid>
+      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Understanding Evolution Strategies for LLM Reasoning: Broader Reasoning Coverage than GRPO (2026-08-29)</title>
+      <description>Evolution Strategies (ES) have recently emerged as a memory-efficient post-training paradigm for LLM reasoning. However, the optimization behavior of ES remains understudied, making it hard to define ...</description>
+      <link>https://arxiv.org/abs/2608.27351</link>
+      <guid>https://arxiv.org/abs/2608.27351#2026-08-29</guid>
+      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution (2026-08-29)</title>
+      <description>Agent skills package specialized knowledge and workflows into reusable resources that extend AI agent capabilities. Recent work automatically discovers such skills from agent experience, which enables...</description>
+      <link>https://arxiv.org/abs/2608.27454</link>
+      <guid>https://arxiv.org/abs/2608.27454#2026-08-29</guid>
+      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Magpie: Real-Time World Renderer for Interactive Games (2026-08-29)</title>
+      <description>Modern game development relies heavily on conventional graphics pipelines. High-quality visual content requires modeling, material authoring, animation, lighting, effects, and runtime optimization, ma...</description>
+      <link>https://arxiv.org/abs/2608.27168</link>
+      <guid>https://arxiv.org/abs/2608.27168#2026-08-29</guid>
+      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Thinking on Shots: Consistent Multi-Shot Video Editing with Agentic Reasoning (2026-08-29)</title>
+      <description>While generative AI has significantly advanced video editing, existing methods primarily focus on single-shot or short video clips. Editing long videos with multiple instructions remains a formidable ...</description>
+      <link>https://arxiv.org/abs/2608.26809</link>
+      <guid>https://arxiv.org/abs/2608.26809#2026-08-29</guid>
+      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction (2026-08-27)</title>
@@ -300,76 +370,6 @@
       <link>http://arxiv.org/abs/2608.21243v1</link>
       <guid>http://arxiv.org/abs/2608.21243v1#2026-08-24</guid>
       <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MileGPO: Milestone Inference with Local Evidence for Graph-Based Policy Optimization of Long-Horizon LLM Agents (2026-08-23)</title>
-      <description>Credit assignment is challenging in long-horizon agentic reinforcement learning, where supervision often comes only from final rewards. Existing methods refine trajectory-level signals into step-level...</description>
-      <link>http://arxiv.org/abs/2608.19803v1</link>
-      <guid>http://arxiv.org/abs/2608.19803v1#2026-08-23</guid>
-      <pubDate>Sun, 23 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Towards general embodied intelligence: integrating large language models, knowledge bases, and reasoning capabilities to build the next generation of AI agents (2026-08-23)</title>
-      <description>The convergence of large language models (LLMs), structured knowledge bases (KBs), and reasoning ability (RA) presents a promising trajectory toward general embodied intelligence (GEI). This paper rev...</description>
-      <link>http://arxiv.org/abs/2608.19794v1</link>
-      <guid>http://arxiv.org/abs/2608.19794v1#2026-08-23</guid>
-      <pubDate>Sun, 23 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Credit Without Ground Truth: Auditing Step-Level Credit Assignment in LLM Agents Against Executed Replay (2026-08-23)</title>
-      <description>Audited against causal ground truth from executed replay in a single-agent tool environment (ALFWorld), none of the step-level credit signals used to train LLM agents -- LLM-judge scores, outcome-cond...</description>
-      <link>http://arxiv.org/abs/2608.19760v1</link>
-      <guid>http://arxiv.org/abs/2608.19760v1#2026-08-23</guid>
-      <pubDate>Sun, 23 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Beyond Memory Majority: Latent-Source Reasoning for Multi-Agent Memory Arbitration (2026-08-23)</title>
-      <description>Long-term multi-agent systems continuously accumulate the memories produced by different agents. Existing memory methods typically treat retrieved memories as independent evidence and combine them thr...</description>
-      <link>http://arxiv.org/abs/2608.19701v1</link>
-      <guid>http://arxiv.org/abs/2608.19701v1#2026-08-23</guid>
-      <pubDate>Sun, 23 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 An Evidence-Grounded Multi-Agent System for High-Level Bio-Robot Design (2026-08-23)</title>
-      <description>In this paper, a bio-robot is an engineered living or biohybrid system in which living cells perform one or more core functions, such as sensing, information processing, actuation or output. We focus ...</description>
-      <link>http://arxiv.org/abs/2608.19699v1</link>
-      <guid>http://arxiv.org/abs/2608.19699v1#2026-08-23</guid>
-      <pubDate>Sun, 23 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents (2026-08-23)</title>
-      <description>Agentic language models repeatedly encode tool and skill schemas that recur across requests in different combinations and orders, preventing standard prefix caching from reusing their key--value (KV) ...</description>
-      <link>http://arxiv.org/abs/2608.19662v1</link>
-      <guid>http://arxiv.org/abs/2608.19662v1#2026-08-23</guid>
-      <pubDate>Sun, 23 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Reward-Guided Autoregressive Graph Generation for Efficient Multi-Agent Communication Topology Design (2026-08-22)</title>
-      <description>LLM-based Multi-Agent Systems (MAS) achieve strong performance on complex reasoning tasks by coordinating multiple agents, but at the cost of substantial token consumption. Recent work on automatic to...</description>
-      <link>http://arxiv.org/abs/2608.20099v1</link>
-      <guid>http://arxiv.org/abs/2608.20099v1#2026-08-22</guid>
-      <pubDate>Sat, 22 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SABET-QA: Temporal Knowledge Graph Question Answering (2026-08-22)</title>
-      <description>Question Answering over Temporal Knowledge Graphs (TKGQA) requires reasoning over time-sensitive facts, yet existing embedding-based methods struggle with multi-step queries due to single-pass reasoni...</description>
-      <link>http://arxiv.org/abs/2608.20083v1</link>
-      <guid>http://arxiv.org/abs/2608.20083v1#2026-08-22</guid>
-      <pubDate>Sat, 22 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 A three-dimensional typology of agency for advanced AI systems (2026-08-22)</title>
-      <description>Research on the agency of advanced artificial intelligence (AI) systems focuses on agency as a normative concept and on the agency of particularly agentic AI systems. While recent work also focuses on...</description>
-      <link>http://arxiv.org/abs/2608.20041v1</link>
-      <guid>http://arxiv.org/abs/2608.20041v1#2026-08-22</guid>
-      <pubDate>Sat, 22 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Optimal Skill Selection for LLM Agents with Provable Bicriteria Guarantees (2026-08-22)</title>
-      <description>Loading reusable skill documents into a bounded context window is now the primary way large language model (LLM) agents acquire task-specific capabilities, which makes skill selection a first-order de...</description>
-      <link>http://arxiv.org/abs/2608.19993v1</link>
-      <guid>http://arxiv.org/abs/2608.19993v1#2026-08-22</guid>
-      <pubDate>Sat, 22 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
