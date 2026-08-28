@@ -26,6 +26,13 @@ WEEKLY_PAGE_TEMPLATE = '''<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} — AI Paper Daily</title>
 <meta name="description" content="{desc}">
+<link rel="canonical" href="{page_url}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{page_url}">
+<meta property="og:title" content="{title} — AI Paper Daily">
+<meta property="og:description" content="{desc}">
+<meta property="og:site_name" content="AI Paper Daily">
+<meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
 <style>
   :root {{
@@ -114,6 +121,7 @@ def render_weekly_page(week_label: str, date_range: str, papers: list[dict]) -> 
         desc=f'过去 7 天按热度（投票 / 星标 / 开源代码）重排的 Top {len(papers)}',
         cards=cards,
         site_url=SITE_URL,
+        page_url=f'{SITE_URL}/weekly-{week_label}.html',
     )
 
 
@@ -377,6 +385,17 @@ def main():
     rss_xml = generate_rss(reports, weekly_reports)
     with open(os.path.join(DIST_DIR, 'feed.xml'), 'w', encoding='utf-8') as f:
         f.write(rss_xml)
+
+    # Generate sitemap.xml
+    urls = [f'{SITE_URL}/'] + [
+        f'{SITE_URL}/weekly-{wl}.html' for wl, _, _ in weekly_reports]
+    sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+               + '\n'.join(f'  <url><loc>{u}</loc></url>' for u in urls)
+               + '\n</urlset>\n')
+    with open(os.path.join(DIST_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
+        f.write(sitemap)
+    print("[OK] sitemap.xml generated")
 
     print(f"[OK] index.html generated ({len(reports)} dates, {total_papers} papers)")
     if weekly_reports:
