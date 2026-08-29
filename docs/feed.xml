@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 28 Aug 2026 16:30:22 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 10:58:15 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W35（2026-08-18 ~ 2026-08-24）</title>
@@ -22,73 +22,73 @@
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 PAWBench: How Far Are We from Probabilistically Aligned World Modeling? (2026-08-29)</title>
-      <description>Recent video generation models are increasingly framed as world models. Many physical processes can unfold in more than one valid way. Therefore, a world model should reproduce not only a plausible tr...</description>
-      <link>https://arxiv.org/abs/2608.27345</link>
-      <guid>https://arxiv.org/abs/2608.27345#2026-08-29</guid>
+      <title>📄 Calibrated Enough to Know, Not Calibrated to Act: Fabricated Evidence Makes LLM Agents Commit to the Unknowable (2026-08-29)</title>
+      <description>An LLM agent shown a professional-looking market panel commits to a directional call on a provably unpredictable question far more often than one asked the bare question: across 12 frontier models, co...</description>
+      <link>http://arxiv.org/abs/2608.27167v1</link>
+      <guid>http://arxiv.org/abs/2608.27167v1#2026-08-29</guid>
       <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 UrbanGround: From Local Perception to Spatial Agency in a Real-Scale City (2026-08-29)</title>
-      <description>Multimodal large language models (MLLMs) can interpret a street view, but urban agency depends on whether such local evidence remains useful after the agent starts to move. In this paper, we investiga...</description>
-      <link>https://arxiv.org/abs/2608.27456</link>
-      <guid>https://arxiv.org/abs/2608.27456#2026-08-29</guid>
+      <title>📄 DSA: Evidence-Aware LLM-Agent Orchestration for Multi-Market Stock Research (2026-08-29)</title>
+      <description>Large language models can summarize financial information, but an operational stock-research system must first assemble heterogeneous evidence, expose unavailable data and model capabilities, and cont...</description>
+      <link>http://arxiv.org/abs/2608.26990v1</link>
+      <guid>http://arxiv.org/abs/2608.26990v1#2026-08-29</guid>
       <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 TTPO: Test-Time Policy Optimization (2026-08-29)</title>
-      <description>Recent prominent post-training methods, such as Reinforcement Learning (RL) and On-Policy Self-Distillation (OPSD), have driven rapid progress in mathematical reasoning for large language models, yet ...</description>
-      <link>https://arxiv.org/abs/2608.27448</link>
-      <guid>https://arxiv.org/abs/2608.27448#2026-08-29</guid>
+      <title>📄 Persona-Execution Separation: An Architecture Pattern for Evolving LLM Agents under Execution Audit (2026-08-29)</title>
+      <description>Large language model (LLM) agents in governed organizations must let the persona (instructions, tone, self-presentation) evolve freely, while keeping execution (stateful, audited work) traceable. A si...</description>
+      <link>http://arxiv.org/abs/2608.27427v1</link>
+      <guid>http://arxiv.org/abs/2608.27427v1#2026-08-29</guid>
       <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 Self-OPD: On-Policy Distillation for Flow Matching Models without Teacher (2026-08-29)</title>
-      <description>On-policy distillation (OPD), which leverages a pre-trained, specialized teacher model to provide dense supervisory signals, has achieved significant success in Large Language Models (LLMs) and has re...</description>
-      <link>https://arxiv.org/abs/2608.26872</link>
-      <guid>https://arxiv.org/abs/2608.26872#2026-08-29</guid>
+      <title>📄 CorporateBench: Large-Scale Q&amp;A Benchmarking with Temporal Knowledge Bases (2026-08-29)</title>
+      <description>LLMs are increasingly able to answer complex questions about enterprise-scale document collections. But evaluation is hard: companies don't want to share internal communications, and synthetic dataset...</description>
+      <link>http://arxiv.org/abs/2608.27391v1</link>
+      <guid>http://arxiv.org/abs/2608.27391v1#2026-08-29</guid>
       <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 What Makes Good Agentic Data? An ACE Lens on Data Generation for LLM Agents (2026-08-29)</title>
-      <description>LLM agents increasingly rely on generated interaction data to learn how to interact with external environments. Agentic data generation must maintain consistency among environments, tasks, interaction...</description>
-      <link>https://arxiv.org/abs/2608.27260</link>
-      <guid>https://arxiv.org/abs/2608.27260#2026-08-29</guid>
+      <title>📄 One Model, Many Minds: Unlocking Multi-Agent Synergy in a Single Agent via Mixture of Roles (2026-08-29)</title>
+      <description>Specializing Large Language Models (LLMs) toward distinct abilities underpins successes ranging from personalized assistants to multi-agent systems (MAS). Single-agent paradigms rely on pre-defined pe...</description>
+      <link>http://arxiv.org/abs/2608.27338v1</link>
+      <guid>http://arxiv.org/abs/2608.27338v1#2026-08-29</guid>
       <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 PILOT in the Loop: Live Self-Improvement for Long-Horizon Agents (2026-08-29)</title>
-      <description>Long-horizon agent runs generate experience that can improve both the current run and future work. Most self-improvement methods process this experience only after execution ends, so they cannot redir...</description>
-      <link>https://arxiv.org/abs/2608.26530</link>
-      <guid>https://arxiv.org/abs/2608.26530#2026-08-29</guid>
+      <title>📄 Naive Prompt Optimization: Rethinking the Need for Complex Prompt Search (2026-08-29)</title>
+      <description>Efficiently improving autonomous agents across diverse tasks is central to accelerating recursive self-improvement (RSI) in agentic AI, with prompt optimization emerging as a promising approach capabl...</description>
+      <link>http://arxiv.org/abs/2608.27266v1</link>
+      <guid>http://arxiv.org/abs/2608.27266v1#2026-08-29</guid>
       <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 Understanding Evolution Strategies for LLM Reasoning: Broader Reasoning Coverage than GRPO (2026-08-29)</title>
-      <description>Evolution Strategies (ES) have recently emerged as a memory-efficient post-training paradigm for LLM reasoning. However, the optimization behavior of ES remains understudied, making it hard to define ...</description>
-      <link>https://arxiv.org/abs/2608.27351</link>
-      <guid>https://arxiv.org/abs/2608.27351#2026-08-29</guid>
+      <title>📄 When Tool Outputs Become Commands: Separating Action Induction from Runtime Authorization in Tool-Augmented LLM Agents (2026-08-29)</title>
+      <description>Tool-augmented LLM agents must rely on untrusted runtime Observations to complete open-ended tasks; however, when tool outputs no longer merely provide data but begin to specify concrete actions, they...</description>
+      <link>http://arxiv.org/abs/2608.27146v1</link>
+      <guid>http://arxiv.org/abs/2608.27146v1#2026-08-29</guid>
       <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution (2026-08-29)</title>
-      <description>Agent skills package specialized knowledge and workflows into reusable resources that extend AI agent capabilities. Recent work automatically discovers such skills from agent experience, which enables...</description>
-      <link>https://arxiv.org/abs/2608.27454</link>
-      <guid>https://arxiv.org/abs/2608.27454#2026-08-29</guid>
+      <title>📄 GRAIN: Bridging Name and Narrative Shifts in Real-World Graph Reasoning through Invariance-Rewarded Agentic RL (2026-08-29)</title>
+      <description>Despite their potential in standardized graph tasks, Large Language Models (LLMs) remain brittle to real-world shifts in node identifiers and task formulation. While deterministic graph tools are inva...</description>
+      <link>http://arxiv.org/abs/2608.27142v1</link>
+      <guid>http://arxiv.org/abs/2608.27142v1#2026-08-29</guid>
       <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 Magpie: Real-Time World Renderer for Interactive Games (2026-08-29)</title>
-      <description>Modern game development relies heavily on conventional graphics pipelines. High-quality visual content requires modeling, material authoring, animation, lighting, effects, and runtime optimization, ma...</description>
-      <link>https://arxiv.org/abs/2608.27168</link>
-      <guid>https://arxiv.org/abs/2608.27168#2026-08-29</guid>
+      <title>📄 Safety Does Not Compose: Non-Decaying Loop State for Autonomous LLM Agents (2026-08-29)</title>
+      <description>Large language model agents are increasingly deployed as autonomous loops. Starting from one human goal, such a system repeatedly discovers work, plans, executes tool calls, verifies outcomes and pers...</description>
+      <link>http://arxiv.org/abs/2608.27141v1</link>
+      <guid>http://arxiv.org/abs/2608.27141v1#2026-08-29</guid>
       <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 Thinking on Shots: Consistent Multi-Shot Video Editing with Agentic Reasoning (2026-08-29)</title>
-      <description>While generative AI has significantly advanced video editing, existing methods primarily focus on single-shot or short video clips. Editing long videos with multiple instructions remains a formidable ...</description>
-      <link>https://arxiv.org/abs/2608.26809</link>
-      <guid>https://arxiv.org/abs/2608.26809#2026-08-29</guid>
+      <title>📄 FaulT-Bench: Towards Benchmarking Network Troubleshooting LLM Agents under Unreliable User Tickets (2026-08-29)</title>
+      <description>LLM-based agents are increasingly proposed for network fault diagnosis, but existing benchmarks evaluate them only on accurate tickets and always assume a fault is present, conditions rarely met in pr...</description>
+      <link>http://arxiv.org/abs/2608.27021v1</link>
+      <guid>http://arxiv.org/abs/2608.27021v1#2026-08-29</guid>
       <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
