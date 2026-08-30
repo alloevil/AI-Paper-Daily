@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 29 Aug 2026 10:58:15 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 09:52:28 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W35（2026-08-18 ~ 2026-08-24）</title>
@@ -20,6 +20,34 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution (2026-08-30)</title>
+      <description>Agent skills package specialized knowledge and workflows into reusable resources that extend AI agent capabilities. Recent work automatically discovers such skills from agent experience, which enables...</description>
+      <link>http://arxiv.org/abs/2608.27454v1</link>
+      <guid>http://arxiv.org/abs/2608.27454v1#2026-08-30</guid>
+      <pubDate>Sun, 30 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 What Makes Good Agentic Data? An ACE Lens on Data Generation for LLM Agents (2026-08-30)</title>
+      <description>LLM agents increasingly rely on generated interaction data to learn how to interact with external environments. Agentic data generation must maintain consistency among environments, tasks, interaction...</description>
+      <link>http://arxiv.org/abs/2608.27260v1</link>
+      <guid>http://arxiv.org/abs/2608.27260v1#2026-08-30</guid>
+      <pubDate>Sun, 30 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 From Atomic to Agentic: Towards Interpretable Evaluation of LLMs' Agentic Mathematical Capabilities (2026-08-30)</title>
+      <description>Large Language Models (LLMs) are evolving from performing end-to-end mathematical reasoning to integrating agentic intelligence. However, most existing math benchmarks evaluate only final answers. Thi...</description>
+      <link>http://arxiv.org/abs/2608.26950v1</link>
+      <guid>http://arxiv.org/abs/2608.26950v1#2026-08-30</guid>
+      <pubDate>Sun, 30 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Counterfactual Bias Testing for Application Tracking System (2026-08-30)</title>
+      <description>Automated candidate-job matching systems are increasingly classified as high-risk AI under emerging regulation, yet auditing them for demographic bias is expensive: classical correspondence-audit stud...</description>
+      <link>http://arxiv.org/abs/2608.26899v1</link>
+      <guid>http://arxiv.org/abs/2608.26899v1#2026-08-30</guid>
+      <pubDate>Sun, 30 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Calibrated Enough to Know, Not Calibrated to Act: Fabricated Evidence Makes LLM Agents Commit to the Unknowable (2026-08-29)</title>
@@ -341,34 +369,6 @@
       <description>Simulating realistic user shopping behavior underpins offline evaluation and reinforcement learning in e-commerce scenarios. While recent LLM- and VLM-based simulators have made encouraging progress, ...</description>
       <link>https://arxiv.org/abs/2608.20707</link>
       <guid>https://arxiv.org/abs/2608.20707#2026-08-24</guid>
-      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 InfinityEdit: Infinite Video Editing with a Lightweight Edit-Ignition Adapter (2026-08-24)</title>
-      <description>With large pretrained models, existing methods have effectively improved instruction-based video editing. However, most of them rely on an in-place editing assumption. They align the edited video with...</description>
-      <link>https://arxiv.org/abs/2608.20910</link>
-      <guid>https://arxiv.org/abs/2608.20910#2026-08-24</guid>
-      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 CLEAR: Continuous Latent Adapter Routing for Utility-Preserving LLM Safety Alignment (2026-08-24)</title>
-      <description>Improving the safety of large language models (LLMs) often comes at the expense of utility, as globally applied safety tuning may affect model responses to both harmful and benign inputs. We propose C...</description>
-      <link>https://arxiv.org/abs/2608.21278</link>
-      <guid>https://arxiv.org/abs/2608.21278#2026-08-24</guid>
-      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Llama-Mobile: Efficient 2.7-Bit Quantization of VLMs (2026-08-24)</title>
-      <description>Deploying vision-language models (VLMs) on mobile devices is challenging due to their significant memory and compute requirements. We present a framework for quantizing VLMs for efficient inference on...</description>
-      <link>https://arxiv.org/abs/2608.21134</link>
-      <guid>https://arxiv.org/abs/2608.21134#2026-08-24</guid>
-      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Adapting Knowledge Graphs for Behavior Denoising in Sequential Recommendation (2026-08-24)</title>
-      <description>Sequential recommendation predicts the next item from a user's interaction history, but not every interaction is equally informative. Real logs combine persistent preferences with temporary needs, exp...</description>
-      <link>http://arxiv.org/abs/2608.21243v1</link>
-      <guid>http://arxiv.org/abs/2608.21243v1#2026-08-24</guid>
       <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
