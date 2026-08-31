@@ -5,8 +5,15 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 31 Aug 2026 10:44:27 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 11:13:32 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📊 论文周报 2026-W36（2026-08-25 ~ 2026-08-31）</title>
+      <description>过去 7 天按热度重排的 Top 15：VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction；Apodex 1.1: Scaling Agentic Intelligence for Complex Work；JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution；Agentic Artifact Creation: Systems, Evaluation, Principles, and Opportunities；VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning…</description>
+      <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W36.html</link>
+      <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W36.html</guid>
+      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>📊 论文周报 2026-W35（2026-08-18 ~ 2026-08-24）</title>
       <description>过去 7 天按热度重排的 Top 15：4DAnyone: Create Anyone in 4D from a Casual Monocular Video；Let's Scale Step by Step: Compute-Efficient Hyperparameter Transfer for Large-Scale Mixture-of-Experts；OmniAssistBench: Assistant-style Interaction Benchmark for Omni-LLMs；WithEveryone: Unified Planning and Identity Grounding for Group Image Generation；MemTrapBench: Benchmarking Cognitive Traps in LLM Memory Use…</description>
