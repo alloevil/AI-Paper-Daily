@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 30 Aug 2026 09:52:28 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 10:44:27 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W35（2026-08-18 ~ 2026-08-24）</title>
@@ -20,6 +20,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Agentic Artifact Creation: Systems, Evaluation, Principles, and Opportunities (2026-08-31)</title>
+      <description>Generative models can turn natural-language prompts into images, text, code, and other content, lowering the cost of producing drafts and components. Their practical impact increasingly depends on whe...</description>
+      <link>https://arxiv.org/abs/2608.28122</link>
+      <guid>https://arxiv.org/abs/2608.28122#2026-08-31</guid>
+      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ContextPilot: Teaching Agents for Proactive Context Management via Fine-grained RL (2026-08-31)</title>
+      <description>Long-horizon agentic tasks require large language models (LLMs) to iteratively retrieve, integrate, and maintain dispersed information across multi-turn interactions, but preserving all interaction hi...</description>
+      <link>https://arxiv.org/abs/2608.28476</link>
+      <guid>https://arxiv.org/abs/2608.28476#2026-08-31</guid>
+      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 LayerRecall: A State-Conditioned Memory Router for Long-Horizon Consistency in Video Generation (2026-08-31)</title>
+      <description>Autoregressive video diffusion enables scalable long-video generation by producing chunks from a bounded recent context. While recency-based caching preserves local continuity, it evicts historical cu...</description>
+      <link>https://arxiv.org/abs/2608.28460</link>
+      <guid>https://arxiv.org/abs/2608.28460#2026-08-31</guid>
+      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Blind Men and the Elephant: Probing the Epistemic Myopia of LLMs under Long-Tail Divergent Knowledge (2026-08-31)</title>
+      <description>Factual question answering (QA) typically assumes a single canonical answer, obscuring whether large language models (LLMs) retain divergent accounts of long-tail facts. To address this gap, we introd...</description>
+      <link>https://arxiv.org/abs/2608.28478</link>
+      <guid>https://arxiv.org/abs/2608.28478#2026-08-31</guid>
+      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Locate Anything in Videos: Rethinking Efficient Generative Spatio-Temporal Video Grounding (2026-08-31)</title>
+      <description>Spatio-temporal video grounding (STVG) requires models to identify when a referred event occurs and localize the target entity throughout that interval. Existing multimodal large language models typic...</description>
+      <link>https://arxiv.org/abs/2608.28192</link>
+      <guid>https://arxiv.org/abs/2608.28192#2026-08-31</guid>
+      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CAITLYN: Can LLM Agents Autonomously Synthesize Defenses against Emerging Injection Attacks? (2026-08-31)</title>
+      <description>Prompt injection attacks on Large Language Model (LLM) agents seek to introduce malicious instructions or content into external text sources retrieved by agents, forcing the underlying LLMs to execute...</description>
+      <link>http://arxiv.org/abs/2608.27990v1</link>
+      <guid>http://arxiv.org/abs/2608.27990v1#2026-08-31</guid>
+      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Video Generative Models as Geometry Learner (2026-08-31)</title>
+      <description>Recent generative approaches to geometry estimation adapt pretrained image diffusion models and treat the task as image-conditioned generation. Leveraging off-the-shelf image diffusion models, they ei...</description>
+      <link>https://arxiv.org/abs/2608.28549</link>
+      <guid>https://arxiv.org/abs/2608.28549#2026-08-31</guid>
+      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Rubric-to-Code Credit Assignment for Reinforcement Learning (2026-08-31)</title>
+      <description>Interactive web application generation requires models to produce usable HTML, CSS, and JavaScript applications from natural language requests. Unlike conventional code generation, application quality...</description>
+      <link>https://arxiv.org/abs/2608.27906</link>
+      <guid>https://arxiv.org/abs/2608.27906#2026-08-31</guid>
+      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 COVER: Identifiable Evaluation of Coalition Routing (2026-08-31)</title>
+      <description>When a multi-agent system changes its team, it also changes the messages and final answer it produces, so an end-to-end accuracy gap does not by itself identify a routing effect. We introduce method, ...</description>
+      <link>http://arxiv.org/abs/2608.28475v1</link>
+      <guid>http://arxiv.org/abs/2608.28475v1#2026-08-31</guid>
+      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 RetailAgent: Structured Adverse Timing in Self-Conditioned Multimodal LLM Trading Agents (2026-08-31)</title>
+      <description>In financial markets, a sequential policy that reacts systematically to price movements may become predictable to other market participants. This paper studies whether large language model (LLM) agent...</description>
+      <link>http://arxiv.org/abs/2608.28399v1</link>
+      <guid>http://arxiv.org/abs/2608.28399v1#2026-08-31</guid>
+      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution (2026-08-30)</title>
@@ -300,76 +370,6 @@
       <link>https://arxiv.org/abs/2608.23565</link>
       <guid>https://arxiv.org/abs/2608.23565#2026-08-25</guid>
       <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Same Agent, Different Answers: A Repeat-Aware Audit of Corpus-Induced Answer Churn in Retrieval-Augmented QA (2026-08-25)</title>
-      <description>A retrieval-augmented QA system can return different answers after an index expansion even when its requested model identifier, prompt, retrieval policy, evidence depth, rendering, and exposed generat...</description>
-      <link>https://arxiv.org/abs/2608.22856</link>
-      <guid>https://arxiv.org/abs/2608.22856#2026-08-25</guid>
-      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 InjecMEM: Memory Injection Attack on LLM Agent Memory Systems (2026-08-25)</title>
-      <description>Memory is becoming a default subsystem in deployed LLM agents to provide persistent personalization and continuity. This naturally prompts a question: will memory system introduce new vulnerabilities ...</description>
-      <link>http://arxiv.org/abs/2608.23471v1</link>
-      <guid>http://arxiv.org/abs/2608.23471v1#2026-08-25</guid>
-      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Cross-Domain, Multi-Task Data-to-Text Generation without In-Domain Training Data (2026-08-25)</title>
-      <description>Structured data exists in many forms (tables, knowledge graphs, charts, and time series), and converting it into text may involve different generation tasks. However, most prior work on data-to-text (...</description>
-      <link>http://arxiv.org/abs/2608.23391v1</link>
-      <guid>http://arxiv.org/abs/2608.23391v1#2026-08-25</guid>
-      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Walking on the DARKSIDE (2026-08-25)</title>
-      <description>Large Language Models (LLMs) recognise patterns but do not natively track the path of exclusions that a coherent discourse demands. When an input rests on a fabricated authority, a misapplied mechanis...</description>
-      <link>http://arxiv.org/abs/2608.23370v1</link>
-      <guid>http://arxiv.org/abs/2608.23370v1#2026-08-25</guid>
-      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Let's Scale Step by Step: Compute-Efficient Hyperparameter Transfer for Large-Scale Mixture-of-Experts (2026-08-24)</title>
-      <description>Mixture-of-Experts (MoE) architectures significantly expand model capacity without a proportional increase in computational cost. However, optimizing their hyperparameters---particularly the learning ...</description>
-      <link>https://arxiv.org/abs/2608.20061</link>
-      <guid>https://arxiv.org/abs/2608.20061#2026-08-24</guid>
-      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OmniAssistBench: Assistant-style Interaction Benchmark for Omni-LLMs (2026-08-24)</title>
-      <description>Recent omni-modal large language models (Omni-LLMs) show great potential as real-time video assistants, which continuously perceive environments and guide users to achieve specific goals. Unlike tradi...</description>
-      <link>https://arxiv.org/abs/2608.21360</link>
-      <guid>https://arxiv.org/abs/2608.21360#2026-08-24</guid>
-      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ClawSentry: A Progressive Multi-Tier Security Monitor for Safeguarding Autonomous LLM Agents (2026-08-24)</title>
-      <description>As large language model (LLM) agents move from conversation to executing code, reading local files, and orchestrating external tools, a single agent hijacked by a malicious third-party skill can cause...</description>
-      <link>http://arxiv.org/abs/2608.21101v1</link>
-      <guid>http://arxiv.org/abs/2608.21101v1#2026-08-24</guid>
-      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Peer-Voted LLM-Agent Stress Tests Find Feed-Induced Lexical Convergence but No Reliable Matched-Exposure Advantage for Distributed Sources (2026-08-24)</title>
-      <description>Population-level behavior in large-language-model (LLM) agents cannot be characterized by single-agent benchmarks. We introduce PV-SST, a peer-voted social-platform testbed, and report a separately fr...</description>
-      <link>http://arxiv.org/abs/2608.20438v1</link>
-      <guid>http://arxiv.org/abs/2608.20438v1#2026-08-24</guid>
-      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AgentMercury: Your Agent Can Synthesize Verifiable Environments for Business Scenarios at scale (2026-08-24)</title>
-      <description>Agents learn to act through interaction with environments, yet the environments used for training are often manually constructed or synthesized around predefined tasks and benchmarks. This task-centri...</description>
-      <link>https://arxiv.org/abs/2608.20634</link>
-      <guid>https://arxiv.org/abs/2608.20634#2026-08-24</guid>
-      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Towards Faithful Simulation of Human Shopping Behavior (2026-08-24)</title>
-      <description>Simulating realistic user shopping behavior underpins offline evaluation and reinforcement learning in e-commerce scenarios. While recent LLM- and VLM-based simulators have made encouraging progress, ...</description>
-      <link>https://arxiv.org/abs/2608.20707</link>
-      <guid>https://arxiv.org/abs/2608.20707#2026-08-24</guid>
-      <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
