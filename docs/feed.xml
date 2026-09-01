@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 31 Aug 2026 11:13:32 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 09:19:25 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W36（2026-08-25 ~ 2026-08-31）</title>
@@ -27,6 +27,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution (2026-09-01)</title>
+      <description>Recent video generators often omit audio or synthesize it in a separate stage, limiting reciprocal modeling of visual dynamics and acoustic events. We present DreamX-Creator 1.0, a compact native join...</description>
+      <link>https://arxiv.org/abs/2608.31106</link>
+      <guid>https://arxiv.org/abs/2608.31106#2026-09-01</guid>
+      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Does On-Policy Distillation Really Distill? From Noisy Teacher to Self-Improvement (2026-09-01)</title>
+      <description>On-policy distillation (OPD) offers dense token-level supervision as an alternative to the sparse outcome-level advantages of reinforcement learning with verifiable rewards (RLVR). However, the teache...</description>
+      <link>https://arxiv.org/abs/2608.31046</link>
+      <guid>https://arxiv.org/abs/2608.31046#2026-09-01</guid>
+      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Lucida: Parse, Generate, and Place for Composable Real-to-Sim Scene Modeling (2026-09-01)</title>
+      <description>Composable scene modeling aims to recover a real indoor scene as complete, editable object assets arranged as observed, giving robot simulation and embodied AI a simulation-ready replica of the real e...</description>
+      <link>https://arxiv.org/abs/2608.30821</link>
+      <guid>https://arxiv.org/abs/2608.30821#2026-09-01</guid>
+      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Normalized Low-Rank Adaptation (2026-09-01)</title>
+      <description>While low-rank adaptation (LoRA) is widely used for parameter-efficient model adaptation, how to regularize its training dynamics for stable and effective optimization remains underexplored. Because L...</description>
+      <link>https://arxiv.org/abs/2608.31036</link>
+      <guid>https://arxiv.org/abs/2608.31036#2026-09-01</guid>
+      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PaperGym: Rubric-Centered Evolution for Research-Plan Generation (2026-09-01)</title>
+      <description>Research planning is the decisive capability of AI scientists. Yet a research plan admits no verifiable answer, so reinforcement learning lacks the environment it requires: tasks paired with a critic....</description>
+      <link>https://arxiv.org/abs/2608.31119</link>
+      <guid>https://arxiv.org/abs/2608.31119#2026-09-01</guid>
+      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CogEvol: Towards Efficient and Reliable Learning Environment Generation (2026-09-01)</title>
+      <description>We present CogEvol, a family of models trained specifically for Learning Environment Generation: turning a course brief into a finished learning artifact (structured-JSON slides or self-contained inte...</description>
+      <link>https://arxiv.org/abs/2608.30968</link>
+      <guid>https://arxiv.org/abs/2608.30968#2026-09-01</guid>
+      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 LightNav-0: Eliciting VLM Spatial Intelligence for Generalist Embodied Navigation (2026-09-01)</title>
+      <description>Embodied navigation requires agents to translate heterogeneous goals and visual observations into actions across tasks, environments, and robot embodiments. Modern vision-language models (VLMs) alread...</description>
+      <link>https://arxiv.org/abs/2608.30935</link>
+      <guid>https://arxiv.org/abs/2608.30935#2026-09-01</guid>
+      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability (2026-09-01)</title>
+      <description>We describe the architecture and ablations of Qwen3.8-Flash-Next, a sparse mixture-of-experts model with 125B parameters, 6B activated per token, and additional 51B parameters of n-gram embedding tabl...</description>
+      <link>https://arxiv.org/abs/2608.30320</link>
+      <guid>https://arxiv.org/abs/2608.30320#2026-09-01</guid>
+      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Scaling Large Reasoning Models beyond Human Supervision: A Path toward Superintelligence (2026-09-01)</title>
+      <description>Recent advances in large reasoning models (LRMs) have shown that reinforcement learning with verifiable rewards (RLVR) can substantially improve reasoning in mathematics and code, where outcomes can b...</description>
+      <link>https://arxiv.org/abs/2608.31075</link>
+      <guid>https://arxiv.org/abs/2608.31075#2026-09-01</guid>
+      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Zero-Knowledge Predicate Proofs Between AI Agents: A Measured, Cross-Protocol Gateway and the Source-Integrity Gap (2026-09-01)</title>
+      <description>Multi-agent AI platforms move quickly from staging to production, but the way agents establish trust remains rudimentary: an agent either transmits raw data to a peer or accepts that peer's natural-la...</description>
+      <link>http://arxiv.org/abs/2608.30083v1</link>
+      <guid>http://arxiv.org/abs/2608.30083v1#2026-09-01</guid>
+      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Agentic Artifact Creation: Systems, Evaluation, Principles, and Opportunities (2026-08-31)</title>
@@ -307,76 +377,6 @@
       <link>https://arxiv.org/abs/2608.24877</link>
       <guid>https://arxiv.org/abs/2608.24877#2026-08-26</guid>
       <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training (2026-08-26)</title>
-      <description>We present LAION-BVD, a large-scale open video dataset for multimodal learning, which contains 1.3B platform-specific video URLs collected from CommonCrawl. From these, we download 80M videos with a t...</description>
-      <link>https://arxiv.org/abs/2608.24845</link>
-      <guid>https://arxiv.org/abs/2608.24845#2026-08-26</guid>
-      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Best Practice Critic Optimization (2026-08-26)</title>
-      <description>Group-based reinforcement learning methods such as GRPO for large language models avoid training a critic by sampling multiple responses for each prompt. A reliable critic could instead estimate token...</description>
-      <link>https://arxiv.org/abs/2608.23566</link>
-      <guid>https://arxiv.org/abs/2608.23566#2026-08-26</guid>
-      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 CAFE: Self-Improving Search Agents Need Co-Evolving Feedback (2026-08-26)</title>
-      <description>Outcome-supervised search agents learn when and how to retrieve evidence, but terminal rewards neither localize intermediate errors nor redirect an ongoing trajectory before those errors compound. Tre...</description>
-      <link>https://arxiv.org/abs/2608.24794</link>
-      <guid>https://arxiv.org/abs/2608.24794#2026-08-26</guid>
-      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 FedV-KGQA: Multi-Hop Question Answering over Vertically Partitioned Knowledge Graphs (2026-08-26)</title>
-      <description>Real-world data for knowledge graph question answering is often distributed across different organizations due to governance and data sovereignty constraints. While centralized systems exist, they can...</description>
-      <link>http://arxiv.org/abs/2608.24846v1</link>
-      <guid>http://arxiv.org/abs/2608.24846v1#2026-08-26</guid>
-      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Apodex 1.1: Scaling Agentic Intelligence for Complex Work (2026-08-25)</title>
-      <description>General-purpose language models can reason and synthesize knowledge, but complex work also requires sustained interaction with files, information sources, and executable code, together with state main...</description>
-      <link>https://arxiv.org/abs/2608.23283</link>
-      <guid>https://arxiv.org/abs/2608.23283#2026-08-25</guid>
-      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Right-Sizing LLM-Agent Decomposition in VAT Determination: A Pilot Controlled Sweep (2026-08-25)</title>
-      <description>Recent LLM-agent systems make conflicting design bets: decompose work across many narrow agents, or use one strong tool-using agent. This pilot studies that choice on bounded cross-border VAT determin...</description>
-      <link>http://arxiv.org/abs/2608.23395v1</link>
-      <guid>http://arxiv.org/abs/2608.23395v1#2026-08-25</guid>
-      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AutoSaddler: Automatic Harness Optimization with Durable Updates from Agent Execution Traces (2026-08-25)</title>
-      <description>LLM agents remain unreliable on long-horizon tasks, where small local failures can compound over extended interactions and lead to overall task failure. Although external harnesses can substantially i...</description>
-      <link>http://arxiv.org/abs/2608.23041v1</link>
-      <guid>http://arxiv.org/abs/2608.23041v1#2026-08-25</guid>
-      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Minimal Local Simulation Foundations for LLM- and VLM-Driven Agents in 2D and 3D Environments (2026-08-25)</title>
-      <description>Large language models (LLMs) and vision-language models (VLMs) are expanding the range of behaviors that can be represented in agent-based simulations, but many contemporary platforms are difficult to...</description>
-      <link>http://arxiv.org/abs/2608.22833v1</link>
-      <guid>http://arxiv.org/abs/2608.22833v1#2026-08-25</guid>
-      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Prime Agent: A Self-Improving RLM Harness (2026-08-25)</title>
-      <description>Language models are sequential processors, but long-horizon agency requires external information and computation beyond model weights and active context. Prime Agent is an open-source harness for long...</description>
-      <link>https://arxiv.org/abs/2608.23552</link>
-      <guid>https://arxiv.org/abs/2608.23552#2026-08-25</guid>
-      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ReWorld: An Interactive World Model with Long-Horizon Memory (2026-08-25)</title>
-      <description>An interactive world model must follow the user's actions, remember the places it has shown, and stream in real time. The tension is structural: control wants a short horizon, memory wants an unbounde...</description>
-      <link>https://arxiv.org/abs/2608.23565</link>
-      <guid>https://arxiv.org/abs/2608.23565#2026-08-25</guid>
-      <pubDate>Tue, 25 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
