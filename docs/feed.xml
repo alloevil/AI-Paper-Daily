@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 01 Sep 2026 09:19:25 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 08:41:18 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W36（2026-08-25 ~ 2026-08-31）</title>
@@ -27,6 +27,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 StudentSim: Training LLM-based Student Simulators (2026-09-02)</title>
+      <description>AI tutors are most useful when they adapt to each student's strengths, weaknesses, and preferred guidance, but evidence about which guidance works for which student is sparse, slow, and costly to coll...</description>
+      <link>https://arxiv.org/abs/2609.01591</link>
+      <guid>https://arxiv.org/abs/2609.01591#2026-09-02</guid>
+      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SMELT: Scaling Laws for Compute-Matched MoE Looped Transformers (2026-09-02)</title>
+      <description>Looped Transformers increase effective depth by iterating a shared block of layers, but most evaluations compare at fixed model size, conflating architectural advantage with extra FLOPs. We study loop...</description>
+      <link>https://arxiv.org/abs/2609.01343</link>
+      <guid>https://arxiv.org/abs/2609.01343#2026-09-02</guid>
+      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 H3-World: Turning Language Understanding into World Control (2026-09-02)</title>
+      <description>We present H3-World, an efficient framework that turns the 33B MiniMax-H3 video generator into an interactive world model. Our key finding is that, as large video generators become more capable, langu...</description>
+      <link>https://arxiv.org/abs/2609.01560</link>
+      <guid>https://arxiv.org/abs/2609.01560#2026-09-02</guid>
+      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Evaluating Multimodal LLMs as Generalist Vision-Language-Action Agents for Drone Control: Commanding, Approaching, Tracking and Searching (2026-09-02)</title>
+      <description>Multimodal Large Language Models (MLLMs) are strong perceivers of images and video. We ask how far that reach extends into acting: dropping an MLLM directly into a drone's control loop, with its entir...</description>
+      <link>https://arxiv.org/abs/2609.01404</link>
+      <guid>https://arxiv.org/abs/2609.01404#2026-09-02</guid>
+      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Uncovering Understanding-Generation Synergy in Native Unified Multimodal Models: From Representation, Task to System (2026-09-02)</title>
+      <description>While unified multimodal models (UMMs) jointly perform visual understanding and generation within a single model, functional unification does not guarantee learning synergy: the two objectives may rei...</description>
+      <link>https://arxiv.org/abs/2609.01607</link>
+      <guid>https://arxiv.org/abs/2609.01607#2026-09-02</guid>
+      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 GlossoGen: Emergent Language in Complex Multi-Agent LLM Interactions (2026-09-02)</title>
+      <description>The growing rate at which LLM agents interact with one another raises key questions about language evolution in multi-LLM-agent settings, with implications for safety and monitorability as well as for...</description>
+      <link>http://arxiv.org/abs/2609.01491v1</link>
+      <guid>http://arxiv.org/abs/2609.01491v1#2026-09-02</guid>
+      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Calibration is the Bottleneck: An Action-Class Diagnostic of Multi-Turn Tool-Calling (2026-09-02)</title>
+      <description>Multi-turn tool calling is a core evaluation scenario for large language model (LLM) agents. On public tool-calling benchmarks, open-weight models now approach or even surpass closed-source frontier m...</description>
+      <link>http://arxiv.org/abs/2609.00949v1</link>
+      <guid>http://arxiv.org/abs/2609.00949v1#2026-09-02</guid>
+      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 A Mathematical Framework for Legacy, Governance, and Decision Integrity in Enterprise AI (2026-09-02)</title>
+      <description>Enterprise artificial intelligence is increasingly embedded in decisions that must remain lawful, explainable, adaptable, and accountable despite personnel turnover, model replacement, regulatory chan...</description>
+      <link>http://arxiv.org/abs/2609.00572v1</link>
+      <guid>http://arxiv.org/abs/2609.00572v1#2026-09-02</guid>
+      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Don't Let the Model Write the YAML: Deterministic, Minimal-Diff GitOps Remediation from LLM-Proposed Field Changes (2026-09-02)</title>
+      <description>LLM agents increasingly diagnose incidents and propose remediations. In a GitOps workflow, applying a fix means editing a version-controlled config file, and the obvious implementation, having the mod...</description>
+      <link>http://arxiv.org/abs/2609.00227v1</link>
+      <guid>http://arxiv.org/abs/2609.00227v1#2026-09-02</guid>
+      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 DiagEvo: Diagnosis-Guided Self-Evolution via Hierarchical Error Memory (2026-09-02)</title>
+      <description>Self-play is an effective paradigm for language-model self-evolution, but without guidance, solver performance can plateau or decline across rounds. Unguided methods steer question generation with sig...</description>
+      <link>https://arxiv.org/abs/2609.00768</link>
+      <guid>https://arxiv.org/abs/2609.00768#2026-09-02</guid>
+      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution (2026-09-01)</title>
@@ -307,76 +377,6 @@
       <link>https://arxiv.org/abs/2608.25580</link>
       <guid>https://arxiv.org/abs/2608.25580#2026-08-27</guid>
       <pubDate>Thu, 27 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Code World Model: Coding Agent as World Brain (2026-08-27)</title>
-      <description>World models aim to simulate how complex environments evolve under actions and events, yet existing video-based world models primarily learn dynamics from visual observations, which reveal outcomes ra...</description>
-      <link>https://arxiv.org/abs/2608.25927</link>
-      <guid>https://arxiv.org/abs/2608.25927#2026-08-27</guid>
-      <pubDate>Thu, 27 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SelfGraphRAG: Bridging the Supervision Gap in Graph-Based RAG with Synthetic QA Generation (2026-08-27)</title>
-      <description>Retrieval-augmented generation (RAG) improves large language models by incorporating external knowledge without retraining, but existing methods often underuse the relational structure encoded in know...</description>
-      <link>http://arxiv.org/abs/2608.25123v1</link>
-      <guid>http://arxiv.org/abs/2608.25123v1#2026-08-27</guid>
-      <pubDate>Thu, 27 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 A Programming Paradigm for Spatiotemporal Composability (2026-08-27)</title>
-      <description>Modern software -- from plugin systems to self-evolving agent harnesses -- increasingly requires dynamic composition, yet its formal foundations remain underdeveloped. We identify two orthogonal dimen...</description>
-      <link>https://arxiv.org/abs/2608.25512</link>
-      <guid>https://arxiv.org/abs/2608.25512#2026-08-27</guid>
-      <pubDate>Thu, 27 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Gated Recurrent Transformers: Expressive Depth through Recurrent Modulation (2026-08-27)</title>
-      <description>Scaling transformer language models creates an inherent tension between expressivity and memory efficiency. While unique weights across layers preserve functional specialization---from input-grounding...</description>
-      <link>https://arxiv.org/abs/2608.15062</link>
-      <guid>https://arxiv.org/abs/2608.15062#2026-08-27</guid>
-      <pubDate>Thu, 27 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report (2026-08-26)</title>
-      <description>Universal multimodal embeddings are becoming a core component of modern AI systems, enabling heterogeneous content to be represented in a shared space for applications such as retrieval, recommendatio...</description>
-      <link>https://arxiv.org/abs/2608.24053</link>
-      <guid>https://arxiv.org/abs/2608.24053#2026-08-26</guid>
-      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 On-Policy Self-Distillation in Diffusion Models (2026-08-26)</title>
-      <description>Reinforcement learning can align diffusion models with human preferences and task-specific objectives, but endpoint rewards do not specify how an intermediate denoising prediction should change. We in...</description>
-      <link>https://arxiv.org/abs/2608.24646</link>
-      <guid>https://arxiv.org/abs/2608.24646#2026-08-26</guid>
-      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses (2026-08-26)</title>
-      <description>Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Workin...</description>
-      <link>https://arxiv.org/abs/2608.24876</link>
-      <guid>https://arxiv.org/abs/2608.24876#2026-08-26</guid>
-      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Knowing When to Ask for Help: Bayesian Self-Escalation in Hierarchical LLM Agents (2026-08-26)</title>
-      <description>Current LLM agent systems decide delegation before reasoning begins (a router picks a model) or after a response is complete (a verifier scores it and may retry). We study a third regime: an agent tha...</description>
-      <link>http://arxiv.org/abs/2608.24087v1</link>
-      <guid>http://arxiv.org/abs/2608.24087v1#2026-08-26</guid>
-      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 On-policy Distillation with Verifiable Reward (2026-08-26)</title>
-      <description>Reinforcement Learning with Verifiable Rewards (RLVR) and on-policy distillation (OPD) have become two widely adopted paradigms for post-training large language models. However, RLVR suffers from spar...</description>
-      <link>https://arxiv.org/abs/2608.24696</link>
-      <guid>https://arxiv.org/abs/2608.24696#2026-08-26</guid>
-      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 From Seeing to Acting: Smart Glasses as First-Person Intelligence Platforms (2026-08-26)</title>
-      <description>Smart glasses are evolving from capture and display accessories into first-person intelligence platforms that connect human perception, persistent context, and digital or physical action. Their on-bod...</description>
-      <link>https://arxiv.org/abs/2608.24877</link>
-      <guid>https://arxiv.org/abs/2608.24877#2026-08-26</guid>
-      <pubDate>Wed, 26 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
