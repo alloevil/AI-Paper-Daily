@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 02 Sep 2026 08:41:18 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 08:50:14 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W36（2026-08-25 ~ 2026-08-31）</title>
@@ -27,6 +27,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Repo-To-Skill: Distilling GitHub Repositories Into AI4AI Skills (2026-09-03)</title>
+      <description>Autonomous agents are beginning to carry out machine-learning (ML) research end to end. These agents combine a model backbone with a harness for planning, execution, memory, and verification, but this...</description>
+      <link>https://arxiv.org/abs/2609.02749</link>
+      <guid>https://arxiv.org/abs/2609.02749#2026-09-03</guid>
+      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models (2026-09-03)</title>
+      <description>We introduce SolarWM, a fully open foundation for building interactive video world models from data preparation through long-horizon inference. Training across heterogeneous data sources and video bac...</description>
+      <link>https://arxiv.org/abs/2609.02886</link>
+      <guid>https://arxiv.org/abs/2609.02886#2026-09-03</guid>
+      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Language Models Can Control Their Own Attention (2026-09-03)</title>
+      <description>Language models spend most of their attention on a small fraction of context, yet they read the entire KV cache to find the few tokens that matter. If the user asks about a previous detail in a 1M-tok...</description>
+      <link>https://arxiv.org/abs/2609.02737</link>
+      <guid>https://arxiv.org/abs/2609.02737#2026-09-03</guid>
+      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Cliff: Learning Process Rewards from the First Mistake (2026-09-03)</title>
+      <description>Reinforcement learning with verifiable rewards (RLVR) has emerged as a powerful paradigm for large language model (LLM) post-training, but its reliance on coarse outcome rewards leads to limited guida...</description>
+      <link>https://arxiv.org/abs/2609.02817</link>
+      <guid>https://arxiv.org/abs/2609.02817#2026-09-03</guid>
+      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EarlyEval: Cheaper Agent Evaluation via Early Outcome Prediction (2026-09-03)</title>
+      <description>Evaluating LLM agents is essential for guiding their development, yet it has grown prohibitively expensive: a single pass of a frontier model over an agentic benchmark can cost hundreds to thousands o...</description>
+      <link>http://arxiv.org/abs/2609.02783v1</link>
+      <guid>http://arxiv.org/abs/2609.02783v1#2026-09-03</guid>
+      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Epistemic Sybil Resistance: Multiplying AI Agents Without Multiplying Evidence (2026-09-03)</title>
+      <description>Multi-agent AI systems improve inference by spawning agents and synthesizing reports. But another agent is not another observation: apparently independent reports may descend from the same evidence, a...</description>
+      <link>http://arxiv.org/abs/2609.01873v1</link>
+      <guid>http://arxiv.org/abs/2609.01873v1#2026-09-03</guid>
+      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Import What You Need: Learning When and How to Augment EHR Graphs with External Knowledge (2026-09-03)</title>
+      <description>Longitudinal prediction from electronic health records (EHRs) is limited by the sparsity and irregularity in patient trajectories, and knowledge augmentation with external knowledge graphs (KGs) offer...</description>
+      <link>http://arxiv.org/abs/2609.01839v1</link>
+      <guid>http://arxiv.org/abs/2609.01839v1#2026-09-03</guid>
+      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 VibeVoice-ASR-Streaming Technical Report (2026-09-03)</title>
+      <description>Traditional speaker-attributed ASR systems treated ASR and speaker diarization as two separate tasks. Recently, end-to-end models such as VibeVoice-ASR have unified the two tasks within a single model...</description>
+      <link>https://arxiv.org/abs/2609.02812</link>
+      <guid>https://arxiv.org/abs/2609.02812#2026-09-03</guid>
+      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Post-Training Language Models for Gold-Medal Performance in Coding Competitions (2026-09-03)</title>
+      <description>Competitive programming has become a key test of large language model reasoning, with international competitions such as IOI and ICPC representing its most challenging settings. We present an end-to-e...</description>
+      <link>https://arxiv.org/abs/2609.02849</link>
+      <guid>https://arxiv.org/abs/2609.02849#2026-09-03</guid>
+      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PaperCompiler: Faithful Paper-to-Code Generation via Repository-Level Specification Compilation (2026-09-03)</title>
+      <description>Faithfully translating research papers into repository-level implementations remains challenging because papers often describe methods at a high level, leave implementation assumptions implicit, and r...</description>
+      <link>https://arxiv.org/abs/2609.02272</link>
+      <guid>https://arxiv.org/abs/2609.02272#2026-09-03</guid>
+      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 StudentSim: Training LLM-based Student Simulators (2026-09-02)</title>
@@ -307,76 +377,6 @@
       <link>http://arxiv.org/abs/2608.27266v1</link>
       <guid>http://arxiv.org/abs/2608.27266v1#2026-08-29</guid>
       <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 When Tool Outputs Become Commands: Separating Action Induction from Runtime Authorization in Tool-Augmented LLM Agents (2026-08-29)</title>
-      <description>Tool-augmented LLM agents must rely on untrusted runtime Observations to complete open-ended tasks; however, when tool outputs no longer merely provide data but begin to specify concrete actions, they...</description>
-      <link>http://arxiv.org/abs/2608.27146v1</link>
-      <guid>http://arxiv.org/abs/2608.27146v1#2026-08-29</guid>
-      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 GRAIN: Bridging Name and Narrative Shifts in Real-World Graph Reasoning through Invariance-Rewarded Agentic RL (2026-08-29)</title>
-      <description>Despite their potential in standardized graph tasks, Large Language Models (LLMs) remain brittle to real-world shifts in node identifiers and task formulation. While deterministic graph tools are inva...</description>
-      <link>http://arxiv.org/abs/2608.27142v1</link>
-      <guid>http://arxiv.org/abs/2608.27142v1#2026-08-29</guid>
-      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Safety Does Not Compose: Non-Decaying Loop State for Autonomous LLM Agents (2026-08-29)</title>
-      <description>Large language model agents are increasingly deployed as autonomous loops. Starting from one human goal, such a system repeatedly discovers work, plans, executes tool calls, verifies outcomes and pers...</description>
-      <link>http://arxiv.org/abs/2608.27141v1</link>
-      <guid>http://arxiv.org/abs/2608.27141v1#2026-08-29</guid>
-      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 FaulT-Bench: Towards Benchmarking Network Troubleshooting LLM Agents under Unreliable User Tickets (2026-08-29)</title>
-      <description>LLM-based agents are increasingly proposed for network fault diagnosis, but existing benchmarks evaluate them only on accurate tickets and always assume a fault is present, conditions rarely met in pr...</description>
-      <link>http://arxiv.org/abs/2608.27021v1</link>
-      <guid>http://arxiv.org/abs/2608.27021v1#2026-08-29</guid>
-      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction (2026-08-27)</title>
-      <description>Conversational systems, such as duplex speech language models (SLMs), still lack a streaming, accurate, and empathetic memory system as their soul. We introduce VoiceMem, a simple memory architecture ...</description>
-      <link>https://arxiv.org/abs/2608.26005</link>
-      <guid>https://arxiv.org/abs/2608.26005#2026-08-27</guid>
-      <pubDate>Thu, 27 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution (2026-08-27)</title>
-      <description>Agent capability is not determined by the model alone. The agent harness, encompassing memory management, planning strategy, action protocol, and tool/skill orchestration, can dominate the contributio...</description>
-      <link>https://arxiv.org/abs/2608.25593</link>
-      <guid>https://arxiv.org/abs/2608.25593#2026-08-27</guid>
-      <pubDate>Thu, 27 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning (2026-08-27)</title>
-      <description>Native visual reasoning treats visual generation as the medium of reasoning itself: visual states (i.e. images and videos) are not merely inputs to be understood or outputs to be rendered, but first-c...</description>
-      <link>https://arxiv.org/abs/2608.26105</link>
-      <guid>https://arxiv.org/abs/2608.26105#2026-08-27</guid>
-      <pubDate>Thu, 27 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models (2026-08-27)</title>
-      <description>Vision-Language-Action (VLA) models have demonstrated effectiveness in robot manipulation, yet state-of-the-art models such as pi0.5 operate under a single-frame paradigm, limiting their ability to re...</description>
-      <link>https://arxiv.org/abs/2608.26067</link>
-      <guid>https://arxiv.org/abs/2608.26067#2026-08-27</guid>
-      <pubDate>Thu, 27 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Video-IFBench: Evaluating Instruction Following of Multimodal LLMs in Video Understanding Scenarios (2026-08-27)</title>
-      <description>Multimodal Large Language Models (MLLMs) have shown strong performance in video understanding. However, their ability to follow instructions in this domain remains under-explored. Real-world video und...</description>
-      <link>https://arxiv.org/abs/2608.25529</link>
-      <guid>https://arxiv.org/abs/2608.25529#2026-08-27</guid>
-      <pubDate>Thu, 27 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 V-Rubrics: Visual Faithfulness via Rubric-Based Reinforcement Learning (2026-08-27)</title>
-      <description>Vision-language models can produce fluent answers that are insufficiently grounded in the visual evidence: a single unsupported object, chart value, or intermediate inference can undermine an otherwis...</description>
-      <link>https://arxiv.org/abs/2608.25580</link>
-      <guid>https://arxiv.org/abs/2608.25580#2026-08-27</guid>
-      <pubDate>Thu, 27 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
