@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 03 Sep 2026 08:50:14 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 08:45:23 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W36（2026-08-25 ~ 2026-08-31）</title>
@@ -27,6 +27,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes (2026-09-04)</title>
+      <description>We introduce LLaDA-Image, a unified framework that pairs a 6B Diffusion Transformer (DiT) trained from scratch with a frozen vision-language understanding module built on the LLaDA2.0-Mini diffusion l...</description>
+      <link>https://arxiv.org/abs/2609.03796</link>
+      <guid>https://arxiv.org/abs/2609.03796#2026-09-04</guid>
+      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning (2026-09-04)</title>
+      <description>Large language models achieve superior performance on tasks that require extended reasoning, but long chains of thought make the KV cache a severe memory bottleneck. Existing KV cache compression meth...</description>
+      <link>https://arxiv.org/abs/2609.03430</link>
+      <guid>https://arxiv.org/abs/2609.03430#2026-09-04</guid>
+      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Why Gated DeltaNet Survives 4-Bit Quantization: NVFP4 W4A4 for the Recurrent Half of a Hybrid 27B LLM (2026-09-04)</title>
+      <description>Hybrid LLMs pair softmax attention with linear-attention layers such as Gated DeltaNet (GDN), whose recurrent state summarizes the context in fixed size. Early community 4-bit quantizations of Qwen3.8...</description>
+      <link>https://arxiv.org/abs/2609.04098</link>
+      <guid>https://arxiv.org/abs/2609.04098#2026-09-04</guid>
+      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Rethinking On-Policy Distillation of Large Language Models II: One Training Example (2026-09-04)</title>
+      <description>On-policy distillation (OPD) combines student-generated rollouts with dense token-level supervision from a teacher. Existing work has mainly studied its algorithmic behavior, leaving the role of train...</description>
+      <link>https://arxiv.org/abs/2609.04172</link>
+      <guid>https://arxiv.org/abs/2609.04172#2026-09-04</guid>
+      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments (2026-09-04)</title>
+      <description>As terminal-based code agents become prevalent, agent trajectories have accumulated at scale, while realistic, executable environments remain scarce. However, environments are what agent post-training...</description>
+      <link>https://arxiv.org/abs/2609.04148</link>
+      <guid>https://arxiv.org/abs/2609.04148#2026-09-04</guid>
+      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Puffin-World: Scaling a Unified Multimodal Model with Native 3D World States (2026-09-04)</title>
+      <description>We propose Puffin-World, a unified multimodal architecture that integrates physical understanding, spatial simulation, and 3D world generation and reconstruction without relying on external offline mo...</description>
+      <link>https://arxiv.org/abs/2609.04196</link>
+      <guid>https://arxiv.org/abs/2609.04196#2026-09-04</guid>
+      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Compile by Training: Turning Natural-Language Specifications into Local Neural Functions (2026-09-04)</title>
+      <description>Many recurring text functions are easy to describe but difficult to implement with rules, while calling a large remote model for every input introduces repeated cost, latency, and dependency on a prov...</description>
+      <link>https://arxiv.org/abs/2609.04199</link>
+      <guid>https://arxiv.org/abs/2609.04199#2026-09-04</guid>
+      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Editable Visual Design (2026-09-04)</title>
+      <description>While diffusion base models such as GPT-Image-2 and Nano-Banana exhibit remarkable visual expressiveness, their end-to-end generation inherently yields flattened bitmaps with error-prone text, preclud...</description>
+      <link>https://arxiv.org/abs/2609.04034</link>
+      <guid>https://arxiv.org/abs/2609.04034#2026-09-04</guid>
+      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Beyond Retrieval: Progressive Latent Memory Evolution for Streaming Video Understanding (2026-09-04)</title>
+      <description>Streaming video understanding requires multimodal large language models (MLLMs) to process continuous visual inputs and respond to user queries under strict causality and bounded memory. Existing appr...</description>
+      <link>https://arxiv.org/abs/2609.04131</link>
+      <guid>https://arxiv.org/abs/2609.04131#2026-09-04</guid>
+      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Scal3R: Learning Efficient Multi-Relative Pose Query for Scalable Online 3D Reconstruction (2026-09-04)</title>
+      <description>Online 3D reconstruction models perform poorly on long videos. This happens because regressing poses relative to a fixed first-frame anchor forces extrapolation far beyond the training distribution. S...</description>
+      <link>https://arxiv.org/abs/2609.04201</link>
+      <guid>https://arxiv.org/abs/2609.04201#2026-09-04</guid>
+      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Repo-To-Skill: Distilling GitHub Repositories Into AI4AI Skills (2026-09-03)</title>
@@ -307,76 +377,6 @@
       <link>http://arxiv.org/abs/2608.28399v1</link>
       <guid>http://arxiv.org/abs/2608.28399v1#2026-08-31</guid>
       <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution (2026-08-30)</title>
-      <description>Agent skills package specialized knowledge and workflows into reusable resources that extend AI agent capabilities. Recent work automatically discovers such skills from agent experience, which enables...</description>
-      <link>http://arxiv.org/abs/2608.27454v1</link>
-      <guid>http://arxiv.org/abs/2608.27454v1#2026-08-30</guid>
-      <pubDate>Sun, 30 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 What Makes Good Agentic Data? An ACE Lens on Data Generation for LLM Agents (2026-08-30)</title>
-      <description>LLM agents increasingly rely on generated interaction data to learn how to interact with external environments. Agentic data generation must maintain consistency among environments, tasks, interaction...</description>
-      <link>http://arxiv.org/abs/2608.27260v1</link>
-      <guid>http://arxiv.org/abs/2608.27260v1#2026-08-30</guid>
-      <pubDate>Sun, 30 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 From Atomic to Agentic: Towards Interpretable Evaluation of LLMs' Agentic Mathematical Capabilities (2026-08-30)</title>
-      <description>Large Language Models (LLMs) are evolving from performing end-to-end mathematical reasoning to integrating agentic intelligence. However, most existing math benchmarks evaluate only final answers. Thi...</description>
-      <link>http://arxiv.org/abs/2608.26950v1</link>
-      <guid>http://arxiv.org/abs/2608.26950v1#2026-08-30</guid>
-      <pubDate>Sun, 30 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Counterfactual Bias Testing for Application Tracking System (2026-08-30)</title>
-      <description>Automated candidate-job matching systems are increasingly classified as high-risk AI under emerging regulation, yet auditing them for demographic bias is expensive: classical correspondence-audit stud...</description>
-      <link>http://arxiv.org/abs/2608.26899v1</link>
-      <guid>http://arxiv.org/abs/2608.26899v1#2026-08-30</guid>
-      <pubDate>Sun, 30 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Calibrated Enough to Know, Not Calibrated to Act: Fabricated Evidence Makes LLM Agents Commit to the Unknowable (2026-08-29)</title>
-      <description>An LLM agent shown a professional-looking market panel commits to a directional call on a provably unpredictable question far more often than one asked the bare question: across 12 frontier models, co...</description>
-      <link>http://arxiv.org/abs/2608.27167v1</link>
-      <guid>http://arxiv.org/abs/2608.27167v1#2026-08-29</guid>
-      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DSA: Evidence-Aware LLM-Agent Orchestration for Multi-Market Stock Research (2026-08-29)</title>
-      <description>Large language models can summarize financial information, but an operational stock-research system must first assemble heterogeneous evidence, expose unavailable data and model capabilities, and cont...</description>
-      <link>http://arxiv.org/abs/2608.26990v1</link>
-      <guid>http://arxiv.org/abs/2608.26990v1#2026-08-29</guid>
-      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Persona-Execution Separation: An Architecture Pattern for Evolving LLM Agents under Execution Audit (2026-08-29)</title>
-      <description>Large language model (LLM) agents in governed organizations must let the persona (instructions, tone, self-presentation) evolve freely, while keeping execution (stateful, audited work) traceable. A si...</description>
-      <link>http://arxiv.org/abs/2608.27427v1</link>
-      <guid>http://arxiv.org/abs/2608.27427v1#2026-08-29</guid>
-      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 CorporateBench: Large-Scale Q&amp;A Benchmarking with Temporal Knowledge Bases (2026-08-29)</title>
-      <description>LLMs are increasingly able to answer complex questions about enterprise-scale document collections. But evaluation is hard: companies don't want to share internal communications, and synthetic dataset...</description>
-      <link>http://arxiv.org/abs/2608.27391v1</link>
-      <guid>http://arxiv.org/abs/2608.27391v1#2026-08-29</guid>
-      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 One Model, Many Minds: Unlocking Multi-Agent Synergy in a Single Agent via Mixture of Roles (2026-08-29)</title>
-      <description>Specializing Large Language Models (LLMs) toward distinct abilities underpins successes ranging from personalized assistants to multi-agent systems (MAS). Single-agent paradigms rely on pre-defined pe...</description>
-      <link>http://arxiv.org/abs/2608.27338v1</link>
-      <guid>http://arxiv.org/abs/2608.27338v1#2026-08-29</guid>
-      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Naive Prompt Optimization: Rethinking the Need for Complex Prompt Search (2026-08-29)</title>
-      <description>Efficiently improving autonomous agents across diverse tasks is central to accelerating recursive self-improvement (RSI) in agentic AI, with prompt optimization emerging as a promising approach capabl...</description>
-      <link>http://arxiv.org/abs/2608.27266v1</link>
-      <guid>http://arxiv.org/abs/2608.27266v1#2026-08-29</guid>
-      <pubDate>Sat, 29 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
