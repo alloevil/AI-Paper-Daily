@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 04 Sep 2026 08:45:23 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 08:16:07 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W36（2026-08-25 ~ 2026-08-31）</title>
@@ -27,6 +27,62 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 A Case Study on Emergent Cheating and Whistleblowing in Autonomous Research Swarms (2026-09-05)</title>
+      <description>Multi-agent AI science ecosystems rely on agents possessing tools that allow them to communicate, coordinate, and build on each other's work. Yet this shared infrastructure can also introduce vulnerab...</description>
+      <link>http://arxiv.org/abs/2609.04170v1</link>
+      <guid>http://arxiv.org/abs/2609.04170v1#2026-09-05</guid>
+      <pubDate>Sat, 05 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SENTINEL-RL: Offloading Topological Reasoning from LLM Agents in the Security Operations Center (2026-09-05)</title>
+      <description>Large language model (LLM) agents are increasingly proposed as autonomous SOC analysts, but two limitations make them unreliable at enterprise scale: a finite context window cannot hold a multi-thousa...</description>
+      <link>http://arxiv.org/abs/2609.04159v1</link>
+      <guid>http://arxiv.org/abs/2609.04159v1#2026-09-05</guid>
+      <pubDate>Sat, 05 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Speak for Me: Giving LLMs the Situational Awareness to Participate in a Meeting (2026-09-05)</title>
+      <description>In online meeting delegation, LLM agents fail to recognize when to speak. With no structured way to track stances, coverage, and floor, they miss the moments where they should contribute. Prompt-only ...</description>
+      <link>http://arxiv.org/abs/2609.03923v1</link>
+      <guid>http://arxiv.org/abs/2609.03923v1#2026-09-05</guid>
+      <pubDate>Sat, 05 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Value-Preserving Architectures for Agentic AI Systems (2026-09-05)</title>
+      <description>The emergence of agentic AI and LLM-based multi-agent systems (MAS) presents unprecedented opportunities for automating complex tasks, while simultaneously raising critical concerns about the preserva...</description>
+      <link>http://arxiv.org/abs/2609.03920v1</link>
+      <guid>http://arxiv.org/abs/2609.03920v1#2026-09-05</guid>
+      <pubDate>Sat, 05 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Adapting to Evolving Requirements: Agentic AI for Retail Supply Chain Operations (2026-09-05)</title>
+      <description>Retail supply chain operations rely on coupled decision modules that must adapt as requirements evolve. LLMs offer a natural-language interface for this task, but existing methods primarily focus on i...</description>
+      <link>http://arxiv.org/abs/2609.03860v1</link>
+      <guid>http://arxiv.org/abs/2609.03860v1#2026-09-05</guid>
+      <pubDate>Sat, 05 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Semantic Bayesian World Models (2026-09-05)</title>
+      <description>Knowledge graphs describe reality in crisp assertions, while the systems now consuming them, foundation models and autonomous agents, reason natively in probabilities. We argue that this mismatch is w...</description>
+      <link>http://arxiv.org/abs/2609.03834v1</link>
+      <guid>http://arxiv.org/abs/2609.03834v1#2026-09-05</guid>
+      <pubDate>Sat, 05 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 What Do CAE Simulation Agents Really Need Beyond a Generic Harness? (2026-09-05)</title>
+      <description>Computer-aided engineering (CAE) simulation is among the largest and most demanding areas of engineering, where setting up a solver such as OpenFOAM, FEniCS, or COMSOL takes real expertise. Large lang...</description>
+      <link>http://arxiv.org/abs/2609.03718v1</link>
+      <guid>http://arxiv.org/abs/2609.03718v1#2026-09-05</guid>
+      <pubDate>Sat, 05 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 KC-Bench: A Dynamic Interactive Benchmark for Evaluating Knowledge Conflicts in LLM Agents (2026-09-05)</title>
+      <description>As LLMs increasingly act through tools, they must reconcile user instructions, parametric knowledge, and dynamic environmental observations before taking actions. We introduce KC-Bench, a controlled m...</description>
+      <link>http://arxiv.org/abs/2609.03588v1</link>
+      <guid>http://arxiv.org/abs/2609.03588v1#2026-09-05</guid>
+      <pubDate>Sat, 05 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes (2026-09-04)</title>
@@ -320,62 +376,6 @@
       <description>Long-horizon agentic tasks require large language models (LLMs) to iteratively retrieve, integrate, and maintain dispersed information across multi-turn interactions, but preserving all interaction hi...</description>
       <link>https://arxiv.org/abs/2608.28476</link>
       <guid>https://arxiv.org/abs/2608.28476#2026-08-31</guid>
-      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 LayerRecall: A State-Conditioned Memory Router for Long-Horizon Consistency in Video Generation (2026-08-31)</title>
-      <description>Autoregressive video diffusion enables scalable long-video generation by producing chunks from a bounded recent context. While recency-based caching preserves local continuity, it evicts historical cu...</description>
-      <link>https://arxiv.org/abs/2608.28460</link>
-      <guid>https://arxiv.org/abs/2608.28460#2026-08-31</guid>
-      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Blind Men and the Elephant: Probing the Epistemic Myopia of LLMs under Long-Tail Divergent Knowledge (2026-08-31)</title>
-      <description>Factual question answering (QA) typically assumes a single canonical answer, obscuring whether large language models (LLMs) retain divergent accounts of long-tail facts. To address this gap, we introd...</description>
-      <link>https://arxiv.org/abs/2608.28478</link>
-      <guid>https://arxiv.org/abs/2608.28478#2026-08-31</guid>
-      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Locate Anything in Videos: Rethinking Efficient Generative Spatio-Temporal Video Grounding (2026-08-31)</title>
-      <description>Spatio-temporal video grounding (STVG) requires models to identify when a referred event occurs and localize the target entity throughout that interval. Existing multimodal large language models typic...</description>
-      <link>https://arxiv.org/abs/2608.28192</link>
-      <guid>https://arxiv.org/abs/2608.28192#2026-08-31</guid>
-      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 CAITLYN: Can LLM Agents Autonomously Synthesize Defenses against Emerging Injection Attacks? (2026-08-31)</title>
-      <description>Prompt injection attacks on Large Language Model (LLM) agents seek to introduce malicious instructions or content into external text sources retrieved by agents, forcing the underlying LLMs to execute...</description>
-      <link>http://arxiv.org/abs/2608.27990v1</link>
-      <guid>http://arxiv.org/abs/2608.27990v1#2026-08-31</guid>
-      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Video Generative Models as Geometry Learner (2026-08-31)</title>
-      <description>Recent generative approaches to geometry estimation adapt pretrained image diffusion models and treat the task as image-conditioned generation. Leveraging off-the-shelf image diffusion models, they ei...</description>
-      <link>https://arxiv.org/abs/2608.28549</link>
-      <guid>https://arxiv.org/abs/2608.28549#2026-08-31</guid>
-      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Rubric-to-Code Credit Assignment for Reinforcement Learning (2026-08-31)</title>
-      <description>Interactive web application generation requires models to produce usable HTML, CSS, and JavaScript applications from natural language requests. Unlike conventional code generation, application quality...</description>
-      <link>https://arxiv.org/abs/2608.27906</link>
-      <guid>https://arxiv.org/abs/2608.27906#2026-08-31</guid>
-      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 COVER: Identifiable Evaluation of Coalition Routing (2026-08-31)</title>
-      <description>When a multi-agent system changes its team, it also changes the messages and final answer it produces, so an end-to-end accuracy gap does not by itself identify a routing effect. We introduce method, ...</description>
-      <link>http://arxiv.org/abs/2608.28475v1</link>
-      <guid>http://arxiv.org/abs/2608.28475v1#2026-08-31</guid>
-      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RetailAgent: Structured Adverse Timing in Self-Conditioned Multimodal LLM Trading Agents (2026-08-31)</title>
-      <description>In financial markets, a sequential policy that reacts systematically to price movements may become predictable to other market participants. This paper studies whether large language model (LLM) agent...</description>
-      <link>http://arxiv.org/abs/2608.28399v1</link>
-      <guid>http://arxiv.org/abs/2608.28399v1#2026-08-31</guid>
       <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
