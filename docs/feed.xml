@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 05 Sep 2026 08:16:07 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 09:13:11 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W36（2026-08-25 ~ 2026-08-31）</title>
@@ -27,6 +27,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WorldSculpt: Generating Compositional Worlds from Grounded Videos (2026-09-07)</title>
+      <description>We study the problem of generating a compositional 3D representation of a cluttered scene containing hundreds of objects. The goal is to represent the scene as a collection of individual object meshes...</description>
+      <link>https://arxiv.org/abs/2609.05416</link>
+      <guid>https://arxiv.org/abs/2609.05416#2026-09-07</guid>
+      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Ask Before You Optimize: Dynamic Pre-Formulation Clarification for Interactive Optimization (2026-09-07)</title>
+      <description>Large language models (LLMs) are increasingly used to formulate optimization models from natural-language problem descriptions, yet realistic operations research (OR) requests are often incomplete: mi...</description>
+      <link>https://arxiv.org/abs/2609.05258</link>
+      <guid>https://arxiv.org/abs/2609.05258#2026-09-07</guid>
+      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CONTINUITY: Security-Context Contracts for Composable LLM Agent Controls (2026-09-07)</title>
+      <description>LLM agent systems increasingly combine provenance tracking, authorization, policy enforcement, protocol adapters, and execution controls. However, individually correct security mechanisms do not neces...</description>
+      <link>http://arxiv.org/abs/2609.05269v1</link>
+      <guid>http://arxiv.org/abs/2609.05269v1#2026-09-07</guid>
+      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MABPD: Multi-Agent Bias Probing &amp; Detection via Structured Argument Debate (2026-09-07)</title>
+      <description>Media bias in news articles operates through subtle linguistic cues---loaded language, selective framing, and strategic omission---that resist single-model detection and have traditionally required la...</description>
+      <link>http://arxiv.org/abs/2609.04841v1</link>
+      <guid>http://arxiv.org/abs/2609.04841v1#2026-09-07</guid>
+      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Don't Drop Dropout: Optimizing Layer Sparsity for Efficient LLM Training and Inference (2026-09-07)</title>
+      <description>Layer dropout (a.k.a. stochastic depth) has been shown to enable faster training, higher accuracy, and robustness to zero-shot layer pruning in both language and vision transformers. However, as model...</description>
+      <link>https://arxiv.org/abs/2609.05275</link>
+      <guid>https://arxiv.org/abs/2609.05275#2026-09-07</guid>
+      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 RISE: Recursive Improvement via Self-Extrapolating Policy Distillation (2026-09-07)</title>
+      <description>On-policy distillation (OPD) provides dense, per-token supervision for language model post-training, but its effectiveness is bottlenecked by teacher quality: external teachers suffer from distributio...</description>
+      <link>https://arxiv.org/abs/2609.05295</link>
+      <guid>https://arxiv.org/abs/2609.05295#2026-09-07</guid>
+      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Multi-Step Tool-Calling over Korean Open Public APIs: A Benchmark and a Data-Synthesis Recipe (2026-09-07)</title>
+      <description>Data-sovereignty regulations increasingly require public institutions to deploy open-source, on-premise LLM agents that chain multiple tool-calls across live government APIs. However, open-source mode...</description>
+      <link>http://arxiv.org/abs/2609.05395v1</link>
+      <guid>http://arxiv.org/abs/2609.05395v1#2026-09-07</guid>
+      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Trust-Aware Adaptive Disclosure for Inference Privacy Preservation in Multi-Agent Networks (2026-09-07)</title>
+      <description>Agent based systems are increasingly deployed in information critical systems including healthcare management systems, and smart grids. In this paper, we consider a multi-agent system where each agent...</description>
+      <link>http://arxiv.org/abs/2609.05340v1</link>
+      <guid>http://arxiv.org/abs/2609.05340v1#2026-09-07</guid>
+      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Does Your Agent's Memory Survive a Model Upgrade? A Controlled Study of Memory Portability (2026-09-07)</title>
+      <description>Model upgrades are routine; memory migrations are not. An agent can keep the same memory store and still forget: a new model may interpret old notes differently, mixed embedding versions may break ret...</description>
+      <link>http://arxiv.org/abs/2609.05339v1</link>
+      <guid>http://arxiv.org/abs/2609.05339v1#2026-09-07</guid>
+      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Testing Interchangeability in LLM Agent Teams (2026-09-07)</title>
+      <description>Production multi-agent systems replace agents constantly, on the assumption that an agent filling a role is interchangeable with any other agent that can do the job. We test that assumption. Eight tea...</description>
+      <link>http://arxiv.org/abs/2609.05279v1</link>
+      <guid>http://arxiv.org/abs/2609.05279v1#2026-09-07</guid>
+      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 A Case Study on Emergent Cheating and Whistleblowing in Autonomous Research Swarms (2026-09-05)</title>
@@ -307,76 +377,6 @@
       <link>https://arxiv.org/abs/2608.31046</link>
       <guid>https://arxiv.org/abs/2608.31046#2026-09-01</guid>
       <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Lucida: Parse, Generate, and Place for Composable Real-to-Sim Scene Modeling (2026-09-01)</title>
-      <description>Composable scene modeling aims to recover a real indoor scene as complete, editable object assets arranged as observed, giving robot simulation and embodied AI a simulation-ready replica of the real e...</description>
-      <link>https://arxiv.org/abs/2608.30821</link>
-      <guid>https://arxiv.org/abs/2608.30821#2026-09-01</guid>
-      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Normalized Low-Rank Adaptation (2026-09-01)</title>
-      <description>While low-rank adaptation (LoRA) is widely used for parameter-efficient model adaptation, how to regularize its training dynamics for stable and effective optimization remains underexplored. Because L...</description>
-      <link>https://arxiv.org/abs/2608.31036</link>
-      <guid>https://arxiv.org/abs/2608.31036#2026-09-01</guid>
-      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PaperGym: Rubric-Centered Evolution for Research-Plan Generation (2026-09-01)</title>
-      <description>Research planning is the decisive capability of AI scientists. Yet a research plan admits no verifiable answer, so reinforcement learning lacks the environment it requires: tasks paired with a critic....</description>
-      <link>https://arxiv.org/abs/2608.31119</link>
-      <guid>https://arxiv.org/abs/2608.31119#2026-09-01</guid>
-      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 CogEvol: Towards Efficient and Reliable Learning Environment Generation (2026-09-01)</title>
-      <description>We present CogEvol, a family of models trained specifically for Learning Environment Generation: turning a course brief into a finished learning artifact (structured-JSON slides or self-contained inte...</description>
-      <link>https://arxiv.org/abs/2608.30968</link>
-      <guid>https://arxiv.org/abs/2608.30968#2026-09-01</guid>
-      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 LightNav-0: Eliciting VLM Spatial Intelligence for Generalist Embodied Navigation (2026-09-01)</title>
-      <description>Embodied navigation requires agents to translate heterogeneous goals and visual observations into actions across tasks, environments, and robot embodiments. Modern vision-language models (VLMs) alread...</description>
-      <link>https://arxiv.org/abs/2608.30935</link>
-      <guid>https://arxiv.org/abs/2608.30935#2026-09-01</guid>
-      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability (2026-09-01)</title>
-      <description>We describe the architecture and ablations of Qwen3.8-Flash-Next, a sparse mixture-of-experts model with 125B parameters, 6B activated per token, and additional 51B parameters of n-gram embedding tabl...</description>
-      <link>https://arxiv.org/abs/2608.30320</link>
-      <guid>https://arxiv.org/abs/2608.30320#2026-09-01</guid>
-      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Scaling Large Reasoning Models beyond Human Supervision: A Path toward Superintelligence (2026-09-01)</title>
-      <description>Recent advances in large reasoning models (LRMs) have shown that reinforcement learning with verifiable rewards (RLVR) can substantially improve reasoning in mathematics and code, where outcomes can b...</description>
-      <link>https://arxiv.org/abs/2608.31075</link>
-      <guid>https://arxiv.org/abs/2608.31075#2026-09-01</guid>
-      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Zero-Knowledge Predicate Proofs Between AI Agents: A Measured, Cross-Protocol Gateway and the Source-Integrity Gap (2026-09-01)</title>
-      <description>Multi-agent AI platforms move quickly from staging to production, but the way agents establish trust remains rudimentary: an agent either transmits raw data to a peer or accepts that peer's natural-la...</description>
-      <link>http://arxiv.org/abs/2608.30083v1</link>
-      <guid>http://arxiv.org/abs/2608.30083v1#2026-09-01</guid>
-      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Agentic Artifact Creation: Systems, Evaluation, Principles, and Opportunities (2026-08-31)</title>
-      <description>Generative models can turn natural-language prompts into images, text, code, and other content, lowering the cost of producing drafts and components. Their practical impact increasingly depends on whe...</description>
-      <link>https://arxiv.org/abs/2608.28122</link>
-      <guid>https://arxiv.org/abs/2608.28122#2026-08-31</guid>
-      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ContextPilot: Teaching Agents for Proactive Context Management via Fine-grained RL (2026-08-31)</title>
-      <description>Long-horizon agentic tasks require large language models (LLMs) to iteratively retrieve, integrate, and maintain dispersed information across multi-turn interactions, but preserving all interaction hi...</description>
-      <link>https://arxiv.org/abs/2608.28476</link>
-      <guid>https://arxiv.org/abs/2608.28476#2026-08-31</guid>
-      <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
