@@ -386,7 +386,24 @@ def main():
     with open(os.path.join(DIST_DIR, 'feed.xml'), 'w', encoding='utf-8') as f:
         f.write(rss_xml)
 
+    # Generate robots.txt
+    # 注意：robots 协议是 origin 级的，抓取器只读 alloevil.github.io/robots.txt，
+    # 不会读子路径下的这一份。所以这个文件是"约定 + 备用"性质：部分工具和
+    # AI 抓取器确实会探测子路径，将来若换独立域名它才真正生效。要真正屏蔽
+    # 或声明 sitemap，得改站点根仓库 alloevil.github.io 的 robots.txt。
+    with open(os.path.join(DIST_DIR, 'robots.txt'), 'w', encoding='utf-8') as f:
+        f.write("User-agent: *\nAllow: /\n\n"
+                f"Sitemap: {SITE_URL}/sitemap.xml\n")
+    print("[OK] robots.txt generated")
+
     # Generate sitemap.xml
+    # 只收录真正的 HTML 页面：首页 + 每篇周报页。刻意不收录的：
+    #   - 每日 docs/YYYY-MM-DD.md（以及 index.md）：docs/.nojekyll 关掉了
+    #     Jekyll，所以它们只以 text/markdown 形式 200，对应的 .html 是 404；
+    #     内容本身也已经内联进首页，列进来等于几十条重复内容，且每天增长。
+    #   - template.html：本脚本的渲染输入，不是页面（它自带指向首页的
+    #     rel=canonical，所以即使被抓到也会归并到首页）。
+    #   - feed.xml 和图片等静态资源：不是页面，塞进 sitemap 只会稀释它。
     urls = [f'{SITE_URL}/'] + [
         f'{SITE_URL}/weekly-{wl}.html' for wl, _, _ in weekly_reports]
     sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n'

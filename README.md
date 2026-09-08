@@ -1,6 +1,8 @@
-<div align="center">
-
 # 📄 AI Paper Daily
+
+**AI Paper Daily** is an automated daily paper digest that collects, filters and summarises new AI research on LLM agents, RAG, knowledge graphs and multi-agent systems for people who cannot read arXiv every morning.
+
+<div align="center">
 
 **Automated daily discovery of cutting-edge AI papers, delivered to Feishu / Email**
 
@@ -15,6 +17,8 @@
 </div>
 
 ---
+
+## What it is
 
 Spending 10 minutes a day scrolling through papers? Too much work. **AI Paper Daily** automates it: collect → filter → deliver. You only read the highlights.
 
@@ -109,12 +113,12 @@ Go to `Actions → Daily AI Paper Daily → Run workflow` and trigger a manual r
 │               (Daily at 12:00 Beijing Time)              │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐              │
-│  │  arXiv   │  │ Hugging  │  │ Papers   │   Collection │
-│  │   API    │  │  Face    │  │ With Code│              │
-│  └────┬─────┘  └────┬─────┘  └────┬─────┘              │
-│       │             │             │                     │
-│       └──────┬──────┴──────┬──────┘                     │
+│  ┌──────────┐  ┌──────────┐                             │
+│  │  arXiv   │  │ Hugging  │     Collection              │
+│  │   API    │  │  Face    │                             │
+│  └────┬─────┘  └────┬─────┘                             │
+│       │             │                                   │
+│       └──────┬──────┴──────┐                            │
 │              ▼             ▼                            │
 │         ┌────────┐   ┌──────────┐                      │
 │         │  Dedup │   │ AI Filter│   Filtering           │
@@ -157,6 +161,39 @@ Falls back to vote + star + code ranking when LLM is unavailable.
 - **Feishu**: Interactive cards via Webhook, clean formatting
 - **Email**: Responsive HTML with dark mode support
 - **GitHub Pages**: Markdown reports, supports custom domains
+
+## Install
+
+Python 3.11 (the version the workflow pins). The only third-party dependency is PyYAML.
+
+```bash
+git clone https://github.com/alloevil/AI-Paper-Daily.git
+cd AI-Paper-Daily
+pip install -r requirements.txt
+
+python scripts/main.py            # one daily run (needs LLM_API_KEY in the environment)
+python scripts/main.py --weekly   # weekly roundup, re-ranked from the committed daily reports
+python scripts/generate_site.py   # rebuild docs/: index.html, weekly pages, feed.xml, robots.txt, sitemap.xml
+```
+
+Running it as the intended automation needs no local install at all — fork the repo, add `LLM_API_KEY`, enable Actions. See Quick Start above.
+
+## When to use it
+
+- You track LLM agents, RAG, knowledge graphs or multi-agent systems and want a short daily list instead of the arXiv firehose.
+- You want papers with open-source code surfaced first — code availability is one of the scoring inputs and shows up as a tag.
+- You want your own topic list: the keywords and arXiv categories in `config.yaml` are yours to edit, and the LLM filter follows them.
+- You want the archive to be plain files. Every digest is committed Markdown, so it is greppable, diffable, and the site can be rebuilt from it.
+- You want zero infrastructure: GitHub Actions plus one LLM key, no server.
+
+## When NOT to use it
+
+- You need exhaustive coverage of a field. Only papers matching the configured keywords and categories can appear, capped at `max_papers` (10) per day, and the HuggingFace source only sees what is on its hot list. This is a sampler, not a literature review.
+- You want a human-curated newsletter. Selection is one LLM scoring pass with no editor, so a badly worded abstract can sink a good paper.
+- You need the summaries to be authoritative. They are LLM-generated from the abstract (in Chinese by default) and can flatten or misstate a paper's actual contribution — read the linked paper before citing it.
+- You want each daily digest as its own web page. `docs/.nojekyll` disables Jekyll, so the dated files are served as raw Markdown (`2026-09-05.md` is 200, `2026-09-05.html` is 404); the HTML pages are the home page plus one page per week, and the daily content is inlined into the home page.
+- You want reasoning about a paper beyond its abstract. It never fetches the PDF or the code — it works from titles, abstracts, categories, vote counts and whether a code link exists.
+- You want delivery guarantees. GitHub Actions cron is best-effort; a dropped run means that day has no digest, and the workflow deliberately skips the commit rather than pushing an empty one.
 
 ## 📋 Configuration
 
@@ -278,6 +315,13 @@ PRs welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
 ## ❓ FAQ
 
 <details>
+<summary><b>Q: Which data sources does it actually use?</b></summary>
+
+Two: the arXiv API (keyword × category search) and HuggingFace Daily Papers. They correspond one-to-one to `scripts/sources/arxiv_source.py` and `scripts/sources/huggingface_source.py`, and to the two switches under `sources:` in `config.yaml`. Papers With Code is **not** implemented — the name only appears in a source-to-emoji lookup in `scripts/notifier.py`. The site metadata used to list it and has been corrected.
+
+</details>
+
+<details>
 <summary><b>Q: How much does the LLM API cost?</b></summary>
 
 One call per day, filtering ~50 papers uses ~2000-4000 tokens. With GPT-4o-mini that's about $0.001/day — essentially free.
@@ -301,7 +345,7 @@ Feishu group → Settings → Group Bots → Add Bot → Custom Bot → Copy the
 <details>
 <summary><b>Q: Can I change the delivery time?</b></summary>
 
-Edit the `schedule_cron` field in `config.yaml`. Standard cron format (UTC). For example `0 6 * * *` = 14:00 Beijing Time.
+Edit the `schedule` cron expressions in `.github/workflows/daily.yml` — `0 4 * * *` is the daily run (12:00 Beijing) and `0 5 * * 1` the Monday weekly roundup (13:00 Beijing). Standard cron format, UTC; for example `0 6 * * *` = 14:00 Beijing Time. `config.yaml` has no schedule field, only a pointer to the workflow.
 
 </details>
 
