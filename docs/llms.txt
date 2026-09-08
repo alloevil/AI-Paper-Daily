@@ -1,0 +1,22 @@
+# AI Paper Daily
+
+> AI Paper Daily is an automated daily paper digest that collects, filters and summarises new AI research on LLM agents, RAG, knowledge graphs and multi-agent systems for people who cannot read arXiv every morning.
+
+Every day a GitHub Actions cron job queries the arXiv API with a keyword x category matrix and scrapes the Hugging Face Daily Papers hot list, deduplicates against the papers pushed in the last 7 days, sends the candidates to an LLM that scores them on relevance, novelty, practical value and whether open-source code exists, keeps at most 10, and writes the result as a dated Markdown report under `docs/`. Those committed Markdown files are the system's only database: the site, the RSS feed and the Monday weekly roundup are all rebuilt from them. Delivery goes to Feishu, email and GitHub Pages. Summaries are written in Chinese by default (`language: zh` in `config.yaml`); paper titles and abstracts stay in English. Fork it, set `LLM_API_KEY`, enable Actions — no server required.
+
+This is a machine-generated digest. There is no human editor, and the selection is only as good as the keyword list plus one LLM scoring pass.
+
+## Docs
+- [Site](https://alloevil.github.io/AI-Paper-Daily/): every digest to date on one page, filterable by date and topic tag
+- [Weekly roundup 2026-W37](https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W37.html): the top 15 papers of one week, re-ranked from that week's daily reports; one such page exists per week
+- [RSS feed](https://alloevil.github.io/AI-Paper-Daily/feed.xml): daily and weekly entries, regenerated on every run
+- [README](https://github.com/alloevil/AI-Paper-Daily#readme): setup, secrets, configuration and how to add a source
+- [config.yaml](https://github.com/alloevil/AI-Paper-Daily/blob/main/config.yaml): the actual keyword list, arXiv categories, per-day cap and delivery switches
+
+## Evidence
+- [Daily reports](https://github.com/alloevil/AI-Paper-Daily/tree/main/docs): every digest committed as dated Markdown, so what was selected on any given day stays auditable and the site can be rebuilt from it
+- [Collectors](https://github.com/alloevil/AI-Paper-Daily/tree/main/scripts/sources): the two implemented sources, `arxiv_source.py` and `huggingface_source.py` — the source list in this file matches these files, not a longer marketing list
+- [Workflow](https://github.com/alloevil/AI-Paper-Daily/blob/main/.github/workflows/daily.yml): the two cron schedules that define the update cadence
+
+## Source
+- [GitHub repository](https://github.com/alloevil/AI-Paper-Daily)
