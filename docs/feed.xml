@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 07 Sep 2026 09:50:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 08:53:10 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W37（2026-09-01 ~ 2026-09-07）</title>
@@ -34,6 +34,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness (2026-09-09)</title>
+      <description>Recursive self-improvement (RSI) requires a concrete mechanism through which an AI system observes its capabilities and converts that evidence into the next round of learning. We present NeoHorse-1, a...</description>
+      <link>https://arxiv.org/abs/2609.08183</link>
+      <guid>https://arxiv.org/abs/2609.08183#2026-09-09</guid>
+      <pubDate>Wed, 09 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Omni Interaction Agent Technical Report (2026-09-09)</title>
+      <description>In this work, we present Gander, an end-to-end model that unifies omni perception, realtime interaction, and agentic capabilities within a single framework. In contrast to turn-based conventional para...</description>
+      <link>https://arxiv.org/abs/2609.08977</link>
+      <guid>https://arxiv.org/abs/2609.08977#2026-09-09</guid>
+      <pubDate>Wed, 09 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Eliciting Weak-to-Strong Generalization with On-Policy Reverse Distillation (2026-09-09)</title>
+      <description>Weak-to-strong generalization asks whether stronger models can learn from weaker supervisors and surpass them. This question is particularly important for successive model generations and multi-domain...</description>
+      <link>https://arxiv.org/abs/2609.08798</link>
+      <guid>https://arxiv.org/abs/2609.08798#2026-09-09</guid>
+      <pubDate>Wed, 09 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AuK Technical Report: An Open-Source Foundational Model for Speech Generation and Editing (2026-09-09)</title>
+      <description>We introduce AuK, an open-source foundational model that unifies speech generation and editing through a common interface of natural-language instructions and audio context. To support this broad capa...</description>
+      <link>https://arxiv.org/abs/2609.08936</link>
+      <guid>https://arxiv.org/abs/2609.08936#2026-09-09</guid>
+      <pubDate>Wed, 09 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Mask Forcing: Improving Autoregressive Video Diffusion Distillation via Dual-Noise Masking Rollout (2026-09-09)</title>
+      <description>Autoregressive (AR) video diffusion models have shown great potential in real-time video generation. Recent methods distill pretrained bidirectional video diffusion models into causal AR students thro...</description>
+      <link>https://arxiv.org/abs/2609.09123</link>
+      <guid>https://arxiv.org/abs/2609.09123#2026-09-09</guid>
+      <pubDate>Wed, 09 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Miles v0.1: Production-Level Post-Training (2026-09-09)</title>
+      <description>We present Miles v0.1, a full-stack, production-ready system for frontier post-training. Building upon the clean design of slime, Miles designs each stage of the reinforcement-learning (RL) training l...</description>
+      <link>https://arxiv.org/abs/2609.08368</link>
+      <guid>https://arxiv.org/abs/2609.08368#2026-09-09</guid>
+      <pubDate>Wed, 09 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Marigold V2: Revisiting Diffusion Transformers for Monocular Depth Estimation (2026-09-09)</title>
+      <description>Monocular depth estimation is a ubiquitous yet highly ill-posed computer vision task, with downstream applications in scene reconstruction, computational photography, and robotics, among others. Despi...</description>
+      <link>https://arxiv.org/abs/2609.08084</link>
+      <guid>https://arxiv.org/abs/2609.08084#2026-09-09</guid>
+      <pubDate>Wed, 09 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Environments as Scaffold: Enriching Feedback to Bootstrap Self-Evolving Agents in Long-Horizon Tasks (2026-09-09)</title>
+      <description>Large Language Models demonstrate remarkable proficiency in static reasoning, yet training them as autonomous agents through Reinforcement Learning (RL) for long-horizon tasks is often hindered by sev...</description>
+      <link>https://arxiv.org/abs/2609.08404</link>
+      <guid>https://arxiv.org/abs/2609.08404#2026-09-09</guid>
+      <pubDate>Wed, 09 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model (2026-09-09)</title>
+      <description>We study the problem of navigating cluttered indoor environments with a humanoid robot. Unlike conventional methods that model navigation as a 2D path planning problem, humanoid traversal in cluttered...</description>
+      <link>https://arxiv.org/abs/2609.09158</link>
+      <guid>https://arxiv.org/abs/2609.09158#2026-09-09</guid>
+      <pubDate>Wed, 09 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CoVeR: Coverage-Based Token Pruning for Multi-View 3D Reasoning in VLMs (2026-09-09)</title>
+      <description>Representing a 3D scene as multi-view images allows 2D VLMs to reason in 3D by reusing priors from pre-training, sidestepping the scarcity of annotated 3D data. However, it produces thousands of redun...</description>
+      <link>https://arxiv.org/abs/2609.08345</link>
+      <guid>https://arxiv.org/abs/2609.08345#2026-09-09</guid>
+      <pubDate>Wed, 09 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 WorldSculpt: Generating Compositional Worlds from Grounded Videos (2026-09-07)</title>
@@ -314,76 +384,6 @@
       <link>https://arxiv.org/abs/2609.01343</link>
       <guid>https://arxiv.org/abs/2609.01343#2026-09-02</guid>
       <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 H3-World: Turning Language Understanding into World Control (2026-09-02)</title>
-      <description>We present H3-World, an efficient framework that turns the 33B MiniMax-H3 video generator into an interactive world model. Our key finding is that, as large video generators become more capable, langu...</description>
-      <link>https://arxiv.org/abs/2609.01560</link>
-      <guid>https://arxiv.org/abs/2609.01560#2026-09-02</guid>
-      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Evaluating Multimodal LLMs as Generalist Vision-Language-Action Agents for Drone Control: Commanding, Approaching, Tracking and Searching (2026-09-02)</title>
-      <description>Multimodal Large Language Models (MLLMs) are strong perceivers of images and video. We ask how far that reach extends into acting: dropping an MLLM directly into a drone's control loop, with its entir...</description>
-      <link>https://arxiv.org/abs/2609.01404</link>
-      <guid>https://arxiv.org/abs/2609.01404#2026-09-02</guid>
-      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Uncovering Understanding-Generation Synergy in Native Unified Multimodal Models: From Representation, Task to System (2026-09-02)</title>
-      <description>While unified multimodal models (UMMs) jointly perform visual understanding and generation within a single model, functional unification does not guarantee learning synergy: the two objectives may rei...</description>
-      <link>https://arxiv.org/abs/2609.01607</link>
-      <guid>https://arxiv.org/abs/2609.01607#2026-09-02</guid>
-      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 GlossoGen: Emergent Language in Complex Multi-Agent LLM Interactions (2026-09-02)</title>
-      <description>The growing rate at which LLM agents interact with one another raises key questions about language evolution in multi-LLM-agent settings, with implications for safety and monitorability as well as for...</description>
-      <link>http://arxiv.org/abs/2609.01491v1</link>
-      <guid>http://arxiv.org/abs/2609.01491v1#2026-09-02</guid>
-      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Calibration is the Bottleneck: An Action-Class Diagnostic of Multi-Turn Tool-Calling (2026-09-02)</title>
-      <description>Multi-turn tool calling is a core evaluation scenario for large language model (LLM) agents. On public tool-calling benchmarks, open-weight models now approach or even surpass closed-source frontier m...</description>
-      <link>http://arxiv.org/abs/2609.00949v1</link>
-      <guid>http://arxiv.org/abs/2609.00949v1#2026-09-02</guid>
-      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 A Mathematical Framework for Legacy, Governance, and Decision Integrity in Enterprise AI (2026-09-02)</title>
-      <description>Enterprise artificial intelligence is increasingly embedded in decisions that must remain lawful, explainable, adaptable, and accountable despite personnel turnover, model replacement, regulatory chan...</description>
-      <link>http://arxiv.org/abs/2609.00572v1</link>
-      <guid>http://arxiv.org/abs/2609.00572v1#2026-09-02</guid>
-      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Don't Let the Model Write the YAML: Deterministic, Minimal-Diff GitOps Remediation from LLM-Proposed Field Changes (2026-09-02)</title>
-      <description>LLM agents increasingly diagnose incidents and propose remediations. In a GitOps workflow, applying a fix means editing a version-controlled config file, and the obvious implementation, having the mod...</description>
-      <link>http://arxiv.org/abs/2609.00227v1</link>
-      <guid>http://arxiv.org/abs/2609.00227v1#2026-09-02</guid>
-      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DiagEvo: Diagnosis-Guided Self-Evolution via Hierarchical Error Memory (2026-09-02)</title>
-      <description>Self-play is an effective paradigm for language-model self-evolution, but without guidance, solver performance can plateau or decline across rounds. Unguided methods steer question generation with sig...</description>
-      <link>https://arxiv.org/abs/2609.00768</link>
-      <guid>https://arxiv.org/abs/2609.00768#2026-09-02</guid>
-      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution (2026-09-01)</title>
-      <description>Recent video generators often omit audio or synthesize it in a separate stage, limiting reciprocal modeling of visual dynamics and acoustic events. We present DreamX-Creator 1.0, a compact native join...</description>
-      <link>https://arxiv.org/abs/2608.31106</link>
-      <guid>https://arxiv.org/abs/2608.31106#2026-09-01</guid>
-      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Does On-Policy Distillation Really Distill? From Noisy Teacher to Self-Improvement (2026-09-01)</title>
-      <description>On-policy distillation (OPD) offers dense token-level supervision as an alternative to the sparse outcome-level advantages of reinforcement learning with verifiable rewards (RLVR). However, the teache...</description>
-      <link>https://arxiv.org/abs/2608.31046</link>
-      <guid>https://arxiv.org/abs/2608.31046#2026-09-01</guid>
-      <pubDate>Tue, 01 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
