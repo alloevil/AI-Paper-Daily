@@ -404,11 +404,20 @@ def main():
     #   - template.html：本脚本的渲染输入，不是页面（它自带指向首页的
     #     rel=canonical，所以即使被抓到也会归并到首页）。
     #   - feed.xml 和图片等静态资源：不是页面，塞进 sitemap 只会稀释它。
-    urls = [f'{SITE_URL}/'] + [
-        f'{SITE_URL}/weekly-{wl}.html' for wl, _, _ in weekly_reports]
+    # Index uses the build date (rebuilt daily, content inlined); each weekly
+    # page uses its covered week's end date — a real, past content date.
+    build_date = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+    def _weekly_lastmod(date_range: str) -> str:
+        dates = re.findall(r'\d{4}-\d{2}-\d{2}', date_range)
+        return dates[-1] if dates else build_date
+    urls = [(f'{SITE_URL}/', build_date)] + [
+        (f'{SITE_URL}/weekly-{wl}.html', _weekly_lastmod(dr))
+        for wl, dr, _ in weekly_reports]
     sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n'
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-               + '\n'.join(f'  <url><loc>{u}</loc></url>' for u in urls)
+               + '\n'.join(
+                   f'  <url><loc>{loc}</loc><lastmod>{lastmod}</lastmod></url>'
+                   for loc, lastmod in urls)
                + '\n</urlset>\n')
     with open(os.path.join(DIST_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write(sitemap)
