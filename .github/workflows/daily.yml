@@ -69,6 +69,28 @@ jobs:
           git diff --staged --quiet || git commit -m "📄 Daily discovery $(date +%Y-%m-%d)"
           git push
 
+      # Tell search engines to recrawl the changed URLs (IndexNow). Advisory:
+      # a non-2xx or network error must never fail the daily run.
+      - name: Ping IndexNow
+        if: steps.report.outputs.changed == 'true'
+        continue-on-error: true
+        run: |
+          python3 - <<'PY'
+          import json, re, urllib.parse, urllib.request
+          KEY = "8ed96c1ebbc0415f1c2de0feb52bbf92c484e7ce0de0b00a"
+          KEY_LOCATION = "https://alloevil.github.io/8ed96c1ebbc0415f1c2de0feb52bbf92c484e7ce0de0b00a.txt"
+          urls = re.findall(r"<loc>(.*?)</loc>", open("docs/sitemap.xml", encoding="utf-8").read())
+          host = urllib.parse.urlsplit(urls[0]).netloc
+          payload = {"host": host, "key": KEY, "keyLocation": KEY_LOCATION, "urlList": urls}
+          req = urllib.request.Request("https://api.indexnow.org/indexnow",
+              data=json.dumps(payload).encode(), headers={"Content-Type": "application/json"})
+          try:
+              with urllib.request.urlopen(req, timeout=30) as resp:
+                  print("IndexNow:", resp.status, resp.read().decode() or "(no body)")
+          except Exception as e:
+              print("IndexNow ping failed (advisory, ignoring):", e)
+          PY
+
   weekly:
     if: github.event.schedule == '0 5 * * 1' || github.event.inputs.mode == 'weekly'
     runs-on: ubuntu-latest
@@ -120,3 +142,25 @@ jobs:
           git add -A
           git diff --staged --quiet || git commit -m "📊 Weekly roundup $(date +%Y-%m-%d)"
           git push
+
+      # Tell search engines to recrawl the changed URLs (IndexNow). Advisory:
+      # a non-2xx or network error must never fail the daily run.
+      - name: Ping IndexNow
+        if: steps.report.outputs.changed == 'true'
+        continue-on-error: true
+        run: |
+          python3 - <<'PY'
+          import json, re, urllib.parse, urllib.request
+          KEY = "8ed96c1ebbc0415f1c2de0feb52bbf92c484e7ce0de0b00a"
+          KEY_LOCATION = "https://alloevil.github.io/8ed96c1ebbc0415f1c2de0feb52bbf92c484e7ce0de0b00a.txt"
+          urls = re.findall(r"<loc>(.*?)</loc>", open("docs/sitemap.xml", encoding="utf-8").read())
+          host = urllib.parse.urlsplit(urls[0]).netloc
+          payload = {"host": host, "key": KEY, "keyLocation": KEY_LOCATION, "urlList": urls}
+          req = urllib.request.Request("https://api.indexnow.org/indexnow",
+              data=json.dumps(payload).encode(), headers={"Content-Type": "application/json"})
+          try:
+              with urllib.request.urlopen(req, timeout=30) as resp:
+                  print("IndexNow:", resp.status, resp.read().decode() or "(no body)")
+          except Exception as e:
+              print("IndexNow ping failed (advisory, ignoring):", e)
+          PY
