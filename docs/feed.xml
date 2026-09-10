@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 09 Sep 2026 08:53:10 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 08:52:12 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W37（2026-09-01 ~ 2026-09-07）</title>
@@ -34,6 +34,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Show-Harness: Just a VLM Agent Can Play Robots (2026-09-10)</title>
+      <description>Foundation vision-language models (VLMs) exhibit broad intelligence about the world, yet translating this intelligence into robot control remains challenging. We present Show-Harness, an Embodied Harn...</description>
+      <link>https://arxiv.org/abs/2609.10522</link>
+      <guid>https://arxiv.org/abs/2609.10522#2026-09-10</guid>
+      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Programmable World Model (2026-09-10)</title>
+      <description>Recent video world models generate increasingly realistic and interactive visual experiences, yet lack reliable mechanisms for maintaining persistent world state and enforcing programmable rules over ...</description>
+      <link>https://arxiv.org/abs/2609.10540</link>
+      <guid>https://arxiv.org/abs/2609.10540#2026-09-10</guid>
+      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Vague2Detect: Handling Ambiguous Prompts in Knowledge-Based Open-World Detection (2026-09-10)</title>
+      <description>Real-world detectors must often interpret functional or ambiguous prompts, yet conventional models such as YOLO remain restricted to fixed class lists. Even open-vocabulary models like YOLO-World freq...</description>
+      <link>http://arxiv.org/abs/2609.09949v1</link>
+      <guid>http://arxiv.org/abs/2609.09949v1#2026-09-10</guid>
+      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Purchase Advice and Observable Buyer Responses in Real AI Conversations (2026-09-10)</title>
+      <description>How often does a generative assistant persuade someone to buy, or persuade them not to buy? Conversation logs contain recommendations, but they do not necessarily record subsequent decisions. We audit...</description>
+      <link>http://arxiv.org/abs/2609.09878v1</link>
+      <guid>http://arxiv.org/abs/2609.09878v1#2026-09-10</guid>
+      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Φ-Bench: Can Large Language Models Engineer the Infrastructure That Powers Them? (2026-09-10)</title>
+      <description>Large language models (LLMs) have demonstrated remarkable capabilities in reasoning and code generation, raising the prospect that they could assist in developing and optimizing the very infrastructur...</description>
+      <link>https://arxiv.org/abs/2609.10226</link>
+      <guid>https://arxiv.org/abs/2609.10226#2026-09-10</guid>
+      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Avatar: Toward Autonomous End-to-End Orchestration of Scientific Workflows using LLMs (2026-09-10)</title>
+      <description>Scientific workflow management (WMSs) systems automate execution, yet orchestrate using fixed, hand-tuned rules. LLM agents promise more autonomous orchestration, but it remains unclear where to intro...</description>
+      <link>http://arxiv.org/abs/2609.10509v1</link>
+      <guid>http://arxiv.org/abs/2609.10509v1#2026-09-10</guid>
+      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Glyph: A Multi-Strategy Agentic System for Column Description and Sensitivity-Ontology Tagging of Enterprise Data Catalogs (2026-09-10)</title>
+      <description>Enterprise data lakes accumulate tables faster than human stewards can document or classify them, leaving columns with missing descriptions and unassigned governance labels. This documentation debt un...</description>
+      <link>http://arxiv.org/abs/2609.10430v1</link>
+      <guid>http://arxiv.org/abs/2609.10430v1#2026-09-10</guid>
+      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Emergency Department Revisit Quality Review Screening: Exploring Human Decision-Making and Artificial Intelligence Support (2026-09-10)</title>
+      <description>Background: Emergency Department (ED) return visits are commonly reviewed for quality assurance, but are often limited (e.g., to revisits within 48-72 hours) to increase actionable finding yield while...</description>
+      <link>http://arxiv.org/abs/2609.10421v1</link>
+      <guid>http://arxiv.org/abs/2609.10421v1#2026-09-10</guid>
+      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 The Answer Path and the Grounding Instruction in LLM Question Answering over Knowledge Graphs (2026-09-10)</title>
+      <description>A graph retrieval-augmented generation pipeline chooses which triples to put in the prompt, a syntax to write them in, an order to write them in, and a sentence telling the model what to do with them....</description>
+      <link>http://arxiv.org/abs/2609.10237v1</link>
+      <guid>http://arxiv.org/abs/2609.10237v1#2026-09-10</guid>
+      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Kernel-Managed Shared Memory for System-Wide Personalization (2026-09-10)</title>
+      <description>AI systems become more useful when they can adapt to the people using them, but in multi-agent systems, useful context learned by one agent often remains unavailable to others. We present kernel-manag...</description>
+      <link>http://arxiv.org/abs/2609.10144v1</link>
+      <guid>http://arxiv.org/abs/2609.10144v1#2026-09-10</guid>
+      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness (2026-09-09)</title>
@@ -314,76 +384,6 @@
       <link>https://arxiv.org/abs/2609.02886</link>
       <guid>https://arxiv.org/abs/2609.02886#2026-09-03</guid>
       <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Language Models Can Control Their Own Attention (2026-09-03)</title>
-      <description>Language models spend most of their attention on a small fraction of context, yet they read the entire KV cache to find the few tokens that matter. If the user asks about a previous detail in a 1M-tok...</description>
-      <link>https://arxiv.org/abs/2609.02737</link>
-      <guid>https://arxiv.org/abs/2609.02737#2026-09-03</guid>
-      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Cliff: Learning Process Rewards from the First Mistake (2026-09-03)</title>
-      <description>Reinforcement learning with verifiable rewards (RLVR) has emerged as a powerful paradigm for large language model (LLM) post-training, but its reliance on coarse outcome rewards leads to limited guida...</description>
-      <link>https://arxiv.org/abs/2609.02817</link>
-      <guid>https://arxiv.org/abs/2609.02817#2026-09-03</guid>
-      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EarlyEval: Cheaper Agent Evaluation via Early Outcome Prediction (2026-09-03)</title>
-      <description>Evaluating LLM agents is essential for guiding their development, yet it has grown prohibitively expensive: a single pass of a frontier model over an agentic benchmark can cost hundreds to thousands o...</description>
-      <link>http://arxiv.org/abs/2609.02783v1</link>
-      <guid>http://arxiv.org/abs/2609.02783v1#2026-09-03</guid>
-      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Epistemic Sybil Resistance: Multiplying AI Agents Without Multiplying Evidence (2026-09-03)</title>
-      <description>Multi-agent AI systems improve inference by spawning agents and synthesizing reports. But another agent is not another observation: apparently independent reports may descend from the same evidence, a...</description>
-      <link>http://arxiv.org/abs/2609.01873v1</link>
-      <guid>http://arxiv.org/abs/2609.01873v1#2026-09-03</guid>
-      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Import What You Need: Learning When and How to Augment EHR Graphs with External Knowledge (2026-09-03)</title>
-      <description>Longitudinal prediction from electronic health records (EHRs) is limited by the sparsity and irregularity in patient trajectories, and knowledge augmentation with external knowledge graphs (KGs) offer...</description>
-      <link>http://arxiv.org/abs/2609.01839v1</link>
-      <guid>http://arxiv.org/abs/2609.01839v1#2026-09-03</guid>
-      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 VibeVoice-ASR-Streaming Technical Report (2026-09-03)</title>
-      <description>Traditional speaker-attributed ASR systems treated ASR and speaker diarization as two separate tasks. Recently, end-to-end models such as VibeVoice-ASR have unified the two tasks within a single model...</description>
-      <link>https://arxiv.org/abs/2609.02812</link>
-      <guid>https://arxiv.org/abs/2609.02812#2026-09-03</guid>
-      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Post-Training Language Models for Gold-Medal Performance in Coding Competitions (2026-09-03)</title>
-      <description>Competitive programming has become a key test of large language model reasoning, with international competitions such as IOI and ICPC representing its most challenging settings. We present an end-to-e...</description>
-      <link>https://arxiv.org/abs/2609.02849</link>
-      <guid>https://arxiv.org/abs/2609.02849#2026-09-03</guid>
-      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PaperCompiler: Faithful Paper-to-Code Generation via Repository-Level Specification Compilation (2026-09-03)</title>
-      <description>Faithfully translating research papers into repository-level implementations remains challenging because papers often describe methods at a high level, leave implementation assumptions implicit, and r...</description>
-      <link>https://arxiv.org/abs/2609.02272</link>
-      <guid>https://arxiv.org/abs/2609.02272#2026-09-03</guid>
-      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 StudentSim: Training LLM-based Student Simulators (2026-09-02)</title>
-      <description>AI tutors are most useful when they adapt to each student's strengths, weaknesses, and preferred guidance, but evidence about which guidance works for which student is sparse, slow, and costly to coll...</description>
-      <link>https://arxiv.org/abs/2609.01591</link>
-      <guid>https://arxiv.org/abs/2609.01591#2026-09-02</guid>
-      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SMELT: Scaling Laws for Compute-Matched MoE Looped Transformers (2026-09-02)</title>
-      <description>Looped Transformers increase effective depth by iterating a shared block of layers, but most evaluations compare at fixed model size, conflating architectural advantage with extra FLOPs. We study loop...</description>
-      <link>https://arxiv.org/abs/2609.01343</link>
-      <guid>https://arxiv.org/abs/2609.01343#2026-09-02</guid>
-      <pubDate>Wed, 02 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
