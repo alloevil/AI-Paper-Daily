@@ -19,6 +19,9 @@ DEFAULT_INDEX = f"# 📄 AI Paper Daily\n\n每日论文发现与推送\n\n{INDEX
 
 _CODE_TAG_SUFFIX = re.compile(r"(\s*📦代码)+$")
 
+# index.md 历史记录条目里的链接目标(2026-08-10.md / weekly-2026-W34.md),用作去重键
+_INDEX_ENTRY_LINK = re.compile(r"^- \[[^\]]*\]\(([^)]+)\)")
+
 
 def render_paper_md(paper: Dict, ordinal: int) -> str:
     """渲染单篇论文的 Markdown 块(标题/理由/摘要/链接)。
@@ -75,12 +78,22 @@ def render_report(papers: List[Dict], title: str,
 
 
 def prepend_index_entry(entry: str):
-    """在 docs/index.md 的『## 历史记录』开头插入新条目(已存在则跳过)"""
+    """在 docs/index.md 的『## 历史记录』开头插入新条目。
+
+    按链接目标(如 2026-08-10.md)去重:同一天重跑、论文数变化时替换旧条目。
+    按整行文本比对做不到这一点——条目里的篇数一变,旧行就留下了重复日期
+    (index.md 曾出现两条 2026-07-29:7 篇和 4 篇)。
+    """
     index_path = DOCS_DIR / "index.md"
     existing = (index_path.read_text(encoding="utf-8")
                 if index_path.exists() else DEFAULT_INDEX)
-    if entry in existing or INDEX_HISTORY_HEADER not in existing:
+    if INDEX_HISTORY_HEADER not in existing:
         return
+    target = _INDEX_ENTRY_LINK.match(entry)
+    if target:
+        existing = re.sub(
+            rf"^- \[[^\]]*\]\({re.escape(target.group(1))}\)[^\n]*\n",
+            "", existing, flags=re.MULTILINE)
     existing = existing.replace(INDEX_HISTORY_HEADER,
                                 f"{INDEX_HISTORY_HEADER}{entry}")
     index_path.write_text(existing, encoding="utf-8")

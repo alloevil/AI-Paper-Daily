@@ -89,6 +89,7 @@ class ReportFooterTest(unittest.TestCase):
 
     def test_footer_marks_filter_mode(self):
         import tempfile
+        import common as common_mod
         import main as main_mod
 
         papers = [{"title": "t", "reason": "r", "abstract": "a",
@@ -99,7 +100,8 @@ class ReportFooterTest(unittest.TestCase):
             with tempfile.TemporaryDirectory() as tmp:
                 docs = Path(tmp) / "docs"
                 with mock.patch.object(main_mod, "__file__",
-                                       str(Path(tmp) / "scripts" / "main.py")):
+                                       str(Path(tmp) / "scripts" / "main.py")), \
+                        mock.patch.object(common_mod, "DOCS_DIR", docs):
                     main_mod.generate_report(papers, "2026-08-20", mode)
                 content = (docs / "2026-08-20.md").read_text(encoding="utf-8")
                 self.assertIn(f"本期筛选方式：{label}", content)

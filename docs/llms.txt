@@ -2,14 +2,14 @@
 
 > AI Paper Daily is an automated daily paper digest that collects, filters and summarises new AI research on LLM agents, RAG, knowledge graphs and multi-agent systems for people who cannot read arXiv every morning.
 
-Every day a GitHub Actions cron job queries the arXiv API with a keyword x category matrix and scrapes the Hugging Face Daily Papers hot list, deduplicates against the papers pushed in the last 7 days, sends the candidates to an LLM that scores them on relevance, novelty, practical value and whether open-source code exists, keeps at most 10, and writes the result as a dated Markdown report under `docs/`. Those committed Markdown files are the system's only database: the site, the RSS feed and the Monday weekly roundup are all rebuilt from them. Delivery goes to Feishu, email and GitHub Pages. Summaries are written in Chinese by default (`language: zh` in `config.yaml`); paper titles and abstracts stay in English. Fork it, set `LLM_API_KEY`, enable Actions — no server required.
+Every day a GitHub Actions cron job queries the arXiv API with a keyword x category matrix and fetches the Hugging Face Daily Papers hot list from its public JSON API (unfiltered by keywords or categories — that list is Hugging Face's), deduplicates against the papers pushed in the last 7 days, sends the candidates to an LLM that scores them on relevance, novelty, practical value and whether open-source code exists when `LLM_API_KEY` is set (without a key, and on LLM failure, they are ranked by votes and open-source code — the mode shown by every committed report that records its mode), keeps at most 10, and writes the result as a dated Markdown report under `docs/`. Those committed Markdown files are the system's only database: the site, the RSS feed and the Monday weekly roundup are all rebuilt from them. Delivery goes to Feishu, email and GitHub Pages. Summaries are written in Chinese by default (`language: zh` in `config.yaml`); paper titles and abstracts stay in English. Fork it, enable Actions — no server required, and `LLM_API_KEY` is optional (set it for the LLM selection pass).
 
-This is a machine-generated digest. There is no human editor, and the selection is only as good as the keyword list plus one LLM scoring pass.
+This is a machine-generated digest. There is no human editor, and the selection is only as good as the keyword list plus one automated pass (an LLM pass when `LLM_API_KEY` is set, a votes/open-code ranking otherwise).
 
 ## Docs
-- [Site](https://alloevil.github.io/AI-Paper-Daily/): every digest to date on one page, filterable by date and topic tag
-- [Weekly roundup 2026-W37](https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W37.html): the top 15 papers of one week, re-ranked from that week's daily reports; one such page exists per week
-- [RSS feed](https://alloevil.github.io/AI-Paper-Daily/feed.xml): daily and weekly entries, regenerated on every run
+- [Site](https://alloevil.github.io/AI-Paper-Daily/): every digest to date on one page, filterable by date and selection tag (高票 / 有代码 / 最新论文)
+- [Weekly roundup 2026-W37](https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W37.html): the top 15 papers of one week, re-ranked from that week's daily reports; the four most recent weeks have a page (W34–W37 — earlier dailies predate the weekly roundup)
+- [RSS feed](https://alloevil.github.io/AI-Paper-Daily/feed.xml): one item per weekly page plus the 50 most recent papers, rebuilt whenever a new report is committed (a run that produces no report skips the rebuild)
 - [README](https://github.com/alloevil/AI-Paper-Daily#readme): setup, secrets, configuration and how to add a source
 - [config.yaml](https://github.com/alloevil/AI-Paper-Daily/blob/main/config.yaml): the actual keyword list, arXiv categories, per-day cap and delivery switches
 

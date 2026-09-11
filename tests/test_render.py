@@ -8,11 +8,13 @@ docs/*.md 是系统的事实数据源(周报与站点都从中重建数据),渲�
 """
 
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
 
+import common as common_mod
 import main as main_mod
 import weekly as weekly_mod
 
@@ -154,6 +156,28 @@ class WeeklyReportGoldenTest(_GoldenBase):
             self.assertNotIn("📦代码 📦代码", content)
         finally:
             path.unlink(missing_ok=True)
+
+
+class IndexEntryIdempotencyTest(unittest.TestCase):
+    """index.md 历史记录按链接目标去重:同一天重跑且篇数变化时替换旧条目"""
+
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self._orig_docs = common_mod.DOCS_DIR
+        common_mod.DOCS_DIR = Path(self._tmp.name)
+
+    def tearDown(self):
+        common_mod.DOCS_DIR = self._orig_docs
+        self._tmp.cleanup()
+
+    def test_same_date_with_new_count_replaces_old_entry(self):
+        common_mod.prepend_index_entry(
+            "- [2026-07-29（周三）](2026-07-29.md) - 7 篇论文\n")
+        common_mod.prepend_index_entry(
+            "- [2026-07-29（周三）](2026-07-29.md) - 4 篇论文\n")
+        index = (Path(self._tmp.name) / "index.md").read_text(encoding="utf-8")
+        self.assertEqual(index.count("2026-07-29.md"), 1)
+        self.assertIn("- [2026-07-29（周三）](2026-07-29.md) - 4 篇论文", index)
 
 
 if __name__ == "__main__":

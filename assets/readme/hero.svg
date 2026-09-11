@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="heroTitle heroDesc">
   <title id="heroTitle">AI Paper Daily pipeline</title>
-  <desc id="heroDesc">Four stages. Collection: the arXiv API and HuggingFace Daily Papers, searched by keywords across the arXiv categories cs.AI, cs.CL, cs.IR and cs.MA, with a wider fetch window on Sunday and Monday. Filtering: an LLM scores every paper on keyword relevance, novelty and practical value, open-source code available first, then community votes and stars. Persistence: the top 10 papers per day become a committed Markdown report at docs/*.md. Weekly roundup: scripts/main.py with the weekly flag rebuilds the last 7 days into a re-ranked top 15 at weekly-YYYY-WW.md. The same digest is delivered as a Feishu card and an Email SMTP message; the site is GitHub Pages. Schedule in UTC cron: the daily run is 04 * * * at 12:00 Beijing, the weekly run is 05 * * 1 on Monday at 13:00 Beijing.</desc>
+  <desc id="heroDesc">Four stages. Collection: the arXiv API and HuggingFace Daily Papers, searched by keywords across the arXiv categories cs.AI, cs.CL, cs.IR and cs.MA, with a wider fetch window on Sunday and Monday. Filtering: an LLM scores the candidates on keyword relevance, novelty and practical value, open-source code available first, then community votes and stars when LLM_API_KEY is set, otherwise a votes + open-code ranking. Persistence: up to 10 papers per day become a committed Markdown report at docs/*.md. Weekly roundup: scripts/main.py with the weekly flag rebuilds the last 7 days into a re-ranked top 15 at weekly-YYYY-WW.md. The same digest is delivered as a Feishu card and an Email SMTP message; the site is GitHub Pages. Schedule in UTC cron: the daily run is 0 4 * * * (12:00 Beijing), the weekly run is 0 5 * * 1 on Monday (13:00 Beijing).</desc>
 
   <rect width="1200" height="420" rx="28" fill="#0F1117"/>
 
@@ -8,15 +8,15 @@
     <text x="64" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20" font-weight="700" letter-spacing="3" fill="#6EA8FE">DAILY AI RESEARCH DIGEST</text>
     <text x="64" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="64" font-weight="700" fill="#F2F4F8">AI Paper Daily</text>
     <text x="64" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="22" fill="#9AA3B8">LLM agents, RAG, knowledge graphs, multi-agent systems</text>
-    <text x="64" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="22" fill="#9AA3B8">an LLM-filtered digest every day, a re-ranked roundup every Monday</text>
+    <text x="64" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="22" fill="#9AA3B8">a filtered digest every day, a re-ranked roundup every Monday</text>
   </g>
 
   <g id="schedule-card">
     <rect x="776" y="44" width="360" height="132" rx="16" fill="#171A23" stroke="#262C3D" stroke-width="1.5"/>
     <text x="800" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" font-weight="700" letter-spacing="2" fill="#6EA8FE">SCHEDULE (UTC CRON)</text>
-    <text x="800" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#F2F4F8">04 * * *</text>
+    <text x="800" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#F2F4F8">0 4 * * *</text>
     <text x="912" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" fill="#9AA3B8">daily 12:00 Beijing</text>
-    <text x="800" y="142" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#F2F4F8">05 * * 1</text>
+    <text x="800" y="142" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#F2F4F8">0 5 * * 1</text>
     <text x="912" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" fill="#9AA3B8">weekly Mon 13:00</text>
   </g>
 
@@ -37,7 +37,7 @@
     <rect x="338" y="198" width="250" height="176" rx="16" fill="#171A23" stroke="#262C3D" stroke-width="1.5"/>
     <text x="360" y="240" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#6EA8FE">02</text>
     <text x="392" y="240" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="21" font-weight="700" fill="#F2F4F8">Filtering</text>
-    <text x="360" y="266" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" fill="#9AA3B8">LLM scores each paper</text>
+    <text x="360" y="266" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" fill="#9AA3B8">LLM filter (key optional)</text>
     <text x="360" y="290" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" fill="#9AA3B8"><tspan fill="#6EA8FE" font-weight="700">1</tspan>  keyword relevance</text>
     <text x="360" y="314" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" fill="#9AA3B8"><tspan fill="#6EA8FE" font-weight="700">2</tspan>  novelty / value</text>
     <text x="360" y="338" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" fill="#9AA3B8"><tspan fill="#6EA8FE" font-weight="700">3</tspan>  open code first</text>
@@ -50,7 +50,7 @@
     <rect x="612" y="198" width="250" height="176" rx="16" fill="#171A23" stroke="#262C3D" stroke-width="1.5"/>
     <text x="634" y="240" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#6EA8FE">03</text>
     <text x="666" y="240" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="21" font-weight="700" fill="#F2F4F8">Persistence</text>
-    <text x="634" y="266" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20" fill="#F2F4F8">top <tspan fill="#F0B357" font-weight="700">10</tspan> per day</text>
+    <text x="634" y="266" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20" fill="#F2F4F8">up to <tspan fill="#F0B357" font-weight="700">10</tspan> per day</text>
     <text x="634" y="290" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#F2F4F8">docs/*.md</text>
     <text x="634" y="314" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" fill="#9AA3B8">Markdown is the database</text>
     <text x="634" y="338" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" fill="#9AA3B8">committed to git</text>

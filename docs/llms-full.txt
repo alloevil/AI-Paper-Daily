@@ -4,7 +4,7 @@ AI Paper Daily is an automated daily paper digest that collects, filters and sum
 
 ## What it is
 
-A GitHub Actions cron job, not a service. Once a day it queries the arXiv API with a keyword x category matrix (the keywords are LLM agent, knowledge graph, knowledge base, RAG retrieval augmented generation, multi-agent system, tool use language model and agentic AI; the categories are cs.AI, cs.CL, cs.IR and cs.MA) and scrapes the Hugging Face Daily Papers hot list for community upvotes. Candidates are deduplicated against everything pushed in the previous 7 days, then sent to an LLM that scores them on relevance to the keywords, novelty and practical value, availability of open-source code, and community votes; if the LLM call fails, it falls back to ranking by votes, stars and code availability. At most 10 papers survive per day, and the result is written as a dated Markdown report in `docs/`. Those committed Markdown files are the system's only database — the published site, the RSS feed and the Monday weekly roundup are all rebuilt from them by `scripts/generate_site.py`, and `scripts/reports.py` is the read layer that parses them back. Delivery is a Feishu card, an HTML email, and the GitHub Pages site. Summaries are written in Chinese by default; titles and abstracts stay in the paper's original English.
+A GitHub Actions cron job, not a service. Once a day it queries the arXiv API with a keyword x category matrix (the keywords are LLM agent, knowledge graph, knowledge base, RAG retrieval augmented generation, multi-agent system, tool use language model and agentic AI; the categories are cs.AI, cs.CL, cs.IR and cs.MA) and fetches the Hugging Face Daily Papers hot list from its public JSON API for community upvotes (that list is chosen by Hugging Face, so it is not filtered by the configured keywords or categories). Candidates are deduplicated against everything pushed in the previous 7 days, then, when `LLM_API_KEY` is set, sent to an LLM that scores them on relevance to the keywords, novelty and practical value, availability of open-source code, and community votes; without a key (or if the LLM call fails) they are ranked by votes and open-source code instead. Every committed report that records its mode shows that fallback. At most 10 papers survive per day, and the result is written as a dated Markdown report in `docs/`. Those committed Markdown files are the system's only database — the published site, the RSS feed and the Monday weekly roundup are all rebuilt from them by `scripts/generate_site.py`, and `scripts/reports.py` is the read layer that parses them back. Delivery is a Feishu card, an HTML email, and the GitHub Pages site. Summaries are written in Chinese by default; titles and abstracts stay in the paper's original English.
 
 Two sources are implemented, arXiv and Hugging Face, matching the two files in `scripts/sources/`. Nothing else is collected.
 
@@ -21,7 +21,7 @@ pip install -r requirements.txt
 To run it as the intended daily automation:
 
 1. Fork https://github.com/alloevil/AI-Paper-Daily.
-2. In Settings -> Secrets and variables -> Actions, add `LLM_API_KEY` (the only required secret). Optional: `LLM_BASE_URL` (defaults to `https://api.openai.com/v1`), `FEISHU_WEBHOOK`, and `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASS`.
+2. In Settings -> Secrets and variables -> Actions, optionally add `LLM_API_KEY` for the LLM selection pass — no secret is required, and without one the digest is still written with the votes/code fallback. Optional: `LLM_BASE_URL` (defaults to `https://api.openai.com/v1`), `FEISHU_WEBHOOK`, and `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASS`.
 3. Enable workflows in the Actions tab.
 4. Edit `config.yaml` to set your own keywords and arXiv categories.
 5. Actions -> Daily AI Paper Daily -> Run workflow for a first manual run.
@@ -31,7 +31,7 @@ With no delivery secrets at all it still works: papers are committed as Markdown
 ## Quickstart
 
 ```bash
-# one daily run: collect -> dedup -> LLM filter -> write docs/YYYY-MM-DD.md -> deliver
+# one daily run: collect -> dedup -> select (LLM filter when LLM_API_KEY is set) -> write docs/YYYY-MM-DD.md -> deliver
 python scripts/main.py
 
 # weekly mode: re-rank the last 7 days from the committed daily reports
@@ -58,27 +58,27 @@ This project deliberately ships **no `claims.json`**. It produces a qualitative 
 
 - You track LLM agents, RAG, knowledge graphs or multi-agent systems and want a short daily list instead of an arXiv firehose.
 - You want papers with open-source code surfaced first — code availability is one of the scoring inputs and is shown as a tag.
-- You want your own topic list: the keywords and arXiv categories are yours to edit in `config.yaml`, and the LLM filter follows them.
+- You want your own topic list: the keywords and arXiv categories are yours to edit in `config.yaml`, and the filter follows them (the LLM when a key is set, the votes/code ranking otherwise).
 - You want the archive to be plain files. Every digest is committed Markdown, so it is greppable, diffable and rebuildable without a database.
-- You want zero infrastructure: GitHub Actions plus one LLM key, no server.
+- You want zero infrastructure: GitHub Actions, no server (the LLM key is optional).
 
 ## When NOT to use it
 
-- You need exhaustive coverage of a field. Only papers matching the configured keywords and categories can appear, at most 10 per day, and the Hugging Face source only sees what is on its hot list. This is a sampler, not a literature review.
-- You want a human-curated newsletter. Selection is one LLM scoring pass; there is no editor, and a badly worded abstract can sink a good paper.
-- You need the summaries to be authoritative. They are LLM-generated from the abstract, in Chinese by default, and can be wrong or flatten a paper's actual contribution. Always read the linked paper before citing it.
+- You need exhaustive coverage of a field. arXiv candidates must match the configured keywords and categories; the Hugging Face source is unfiltered apart from its publish window, so it can surface papers outside your topics. At most 10 papers per day survive. This is a sampler, not a literature review.
+- You want a human-curated newsletter. Selection is one automated pass — an LLM pass when a key is set, a votes/code ranking otherwise — with no editor, so a badly worded abstract can sink a good paper.
+- You need the summaries to be authoritative. When a key is set the one-line reason is LLM-generated from the abstract, in Chinese by default; in the committed archive it is only the selection tag. Either way it can be wrong or flatten a paper's actual contribution. Always read the linked paper before citing it.
 - You want the individual daily digests as web pages. Because `docs/.nojekyll` disables Jekyll, the dated files are served as raw Markdown (`2026-09-05.md` returns 200, `2026-09-05.html` returns 404). The HTML pages are the home page and one page per week; the daily content is inlined into the home page rather than published as separate pages.
 - You want it to reason about a paper's content beyond the abstract. It never fetches the PDF or the code; it works from titles, abstracts, categories, vote counts and whether a code link exists.
 - You want delivery guarantees. Everything runs on the GitHub Actions free tier, where cron is best-effort; a delayed or dropped run means that day simply has no digest.
 
 ## FAQ
 
-**Which sources does it actually use?** arXiv, via its API with a keyword x category search, and Hugging Face Daily Papers, scraped for the hot list with community upvotes. Those are the only two collectors in `scripts/sources/` and the only two switches under `sources:` in `config.yaml`. Note for anyone who read the older site metadata: it claimed a third source, Papers With Code, which has never been implemented — `scripts/notifier.py` merely carries a `paperswithcode` entry in a source-to-emoji lookup table. The metadata has been corrected to match the code.
+**Which sources does it actually use?** arXiv, via its API with a keyword x category search, and Hugging Face Daily Papers, fetched from its public JSON API with community upvotes. Those are the only two collectors in `scripts/sources/` and the only two switches under `sources:` in `config.yaml`. Note for anyone who read the older site metadata: it claimed a third source, Papers With Code, which has never been implemented — `scripts/notifier.py` merely carries a `paperswithcode` entry in a source-to-emoji lookup table. The metadata has been corrected to match the code.
 
 **How is the update cadence defined, and what happens if a day is missed?** Two cron entries in `.github/workflows/daily.yml`: `0 4 * * *` for the daily digest (12:00 Beijing) and `0 5 * * 1` for the Monday weekly roundup (13:00 Beijing), plus manual `workflow_dispatch` runs. If a run generates no new Markdown report, the workflow explicitly skips the site build and the commit, so a missing date means nothing was selected that day rather than data being lost. GitHub cron is best-effort, so occasional gaps are expected.
 
 **Does the weekly roundup collect new papers?** No. It re-reads the committed daily Markdown reports for the previous 7 days, re-ranks them by votes, stars and open-source code, and publishes the top 15 as `docs/weekly-YYYY-Www.md` plus a rendered `weekly-YYYY-Www.html` page. It intentionally bypasses the daily 7-day push dedup, because re-surfacing the week's best papers is the point.
 
-**What does it cost to run?** One LLM call per day filtering roughly 50 papers, which the README measures at about 2000-4000 tokens — on the order of $0.001/day with a small model. Any OpenAI-compatible endpoint works (OpenAI, Azure, DeepSeek, Moonshot, a local Ollama) by changing `LLM_BASE_URL`. GitHub Actions and GitHub Pages cover the rest at no cost.
+**What does it cost to run?** Not measured here: the repo records no token counts or spend. The code bounds a run to at most one LLM call, truncates every candidate abstract to 200 characters and caps the response at 4000 tokens (`scripts/filter.py`), and caps the arXiv fetch at 100 results (`scripts/main.py`). Cost depends on your endpoint's pricing, and is zero with `LLM_API_KEY` unset. Any OpenAI-compatible endpoint works (OpenAI, Azure, DeepSeek, Moonshot, a local Ollama) by changing `LLM_BASE_URL`. GitHub Actions and GitHub Pages cover the rest at no cost.
 
 **How do I add my own source?** Write a `fetch_my_source(keywords, days=2)` function in `scripts/sources/my_source.py` that returns the documented paper dict (id, title, abstract, authors, url, pdf_url, published, source, categories, has_code, code_url, votes), then call it from the collection phase in `scripts/main.py`. Filtering, deduplication, rendering and delivery all consume that one shape, so nothing downstream needs to change.
