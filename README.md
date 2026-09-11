@@ -1,5 +1,9 @@
 # 📄 AI Paper Daily
 
+<p align="center">
+  <img src="./assets/readme/hero.svg" width="100%" alt="AI Paper Daily pipeline: the arXiv API and HuggingFace Daily Papers are collected across the cs.AI, cs.CL, cs.IR and cs.MA categories, an LLM scores every paper on keyword relevance, novelty, open-source code and community votes, the top 10 become the committed Markdown report docs/*.md, and every Monday scripts/main.py --weekly re-ranks the last 7 days into a top-15 weekly-YYYY-WW.md roundup. Cron: 04 * * * daily at 12:00 Beijing, 05 * * 1 Monday weekly at 13:00 Beijing.">
+</p>
+
 **AI Paper Daily** is an automated daily paper digest that collects, filters and summarises new AI research on LLM agents, RAG, knowledge graphs and multi-agent systems for people who cannot read arXiv every morning.
 
 <div align="center">
