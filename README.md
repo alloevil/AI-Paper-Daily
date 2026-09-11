@@ -383,3 +383,9 @@ Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 [![Star History Chart](https://api.star-history.com/svg?repos=alloevil/AI-Paper-Daily&type=Date)](https://star-history.com/#alloevil/AI-Paper-Daily&Date)
 
 </div>
+
+---
+
+<p align="center">
+  <a href="https://github.com/oil-oil/beautify-github-readme"><img src="./assets/readme/made-with-beautify.svg" width="300" alt="README made with beautify-github-readme"></a>
+</p>
