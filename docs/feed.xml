@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 10 Sep 2026 08:52:12 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 08:49:40 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W37（2026-09-01 ~ 2026-09-07）</title>
@@ -34,6 +34,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SenseNova-U1.5: Towards Native Unified Visual Intelligence (2026-09-11)</title>
+      <description>We launch SenseNova-U1.5, an 8B-MoT native unified multimodal model that understands, reasons about, and generates visual content within an encoder-free and VAE-free architecture. We strengthen its vi...</description>
+      <link>https://arxiv.org/abs/2609.11929</link>
+      <guid>https://arxiv.org/abs/2609.11929#2026-09-11</guid>
+      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks (2026-09-11)</title>
+      <description>Agent usage is shifting toward long-horizon tasks such as coding and scientific discovery, among which terminal tasks are especially important. We introduce T1, a Mixture-of-Experts model of 122B tota...</description>
+      <link>https://arxiv.org/abs/2609.11042</link>
+      <guid>https://arxiv.org/abs/2609.11042#2026-09-11</guid>
+      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 X-AuT: Progressive Audio-Encoder Compression for Speech LLMs with Cross-Scale Distillation (2026-09-11)</title>
+      <description>Reducing audio-encoder depth lowers the inference cost of speech large language models, but removing complete blocks perturbs the embeddings consumed by the decoder and can cause deletion and prematur...</description>
+      <link>https://arxiv.org/abs/2609.11412</link>
+      <guid>https://arxiv.org/abs/2609.11412#2026-09-11</guid>
+      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 But How Would AI Agents Run a Town's Economy? (2026-09-11)</title>
+      <description>We placed 100 memory-equipped large language model (LLM) agents in charge of a closed, money-conserving spatial economy on real Pokhara Lakeside geography (earning wages, running businesses, setting p...</description>
+      <link>http://arxiv.org/abs/2609.11108v1</link>
+      <guid>http://arxiv.org/abs/2609.11108v1#2026-09-11</guid>
+      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 DriftNet: A Dual-Head Trajectory Transformer for Detecting and Localizing Prompt Injection in LLM Agents (2026-09-11)</title>
+      <description>When an indirect prompt injection succeeds against an LLM agent, the compromise is visible in the agent's own behavior: a benign prefix of tool calls, a poisoned observation, and a suffix of actions t...</description>
+      <link>http://arxiv.org/abs/2609.10892v1</link>
+      <guid>http://arxiv.org/abs/2609.10892v1#2026-09-11</guid>
+      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Recursive Code World Models: Building Complex Worlds through Recursive Scene Programs (2026-09-11)</title>
+      <description>Code world models represent worlds as executable programs, but this representation alone does not determine how to construct a complex world. We introduce Recursive Code World Models (RCWM), a framewo...</description>
+      <link>https://arxiv.org/abs/2609.11499</link>
+      <guid>https://arxiv.org/abs/2609.11499#2026-09-11</guid>
+      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 World in World: Explore the World with World Models (2026-09-11)</title>
+      <description>Autoregressive video world models enable interactive, long-horizon exploration, but flexible control remains challenging. Exploring a source video from new viewpoints requires the generated rollout to...</description>
+      <link>https://arxiv.org/abs/2609.11548</link>
+      <guid>https://arxiv.org/abs/2609.11548#2026-09-11</guid>
+      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 DRG-MAPPO: Hierarchical Dynamic Role-Graph Multi-Agent Reinforcement Learning for Cooperative Air Combat (2026-09-11)</title>
+      <description>Multi-Agent Reinforcement Learning (MARL) has emerged as a pivotal paradigm for complex decision-making in autonomous systems and air combat. While MARL has demonstrated significant potential in air c...</description>
+      <link>https://arxiv.org/abs/2609.11155</link>
+      <guid>https://arxiv.org/abs/2609.11155#2026-09-11</guid>
+      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 UniH^3: Unifying Hierarchical Homogeneity and Heterogeneity for All-in-One Medical Image Restoration (2026-09-11)</title>
+      <description>All-in-One medical image restoration (MedIR) aims to address diverse tasks across modalities and degradation types using a single universal model. Existing methods typically prioritize modeling inter-...</description>
+      <link>https://arxiv.org/abs/2609.11156</link>
+      <guid>https://arxiv.org/abs/2609.11156#2026-09-11</guid>
+      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Generative Late-Interaction Embeddings For Visual Document Retrieval (2026-09-11)</title>
+      <description>Late-interaction retrieval is the state-of-the-art for visual document search, but it pays for its accuracy in storage. Existing compression methods retain a subset or local average of the N~1,000 vec...</description>
+      <link>https://arxiv.org/abs/2609.11808</link>
+      <guid>https://arxiv.org/abs/2609.11808#2026-09-11</guid>
+      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Show-Harness: Just a VLM Agent Can Play Robots (2026-09-10)</title>
@@ -314,76 +384,6 @@
       <link>https://arxiv.org/abs/2609.03430</link>
       <guid>https://arxiv.org/abs/2609.03430#2026-09-04</guid>
       <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Why Gated DeltaNet Survives 4-Bit Quantization: NVFP4 W4A4 for the Recurrent Half of a Hybrid 27B LLM (2026-09-04)</title>
-      <description>Hybrid LLMs pair softmax attention with linear-attention layers such as Gated DeltaNet (GDN), whose recurrent state summarizes the context in fixed size. Early community 4-bit quantizations of Qwen3.8...</description>
-      <link>https://arxiv.org/abs/2609.04098</link>
-      <guid>https://arxiv.org/abs/2609.04098#2026-09-04</guid>
-      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Rethinking On-Policy Distillation of Large Language Models II: One Training Example (2026-09-04)</title>
-      <description>On-policy distillation (OPD) combines student-generated rollouts with dense token-level supervision from a teacher. Existing work has mainly studied its algorithmic behavior, leaving the role of train...</description>
-      <link>https://arxiv.org/abs/2609.04172</link>
-      <guid>https://arxiv.org/abs/2609.04172#2026-09-04</guid>
-      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments (2026-09-04)</title>
-      <description>As terminal-based code agents become prevalent, agent trajectories have accumulated at scale, while realistic, executable environments remain scarce. However, environments are what agent post-training...</description>
-      <link>https://arxiv.org/abs/2609.04148</link>
-      <guid>https://arxiv.org/abs/2609.04148#2026-09-04</guid>
-      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Puffin-World: Scaling a Unified Multimodal Model with Native 3D World States (2026-09-04)</title>
-      <description>We propose Puffin-World, a unified multimodal architecture that integrates physical understanding, spatial simulation, and 3D world generation and reconstruction without relying on external offline mo...</description>
-      <link>https://arxiv.org/abs/2609.04196</link>
-      <guid>https://arxiv.org/abs/2609.04196#2026-09-04</guid>
-      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Compile by Training: Turning Natural-Language Specifications into Local Neural Functions (2026-09-04)</title>
-      <description>Many recurring text functions are easy to describe but difficult to implement with rules, while calling a large remote model for every input introduces repeated cost, latency, and dependency on a prov...</description>
-      <link>https://arxiv.org/abs/2609.04199</link>
-      <guid>https://arxiv.org/abs/2609.04199#2026-09-04</guid>
-      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Editable Visual Design (2026-09-04)</title>
-      <description>While diffusion base models such as GPT-Image-2 and Nano-Banana exhibit remarkable visual expressiveness, their end-to-end generation inherently yields flattened bitmaps with error-prone text, preclud...</description>
-      <link>https://arxiv.org/abs/2609.04034</link>
-      <guid>https://arxiv.org/abs/2609.04034#2026-09-04</guid>
-      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Beyond Retrieval: Progressive Latent Memory Evolution for Streaming Video Understanding (2026-09-04)</title>
-      <description>Streaming video understanding requires multimodal large language models (MLLMs) to process continuous visual inputs and respond to user queries under strict causality and bounded memory. Existing appr...</description>
-      <link>https://arxiv.org/abs/2609.04131</link>
-      <guid>https://arxiv.org/abs/2609.04131#2026-09-04</guid>
-      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Scal3R: Learning Efficient Multi-Relative Pose Query for Scalable Online 3D Reconstruction (2026-09-04)</title>
-      <description>Online 3D reconstruction models perform poorly on long videos. This happens because regressing poses relative to a fixed first-frame anchor forces extrapolation far beyond the training distribution. S...</description>
-      <link>https://arxiv.org/abs/2609.04201</link>
-      <guid>https://arxiv.org/abs/2609.04201#2026-09-04</guid>
-      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Repo-To-Skill: Distilling GitHub Repositories Into AI4AI Skills (2026-09-03)</title>
-      <description>Autonomous agents are beginning to carry out machine-learning (ML) research end to end. These agents combine a model backbone with a harness for planning, execution, memory, and verification, but this...</description>
-      <link>https://arxiv.org/abs/2609.02749</link>
-      <guid>https://arxiv.org/abs/2609.02749#2026-09-03</guid>
-      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models (2026-09-03)</title>
-      <description>We introduce SolarWM, a fully open foundation for building interactive video world models from data preparation through long-horizon inference. Training across heterogeneous data sources and video bac...</description>
-      <link>https://arxiv.org/abs/2609.02886</link>
-      <guid>https://arxiv.org/abs/2609.02886#2026-09-03</guid>
-      <pubDate>Thu, 03 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
