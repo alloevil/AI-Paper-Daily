@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 11 Sep 2026 08:49:40 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 08:33:18 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W37（2026-09-01 ~ 2026-09-07）</title>
@@ -34,6 +34,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Artificial Id: Drive and Persistent Alignment in Agentic AI (2026-09-12)</title>
+      <description>Agentic AI is moving from bounded task execution toward systems that retain consequential state, continue operating and adapt across task boundaries. That shift creates a control problem that current ...</description>
+      <link>http://arxiv.org/abs/2609.11911v1</link>
+      <guid>http://arxiv.org/abs/2609.11911v1#2026-09-12</guid>
+      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 RAG-Safety-Bench: Reliable Evaluation of Retrieval-Augmented LLM Safety (2026-09-12)</title>
+      <description>Allowing large language models (LLMs) to retrieve information from a set of trusted documents can increase reliability and reduce hallucination. However, recent work has demonstrated that retrieval-au...</description>
+      <link>http://arxiv.org/abs/2609.11758v1</link>
+      <guid>http://arxiv.org/abs/2609.11758v1#2026-09-12</guid>
+      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ORCH: Organizational Principles Enable Collective Intelligence in Embodied AI (2026-09-12)</title>
+      <description>Collective intelligence depends not only on the capabilities of individual members, but also on how those members are organized. Yet artificial multi-agent systems are typically assembled using fixed ...</description>
+      <link>http://arxiv.org/abs/2609.11737v1</link>
+      <guid>http://arxiv.org/abs/2609.11737v1#2026-09-12</guid>
+      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 The Eloquence submission for Task 2 of the Interspeech 2026 MLC-SLM challenge (2026-09-12)</title>
+      <description>This paper details the Eloquence team's approach to Task 2 of the 2nd MLC-SLM challenge at Interspeech 2026, which involves multilingual Multiple-Choice Question Answering (MCQA) across 21 languages. ...</description>
+      <link>http://arxiv.org/abs/2609.11724v1</link>
+      <guid>http://arxiv.org/abs/2609.11724v1#2026-09-12</guid>
+      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 When Agents Disagree: Bayesian Backward Reasoning as a Label-Free Anchor for Multi-Agent Collective Decision-Making (2026-09-12)</title>
+      <description>When multiple LLM agents yield conflicting answers, the decision-making process dictates whether agent diversity improves performance or merely compounds shared errors. Existing collective decision-ma...</description>
+      <link>http://arxiv.org/abs/2609.11709v1</link>
+      <guid>http://arxiv.org/abs/2609.11709v1#2026-09-12</guid>
+      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 COBRA-Skills: Contextual Bandit-Guided Evolution for Agent Skill Optimization (2026-09-12)</title>
+      <description>Large language model (LLM) agents can benefit from reusable skills distilled from prior task experience, yet existing skill optimization methods often rely on costly execution-based evaluation and sub...</description>
+      <link>http://arxiv.org/abs/2609.11682v1</link>
+      <guid>http://arxiv.org/abs/2609.11682v1#2026-09-12</guid>
+      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Ecdysis: Efficient and Effective Training of Runtime Harnesses for LLM Agents (2026-09-12)</title>
+      <description>Self-evolving runtime harnesses can substantially improve the capabilities of large language model (LLM) agents and provide a promising paradigm for optimizing agent execution. Existing harness evolut...</description>
+      <link>http://arxiv.org/abs/2609.11677v1</link>
+      <guid>http://arxiv.org/abs/2609.11677v1#2026-09-12</guid>
+      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Geospatial AI, Dataverse Metadata, and the Study of Place-Based Government (2026-09-12)</title>
+      <description>Harvard Dataverse hosts over 150,000 research datasets, but the geographic information those datasets carry is entered as free text by depositors and has never been assembled into a searchable structu...</description>
+      <link>http://arxiv.org/abs/2609.11674v1</link>
+      <guid>http://arxiv.org/abs/2609.11674v1#2026-09-12</guid>
+      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Enabling Knowledge Graph Understanding at Scale with the EXplore Your Graphs ENgine (EXYGEN) (2026-09-12)</title>
+      <description>We present EXYGEN (EXplore Your Graphs ENgine), a framework for knowledge graph (KG) understanding that enables conversational access to KGs at scale. We address two questions in sequence. First, how ...</description>
+      <link>http://arxiv.org/abs/2609.11569v1</link>
+      <guid>http://arxiv.org/abs/2609.11569v1#2026-09-12</guid>
+      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 From Document Silos to Process Intelligence: A Multi-Layer Knowledge Graph for CMC Process Development (2026-09-12)</title>
+      <description>Chemistry, Manufacturing and Controls (CMC) process development generates an enormous body of technical information across a multi-stage, knowledge-intensive continuum from drug discovery to commercia...</description>
+      <link>http://arxiv.org/abs/2609.11493v1</link>
+      <guid>http://arxiv.org/abs/2609.11493v1#2026-09-12</guid>
+      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 SenseNova-U1.5: Towards Native Unified Visual Intelligence (2026-09-11)</title>
@@ -314,76 +384,6 @@
       <link>http://arxiv.org/abs/2609.05279v1</link>
       <guid>http://arxiv.org/abs/2609.05279v1#2026-09-07</guid>
       <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 A Case Study on Emergent Cheating and Whistleblowing in Autonomous Research Swarms (2026-09-05)</title>
-      <description>Multi-agent AI science ecosystems rely on agents possessing tools that allow them to communicate, coordinate, and build on each other's work. Yet this shared infrastructure can also introduce vulnerab...</description>
-      <link>http://arxiv.org/abs/2609.04170v1</link>
-      <guid>http://arxiv.org/abs/2609.04170v1#2026-09-05</guid>
-      <pubDate>Sat, 05 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SENTINEL-RL: Offloading Topological Reasoning from LLM Agents in the Security Operations Center (2026-09-05)</title>
-      <description>Large language model (LLM) agents are increasingly proposed as autonomous SOC analysts, but two limitations make them unreliable at enterprise scale: a finite context window cannot hold a multi-thousa...</description>
-      <link>http://arxiv.org/abs/2609.04159v1</link>
-      <guid>http://arxiv.org/abs/2609.04159v1#2026-09-05</guid>
-      <pubDate>Sat, 05 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Speak for Me: Giving LLMs the Situational Awareness to Participate in a Meeting (2026-09-05)</title>
-      <description>In online meeting delegation, LLM agents fail to recognize when to speak. With no structured way to track stances, coverage, and floor, they miss the moments where they should contribute. Prompt-only ...</description>
-      <link>http://arxiv.org/abs/2609.03923v1</link>
-      <guid>http://arxiv.org/abs/2609.03923v1#2026-09-05</guid>
-      <pubDate>Sat, 05 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Value-Preserving Architectures for Agentic AI Systems (2026-09-05)</title>
-      <description>The emergence of agentic AI and LLM-based multi-agent systems (MAS) presents unprecedented opportunities for automating complex tasks, while simultaneously raising critical concerns about the preserva...</description>
-      <link>http://arxiv.org/abs/2609.03920v1</link>
-      <guid>http://arxiv.org/abs/2609.03920v1#2026-09-05</guid>
-      <pubDate>Sat, 05 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Adapting to Evolving Requirements: Agentic AI for Retail Supply Chain Operations (2026-09-05)</title>
-      <description>Retail supply chain operations rely on coupled decision modules that must adapt as requirements evolve. LLMs offer a natural-language interface for this task, but existing methods primarily focus on i...</description>
-      <link>http://arxiv.org/abs/2609.03860v1</link>
-      <guid>http://arxiv.org/abs/2609.03860v1#2026-09-05</guid>
-      <pubDate>Sat, 05 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Semantic Bayesian World Models (2026-09-05)</title>
-      <description>Knowledge graphs describe reality in crisp assertions, while the systems now consuming them, foundation models and autonomous agents, reason natively in probabilities. We argue that this mismatch is w...</description>
-      <link>http://arxiv.org/abs/2609.03834v1</link>
-      <guid>http://arxiv.org/abs/2609.03834v1#2026-09-05</guid>
-      <pubDate>Sat, 05 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 What Do CAE Simulation Agents Really Need Beyond a Generic Harness? (2026-09-05)</title>
-      <description>Computer-aided engineering (CAE) simulation is among the largest and most demanding areas of engineering, where setting up a solver such as OpenFOAM, FEniCS, or COMSOL takes real expertise. Large lang...</description>
-      <link>http://arxiv.org/abs/2609.03718v1</link>
-      <guid>http://arxiv.org/abs/2609.03718v1#2026-09-05</guid>
-      <pubDate>Sat, 05 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 KC-Bench: A Dynamic Interactive Benchmark for Evaluating Knowledge Conflicts in LLM Agents (2026-09-05)</title>
-      <description>As LLMs increasingly act through tools, they must reconcile user instructions, parametric knowledge, and dynamic environmental observations before taking actions. We introduce KC-Bench, a controlled m...</description>
-      <link>http://arxiv.org/abs/2609.03588v1</link>
-      <guid>http://arxiv.org/abs/2609.03588v1#2026-09-05</guid>
-      <pubDate>Sat, 05 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes (2026-09-04)</title>
-      <description>We introduce LLaDA-Image, a unified framework that pairs a 6B Diffusion Transformer (DiT) trained from scratch with a frozen vision-language understanding module built on the LLaDA2.0-Mini diffusion l...</description>
-      <link>https://arxiv.org/abs/2609.03796</link>
-      <guid>https://arxiv.org/abs/2609.03796#2026-09-04</guid>
-      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning (2026-09-04)</title>
-      <description>Large language models achieve superior performance on tasks that require extended reasoning, but long chains of thought make the KV cache a severe memory bottleneck. Existing KV cache compression meth...</description>
-      <link>https://arxiv.org/abs/2609.03430</link>
-      <guid>https://arxiv.org/abs/2609.03430#2026-09-04</guid>
-      <pubDate>Fri, 04 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
