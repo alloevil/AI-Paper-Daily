@@ -180,7 +180,7 @@
       "claim": "The RSS feed carries 4 weekly items followed by the 50 most recent papers (54 items), as docs/llms.txt promises: \"one item per weekly page plus the 50 most recent papers\".",
       "value": "54 items = 4 + 50",
       "metric": "item titles in docs/feed.xml, split into weekly roundups and paper items",
-      "method": "scripts/generate_site.py:generate_rss emits one item per weekly report first, then walks the newest reports until max_items=50 papers, and raises if a date cannot be parsed. The check pins the ordering (weekly first) and both counts, which a longer paper window or a dropped weekly page would break.",
+      "method": "scripts/generate_site.py:generate_rss emits one item per weekly report first, then walks the newest reports until max_items=50 papers (a date it cannot parse contributes an empty pubDate rather than failing the build). The check pins the ordering (weekly first) and both counts, which a longer paper window or a dropped weekly page would break.",
       "evidence": "docs/feed.xml",
       "as_of": "2026-09-13",
       "repro": "grep -c '<item>' docs/feed.xml",
