@@ -8,7 +8,7 @@
 - **Filtering** — LLM semantic scoring on relevance / novelty / open-source code availability, with a vote+star+code ranking fallback when no LLM is configured
 - **Delivery** — Feishu interactive cards, responsive dark-mode HTML email, GitHub Pages site with per-day reports, tag/date filter buttons and an RSS feed
 - **Storage** — committed markdown reports (`docs/*.md`) are the database (written by the shared renderer, parsed back by `scripts/reports.py`); dedup across sources
-- **Zero-cost operation** — daily GitHub Actions run, fork-and-go, only `LLM_API_KEY` required
+- **Zero-cost operation** — daily GitHub Actions run, fork-and-go; no secret is strictly required (with no `LLM_API_KEY` the digest is ranked by Hugging Face upvotes + open code)
 
 ## Roadmap
 
