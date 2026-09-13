@@ -1,0 +1,247 @@
+{
+  "$comment": "Receipts for the numbers this repository publishes in prose and on the site: the meta bar in docs/index.html (papers / days), README (filter-mode count, per-day spread, weekly archive W34-W37, config keywords and caps, delivery switches, the two-collector claim), docs/llms.txt and docs/llms-full.txt (feed size, weekly pages, per-day cap, sources) and docs/sitemap.xml. Every figure is recomputed from the committed docs/ tree and config.yaml by a stdlib-only python3 one-liner — no network and no installed package, so each expect holds on a bare runner; the site-rebuild receipt runs the repo's own scripts/generate_site.py and asserts the committed pages are byte-identical to a rebuild rather than a stale copy. .github/workflows/claims.yml runs the lot weekly and on every push.",
+  "project": "AI-Paper-Daily",
+  "url": "https://alloevil.github.io/AI-Paper-Daily/",
+  "repository": "https://github.com/alloevil/AI-Paper-Daily",
+  "updated": "2026-09-13",
+  "claims": [
+    {
+      "id": "site-total-papers",
+      "claim": "The site meta bar counts 574 papers in all (`id=\"stat-papers\"` in docs/index.html, rendered as \"574 篇论文\").",
+      "value": "574 papers",
+      "metric": "sum of the \"## n.\" paper headings over docs/YYYY-MM-DD.md, against the number the generator injected into docs/index.html",
+      "method": "scripts/generate_site.py sums parse_papers() over every dated report — docs/*.md is the system of record and \"## n.\" is the record separator (scripts/reports.py splits on it) — and substitutes the total into the template's stat span. The check redoes that sum from the committed markdown and asserts it equals the published number, so a hand-edited stat line, or a report the generator parses differently, cannot pass.",
+      "evidence": "docs/index.html",
+      "as_of": "2026-09-13",
+      "repro": "python3 -c \"import re,glob,pathlib;print(sum(len(re.findall(r'^## \\d+\\.\\s+', pathlib.Path(f).read_text(encoding='utf-8'), re.M)) for f in glob.glob('docs/????-??-??.md')))\"",
+      "check": {
+        "cmd": "python3 -c \"import re, glob, pathlib\ndaily = sorted(glob.glob('docs/????-??-??.md'))\npapers = sum(len(re.findall(r'^## \\d+\\.\\s+', pathlib.Path(f).read_text(encoding='utf-8'), re.M)) for f in daily)\npublished = re.search(r'id=\\\"stat-papers\\\">(\\d+)', pathlib.Path('docs/index.html').read_text(encoding='utf-8')).group(1)\nassert str(papers) == published, (papers, published)\nprint(papers, 'papers on', published, 'dates')\"",
+        "expect": {
+          "equals": "574 papers on 574 dates"
+        },
+        "timeout": 60
+      }
+    },
+    {
+      "id": "site-total-dates",
+      "claim": "The site meta bar counts 61 days (`id=\"stat-dates\"` in docs/index.html, rendered as \"61 天\") — one per committed daily digest.",
+      "value": "61 days",
+      "metric": "number of docs/YYYY-MM-DD.md files, against the \"天\" counter in docs/index.html",
+      "method": "The generator counts the dated reports it parsed with at least one paper (docs/*.md as database) and writes that into the same stat span the paper total goes into. The check counts the same files with the same glob.",
+      "evidence": "docs/index.html",
+      "as_of": "2026-09-13",
+      "repro": "python3 -c \"import glob;print(len(glob.glob('docs/????-??-??.md')))\"",
+      "check": {
+        "cmd": "python3 -c \"import re, pathlib\nd = pathlib.Path('docs')\nn = len(list(d.glob('????-??-??.md')))\npublished = re.search(r'id=\\\"stat-dates\\\">(\\d+)', (d / 'index.html').read_text(encoding='utf-8')).group(1)\nassert str(n) == published, (n, published)\nprint(n, 'days, counter reads', published)\"",
+        "expect": {
+          "equals": "61 days, counter reads 61"
+        },
+        "timeout": 60
+      }
+    },
+    {
+      "id": "daily-index-complete",
+      "claim": "docs/index.md links every committed daily digest and nothing else: 61 dated entries, a one-to-one match with docs/YYYY-MM-DD.md on disk.",
+      "value": "61 of 61 dailies linked, no orphan on either side",
+      "metric": "set of \"YYYY-MM-DD.md\" link targets in docs/index.md vs the dated files on disk, plus the duplicate count",
+      "method": "scripts/common.py:prepend_index_entry keeps the \"## 历史记录\" list in front of the newest digest, so the index is written by the daily run and the files are written by the same run. The check asserts both directions (nothing linked that is missing, nothing on disk that is unlinked) and that no date is listed twice, which a deleted or hand-renamed report would break.",
+      "evidence": "docs/index.md",
+      "as_of": "2026-09-13",
+      "repro": "python3 -c \"import re,pathlib;d=pathlib.Path('docs');print(sorted(p.name for p in d.glob('????-??-??.md'))==sorted(re.findall(r'\\]\\((\\d{4}-\\d{2}-\\d{2}\\.md)', (d/'index.md').read_text(encoding='utf-8'))))\"",
+      "check": {
+        "cmd": "python3 -c \"import re, pathlib\nd = pathlib.Path('docs')\ndisk = sorted(p.name for p in d.glob('????-??-??.md'))\nlinked = re.findall(r'\\]\\((\\d{4}-\\d{2}-\\d{2}\\.md)', (d / 'index.md').read_text(encoding='utf-8'))\nassert sorted(linked) == disk and len(set(linked)) == len(linked), (len(linked), len(set(linked)), len(disk))\nprint(len(disk), 'dailies on disk,', len(linked), 'listed in docs/index.md, no orphan on either side')\"",
+        "expect": {
+          "equals": "61 dailies on disk, 61 listed in docs/index.md, no orphan on either side"
+        },
+        "timeout": 60
+      }
+    },
+    {
+      "id": "weekly-reports",
+      "claim": "The archive holds four weekly roundups, W34 through W37, each a Top 15 with its own HTML page and index entry (README: \"The archived weekly reports are W34–W37\"; docs/llms.txt: \"the four most recent weeks have a page (W34–W37)\").",
+      "value": "4 weekly reports (2026-W34 … 2026-W37), Top 15 each",
+      "metric": "weekly-*.md files, their \"## n.\" headings, the \"Top N\" numbers recorded in docs/index.md, and the weekly-*.html pages beside them",
+      "method": "scripts/main.py --weekly re-ranks the last 7 days from the committed dailies into docs/weekly-YYYY-WW.md; scripts/generate_site.py renders one page per report from the same file. The check ties the four surfaces together, so a report without its page or a page without its report fails.",
+      "evidence": "docs/",
+      "as_of": "2026-09-13",
+      "repro": "python3 -c \"import pathlib;print(sorted(p.stem for p in pathlib.Path('docs').glob('weekly-????-W??.md')))\"",
+      "check": {
+        "cmd": "python3 -c \"import re, pathlib\nd = pathlib.Path('docs')\nmd = sorted(p.name for p in d.glob('weekly-????-W??.md'))\nhtml = sorted(p.name for p in d.glob('weekly-????-W??.html'))\nidx = (d / 'index.md').read_text(encoding='utf-8')\nlisted = sorted(re.findall(r'\\(weekly-(\\d{4}-W\\d+)\\.md\\) - Top (\\d+)', idx))\nassert [w.split('.')[0][7:] for w in md] == ['2026-W34', '2026-W35', '2026-W36', '2026-W37'], md\nassert listed == [(w.split('.')[0][7:], '15') for w in md], listed\nassert html == [w[:-3] + '.html' for w in md], html\nassert all(len(re.findall(r'^## \\d+\\.\\s+', (d / w).read_text(encoding='utf-8'), re.M)) == 15 for w in md)\nprint(len(md), 'weekly reports W34-W37, Top 15 each, each with an .html page and an index entry')\"",
+        "expect": {
+          "equals": "4 weekly reports W34-W37, Top 15 each, each with an .html page and an index entry"
+        },
+        "timeout": 60
+      }
+    },
+    {
+      "id": "filter-mode-no-key",
+      "claim": "Every digest that records a filter mode records the no-key fallback (`_本期筛选方式：热度回退（未配置 LLM）_`): 20 of the 61 committed digests carry the line, all of them committed since 2026-08-21; the 41 earlier reports carry no mode line (README states the same 20).",
+      "value": "20 of 61 digests, 20/20 of them the no-key fallback",
+      "metric": "dated reports containing \"本期筛选方式\" and reports containing the 热度回退（未配置 LLM） string; also the count the README states",
+      "method": "scripts/main.py:168 writes footer_extra=f\"_本期筛选方式：{filter_label}_\" from scripts/filter.py, which returns \"no-key / 热度回退（未配置 LLM）\" when LLM_API_KEY is unset and \"ai / AI 语义筛选\" when a key is present. No committed report was produced with a key (zero hits for AI 语义筛选). The check asserts the set of digests with a mode line is exactly the set committed since 2026-08-21 and that all of them are the fallback, and that the README quotes the same total after the count went stale.",
+      "evidence": "docs/2026-09-12.md",
+      "as_of": "2026-09-13",
+      "repro": "grep -c '本期筛选方式' docs/2026-*.md | grep -v ':0' | wc -l",
+      "check": {
+        "cmd": "python3 -c \"import re, pathlib\nfiles = sorted(pathlib.Path('docs').glob('????-??-??.md'))\nmode = [f for f in files if '本期筛选方式' in f.read_text(encoding='utf-8')]\nnokey = [f for f in mode if '本期筛选方式：热度回退（未配置 LLM）' in f.read_text(encoding='utf-8')]\nassert mode == nokey, [f.name for f in mode if f not in nokey]\nassert mode == [f for f in files if f.stem >= '2026-08-21'], (len(mode), mode[:1], mode[-1:])\nreadme = pathlib.Path('README.md').read_text(encoding='utf-8')\nassert 'The %d committed reports that record their mode' % len(mode) in readme, len(mode)\nassert 'every committed report records' not in readme and 'used for every committed report' not in readme\nprint(len(nokey), 'of', len(files), 'digests carry the mode line, all', len(nokey), 'the no-key fallback; README states the same count')\"",
+        "expect": {
+          "equals": "20 of 61 digests carry the mode line, all 20 the no-key fallback; README states the same count"
+        },
+        "timeout": 60
+      }
+    },
+    {
+      "id": "config-keywords",
+      "claim": "config.yaml ships 7 keywords and 4 arXiv categories (cs.AI, cs.CL, cs.IR, cs.MA), and README plus docs/llms-full.txt quote every one of them by name.",
+      "value": "7 keywords / 4 categories",
+      "metric": "entries under keywords: and categories: in config.yaml, cross-checked against the prose that documents them",
+      "method": "The two lists are the query matrix the arXiv collector builds (scripts/sources/arxiv_source.py), so they are the package's topic definition rather than documentation; the README configuration block and the llms-full answer repeat them for readers. The check counts the committed config and fails if either document stops naming a keyword or category — the doc-rot case where config.yaml is edited and the prose is not.",
+      "evidence": "config.yaml",
+      "as_of": "2026-09-13",
+      "repro": "sed -n '/^keywords:/,/^max_papers/p' config.yaml",
+      "check": {
+        "cmd": "python3 -c \"import re, pathlib\nt = pathlib.Path('config.yaml').read_text(encoding='utf-8')\nkw = re.findall(r'^  - \\\"([^\\\"]+)\\\"$', t, re.M)\ncats = re.findall(r'^  - \\\"(cs\\.[A-Z]+)\\\"', t, re.M)\nassert len(kw) == 7 and len(cats) == 4, (kw, cats)\nfor doc in ('README.md', 'docs/llms-full.txt'):\n    text = pathlib.Path(doc).read_text(encoding='utf-8')\n    missing = [k for k in kw + cats if k not in text]\n    assert not missing, (doc, missing)\nprint(len(kw), 'keywords,', len(cats), 'categories:', ' '.join(cats))\"",
+        "expect": {
+          "equals": "7 keywords, 4 categories: cs.AI cs.CL cs.IR cs.MA"
+        },
+        "timeout": 60
+      }
+    },
+    {
+      "id": "config-caps",
+      "claim": "The per-day cap is 10 papers and the weekly roundup is a Top 15 (`max_papers: 10`, `weekly_max_papers: 15`); the committed archive honours both — no daily exceeds 10, every weekly holds exactly 15.",
+      "value": "max_papers 10 / weekly_max_papers 15",
+      "metric": "the two config values, the largest \"## n.\" count per daily report, and the heading count of each weekly report",
+      "method": "config.yaml is the only place the caps live (scripts/main.py reads max_papers, scripts/weekly.py weekly_max_papers); README and docs/llms-full.txt both publish the same pair. The check pins the config and the archive together, so raising the cap without the prose, or writing a digest that ignores it, fails.",
+      "evidence": "config.yaml",
+      "as_of": "2026-09-13",
+      "repro": "grep -n 'max_papers' config.yaml",
+      "check": {
+        "cmd": "python3 -c \"import re, pathlib\nt = pathlib.Path('config.yaml').read_text(encoding='utf-8')\ncap = re.search(r'^max_papers: (\\d+)', t, re.M).group(1)\nwcap = re.search(r'^weekly_max_papers: (\\d+)', t, re.M).group(1)\nassert (cap, wcap) == ('10', '15'), (cap, wcap)\nper_day = [len(re.findall(r'^## \\d+\\.\\s+', p.read_text(encoding='utf-8'), re.M)) for p in pathlib.Path('docs').glob('????-??-??.md')]\nweekly = sorted({len(re.findall(r'^## \\d+\\.\\s+', p.read_text(encoding='utf-8'), re.M)) for p in pathlib.Path('docs').glob('weekly-????-W??.md')})\nassert max(per_day) == int(cap) and weekly == [int(wcap)], (max(per_day), weekly)\nprint('max_papers', cap, 'observed max', max(per_day), '| weekly_max_papers', wcap, 'observed', weekly[0])\"",
+        "expect": {
+          "equals": "max_papers 10 observed max 10 | weekly_max_papers 15 observed 15"
+        },
+        "timeout": 60
+      }
+    },
+    {
+      "id": "delivery-switches",
+      "claim": "Delivery ships with the Feishu channel on and email off (`notify: feishu: true / email: false`), and both senders exist in scripts/notifier.py.",
+      "value": "feishu true / email false",
+      "metric": "the notify: switches in config.yaml and the presence of send_feishu/send_email in the notifier",
+      "method": "The README Multi-channel row (Feishu messages / Email subscriptions / GitHub Pages) and its Configuration block publish these defaults. Email needs SMTP_* secrets and an opt-in, so the switch is meaningful: a fork that adds the secrets but not `email: true` gets no mail. The check reads the committed config and the two function definitions the daily run calls.",
+      "evidence": "config.yaml",
+      "as_of": "2026-09-13",
+      "repro": "sed -n '/^notify:/,/^$/p' config.yaml",
+      "check": {
+        "cmd": "python3 -c \"import re, pathlib\nt = pathlib.Path('config.yaml').read_text(encoding='utf-8')\nnotify = re.search(r'^notify:\\n((?:  \\S+: \\S+\\n)+)', t, re.M).group(1)\nfeishu = re.search(r'feishu: (\\S+)', notify).group(1)\nemail = re.search(r'email: (\\S+)', notify).group(1)\nassert (feishu, email) == ('true', 'false'), (feishu, email)\nsrc = pathlib.Path('scripts/notifier.py').read_text(encoding='utf-8')\nassert 'def send_feishu(' in src and 'def send_email(' in src\nprint('notify.feishu', feishu, '| notify.email', email, '| send_feishu + send_email implemented')\"",
+        "expect": {
+          "equals": "notify.feishu true | notify.email false | send_feishu + send_email implemented"
+        },
+        "timeout": 60
+      }
+    },
+    {
+      "id": "sources-two",
+      "claim": "Exactly two collectors are implemented — arXiv and HuggingFace — matching the two `sources:` switches, and Papers With Code is not one of them: the name survives only as a `paperswithcode` key in the notifier's source-to-emoji lookup (README FAQ and docs/llms-full.txt both say so).",
+      "value": "2 collectors",
+      "metric": "files in scripts/sources/, the sources: switches in config.yaml, and the files under scripts/ that still mention paperswithcode",
+      "method": "scripts/main.py imports the two collectors directly. The check pins the collector directory to the two names the prose promises, the config to the same pair, and the Papers With Code mention to scripts/notifier.py — the claim that it was never implemented is only true while no collector file carries the name.",
+      "evidence": "scripts/sources/",
+      "as_of": "2026-09-13",
+      "repro": "python3 -c \"import pathlib;print(sorted(p.name for p in pathlib.Path('scripts/sources').glob('*.py')))\"",
+      "check": {
+        "cmd": "python3 -c \"import re, pathlib\nsrc = sorted(p.name for p in pathlib.Path('scripts/sources').glob('*.py') if not p.name.startswith('__'))\nt = pathlib.Path('config.yaml').read_text(encoding='utf-8')\nassert src == ['arxiv_source.py', 'huggingface_source.py'], src\nsw = re.search(r'^sources:\\n((?:  \\S+: \\S+\\n)+)', t, re.M).group(1)\nassert re.findall(r'(\\S+): (\\S+)', sw) == [('arxiv', 'true'), ('huggingface', 'true')], sw\nhits = sorted(p.name for p in pathlib.Path('scripts').rglob('*.py') if 'paperswithcode' in p.read_text(encoding='utf-8'))\nassert hits == ['notifier.py'], hits\nprint('two collectors', ' '.join(src), '| switches arxiv+huggingface only | paperswithcode only as the emoji key in', hits[0])\"",
+        "expect": {
+          "equals": "two collectors arxiv_source.py huggingface_source.py | switches arxiv+huggingface only | paperswithcode only as the emoji key in notifier.py"
+        },
+        "timeout": 60
+      }
+    },
+    {
+      "id": "archive-spread",
+      "claim": "The committed archive runs 4 to 10 papers per day, the 10 being the configured cap and the 4 its thinnest day (README: \"At most max_papers (10) survive per day (the committed archive runs 4–10)\").",
+      "value": "4–10 papers per day across 61 reports",
+      "metric": "min and max of the \"## n.\" heading count over the dated reports",
+      "method": "A day with no surviving paper is skipped entirely rather than committed empty (the workflow refuses to commit a run with no new report), which is why the archive has 61 days out of a longer calendar span. The check states the real floor and ceiling of the committed data, so it fails if a digest is written with more than the cap or the spread claim drifts.",
+      "evidence": "docs/",
+      "as_of": "2026-09-13",
+      "repro": "python3 -c \"import re,pathlib;c=[len(re.findall(r'^## \\d+\\.\\s+', p.read_text(encoding='utf-8'), re.M)) for p in pathlib.Path('docs').glob('????-??-??.md')];print(min(c), max(c))\"",
+      "check": {
+        "cmd": "python3 -c \"import re, pathlib\ncounts = [len(re.findall(r'^## \\d+\\.\\s+', p.read_text(encoding='utf-8'), re.M)) for p in sorted(pathlib.Path('docs').glob('????-??-??.md'))]\nassert (min(counts), max(counts)) == (4, 10), (min(counts), max(counts))\nprint(min(counts), 'to', max(counts), 'papers per day across', len(counts), 'reports')\"",
+        "expect": {
+          "equals": "4 to 10 papers per day across 61 reports"
+        },
+        "timeout": 60
+      }
+    },
+    {
+      "id": "feed-items",
+      "claim": "The RSS feed carries 4 weekly items followed by the 50 most recent papers (54 items), as docs/llms.txt promises: \"one item per weekly page plus the 50 most recent papers\".",
+      "value": "54 items = 4 + 50",
+      "metric": "item titles in docs/feed.xml, split into weekly roundups and paper items",
+      "method": "scripts/generate_site.py:generate_rss emits one item per weekly report first, then walks the newest reports until max_items=50 papers, and raises if a date cannot be parsed. The check pins the ordering (weekly first) and both counts, which a longer paper window or a dropped weekly page would break.",
+      "evidence": "docs/feed.xml",
+      "as_of": "2026-09-13",
+      "repro": "grep -c '<item>' docs/feed.xml",
+      "check": {
+        "cmd": "python3 -c \"import re, pathlib\nf = pathlib.Path('docs/feed.xml').read_text(encoding='utf-8')\ntitles = re.findall(r'<title>(.*?)</title>', f, re.S)[1:]\nweekly = [t for t in titles if '周报' in t]\nassert len(weekly) == 4 and weekly == titles[:4], (len(weekly), titles[:5])\nassert len(titles) == len(weekly) + 50, len(titles)\nprint(len(titles), 'feed items =', len(weekly), 'weekly pages +', len(titles) - len(weekly), 'papers')\"",
+        "expect": {
+          "equals": "54 feed items = 4 weekly pages + 50 papers"
+        },
+        "timeout": 60
+      }
+    },
+    {
+      "id": "sitemap-urls",
+      "claim": "The sitemap lists exactly the 5 real HTML pages — the home page plus the 4 weekly pages — and deliberately no per-day page (docs/llms-full.txt: the dated files return 200 as Markdown, the matching .html returns 404).",
+      "value": "5 URLs",
+      "metric": "loc entries in docs/sitemap.xml vs the weekly-*.html pages on disk, and the absence of any dated loc",
+      "method": "docs/.nojekyll disables Jekyll, so Pages serves docs/YYYY-MM-DD.md as raw Markdown and there is no 2026-09-05.html; the daily content is inlined into the home page instead. scripts/generate_site.py builds the sitemap from the home page plus the weekly reports only. The check asserts that shape both ways so a per-day URL, or a weekly page missing from the sitemap, fails.",
+      "evidence": "docs/sitemap.xml",
+      "as_of": "2026-09-13",
+      "repro": "grep -c '<loc>' docs/sitemap.xml",
+      "check": {
+        "cmd": "python3 -c \"import re, pathlib\nlocs = re.findall(r'<loc>(.*?)</loc>', pathlib.Path('docs/sitemap.xml').read_text(encoding='utf-8'))\nwk = sorted(p.stem for p in pathlib.Path('docs').glob('weekly-????-W??.html'))\nassert len(locs) == 1 + len(wk), locs\nassert locs[0].endswith('AI-Paper-Daily/'), locs[0]\nassert sorted(l.rsplit('/', 1)[1][:-5] for l in locs[1:]) == wk, locs\nassert not [l for l in locs if re.search(r'\\d{4}-\\d{2}-\\d{2}', l)], locs\nprint(len(locs), 'sitemap URLs: home +', len(wk), 'weekly pages, no per-day page')\"",
+        "expect": {
+          "equals": "5 sitemap URLs: home + 4 weekly pages, no per-day page"
+        },
+        "timeout": 60
+      }
+    },
+    {
+      "id": "home-inlines-latest-30",
+      "claim": "The home page inlines the 30 newest daily reports (the same 30 dates in its selector) while the meta bar counts all 61 committed dailies — the cap README describes as \"the daily content is inlined into the home page\".",
+      "value": "30 of 61 days inlined, 61 counted",
+      "metric": "date-section blocks and date-selector options in docs/index.html against the dated reports on disk",
+      "method": "scripts/generate_site.py renders sections and selector options from a slice of the newest 30 reports but sums the paper and day counters over all of them, so the two numbers on the page legitimately differ. The check pins the slice to the newest 30 in order and asserts the selector and the sections agree, which a change of window would break.",
+      "evidence": "docs/index.html",
+      "as_of": "2026-09-13",
+      "repro": "grep -c 'class=\"date-section\"' docs/index.html",
+      "check": {
+        "cmd": "python3 -c \"import re, pathlib\nh = pathlib.Path('docs/index.html').read_text(encoding='utf-8')\nsecs = re.findall(r'class=\\\"date-section\\\" data-date=\\\"(\\d{4}-\\d{2}-\\d{2})\\\"', h)\nopts = re.findall(r'<option value=\\\"(\\d{4}-\\d{2}-\\d{2})\\\"', h)\ndates = sorted((p.stem for p in pathlib.Path('docs').glob('????-??-??.md')), reverse=True)\nassert secs == opts == dates[:30], (len(secs), len(opts), secs[:3], opts[:3])\nprint(len(secs), 'of', len(dates), 'daily reports inlined on the home page (newest first), the same 30 in the date selector')\"",
+        "expect": {
+          "equals": "30 of 61 daily reports inlined on the home page (newest first), the same 30 in the date selector"
+        },
+        "timeout": 60
+      }
+    },
+    {
+      "id": "site-rebuild-idempotent",
+      "claim": "Rebuilding the site from the committed docs/ tree reproduces the committed pages byte for byte: `python3 scripts/generate_site.py` leaves `git status --porcelain docs/` empty.",
+      "value": "no diff after a rebuild",
+      "metric": "git status of docs/ after running the repo's own generator on a clean checkout",
+      "method": "The generator is the only writer of docs/index.html, feed.xml, sitemap.xml, robots.txt and the weekly pages, so a dirty tree after a rebuild means the committed site no longer matches its source. feed.xml's lastBuildDate and the sitemap's home lastmod are derived from the newest committed report date rather than the wall clock for exactly this reason — a clock stamp would dirty the tree on every run, including on CI.",
+      "evidence": "scripts/generate_site.py",
+      "as_of": "2026-09-13",
+      "repro": "python3 scripts/generate_site.py && git status --porcelain docs/",
+      "check": {
+        "cmd": "python3 -c \"import subprocess, sys\nsubprocess.run([sys.executable, 'scripts/generate_site.py'], check=True, capture_output=True)\nout = subprocess.run(['git', 'status', '--porcelain', 'docs/'], check=True, capture_output=True, text=True).stdout\nassert out == '', out\nprint('regenerated docs/ with scripts/generate_site.py: git status --porcelain docs/ is empty')\"",
+        "expect": {
+          "equals": "regenerated docs/ with scripts/generate_site.py: git status --porcelain docs/ is empty"
+        },
+        "timeout": 60
+      }
+    }
+  ]
+}

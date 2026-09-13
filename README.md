@@ -273,10 +273,12 @@ AI-Paper-Daily/
 │   └── main.py               # Entry point (--weekly for weekly mode)
 ├── tests/                    # Unit tests (python -m unittest discover tests)
 ├── config.yaml               # Configuration
+├── claims.json               # Executable receipts for the numbers published here and on the site
 ├── data/                     # Optional subscriber list (data/subscribers.txt read by storage.py; create it yourself)
 ├── docs/                     # GitHub Pages reports
 └── .github/workflows/
-    └── daily.yml             # CI/CD workflow
+    ├── daily.yml             # CI/CD workflow
+    └── claims.yml            # Re-runs claims.json on every push and weekly
 ```
 
 ## 🔌 Custom Sources

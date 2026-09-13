@@ -1,0 +1,28 @@
+name: claims
+
+# Runs the receipts behind claims.json: every number this repository publishes in prose or on
+# the site — the meta bar's papers/days counts, the README's filter-mode count and per-day
+# spread, the weekly archive, the config keywords and caps, the RSS and sitemap sizes — must
+# still be printed by the command next to it. On push as well as weekly, because those figures
+# move whenever a daily digest is committed (report and paper counts, feed size, weekly pages).
+#
+# No install step: every check is a stdlib-only python3 one-liner over the committed docs/ tree
+# and config.yaml — no PyYAML, no network, no repo dependency — and the action brings its own
+# Python. The one check that shells out runs the repo's own scripts/generate_site.py and asserts
+# the committed pages are byte-identical to a rebuild.
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 6 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: published numbers still reproduce
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: alloevil/verify-claims@v0.1.0
