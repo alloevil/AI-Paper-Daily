@@ -19,6 +19,21 @@ SITE_DESC = "Daily AI Paper Discovery · Agent / RAG / Knowledge Graph"
 SITE_URL = "https://alloevil.github.io/AI-Paper-Daily"
 
 
+def latest_content_date(reports: list, weekly_reports: tuple = ()) -> str:
+    """Newest date the committed reports cover, as YYYY-MM-DD.
+
+    feed.xml's lastBuildDate and the sitemap's home lastmod are derived from
+    this instead of the wall clock: both stamps mean "the reports behind these
+    pages last changed", and a clock reading would make every rebuild of
+    unchanged report files dirty the committed site (CI would commit the diff
+    forever). Empty archive falls back to today.
+    """
+    dates = [date_str for date_str, _ in reports]
+    for _, date_range, _ in weekly_reports:
+        dates += re.findall(r'\d{4}-\d{2}-\d{2}', date_range or '')
+    return max(dates) if dates else datetime.now(timezone.utc).strftime('%Y-%m-%d')
+
+
 WEEKLY_PAGE_TEMPLATE = '''<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -211,8 +226,9 @@ def generate_rss(reports: list[tuple[str, list[dict]]],
     SubElement(ch, 'description').text = SITE_DESC
     SubElement(ch, 'link').text = SITE_URL
     SubElement(ch, 'language').text = 'zh-CN'
-    SubElement(ch, 'lastBuildDate').text = datetime.now(timezone.utc).strftime(
-        '%a, %d %b %Y %H:%M:%S +0000')
+    SubElement(ch, 'lastBuildDate').text = datetime.strptime(
+        latest_content_date(reports, weekly_reports), '%Y-%m-%d'
+    ).replace(tzinfo=timezone.utc).strftime('%a, %d %b %Y 18:00:00 +0000')
     al = SubElement(ch, 'atom:link')
     al.set('href', f'{SITE_URL}/feed.xml')
     al.set('rel', 'self')
@@ -404,9 +420,11 @@ def main():
     #   - template.html：本脚本的渲染输入，不是页面（它自带指向首页的
     #     rel=canonical，所以即使被抓到也会归并到首页）。
     #   - feed.xml 和图片等静态资源：不是页面，塞进 sitemap 只会稀释它。
-    # Index uses the build date (rebuilt daily, content inlined); each weekly
-    # page uses its covered week's end date — a real, past content date.
-    build_date = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+    # Index uses the newest committed report date (its content changes when a
+    # digest lands — inlined into this page); each weekly page uses its covered
+    # week's end date. Both are real, past content dates, and neither reads the
+    # clock, so rebuilding an unchanged archive leaves sitemap.xml byte-identical.
+    build_date = latest_content_date(reports, weekly_reports)
     def _weekly_lastmod(date_range: str) -> str:
         dates = re.findall(r'\d{4}-\d{2}-\d{2}', date_range)
         return dates[-1] if dates else build_date

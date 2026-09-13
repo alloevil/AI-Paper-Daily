@@ -1,7 +1,7 @@
 # 📄 AI Paper Daily
 
 <p align="center">
-  <img src="./assets/readme/hero.svg" width="100%" alt="AI Paper Daily pipeline: the arXiv API is queried by keyword × category across cs.AI, cs.CL, cs.IR and cs.MA and the HuggingFace Daily Papers hot list is fetched without keyword filtering, an LLM scores the candidates on keyword relevance, novelty, open-source code and community votes when LLM_API_KEY is set (without a key it falls back to a votes + open-code ranking, the mode every committed report records), up to 10 papers become the committed Markdown report docs/*.md, and every Monday scripts/main.py --weekly re-ranks the last 7 days into a top-15 weekly-YYYY-WW.md roundup. Cron: 0 4 * * * daily at 12:00 Beijing, 0 5 * * 1 Monday weekly at 13:00 Beijing.">
+  <img src="./assets/readme/hero.svg" width="100%" alt="AI Paper Daily pipeline: the arXiv API is queried by keyword × category across cs.AI, cs.CL, cs.IR and cs.MA and the HuggingFace Daily Papers hot list is fetched without keyword filtering, an LLM scores the candidates on keyword relevance, novelty, open-source code and community votes when LLM_API_KEY is set (without a key it falls back to a votes + open-code ranking, the mode on every digest that records one), up to 10 papers become the committed Markdown report docs/*.md, and every Monday scripts/main.py --weekly re-ranks the last 7 days into a top-15 weekly-YYYY-WW.md roundup. Cron: 0 4 * * * daily at 12:00 Beijing, 0 5 * * 1 Monday weekly at 13:00 Beijing.">
 </p>
 
 **AI Paper Daily** is an automated daily paper digest that collects, filters and summarises new AI research on LLM agents, RAG, knowledge graphs and multi-agent systems for people who cannot read arXiv every morning.
@@ -31,7 +31,7 @@ Spending 10 minutes a day scrolling through papers? Too much work. **AI Paper Da
 | Feature | Description |
 |:---|:---|
 | 🔍 **Multi-source** | arXiv API + HuggingFace Daily Papers |
-| 🤖 **AI Filtering** | One LLM selection pass per day when `LLM_API_KEY` is set; without a key the digest is a votes + open-code ranking (the mode used for every committed report) |
+| 🤖 **AI Filtering** | One LLM selection pass per day when `LLM_API_KEY` is set; without a key the digest is a votes + open-code ranking (the mode on every digest that records one) |
 | 📬 **Multi-channel** | Feishu messages / Email subscriptions / GitHub Pages |
 | 🏷️ **Smart Tags** | Tag each entry with its selection signal — 高票 / 有代码 / 最新论文 — and filter on those |
 | 📊 **Code First** | Prioritize papers with open-source code for easy reproduction |
@@ -160,7 +160,7 @@ When `LLM_API_KEY` is set, the candidates go to the LLM in a single call that sc
 3. Availability of open-source code (prioritized)
 4. Community votes / stars
 
-Without a key — or if the call fails — it falls back to a votes + open-code ranking (`stars` is never populated by either collector, so in practice the fallback is votes + code). The 19 committed reports that record their mode all show this no-key fallback (`_本期筛选方式：热度回退（未配置 LLM）_`), i.e. the published archive was produced with no key set.
+Without a key — or if the call fails — it falls back to a votes + open-code ranking (`stars` is never populated by either collector, so in practice the fallback is votes + code). The 20 committed reports that record their mode — every digest committed since 2026-08-21, the date the line was added — all show this no-key fallback (`_本期筛选方式：热度回退（未配置 LLM）_`), i.e. the published archive was produced with no key set; the 41 earlier reports carry no mode line.
 
 ### Delivery
 
