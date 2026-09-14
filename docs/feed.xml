@@ -8,6 +8,13 @@
     <lastBuildDate>Mon, 14 Sep 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>📊 论文周报 2026-W38（2026-09-08 ~ 2026-09-14）</title>
+      <description>过去 7 天按热度重排的 Top 15：NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness；SenseNova-U1.5: Towards Native Unified Visual Intelligence；Omni Interaction Agent Technical Report；Eliciting Weak-to-Strong Generalization with On-Policy Reverse Distillation；Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models…</description>
+      <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W38.html</link>
+      <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W38.html</guid>
+      <pubDate>Mon, 14 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>📊 论文周报 2026-W37（2026-09-01 ~ 2026-09-07）</title>
       <description>过去 7 天按热度重排的 Top 15：Repo-To-Skill: Distilling GitHub Repositories Into AI4AI Skills；StudentSim: Training LLM-based Student Simulators；SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models；LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes；DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution…</description>
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W37.html</link>
