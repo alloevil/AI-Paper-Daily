@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 12 Sep 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W37（2026-09-01 ~ 2026-09-07）</title>
@@ -34,6 +34,34 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models (2026-09-14)</title>
+      <description>Robot foundation models achieve strong in-distribution performance but often degrade under visual distribution shifts. When learning to generate actions from pretrained visual representations, models ...</description>
+      <link>https://arxiv.org/abs/2609.12641</link>
+      <guid>https://arxiv.org/abs/2609.12641#2026-09-14</guid>
+      <pubDate>Mon, 14 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking (2026-09-14)</title>
+      <description>Post-training attention sparsification reduces the quadratic cumulative attention cost of pretrained Transformers by selecting a small set of context units (tokens or blocks) for each query. Existing ...</description>
+      <link>https://arxiv.org/abs/2609.13141</link>
+      <guid>https://arxiv.org/abs/2609.13141#2026-09-14</guid>
+      <pubDate>Mon, 14 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 StepAudio 3 Gen Technical Report (2026-09-14)</title>
+      <description>We introduce StepAudio 3 Gen, a general-purpose audio generation model that supports zero-shot text-to-speech (TTS), voice design, vocal generation, sound effects, music, vibe speech, and mixtures of ...</description>
+      <link>https://arxiv.org/abs/2609.12945</link>
+      <guid>https://arxiv.org/abs/2609.12945#2026-09-14</guid>
+      <pubDate>Mon, 14 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SNAP3D: Physically Grounded 3D Parts for Assembly from a Single Image (2026-09-14)</title>
+      <description>Part-aware 3D asset generation enables applications such as editing, articulation, simulation, and fabrication, yet existing methods can generate visually complete individual parts without ensuring th...</description>
+      <link>https://arxiv.org/abs/2609.13146</link>
+      <guid>https://arxiv.org/abs/2609.13146#2026-09-14</guid>
+      <pubDate>Mon, 14 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Artificial Id: Drive and Persistent Alignment in Agentic AI (2026-09-12)</title>
@@ -355,34 +383,6 @@
       <description>On-policy distillation (OPD) provides dense, per-token supervision for language model post-training, but its effectiveness is bottlenecked by teacher quality: external teachers suffer from distributio...</description>
       <link>https://arxiv.org/abs/2609.05295</link>
       <guid>https://arxiv.org/abs/2609.05295#2026-09-07</guid>
-      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Multi-Step Tool-Calling over Korean Open Public APIs: A Benchmark and a Data-Synthesis Recipe (2026-09-07)</title>
-      <description>Data-sovereignty regulations increasingly require public institutions to deploy open-source, on-premise LLM agents that chain multiple tool-calls across live government APIs. However, open-source mode...</description>
-      <link>http://arxiv.org/abs/2609.05395v1</link>
-      <guid>http://arxiv.org/abs/2609.05395v1#2026-09-07</guid>
-      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Trust-Aware Adaptive Disclosure for Inference Privacy Preservation in Multi-Agent Networks (2026-09-07)</title>
-      <description>Agent based systems are increasingly deployed in information critical systems including healthcare management systems, and smart grids. In this paper, we consider a multi-agent system where each agent...</description>
-      <link>http://arxiv.org/abs/2609.05340v1</link>
-      <guid>http://arxiv.org/abs/2609.05340v1#2026-09-07</guid>
-      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Does Your Agent's Memory Survive a Model Upgrade? A Controlled Study of Memory Portability (2026-09-07)</title>
-      <description>Model upgrades are routine; memory migrations are not. An agent can keep the same memory store and still forget: a new model may interpret old notes differently, mixed embedding versions may break ret...</description>
-      <link>http://arxiv.org/abs/2609.05339v1</link>
-      <guid>http://arxiv.org/abs/2609.05339v1#2026-09-07</guid>
-      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Testing Interchangeability in LLM Agent Teams (2026-09-07)</title>
-      <description>Production multi-agent systems replace agents constantly, on the assumption that an agent filling a role is interchangeable with any other agent that can do the job. We test that assumption. Eight tea...</description>
-      <link>http://arxiv.org/abs/2609.05279v1</link>
-      <guid>http://arxiv.org/abs/2609.05279v1#2026-09-07</guid>
       <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
