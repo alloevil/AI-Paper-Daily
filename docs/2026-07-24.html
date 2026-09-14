@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>论文日报 2026-07-24（周五） — AI Paper Daily</title>
+<meta name="description" content="2026-07-24（周五） 收录 10 篇论文：AREX: Towards a Recursively Self-Improving Agent for Deep Research；Visual Contrastive Self-Distillation；Tencent WorkBuddy Bench: A Multi-Domain Coding-Agent Benchmark with Contamination-Resistant Task Construction…">
+<link rel="canonical" href="https://alloevil.github.io/AI-Paper-Daily/2026-07-24.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://alloevil.github.io/AI-Paper-Daily/2026-07-24.html">
+<meta property="og:title" content="论文日报 2026-07-24（周五） — AI Paper Daily">
+<meta property="og:description" content="2026-07-24（周五） 收录 10 篇论文：AREX: Towards a Recursively Self-Improving Agent for Deep Research；Visual Contrastive Self-Distillation；Tencent WorkBuddy Bench: A Multi-Domain Coding-Agent Benchmark with Contamination-Resistant Task Construction…">
+<meta property="og:site_name" content="AI Paper Daily">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<style>
+  :root {
+    --primary: #6366f1;
+    --primary-hover: #818cf8;
+    --blue: #3b82f6;
+    --ink: #f7f8f8;
+    --ink-muted: #d0d6e0;
+    --ink-subtle: #8a8f98;
+    --ink-tertiary: #62666d;
+    --canvas: #010102;
+    --surface-1: #0f1011;
+    --surface-2: #141516;
+    --hairline: #23252a;
+    --hairline-strong: #34343a;
+    --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-sans); background: var(--canvas); color: var(--ink);
+         -webkit-font-smoothing: antialiased; line-height: 1.5; }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .masthead { padding: 20px 0 16px; border-bottom: 1px solid var(--hairline);
+               display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .masthead h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.4px; }
+  .masthead .range { font-size: 13px; color: var(--ink-subtle); }
+  .masthead a { padding: 6px 14px; font-size: 13px; font-weight: 500; color: var(--ink-subtle);
+                 border: 1px solid var(--hairline); border-radius: 8px; text-decoration: none; }
+  .masthead a:hover { color: var(--ink); border-color: var(--hairline-strong); }
+  .intro { padding: 16px 0 4px; font-size: 14px; color: var(--ink-subtle); }
+  .paper-card { display: flex; padding: 16px 0; border-radius: 8px; }
+  .paper-card:hover { background: var(--surface-1); }
+  .paper-card + .paper-card { border-top: 1px solid var(--hairline); }
+  .relevance-bar { width: 4px; border-radius: 2px; flex-shrink: 0; margin-right: 16px; align-self: stretch; }
+  .relevance-bar.high { background: var(--primary); }
+  .relevance-bar.mid { background: var(--blue); }
+  .relevance-bar.low { background: var(--ink-tertiary); }
+  .paper-content { flex: 1; min-width: 0; }
+  .paper-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+  .paper-title { font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; line-height: 1.4; }
+  .paper-title:hover { color: var(--primary-hover); }
+  .paper-tag { display: inline-block; padding: 1px 8px; font-size: 11px; font-weight: 500;
+                color: var(--ink-muted); background: var(--surface-2); border: 1px solid var(--hairline);
+                border-radius: 10px; white-space: nowrap; flex-shrink: 0; }
+  .paper-abstract { font-size: 14px; color: var(--ink-subtle); margin-bottom: 8px; line-height: 1.55; }
+  .paper-links { display: flex; gap: 8px; font-size: 13px; }
+  .paper-links a { color: var(--ink-tertiary); text-decoration: none; }
+  .paper-links a:hover { color: var(--primary-hover); }
+  .footer { margin-top: 48px; padding: 24px 0; border-top: 1px solid var(--hairline);
+             text-align: center; font-size: 12px; color: var(--ink-tertiary); }
+  .footer a { color: var(--ink-subtle); text-decoration: none; }
+  .footer a:hover { color: var(--ink); }
+  @media (max-width: 640px) {
+    .container { padding: 0 16px; }
+    .paper-header { flex-direction: column; gap: 4px; }
+    .relevance-bar { margin-right: 12px; }
+    .paper-links { flex-wrap: wrap; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "论文日报 | 2026-07-24（周五）",
+  "datePublished": "2026-07-24",
+  "inLanguage": "zh-CN",
+  "url": "https://alloevil.github.io/AI-Paper-Daily/2026-07-24.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "AI Paper Daily",
+    "url": "https://alloevil.github.io/AI-Paper-Daily"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "alloevil",
+    "url": "https://github.com/alloevil"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "有代码"
+    },
+    {
+      "@type": "Thing",
+      "name": "高票"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <div class="container">
+    <header class="masthead">
+      <div>
+        <h1>📊 论文日报 2026-07-24（周五）</h1>
+        <span class="range">2026-07-24（周五）</span>
+      </div>
+      <div class="nav"><a href="./">← 返回日报</a><a href="2026-07-25.html">后一天 →</a><a href="2026-07-23.html">← 前一天</a></div>
+    </header>
+    <p class="intro">2026-07-24（周五） 收录 10 篇论文：AREX: Towards a Recursively Self-Improving Agent for Deep Research；Visual Contrastive Self-Distillation；Tencent WorkBuddy Bench: A Multi-Domain Coding-Agent Benchmark with Contamination-Resistant Task Construction…</p>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.21461" target="_blank" rel="noopener">AREX: Towards a Recursively Self-Improving Agent for Deep Research</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Deep research requires agents to find answers that jointly satisfy multiple constraints. Discovering such answers is costly, whereas verifying a candidate can often be decomposed into tractable constr...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.21461" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.21461" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.21556" target="_blank" rel="noopener">Visual Contrastive Self-Distillation</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">On-policy self-distillation (OPSD) is promising as it removes the external teacher required by on-policy distillation (OPD), yet it still needs asymmetric information between teacher and student to en...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.21556" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.21556" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.20911" target="_blank" rel="noopener">Tencent WorkBuddy Bench: A Multi-Domain Coding-Agent Benchmark with Contamination-Resistant Task Construction</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">We introduce Tencent WorkBuddy Bench, a multi-domain evaluation suite for coding agents; this report documents its construction methodology, scoring protocol, and a cross-model leaderboard. At its cor...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.20911" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.20911" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.21072" target="_blank" rel="noopener">Show, Don&#39;t Tell: Evaluating Spatial Cognition in Generative Pixels Rather Than LLM Text</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Spatial intelligence is essential for agents to move from static semantic understanding toward interacting with the physical world. Many spatial tasks are grounded in continuous visual scenes, where l...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.21072" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.21072" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.21485" target="_blank" rel="noopener">Recurrent Sinusoidal INRs for Efficient High-Fidelity Representation</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">We study sinusoidal recurrence as an iterative mechanism for harmonic spectral enrichment in implicit neural representations (INRs). Our analysis reveals that sinusoidal activations induce a harmonic ...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.21485" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.21485" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.21051" target="_blank" rel="noopener">Sample-Efficient Learning from Agent Experience</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Real-world agent learning is often constrained by costly environment interactions, such as running time-consuming experiments or obtaining human feedback. In-context learning offers a highly sample-ef...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.21051" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.21051" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.21217" target="_blank" rel="noopener">ICAE-Bench: Evaluating Coding Agents as Interactive Project Builders</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">The recent emergence of vibe-coding workflows is changing what coding agents are expected to do. Instead of merely completing code under fully specified instructions, agents are increasingly expected ...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.21217" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.21217" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.21017" target="_blank" rel="noopener">TableVerse: A Large-scale Tabletop Dataset with Real-world Grounded Layouts for Generalizable Manipulation</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">The development of generalizable robotic manipulation policies is inherently bounded by the availability of large-scale, high-fidelity scene data. While recent automated synthesis methods attempt to b...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.21017" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.21017" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.21594" target="_blank" rel="noopener">Streaming Multi-Agent Autoregressive Diffusion Model with World State Registers</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Multi-agent interactive world models should not only generate consistent observations, but also maintain world states that persist across agents and evolve across views. Existing autoregressive video ...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.21594" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.21594" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.21580" target="_blank" rel="noopener">GraphVid: Interactive Graph-Controllable Video Generation</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Controllable video generation remains challenging due to the difficulty of specifying precise multi-object interactions using text prompts or motion-control inputs that primarily constrain pixel movem...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.21580" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.21580" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+    <footer class="footer">
+      <p>Built by <a href="https://github.com/alloevil">alloevil</a> · <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a> · <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a></p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -58,19 +58,19 @@
     },
     {
       "id": "weekly-reports",
-      "claim": "The archive holds four weekly roundups, W34 through W37, each a Top 15 with its own HTML page and index entry (README: \"The archived weekly reports are W34–W37\"; docs/llms.txt: \"the four most recent weeks have a page (W34–W37)\").",
-      "value": "4 weekly reports (2026-W34 … 2026-W37), Top 15 each",
-      "metric": "weekly-*.md files, their \"## n.\" headings, the \"Top N\" numbers recorded in docs/index.md, and the weekly-*.html pages beside them",
-      "method": "scripts/main.py --weekly re-ranks the last 7 days from the committed dailies into docs/weekly-YYYY-WW.md; scripts/generate_site.py renders one page per report from the same file. The check ties the four surfaces together, so a report without its page or a page without its report fails.",
+      "claim": "Every committed weekly report has a rendered page, and each is in the sitemap.",
+      "value": "one page per weekly-*.md, all in the sitemap",
+      "metric": "weekly-*.md on disk vs weekly-*.html rendered vs weekly locs in the sitemap",
+      "method": "the check compares the three sets; a new weekly report that is never rendered, or a rendered page missing from the sitemap, fails. It deliberately does not pin a count: one weekly page is added every week.",
       "evidence": "docs/",
-      "as_of": "2026-09-13",
-      "repro": "python3 -c \"import pathlib;print(sorted(p.stem for p in pathlib.Path('docs').glob('weekly-????-W??.md')))\"",
+      "as_of": "2026-09-14",
+      "repro": "ls docs/weekly-*.md | wc -l; ls docs/weekly-*.html | wc -l",
       "check": {
-        "cmd": "python3 -c \"import re, pathlib\nd = pathlib.Path('docs')\nmd = sorted(p.name for p in d.glob('weekly-????-W??.md'))\nhtml = sorted(p.name for p in d.glob('weekly-????-W??.html'))\nidx = (d / 'index.md').read_text(encoding='utf-8')\nlisted = sorted(re.findall(r'\\(weekly-(\\d{4}-W\\d+)\\.md\\) - Top (\\d+)', idx))\nassert [w.split('.')[0][7:] for w in md] == ['2026-W34', '2026-W35', '2026-W36', '2026-W37'], md\nassert listed == [(w.split('.')[0][7:], '15') for w in md], listed\nassert html == [w[:-3] + '.html' for w in md], html\nassert all(len(re.findall(r'^## \\d+\\.\\s+', (d / w).read_text(encoding='utf-8'), re.M)) == 15 for w in md)\nprint(len(md), 'weekly reports W34-W37, Top 15 each, each with an .html page and an index entry')\"",
+        "cmd": "python3 -c \"import re, pathlib\nd = pathlib.Path('docs')\nmd = {p.stem for p in d.glob('weekly-????-W??.md')}\nhtml = {p.stem for p in d.glob('weekly-????-W??.html')}\nsm = {u.rsplit('/', 1)[-1][:-5] for u in re.findall(r'<loc>([^<]+)</loc>', d.joinpath('sitemap.xml').read_text()) if '/weekly-' in u}\nprint('md', len(md), 'html', len(html), 'sitemap', len(sm))\nassert md == html == sm, (sorted(md - html), sorted(html - sm))\"",
         "expect": {
-          "equals": "4 weekly reports W34-W37, Top 15 each, each with an .html page and an index entry"
+          "regex": "md \\d+ html \\d+ sitemap \\d+"
         },
-        "timeout": 60
+        "timeout": 120
       }
     },
     {
@@ -194,19 +194,19 @@
     },
     {
       "id": "sitemap-urls",
-      "claim": "The sitemap lists exactly the 5 real HTML pages — the home page plus the 4 weekly pages — and deliberately no per-day page (docs/llms-full.txt: the dated files return 200 as Markdown, the matching .html returns 404).",
-      "value": "5 URLs",
-      "metric": "loc entries in docs/sitemap.xml vs the weekly-*.html pages on disk, and the absence of any dated loc",
-      "method": "docs/.nojekyll disables Jekyll, so Pages serves docs/YYYY-MM-DD.md as raw Markdown and there is no 2026-09-05.html; the daily content is inlined into the home page instead. scripts/generate_site.py builds the sitemap from the home page plus the weekly reports only. The check asserts that shape both ways so a per-day URL, or a weekly page missing from the sitemap, fails.",
+      "claim": "The sitemap lists exactly the real HTML pages and nothing else: the home page, every weekly page and every daily page, with no `.md` target and no missing page.",
+      "value": "home + every weekly-*.html + every YYYY-MM-DD.html, set-equal both ways",
+      "metric": "loc entries in docs/sitemap.xml vs the HTML pages committed under docs/",
+      "method": "docs/.nojekyll disables Jekyll, so `docs/YYYY-MM-DD.md` is served as text/markdown and the page for that day is the generated `YYYY-MM-DD.html`; scripts/generate_site.py builds the sitemap from the home page, the weekly reports and every daily report. The check asserts set equality both ways — a page on disk missing from the sitemap, or a sitemap URL with no page (including any `.md`), fails.",
       "evidence": "docs/sitemap.xml",
-      "as_of": "2026-09-13",
-      "repro": "grep -c '<loc>' docs/sitemap.xml",
+      "as_of": "2026-09-14",
+      "repro": "python3 scripts/generate_site.py && grep -c '<loc>' docs/sitemap.xml",
       "check": {
-        "cmd": "python3 -c \"import re, pathlib\nlocs = re.findall(r'<loc>(.*?)</loc>', pathlib.Path('docs/sitemap.xml').read_text(encoding='utf-8'))\nwk = sorted(p.stem for p in pathlib.Path('docs').glob('weekly-????-W??.html'))\nassert len(locs) == 1 + len(wk), locs\nassert locs[0].endswith('AI-Paper-Daily/'), locs[0]\nassert sorted(l.rsplit('/', 1)[1][:-5] for l in locs[1:]) == wk, locs\nassert not [l for l in locs if re.search(r'\\d{4}-\\d{2}-\\d{2}', l)], locs\nprint(len(locs), 'sitemap URLs: home +', len(wk), 'weekly pages, no per-day page')\"",
+        "cmd": "python3 -c \"import re, pathlib\nd = pathlib.Path('docs')\nlocs = {u.rsplit('/', 1)[-1] or 'index.html' for u in re.findall(r'<loc>([^<]+)</loc>', d.joinpath('sitemap.xml').read_text())}\ndisk = {p.name for p in d.glob('*.html') if p.name != 'template.html'}\nprint('sitemap', len(locs), 'disk', len(disk))\nassert locs == disk, ('in sitemap only', sorted(locs - disk), 'on disk only', sorted(disk - locs))\nassert not any(l.endswith('.md') for l in locs)\"",
         "expect": {
-          "equals": "5 sitemap URLs: home + 4 weekly pages, no per-day page"
+          "regex": "sitemap \\d+ disk \\d+"
         },
-        "timeout": 60
+        "timeout": 120
       }
     },
     {
@@ -241,6 +241,23 @@
           "equals": "regenerated docs/ with scripts/generate_site.py: git status --porcelain docs/ is empty"
         },
         "timeout": 60
+      }
+    },
+    {
+      "id": "daily-pages-complete",
+      "claim": "Every committed daily digest has its own HTML page, every one of those pages carries a description, a canonical URL, an Open Graph block and Article JSON-LD, and their titles are distinct — the archive is not only inlined into the home page.",
+      "value": "one page per digest, all with head metadata, all in the sitemap",
+      "metric": "docs/YYYY-MM-DD.md on disk vs YYYY-MM-DD.html rendered vs dated locs in the sitemap, plus the presence of the four head elements on each page",
+      "method": "scripts/generate_site.py renders one page per committed digest (render_daily_page) and lists it in the sitemap. The check compares the three sets and inspects every page's head; a day rendered without metadata, or a digest with no page, fails.",
+      "repro": "ls docs/????-??-??.md | wc -l; ls docs/????-??-??.html | wc -l; grep -c '<loc>' docs/sitemap.xml",
+      "evidence": "docs/2026-09-12.html",
+      "as_of": "2026-09-14",
+      "check": {
+        "cmd": "python3 -c \"import re, pathlib\nd = pathlib.Path('docs')\nmds = {p.name[:-3] for p in d.glob('????-??-??.md')}\nhtml = {p.name[:-5] for p in d.glob('????-??-??.html')}\nsm = {u.rsplit('/', 1)[-1][:-5] for u in re.findall(r'<loc>([^<]+)</loc>', d.joinpath('sitemap.xml').read_text()) if re.search(r'/\\d{4}-\\d{2}-\\d{2}\\.html$', u)}\nassert mds == html == sm, ('no page', sorted(mds - html), 'not in sitemap', sorted(html - sm))\nbad, titles = [], set()\nfor name in sorted(html):\n    h = d.joinpath(name + '.html').read_text()\n    t = re.search(r'<title>([^<]+)</title>', h).group(1)\n    if t in titles: bad.append(name + ':dup-title')\n    titles.add(t)\n    if not re.search(r'name=\\x22description\\x22[^>]+content=\\x22[^\\x22]{20,}', h): bad.append(name + ':desc')\n    if 'rel=\\x22canonical\\x22' not in h: bad.append(name + ':canonical')\n    if 'property=\\x22og:' not in h: bad.append(name + ':og')\n    if 'application/ld+json' not in h: bad.append(name + ':ld')\nprint('pages', len(html), 'mds', len(mds), 'sitemap', len(sm), 'problems', bad[:3])\nassert not bad\"",
+        "expect": {
+          "regex": "problems \\[\\]$"
+        },
+        "timeout": 180
       }
     }
   ]

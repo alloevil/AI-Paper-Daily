@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>论文日报 2026-07-23（周四） — AI Paper Daily</title>
+<meta name="description" content="2026-07-23（周四） 收录 10 篇论文：ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU；SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD；Self Gradient Forcing: Native Long Video Extrapolation…">
+<link rel="canonical" href="https://alloevil.github.io/AI-Paper-Daily/2026-07-23.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://alloevil.github.io/AI-Paper-Daily/2026-07-23.html">
+<meta property="og:title" content="论文日报 2026-07-23（周四） — AI Paper Daily">
+<meta property="og:description" content="2026-07-23（周四） 收录 10 篇论文：ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU；SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD；Self Gradient Forcing: Native Long Video Extrapolation…">
+<meta property="og:site_name" content="AI Paper Daily">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<style>
+  :root {
+    --primary: #6366f1;
+    --primary-hover: #818cf8;
+    --blue: #3b82f6;
+    --ink: #f7f8f8;
+    --ink-muted: #d0d6e0;
+    --ink-subtle: #8a8f98;
+    --ink-tertiary: #62666d;
+    --canvas: #010102;
+    --surface-1: #0f1011;
+    --surface-2: #141516;
+    --hairline: #23252a;
+    --hairline-strong: #34343a;
+    --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-sans); background: var(--canvas); color: var(--ink);
+         -webkit-font-smoothing: antialiased; line-height: 1.5; }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .masthead { padding: 20px 0 16px; border-bottom: 1px solid var(--hairline);
+               display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .masthead h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.4px; }
+  .masthead .range { font-size: 13px; color: var(--ink-subtle); }
+  .masthead a { padding: 6px 14px; font-size: 13px; font-weight: 500; color: var(--ink-subtle);
+                 border: 1px solid var(--hairline); border-radius: 8px; text-decoration: none; }
+  .masthead a:hover { color: var(--ink); border-color: var(--hairline-strong); }
+  .intro { padding: 16px 0 4px; font-size: 14px; color: var(--ink-subtle); }
+  .paper-card { display: flex; padding: 16px 0; border-radius: 8px; }
+  .paper-card:hover { background: var(--surface-1); }
+  .paper-card + .paper-card { border-top: 1px solid var(--hairline); }
+  .relevance-bar { width: 4px; border-radius: 2px; flex-shrink: 0; margin-right: 16px; align-self: stretch; }
+  .relevance-bar.high { background: var(--primary); }
+  .relevance-bar.mid { background: var(--blue); }
+  .relevance-bar.low { background: var(--ink-tertiary); }
+  .paper-content { flex: 1; min-width: 0; }
+  .paper-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+  .paper-title { font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; line-height: 1.4; }
+  .paper-title:hover { color: var(--primary-hover); }
+  .paper-tag { display: inline-block; padding: 1px 8px; font-size: 11px; font-weight: 500;
+                color: var(--ink-muted); background: var(--surface-2); border: 1px solid var(--hairline);
+                border-radius: 10px; white-space: nowrap; flex-shrink: 0; }
+  .paper-abstract { font-size: 14px; color: var(--ink-subtle); margin-bottom: 8px; line-height: 1.55; }
+  .paper-links { display: flex; gap: 8px; font-size: 13px; }
+  .paper-links a { color: var(--ink-tertiary); text-decoration: none; }
+  .paper-links a:hover { color: var(--primary-hover); }
+  .footer { margin-top: 48px; padding: 24px 0; border-top: 1px solid var(--hairline);
+             text-align: center; font-size: 12px; color: var(--ink-tertiary); }
+  .footer a { color: var(--ink-subtle); text-decoration: none; }
+  .footer a:hover { color: var(--ink); }
+  @media (max-width: 640px) {
+    .container { padding: 0 16px; }
+    .paper-header { flex-direction: column; gap: 4px; }
+    .relevance-bar { margin-right: 12px; }
+    .paper-links { flex-wrap: wrap; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "论文日报 | 2026-07-23（周四）",
+  "datePublished": "2026-07-23",
+  "inLanguage": "zh-CN",
+  "url": "https://alloevil.github.io/AI-Paper-Daily/2026-07-23.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "AI Paper Daily",
+    "url": "https://alloevil.github.io/AI-Paper-Daily"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "alloevil",
+    "url": "https://github.com/alloevil"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "有代码"
+    },
+    {
+      "@type": "Thing",
+      "name": "高票"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <div class="container">
+    <header class="masthead">
+      <div>
+        <h1>📊 论文日报 2026-07-23（周四）</h1>
+        <span class="range">2026-07-23（周四）</span>
+      </div>
+      <div class="nav"><a href="./">← 返回日报</a><a href="2026-07-24.html">后一天 →</a><a href="2026-07-22.html">← 前一天</a></div>
+    </header>
+    <p class="intro">2026-07-23（周四） 收录 10 篇论文：ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU；SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD；Self Gradient Forcing: Native Long Video Extrapolation…</p>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.19191" target="_blank" rel="noopener">ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">We present ABot-World-0, an action-conditioned video world model for real-time, long-horizon closed-loop interaction, supported by a multi-source data infrastructure spanning AAA games, simulation eng...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.19191" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.19191" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.20145" target="_blank" rel="noopener">SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Full-parameter post-training of trillion-parameter-scale MoE models introduces substantial system-level challenges for large-scale distributed training, including severe memory pressure, non-overlappe...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.20145" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.20145" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.20368" target="_blank" rel="noopener">Self Gradient Forcing: Native Long Video Extrapolation</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Recent autoregressive video diffusion methods are increasingly built upon Self Forcing, where the student is trained on histories produced by its own rollout rather than ground-truth video contexts. T...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.20368" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.20368" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2607.19297v1" target="_blank" rel="noopener">Graph-Based Agentic AI with LangGraph: Workflow Pathways for Long-Running Stateful Business Processes</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">This paper is a practitioner guide to graph-based workflow pathways for long-running, stateful, multi-step generative AI systems in business processes. Rather than treating LangGraph, a low-level orch...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.19297v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.19297v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2607.18806v1" target="_blank" rel="noopener">AI Tour Meeting: Group Travel Planning by LLM Agents</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">This paper proposes AI Tour Meeting, a group travel planning framework powered by multiple Large Language Model (LLM)-based agents. The agents are instantiated with distinct personas and collaborative...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.18806v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.18806v1" target="_blank" rel="noopener">📥 PDF</a> · <a href="https://github.com/ntt-dkiku/ai-tour-meeting" target="_blank" rel="noopener">💻 代码</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.14186" target="_blank" rel="noopener">NexForge: Scaling Agent Capabilities through Requirement-Driven Task Synthesis for LLMs</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Scaling executable agent training data for LLM post-training is bottlenecked by substrate-bound methods that tie task generation to predefined tools, repositories, or skill graphs: expanding coverage ...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.14186" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.14186" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.19331" target="_blank" rel="noopener">ISO: An RLVR-Native Optimization Stack</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Reinforcement learning with verifiable rewards (RLVR) is rapidly advancing the reasoning capabilities of language models, yet the optimization layer that converts reward feedback into weight-space upd...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.19331" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.19331" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.19747" target="_blank" rel="noopener">Beyond Relevance-Centric Retrieval: Rubric-Oriented Document Set Selection and Ranking</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">As large language models and AI agents become the primary consumers of search results, document set quality determines the upper bound of downstream generation. Yet existing evaluation systems remain ...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.19747" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.19747" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.19790" target="_blank" rel="noopener">Trace: A Taxonomy-Guided Environment for Multidomain Visual Reasoning</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Reinforcement learning with verifiable rewards (RLVR) has substantially improved language-model reasoning, yet its extension to vision-language models remains constrained by the lack of training data ...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.19790" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.19790" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2607.19691" target="_blank" rel="noopener">SLPO: Scaling Latent Reasoning via a Surrogate Policy</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Reinforcement learning with verifiable rewards has become the predominant recipe for eliciting test-time scaling in explicit Chain-of-Thought reasoners. Yet this scaling path remains computationally c...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.19691" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.19691" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+    <footer class="footer">
+      <p>Built by <a href="https://github.com/alloevil">alloevil</a> · <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a> · <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a></p>
+    </footer>
+  </div>
+</body>
+</html>

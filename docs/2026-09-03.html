@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>论文日报 2026-09-03（周四） — AI Paper Daily</title>
+<meta name="description" content="2026-09-03（周四） 收录 10 篇论文：Repo-To-Skill: Distilling GitHub Repositories Into AI4AI Skills；SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models；Language Models Can Control Their Own Attention…">
+<link rel="canonical" href="https://alloevil.github.io/AI-Paper-Daily/2026-09-03.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://alloevil.github.io/AI-Paper-Daily/2026-09-03.html">
+<meta property="og:title" content="论文日报 2026-09-03（周四） — AI Paper Daily">
+<meta property="og:description" content="2026-09-03（周四） 收录 10 篇论文：Repo-To-Skill: Distilling GitHub Repositories Into AI4AI Skills；SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models；Language Models Can Control Their Own Attention…">
+<meta property="og:site_name" content="AI Paper Daily">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<style>
+  :root {
+    --primary: #6366f1;
+    --primary-hover: #818cf8;
+    --blue: #3b82f6;
+    --ink: #f7f8f8;
+    --ink-muted: #d0d6e0;
+    --ink-subtle: #8a8f98;
+    --ink-tertiary: #62666d;
+    --canvas: #010102;
+    --surface-1: #0f1011;
+    --surface-2: #141516;
+    --hairline: #23252a;
+    --hairline-strong: #34343a;
+    --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-sans); background: var(--canvas); color: var(--ink);
+         -webkit-font-smoothing: antialiased; line-height: 1.5; }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .masthead { padding: 20px 0 16px; border-bottom: 1px solid var(--hairline);
+               display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .masthead h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.4px; }
+  .masthead .range { font-size: 13px; color: var(--ink-subtle); }
+  .masthead a { padding: 6px 14px; font-size: 13px; font-weight: 500; color: var(--ink-subtle);
+                 border: 1px solid var(--hairline); border-radius: 8px; text-decoration: none; }
+  .masthead a:hover { color: var(--ink); border-color: var(--hairline-strong); }
+  .intro { padding: 16px 0 4px; font-size: 14px; color: var(--ink-subtle); }
+  .paper-card { display: flex; padding: 16px 0; border-radius: 8px; }
+  .paper-card:hover { background: var(--surface-1); }
+  .paper-card + .paper-card { border-top: 1px solid var(--hairline); }
+  .relevance-bar { width: 4px; border-radius: 2px; flex-shrink: 0; margin-right: 16px; align-self: stretch; }
+  .relevance-bar.high { background: var(--primary); }
+  .relevance-bar.mid { background: var(--blue); }
+  .relevance-bar.low { background: var(--ink-tertiary); }
+  .paper-content { flex: 1; min-width: 0; }
+  .paper-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+  .paper-title { font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; line-height: 1.4; }
+  .paper-title:hover { color: var(--primary-hover); }
+  .paper-tag { display: inline-block; padding: 1px 8px; font-size: 11px; font-weight: 500;
+                color: var(--ink-muted); background: var(--surface-2); border: 1px solid var(--hairline);
+                border-radius: 10px; white-space: nowrap; flex-shrink: 0; }
+  .paper-abstract { font-size: 14px; color: var(--ink-subtle); margin-bottom: 8px; line-height: 1.55; }
+  .paper-links { display: flex; gap: 8px; font-size: 13px; }
+  .paper-links a { color: var(--ink-tertiary); text-decoration: none; }
+  .paper-links a:hover { color: var(--primary-hover); }
+  .footer { margin-top: 48px; padding: 24px 0; border-top: 1px solid var(--hairline);
+             text-align: center; font-size: 12px; color: var(--ink-tertiary); }
+  .footer a { color: var(--ink-subtle); text-decoration: none; }
+  .footer a:hover { color: var(--ink); }
+  @media (max-width: 640px) {
+    .container { padding: 0 16px; }
+    .paper-header { flex-direction: column; gap: 4px; }
+    .relevance-bar { margin-right: 12px; }
+    .paper-links { flex-wrap: wrap; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "论文日报 | 2026-09-03（周四）",
+  "datePublished": "2026-09-03",
+  "inLanguage": "zh-CN",
+  "url": "https://alloevil.github.io/AI-Paper-Daily/2026-09-03.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "AI Paper Daily",
+    "url": "https://alloevil.github.io/AI-Paper-Daily"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "alloevil",
+    "url": "https://github.com/alloevil"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "有代码"
+    },
+    {
+      "@type": "Thing",
+      "name": "高票"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <div class="container">
+    <header class="masthead">
+      <div>
+        <h1>📊 论文日报 2026-09-03（周四）</h1>
+        <span class="range">2026-09-03（周四）</span>
+      </div>
+      <div class="nav"><a href="./">← 返回日报</a><a href="2026-09-04.html">后一天 →</a><a href="2026-09-02.html">← 前一天</a></div>
+    </header>
+    <p class="intro">2026-09-03（周四） 收录 10 篇论文：Repo-To-Skill: Distilling GitHub Repositories Into AI4AI Skills；SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models；Language Models Can Control Their Own Attention…</p>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.02749" target="_blank" rel="noopener">Repo-To-Skill: Distilling GitHub Repositories Into AI4AI Skills</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Autonomous agents are beginning to carry out machine-learning (ML) research end to end. These agents combine a model backbone with a harness for planning, execution, memory, and verification, but this...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.02749" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.02749" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.02886" target="_blank" rel="noopener">SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">We introduce SolarWM, a fully open foundation for building interactive video world models from data preparation through long-horizon inference. Training across heterogeneous data sources and video bac...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.02886" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.02886" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.02737" target="_blank" rel="noopener">Language Models Can Control Their Own Attention</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Language models spend most of their attention on a small fraction of context, yet they read the entire KV cache to find the few tokens that matter. If the user asks about a previous detail in a 1M-tok...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.02737" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.02737" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.02817" target="_blank" rel="noopener">Cliff: Learning Process Rewards from the First Mistake</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Reinforcement learning with verifiable rewards (RLVR) has emerged as a powerful paradigm for large language model (LLM) post-training, but its reliance on coarse outcome rewards leads to limited guida...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.02817" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.02817" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2609.02783v1" target="_blank" rel="noopener">EarlyEval: Cheaper Agent Evaluation via Early Outcome Prediction</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Evaluating LLM agents is essential for guiding their development, yet it has grown prohibitively expensive: a single pass of a frontier model over an agentic benchmark can cost hundreds to thousands o...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2609.02783v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.02783v1" target="_blank" rel="noopener">📥 PDF</a> · <a href="https://github.com/inphotoo/earlyeval" target="_blank" rel="noopener">💻 代码</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2609.01873v1" target="_blank" rel="noopener">Epistemic Sybil Resistance: Multiplying AI Agents Without Multiplying Evidence</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Multi-agent AI systems improve inference by spawning agents and synthesizing reports. But another agent is not another observation: apparently independent reports may descend from the same evidence, a...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2609.01873v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.01873v1" target="_blank" rel="noopener">📥 PDF</a> · <a href="https://github.com/marcbara/epistemic-sybil-resistance" target="_blank" rel="noopener">💻 代码</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2609.01839v1" target="_blank" rel="noopener">Import What You Need: Learning When and How to Augment EHR Graphs with External Knowledge</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Longitudinal prediction from electronic health records (EHRs) is limited by the sparsity and irregularity in patient trajectories, and knowledge augmentation with external knowledge graphs (KGs) offer...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2609.01839v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.01839v1" target="_blank" rel="noopener">📥 PDF</a> · <a href="https://github.com/ChenC2002/ReTA/" target="_blank" rel="noopener">💻 代码</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.02812" target="_blank" rel="noopener">VibeVoice-ASR-Streaming Technical Report</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Traditional speaker-attributed ASR systems treated ASR and speaker diarization as two separate tasks. Recently, end-to-end models such as VibeVoice-ASR have unified the two tasks within a single model...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.02812" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.02812" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.02849" target="_blank" rel="noopener">Post-Training Language Models for Gold-Medal Performance in Coding Competitions</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Competitive programming has become a key test of large language model reasoning, with international competitions such as IOI and ICPC representing its most challenging settings. We present an end-to-e...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.02849" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.02849" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.02272" target="_blank" rel="noopener">PaperCompiler: Faithful Paper-to-Code Generation via Repository-Level Specification Compilation</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Faithfully translating research papers into repository-level implementations remains challenging because papers often describe methods at a high level, leave implementation assumptions implicit, and r...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.02272" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.02272" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+    <footer class="footer">
+      <p>Built by <a href="https://github.com/alloevil">alloevil</a> · <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a> · <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a></p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>论文日报 2026-08-23（周日） — AI Paper Daily</title>
+<meta name="description" content="2026-08-23（周日） 收录 6 篇论文：MileGPO: Milestone Inference with Local Evidence for Graph-Based Policy Optimization of Long-Horizon LLM Agents；Towards general embodied intelligence: integrating large language models, knowledge bases, and reasoning capabilities to build the next generation of AI agents；Credit Without Ground Truth: Auditing Step-Level Credit Assignment in LLM Agents Against Executed Replay…">
+<link rel="canonical" href="https://alloevil.github.io/AI-Paper-Daily/2026-08-23.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://alloevil.github.io/AI-Paper-Daily/2026-08-23.html">
+<meta property="og:title" content="论文日报 2026-08-23（周日） — AI Paper Daily">
+<meta property="og:description" content="2026-08-23（周日） 收录 6 篇论文：MileGPO: Milestone Inference with Local Evidence for Graph-Based Policy Optimization of Long-Horizon LLM Agents；Towards general embodied intelligence: integrating large language models, knowledge bases, and reasoning capabilities to build the next generation of AI agents；Credit Without Ground Truth: Auditing Step-Level Credit Assignment in LLM Agents Against Executed Replay…">
+<meta property="og:site_name" content="AI Paper Daily">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<style>
+  :root {
+    --primary: #6366f1;
+    --primary-hover: #818cf8;
+    --blue: #3b82f6;
+    --ink: #f7f8f8;
+    --ink-muted: #d0d6e0;
+    --ink-subtle: #8a8f98;
+    --ink-tertiary: #62666d;
+    --canvas: #010102;
+    --surface-1: #0f1011;
+    --surface-2: #141516;
+    --hairline: #23252a;
+    --hairline-strong: #34343a;
+    --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-sans); background: var(--canvas); color: var(--ink);
+         -webkit-font-smoothing: antialiased; line-height: 1.5; }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .masthead { padding: 20px 0 16px; border-bottom: 1px solid var(--hairline);
+               display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .masthead h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.4px; }
+  .masthead .range { font-size: 13px; color: var(--ink-subtle); }
+  .masthead a { padding: 6px 14px; font-size: 13px; font-weight: 500; color: var(--ink-subtle);
+                 border: 1px solid var(--hairline); border-radius: 8px; text-decoration: none; }
+  .masthead a:hover { color: var(--ink); border-color: var(--hairline-strong); }
+  .intro { padding: 16px 0 4px; font-size: 14px; color: var(--ink-subtle); }
+  .paper-card { display: flex; padding: 16px 0; border-radius: 8px; }
+  .paper-card:hover { background: var(--surface-1); }
+  .paper-card + .paper-card { border-top: 1px solid var(--hairline); }
+  .relevance-bar { width: 4px; border-radius: 2px; flex-shrink: 0; margin-right: 16px; align-self: stretch; }
+  .relevance-bar.high { background: var(--primary); }
+  .relevance-bar.mid { background: var(--blue); }
+  .relevance-bar.low { background: var(--ink-tertiary); }
+  .paper-content { flex: 1; min-width: 0; }
+  .paper-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+  .paper-title { font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; line-height: 1.4; }
+  .paper-title:hover { color: var(--primary-hover); }
+  .paper-tag { display: inline-block; padding: 1px 8px; font-size: 11px; font-weight: 500;
+                color: var(--ink-muted); background: var(--surface-2); border: 1px solid var(--hairline);
+                border-radius: 10px; white-space: nowrap; flex-shrink: 0; }
+  .paper-abstract { font-size: 14px; color: var(--ink-subtle); margin-bottom: 8px; line-height: 1.55; }
+  .paper-links { display: flex; gap: 8px; font-size: 13px; }
+  .paper-links a { color: var(--ink-tertiary); text-decoration: none; }
+  .paper-links a:hover { color: var(--primary-hover); }
+  .footer { margin-top: 48px; padding: 24px 0; border-top: 1px solid var(--hairline);
+             text-align: center; font-size: 12px; color: var(--ink-tertiary); }
+  .footer a { color: var(--ink-subtle); text-decoration: none; }
+  .footer a:hover { color: var(--ink); }
+  @media (max-width: 640px) {
+    .container { padding: 0 16px; }
+    .paper-header { flex-direction: column; gap: 4px; }
+    .relevance-bar { margin-right: 12px; }
+    .paper-links { flex-wrap: wrap; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "论文日报 | 2026-08-23（周日）",
+  "datePublished": "2026-08-23",
+  "inLanguage": "zh-CN",
+  "url": "https://alloevil.github.io/AI-Paper-Daily/2026-08-23.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "AI Paper Daily",
+    "url": "https://alloevil.github.io/AI-Paper-Daily"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "alloevil",
+    "url": "https://github.com/alloevil"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "最新论文"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <div class="container">
+    <header class="masthead">
+      <div>
+        <h1>📊 论文日报 2026-08-23（周日）</h1>
+        <span class="range">2026-08-23（周日）</span>
+      </div>
+      <div class="nav"><a href="./">← 返回日报</a><a href="2026-08-24.html">后一天 →</a><a href="2026-08-22.html">← 前一天</a></div>
+    </header>
+    <p class="intro">2026-08-23（周日） 收录 6 篇论文：MileGPO: Milestone Inference with Local Evidence for Graph-Based Policy Optimization of Long-Horizon LLM Agents；Towards general embodied intelligence: integrating large language models, knowledge bases, and reasoning capabilities to build the next generation of AI agents；Credit Without Ground Truth: Auditing Step-Level Credit Assignment in LLM Agents Against Executed Replay…</p>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2608.19803v1" target="_blank" rel="noopener">MileGPO: Milestone Inference with Local Evidence for Graph-Based Policy Optimization of Long-Horizon LLM Agents</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">Credit assignment is challenging in long-horizon agentic reinforcement learning, where supervision often comes only from final rewards. Existing methods refine trajectory-level signals into step-level...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2608.19803v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.19803v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2608.19794v1" target="_blank" rel="noopener">Towards general embodied intelligence: integrating large language models, knowledge bases, and reasoning capabilities to build the next generation of AI agents</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">The convergence of large language models (LLMs), structured knowledge bases (KBs), and reasoning ability (RA) presents a promising trajectory toward general embodied intelligence (GEI). This paper rev...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2608.19794v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.19794v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2608.19760v1" target="_blank" rel="noopener">Credit Without Ground Truth: Auditing Step-Level Credit Assignment in LLM Agents Against Executed Replay</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">Audited against causal ground truth from executed replay in a single-agent tool environment (ALFWorld), none of the step-level credit signals used to train LLM agents -- LLM-judge scores, outcome-cond...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2608.19760v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.19760v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2608.19701v1" target="_blank" rel="noopener">Beyond Memory Majority: Latent-Source Reasoning for Multi-Agent Memory Arbitration</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">Long-term multi-agent systems continuously accumulate the memories produced by different agents. Existing memory methods typically treat retrieved memories as independent evidence and combine them thr...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2608.19701v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.19701v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2608.19699v1" target="_blank" rel="noopener">An Evidence-Grounded Multi-Agent System for High-Level Bio-Robot Design</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">In this paper, a bio-robot is an engineered living or biohybrid system in which living cells perform one or more core functions, such as sensing, information processing, actuation or output. We focus ...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2608.19699v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.19699v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2608.19662v1" target="_blank" rel="noopener">ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">Agentic language models repeatedly encode tool and skill schemas that recur across requests in different combinations and orders, preventing standard prefix caching from reusing their key--value (KV) ...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2608.19662v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.19662v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+    <footer class="footer">
+      <p>Built by <a href="https://github.com/alloevil">alloevil</a> · <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a> · <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a></p>
+    </footer>
+  </div>
+</body>
+</html>

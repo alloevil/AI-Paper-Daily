@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>论文日报 2026-08-26（周三） — AI Paper Daily</title>
+<meta name="description" content="2026-08-26（周三） 收录 10 篇论文：WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report；On-Policy Self-Distillation in Diffusion Models；Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses…">
+<link rel="canonical" href="https://alloevil.github.io/AI-Paper-Daily/2026-08-26.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://alloevil.github.io/AI-Paper-Daily/2026-08-26.html">
+<meta property="og:title" content="论文日报 2026-08-26（周三） — AI Paper Daily">
+<meta property="og:description" content="2026-08-26（周三） 收录 10 篇论文：WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report；On-Policy Self-Distillation in Diffusion Models；Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses…">
+<meta property="og:site_name" content="AI Paper Daily">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<style>
+  :root {
+    --primary: #6366f1;
+    --primary-hover: #818cf8;
+    --blue: #3b82f6;
+    --ink: #f7f8f8;
+    --ink-muted: #d0d6e0;
+    --ink-subtle: #8a8f98;
+    --ink-tertiary: #62666d;
+    --canvas: #010102;
+    --surface-1: #0f1011;
+    --surface-2: #141516;
+    --hairline: #23252a;
+    --hairline-strong: #34343a;
+    --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-sans); background: var(--canvas); color: var(--ink);
+         -webkit-font-smoothing: antialiased; line-height: 1.5; }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .masthead { padding: 20px 0 16px; border-bottom: 1px solid var(--hairline);
+               display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .masthead h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.4px; }
+  .masthead .range { font-size: 13px; color: var(--ink-subtle); }
+  .masthead a { padding: 6px 14px; font-size: 13px; font-weight: 500; color: var(--ink-subtle);
+                 border: 1px solid var(--hairline); border-radius: 8px; text-decoration: none; }
+  .masthead a:hover { color: var(--ink); border-color: var(--hairline-strong); }
+  .intro { padding: 16px 0 4px; font-size: 14px; color: var(--ink-subtle); }
+  .paper-card { display: flex; padding: 16px 0; border-radius: 8px; }
+  .paper-card:hover { background: var(--surface-1); }
+  .paper-card + .paper-card { border-top: 1px solid var(--hairline); }
+  .relevance-bar { width: 4px; border-radius: 2px; flex-shrink: 0; margin-right: 16px; align-self: stretch; }
+  .relevance-bar.high { background: var(--primary); }
+  .relevance-bar.mid { background: var(--blue); }
+  .relevance-bar.low { background: var(--ink-tertiary); }
+  .paper-content { flex: 1; min-width: 0; }
+  .paper-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+  .paper-title { font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; line-height: 1.4; }
+  .paper-title:hover { color: var(--primary-hover); }
+  .paper-tag { display: inline-block; padding: 1px 8px; font-size: 11px; font-weight: 500;
+                color: var(--ink-muted); background: var(--surface-2); border: 1px solid var(--hairline);
+                border-radius: 10px; white-space: nowrap; flex-shrink: 0; }
+  .paper-abstract { font-size: 14px; color: var(--ink-subtle); margin-bottom: 8px; line-height: 1.55; }
+  .paper-links { display: flex; gap: 8px; font-size: 13px; }
+  .paper-links a { color: var(--ink-tertiary); text-decoration: none; }
+  .paper-links a:hover { color: var(--primary-hover); }
+  .footer { margin-top: 48px; padding: 24px 0; border-top: 1px solid var(--hairline);
+             text-align: center; font-size: 12px; color: var(--ink-tertiary); }
+  .footer a { color: var(--ink-subtle); text-decoration: none; }
+  .footer a:hover { color: var(--ink); }
+  @media (max-width: 640px) {
+    .container { padding: 0 16px; }
+    .paper-header { flex-direction: column; gap: 4px; }
+    .relevance-bar { margin-right: 12px; }
+    .paper-links { flex-wrap: wrap; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "论文日报 | 2026-08-26（周三）",
+  "datePublished": "2026-08-26",
+  "inLanguage": "zh-CN",
+  "url": "https://alloevil.github.io/AI-Paper-Daily/2026-08-26.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "AI Paper Daily",
+    "url": "https://alloevil.github.io/AI-Paper-Daily"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "alloevil",
+    "url": "https://github.com/alloevil"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "最新论文"
+    },
+    {
+      "@type": "Thing",
+      "name": "有代码"
+    },
+    {
+      "@type": "Thing",
+      "name": "高票"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <div class="container">
+    <header class="masthead">
+      <div>
+        <h1>📊 论文日报 2026-08-26（周三）</h1>
+        <span class="range">2026-08-26（周三）</span>
+      </div>
+      <div class="nav"><a href="./">← 返回日报</a><a href="2026-08-27.html">后一天 →</a><a href="2026-08-25.html">← 前一天</a></div>
+    </header>
+    <p class="intro">2026-08-26（周三） 收录 10 篇论文：WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report；On-Policy Self-Distillation in Diffusion Models；Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses…</p>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.24053" target="_blank" rel="noopener">WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Universal multimodal embeddings are becoming a core component of modern AI systems, enabling heterogeneous content to be represented in a shared space for applications such as retrieval, recommendatio...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.24053" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.24053" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.24646" target="_blank" rel="noopener">On-Policy Self-Distillation in Diffusion Models</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Reinforcement learning can align diffusion models with human preferences and task-specific objectives, but endpoint rewards do not specify how an intermediate denoising prediction should change. We in...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.24646" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.24646" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.24876" target="_blank" rel="noopener">Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Workin...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.24876" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.24876" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2608.24087v1" target="_blank" rel="noopener">Knowing When to Ask for Help: Bayesian Self-Escalation in Hierarchical LLM Agents</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Current LLM agent systems decide delegation before reasoning begins (a router picks a model) or after a response is complete (a verifier scores it and may retry). We study a third regime: an agent tha...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2608.24087v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.24087v1" target="_blank" rel="noopener">📥 PDF</a> · <a href="https://github.com/nadeem-shaikh/llm-self-escalation" target="_blank" rel="noopener">💻 代码</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.24696" target="_blank" rel="noopener">On-policy Distillation with Verifiable Reward</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Reinforcement Learning with Verifiable Rewards (RLVR) and on-policy distillation (OPD) have become two widely adopted paradigms for post-training large language models. However, RLVR suffers from spar...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.24696" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.24696" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.24877" target="_blank" rel="noopener">From Seeing to Acting: Smart Glasses as First-Person Intelligence Platforms</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Smart glasses are evolving from capture and display accessories into first-person intelligence platforms that connect human perception, persistent context, and digital or physical action. Their on-bod...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.24877" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.24877" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.24845" target="_blank" rel="noopener">LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">We present LAION-BVD, a large-scale open video dataset for multimodal learning, which contains 1.3B platform-specific video URLs collected from CommonCrawl. From these, we download 80M videos with a t...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.24845" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.24845" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.23566" target="_blank" rel="noopener">Best Practice Critic Optimization</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Group-based reinforcement learning methods such as GRPO for large language models avoid training a critic by sampling multiple responses for each prompt. A reliable critic could instead estimate token...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.23566" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.23566" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2608.24794" target="_blank" rel="noopener">CAFE: Self-Improving Search Agents Need Co-Evolving Feedback</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Outcome-supervised search agents learn when and how to retrieve evidence, but terminal rewards neither localize intermediate errors nor redirect an ongoing trajectory before those errors compound. Tre...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2608.24794" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.24794" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2608.24846v1" target="_blank" rel="noopener">FedV-KGQA: Multi-Hop Question Answering over Vertically Partitioned Knowledge Graphs</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">Real-world data for knowledge graph question answering is often distributed across different organizations due to governance and data sovereignty constraints. While centralized systems exist, they can...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2608.24846v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2608.24846v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+    <footer class="footer">
+      <p>Built by <a href="https://github.com/alloevil">alloevil</a> · <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a> · <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a></p>
+    </footer>
+  </div>
+</body>
+</html>

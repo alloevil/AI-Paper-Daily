@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>论文日报 2026-07-18（周六） — AI Paper Daily</title>
+<meta name="description" content="2026-07-18（周六） 收录 10 篇论文：SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration；AutoSynthesis: An agentic system for automated meta-analysis；Linear representations of grammaticality in neural language models…">
+<link rel="canonical" href="https://alloevil.github.io/AI-Paper-Daily/2026-07-18.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://alloevil.github.io/AI-Paper-Daily/2026-07-18.html">
+<meta property="og:title" content="论文日报 2026-07-18（周六） — AI Paper Daily">
+<meta property="og:description" content="2026-07-18（周六） 收录 10 篇论文：SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration；AutoSynthesis: An agentic system for automated meta-analysis；Linear representations of grammaticality in neural language models…">
+<meta property="og:site_name" content="AI Paper Daily">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<style>
+  :root {
+    --primary: #6366f1;
+    --primary-hover: #818cf8;
+    --blue: #3b82f6;
+    --ink: #f7f8f8;
+    --ink-muted: #d0d6e0;
+    --ink-subtle: #8a8f98;
+    --ink-tertiary: #62666d;
+    --canvas: #010102;
+    --surface-1: #0f1011;
+    --surface-2: #141516;
+    --hairline: #23252a;
+    --hairline-strong: #34343a;
+    --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-sans); background: var(--canvas); color: var(--ink);
+         -webkit-font-smoothing: antialiased; line-height: 1.5; }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .masthead { padding: 20px 0 16px; border-bottom: 1px solid var(--hairline);
+               display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .masthead h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.4px; }
+  .masthead .range { font-size: 13px; color: var(--ink-subtle); }
+  .masthead a { padding: 6px 14px; font-size: 13px; font-weight: 500; color: var(--ink-subtle);
+                 border: 1px solid var(--hairline); border-radius: 8px; text-decoration: none; }
+  .masthead a:hover { color: var(--ink); border-color: var(--hairline-strong); }
+  .intro { padding: 16px 0 4px; font-size: 14px; color: var(--ink-subtle); }
+  .paper-card { display: flex; padding: 16px 0; border-radius: 8px; }
+  .paper-card:hover { background: var(--surface-1); }
+  .paper-card + .paper-card { border-top: 1px solid var(--hairline); }
+  .relevance-bar { width: 4px; border-radius: 2px; flex-shrink: 0; margin-right: 16px; align-self: stretch; }
+  .relevance-bar.high { background: var(--primary); }
+  .relevance-bar.mid { background: var(--blue); }
+  .relevance-bar.low { background: var(--ink-tertiary); }
+  .paper-content { flex: 1; min-width: 0; }
+  .paper-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+  .paper-title { font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; line-height: 1.4; }
+  .paper-title:hover { color: var(--primary-hover); }
+  .paper-tag { display: inline-block; padding: 1px 8px; font-size: 11px; font-weight: 500;
+                color: var(--ink-muted); background: var(--surface-2); border: 1px solid var(--hairline);
+                border-radius: 10px; white-space: nowrap; flex-shrink: 0; }
+  .paper-abstract { font-size: 14px; color: var(--ink-subtle); margin-bottom: 8px; line-height: 1.55; }
+  .paper-links { display: flex; gap: 8px; font-size: 13px; }
+  .paper-links a { color: var(--ink-tertiary); text-decoration: none; }
+  .paper-links a:hover { color: var(--primary-hover); }
+  .footer { margin-top: 48px; padding: 24px 0; border-top: 1px solid var(--hairline);
+             text-align: center; font-size: 12px; color: var(--ink-tertiary); }
+  .footer a { color: var(--ink-subtle); text-decoration: none; }
+  .footer a:hover { color: var(--ink); }
+  @media (max-width: 640px) {
+    .container { padding: 0 16px; }
+    .paper-header { flex-direction: column; gap: 4px; }
+    .relevance-bar { margin-right: 12px; }
+    .paper-links { flex-wrap: wrap; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "论文日报 | 2026-07-18（周六）",
+  "datePublished": "2026-07-18",
+  "inLanguage": "zh-CN",
+  "url": "https://alloevil.github.io/AI-Paper-Daily/2026-07-18.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "AI Paper Daily",
+    "url": "https://alloevil.github.io/AI-Paper-Daily"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "alloevil",
+    "url": "https://github.com/alloevil"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "最新论文"
+    },
+    {
+      "@type": "Thing",
+      "name": "有代码"
+    },
+    {
+      "@type": "Thing",
+      "name": "高票"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <div class="container">
+    <header class="masthead">
+      <div>
+        <h1>📊 论文日报 2026-07-18（周六）</h1>
+        <span class="range">2026-07-18（周六）</span>
+      </div>
+      <div class="nav"><a href="./">← 返回日报</a><a href="2026-07-21.html">后一天 →</a><a href="2026-07-17.html">← 前一天</a></div>
+    </header>
+    <p class="intro">2026-07-18（周六） 收录 10 篇论文：SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration；AutoSynthesis: An agentic system for automated meta-analysis；Linear representations of grammaticality in neural language models…</p>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2607.15257v1" target="_blank" rel="noopener">SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Recent advances in Tool-Integrated Large Language Models have made web search a core capability of information-seeking agents. However, as interaction histories grow, agents increasingly struggle to t...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.15257v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.15257v1" target="_blank" rel="noopener">📥 PDF</a> · <a href="https://github.com/antins-labs/SearchOS" target="_blank" rel="noopener">💻 代码</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2607.15247v1" target="_blank" rel="noopener">AutoSynthesis: An agentic system for automated meta-analysis</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">Evidence synthesis is crucial for turning primary research into reliable knowledge for science, medicine, education, and policy. Yet, quantitative evidence synthesis remains largely manual and difficu...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.15247v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.15247v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2607.15175v1" target="_blank" rel="noopener">Linear representations of grammaticality in neural language models</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">Whether neural language models (NLMs) possess the ability to distinguish strings on the basis of their grammaticality remains a debated topic in the computational linguistics literature. Existing evid...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.15175v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.15175v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2607.15095v1" target="_blank" rel="noopener">Digital Pantheon: Simulating and Auditing Coalition Formation with LLM Agents</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">The formation of political coalitions is a complex negotiation driven by both concrete policy objectives and deep-seated ideological convictions. While Large Language Models (LLMs) open new avenues fo...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.15095v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.15095v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2607.15079v1" target="_blank" rel="noopener">BrainPilot: Automating Brain Discovery with Agentic Research</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">Understanding the brain increasingly depends on integrating evidence across scales, modalities, and disciplines. Addressing a single research question therefore requires a coordinated sequence of oper...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.15079v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.15079v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2607.14896v1" target="_blank" rel="noopener">StructureClaw: Traceable LLM Agents and an Executable Benchmark for Structural Engineering Workflows</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">Addressing a structural-engineering request requires more than a single answer; it requires a chain of interdependent artifacts: interpreted requirements, a computable model, validation records, solve...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.14896v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.14896v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2607.14886v1" target="_blank" rel="noopener">Reachability-Aware Pretraining for Efficient Target-Oriented Path Exploration in Temporal Knowledge Graph Reasoning</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">Temporal Knowledge Graph (TKG) reasoning under the extrapolation setting focuses on forecasting future time-stamped events (facts) from historical data in a temporal knowledge graph. Existing approach...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.14886v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.14886v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2607.14661v1" target="_blank" rel="noopener">SmartRAG: Native Graph-Based RAG for Mobile Device</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">Deploying large language models (LLMs) as personal assistants on mobile devices demands privacy, low latency, and offline availability, yet the computational cost of giant models clashes with strict e...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.14661v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.14661v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2607.14651v1" target="_blank" rel="noopener">MemPoison: Uncovering Persistent Memory Threats and Structural Blind Spots in LLM Agents</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">Persistent external memory enhances agent continuity but introduces persistent security vulnerabilities: adversarial content can be injected via standard interaction channels, retained across turns, a...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.14651v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.14651v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="2" data-tags="最新论文">
+        <div class="relevance-bar mid"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="http://arxiv.org/abs/2607.14642v1" target="_blank" rel="noopener">MCPEvol-Bench: Benchmarking LLM Agent Performance Across Dynamic Evolutions of MCP Servers</a>
+            <span class="paper-tag">最新论文</span>
+          </div>
+          <p class="paper-abstract">As Model Context Protocol (MCP) servers emerge as the core infrastructure for connecting LLMs with external tools, existing benchmarks leverage real-world MCP servers to evaluate LLM agents&#39; tool-usin...</p>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.14642v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.14642v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+    <footer class="footer">
+      <p>Built by <a href="https://github.com/alloevil">alloevil</a> · <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a> · <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a></p>
+    </footer>
+  </div>
+</body>
+</html>

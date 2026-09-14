@@ -34,7 +34,7 @@ def latest_content_date(reports: list, weekly_reports: tuple = ()) -> str:
     return max(dates) if dates else datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
 
-WEEKLY_PAGE_TEMPLATE = '''<!DOCTYPE html>
+PAGE_TEMPLATE = '''<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
@@ -106,6 +106,7 @@ WEEKLY_PAGE_TEMPLATE = '''<!DOCTYPE html>
     .paper-links {{ flex-wrap: wrap; }}
   }}
 </style>
+{extra_head}
 </head>
 <body>
   <div class="container">
@@ -114,7 +115,7 @@ WEEKLY_PAGE_TEMPLATE = '''<!DOCTYPE html>
         <h1>📊 {title}</h1>
         <span class="range">{range}</span>
       </div>
-      <a href="./">← 返回日报</a>
+      <div class="nav">{nav}</div>
     </header>
     <p class="intro">{desc}</p>
 {cards}
@@ -127,16 +128,95 @@ WEEKLY_PAGE_TEMPLATE = '''<!DOCTYPE html>
 '''
 
 
+def _jsonld(payload: dict) -> str:
+    """A JSON-LD block, escaped for embedding in HTML."""
+    import json as _json
+    body = _json.dumps(payload, ensure_ascii=False, indent=2)
+    return f'<script type="application/ld+json">\n{body}\n</script>'
+
+
+def render_page(*, title: str, date_range: str, desc: str, papers: list[dict],
+                page_url: str, nav: str, extra_head: str = '') -> str:
+    """Render one standalone page. Daily pages and weekly pages share this."""
+    return PAGE_TEMPLATE.format(
+        title=title,
+        range=_esc(date_range),
+        desc=_esc(desc),
+        cards='\n'.join(paper_card_html(p) for p in papers),
+        site_url=SITE_URL,
+        page_url=page_url,
+        nav=nav,
+        extra_head=extra_head,
+    )
+
+
 def render_weekly_page(week_label: str, date_range: str, papers: list[dict]) -> str:
     """Render a standalone HTML page for one weekly-YYYY-WNN.md report."""
-    cards = '\n'.join(paper_card_html(p) for p in papers)
-    return WEEKLY_PAGE_TEMPLATE.format(
+    page_url = f'{SITE_URL}/weekly-{week_label}.html'
+    return render_page(
         title=f'论文周报 {week_label}',
-        range=_esc(date_range),
+        date_range=date_range,
         desc=f'过去 7 天按热度（投票 / 星标 / 开源代码）重排的 Top {len(papers)}',
-        cards=cards,
-        site_url=SITE_URL,
-        page_url=f'{SITE_URL}/weekly-{week_label}.html',
+        papers=papers,
+        page_url=page_url,
+        nav='<a href="./">← 返回日报</a>',
+        extra_head=_jsonld({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": f"论文周报 {week_label}（{date_range}）",
+            "inLanguage": "zh-CN",
+            "url": page_url,
+            "isPartOf": {"@type": "WebSite", "name": SITE_TITLE, "url": SITE_URL},
+            "author": {"@type": "Person", "name": "alloevil",
+                       "url": "https://github.com/alloevil"},
+        }),
+    )
+
+
+_WEEKDAYS = {0: '周一', 1: '周二', 2: '周三', 3: '周四', 4: '周五', 5: '周六', 6: '周日'}
+
+
+def render_daily_page(date_str: str, papers: list[dict],
+                      prev_date: str | None = None, next_date: str | None = None) -> str:
+    """Render one day's digest as its own page.
+
+    The archive used to be reachable only as raw Markdown (docs/.nojekyll disables Jekyll), which
+    left every day beyond the newest 30 with no indexable page: the content existed, the page did
+    not. This is that page.
+    """
+    try:
+        weekday = _WEEKDAYS.get(datetime.strptime(date_str, '%Y-%m-%d').weekday(), '')
+    except ValueError:
+        weekday = ''
+    label = f'{date_str}（{weekday}）' if weekday else date_str
+    page_url = f'{SITE_URL}/{date_str}.html'
+    titles = '；'.join(p['title'] for p in papers[:3])
+    desc = f'{label} 收录 {len(papers)} 篇论文：{titles}…'
+    tags = sorted({t for p in papers for t in p.get('tags', [])})[:4]
+    links = ['<a href="./">← 返回日报</a>']
+    if next_date:
+        links.append(f'<a href="{next_date}.html">后一天 →</a>')
+    if prev_date:
+        links.append(f'<a href="{prev_date}.html">← 前一天</a>')
+    return render_page(
+        title=f'论文日报 {label}',
+        date_range=label,
+        desc=desc,
+        papers=papers,
+        page_url=page_url,
+        nav=''.join(links),
+        extra_head=_jsonld({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": f"论文日报 | {label}",
+            "datePublished": date_str,
+            "inLanguage": "zh-CN",
+            "url": page_url,
+            "isPartOf": {"@type": "WebSite", "name": SITE_TITLE, "url": SITE_URL},
+            "author": {"@type": "Person", "name": "alloevil",
+                       "url": "https://github.com/alloevil"},
+            "about": [{"@type": "Thing", "name": t} for t in tags],
+        }),
     )
 
 
@@ -337,7 +417,7 @@ def main():
         sections.append(
             f'    <div class="date-section" data-date="{date_str}" style="display:{display}">\n'
             f'      <div class="date-header">\n'
-            f'        <h3>📄 {date_str}（{weekday}）</h3>\n'
+            f'        <h3><a href="{date_str}.html">📄 {date_str}（{weekday}）</a></h3>\n'
             f'        <span class="date-count">{len(papers)} 篇论文</span>\n'
             f'      </div>\n'
             f'{cards}\n'
@@ -368,6 +448,15 @@ def main():
         html = html.replace(
             '<!-- WEEKLY_LINK -->',
             f'<a href="weekly-{latest_label}.html">📊 周报 {latest_label}</a>')
+
+    # Daily pages: one per committed digest, every day — not just the 30 inlined in the index.
+    # prev/next links give crawlers and readers a chain through the whole archive.
+    for i, (date_str, papers) in enumerate(reports):
+        next_date = reports[i - 1][0] if i > 0 else None
+        prev_date = reports[i + 1][0] if i + 1 < len(reports) else None
+        with open(os.path.join(DIST_DIR, f'{date_str}.html'), 'w', encoding='utf-8') as f:
+            f.write(render_daily_page(date_str, papers, prev_date, next_date))
+    print(f"[OK] {len(reports)} daily page(s) generated")
 
     # Update stats
     html = html.replace('id="stat-papers">0<', f'id="stat-papers">{total_papers}<')
@@ -413,10 +502,9 @@ def main():
     print("[OK] robots.txt generated")
 
     # Generate sitemap.xml
-    # 只收录真正的 HTML 页面：首页 + 每篇周报页。刻意不收录的：
-    #   - 每日 docs/YYYY-MM-DD.md（以及 index.md）：docs/.nojekyll 关掉了
-    #     Jekyll，所以它们只以 text/markdown 形式 200，对应的 .html 是 404；
-    #     内容本身也已经内联进首页，列进来等于几十条重复内容，且每天增长。
+    # 只收录真正的 HTML 页面：首页 + 每篇周报页 + 每个日报页。刻意不收录的：
+    #   - 每日 docs/YYYY-MM-DD.md 与 index.md：docs/.nojekyll 关掉了 Jekyll，
+    #     它们只以 text/markdown 形式 200；同日期的 .html 才是页面，已收录。
     #   - template.html：本脚本的渲染输入，不是页面（它自带指向首页的
     #     rel=canonical，所以即使被抓到也会归并到首页）。
     #   - feed.xml 和图片等静态资源：不是页面，塞进 sitemap 只会稀释它。
@@ -430,7 +518,8 @@ def main():
         return dates[-1] if dates else build_date
     urls = [(f'{SITE_URL}/', build_date)] + [
         (f'{SITE_URL}/weekly-{wl}.html', _weekly_lastmod(dr))
-        for wl, dr, _ in weekly_reports]
+        for wl, dr, _ in weekly_reports] + [
+        (f'{SITE_URL}/{date_str}.html', date_str) for date_str, _ in reports]
     sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n'
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                + '\n'.join(

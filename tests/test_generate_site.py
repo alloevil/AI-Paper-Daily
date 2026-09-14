@@ -11,7 +11,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
 
 from reports import parse_papers, parse_weekly_title
-from generate_site import render_weekly_page, generate_rss
+from generate_site import render_weekly_page, render_daily_page, generate_rss
 from common import render_report
 
 SAMPLE_MD = """# 📄 论文日报 | 2026-08-20（周四）
@@ -130,6 +130,28 @@ class WeeklySitePageTest(unittest.TestCase):
         self.assertIn("Top Weekly Paper", html)
         self.assertIn("https://arxiv.org/abs/2608.44444", html)
         self.assertIn('href="./"', html)  # 返回首页链接
+
+
+    def test_daily_page_carries_the_head_metadata(self):
+        html = render_daily_page("2026-08-14", self.papers, prev_date="2026-08-13")
+        self.assertIn("<title>论文日报 2026-08-14", html)
+        self.assertIn('rel="canonical" href="https://alloevil.github.io/AI-Paper-Daily/2026-08-14.html"', html)
+        self.assertIn('name="description"', html)
+        self.assertIn('property="og:', html)
+        self.assertIn("application/ld+json", html)
+        self.assertIn('"datePublished": "2026-08-14"', html)
+
+    def test_daily_page_links_neighbouring_days(self):
+        html = render_daily_page("2026-08-14", self.papers,
+                                 prev_date="2026-08-13", next_date="2026-08-15")
+        self.assertIn('href="2026-08-13.html"', html)
+        self.assertIn('href="2026-08-15.html"', html)
+
+    def test_daily_page_escapes_a_title_that_looks_like_markup(self):
+        papers = [dict(self.papers[0], title='A <script>alert(1)</script> "paper"')]
+        html = render_daily_page("2026-08-14", papers)
+        self.assertNotIn("<script>alert(1)</script>", html)
+        self.assertIn("&lt;script&gt;", html)
 
     def test_weekly_report_in_feed(self):
         xml = generate_rss([], [("2026-W34", self.date_range, self.papers)])

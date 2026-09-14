@@ -179,7 +179,7 @@ pip install -r requirements.txt
 
 python scripts/main.py            # one daily run (LLM_API_KEY optional; without it the run falls back to the votes/code ranking)
 python scripts/main.py --weekly   # weekly roundup, re-ranked from the committed daily reports
-python scripts/generate_site.py   # rebuild docs/: index.html, weekly pages, feed.xml, robots.txt, sitemap.xml
+python scripts/generate_site.py   # rebuild docs/: index.html, one page per day, weekly pages, feed.xml, robots.txt, sitemap.xml
 ```
 
 Running it as the intended automation needs no local install at all — fork the repo, enable Actions, and add `LLM_API_KEY` only if you want the LLM selection pass. See Quick Start above.
@@ -197,7 +197,7 @@ Running it as the intended automation needs no local install at all — fork the
 - You need exhaustive coverage of a field. arXiv candidates must match the configured keyword × category query; HuggingFace entries are chosen by HuggingFace and are not filtered by your keywords or categories, only by their publish window. At most `max_papers` (10) survive per day (the committed archive runs 4–10). This is a sampler, not a literature review.
 - You want a human-curated newsletter. Selection is one automated pass with no editor — an LLM pass when a key is set, a votes/code ranking otherwise — so a badly worded abstract can sink a good paper.
 - You need the summaries to be authoritative. With a key the one-line reason is LLM-generated from the abstract (in Chinese by default); in the committed archive that line is only the selection tag. Either way it can flatten or misstate a paper's actual contribution — read the linked paper before citing it.
-- You want each daily digest as its own web page. `docs/.nojekyll` disables Jekyll, so the dated files are served as raw Markdown (`2026-09-05.md` is 200, `2026-09-05.html` is 404); the HTML pages are the home page plus one page per week, and the daily content is inlined into the home page.
+- You want a database or a query interface. The archive is one Markdown file per day plus one generated HTML page per day; there is no index over papers beyond the site's tag filters, and no API.
 - You want reasoning about a paper beyond its abstract. It never fetches the PDF or the code — it works from titles, abstracts, categories, vote counts and whether a code link exists.
 - You want delivery guarantees. GitHub Actions cron is best-effort; a dropped run means that day has no digest, and the workflow deliberately skips the commit rather than pushing an empty one.
 
@@ -269,7 +269,7 @@ AI-Paper-Daily/
 │   ├── reports.py            # Read layer: parse committed markdown reports
 │   ├── storage.py            # Subscriber list (light file data)
 │   ├── weekly.py             # Weekly digest (re-rank last 7 days)
-│   ├── generate_site.py      # Site builder (index.html / weekly pages / feed.xml / robots.txt / sitemap.xml)
+│   ├── generate_site.py      # Site builder (index.html / daily pages / weekly pages / feed.xml / robots.txt / sitemap.xml)
 │   └── main.py               # Entry point (--weekly for weekly mode)
 ├── tests/                    # Unit tests (python -m unittest discover tests)
 ├── config.yaml               # Configuration
