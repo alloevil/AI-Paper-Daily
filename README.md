@@ -160,7 +160,7 @@ When `LLM_API_KEY` is set, the candidates go to the LLM in a single call that sc
 3. Availability of open-source code (prioritized)
 4. Community votes / stars
 
-Without a key — or if the call fails — it falls back to a votes + open-code ranking (`stars` is never populated by either collector, so in practice the fallback is votes + code). The 20 committed reports that record their mode — every digest committed since 2026-08-21, the date the line was added — all show this no-key fallback (`_本期筛选方式：热度回退（未配置 LLM）_`), i.e. the published archive was produced with no key set; the 41 earlier reports carry no mode line.
+Without a key — or if the call fails — it falls back to a votes + open-code ranking (`stars` is never populated by either collector, so in practice the fallback is votes + code). Every digest that records its filtering mode records the no-key fallback — every digest committed since 2026-08-21, the date the line was added — all show this no-key fallback (`_本期筛选方式：热度回退（未配置 LLM）_`), i.e. the published archive was produced with no key set; the 41 earlier reports carry no mode line.
 
 ### Delivery
 

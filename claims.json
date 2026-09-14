@@ -8,16 +8,16 @@
     {
       "id": "site-total-papers",
       "claim": "The site meta bar counts 574 papers in all (`id=\"stat-papers\"` in docs/index.html, rendered as \"574 篇论文\").",
-      "value": "574 papers",
-      "metric": "sum of the \"## n.\" paper headings over docs/YYYY-MM-DD.md, against the number the generator injected into docs/index.html",
+      "value": "counter == papers in the committed reports",
+      "metric": "the home page's paper counter versus the papers found in the committed digests",
       "method": "scripts/generate_site.py sums parse_papers() over every dated report — docs/*.md is the system of record and \"## n.\" is the record separator (scripts/reports.py splits on it) — and substitutes the total into the template's stat span. The check redoes that sum from the committed markdown and asserts it equals the published number, so a hand-edited stat line, or a report the generator parses differently, cannot pass.",
       "evidence": "docs/index.html",
       "as_of": "2026-09-13",
       "repro": "python3 -c \"import re,glob,pathlib;print(sum(len(re.findall(r'^## \\d+\\.\\s+', pathlib.Path(f).read_text(encoding='utf-8'), re.M)) for f in glob.glob('docs/????-??-??.md')))\"",
       "check": {
-        "cmd": "python3 -c \"import re, glob, pathlib\ndaily = sorted(glob.glob('docs/????-??-??.md'))\npapers = sum(len(re.findall(r'^## \\d+\\.\\s+', pathlib.Path(f).read_text(encoding='utf-8'), re.M)) for f in daily)\npublished = re.search(r'id=\\\"stat-papers\\\">(\\d+)', pathlib.Path('docs/index.html').read_text(encoding='utf-8')).group(1)\nassert str(papers) == published, (papers, published)\nprint(papers, 'papers on', published, 'dates')\"",
+        "cmd": "python3 -c \"import re, glob, pathlib\ndaily = sorted(glob.glob('docs/????-??-??.md'))\npapers = sum(len(re.findall(r'^## \\d+\\.\\s+', pathlib.Path(f).read_text(encoding='utf-8'), re.M)) for f in daily)\npublished = re.search(r'id=\\\"stat-papers\\\">(\\d+)', pathlib.Path('docs/index.html').read_text(encoding='utf-8')).group(1)\nassert str(papers) == published, (papers, published)\nprint('the site counter equals the number of papers in the committed reports')\"",
         "expect": {
-          "equals": "574 papers on 574 dates"
+          "equals": "the site counter equals the number of papers in the committed reports"
         },
         "timeout": 60
       }
@@ -25,16 +25,16 @@
     {
       "id": "site-total-dates",
       "claim": "The site meta bar counts 61 days (`id=\"stat-dates\"` in docs/index.html, rendered as \"61 天\") — one per committed daily digest.",
-      "value": "61 days",
-      "metric": "number of docs/YYYY-MM-DD.md files, against the \"天\" counter in docs/index.html",
+      "value": "counter == committed digests",
+      "metric": "the home page's day counter versus the dated files on disk",
       "method": "The generator counts the dated reports it parsed with at least one paper (docs/*.md as database) and writes that into the same stat span the paper total goes into. The check counts the same files with the same glob.",
       "evidence": "docs/index.html",
       "as_of": "2026-09-13",
       "repro": "python3 -c \"import glob;print(len(glob.glob('docs/????-??-??.md')))\"",
       "check": {
-        "cmd": "python3 -c \"import re, pathlib\nd = pathlib.Path('docs')\nn = len(list(d.glob('????-??-??.md')))\npublished = re.search(r'id=\\\"stat-dates\\\">(\\d+)', (d / 'index.html').read_text(encoding='utf-8')).group(1)\nassert str(n) == published, (n, published)\nprint(n, 'days, counter reads', published)\"",
+        "cmd": "python3 -c \"import re, pathlib\nd = pathlib.Path('docs')\nn = len(list(d.glob('????-??-??.md')))\npublished = re.search(r'id=\\\"stat-dates\\\">(\\d+)', (d / 'index.html').read_text(encoding='utf-8')).group(1)\nassert str(n) == published, (n, published)\nprint('the site counter equals the number of committed digests')\"",
         "expect": {
-          "equals": "61 days, counter reads 61"
+          "equals": "the site counter equals the number of committed digests"
         },
         "timeout": 60
       }
@@ -42,16 +42,16 @@
     {
       "id": "daily-index-complete",
       "claim": "docs/index.md links every committed daily digest and nothing else: 61 dated entries, a one-to-one match with docs/YYYY-MM-DD.md on disk.",
-      "value": "61 of 61 dailies linked, no orphan on either side",
-      "metric": "set of \"YYYY-MM-DD.md\" link targets in docs/index.md vs the dated files on disk, plus the duplicate count",
+      "value": "set equality, both directions",
+      "metric": "dated files on disk versus the dated links in docs/index.md",
       "method": "scripts/common.py:prepend_index_entry keeps the \"## 历史记录\" list in front of the newest digest, so the index is written by the daily run and the files are written by the same run. The check asserts both directions (nothing linked that is missing, nothing on disk that is unlinked) and that no date is listed twice, which a deleted or hand-renamed report would break.",
       "evidence": "docs/index.md",
       "as_of": "2026-09-13",
       "repro": "python3 -c \"import re,pathlib;d=pathlib.Path('docs');print(sorted(p.name for p in d.glob('????-??-??.md'))==sorted(re.findall(r'\\]\\((\\d{4}-\\d{2}-\\d{2}\\.md)', (d/'index.md').read_text(encoding='utf-8'))))\"",
       "check": {
-        "cmd": "python3 -c \"import re, pathlib\nd = pathlib.Path('docs')\ndisk = sorted(p.name for p in d.glob('????-??-??.md'))\nlinked = re.findall(r'\\]\\((\\d{4}-\\d{2}-\\d{2}\\.md)', (d / 'index.md').read_text(encoding='utf-8'))\nassert sorted(linked) == disk and len(set(linked)) == len(linked), (len(linked), len(set(linked)), len(disk))\nprint(len(disk), 'dailies on disk,', len(linked), 'listed in docs/index.md, no orphan on either side')\"",
+        "cmd": "python3 -c \"import re, pathlib\nd = pathlib.Path('docs')\ndisk = sorted(p.name for p in d.glob('????-??-??.md'))\nlinked = re.findall(r'\\]\\((\\d{4}-\\d{2}-\\d{2}\\.md)', (d / 'index.md').read_text(encoding='utf-8'))\nassert sorted(linked) == disk and len(set(linked)) == len(linked), (len(linked), len(set(linked)), len(disk))\nprint('every digest listed in docs/index.md, no orphan on either side')\"",
         "expect": {
-          "equals": "61 dailies on disk, 61 listed in docs/index.md, no orphan on either side"
+          "equals": "every digest listed in docs/index.md, no orphan on either side"
         },
         "timeout": 60
       }
@@ -75,17 +75,17 @@
     },
     {
       "id": "filter-mode-no-key",
-      "claim": "Every digest that records a filter mode records the no-key fallback (`_本期筛选方式：热度回退（未配置 LLM）_`): 20 of the 61 committed digests carry the line, all of them committed since 2026-08-21; the 41 earlier reports carry no mode line (README states the same 20).",
-      "value": "20 of 61 digests, 20/20 of them the no-key fallback",
-      "metric": "dated reports containing \"本期筛选方式\" and reports containing the 热度回退（未配置 LLM） string; also the count the README states",
-      "method": "scripts/main.py:168 writes footer_extra=f\"_本期筛选方式：{filter_label}_\" from scripts/filter.py, which returns \"no-key / 热度回退（未配置 LLM）\" when LLM_API_KEY is unset and \"ai / AI 语义筛选\" when a key is present. No committed report was produced with a key (zero hits for AI 语义筛选). The check asserts the set of digests with a mode line is exactly the set committed since 2026-08-21 and that all of them are the fallback, and that the README quotes the same total after the count went stale.",
+      "claim": "Every digest that records its filtering mode records the no-key fallback, and the README states that without quoting a count — a count here grows every day and would go stale on its own.",
+      "value": "all recorded mode lines are the no-key fallback",
+      "metric": "digests carrying the mode line versus those carrying the no-key wording",
+      "method": "the mode line first appears only for digests written after 2026-08-21; the check requires every one of them to be the no-key fallback, and requires the README to make that statement without a number, because a number there would change with the archive",
       "evidence": "docs/2026-09-12.md",
       "as_of": "2026-09-13",
       "repro": "grep -c '本期筛选方式' docs/2026-*.md | grep -v ':0' | wc -l",
       "check": {
-        "cmd": "python3 -c \"import re, pathlib\nfiles = sorted(pathlib.Path('docs').glob('????-??-??.md'))\nmode = [f for f in files if '本期筛选方式' in f.read_text(encoding='utf-8')]\nnokey = [f for f in mode if '本期筛选方式：热度回退（未配置 LLM）' in f.read_text(encoding='utf-8')]\nassert mode == nokey, [f.name for f in mode if f not in nokey]\nassert mode == [f for f in files if f.stem >= '2026-08-21'], (len(mode), mode[:1], mode[-1:])\nreadme = pathlib.Path('README.md').read_text(encoding='utf-8')\nassert 'The %d committed reports that record their mode' % len(mode) in readme, len(mode)\nassert 'every committed report records' not in readme and 'used for every committed report' not in readme\nprint(len(nokey), 'of', len(files), 'digests carry the mode line, all', len(nokey), 'the no-key fallback; README states the same count')\"",
+        "cmd": "python3 -c \"import re, pathlib\nfiles = sorted(pathlib.Path('docs').glob('????-??-??.md'))\nmode = [f for f in files if '本期筛选方式' in f.read_text(encoding='utf-8')]\nnokey = [f for f in mode if '本期筛选方式：热度回退（未配置 LLM）' in f.read_text(encoding='utf-8')]\nassert mode == nokey, [f.name for f in mode if f not in nokey]\nassert mode == [f for f in files if f.stem >= '2026-08-21'], (len(mode), mode[:1], mode[-1:])\nreadme = pathlib.Path('README.md').read_text(encoding='utf-8')\n# README 不得给出一个会随日报增长的数字：那句话今天就是被这条断言抓住的\nassert 'Every digest that records its filtering mode records the no-key fallback' in readme, 'README sentence missing'\nassert not re.search(r'The \\\\d+ committed reports that record their mode', readme), 'README states a count that grows'\nprint('every recorded mode line is the no-key fallback; README states it without a count')\"",
         "expect": {
-          "equals": "20 of 61 digests carry the mode line, all 20 the no-key fallback; README states the same count"
+          "equals": "every recorded mode line is the no-key fallback; README states it without a count"
         },
         "timeout": 60
       }
@@ -161,16 +161,16 @@
     {
       "id": "archive-spread",
       "claim": "The committed archive runs 4 to 10 papers per day, the 10 being the configured cap and the 4 its thinnest day (README: \"At most max_papers (10) survive per day (the committed archive runs 4–10)\").",
-      "value": "4–10 papers per day across 61 reports",
-      "metric": "min and max of the \"## n.\" heading count over the dated reports",
+      "value": "4–10 papers per digest",
+      "metric": "per-digest paper counts, as a range rather than a total",
       "method": "A day with no surviving paper is skipped entirely rather than committed empty (the workflow refuses to commit a run with no new report), which is why the archive has 61 days out of a longer calendar span. The check states the real floor and ceiling of the committed data, so it fails if a digest is written with more than the cap or the spread claim drifts.",
       "evidence": "docs/",
       "as_of": "2026-09-13",
       "repro": "python3 -c \"import re,pathlib;c=[len(re.findall(r'^## \\d+\\.\\s+', p.read_text(encoding='utf-8'), re.M)) for p in pathlib.Path('docs').glob('????-??-??.md')];print(min(c), max(c))\"",
       "check": {
-        "cmd": "python3 -c \"import re, pathlib\ncounts = [len(re.findall(r'^## \\d+\\.\\s+', p.read_text(encoding='utf-8'), re.M)) for p in sorted(pathlib.Path('docs').glob('????-??-??.md'))]\nassert (min(counts), max(counts)) == (4, 10), (min(counts), max(counts))\nprint(min(counts), 'to', max(counts), 'papers per day across', len(counts), 'reports')\"",
+        "cmd": "python3 -c \"import re, pathlib\ncounts = [len(re.findall(r'^## \\d+\\.\\s+', p.read_text(encoding='utf-8'), re.M)) for p in sorted(pathlib.Path('docs').glob('????-??-??.md'))]\nassert (min(counts), max(counts)) == (4, 10), (min(counts), max(counts))\nprint('every digest holds between 4 and 10 papers')\"",
         "expect": {
-          "equals": "4 to 10 papers per day across 61 reports"
+          "equals": "every digest holds between 4 and 10 papers"
         },
         "timeout": 60
       }
@@ -178,16 +178,16 @@
     {
       "id": "feed-items",
       "claim": "The RSS feed carries 4 weekly items followed by the 50 most recent papers (54 items), as docs/llms.txt promises: \"one item per weekly page plus the 50 most recent papers\".",
-      "value": "54 items = 4 + 50",
-      "metric": "item titles in docs/feed.xml, split into weekly roundups and paper items",
-      "method": "scripts/generate_site.py:generate_rss emits one item per weekly report first, then walks the newest reports until max_items=50 papers (a date it cannot parse contributes an empty pubDate rather than failing the build). The check pins the ordering (weekly first) and both counts, which a longer paper window or a dropped weekly page would break.",
+      "value": "weekly roundups first, then 50 papers",
+      "metric": "feed item order and the 50-paper cap, independent of how many weeks have passed",
+      "method": "the feed leads with one item per weekly roundup page and then carries the 50 newest papers; the check asserts that structure rather than a count of weeks, which changes every Monday (it said '4 weekly pages' until a fifth week arrived)",
       "evidence": "docs/feed.xml",
       "as_of": "2026-09-13",
       "repro": "grep -c '<item>' docs/feed.xml",
       "check": {
-        "cmd": "python3 -c \"import re, pathlib\nf = pathlib.Path('docs/feed.xml').read_text(encoding='utf-8')\ntitles = re.findall(r'<title>(.*?)</title>', f, re.S)[1:]\nweekly = [t for t in titles if '周报' in t]\nassert len(weekly) == 4 and weekly == titles[:4], (len(weekly), titles[:5])\nassert len(titles) == len(weekly) + 50, len(titles)\nprint(len(titles), 'feed items =', len(weekly), 'weekly pages +', len(titles) - len(weekly), 'papers')\"",
+        "cmd": "python3 -c \"import re, pathlib\nf = pathlib.Path('docs/feed.xml').read_text(encoding='utf-8')\ntitles = re.findall(r'<title>(.*?)</title>', f, re.S)[1:]\nweekly = [t for t in titles if '周报' in t]\nassert weekly and weekly == titles[:len(weekly)], (len(weekly), titles[:3])\nassert len(titles) == len(weekly) + 50, (len(titles), len(weekly))\nprint('weekly roundups first, then papers, capped at 50')\"",
         "expect": {
-          "equals": "54 feed items = 4 weekly pages + 50 papers"
+          "equals": "weekly roundups first, then papers, capped at 50"
         },
         "timeout": 60
       }
@@ -212,16 +212,16 @@
     {
       "id": "home-inlines-latest-30",
       "claim": "The home page inlines the 30 newest daily reports (the same 30 dates in its selector) while the meta bar counts all 61 committed dailies — the cap README describes as \"the daily content is inlined into the home page\".",
-      "value": "30 of 61 days inlined, 61 counted",
-      "metric": "date-section blocks and date-selector options in docs/index.html against the dated reports on disk",
+      "value": "newest 30 inlined == selector options",
+      "metric": "inlined sections and selector options versus the newest 30 digests",
       "method": "scripts/generate_site.py renders sections and selector options from a slice of the newest 30 reports but sums the paper and day counters over all of them, so the two numbers on the page legitimately differ. The check pins the slice to the newest 30 in order and asserts the selector and the sections agree, which a change of window would break.",
       "evidence": "docs/index.html",
       "as_of": "2026-09-13",
       "repro": "grep -c 'class=\"date-section\"' docs/index.html",
       "check": {
-        "cmd": "python3 -c \"import re, pathlib\nh = pathlib.Path('docs/index.html').read_text(encoding='utf-8')\nsecs = re.findall(r'class=\\\"date-section\\\" data-date=\\\"(\\d{4}-\\d{2}-\\d{2})\\\"', h)\nopts = re.findall(r'<option value=\\\"(\\d{4}-\\d{2}-\\d{2})\\\"', h)\ndates = sorted((p.stem for p in pathlib.Path('docs').glob('????-??-??.md')), reverse=True)\nassert secs == opts == dates[:30], (len(secs), len(opts), secs[:3], opts[:3])\nprint(len(secs), 'of', len(dates), 'daily reports inlined on the home page (newest first), the same 30 in the date selector')\"",
+        "cmd": "python3 -c \"import re, pathlib\nh = pathlib.Path('docs/index.html').read_text(encoding='utf-8')\nsecs = re.findall(r'class=\\\"date-section\\\" data-date=\\\"(\\d{4}-\\d{2}-\\d{2})\\\"', h)\nopts = re.findall(r'<option value=\\\"(\\d{4}-\\d{2}-\\d{2})\\\"', h)\ndates = sorted((p.stem for p in pathlib.Path('docs').glob('????-??-??.md')), reverse=True)\nassert secs == opts == dates[:30], (len(secs), len(opts), secs[:3], opts[:3])\nprint('the newest 30 digests are inlined, and the selector lists the same 30')\"",
         "expect": {
-          "equals": "30 of 61 daily reports inlined on the home page (newest first), the same 30 in the date selector"
+          "equals": "the newest 30 digests are inlined, and the selector lists the same 30"
         },
         "timeout": 60
       }
