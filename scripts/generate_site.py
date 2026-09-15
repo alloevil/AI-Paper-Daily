@@ -105,6 +105,14 @@ PAGE_TEMPLATE = '''<!DOCTYPE html>
     .relevance-bar {{ margin-right: 12px; }}
     .paper-links {{ flex-wrap: wrap; }}
   }}
+    /* reduced-motion：本页动效只是悬停与入场过渡，关掉后信息完全不变。 */
+    @media (prefers-reduced-motion: reduce) {{
+      *, *::before, *::after {{
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+      }}
+    }}
 </style>
 {extra_head}
 </head>
