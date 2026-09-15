@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>论文日报 2026-09-15（周二） — AI Paper Daily</title>
+<meta name="description" content="2026-09-15（周二） 收录 10 篇论文：Atria Dawn: The Dawn of Agentic Superintelligence；Dream-RSI: Recursive Self-Improvement through Evolving Worlds；PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models…">
+<link rel="canonical" href="https://alloevil.github.io/AI-Paper-Daily/2026-09-15.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://alloevil.github.io/AI-Paper-Daily/2026-09-15.html">
+<meta property="og:title" content="论文日报 2026-09-15（周二） — AI Paper Daily">
+<meta property="og:description" content="2026-09-15（周二） 收录 10 篇论文：Atria Dawn: The Dawn of Agentic Superintelligence；Dream-RSI: Recursive Self-Improvement through Evolving Worlds；PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models…">
+<meta property="og:site_name" content="AI Paper Daily">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<style>
+  :root {
+    --primary: #6366f1;
+    --primary-hover: #818cf8;
+    --blue: #3b82f6;
+    --ink: #f7f8f8;
+    --ink-muted: #d0d6e0;
+    --ink-subtle: #8a8f98;
+    --ink-tertiary: #62666d;
+    --canvas: #010102;
+    --surface-1: #0f1011;
+    --surface-2: #141516;
+    --hairline: #23252a;
+    --hairline-strong: #34343a;
+    --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-sans); background: var(--canvas); color: var(--ink);
+         -webkit-font-smoothing: antialiased; line-height: 1.5; }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .masthead { padding: 20px 0 16px; border-bottom: 1px solid var(--hairline);
+               display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .masthead h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.4px; }
+  .masthead .range { font-size: 13px; color: var(--ink-subtle); }
+  .masthead a { padding: 6px 14px; font-size: 13px; font-weight: 500; color: var(--ink-subtle);
+                 border: 1px solid var(--hairline); border-radius: 8px; text-decoration: none; }
+  .masthead a:hover { color: var(--ink); border-color: var(--hairline-strong); }
+  .intro { padding: 16px 0 4px; font-size: 14px; color: var(--ink-subtle); }
+  .paper-card { display: flex; padding: 16px 0; border-radius: 8px; }
+  .paper-card:hover { background: var(--surface-1); }
+  .paper-card + .paper-card { border-top: 1px solid var(--hairline); }
+  .relevance-bar { width: 4px; border-radius: 2px; flex-shrink: 0; margin-right: 16px; align-self: stretch; }
+  .relevance-bar.high { background: var(--primary); }
+  .relevance-bar.mid { background: var(--blue); }
+  .relevance-bar.low { background: var(--ink-tertiary); }
+  .paper-content { flex: 1; min-width: 0; }
+  .paper-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+  .paper-title { font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; line-height: 1.4; }
+  .paper-title:hover { color: var(--primary-hover); }
+  .paper-tag { display: inline-block; padding: 1px 8px; font-size: 11px; font-weight: 500;
+                color: var(--ink-muted); background: var(--surface-2); border: 1px solid var(--hairline);
+                border-radius: 10px; white-space: nowrap; flex-shrink: 0; }
+  .paper-abstract { font-size: 14px; color: var(--ink-subtle); margin-bottom: 8px; line-height: 1.55; }
+  .paper-links { display: flex; gap: 8px; font-size: 13px; }
+  .paper-links a { color: var(--ink-tertiary); text-decoration: none; }
+  .paper-links a:hover { color: var(--primary-hover); }
+  .footer { margin-top: 48px; padding: 24px 0; border-top: 1px solid var(--hairline);
+             text-align: center; font-size: 12px; color: var(--ink-tertiary); }
+  .footer a { color: var(--ink-subtle); text-decoration: none; }
+  .footer a:hover { color: var(--ink); }
+  @media (max-width: 640px) {
+    .container { padding: 0 16px; }
+    .paper-header { flex-direction: column; gap: 4px; }
+    .relevance-bar { margin-right: 12px; }
+    .paper-links { flex-wrap: wrap; }
+  }
+    /* reduced-motion：本页动效只是悬停与入场过渡，关掉后信息完全不变。 */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+      }
+    }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "论文日报 | 2026-09-15（周二）",
+  "datePublished": "2026-09-15",
+  "inLanguage": "zh-CN",
+  "url": "https://alloevil.github.io/AI-Paper-Daily/2026-09-15.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "AI Paper Daily",
+    "url": "https://alloevil.github.io/AI-Paper-Daily"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "alloevil",
+    "url": "https://github.com/alloevil"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "有代码"
+    },
+    {
+      "@type": "Thing",
+      "name": "高票"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <div class="container">
+    <header class="masthead">
+      <div>
+        <h1>📊 论文日报 2026-09-15（周二）</h1>
+        <span class="range">2026-09-15（周二）</span>
+      </div>
+      <div class="nav"><a href="./">← 返回日报</a><a href="2026-09-14.html">← 前一天</a></div>
+    </header>
+    <p class="intro">2026-09-15（周二） 收录 10 篇论文：Atria Dawn: The Dawn of Agentic Superintelligence；Dream-RSI: Recursive Self-Improvement through Evolving Worlds；PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models…</p>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.15818" target="_blank" rel="noopener">Atria Dawn: The Dawn of Agentic Superintelligence</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">As AI agents become participants in the development of their successors, they reshape both the production of intelligence and the role of human researchers. We introduce Atria Dawn Preview, a foundati...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.15818" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.15818" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.14858" target="_blank" rel="noopener">Dream-RSI: Recursive Self-Improvement through Evolving Worlds</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Recursive self-improvement is becoming increasingly vital for autonomous AI agents, where progress hinges on discovering high-value solutions across complex domains. The driver of this process is effe...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.14858" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.14858" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.14973" target="_blank" rel="noopener">PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">We present PhysBrain 1.5, a unified model for understanding physical environments, generating actions, and predicting future states. Motivated by the physical loop of observation, interaction, and env...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.14973" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.14973" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.15863" target="_blank" rel="noopener">LynnReal-Omni: Native multi-modal Video Generation for Agentic Visual Workflows</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Video diffusion models are stochastic and hard to control: precise content often requires repeated sampling without guaranteed success, and long-horizon scenes drift in appearance, interactions, and t...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.15863" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.15863" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.15973" target="_blank" rel="noopener">Discovery Foundation Models: Toward Open-Ended Discovery Intelligence</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Foundation models have progressed from learning and reasoning over existing knowledge, to increasingly learning through action, tool use, and outcome feedback. We argue that the next frontier is a fur...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.15973" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.15973" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.15478" target="_blank" rel="noopener">BVB: Benchmarking Agentic Video Understanding via Programmatic Reconstruction in Blender</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Multimodal agents can create complex videos in software such as Blender by coding without relying on diffusion models. Yet video understanding benchmarks still evaluate models mainly through question ...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.15478" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.15478" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.15364" target="_blank" rel="noopener">RSIAgent: Autonomous Exploration for Recursive Self-improvement in New Environments</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Digital agents must often adapt to new environments whose interfaces, tools, and failure modes are not fully captured by pretrained models. We introduce RSIAgent, a training-free multi-agent framework...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.15364" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.15364" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.15659" target="_blank" rel="noopener">Kaininja: Extending Native 3D Generators to the Part Level</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Native 3D generators turn one image into a single mesh. TRELLIS.2 and its peers deliver high-fidelity non-watertight geometry with materials, but the output is one fused object, while downstream work ...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.15659" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.15659" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.15128" target="_blank" rel="noopener">Omni-Streaming Thinking</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Streaming omni-modal models must decide what and when to answer from the video chunks and synchronized audio observed so far. Visual cues often support an interpretation before an utterance or sound e...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.15128" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.15128" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+      <div class="paper-card" data-relevance="3" data-tags="高票,有代码">
+        <div class="relevance-bar high"></div>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" href="https://arxiv.org/abs/2609.15134" target="_blank" rel="noopener">HazardAuditor: From Executable Threats to Safer Computer-Use Agents</a>
+            <span class="paper-tag">高票/有代码</span>
+          </div>
+          <p class="paper-abstract">Computer-use agents increasingly interact with browsers, terminals, file systems, and external services, introducing safety risks that emerge through runtime behavior rather than generated content alo...</p>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.15134" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2609.15134" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </div>
+    <footer class="footer">
+      <p>Built by <a href="https://github.com/alloevil">alloevil</a> · <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a> · <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a></p>
+    </footer>
+  </div>
+</body>
+</html>

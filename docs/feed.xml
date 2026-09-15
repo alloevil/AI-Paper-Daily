@@ -5,7 +5,7 @@
     <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 14 Sep 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 论文周报 2026-W38（2026-09-08 ~ 2026-09-14）</title>
@@ -41,6 +41,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Atria Dawn: The Dawn of Agentic Superintelligence (2026-09-15)</title>
+      <description>As AI agents become participants in the development of their successors, they reshape both the production of intelligence and the role of human researchers. We introduce Atria Dawn Preview, a foundati...</description>
+      <link>https://arxiv.org/abs/2609.15818</link>
+      <guid>https://arxiv.org/abs/2609.15818#2026-09-15</guid>
+      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Dream-RSI: Recursive Self-Improvement through Evolving Worlds (2026-09-15)</title>
+      <description>Recursive self-improvement is becoming increasingly vital for autonomous AI agents, where progress hinges on discovering high-value solutions across complex domains. The driver of this process is effe...</description>
+      <link>https://arxiv.org/abs/2609.14858</link>
+      <guid>https://arxiv.org/abs/2609.14858#2026-09-15</guid>
+      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models (2026-09-15)</title>
+      <description>We present PhysBrain 1.5, a unified model for understanding physical environments, generating actions, and predicting future states. Motivated by the physical loop of observation, interaction, and env...</description>
+      <link>https://arxiv.org/abs/2609.14973</link>
+      <guid>https://arxiv.org/abs/2609.14973#2026-09-15</guid>
+      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 LynnReal-Omni: Native multi-modal Video Generation for Agentic Visual Workflows (2026-09-15)</title>
+      <description>Video diffusion models are stochastic and hard to control: precise content often requires repeated sampling without guaranteed success, and long-horizon scenes drift in appearance, interactions, and t...</description>
+      <link>https://arxiv.org/abs/2609.15863</link>
+      <guid>https://arxiv.org/abs/2609.15863#2026-09-15</guid>
+      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Discovery Foundation Models: Toward Open-Ended Discovery Intelligence (2026-09-15)</title>
+      <description>Foundation models have progressed from learning and reasoning over existing knowledge, to increasingly learning through action, tool use, and outcome feedback. We argue that the next frontier is a fur...</description>
+      <link>https://arxiv.org/abs/2609.15973</link>
+      <guid>https://arxiv.org/abs/2609.15973#2026-09-15</guid>
+      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 BVB: Benchmarking Agentic Video Understanding via Programmatic Reconstruction in Blender (2026-09-15)</title>
+      <description>Multimodal agents can create complex videos in software such as Blender by coding without relying on diffusion models. Yet video understanding benchmarks still evaluate models mainly through question ...</description>
+      <link>https://arxiv.org/abs/2609.15478</link>
+      <guid>https://arxiv.org/abs/2609.15478#2026-09-15</guid>
+      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 RSIAgent: Autonomous Exploration for Recursive Self-improvement in New Environments (2026-09-15)</title>
+      <description>Digital agents must often adapt to new environments whose interfaces, tools, and failure modes are not fully captured by pretrained models. We introduce RSIAgent, a training-free multi-agent framework...</description>
+      <link>https://arxiv.org/abs/2609.15364</link>
+      <guid>https://arxiv.org/abs/2609.15364#2026-09-15</guid>
+      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Kaininja: Extending Native 3D Generators to the Part Level (2026-09-15)</title>
+      <description>Native 3D generators turn one image into a single mesh. TRELLIS.2 and its peers deliver high-fidelity non-watertight geometry with materials, but the output is one fused object, while downstream work ...</description>
+      <link>https://arxiv.org/abs/2609.15659</link>
+      <guid>https://arxiv.org/abs/2609.15659#2026-09-15</guid>
+      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Omni-Streaming Thinking (2026-09-15)</title>
+      <description>Streaming omni-modal models must decide what and when to answer from the video chunks and synchronized audio observed so far. Visual cues often support an interpretation before an utterance or sound e...</description>
+      <link>https://arxiv.org/abs/2609.15128</link>
+      <guid>https://arxiv.org/abs/2609.15128#2026-09-15</guid>
+      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 HazardAuditor: From Executable Threats to Safer Computer-Use Agents (2026-09-15)</title>
+      <description>Computer-use agents increasingly interact with browsers, terminals, file systems, and external services, introducing safety risks that emerge through runtime behavior rather than generated content alo...</description>
+      <link>https://arxiv.org/abs/2609.15134</link>
+      <guid>https://arxiv.org/abs/2609.15134#2026-09-15</guid>
+      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models (2026-09-14)</title>
@@ -321,76 +391,6 @@
       <link>https://arxiv.org/abs/2609.08368</link>
       <guid>https://arxiv.org/abs/2609.08368#2026-09-09</guid>
       <pubDate>Wed, 09 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Marigold V2: Revisiting Diffusion Transformers for Monocular Depth Estimation (2026-09-09)</title>
-      <description>Monocular depth estimation is a ubiquitous yet highly ill-posed computer vision task, with downstream applications in scene reconstruction, computational photography, and robotics, among others. Despi...</description>
-      <link>https://arxiv.org/abs/2609.08084</link>
-      <guid>https://arxiv.org/abs/2609.08084#2026-09-09</guid>
-      <pubDate>Wed, 09 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Environments as Scaffold: Enriching Feedback to Bootstrap Self-Evolving Agents in Long-Horizon Tasks (2026-09-09)</title>
-      <description>Large Language Models demonstrate remarkable proficiency in static reasoning, yet training them as autonomous agents through Reinforcement Learning (RL) for long-horizon tasks is often hindered by sev...</description>
-      <link>https://arxiv.org/abs/2609.08404</link>
-      <guid>https://arxiv.org/abs/2609.08404#2026-09-09</guid>
-      <pubDate>Wed, 09 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model (2026-09-09)</title>
-      <description>We study the problem of navigating cluttered indoor environments with a humanoid robot. Unlike conventional methods that model navigation as a 2D path planning problem, humanoid traversal in cluttered...</description>
-      <link>https://arxiv.org/abs/2609.09158</link>
-      <guid>https://arxiv.org/abs/2609.09158#2026-09-09</guid>
-      <pubDate>Wed, 09 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 CoVeR: Coverage-Based Token Pruning for Multi-View 3D Reasoning in VLMs (2026-09-09)</title>
-      <description>Representing a 3D scene as multi-view images allows 2D VLMs to reason in 3D by reusing priors from pre-training, sidestepping the scarcity of annotated 3D data. However, it produces thousands of redun...</description>
-      <link>https://arxiv.org/abs/2609.08345</link>
-      <guid>https://arxiv.org/abs/2609.08345#2026-09-09</guid>
-      <pubDate>Wed, 09 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 WorldSculpt: Generating Compositional Worlds from Grounded Videos (2026-09-07)</title>
-      <description>We study the problem of generating a compositional 3D representation of a cluttered scene containing hundreds of objects. The goal is to represent the scene as a collection of individual object meshes...</description>
-      <link>https://arxiv.org/abs/2609.05416</link>
-      <guid>https://arxiv.org/abs/2609.05416#2026-09-07</guid>
-      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Ask Before You Optimize: Dynamic Pre-Formulation Clarification for Interactive Optimization (2026-09-07)</title>
-      <description>Large language models (LLMs) are increasingly used to formulate optimization models from natural-language problem descriptions, yet realistic operations research (OR) requests are often incomplete: mi...</description>
-      <link>https://arxiv.org/abs/2609.05258</link>
-      <guid>https://arxiv.org/abs/2609.05258#2026-09-07</guid>
-      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 CONTINUITY: Security-Context Contracts for Composable LLM Agent Controls (2026-09-07)</title>
-      <description>LLM agent systems increasingly combine provenance tracking, authorization, policy enforcement, protocol adapters, and execution controls. However, individually correct security mechanisms do not neces...</description>
-      <link>http://arxiv.org/abs/2609.05269v1</link>
-      <guid>http://arxiv.org/abs/2609.05269v1#2026-09-07</guid>
-      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MABPD: Multi-Agent Bias Probing &amp; Detection via Structured Argument Debate (2026-09-07)</title>
-      <description>Media bias in news articles operates through subtle linguistic cues---loaded language, selective framing, and strategic omission---that resist single-model detection and have traditionally required la...</description>
-      <link>http://arxiv.org/abs/2609.04841v1</link>
-      <guid>http://arxiv.org/abs/2609.04841v1#2026-09-07</guid>
-      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Don't Drop Dropout: Optimizing Layer Sparsity for Efficient LLM Training and Inference (2026-09-07)</title>
-      <description>Layer dropout (a.k.a. stochastic depth) has been shown to enable faster training, higher accuracy, and robustness to zero-shot layer pruning in both language and vision transformers. However, as model...</description>
-      <link>https://arxiv.org/abs/2609.05275</link>
-      <guid>https://arxiv.org/abs/2609.05275#2026-09-07</guid>
-      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RISE: Recursive Improvement via Self-Extrapolating Policy Distillation (2026-09-07)</title>
-      <description>On-policy distillation (OPD) provides dense, per-token supervision for language model post-training, but its effectiveness is bottlenecked by teacher quality: external teachers suffer from distributio...</description>
-      <link>https://arxiv.org/abs/2609.05295</link>
-      <guid>https://arxiv.org/abs/2609.05295#2026-09-07</guid>
-      <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
