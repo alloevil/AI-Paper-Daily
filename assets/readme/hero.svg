@@ -75,18 +75,49 @@
     <text x="1136" y="402" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#9AA3B8">config.yaml · python3.11 · GitHub Actions</text>
   </g>
 
-  <style>
-    /* 数据沿四个阶段流过：依次点亮，6 秒一轮。动效只引导视线，不承载信息。
-       reduced-motion 下全部静止、全部保持完全可见。 */
-    @keyframes stageGlow { 0%, 100% { opacity: .6 } 9% { opacity: 1 } 32% { opacity: .6 } }
-    #stage-collection { animation: stageGlow 6s ease-in-out infinite; animation-delay: 0s; }
-    #stage-filtering  { animation: stageGlow 6s ease-in-out infinite; animation-delay: 1.5s; }
-    #stage-persistence{ animation: stageGlow 6s ease-in-out infinite; animation-delay: 3s; }
-    #stage-weekly     { animation: stageGlow 6s ease-in-out infinite; animation-delay: 4.5s; }
+    <style>
+    /* 数据沿四个阶段流过：依次点亮并轻微上浮，6 秒一轮。动效只引导视线，不承载信息。
+       幅度：透明度 .22 → 1 且上移（位置变化比透明度可感得多）。
+       reduced-motion 下全部静止、全部完全可见。 */
+    @keyframes stageGlow {
+      0%       { opacity: .15; transform: translateY(0) scale(1); }
+      6%, 40%  { opacity: 1;   transform: translateY(-18px) scale(1.04); }
+      52%      { opacity: .15; transform: translateY(0) scale(1); }
+      100%     { opacity: .15; transform: translateY(0) scale(1); }
+    }
+    }
+    #stage-collection { animation: stageGlow 5s ease-in-out infinite; animation-delay: 0s; }
+    #stage-filtering { animation: stageGlow 5s ease-in-out infinite; animation-delay: 1.25s; }
+    #stage-persistence { animation: stageGlow 5s ease-in-out infinite; animation-delay: 2.5s; }
+    #stage-weekly { animation: stageGlow 5s ease-in-out infinite; animation-delay: 3.75s; }
     @media (prefers-reduced-motion: reduce) {
-      #stage-collection, #stage-filtering, #stage-persistence, #stage-weekly {
-        animation: none; opacity: 1;
-      }
+      #stage-collection, #stage-filtering, #stage-persistence, #stage-weekly { animation: none; opacity: 1; transform: none; }
+    }
+      #chip-claim, #chip-check, #chip-expect, #chip-asof,
+    #step-releases, #step-parse, #step-data, #step-pages,
+    #stage-collection, #stage-filtering, #stage-persistence, #stage-weekly {
+      transform-box: fill-box; transform-origin: center;
+    }
+  </style>
+
+  <g id="packet-layer">
+    <circle id="packet" cx="78" cy="300" r="7" fill="#6366F1" fill-opacity="0.9"/>
+    <circle id="packet-halo" cx="78" cy="300" r="14" fill="#6366F1" fill-opacity="0.18"/>
+  </g>
+
+  <style>
+    /* 一个光点沿管线走过：位移跨越大半个画幅，这是眼睛余光能捕捉到的那类运动。
+       它只做引导，不承载信息 —— reduced-motion 下不显示。 */
+    @keyframes packetRun {
+      0%   { transform: translateX(0); opacity: 0; }
+      8%   { opacity: 1; }
+      92%  { opacity: 1; }
+      100% { transform: translateX(1044px); opacity: 0; }
+    }
+    #packet { animation: packetRun 5s linear infinite; }
+    #packet-halo { animation: packetRun 5s linear infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      #packet { display: none; }
     }
   </style>
 </svg>
