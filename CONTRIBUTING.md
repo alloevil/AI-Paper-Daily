@@ -80,6 +80,42 @@ export LLM_BASE_URL="https://api.openai.com/v1"
 python scripts/main.py
 ```
 
+### 本地预览站点
+
+```bash
+# 离线渲染全部页面（读 docs/*.md，不需要网络与 key）
+python3 scripts/generate_site.py
+
+# 起个静态服务看效果（只绑本机）
+python3 -m http.server 8765 --directory docs
+# 打开 http://127.0.0.1:8765/
+```
+
+改 `docs/template.html` 或 `scripts/generate_site.py` 之后**必须重跑生成器**，页面才会变。
+
+### 推送前的同步（每天都有的 cron 提交）
+
+日报流水线**每天**会提交一次：新的 `docs/YYYY-MM-DD.md`，以及它顺手重新生成的
+`docs/index.html`、`docs/YYYY-MM-DD.html`、`docs/feed.xml`、`docs/sitemap.xml`。而设计改动
+（改模板/生成器后重新生成**全部**页面）改的正是同一批文件，所以推送前几乎总会撞上冲突。
+解法是固定的，但**只对生成物成立**：
+
+```bash
+python3 scripts/sync.py            # 同步 → 校验 → 推送
+python3 scripts/sync.py --no-push  # 只同步 + 校验，不推
+```
+
+脚本做三件事：
+
+1. `git fetch` 后 rebase；
+2. 冲突里的**生成物**（`docs/*.html` 除 `template.html` 外、`feed.xml`、`sitemap.xml`、
+   `robots.txt`）自动取我方版本并重跑 `scripts/generate_site.py` —— 重新生成的结果才同时
+   包含远端的新一天和新的模板；**数据与源码**（`docs/*.md`、`docs/template.html`、
+   `scripts/**`、`tests/**`、`claims.json`）会停下来交给你人工合并；
+3. 推送前跑生成器幂等检查与 `python -m unittest discover tests`，不过就不推。
+
+> 生成物永远不要手工合并：它是生成器的输出，重跑一次才是对的。
+
 ## 📄 License
 
 提交代码即表示你同意将代码以 [MIT License](LICENSE) 发布。
