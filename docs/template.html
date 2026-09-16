@@ -175,7 +175,7 @@
     text-decoration: none;
     border: 1px solid var(--hairline);
     border-radius: 6px;
-    transition: all 0.15s;
+    transition: color .12s, background-color .12s, border-color .12s;
   }
   .header-links a:hover {
     color: var(--ink);
@@ -231,7 +231,7 @@
     border: none;
     cursor: pointer;
     flex-shrink: 0;
-    transition: color 0.15s, transform 0.1s;
+    transition: color .12s, transform .12s;
   }
   .star-btn:hover { color: var(--primary-hover); transform: scale(1.15); }
   .star-btn.active { color: var(--primary-hover); }
@@ -330,7 +330,7 @@
     border-radius: 6px;
     cursor: pointer;
     font-family: var(--font-sans);
-    transition: all 0.15s;
+    transition: color .12s, background-color .12s, border-color .12s;
   }
   .rl-actions button:hover {
     color: var(--ink);
@@ -417,7 +417,7 @@
     border: 1px solid transparent;
     border-radius: 6px;
     cursor: pointer;
-    transition: all 0.15s;
+    transition: color .12s, background-color .12s, border-color .12s;
     font-family: var(--font-sans);
   }
   .filter-btn:hover { color: var(--ink-muted); }
@@ -459,7 +459,7 @@
     border: 1px solid var(--hairline);
     border-radius: 6px;
     font-family: var(--font-sans);
-    transition: border-color 0.15s;
+    transition: border-color .12s;
   }
   .search-input::placeholder { color: var(--ink-tertiary); }
   .search-input:hover { border-color: var(--hairline-strong); }
@@ -478,7 +478,7 @@
   .paper-card {
     display: flex;
     padding: 18px 0;
-    transition: background 0.15s;
+    transition: background-color .12s;
     border-radius: 8px;
   }
   .paper-card:hover {
@@ -547,7 +547,7 @@
     min-height: 24px;
     color: var(--ink-subtle);
     text-decoration: none;
-    transition: color 0.15s;
+    transition: color .12s;
   }
   .paper-links a:hover { color: var(--primary-hover); }
 
@@ -590,14 +590,45 @@
     .filters { gap: 12px; padding: 10px 0; }
   }
 
-  /* reduced-motion: the only motion is hover and filter transitions; switching it off changes
-     no information. */
+  /* ------------------------------------------------------------------
+     动效：四个用途、四个旋钮。只动 transform / opacity（合成层免费），时长 ≤240ms。
+     ① 换期 —— View Transition：旧 200ms 加速退出、新 240ms 减速进入，方向由 --vt-slide 决定
+     ② 筛选/搜索后 —— 条目 150ms 淡入上移，逐条 12ms、总延迟封顶 120ms
+     ③ 收藏 —— 星标 pop 120ms、徽标 pop 160ms
+     ④ 移除条目 —— 150ms 折叠淡出
+     跨页导航（首页 ⇄ 日报页）用同一套机制的默认交叉淡出。
+     ------------------------------------------------------------------ */
+  @view-transition { navigation: auto; }
+  ::view-transition-old(paper-list) { animation: vt-out .2s cubic-bezier(.4,0,1,1) both; }
+  ::view-transition-new(paper-list) { animation: vt-in .24s cubic-bezier(.2,0,0,1) both; }
+  @keyframes vt-out { to { opacity: 0; transform: translateX(calc(-1 * var(--vt-slide, 12px))); } }
+  @keyframes vt-in { from { opacity: 0; transform: translateX(var(--vt-slide, 12px)); } }
+  ::view-transition-old(root) { animation-duration: .18s; }
+  ::view-transition-new(root) { animation-duration: .22s; }
+
+  .paper-card.enter { animation: card-in .15s cubic-bezier(.2,0,0,1) both; }
+  @keyframes card-in { from { opacity: 0; transform: translateY(4px); } }
+  .star-btn.pop { animation: star-pop .12s cubic-bezier(.2,0,0,1); }
+  @keyframes star-pop { 50% { transform: scale(1.12); } }
+  .rl-badge.pop { animation: badge-pop .16s cubic-bezier(.2,0,0,1); }
+  @keyframes badge-pop { 50% { transform: scale(1.25); } }
+  .rl-item.leaving { animation: item-out .15s cubic-bezier(.4,0,1,1) both; }
+  @keyframes item-out {
+    to { opacity: 0; transform: translateX(8px); max-height: 0; padding-top: 0; padding-bottom: 0; }
+  }
+
+  /* reduced-motion：本页动效只是悬停与筛选过渡，关掉后信息完全不变。 */
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: .001ms !important;
+      animation-delay: .001ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: .001ms !important;
       scroll-behavior: auto !important;
+    }
+    /* View Transition 的伪元素不在 `*` 的匹配范围内，必须单独关掉 */
+    ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) {
+      animation: none !important;
     }
   }
 </style>
@@ -695,7 +726,36 @@
 // 过滤状态：日期 / 相关度 / 标签 / 搜索词。所有过滤组合生效,并同步到 URL hash。
 const filterState = { date: '', rel: 'all', tag: 'all', q: '' };
 
-function switchDate(date) {
+// --- 动效：只在用户操作时触发，且都尊重 prefers-reduced-motion ---
+const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// ② 筛选/搜索后：结果条目逐条淡入。总延迟封顶 120ms，长列表不会越等越久。
+function animateCardsIn() {
+  const cards = Array.from(document.querySelectorAll('.date-section:not([style*="none"]) .paper-card'))
+    .filter(card => card.style.display !== 'none');
+  if (!cards.length || prefersReducedMotion()) return;
+  cards.forEach((card, i) => {
+    card.style.animationDelay = Math.min(i * 12, 120) + 'ms';
+    card.classList.remove('enter');
+    void card.offsetWidth;              // 强制重排，动画才能重新播放
+    card.classList.add('enter');
+  });
+  window.clearTimeout(animateCardsIn._timer);
+  animateCardsIn._timer = window.setTimeout(() => {
+    cards.forEach(card => { card.classList.remove('enter'); card.style.animationDelay = ''; });
+  }, 300);
+}
+
+// ③ 收藏反馈：元素 pop 一下（重启动画）
+function popAnimation(el) {
+  if (!el || prefersReducedMotion()) return;
+  el.classList.remove('pop');
+  void el.offsetWidth;
+  el.classList.add('pop');
+}
+
+// ① 换期：View Transition。方向由 --vt-slide 给（下一期从右侧进，上一期从左侧进）。
+function applyDateChange(date) {
   filterState.date = date;
   const select = document.getElementById('date-select');
   if (select && select.value !== date) select.value = date;
@@ -704,10 +764,31 @@ function switchDate(date) {
   updateHash();
 }
 
+function switchDate(date) {
+  const options = Array.from(document.getElementById('date-select').options).map(o => o.value);
+  const to = options.indexOf(date), from = options.indexOf(filterState.date); // 列表按新 → 旧
+  const next = to >= 0 && from >= 0 && to < from;
+  if (!document.startViewTransition || prefersReducedMotion()) {
+    applyDateChange(date);              // 不支持 / 用户要求少动效：瞬切，信息不变
+    return;
+  }
+  document.documentElement.style.setProperty('--vt-slide', next ? '12px' : '-12px');
+  const fromSec = document.querySelector('.date-section[data-date="' + filterState.date + '"]');
+  const toSec = document.querySelector('.date-section[data-date="' + date + '"]');
+  if (fromSec) fromSec.style.viewTransitionName = 'paper-list';
+  if (toSec) toSec.style.viewTransitionName = 'paper-list';
+  const transition = document.startViewTransition(() => applyDateChange(date));
+  transition.finished.finally(() => {
+    if (fromSec) fromSec.style.viewTransitionName = '';
+    if (toSec) toSec.style.viewTransitionName = '';
+  });
+}
+
 function filterRelevance(level, btn) {
   filterState.rel = level;
   setActiveButton('relevance-filters', btn || (typeof event !== 'undefined' ? event.target : null));
   applyFilters();
+  animateCardsIn();
   updateHash();
 }
 
@@ -715,6 +796,7 @@ function filterTag(tag, btn) {
   filterState.tag = tag;
   setActiveButton('tag-filters', btn || (typeof event !== 'undefined' ? event.target : null));
   applyFilters();
+  animateCardsIn();
   updateHash();
 }
 
@@ -887,6 +969,8 @@ function toggleReadLater(btn) {
     items[info.id] = info;
   }
   rlSave(items);
+  popAnimation(btn);                              // ③ 星标 pop
+  popAnimation(document.getElementById('rl-badge'));
 }
 
 function rlMarkRead(id) {
@@ -897,10 +981,20 @@ function rlMarkRead(id) {
   }
 }
 
+// ④ 移除条目：先 150ms 折叠淡出，再真正删除（reduced-motion 下直接删）
 function rlRemove(id) {
   const items = rlLoad();
-  delete items[id];
-  rlSave(items);
+  const row = Array.from(document.querySelectorAll('.rl-item')).find(el => {
+    const btn = el.querySelector('.rl-remove');
+    return btn && (btn.getAttribute('onclick') || '').includes("'" + id + "'");
+  });
+  const commit = () => { delete items[id]; rlSave(items); };
+  if (!row || prefersReducedMotion()) { commit(); return; }
+  let done = false;
+  const once = () => { if (done) return; done = true; commit(); };
+  row.classList.add('leaving');
+  row.addEventListener('animationend', once, { once: true });
+  window.setTimeout(once, 300);        // 兜底：动画被跳过也要删掉
 }
 
 function rlSorted() {
@@ -1130,6 +1224,7 @@ document.addEventListener('DOMContentLoaded', () => {
       timer = setTimeout(() => {
         filterState.q = input.value.trim();
         applyFilters();
+        animateCardsIn();
         updateHash();
       }, 200);
     });

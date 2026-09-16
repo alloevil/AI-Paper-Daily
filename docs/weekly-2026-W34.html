@@ -146,13 +146,24 @@
     .paper-index { width: 2.2em; }
     .paper-links { flex-wrap: wrap; }
   }
-    /* reduced-motion: the only motion is hover and entry transitions; switching it off changes
-     no information. */
+    /* 跨页导航的过渡：与首页同一套 View Transition，浏览器不支持时退化为瞬切。
+       日报/周报页只有这一处动效，所以 reduced-motion 一关就完全静止。 */
+    @view-transition { navigation: auto; }
+    ::view-transition-old(root) { animation-duration: .18s; }
+    ::view-transition-new(root) { animation-duration: .22s; }
+
+    /* reduced-motion: the cross-document transition above is the only motion here; switching it
+       off changes no information. */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: .001ms !important;
+        animation-delay: .001ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: .001ms !important;
+      }
+      /* View Transition 的伪元素不在 `*` 的匹配范围内，必须单独关掉 */
+      ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) {
+        animation: none !important;
       }
     }
 </style>
