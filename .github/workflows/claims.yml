@@ -10,6 +10,11 @@ name: claims
 # and config.yaml — no PyYAML, no network, no repo dependency — and the action brings its own
 # Python. The one check that shells out runs the repo's own scripts/generate_site.py and asserts
 # the committed pages are byte-identical to a rebuild.
+#
+# tests/ runs before the receipts, on the runner's own python3 (stdlib only, no install): those
+# tests pin the invariants the receipts cannot see — the two colour palettes and the two templates
+# staying in step with each other, and scripts/sync.py never treating data, a template or a script
+# as build output. They write nothing, so the byte-identical rebuild check still sees a clean tree.
 on:
   push:
   pull_request:
@@ -25,6 +30,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: unit tests (stdlib only, no install)
+        run: python3 -m unittest discover tests -v
       - uses: alloevil/verify-claims@v0.1.1
         with:
           strict: "true"
