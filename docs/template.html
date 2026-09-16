@@ -1,49 +1,134 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI Paper Daily — Daily AI Paper Discovery</title>
-<meta name="description" content="Daily AI paper digest for LLM agents, RAG and knowledge graphs: new arXiv and Hugging Face papers, ranked by votes and open code (or LLM-filtered when a key is configured), plus a Monday roundup.">
+<title>AI Paper Daily — daily digest of agent, RAG and knowledge-graph papers</title>
+<meta name="description" content="Daily digest of arXiv and Hugging Face papers on AI agents, RAG and knowledge graphs, ranked by votes and open code (LLM-filtered when a key is set), with a weekly roundup.">
 <link rel="canonical" href="https://alloevil.github.io/AI-Paper-Daily/">
 <link rel="alternate" type="application/rss+xml" title="AI Paper Daily" href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://alloevil.github.io/AI-Paper-Daily/">
-<meta property="og:title" content="AI Paper Daily — 每日 AI 论文精选（Agent / RAG / Knowledge Graph）">
-<meta property="og:description" content="每日聚合 arXiv 与 Hugging Face Daily Papers 的 AI Agent / RAG / 知识图谱论文，按热度与开源代码排序（配置了 key 时走 LLM 筛选）+ 摘要，每周一出周报。">
+<meta property="og:title" content="AI Paper Daily — daily agent, RAG and knowledge-graph paper digest">
+<meta property="og:description" content="Daily digest of arXiv and Hugging Face papers on AI agents, RAG and knowledge graphs, ranked by votes and open code, with abstracts and a weekly roundup.">
 <meta property="og:site_name" content="AI Paper Daily">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AI Paper Daily — 每日 AI 论文精选">
-<meta name="twitter:description" content="每日聚合 arXiv 与 Hugging Face Daily Papers 的 AI Agent / RAG / 知识图谱论文，按热度与开源代码排序（配置了 key 时走 LLM 筛选）+ 摘要。">
+<meta name="twitter:title" content="AI Paper Daily — daily AI paper digest">
+<meta name="twitter:description" content="Daily digest of arXiv and Hugging Face papers on AI agents, RAG and knowledge graphs, ranked by votes and open code.">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+<script>
+  // 首次绘制前定妥主题：auto（默认，交给 prefers-color-scheme）/ light / dark。
+  // 只有显式选择才写 data-theme —— auto 时不写，系统切换就由 CSS 媒体查询实时接管，无需监听。
+  (function () {
+    try {
+      var t = localStorage.getItem('paperTheme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
+  /* Light is the base: comparable sites (arXiv / HN / GitHub Trending / Lobsters / HF Daily
+     Papers) all sit at 0.99-1.0 background luminance, and positive polarity favours small type
+     (Piepenbrock et al. 2014, Human Factors 56(5):942-951; Buchner & Baumgartner 2007,
+     Ergonomics). Every text colour below is >=4.5:1 on canvas / surface-1 / surface-2 and every
+     non-text colour >=3:1 (WCAG 2.2 SC 1.4.3 / 1.4.11); the worst pair is ink-tertiary on
+     surface-2 at 4.65:1. */
   :root {
-    --primary: #6366f1;
-    --primary-hover: #818cf8;
-    --primary-dim: rgba(99,102,241,0.15);
-    --primary-border: rgba(99,102,241,0.3);
-    --blue: #3b82f6;
-    --blue-dim: rgba(59,130,246,0.15);
-    --blue-border: rgba(59,130,246,0.3);
+    color-scheme: light;
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --primary-dim: rgba(79,70,229,0.10);
+    --primary-border: rgba(79,70,229,0.35);
+    --blue: #2563eb;
+    --blue-dim: rgba(37,99,235,0.10);
+    --blue-border: rgba(37,99,235,0.35);
+    --accent-solid: #4f46e5;
     --on-primary: #ffffff;
-    --ink: #f7f8f8;
-    --ink-muted: #d0d6e0;
-    --ink-subtle: #8a8f98;
-    --ink-tertiary: #62666d;
-    --canvas: #010102;
-    --surface-1: #0f1011;
-    --surface-2: #141516;
-    --surface-3: #18191a;
-    --hairline: #23252a;
-    --hairline-strong: #34343a;
+    --ink: #14161c;
+    --ink-muted: #3d4350;
+    --ink-subtle: #565d6a;
+    --ink-tertiary: #666d7a;
+    --canvas: #ffffff;
+    --surface-1: #f8f9fb;
+    --surface-2: #f0f2f7;
+    --surface-3: #e9edf4;
+    --hairline: #e4e7ed;
+    --hairline-strong: #cdd3dd;
+    --focus: #4f46e5;
     --success: #27a644;
+    --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23565d6a' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
     --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
     --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
   }
 
+  /* Dark only under prefers-color-scheme, and deliberately not pure black: canvas #0b0d10 is an
+     order of magnitude lighter than the old #010102, matching Radix dark gray-1 #111111 /
+     Primer dark-dimmed bgColor-default #212830; body text drops from #f7f8f8 (19.6:1) to
+     #eceef2 (16.8:1), out of the glare zone.
+     :not([data-theme="light"]) yields to an explicit light choice - the :root[data-theme="dark"]
+     block below must match this one verbatim (tests/test_theme.py asserts it). */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --primary: #6366f1;
+      --primary-hover: #a5b4fc;
+      --primary-dim: rgba(99,102,241,0.20);
+      --primary-border: rgba(129,140,248,0.35);
+      --blue: #60a5fa;
+      --blue-dim: rgba(96,165,250,0.18);
+      --blue-border: rgba(96,165,250,0.35);
+      --ink: #eceef2;
+      --ink-muted: #c3c8d2;
+      --ink-subtle: #9aa2af;
+      --ink-tertiary: #7f8794;
+      --canvas: #0b0d10;
+      --surface-1: #12141a;
+      --surface-2: #191c22;
+      --surface-3: #1f232b;
+      --hairline: #262c36;
+      --hairline-strong: #363d47;
+      --focus: #a5b4fc;
+      --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%239aa2af' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+    }
+  }
+
+  /* Explicit dark: :root[data-theme] outranks the :root inside the media query, so it wins even
+     when the system is light. */
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --primary: #6366f1;
+    --primary-hover: #a5b4fc;
+    --primary-dim: rgba(99,102,241,0.20);
+    --primary-border: rgba(129,140,248,0.35);
+    --blue: #60a5fa;
+    --blue-dim: rgba(96,165,250,0.18);
+    --blue-border: rgba(96,165,250,0.35);
+    --ink: #eceef2;
+    --ink-muted: #c3c8d2;
+    --ink-subtle: #9aa2af;
+    --ink-tertiary: #7f8794;
+    --canvas: #0b0d10;
+    --surface-1: #12141a;
+    --surface-2: #191c22;
+    --surface-3: #1f232b;
+    --hairline: #262c36;
+    --hairline-strong: #363d47;
+    --focus: #a5b4fc;
+    --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%239aa2af' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* Keyboard focus must be visible (WCAG 2.2 SC 2.4.7): keyboard only, not on mouse click. */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  select:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
 
   body {
     font-family: var(--font-sans);
@@ -56,40 +141,35 @@
   .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 
   /* Masthead */
+  /* Utility bar: one left-aligned cluster (wordmark + controls). No centre void. */
   .masthead {
-    padding: 20px 0 16px;
-    border-bottom: 1px solid var(--hairline);
-  }
-  .masthead-top {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 8px 16px;
+    padding: 16px 0 2px;
   }
-  .brand {
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-  }
-  .brand-icon { font-size: 22px; }
-  .brand h1 {
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: -0.4px;
+  /* Wordmark in the utility bar, not a heading: one title block per page. */
+  .brand-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 650;
+    letter-spacing: 0;
     color: var(--ink);
+    text-decoration: none;
   }
-  .brand .tagline {
-    font-size: 13px;
-    color: var(--ink-subtle);
-  }
+  .brand-icon { font-size: 16px; }
+  .brand-name:hover { color: var(--primary-hover); }
   .header-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
   }
   .header-links a {
-    padding: 6px 14px;
-    font-size: 13px;
+    padding: 5px 12px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--ink-muted);
     text-decoration: none;
@@ -101,6 +181,23 @@
     color: var(--ink);
     border-color: var(--hairline-strong);
   }
+  /* Theme button: cycles auto -> light -> dark, styled to match the header links. */
+  .theme-toggle {
+    padding: 5px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--font-sans);
+    color: var(--ink-muted);
+    background: transparent;
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .theme-toggle:hover {
+    color: var(--ink);
+    border-color: var(--hairline-strong);
+  }
 
   /* Read-later (#8) */
   .rl-toggle {
@@ -108,21 +205,26 @@
   }
   .rl-badge {
     display: inline-block;
-    min-width: 18px;
+    min-width: 20px;
     padding: 0 5px;
     margin-left: 6px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
-    line-height: 18px;
+    line-height: 20px;
     text-align: center;
     color: var(--on-primary);
-    background: var(--primary);
-    border-radius: 9px;
+    background: var(--accent-solid);
+    border-radius: 10px;
   }
   .rl-badge:empty { display: none; }
   .star-btn {
+    min-width: 28px;
+    min-height: 28px;
     padding: 0 6px;
-    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
     line-height: 1.2;
     color: var(--ink-tertiary);
     background: transparent;
@@ -132,7 +234,7 @@
     transition: color 0.15s, transform 0.1s;
   }
   .star-btn:hover { color: var(--primary-hover); transform: scale(1.15); }
-  .star-btn.active { color: var(--primary); }
+  .star-btn.active { color: var(--primary-hover); }
   .rl-overlay {
     display: none;
     position: fixed;
@@ -162,7 +264,7 @@
     padding: 14px 20px;
     border-bottom: 1px solid var(--hairline);
   }
-  .rl-head h3 { font-size: 15px; font-weight: 600; }
+  .rl-head h3 { font-size: 18px; font-weight: 600; }
   .rl-close {
     padding: 4px 8px;
     font-size: 14px;
@@ -186,20 +288,20 @@
   .rl-item + .rl-item { border-top: 1px solid var(--hairline); }
   .rl-item a {
     flex: 1;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--ink);
     text-decoration: none;
     line-height: 1.4;
   }
   .rl-item a:hover { color: var(--primary-hover); }
   .rl-item .rl-date {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--ink-tertiary);
     white-space: nowrap;
   }
   .rl-remove {
-    padding: 2px 6px;
-    font-size: 13px;
+    padding: 4px 8px;
+    font-size: 14px;
     color: var(--ink-tertiary);
     background: transparent;
     border: none;
@@ -209,7 +311,7 @@
   .rl-empty {
     padding: 32px 0;
     text-align: center;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--ink-tertiary);
   }
   .rl-actions {
@@ -220,7 +322,7 @@
   }
   .rl-actions button {
     padding: 7px 16px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--ink-muted);
     background: var(--surface-2);
@@ -236,33 +338,70 @@
   }
   .rl-actions button:disabled { opacity: 0.5; cursor: default; }
 
-  /* Meta bar */
-  .meta-bar {
+  /* The issue head is the page title: kicker (issue no.), prose date as H1, meta + nav in one row.
+     Tabular figures keep the width steady while the date changes. */
+  .issue-head { padding: 8px 0 2px; }
+  .issue-kicker {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-tertiary);
+    font-variant-numeric: tabular-nums;
+  }
+  .issue-date {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    line-height: 1.15;
+    margin: 4px 0 8px;
+  }
+  .issue-foot {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 12px;
-    padding: 12px 0;
-    font-size: 12px;
-    color: var(--ink-tertiary);
-    border-bottom: 1px solid var(--hairline);
+    flex-wrap: wrap;
+    padding-bottom: 8px;
   }
-  .meta-stats {
-    display: inline-flex;
-    gap: 14px;
+  .issue-meta {
+    font-size: 14px;
+    color: var(--ink-subtle);
+    font-variant-numeric: tabular-nums;
   }
+  .issue-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .issue-arrow {
+    padding: 4px 10px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--ink-subtle);
+    text-decoration: none;
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    font-variant-numeric: tabular-nums;
+  }
+  .issue-arrow:hover { color: var(--ink); border-color: var(--hairline-strong); }
   .stat-num {
     font-weight: 600;
     color: var(--ink);
   }
 
-  /* Filters */
+  /* Filters: sticky, so a long list never loses its filters (solid background + hairline, no blur). */
   .filters {
-    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    padding: 10px 0;
     display: flex;
-    gap: 24px;
+    gap: 16px;
     flex-wrap: wrap;
     align-items: center;
+    background: var(--canvas);
+    border-bottom: 1px solid var(--hairline);
   }
   .filter-group {
     display: flex;
@@ -270,8 +409,8 @@
     flex-wrap: wrap;
   }
   .filter-btn {
-    padding: 6px 14px;
-    font-size: 13px;
+    padding: 5px 12px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--ink-subtle);
     background: transparent;
@@ -289,7 +428,7 @@
   }
   .date-select {
     padding: 6px 28px 6px 12px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--ink);
     background: var(--surface-2);
@@ -299,7 +438,7 @@
     font-family: var(--font-sans);
     appearance: none;
     -webkit-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%238a8f98' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+    background-image: var(--select-arrow);
     background-repeat: no-repeat;
     background-position: right 10px center;
   }
@@ -308,19 +447,18 @@
   /* Search */
   .search-group {
     flex: 1;
-    min-width: 200px;
+    min-width: 150px;
   }
   .search-input {
     width: 100%;
     padding: 6px 12px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--ink);
     background: var(--surface-2);
     border: 1px solid var(--hairline);
     border-radius: 6px;
     font-family: var(--font-sans);
-    outline: none;
     transition: border-color 0.15s;
   }
   .search-input::placeholder { color: var(--ink-tertiary); }
@@ -335,31 +473,11 @@
     flex-wrap: wrap;
   }
 
-  /* Date Section */
-  .date-section { margin-bottom: 40px; }
-  .date-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--hairline);
-    margin-bottom: 4px;
-  }
-  .date-header h3 {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--ink);
-    letter-spacing: -0.2px;
-  }
-  .date-count {
-    font-size: 13px;
-    color: var(--ink-tertiary);
-  }
 
-  /* Paper Card */
+  /* Paper Card - a table-of-contents entry: number gutter, then title / abstract / actions. */
   .paper-card {
     display: flex;
-    padding: 16px 0;
+    padding: 18px 0;
     transition: background 0.15s;
     border-radius: 8px;
   }
@@ -369,16 +487,15 @@
   .paper-card + .paper-card {
     border-top: 1px solid var(--hairline);
   }
-  .relevance-bar {
-    width: 4px;
-    border-radius: 2px;
+  .paper-index {
     flex-shrink: 0;
-    margin-right: 16px;
-    align-self: stretch;
+    width: 2.6em;
+    padding-top: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-tertiary);
   }
-  .relevance-bar.high { background: var(--primary); }
-  .relevance-bar.mid { background: var(--blue); }
-  .relevance-bar.low { background: var(--ink-tertiary); }
   .paper-content {
     flex: 1;
     min-width: 0;
@@ -391,8 +508,8 @@
     flex-wrap: wrap;
   }
   .paper-title {
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
     color: var(--ink);
     text-decoration: none;
     line-height: 1.4;
@@ -401,7 +518,7 @@
   .paper-tag {
     display: inline-block;
     padding: 1px 8px;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 500;
     color: var(--ink-muted);
     background: var(--surface-2);
@@ -411,18 +528,24 @@
     flex-shrink: 0;
   }
   .paper-abstract {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--ink-subtle);
     margin-bottom: 8px;
-    line-height: 1.55;
+    line-height: 1.65;
+    max-width: 68ch;
+    padding-left: 12px;
+    border-left: 2px solid var(--hairline);
   }
   .paper-links {
     display: flex;
     gap: 8px;
-    font-size: 13px;
+    font-size: 14px;
   }
   .paper-links a {
-    color: var(--ink-tertiary);
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+    color: var(--ink-subtle);
     text-decoration: none;
     transition: color 0.15s;
   }
@@ -433,7 +556,7 @@
     text-align: center;
     padding: 48px 24px;
     color: var(--ink-tertiary);
-    font-size: 14px;
+    font-size: 16px;
   }
 
   /* Footer */
@@ -444,8 +567,12 @@
     text-align: center;
   }
   .footer p {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--ink-tertiary);
+  }
+  .footer-tagline {
+    margin-bottom: 6px;
+    color: var(--ink-subtle);
   }
   .footer a {
     color: var(--ink-subtle);
@@ -456,15 +583,15 @@
   /* Responsive */
   @media (max-width: 640px) {
     .container { padding: 0 16px; }
-    .brand { flex-wrap: wrap; gap: 6px; }
-    .brand .tagline { display: block; width: 100%; }
+    .issue-date { font-size: 25px; }
     .paper-header { flex-direction: column; gap: 4px; }
-    .relevance-bar { margin-right: 12px; }
+    .paper-index { width: 2.2em; }
     .paper-links { flex-wrap: wrap; }
-    .filters { gap: 12px; }
+    .filters { gap: 12px; padding: 10px 0; }
   }
 
-  /* reduced-motion：本页的动效只是悬停与筛选过渡，关掉后信息完全不变。 */
+  /* reduced-motion: the only motion is hover and filter transitions; switching it off changes
+     no information. */
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: .001ms !important;
@@ -502,34 +629,24 @@
   <div class="container">
     <!-- Masthead -->
     <header class="masthead">
-      <div class="masthead-top">
-        <div class="brand">
-          <span class="brand-icon">📄</span>
-          <h1>AI Paper Daily</h1>
-          <span class="tagline">Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</span>
-        </div>
-        <nav class="header-links">
-          <!-- WEEKLY_LINK -->
-          <a href="#" class="rl-toggle" onclick="openReadLater(event)">☆ 稍后读<span class="rl-badge" id="rl-badge"></span></a>
-          <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a>
-          <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a>
-        </nav>
-      </div>
+      <a class="brand-name" href="./"><span class="brand-icon">📄</span>AI Paper Daily</a>
+      <nav class="header-links">
+        <button type="button" id="theme-toggle" class="theme-toggle" onclick="cycleTheme()">◐ Auto</button>
+        <a href="#" class="rl-toggle" onclick="openReadLater(event)">☆ Read later<span class="rl-badge" id="rl-badge"></span></a>
+        <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a>
+        <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a>
+      </nav>
     </header>
 
-    <!-- Meta bar -->
-    <div class="meta-bar">
-      <span class="meta-stats">
-        <span><span class="stat-num" id="stat-papers">0</span> 篇论文</span>
-        <span><span class="stat-num" id="stat-dates">0</span> 天</span>
-      </span>
-    </div>
+    <!-- 期号头：生成器把最新一期填进下面的标记，JS 在换日期时改写它 -->
+    <!-- ISSUE_HEAD -->
+
 
     <!-- Filters -->
     <div class="filters">
       <div class="filter-group search-group">
         <input class="search-input" id="search-input" type="search"
-               placeholder="搜索标题 / 摘要…" autocomplete="off">
+               placeholder="Search titles and abstracts…" autocomplete="off">
       </div>
       <div class="filter-group">
         <select class="date-select" id="date-select" onchange="switchDate(this.value)">
@@ -537,10 +654,10 @@
         </select>
       </div>
       <div class="filter-group" id="relevance-filters">
-        <button class="filter-btn active" onclick="filterRelevance('all')">全部</button>
-        <button class="filter-btn" onclick="filterRelevance(3)">⭐⭐⭐ 高度相关</button>
-        <button class="filter-btn" onclick="filterRelevance(2)">⭐⭐ 中度相关</button>
-        <button class="filter-btn" onclick="filterRelevance(1)">⭐ 其他</button>
+        <button class="filter-btn active" onclick="filterRelevance('all')">All</button>
+        <button class="filter-btn" onclick="filterRelevance(3)">High</button>
+        <button class="filter-btn" onclick="filterRelevance(2)">Medium</button>
+        <button class="filter-btn" onclick="filterRelevance(1)">Other</button>
       </div>
       <div class="filter-group" id="tag-filters">
         <!-- TAG_FILTERS -->
@@ -548,19 +665,19 @@
       </div>
     </div>
 
-    <div class="empty-state" id="no-match" style="display:none">没有匹配的论文</div>
+    <div class="empty-state" id="no-match" style="display:none">No matching papers</div>
 
     <!-- Read-later modal (#8) -->
     <div class="rl-overlay" id="rl-overlay" onclick="if (event.target === this) closeReadLater()">
-      <div class="rl-modal" role="dialog" aria-label="稍后读清单">
+      <div class="rl-modal" role="dialog" aria-label="Read later">
         <div class="rl-head">
-          <h3>☆ 稍后读清单</h3>
-          <button class="rl-close" onclick="closeReadLater()" aria-label="关闭">✕ 关闭</button>
+          <h3>☆ Read later</h3>
+          <button class="rl-close" onclick="closeReadLater()" aria-label="Close">✕ Close</button>
         </div>
         <div class="rl-list" id="rl-list"></div>
         <div class="rl-actions">
-          <button id="rl-export-bibtex" onclick="exportBibtex()">导出 BibTeX</button>
-          <button id="rl-export-md" onclick="exportMarkdown()">导出 Markdown</button>
+          <button id="rl-export-bibtex" onclick="exportBibtex()">Export BibTeX</button>
+          <button id="rl-export-md" onclick="exportMarkdown()">Export Markdown</button>
         </div>
       </div>
     </div>
@@ -569,7 +686,8 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <p>Built by <a href="https://github.com/alloevil">alloevil</a> · <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a> · <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a> · <a href="https://alloevil.github.io/projects/">更多项目</a></p>
+      <p class="footer-tagline">AI Paper Daily — daily digest of agent, RAG and knowledge-graph papers</p>
+      <p>Built by <a href="https://github.com/alloevil">alloevil</a> · <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a> · <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a> · <a href="https://alloevil.github.io/projects/">More projects</a></p>
     </footer>
   </div>
 
@@ -582,6 +700,7 @@ function switchDate(date) {
   const select = document.getElementById('date-select');
   if (select && select.value !== date) select.value = date;
   applyFilters();
+  renderIssueHead();
   updateHash();
 }
 
@@ -703,7 +822,7 @@ function restoreFromHash() {
   let tagBtn = tagBtns[0];
   if (parsed.tag) {
     tagBtns.forEach(b => {
-      if (b.textContent === parsed.tag) { filterState.tag = parsed.tag; tagBtn = b; }
+      if (b.getAttribute('data-tag') === parsed.tag) { filterState.tag = parsed.tag; tagBtn = b; }
     });
   }
   setActiveButton('tag-filters', tagBtn);
@@ -714,6 +833,7 @@ function restoreFromHash() {
   if (input) input.value = filterState.q;
 
   applyFilters();
+  renderIssueHead();
 }
 
 // --- 稍后读清单(#8):localStorage 持久化,纯前端 ---
@@ -804,21 +924,21 @@ function rlRender() {
     const active = !!saved[info.id];
     btn.textContent = active ? '★' : '☆';
     btn.classList.toggle('active', active);
-    btn.title = active ? '从稍后读移除' : '稍后读';
+    btn.title = active ? 'Remove from read later' : 'Read later';
   });
 
   // 模态列表
   const list = document.getElementById('rl-list');
   if (!list) return;
   if (items.length === 0) {
-    list.innerHTML = '<div class="rl-empty">还没有收藏。点击论文卡片上的 ☆ 加入稍后读。</div>';
+    list.innerHTML = '<div class="rl-empty">Nothing saved yet — click ☆ on a paper card to add it.</div>';
   } else {
     list.innerHTML = items.map(it =>
       '<div class="rl-item"' + (it.read ? ' style="opacity:0.55"' : '') + '>' +
       '<a href="' + it.url + '" target="_blank" rel="noopener" ' +
       'onclick="rlMarkRead(\'' + it.id + '\')">' + escHtml(it.title) + '</a>' +
       '<span class="rl-date">' + (it.date || '') + '</span>' +
-      '<button class="rl-remove" onclick="rlRemove(\'' + it.id + '\')" title="移除">✕</button>' +
+      '<button class="rl-remove" onclick="rlRemove(\'' + it.id + '\')" title="Remove">✕</button>' +
       '</div>').join('');
   }
   const disabled = items.length === 0;
@@ -866,7 +986,7 @@ function buildBibtex() {
 }
 
 function buildMarkdown() {
-  const lines = ['# 稍后读清单', ''];
+  const lines = ['# Read later', ''];
   rlSorted().forEach(it => {
     let line = '- [' + it.title + '](' + it.url + ')';
     if (it.pdf) line += ' · [PDF](' + it.pdf + ')';
@@ -903,13 +1023,105 @@ function rlInjectButtons() {
     const btn = document.createElement('button');
     btn.className = 'star-btn';
     btn.textContent = '☆';
-    btn.title = '稍后读';
+    btn.title = 'Read later';
     btn.addEventListener('click', () => toggleReadLater(btn));
     header.appendChild(btn);
   });
 }
 
+// --- 主题：auto（跟随系统）→ light → dark 循环，选择存 localStorage。 ---
+// auto 时不写 data-theme，系统切换由 CSS 媒体查询实时接管；显式选择才写属性覆盖它。
+const THEME_KEY = 'paperTheme';
+const THEME_LABELS = { auto: '◐ Auto', light: '☀ Light', dark: '☾ Dark' };
+
+function currentTheme() {
+  const t = document.documentElement.getAttribute('data-theme');
+  return (t === 'light' || t === 'dark') ? t : 'auto';
+}
+
+// theme-color 跟着走：auto 时交回给两条 media 查询，显式选择时把两条都改成同一个色。
+function syncThemeColor(mode) {
+  const metas = Array.from(document.querySelectorAll('meta[name="theme-color"]'));
+  if (metas.length < 2) return;
+  if (mode === 'auto') {
+    metas[0].setAttribute('media', '(prefers-color-scheme: light)');
+    metas[0].setAttribute('content', '#ffffff');
+    metas[1].setAttribute('media', '(prefers-color-scheme: dark)');
+    metas[1].setAttribute('content', '#0b0d10');
+  } else {
+    metas.forEach(m => { m.removeAttribute('media'); m.setAttribute('content', mode === 'dark' ? '#0b0d10' : '#ffffff'); });
+  }
+}
+
+function renderThemeButton(mode) {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.textContent = THEME_LABELS[mode];
+  btn.title = 'Theme: ' + THEME_LABELS[mode] + ' (click to switch)';
+  btn.setAttribute('aria-label', 'Toggle theme (current: ' + THEME_LABELS[mode] + ')');
+  syncThemeColor(mode);
+}
+
+function cycleTheme() {
+  const order = ['auto', 'light', 'dark'];
+  const next = order[(order.indexOf(currentTheme()) + 1) % order.length];
+  if (next === 'auto') document.documentElement.removeAttribute('data-theme');
+  else document.documentElement.setAttribute('data-theme', next);
+  try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+  renderThemeButton(next);
+}
+
+// --- 期号头：日期、期号、篇数与前后一期跟着当前日期走 ---
+// 服务端已渲染最新一期（无 JS 也正确），这里在换日期时改写它。
+const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+// '2026-09-14' → 'Mon, 14 Sep 2026'，与生成器里的 _issue_label() 同形
+function dateLabel(dateStr) {
+  const d = new Date(dateStr + 'T00:00:00Z');
+  if (isNaN(d)) return dateStr;
+  return WEEKDAYS[d.getUTCDay()] + ', ' + d.getUTCDate() + ' ' + MONTHS[d.getUTCMonth()] + ' ' + d.getUTCFullYear();
+}
+
+function renderIssueHead() {
+  const sec = document.querySelector('.date-section[data-date="' + filterState.date + '"]');
+  const dateEl = document.getElementById('issue-date');
+  if (!sec || !dateEl) return;
+  dateEl.textContent = dateLabel(filterState.date);
+  const noEl = document.getElementById('issue-no');
+  if (noEl) noEl.textContent = sec.getAttribute('data-issue') || '';
+  const cntEl = document.getElementById('issue-count');
+  if (cntEl) {
+    const n = sec.getAttribute('data-count') || '';
+    cntEl.textContent = n ? n + ' papers' : '';
+  }
+  renderIssueNav();
+}
+
+function renderIssueNav() {
+  const nav = document.getElementById('issue-nav');
+  const select = document.getElementById('date-select');
+  if (!nav || !select) return;
+  const dates = Array.from(select.options).map(o => o.value);  // 新 → 旧
+  const i = dates.indexOf(filterState.date);
+  const parts = [];
+  if (i >= 0 && i < dates.length - 1) {
+    parts.push('<a class="issue-arrow" href="#" data-goto="' + dates[i + 1] + '">← ' + dates[i + 1] + '</a>');
+  }
+  if (i > 0) {
+    parts.push('<a class="issue-arrow" href="#" data-goto="' + dates[i - 1] + '">' + dates[i - 1] + ' →</a>');
+  }
+  nav.innerHTML = parts.join('');
+  nav.querySelectorAll('a[data-goto]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      switchDate(a.getAttribute('data-goto'));
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  renderThemeButton(currentTheme());
   const input = document.getElementById('search-input');
   if (input) {
     let timer;

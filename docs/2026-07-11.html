@@ -1,75 +1,153 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>论文日报 2026-07-11（周六） — AI Paper Daily</title>
-<meta name="description" content="2026-07-11（周六） 收录 6 篇论文：SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets；WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search；Formal Mechanisms for Market Stability in Self-Interested Agent Societies: A Marketplace Simulation Study…">
+<title>Daily digest 2026-07-11 (Sat) — AI Paper Daily</title>
+<meta name="description" content="2026-07-11 (Sat) · 6 papers: SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets; WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search; Formal Mechanisms for Market Stability in Self-Interested Agent Societies: A Marketplace Simulation Study…">
 <link rel="canonical" href="https://alloevil.github.io/AI-Paper-Daily/2026-07-11.html">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://alloevil.github.io/AI-Paper-Daily/2026-07-11.html">
-<meta property="og:title" content="论文日报 2026-07-11（周六） — AI Paper Daily">
-<meta property="og:description" content="2026-07-11（周六） 收录 6 篇论文：SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets；WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search；Formal Mechanisms for Market Stability in Self-Interested Agent Societies: A Marketplace Simulation Study…">
+<meta property="og:title" content="Daily digest 2026-07-11 (Sat) — AI Paper Daily">
+<meta property="og:description" content="2026-07-11 (Sat) · 6 papers: SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets; WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search; Formal Mechanisms for Market Stability in Self-Interested Agent Societies: A Marketplace Simulation Study…">
 <meta property="og:site_name" content="AI Paper Daily">
 <meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
+<script>
+  // 首次绘制前定妥主题：auto（默认，交给 prefers-color-scheme）/ light / dark。
+  // 只有显式选择才写 data-theme —— auto 时不写，系统切换就由 CSS 媒体查询实时接管。
+  (function () {
+    try {
+      var t = localStorage.getItem('paperTheme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
 <style>
+  /* Same token set as docs/template.html: light is the base, dark only under
+     prefers-color-scheme and deliberately not pure black. Every text colour is >=4.5:1 on
+     canvas / surface-1 / surface-2, every non-text colour >=3:1 (WCAG 2.2 SC 1.4.3 / 1.4.11). */
   :root {
-    --primary: #6366f1;
-    --primary-hover: #818cf8;
-    --blue: #3b82f6;
-    --ink: #f7f8f8;
-    --ink-muted: #d0d6e0;
-    --ink-subtle: #8a8f98;
-    --ink-tertiary: #62666d;
-    --canvas: #010102;
-    --surface-1: #0f1011;
-    --surface-2: #141516;
-    --hairline: #23252a;
-    --hairline-strong: #34343a;
+    color-scheme: light;
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --blue: #2563eb;
+    --ink: #14161c;
+    --ink-muted: #3d4350;
+    --ink-subtle: #565d6a;
+    --ink-tertiary: #666d7a;
+    --canvas: #ffffff;
+    --surface-1: #f8f9fb;
+    --surface-2: #f0f2f7;
+    --hairline: #e4e7ed;
+    --hairline-strong: #cdd3dd;
+    --focus: #4f46e5;
     --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
   }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --primary: #6366f1;
+      --primary-hover: #a5b4fc;
+      --blue: #60a5fa;
+      --ink: #eceef2;
+      --ink-muted: #c3c8d2;
+      --ink-subtle: #9aa2af;
+      --ink-tertiary: #7f8794;
+      --canvas: #0b0d10;
+      --surface-1: #12141a;
+      --surface-2: #191c22;
+      --hairline: #262c36;
+      --hairline-strong: #363d47;
+      --focus: #a5b4fc;
+    }
+  }
+  /* Explicit dark: :root[data-theme] outranks the :root inside the media query, so it wins even
+     when the system is light. These values must match the block above verbatim (tests/test_theme.py
+     asserts it). */
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --primary: #6366f1;
+    --primary-hover: #a5b4fc;
+    --blue: #60a5fa;
+    --ink: #eceef2;
+    --ink-muted: #c3c8d2;
+    --ink-subtle: #9aa2af;
+    --ink-tertiary: #7f8794;
+    --canvas: #0b0d10;
+    --surface-1: #12141a;
+    --surface-2: #191c22;
+    --hairline: #262c36;
+    --hairline-strong: #363d47;
+    --focus: #a5b4fc;
+  }
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  /* Keyboard focus must be visible (WCAG 2.2 SC 2.4.7). */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  select:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
   body { font-family: var(--font-sans); background: var(--canvas); color: var(--ink);
          -webkit-font-smoothing: antialiased; line-height: 1.5; }
   .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
-  .masthead { padding: 20px 0 16px; border-bottom: 1px solid var(--hairline);
-               display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-  .masthead h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.4px; }
-  .masthead .range { font-size: 13px; color: var(--ink-subtle); }
-  .masthead a { padding: 6px 14px; font-size: 13px; font-weight: 500; color: var(--ink-subtle);
+  .masthead { padding: 16px 0 2px; display: flex; align-items: center;
+               flex-wrap: wrap; gap: 8px 16px; }
+  /* Wordmark lives in the utility bar, not as a heading - one title block per page. */
+  .brand-name { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600;
+                 letter-spacing: -0.01em; color: var(--ink); text-decoration: none; }
+  .brand-icon { font-size: 16px; }
+  .brand-name:hover { color: var(--primary-hover); }
+  /* The issue head is the page title: kicker (issue no.), date as H1, meta under it. */
+  .issue-head { padding: 10px 0 4px; }
+  .issue-kicker { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+                   color: var(--ink-tertiary); font-variant-numeric: tabular-nums; }
+  .issue-date { font-size: 32px; font-weight: 700; letter-spacing: -0.7px; line-height: 1.15; margin: 6px 0 8px; }
+  .issue-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px;
+                 flex-wrap: wrap; padding-bottom: 12px; }
+  .issue-meta { font-size: 14px; color: var(--ink-subtle); font-variant-numeric: tabular-nums; }
+  .masthead a { padding: 6px 14px; font-size: 14px; font-weight: 500; color: var(--ink-subtle);
                  border: 1px solid var(--hairline); border-radius: 8px; text-decoration: none; }
   .masthead a:hover { color: var(--ink); border-color: var(--hairline-strong); }
-  .intro { padding: 16px 0 4px; font-size: 14px; color: var(--ink-subtle); }
-  .paper-card { display: flex; padding: 16px 0; border-radius: 8px; }
+  /* Nav chips are direct children of .nav, so the flex gap has to live here too. */
+  .nav { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .theme-toggle { padding: 5px 12px; font-size: 14px; font-weight: 500; font-family: var(--font-sans);
+                   color: var(--ink-subtle); background: transparent; border: 1px solid var(--hairline);
+                   border-radius: 8px; cursor: pointer; white-space: nowrap; }
+  .theme-toggle:hover { color: var(--ink); border-color: var(--hairline-strong); }
+  .paper-card { display: flex; padding: 18px 0; border-radius: 8px; }
   .paper-card:hover { background: var(--surface-1); }
   .paper-card + .paper-card { border-top: 1px solid var(--hairline); }
-  .relevance-bar { width: 4px; border-radius: 2px; flex-shrink: 0; margin-right: 16px; align-self: stretch; }
-  .relevance-bar.high { background: var(--primary); }
-  .relevance-bar.mid { background: var(--blue); }
-  .relevance-bar.low { background: var(--ink-tertiary); }
+  .paper-index { flex-shrink: 0; width: 2.6em; padding-top: 3px; font-size: 14px; font-weight: 600;
+                  font-variant-numeric: tabular-nums; color: var(--ink-tertiary); }
   .paper-content { flex: 1; min-width: 0; }
   .paper-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
-  .paper-title { font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; line-height: 1.4; }
+  .paper-title { font-size: 18px; font-weight: 600; color: var(--ink); text-decoration: none; line-height: 1.4; }
   .paper-title:hover { color: var(--primary-hover); }
-  .paper-tag { display: inline-block; padding: 1px 8px; font-size: 11px; font-weight: 500;
+  .paper-tag { display: inline-block; padding: 1px 8px; font-size: 13px; font-weight: 500;
                 color: var(--ink-muted); background: var(--surface-2); border: 1px solid var(--hairline);
                 border-radius: 10px; white-space: nowrap; flex-shrink: 0; }
-  .paper-abstract { font-size: 14px; color: var(--ink-subtle); margin-bottom: 8px; line-height: 1.55; }
-  .paper-links { display: flex; gap: 8px; font-size: 13px; }
-  .paper-links a { color: var(--ink-tertiary); text-decoration: none; }
+  .paper-abstract { font-size: 16px; color: var(--ink-subtle); margin-bottom: 8px; line-height: 1.65;
+                     max-width: 68ch; padding-left: 12px; border-left: 2px solid var(--hairline); }
+  .paper-links { display: flex; gap: 8px; font-size: 14px; }
+  .paper-links a { display: inline-flex; align-items: center; min-height: 24px;
+                    color: var(--ink-subtle); text-decoration: none; }
   .paper-links a:hover { color: var(--primary-hover); }
   .footer { margin-top: 48px; padding: 24px 0; border-top: 1px solid var(--hairline);
-             text-align: center; font-size: 12px; color: var(--ink-tertiary); }
+             text-align: center; font-size: 13px; color: var(--ink-tertiary); }
   .footer a { color: var(--ink-subtle); text-decoration: none; }
   .footer a:hover { color: var(--ink); }
   @media (max-width: 640px) {
     .container { padding: 0 16px; }
     .paper-header { flex-direction: column; gap: 4px; }
-    .relevance-bar { margin-right: 12px; }
+    .issue-date { font-size: 24px; }
+    .paper-index { width: 2.2em; }
     .paper-links { flex-wrap: wrap; }
   }
-    /* reduced-motion：本页动效只是悬停与入场过渡，关掉后信息完全不变。 */
+    /* reduced-motion: the only motion is hover and entry transitions; switching it off changes
+     no information. */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: .001ms !important;
@@ -82,9 +160,9 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "论文日报 | 2026-07-11（周六）",
+  "headline": "Daily digest | 2026-07-11 (Sat)",
   "datePublished": "2026-07-11",
-  "inLanguage": "zh-CN",
+  "inLanguage": "en",
   "url": "https://alloevil.github.io/AI-Paper-Daily/2026-07-11.html",
   "isPartOf": {
     "@type": "WebSite",
@@ -99,7 +177,7 @@
   "about": [
     {
       "@type": "Thing",
-      "name": "最新论文"
+      "name": "Newest"
     }
   ]
 }
@@ -108,82 +186,131 @@
 <body>
   <div class="container">
     <header class="masthead">
-      <div>
-        <h1>📊 论文日报 2026-07-11（周六）</h1>
-        <span class="range">2026-07-11（周六）</span>
-      </div>
-      <div class="nav"><a href="./">← 返回日报</a><a href="2026-07-14.html">后一天 →</a><a href="2026-07-10.html">← 前一天</a></div>
+      <a class="brand-name" href="./"><span class="brand-icon">📊</span>AI Paper Daily</a>
+      <div class="nav"><a href="./">← Back to the digest</a><a href="2026-07-14.html">Next day →</a><a href="2026-07-10.html">← Previous day</a><button type="button" id="theme-toggle" class="theme-toggle" onclick="cycleTheme()">◐ Auto</button></div>
     </header>
-    <p class="intro">2026-07-11（周六） 收录 6 篇论文：SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets；WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search；Formal Mechanisms for Market Stability in Self-Interested Agent Societies: A Marketplace Simulation Study…</p>
-      <div class="paper-card" data-relevance="2" data-tags="最新论文">
-        <div class="relevance-bar mid"></div>
+    <div class="issue-head">
+      <p class="issue-kicker">Issue 10</p>
+      <h1 class="issue-date">Sat, 11 Jul 2026</h1>
+      <div class="issue-foot">
+        <p class="issue-meta">6 papers</p>
+      </div>
+    </div>
+      <article class="paper-card" data-relevance="2" data-tags="newest">
+        <span class="paper-index" aria-hidden="true">01</span>
         <div class="paper-content">
           <div class="paper-header">
-            <a class="paper-title" href="http://arxiv.org/abs/2607.08681v1" target="_blank" rel="noopener">SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets</a>
-            <span class="paper-tag">最新论文</span>
+            <a class="paper-title" lang="en" href="http://arxiv.org/abs/2607.08681v1" target="_blank" rel="noopener">SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets</a>
+            <span class="paper-tag">Newest</span>
           </div>
-          <p class="paper-abstract">As agentic AI systems are increasingly applied to cyber-physical environments, their evaluation requires assessment of both task performance and trustworthiness. In decentralized energy markets, auton...</p>
-          <div class="paper-links"><a href="http://arxiv.org/abs/2607.08681v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.08681v1" target="_blank" rel="noopener">📥 PDF</a></div>
+          <blockquote class="paper-abstract" lang="en">As agentic AI systems are increasingly applied to cyber-physical environments, their evaluation requires assessment of both task performance and trustworthiness. In decentralized energy markets, auton...</blockquote>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.08681v1" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2607.08681v1" target="_blank" rel="noopener">📥 PDF</a></div>
         </div>
-      </div>
-      <div class="paper-card" data-relevance="2" data-tags="最新论文">
-        <div class="relevance-bar mid"></div>
+      </article>
+      <article class="paper-card" data-relevance="2" data-tags="newest">
+        <span class="paper-index" aria-hidden="true">02</span>
         <div class="paper-content">
           <div class="paper-header">
-            <a class="paper-title" href="http://arxiv.org/abs/2607.08662v1" target="_blank" rel="noopener">WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search</a>
-            <span class="paper-tag">最新论文</span>
+            <a class="paper-title" lang="en" href="http://arxiv.org/abs/2607.08662v1" target="_blank" rel="noopener">WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search</a>
+            <span class="paper-tag">Newest</span>
           </div>
-          <p class="paper-abstract">Large language model (LLM)-based web search agents are transforming information seeking from simple factoid question answering into complex, deep-and-wide search and research-oriented tasks. A single ...</p>
-          <div class="paper-links"><a href="http://arxiv.org/abs/2607.08662v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.08662v1" target="_blank" rel="noopener">📥 PDF</a></div>
+          <blockquote class="paper-abstract" lang="en">Large language model (LLM)-based web search agents are transforming information seeking from simple factoid question answering into complex, deep-and-wide search and research-oriented tasks. A single ...</blockquote>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.08662v1" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2607.08662v1" target="_blank" rel="noopener">📥 PDF</a></div>
         </div>
-      </div>
-      <div class="paper-card" data-relevance="2" data-tags="最新论文">
-        <div class="relevance-bar mid"></div>
+      </article>
+      <article class="paper-card" data-relevance="2" data-tags="newest">
+        <span class="paper-index" aria-hidden="true">03</span>
         <div class="paper-content">
           <div class="paper-header">
-            <a class="paper-title" href="http://arxiv.org/abs/2607.08652v1" target="_blank" rel="noopener">Formal Mechanisms for Market Stability in Self-Interested Agent Societies: A Marketplace Simulation Study</a>
-            <span class="paper-tag">最新论文</span>
+            <a class="paper-title" lang="en" href="http://arxiv.org/abs/2607.08652v1" target="_blank" rel="noopener">Formal Mechanisms for Market Stability in Self-Interested Agent Societies: A Marketplace Simulation Study</a>
+            <span class="paper-tag">Newest</span>
           </div>
-          <p class="paper-abstract">Self-interested agents, left unconstrained, tend toward defection in repeated social dilemmas, causing cooperative gains from trade to collapse. This paper investigates what formal mechanisms, layered...</p>
-          <div class="paper-links"><a href="http://arxiv.org/abs/2607.08652v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.08652v1" target="_blank" rel="noopener">📥 PDF</a></div>
+          <blockquote class="paper-abstract" lang="en">Self-interested agents, left unconstrained, tend toward defection in repeated social dilemmas, causing cooperative gains from trade to collapse. This paper investigates what formal mechanisms, layered...</blockquote>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.08652v1" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2607.08652v1" target="_blank" rel="noopener">📥 PDF</a></div>
         </div>
-      </div>
-      <div class="paper-card" data-relevance="2" data-tags="最新论文">
-        <div class="relevance-bar mid"></div>
+      </article>
+      <article class="paper-card" data-relevance="2" data-tags="newest">
+        <span class="paper-index" aria-hidden="true">04</span>
         <div class="paper-content">
           <div class="paper-header">
-            <a class="paper-title" href="http://arxiv.org/abs/2607.08400v1" target="_blank" rel="noopener">TRACE: A Two-Channel Robust Attribution Watermark via Complementary Embeddings for LLM-Agent Trajectories</a>
-            <span class="paper-tag">最新论文</span>
+            <a class="paper-title" lang="en" href="http://arxiv.org/abs/2607.08400v1" target="_blank" rel="noopener">TRACE: A Two-Channel Robust Attribution Watermark via Complementary Embeddings for LLM-Agent Trajectories</a>
+            <span class="paper-tag">Newest</span>
           </div>
-          <p class="paper-abstract">LLM agents reach users through resellers, who may rebrand a developer&#39;s agent or substitute a cheaper model. When provenance is disputed, attribution rests on the trajectory log (the record of tool ca...</p>
-          <div class="paper-links"><a href="http://arxiv.org/abs/2607.08400v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.08400v1" target="_blank" rel="noopener">📥 PDF</a></div>
+          <blockquote class="paper-abstract" lang="en">LLM agents reach users through resellers, who may rebrand a developer&#39;s agent or substitute a cheaper model. When provenance is disputed, attribution rests on the trajectory log (the record of tool ca...</blockquote>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.08400v1" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2607.08400v1" target="_blank" rel="noopener">📥 PDF</a></div>
         </div>
-      </div>
-      <div class="paper-card" data-relevance="2" data-tags="最新论文">
-        <div class="relevance-bar mid"></div>
+      </article>
+      <article class="paper-card" data-relevance="2" data-tags="newest">
+        <span class="paper-index" aria-hidden="true">05</span>
         <div class="paper-content">
           <div class="paper-header">
-            <a class="paper-title" href="http://arxiv.org/abs/2607.08288v1" target="_blank" rel="noopener">From Legacy Documentation to OSCAL: An MCP-Based Agent Pipeline for Threat-Informed Continuous Compliance in Critical Infrastructure</a>
-            <span class="paper-tag">最新论文</span>
+            <a class="paper-title" lang="en" href="http://arxiv.org/abs/2607.08288v1" target="_blank" rel="noopener">From Legacy Documentation to OSCAL: An MCP-Based Agent Pipeline for Threat-Informed Continuous Compliance in Critical Infrastructure</a>
+            <span class="paper-tag">Newest</span>
           </div>
-          <p class="paper-abstract">In critical infrastructure, operational technology environments often cannot be actively scanned, and yet active system feedback is needed for risk assessment and compliance. This paper presents a non...</p>
-          <div class="paper-links"><a href="http://arxiv.org/abs/2607.08288v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.08288v1" target="_blank" rel="noopener">📥 PDF</a></div>
+          <blockquote class="paper-abstract" lang="en">In critical infrastructure, operational technology environments often cannot be actively scanned, and yet active system feedback is needed for risk assessment and compliance. This paper presents a non...</blockquote>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.08288v1" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2607.08288v1" target="_blank" rel="noopener">📥 PDF</a></div>
         </div>
-      </div>
-      <div class="paper-card" data-relevance="2" data-tags="最新论文">
-        <div class="relevance-bar mid"></div>
+      </article>
+      <article class="paper-card" data-relevance="2" data-tags="newest">
+        <span class="paper-index" aria-hidden="true">06</span>
         <div class="paper-content">
           <div class="paper-header">
-            <a class="paper-title" href="http://arxiv.org/abs/2607.08177v1" target="_blank" rel="noopener">ASMR: Agentic Schema Generation for Ship Maintenance Report Writing</a>
-            <span class="paper-tag">最新论文</span>
+            <a class="paper-title" lang="en" href="http://arxiv.org/abs/2607.08177v1" target="_blank" rel="noopener">ASMR: Agentic Schema Generation for Ship Maintenance Report Writing</a>
+            <span class="paper-tag">Newest</span>
           </div>
-          <p class="paper-abstract">In this paper, we study the automatic schema generation problem: given a collection of historical ship maintenance and operational reports across multiple form categories, automatically discover compa...</p>
-          <div class="paper-links"><a href="http://arxiv.org/abs/2607.08177v1" target="_blank" rel="noopener">📄 论文</a> · <a href="https://arxiv.org/pdf/2607.08177v1" target="_blank" rel="noopener">📥 PDF</a></div>
+          <blockquote class="paper-abstract" lang="en">In this paper, we study the automatic schema generation problem: given a collection of historical ship maintenance and operational reports across multiple form categories, automatically discover compa...</blockquote>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2607.08177v1" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2607.08177v1" target="_blank" rel="noopener">📥 PDF</a></div>
         </div>
-      </div>
+      </article>
     <footer class="footer">
+      <p class="footer-tagline">AI Paper Daily — daily digest of agent, RAG and knowledge-graph papers</p>
       <p>Built by <a href="https://github.com/alloevil">alloevil</a> · <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a> · <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a></p>
     </footer>
   </div>
+<script>
+// --- 主题：auto（跟随系统）→ light → dark 循环，选择存 localStorage。 ---
+// auto 时不写 data-theme，系统切换由 CSS 媒体查询实时接管；显式选择才写属性覆盖它。
+const THEME_KEY = 'paperTheme';
+const THEME_LABELS = { auto: '◐ Auto', light: '☀ Light', dark: '☾ Dark' };
+
+function currentTheme() {
+  const t = document.documentElement.getAttribute('data-theme');
+  return (t === 'light' || t === 'dark') ? t : 'auto';
+}
+
+// theme-color 跟着走：auto 时交回给两条 media 查询，显式选择时把两条都改成同一个色。
+function syncThemeColor(mode) {
+  const metas = Array.from(document.querySelectorAll('meta[name="theme-color"]'));
+  if (metas.length < 2) return;
+  if (mode === 'auto') {
+    metas[0].setAttribute('media', '(prefers-color-scheme: light)');
+    metas[0].setAttribute('content', '#ffffff');
+    metas[1].setAttribute('media', '(prefers-color-scheme: dark)');
+    metas[1].setAttribute('content', '#0b0d10');
+  } else {
+    metas.forEach(m => { m.removeAttribute('media'); m.setAttribute('content', mode === 'dark' ? '#0b0d10' : '#ffffff'); });
+  }
+}
+
+function renderThemeButton(mode) {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.textContent = THEME_LABELS[mode];
+  btn.title = 'Theme: ' + THEME_LABELS[mode] + ' (click to switch)';
+  btn.setAttribute('aria-label', 'Toggle theme (current: ' + THEME_LABELS[mode] + ')');
+  syncThemeColor(mode);
+}
+
+function cycleTheme() {
+  const order = ['auto', 'light', 'dark'];
+  const next = order[(order.indexOf(currentTheme()) + 1) % order.length];
+  if (next === 'auto') document.documentElement.removeAttribute('data-theme');
+  else document.documentElement.setAttribute('data-theme', next);
+  try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+  renderThemeButton(next);
+}
+
+document.addEventListener('DOMContentLoaded', () => renderThemeButton(currentTheme()));
+</script>
 </body>
 </html>

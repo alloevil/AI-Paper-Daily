@@ -185,7 +185,7 @@
       "as_of": "2026-09-13",
       "repro": "grep -c '<item>' docs/feed.xml",
       "check": {
-        "cmd": "python3 -c \"import re, pathlib\nf = pathlib.Path('docs/feed.xml').read_text(encoding='utf-8')\ntitles = re.findall(r'<title>(.*?)</title>', f, re.S)[1:]\nweekly = [t for t in titles if '周报' in t]\nassert weekly and weekly == titles[:len(weekly)], (len(weekly), titles[:3])\nassert len(titles) == len(weekly) + 50, (len(titles), len(weekly))\nprint('weekly roundups first, then papers, capped at 50')\"",
+        "cmd": "python3 -c \"import re, pathlib\nf = pathlib.Path('docs/feed.xml').read_text(encoding='utf-8')\ntitles = re.findall(r'<title>(.*?)</title>', f, re.S)[1:]\nweekly = [t for t in titles if 'Weekly roundup' in t]\nassert weekly and weekly == titles[:len(weekly)], (len(weekly), titles[:3])\nassert len(titles) == len(weekly) + 50, (len(titles), len(weekly))\nprint('weekly roundups first, then papers, capped at 50')\"",
         "expect": {
           "equals": "weekly roundups first, then papers, capped at 50"
         },
@@ -276,6 +276,40 @@
         "timeout": 180
       },
       "evidence": "assets/readme/hero.svg"
+    },
+    {
+      "id": "issue-numbers",
+      "claim": "Every daily page is numbered as an issue: its \"Issue N\" is the digest's position counted from the oldest report, so the newest digest is #N (N = committed digests). The home page's issue head carries the same number — it is derived, never hand-typed.",
+      "value": "issue numbers are exactly 1..N, newest == N",
+      "metric": "the 期号 on each docs/YYYY-MM-DD.html and #issue-no on the home page versus the ordered digest list",
+      "method": "scripts/generate_site.py numbers the ordered reports list (oldest = 1) and writes it into each daily page's kicker and into the home page's issue head (#issue-no, alongside each section's data-issue). The check rebuilds the same ordering from docs/*.md and asserts the numbering is contiguous 1..N, that the oldest is #1, and that the newest is #N — a hand-editedor off-by-one number fails.",
+      "evidence": "docs/index.html",
+      "as_of": "2026-09-14",
+      "repro": "python3 scripts/generate_site.py && grep -o 'id=\"issue-no\">[0-9]*' docs/index.html",
+      "check": {
+        "cmd": "python3 -c \"import re, pathlib\nd = pathlib.Path('docs')\ndates = sorted(p.stem for p in d.glob('????-??-??.md'))\nn = len(dates)\nhead = re.search(r'id=\\\"issue-no\\\">(\\d+)', (d / 'index.html').read_text(encoding='utf-8')).group(1)\nassert int(head) == n, ('home issue head', head, n)\nseen = []\nfor date in dates:\n    h = (d / (date + '.html')).read_text(encoding='utf-8')\n    m = re.search(r'issue-kicker\\\">[^<]*?Issue (\\d+)', h)\n    assert m, date\n    seen.append(int(m.group(1)))\nassert sorted(seen) == list(range(1, n + 1)), sorted(seen)[:5]\nassert seen[0] == 1 and seen[-1] == n, (dates[0], seen[0], dates[-1], seen[-1])\nprint('issue numbers 1..%d contiguous, oldest #1, newest #%d' % (n, n))\"",
+        "expect": {
+          "regex": "issue numbers 1\\.\\.\\d+ contiguous, oldest #1, newest #\\d+"
+        },
+        "timeout": 120
+      }
+    },
+    {
+      "id": "site-ui-is-english",
+      "claim": "The published interface is English: no CJK ideograph and no full-width punctuation survives in the rendered text of any generated page (home, 62 daily pages, 5 weekly pages). Article titles and abstracts are the original English source text, and the Chinese tags the pipeline writes into the Markdown (`高票/有代码`, `最新论文`) are mapped to English labels for display, while `data-tags` and URL hashes keep stable English slugs.",
+      "value": "0 CJK characters in visible text",
+      "metric": "CJK ideographs and full-width punctuation left after stripping <script>, <style> and HTML comments from every generated page",
+      "method": "scripts/generate_site.py renders the interface from English literals and maps data-layer tags through _tag_label()/_tag_slug(). The check strips inline script/style blocks and comments (developer comments stay Chinese by house style) and asserts nothing from U+3000-303F, U+FF00-FFEF or the CJK ideograph ranges remains in what a reader actually sees.",
+      "evidence": "docs/index.html",
+      "as_of": "2026-09-14",
+      "repro": "python3 -c \"import re, pathlib; h=pathlib.Path('docs/index.html').read_text(); print(len(re.findall(r'[\\u3000-\\u303f\\uff00-\\uffef\\u4e00-\\u9fff]', re.sub(r'<script.*?</script>|<style.*?</style>|<!--.*?-->','',h,flags=re.S))))\"",
+      "check": {
+        "cmd": "python3 -c \"import re, pathlib\ncjk = re.compile(r'[\\u3000-\\u303f\\uff00-\\uffef\\u4e00-\\u9fff]')\nstrip = lambda s: re.sub(r'<script.*?</script>|<style.*?</style>|<!--.*?-->', '', s, flags=re.S)\npages = [p for p in sorted(pathlib.Path('docs').glob('*.html')) if p.name != 'template.html']\nbad = {p.name: cjk.findall(strip(p.read_text(encoding='utf-8')))[:3] for p in pages if cjk.search(strip(p.read_text(encoding='utf-8')))}\nassert not bad, bad\nprint('all %d generated pages render English text only' % len(pages))\"",
+        "expect": {
+          "regex": "all \\d+ generated pages render English text only"
+        },
+        "timeout": 120
+      }
     }
   ]
 }

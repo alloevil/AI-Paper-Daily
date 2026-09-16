@@ -126,7 +126,7 @@ class WeeklySitePageTest(unittest.TestCase):
 
     def test_weekly_page_renders_papers_as_html(self):
         html = render_weekly_page("2026-W34", self.date_range, self.papers)
-        self.assertIn("论文周报 2026-W34", html)
+        self.assertIn("Weekly roundup 2026-W34", html)
         self.assertIn("Top Weekly Paper", html)
         self.assertIn("https://arxiv.org/abs/2608.44444", html)
         self.assertIn('href="./"', html)  # 返回首页链接
@@ -134,7 +134,7 @@ class WeeklySitePageTest(unittest.TestCase):
 
     def test_daily_page_carries_the_head_metadata(self):
         html = render_daily_page("2026-08-14", self.papers, prev_date="2026-08-13")
-        self.assertIn("<title>论文日报 2026-08-14", html)
+        self.assertIn("<title>Daily digest 2026-08-14", html)
         self.assertIn('rel="canonical" href="https://alloevil.github.io/AI-Paper-Daily/2026-08-14.html"', html)
         self.assertIn('name="description"', html)
         self.assertIn('property="og:', html)
@@ -155,7 +155,7 @@ class WeeklySitePageTest(unittest.TestCase):
 
     def test_weekly_report_in_feed(self):
         xml = generate_rss([], [("2026-W34", self.date_range, self.papers)])
-        self.assertIn("论文周报 2026-W34", xml)
+        self.assertIn("Weekly roundup 2026-W34", xml)
         self.assertIn("weekly-2026-W34.html", xml)
 
 

@@ -2,42 +2,42 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>AI Paper Daily</title>
-    <description>Daily AI Paper Discovery · Agent / RAG / Knowledge Graph</description>
+    <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
-    <language>zh-CN</language>
+    <language>en</language>
     <lastBuildDate>Tue, 15 Sep 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>📊 论文周报 2026-W38（2026-09-08 ~ 2026-09-14）</title>
-      <description>过去 7 天按热度重排的 Top 15：NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness；SenseNova-U1.5: Towards Native Unified Visual Intelligence；Omni Interaction Agent Technical Report；Eliciting Weak-to-Strong Generalization with On-Policy Reverse Distillation；Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models…</description>
+      <title>📊 Weekly roundup 2026-W38 (2026-09-08 ~ 2026-09-14)</title>
+      <description>Top 15 of the last 7 days by heat: NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness; SenseNova-U1.5: Towards Native Unified Visual Intelligence; Omni Interaction Agent Technical Report; Eliciting Weak-to-Strong Generalization with On-Policy Reverse Distillation; Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models…</description>
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W38.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W38.html</guid>
       <pubDate>Mon, 14 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📊 论文周报 2026-W37（2026-09-01 ~ 2026-09-07）</title>
-      <description>过去 7 天按热度重排的 Top 15：Repo-To-Skill: Distilling GitHub Repositories Into AI4AI Skills；StudentSim: Training LLM-based Student Simulators；SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models；LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes；DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution…</description>
+      <title>📊 Weekly roundup 2026-W37 (2026-09-01 ~ 2026-09-07)</title>
+      <description>Top 15 of the last 7 days by heat: Repo-To-Skill: Distilling GitHub Repositories Into AI4AI Skills; StudentSim: Training LLM-based Student Simulators; SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models; LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes; DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution…</description>
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W37.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W37.html</guid>
       <pubDate>Mon, 07 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📊 论文周报 2026-W36（2026-08-25 ~ 2026-08-31）</title>
-      <description>过去 7 天按热度重排的 Top 15：VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction；Apodex 1.1: Scaling Agentic Intelligence for Complex Work；JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution；Agentic Artifact Creation: Systems, Evaluation, Principles, and Opportunities；VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning…</description>
+      <title>📊 Weekly roundup 2026-W36 (2026-08-25 ~ 2026-08-31)</title>
+      <description>Top 15 of the last 7 days by heat: VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction; Apodex 1.1: Scaling Agentic Intelligence for Complex Work; JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution; Agentic Artifact Creation: Systems, Evaluation, Principles, and Opportunities; VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning…</description>
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W36.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W36.html</guid>
       <pubDate>Mon, 31 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📊 论文周报 2026-W35（2026-08-18 ~ 2026-08-24）</title>
-      <description>过去 7 天按热度重排的 Top 15：4DAnyone: Create Anyone in 4D from a Casual Monocular Video；Let's Scale Step by Step: Compute-Efficient Hyperparameter Transfer for Large-Scale Mixture-of-Experts；OmniAssistBench: Assistant-style Interaction Benchmark for Omni-LLMs；WithEveryone: Unified Planning and Identity Grounding for Group Image Generation；MemTrapBench: Benchmarking Cognitive Traps in LLM Memory Use…</description>
+      <title>📊 Weekly roundup 2026-W35 (2026-08-18 ~ 2026-08-24)</title>
+      <description>Top 15 of the last 7 days by heat: 4DAnyone: Create Anyone in 4D from a Casual Monocular Video; Let's Scale Step by Step: Compute-Efficient Hyperparameter Transfer for Large-Scale Mixture-of-Experts; OmniAssistBench: Assistant-style Interaction Benchmark for Omni-LLMs; WithEveryone: Unified Planning and Identity Grounding for Group Image Generation; MemTrapBench: Benchmarking Cognitive Traps in LLM Memory Use…</description>
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W35.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W35.html</guid>
       <pubDate>Mon, 24 Aug 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📊 论文周报 2026-W34（2026-08-14 ~ 2026-08-20）</title>
-      <description>过去 7 天按热度重排的 Top 15：FACET: Preserving Source Intent and Executable State in Terminal Task Synthesis；Co-RL: Unsupervised Reasoning Emerges from Diverse Cohort in Multi-agent RL；SkillForge: Self-Distilling Agents for Project-Specific Issue Resolution；One Gate Is Not Enough: Composing Stateful Pre-Action Controls for Agentic AI；SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation…</description>
+      <title>📊 Weekly roundup 2026-W34 (2026-08-14 ~ 2026-08-20)</title>
+      <description>Top 15 of the last 7 days by heat: FACET: Preserving Source Intent and Executable State in Terminal Task Synthesis; Co-RL: Unsupervised Reasoning Emerges from Diverse Cohort in Multi-agent RL; SkillForge: Self-Distilling Agents for Project-Specific Issue Resolution; One Gate Is Not Enough: Composing Stateful Pre-Action Controls for Agentic AI; SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation…</description>
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
