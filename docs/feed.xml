@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Wed, 16 Sep 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W38 (2026-09-08 ~ 2026-09-14)</title>
@@ -41,6 +41,62 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ScienceIDE: Turning World's Scientific Codebase into Agent Learnable Environments (2026-09-17)</title>
+      <description>Scientific code repositories encode decades of human knowledge in executable models, methods, and tools. Yet fragmented toolchains, implicit domain conventions, and specialized correctness criteria ma...</description>
+      <link>https://arxiv.org/abs/2609.19134</link>
+      <guid>https://arxiv.org/abs/2609.19134#2026-09-17</guid>
+      <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ProgramDistill: From Interactive Web Apps to Verifiable Reference-Guided SWE Tasks (2026-09-17)</title>
+      <description>Coding agents are typically evaluated with desired behavior specified through issues or instructions. In practical web development, however, agents may need to infer behavior from working software and...</description>
+      <link>https://arxiv.org/abs/2609.18805</link>
+      <guid>https://arxiv.org/abs/2609.18805#2026-09-17</guid>
+      <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Rethinking Critic Learning in PPO: Understanding and Mitigating Value Flattening (2026-09-17)</title>
+      <description>In reinforcement learning for large language models, Proximal Policy Optimization (PPO) commonly uses a critic to estimate state values and reduce the variance of policy updates. However, we uncover a...</description>
+      <link>https://arxiv.org/abs/2609.18708</link>
+      <guid>https://arxiv.org/abs/2609.18708#2026-09-17</guid>
+      <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ActionPiece: Rethinking Action Tokenization for Autoregressive Vision-Language-Action Models (2026-09-17)</title>
+      <description>Action tokenizers play a central role in autoregressive vision-language-action (VLA) models, determining both the targets for policy training and the executable commands recovered from predicted token...</description>
+      <link>https://arxiv.org/abs/2609.18487</link>
+      <guid>https://arxiv.org/abs/2609.18487#2026-09-17</guid>
+      <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Agora: Git as Shared Memory for Collective AutoResearch (2026-09-17)</title>
+      <description>Autonomous research loops such as AutoResearch show that one coding agent can improve a training setup unattended. Run several of them and each session starts from scratch, so more agents tend to mean...</description>
+      <link>https://arxiv.org/abs/2609.18094</link>
+      <guid>https://arxiv.org/abs/2609.18094#2026-09-17</guid>
+      <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 A Zeroth-Order Paradigm for LLM Preference Alignment (2026-09-17)</title>
+      <description>Direct preference alignment methods are widely used to align large language models (LLMs) with human preferences because of their computational and memory efficiency. However, likelihood displacement ...</description>
+      <link>https://arxiv.org/abs/2609.19144</link>
+      <guid>https://arxiv.org/abs/2609.19144#2026-09-17</guid>
+      <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Gaze as Evidence for Common Grounding: A Cross-Corpus Analysis of MapTask and MUNDEX (2026-09-17)</title>
+      <description>In collaborative tasks with asymmetric information, participants coordinate their understanding through interaction. We ask whether gaze provides evidence about grounding across two such tasks. Workin...</description>
+      <link>https://arxiv.org/abs/2609.18011</link>
+      <guid>https://arxiv.org/abs/2609.18011#2026-09-17</guid>
+      <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PANORAMA: Panoptic Grounded Captioning via Mask Proposal Selection (2026-09-17)</title>
+      <description>Intelligent systems that act in the world require image understanding that is both comprehensive and spatially grounded. Current vision-language models (VLMs) can generate fluent and detailed image ca...</description>
+      <link>https://arxiv.org/abs/2609.19143</link>
+      <guid>https://arxiv.org/abs/2609.19143#2026-09-17</guid>
+      <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 AI for Games in the Foundation Model Era (2026-09-16)</title>
@@ -335,62 +391,6 @@
       <link>https://arxiv.org/abs/2609.11155</link>
       <guid>https://arxiv.org/abs/2609.11155#2026-09-11</guid>
       <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 UniH^3: Unifying Hierarchical Homogeneity and Heterogeneity for All-in-One Medical Image Restoration (2026-09-11)</title>
-      <description>All-in-One medical image restoration (MedIR) aims to address diverse tasks across modalities and degradation types using a single universal model. Existing methods typically prioritize modeling inter-...</description>
-      <link>https://arxiv.org/abs/2609.11156</link>
-      <guid>https://arxiv.org/abs/2609.11156#2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Generative Late-Interaction Embeddings For Visual Document Retrieval (2026-09-11)</title>
-      <description>Late-interaction retrieval is the state-of-the-art for visual document search, but it pays for its accuracy in storage. Existing compression methods retain a subset or local average of the N~1,000 vec...</description>
-      <link>https://arxiv.org/abs/2609.11808</link>
-      <guid>https://arxiv.org/abs/2609.11808#2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Show-Harness: Just a VLM Agent Can Play Robots (2026-09-10)</title>
-      <description>Foundation vision-language models (VLMs) exhibit broad intelligence about the world, yet translating this intelligence into robot control remains challenging. We present Show-Harness, an Embodied Harn...</description>
-      <link>https://arxiv.org/abs/2609.10522</link>
-      <guid>https://arxiv.org/abs/2609.10522#2026-09-10</guid>
-      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Programmable World Model (2026-09-10)</title>
-      <description>Recent video world models generate increasingly realistic and interactive visual experiences, yet lack reliable mechanisms for maintaining persistent world state and enforcing programmable rules over ...</description>
-      <link>https://arxiv.org/abs/2609.10540</link>
-      <guid>https://arxiv.org/abs/2609.10540#2026-09-10</guid>
-      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Vague2Detect: Handling Ambiguous Prompts in Knowledge-Based Open-World Detection (2026-09-10)</title>
-      <description>Real-world detectors must often interpret functional or ambiguous prompts, yet conventional models such as YOLO remain restricted to fixed class lists. Even open-vocabulary models like YOLO-World freq...</description>
-      <link>http://arxiv.org/abs/2609.09949v1</link>
-      <guid>http://arxiv.org/abs/2609.09949v1#2026-09-10</guid>
-      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Purchase Advice and Observable Buyer Responses in Real AI Conversations (2026-09-10)</title>
-      <description>How often does a generative assistant persuade someone to buy, or persuade them not to buy? Conversation logs contain recommendations, but they do not necessarily record subsequent decisions. We audit...</description>
-      <link>http://arxiv.org/abs/2609.09878v1</link>
-      <guid>http://arxiv.org/abs/2609.09878v1#2026-09-10</guid>
-      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Φ-Bench: Can Large Language Models Engineer the Infrastructure That Powers Them? (2026-09-10)</title>
-      <description>Large language models (LLMs) have demonstrated remarkable capabilities in reasoning and code generation, raising the prospect that they could assist in developing and optimizing the very infrastructur...</description>
-      <link>https://arxiv.org/abs/2609.10226</link>
-      <guid>https://arxiv.org/abs/2609.10226#2026-09-10</guid>
-      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Avatar: Toward Autonomous End-to-End Orchestration of Scientific Workflows using LLMs (2026-09-10)</title>
-      <description>Scientific workflow management (WMSs) systems automate execution, yet orchestrate using fixed, hand-tuned rules. LLM agents promise more autonomous orchestration, but it remains unclear where to intro...</description>
-      <link>http://arxiv.org/abs/2609.10509v1</link>
-      <guid>http://arxiv.org/abs/2609.10509v1#2026-09-10</guid>
-      <pubDate>Thu, 10 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
