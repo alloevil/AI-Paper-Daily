@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Sep 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W38 (2026-09-08 ~ 2026-09-14)</title>
@@ -41,6 +41,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression (2026-09-18)</title>
+      <description>The widespread adoption of long-horizon agents has made model workloads increasingly input-heavy. Although prior work has substantially reduced the cost of long-context computation, prefill remains co...</description>
+      <link>https://arxiv.org/abs/2609.19969</link>
+      <guid>https://arxiv.org/abs/2609.19969#2026-09-18</guid>
+      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness (2026-09-18)</title>
+      <description>As coding agents move from supervised code completion to unattended, around-the-clock exploration, their work expands from isolated predictions into long trajectories of reasoning, tool use, and feedb...</description>
+      <link>https://arxiv.org/abs/2609.20519</link>
+      <guid>https://arxiv.org/abs/2609.20519#2026-09-18</guid>
+      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 An Empirical Study of Harness Design for Coding Agents (2026-09-18)</title>
+      <description>Coding harnesses shape how autonomous coding agents translate model capabilities into long-horizon software-engineering performance, yet existing work typically evaluates harnesses as monolithic syste...</description>
+      <link>https://arxiv.org/abs/2609.20804</link>
+      <guid>https://arxiv.org/abs/2609.20804#2026-09-18</guid>
+      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 When EOS Tokens Disagree: Understanding Length Inflation in On-Policy Distillation (2026-09-18)</title>
+      <description>We study length inflation in on-policy distillation (OPD), where student responses can become excessively long and even exhaust the generation budget. We identify termination-token mismatch between ba...</description>
+      <link>https://arxiv.org/abs/2609.20511</link>
+      <guid>https://arxiv.org/abs/2609.20511#2026-09-18</guid>
+      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 JEPA-Anything: Learning Predictive Models across Different Worlds (2026-09-18)</title>
+      <description>World modeling enables intelligence to anticipate consequences, guide interventions, and learn from interaction. Yet predictive models remain domain-specific: can a common learning principle support w...</description>
+      <link>https://arxiv.org/abs/2609.20800</link>
+      <guid>https://arxiv.org/abs/2609.20800#2026-09-18</guid>
+      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 RetireOPD: Self-Retiring On-Policy Distillation for Agentic Reinforcement Learning (2026-09-18)</title>
+      <description>Multi-turn agents trained with reinforcement learning (RL) receive a single scalar reward per trajectory, which motivates self on-policy distillation (OPD) to supply dense token-level supervision from...</description>
+      <link>https://arxiv.org/abs/2609.20784</link>
+      <guid>https://arxiv.org/abs/2609.20784#2026-09-18</guid>
+      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WeVisDoc: From Coverage to Capability for Robust End-to-End Document Parsing (2026-09-18)</title>
+      <description>Document parsing converts document images into structured content and requires reliable performance across diverse layouts and acquisition conditions. Yet training corpora are biased toward common doc...</description>
+      <link>https://arxiv.org/abs/2609.20423</link>
+      <guid>https://arxiv.org/abs/2609.20423#2026-09-18</guid>
+      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation (2026-09-18)</title>
+      <description>Video diffusion models repeatedly process long spatiotemporal token sequences during denoising, making attention a major computational bottleneck. Linear attention offers an appealing alternative and ...</description>
+      <link>https://arxiv.org/abs/2609.20744</link>
+      <guid>https://arxiv.org/abs/2609.20744#2026-09-18</guid>
+      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 VABench: Measuring Embodied Spatial Intelligence through Visual Demonstrations, Active Perception, and Metric Control (2026-09-18)</title>
+      <description>Spatial intelligence requires more than describing object locations. Under incomplete observation, models must identify and acquire missing evidence, interpret it in a common spatial frame, and act on...</description>
+      <link>https://arxiv.org/abs/2609.19554</link>
+      <guid>https://arxiv.org/abs/2609.19554#2026-09-18</guid>
+      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 UFO: Chain-of-Evaluation for Omni-Condition Alignment in Multi-Modal Image Generation (2026-09-18)</title>
+      <description>Multi-modal image generation, particularly subject-driven customization, has garnered growing attention in recent years. Despite the rapid advancement of generative models, their evaluation remains la...</description>
+      <link>https://arxiv.org/abs/2609.12397</link>
+      <guid>https://arxiv.org/abs/2609.12397#2026-09-18</guid>
+      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 ScienceIDE: Turning World's Scientific Codebase into Agent Learnable Environments (2026-09-17)</title>
@@ -321,76 +391,6 @@
       <link>http://arxiv.org/abs/2609.11674v1</link>
       <guid>http://arxiv.org/abs/2609.11674v1#2026-09-12</guid>
       <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Enabling Knowledge Graph Understanding at Scale with the EXplore Your Graphs ENgine (EXYGEN) (2026-09-12)</title>
-      <description>We present EXYGEN (EXplore Your Graphs ENgine), a framework for knowledge graph (KG) understanding that enables conversational access to KGs at scale. We address two questions in sequence. First, how ...</description>
-      <link>http://arxiv.org/abs/2609.11569v1</link>
-      <guid>http://arxiv.org/abs/2609.11569v1#2026-09-12</guid>
-      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 From Document Silos to Process Intelligence: A Multi-Layer Knowledge Graph for CMC Process Development (2026-09-12)</title>
-      <description>Chemistry, Manufacturing and Controls (CMC) process development generates an enormous body of technical information across a multi-stage, knowledge-intensive continuum from drug discovery to commercia...</description>
-      <link>http://arxiv.org/abs/2609.11493v1</link>
-      <guid>http://arxiv.org/abs/2609.11493v1#2026-09-12</guid>
-      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SenseNova-U1.5: Towards Native Unified Visual Intelligence (2026-09-11)</title>
-      <description>We launch SenseNova-U1.5, an 8B-MoT native unified multimodal model that understands, reasons about, and generates visual content within an encoder-free and VAE-free architecture. We strengthen its vi...</description>
-      <link>https://arxiv.org/abs/2609.11929</link>
-      <guid>https://arxiv.org/abs/2609.11929#2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks (2026-09-11)</title>
-      <description>Agent usage is shifting toward long-horizon tasks such as coding and scientific discovery, among which terminal tasks are especially important. We introduce T1, a Mixture-of-Experts model of 122B tota...</description>
-      <link>https://arxiv.org/abs/2609.11042</link>
-      <guid>https://arxiv.org/abs/2609.11042#2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 X-AuT: Progressive Audio-Encoder Compression for Speech LLMs with Cross-Scale Distillation (2026-09-11)</title>
-      <description>Reducing audio-encoder depth lowers the inference cost of speech large language models, but removing complete blocks perturbs the embeddings consumed by the decoder and can cause deletion and prematur...</description>
-      <link>https://arxiv.org/abs/2609.11412</link>
-      <guid>https://arxiv.org/abs/2609.11412#2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 But How Would AI Agents Run a Town's Economy? (2026-09-11)</title>
-      <description>We placed 100 memory-equipped large language model (LLM) agents in charge of a closed, money-conserving spatial economy on real Pokhara Lakeside geography (earning wages, running businesses, setting p...</description>
-      <link>http://arxiv.org/abs/2609.11108v1</link>
-      <guid>http://arxiv.org/abs/2609.11108v1#2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DriftNet: A Dual-Head Trajectory Transformer for Detecting and Localizing Prompt Injection in LLM Agents (2026-09-11)</title>
-      <description>When an indirect prompt injection succeeds against an LLM agent, the compromise is visible in the agent's own behavior: a benign prefix of tool calls, a poisoned observation, and a suffix of actions t...</description>
-      <link>http://arxiv.org/abs/2609.10892v1</link>
-      <guid>http://arxiv.org/abs/2609.10892v1#2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Recursive Code World Models: Building Complex Worlds through Recursive Scene Programs (2026-09-11)</title>
-      <description>Code world models represent worlds as executable programs, but this representation alone does not determine how to construct a complex world. We introduce Recursive Code World Models (RCWM), a framewo...</description>
-      <link>https://arxiv.org/abs/2609.11499</link>
-      <guid>https://arxiv.org/abs/2609.11499#2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 World in World: Explore the World with World Models (2026-09-11)</title>
-      <description>Autoregressive video world models enable interactive, long-horizon exploration, but flexible control remains challenging. Exploring a source video from new viewpoints requires the generated rollout to...</description>
-      <link>https://arxiv.org/abs/2609.11548</link>
-      <guid>https://arxiv.org/abs/2609.11548#2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DRG-MAPPO: Hierarchical Dynamic Role-Graph Multi-Agent Reinforcement Learning for Cooperative Air Combat (2026-09-11)</title>
-      <description>Multi-Agent Reinforcement Learning (MARL) has emerged as a pivotal paradigm for complex decision-making in autonomous systems and air combat. While MARL has demonstrated significant potential in air c...</description>
-      <link>https://arxiv.org/abs/2609.11155</link>
-      <guid>https://arxiv.org/abs/2609.11155#2026-09-11</guid>
-      <pubDate>Fri, 11 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
