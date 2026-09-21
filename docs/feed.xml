@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Fri, 18 Sep 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W38 (2026-09-08 ~ 2026-09-14)</title>
@@ -41,6 +41,55 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CodeMidas: Scaling Agentic Coding RL Environments from Code Itself (2026-09-21)</title>
+      <description>Training capable coding agents via reinforcement learning (RL) requires diverse tasks with reliable verifiers. Open-source codebases offer a rich source of such tasks, while existing methods typically...</description>
+      <link>https://arxiv.org/abs/2609.22068</link>
+      <guid>https://arxiv.org/abs/2609.22068#2026-09-21</guid>
+      <pubDate>Mon, 21 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 RecreationWorld: Scalable and Verifiable Environments for Hybrid Computer-Use Agents (2026-09-21)</title>
+      <description>Computer-use agents (CUAs) have advanced along two separate lines: graphical interaction and software development through code and the command line. Real digital work requires both, interleaved rather...</description>
+      <link>https://arxiv.org/abs/2609.22000</link>
+      <guid>https://arxiv.org/abs/2609.22000#2026-09-21</guid>
+      <pubDate>Mon, 21 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 GraphSkillEvo: Evolutionary Optimization of Graph-Structured Agent Skills (2026-09-21)</title>
+      <description>Skills can improve the performance of Large Language Model (LLM) agents by providing task-specific procedural guidance, while skill optimization further improves their effectiveness through iterative ...</description>
+      <link>https://arxiv.org/abs/2609.21749</link>
+      <guid>https://arxiv.org/abs/2609.21749#2026-09-21</guid>
+      <pubDate>Mon, 21 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 OmniVBench: A Benchmark and Large-Scale Dataset for Omni Reference-to-Video Generation (2026-09-21)</title>
+      <description>Reference-to-video (R2V) generation is evolving toward increasingly general and versatile reference control, giving rise to the emerging paradigm of omni R2V generation. However, existing benchmarks f...</description>
+      <link>https://arxiv.org/abs/2609.22069</link>
+      <guid>https://arxiv.org/abs/2609.22069#2026-09-21</guid>
+      <pubDate>Mon, 21 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MintAct: A Unified Visual Agent for Digital Environments (2026-09-21)</title>
+      <description>We present MintAct, a family of vision-language models that unifies UI grounding, multi-step navigation across mobile, desktop, and web, and visual tool use, trained at 2B, 4B, and 8B scales. Through ...</description>
+      <link>https://arxiv.org/abs/2609.22083</link>
+      <guid>https://arxiv.org/abs/2609.22083#2026-09-21</guid>
+      <pubDate>Mon, 21 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Calibrating Teacher--Student Discrepancy for On-Policy Distillation (2026-09-21)</title>
+      <description>On-policy distillation (OPD) improves reasoning models by learning the token-level discrepancy between a stronger teacher and an on-policy student. However, this discrepancy does not purely reflect th...</description>
+      <link>https://arxiv.org/abs/2609.21619</link>
+      <guid>https://arxiv.org/abs/2609.21619#2026-09-21</guid>
+      <pubDate>Mon, 21 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 OmniVChat: Synthesizing, Benchmarking, and Training for Native Audio-Visual Dialogue (2026-09-21)</title>
+      <description>We define OmniVChat (Omni Video Chat) as the task of native audio-visual dialogue between a user and an omni model. In OmniVChat, omni models directly and simultaneously receive audio and video from a...</description>
+      <link>https://arxiv.org/abs/2609.21465</link>
+      <guid>https://arxiv.org/abs/2609.21465#2026-09-21</guid>
+      <pubDate>Mon, 21 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression (2026-09-18)</title>
@@ -341,55 +390,6 @@
       <description>Agentic AI is moving from bounded task execution toward systems that retain consequential state, continue operating and adapt across task boundaries. That shift creates a control problem that current ...</description>
       <link>http://arxiv.org/abs/2609.11911v1</link>
       <guid>http://arxiv.org/abs/2609.11911v1#2026-09-12</guid>
-      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RAG-Safety-Bench: Reliable Evaluation of Retrieval-Augmented LLM Safety (2026-09-12)</title>
-      <description>Allowing large language models (LLMs) to retrieve information from a set of trusted documents can increase reliability and reduce hallucination. However, recent work has demonstrated that retrieval-au...</description>
-      <link>http://arxiv.org/abs/2609.11758v1</link>
-      <guid>http://arxiv.org/abs/2609.11758v1#2026-09-12</guid>
-      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ORCH: Organizational Principles Enable Collective Intelligence in Embodied AI (2026-09-12)</title>
-      <description>Collective intelligence depends not only on the capabilities of individual members, but also on how those members are organized. Yet artificial multi-agent systems are typically assembled using fixed ...</description>
-      <link>http://arxiv.org/abs/2609.11737v1</link>
-      <guid>http://arxiv.org/abs/2609.11737v1#2026-09-12</guid>
-      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 The Eloquence submission for Task 2 of the Interspeech 2026 MLC-SLM challenge (2026-09-12)</title>
-      <description>This paper details the Eloquence team's approach to Task 2 of the 2nd MLC-SLM challenge at Interspeech 2026, which involves multilingual Multiple-Choice Question Answering (MCQA) across 21 languages. ...</description>
-      <link>http://arxiv.org/abs/2609.11724v1</link>
-      <guid>http://arxiv.org/abs/2609.11724v1#2026-09-12</guid>
-      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 When Agents Disagree: Bayesian Backward Reasoning as a Label-Free Anchor for Multi-Agent Collective Decision-Making (2026-09-12)</title>
-      <description>When multiple LLM agents yield conflicting answers, the decision-making process dictates whether agent diversity improves performance or merely compounds shared errors. Existing collective decision-ma...</description>
-      <link>http://arxiv.org/abs/2609.11709v1</link>
-      <guid>http://arxiv.org/abs/2609.11709v1#2026-09-12</guid>
-      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 COBRA-Skills: Contextual Bandit-Guided Evolution for Agent Skill Optimization (2026-09-12)</title>
-      <description>Large language model (LLM) agents can benefit from reusable skills distilled from prior task experience, yet existing skill optimization methods often rely on costly execution-based evaluation and sub...</description>
-      <link>http://arxiv.org/abs/2609.11682v1</link>
-      <guid>http://arxiv.org/abs/2609.11682v1#2026-09-12</guid>
-      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Ecdysis: Efficient and Effective Training of Runtime Harnesses for LLM Agents (2026-09-12)</title>
-      <description>Self-evolving runtime harnesses can substantially improve the capabilities of large language model (LLM) agents and provide a promising paradigm for optimizing agent execution. Existing harness evolut...</description>
-      <link>http://arxiv.org/abs/2609.11677v1</link>
-      <guid>http://arxiv.org/abs/2609.11677v1#2026-09-12</guid>
-      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Geospatial AI, Dataverse Metadata, and the Study of Place-Based Government (2026-09-12)</title>
-      <description>Harvard Dataverse hosts over 150,000 research datasets, but the geographic information those datasets carry is entered as free text by depositors and has never been assembled into a searchable structu...</description>
-      <link>http://arxiv.org/abs/2609.11674v1</link>
-      <guid>http://arxiv.org/abs/2609.11674v1#2026-09-12</guid>
       <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
