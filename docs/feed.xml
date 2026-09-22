@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Mon, 21 Sep 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W39 (2026-09-15 ~ 2026-09-21)</title>
@@ -48,6 +48,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory (2026-09-22)</title>
+      <description>Video world models enable interactive exploration of dynamic environments, yet struggle to respect prior observations over long horizons and across viewpoints. We present WorldCrafter, a video world m...</description>
+      <link>https://arxiv.org/abs/2609.24984</link>
+      <guid>https://arxiv.org/abs/2609.24984#2026-09-22</guid>
+      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 RRSI: Regularized Recursive Self-Improvement of Agent Harnesses (2026-09-22)</title>
+      <description>An LLM agent's capability is largely magnified by its harness, namely the prompts, control flow, tooling, memory, and context management surrounding the frozen backbone model. Recent methods increasin...</description>
+      <link>https://arxiv.org/abs/2609.24972</link>
+      <guid>https://arxiv.org/abs/2609.24972#2026-09-22</guid>
+      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 GameHorizon Suite: Multi-Horizon Data and Evaluation in Gameplay (2026-09-22)</title>
+      <description>Modern video games provide a measurable testbed for AI models, combining abilities of visual understanding, instruction decomposition, goal planning, and precise action control over multiple temporal ...</description>
+      <link>https://arxiv.org/abs/2609.25001</link>
+      <guid>https://arxiv.org/abs/2609.25001#2026-09-22</guid>
+      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Document Retrieval-Aware Chunking (D-RAC): Universal Retrieval-Aware Ingestion of Enterprise Documents via PDF Normalization and Multimodal Markdown Conversion (2026-09-22)</title>
+      <description>Retrieval-Augmented Generation (RAG) systems over enterprise knowledge bases must ingest heterogeneous document formats -- PDFs, Word documents, presentations, and scans -- whose content is locked ins...</description>
+      <link>https://arxiv.org/abs/2609.24220</link>
+      <guid>https://arxiv.org/abs/2609.24220#2026-09-22</guid>
+      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 VideoGen-Agent: Reinforcing Video Generation Agents (2026-09-22)</title>
+      <description>Recent advances in video generative models have enabled high-fidelity, temporally coherent video generation. However, these models often struggle to satisfy prompts requiring specialized knowledge, sp...</description>
+      <link>https://arxiv.org/abs/2609.24997</link>
+      <guid>https://arxiv.org/abs/2609.24997#2026-09-22</guid>
+      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 onPanda: Efficient Annotation of On-Policy Alignment Data for LLMs and Agents via Token-Level Correction (2026-09-22)</title>
+      <description>We present onPanda, an interactive tool for efficiently annotating LLM alignment data and agent trajectories. onPanda adopts token-level correction as its core interaction: while reading a model respo...</description>
+      <link>https://arxiv.org/abs/2609.24983</link>
+      <guid>https://arxiv.org/abs/2609.24983#2026-09-22</guid>
+      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Harness-Zero: Harness Distillation via Agent-as-Harness (2026-09-22)</title>
+      <description>Agent harnesses, the external systems that mediate model-environment interaction, can substantially improve agent performance, but their gains remain tied to the harness at deployment. Because the bes...</description>
+      <link>https://arxiv.org/abs/2609.24974</link>
+      <guid>https://arxiv.org/abs/2609.24974#2026-09-22</guid>
+      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies (2026-09-22)</title>
+      <description>Vision-Language-Action (VLA) policies achieve strong performance in robotic manipulation but remain brittle once execution deviates from nominal trajectories. We propose CARE (Corrective Atomic Roboti...</description>
+      <link>https://arxiv.org/abs/2609.24118</link>
+      <guid>https://arxiv.org/abs/2609.24118#2026-09-22</guid>
+      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents (2026-09-22)</title>
+      <description>Agentic memory is becoming essential for long-horizon AI agents, yet many existing systems rely on autoregressive LLMs to control how memories are organized, retrieved, and used, placing expensive gen...</description>
+      <link>https://arxiv.org/abs/2609.23986</link>
+      <guid>https://arxiv.org/abs/2609.23986#2026-09-22</guid>
+      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 1% of Tokens Can Be Enough: On Gradient Estimation in On-Policy Distillation (2026-09-22)</title>
+      <description>Sparse on-policy distillation (OPD) allocates teacher supervision to a small subset of tokens in student-generated trajectories. However, useful teacher guidance can yield a noisy update when its grad...</description>
+      <link>https://arxiv.org/abs/2609.24432</link>
+      <guid>https://arxiv.org/abs/2609.24432#2026-09-22</guid>
+      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 CodeMidas: Scaling Agentic Coding RL Environments from Code Itself (2026-09-21)</title>
@@ -328,76 +398,6 @@
       <link>https://arxiv.org/abs/2609.15973</link>
       <guid>https://arxiv.org/abs/2609.15973#2026-09-15</guid>
       <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 BVB: Benchmarking Agentic Video Understanding via Programmatic Reconstruction in Blender (2026-09-15)</title>
-      <description>Multimodal agents can create complex videos in software such as Blender by coding without relying on diffusion models. Yet video understanding benchmarks still evaluate models mainly through question ...</description>
-      <link>https://arxiv.org/abs/2609.15478</link>
-      <guid>https://arxiv.org/abs/2609.15478#2026-09-15</guid>
-      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RSIAgent: Autonomous Exploration for Recursive Self-improvement in New Environments (2026-09-15)</title>
-      <description>Digital agents must often adapt to new environments whose interfaces, tools, and failure modes are not fully captured by pretrained models. We introduce RSIAgent, a training-free multi-agent framework...</description>
-      <link>https://arxiv.org/abs/2609.15364</link>
-      <guid>https://arxiv.org/abs/2609.15364#2026-09-15</guid>
-      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Kaininja: Extending Native 3D Generators to the Part Level (2026-09-15)</title>
-      <description>Native 3D generators turn one image into a single mesh. TRELLIS.2 and its peers deliver high-fidelity non-watertight geometry with materials, but the output is one fused object, while downstream work ...</description>
-      <link>https://arxiv.org/abs/2609.15659</link>
-      <guid>https://arxiv.org/abs/2609.15659#2026-09-15</guid>
-      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Omni-Streaming Thinking (2026-09-15)</title>
-      <description>Streaming omni-modal models must decide what and when to answer from the video chunks and synchronized audio observed so far. Visual cues often support an interpretation before an utterance or sound e...</description>
-      <link>https://arxiv.org/abs/2609.15128</link>
-      <guid>https://arxiv.org/abs/2609.15128#2026-09-15</guid>
-      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 HazardAuditor: From Executable Threats to Safer Computer-Use Agents (2026-09-15)</title>
-      <description>Computer-use agents increasingly interact with browsers, terminals, file systems, and external services, introducing safety risks that emerge through runtime behavior rather than generated content alo...</description>
-      <link>https://arxiv.org/abs/2609.15134</link>
-      <guid>https://arxiv.org/abs/2609.15134#2026-09-15</guid>
-      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models (2026-09-14)</title>
-      <description>Robot foundation models achieve strong in-distribution performance but often degrade under visual distribution shifts. When learning to generate actions from pretrained visual representations, models ...</description>
-      <link>https://arxiv.org/abs/2609.12641</link>
-      <guid>https://arxiv.org/abs/2609.12641#2026-09-14</guid>
-      <pubDate>Mon, 14 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking (2026-09-14)</title>
-      <description>Post-training attention sparsification reduces the quadratic cumulative attention cost of pretrained Transformers by selecting a small set of context units (tokens or blocks) for each query. Existing ...</description>
-      <link>https://arxiv.org/abs/2609.13141</link>
-      <guid>https://arxiv.org/abs/2609.13141#2026-09-14</guid>
-      <pubDate>Mon, 14 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 StepAudio 3 Gen Technical Report (2026-09-14)</title>
-      <description>We introduce StepAudio 3 Gen, a general-purpose audio generation model that supports zero-shot text-to-speech (TTS), voice design, vocal generation, sound effects, music, vibe speech, and mixtures of ...</description>
-      <link>https://arxiv.org/abs/2609.12945</link>
-      <guid>https://arxiv.org/abs/2609.12945#2026-09-14</guid>
-      <pubDate>Mon, 14 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SNAP3D: Physically Grounded 3D Parts for Assembly from a Single Image (2026-09-14)</title>
-      <description>Part-aware 3D asset generation enables applications such as editing, articulation, simulation, and fabrication, yet existing methods can generate visually complete individual parts without ensuring th...</description>
-      <link>https://arxiv.org/abs/2609.13146</link>
-      <guid>https://arxiv.org/abs/2609.13146#2026-09-14</guid>
-      <pubDate>Mon, 14 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Artificial Id: Drive and Persistent Alignment in Agentic AI (2026-09-12)</title>
-      <description>Agentic AI is moving from bounded task execution toward systems that retain consequential state, continue operating and adapt across task boundaries. That shift creates a control problem that current ...</description>
-      <link>http://arxiv.org/abs/2609.11911v1</link>
-      <guid>http://arxiv.org/abs/2609.11911v1#2026-09-12</guid>
-      <pubDate>Sat, 12 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
