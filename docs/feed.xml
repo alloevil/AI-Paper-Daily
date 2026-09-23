@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Tue, 22 Sep 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W39 (2026-09-15 ~ 2026-09-21)</title>
@@ -48,6 +48,41 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 The Tasteful Agent: Measuring and Improving Taste in Long-Horizon Tasks (2026-09-23)</title>
+      <description>LLM agents increasingly work on long-horizon tasks, and the decisions they make along the way, such as which hypothesis to test or which implementation to build on, determine the outcome of the whole ...</description>
+      <link>https://arxiv.org/abs/2609.25804</link>
+      <guid>https://arxiv.org/abs/2609.25804#2026-09-23</guid>
+      <pubDate>Wed, 23 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 StableVQ: Practical Guidelines for Stable Vector-Quantized Tokenizer Training (2026-09-23)</title>
+      <description>Vector Quantization (VQ) is fundamental to discrete visual tokenizers that power modern autoregressive and masked image generation models. While recent shared-projection codebook methods have substant...</description>
+      <link>https://arxiv.org/abs/2609.26774</link>
+      <guid>https://arxiv.org/abs/2609.26774#2026-09-23</guid>
+      <pubDate>Wed, 23 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Fast, Memory-Efficient Diffusion LLMs (2026-09-23)</title>
+      <description>Diffusion Large Language Models (dLLMs) have recently emerged as a promising alternative to autoregressive LLMs by enabling non-autoregressive text generation. However, their practical deployment rema...</description>
+      <link>https://arxiv.org/abs/2609.26796</link>
+      <guid>https://arxiv.org/abs/2609.26796#2026-09-23</guid>
+      <pubDate>Wed, 23 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Recursive self-improvement of AI research agents (2026-09-23)</title>
+      <description>AI agents are beginning to automate research and development across the AI stack, from improving training efficiency to optimizing inference. A natural next step is to improve the research efficiency ...</description>
+      <link>https://arxiv.org/abs/2609.26457</link>
+      <guid>https://arxiv.org/abs/2609.26457#2026-09-23</guid>
+      <pubDate>Wed, 23 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Blaming Across the Aisle: Political Contrasting and Blame Attribution in the Danish Parliament (2026-09-23)</title>
+      <description>Political discourse is widely perceived to be growing more hostile, yet robust evidence remains scarce. This study examines blame attribution in the Danish Parliament from 1997 to 2026, combining a pu...</description>
+      <link>https://arxiv.org/abs/2609.26346</link>
+      <guid>https://arxiv.org/abs/2609.26346#2026-09-23</guid>
+      <pubDate>Wed, 23 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory (2026-09-22)</title>
@@ -363,41 +398,6 @@
       <link>http://arxiv.org/abs/2609.17291v1</link>
       <guid>http://arxiv.org/abs/2609.17291v1#2026-09-16</guid>
       <pubDate>Wed, 16 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Atria Dawn: The Dawn of Agentic Superintelligence (2026-09-15)</title>
-      <description>As AI agents become participants in the development of their successors, they reshape both the production of intelligence and the role of human researchers. We introduce Atria Dawn Preview, a foundati...</description>
-      <link>https://arxiv.org/abs/2609.15818</link>
-      <guid>https://arxiv.org/abs/2609.15818#2026-09-15</guid>
-      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Dream-RSI: Recursive Self-Improvement through Evolving Worlds (2026-09-15)</title>
-      <description>Recursive self-improvement is becoming increasingly vital for autonomous AI agents, where progress hinges on discovering high-value solutions across complex domains. The driver of this process is effe...</description>
-      <link>https://arxiv.org/abs/2609.14858</link>
-      <guid>https://arxiv.org/abs/2609.14858#2026-09-15</guid>
-      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models (2026-09-15)</title>
-      <description>We present PhysBrain 1.5, a unified model for understanding physical environments, generating actions, and predicting future states. Motivated by the physical loop of observation, interaction, and env...</description>
-      <link>https://arxiv.org/abs/2609.14973</link>
-      <guid>https://arxiv.org/abs/2609.14973#2026-09-15</guid>
-      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 LynnReal-Omni: Native multi-modal Video Generation for Agentic Visual Workflows (2026-09-15)</title>
-      <description>Video diffusion models are stochastic and hard to control: precise content often requires repeated sampling without guaranteed success, and long-horizon scenes drift in appearance, interactions, and t...</description>
-      <link>https://arxiv.org/abs/2609.15863</link>
-      <guid>https://arxiv.org/abs/2609.15863#2026-09-15</guid>
-      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Discovery Foundation Models: Toward Open-Ended Discovery Intelligence (2026-09-15)</title>
-      <description>Foundation models have progressed from learning and reasoning over existing knowledge, to increasingly learning through action, tool use, and outcome feedback. We argue that the next frontier is a fur...</description>
-      <link>https://arxiv.org/abs/2609.15973</link>
-      <guid>https://arxiv.org/abs/2609.15973#2026-09-15</guid>
-      <pubDate>Tue, 15 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
