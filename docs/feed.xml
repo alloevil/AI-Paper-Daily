@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Sep 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W39 (2026-09-15 ~ 2026-09-21)</title>
@@ -48,6 +48,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 The Past Frames the Future: Memory for Autoregressive Video Generation (2026-09-24)</title>
+      <description>Advances in generative models have improved video fidelity, enabling long-horizon generation, interactive world modeling, and evolving visual environments. Autoregressive (AR) video generation extends...</description>
+      <link>https://arxiv.org/abs/2609.28466</link>
+      <guid>https://arxiv.org/abs/2609.28466#2026-09-24</guid>
+      <pubDate>Thu, 24 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents (2026-09-24)</title>
+      <description>Agentic memory systems reuse past experience to improve future performance, yet most existing designs curate memory at write time: once a task is completed, its trajectory is distilled into a fixed ar...</description>
+      <link>https://arxiv.org/abs/2609.27334</link>
+      <guid>https://arxiv.org/abs/2609.27334#2026-09-24</guid>
+      <pubDate>Thu, 24 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MemBodied: Recurrent Associative Memory for Vision-Language-Action Models (2026-09-24)</title>
+      <description>Vision-Language-Action models provide a strong foundation for general-purpose robot control, yet a vast majority of policies do not preserve and leverage episode-level information beyond the current o...</description>
+      <link>https://arxiv.org/abs/2609.28256</link>
+      <guid>https://arxiv.org/abs/2609.28256#2026-09-24</guid>
+      <pubDate>Thu, 24 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WhatWorkedBench: Benchmarking Experimental Understanding in AI Agents (2026-09-24)</title>
+      <description>AI research agents need reliable knowledge of how their experiments change outcomes. We introduce WhatWorkedBench to measure experimental understanding, the accuracy of predictions about component cha...</description>
+      <link>https://arxiv.org/abs/2609.27490</link>
+      <guid>https://arxiv.org/abs/2609.27490#2026-09-24</guid>
+      <pubDate>Thu, 24 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Hunyuan-A13B Technical Report (2026-09-24)</title>
+      <description>We present Hunyuan-A13B, an open-source large language model based on a Mixture-of-Experts architecture. It contains 80 billion total parameters but activates only 13 billion during inference, balanci...</description>
+      <link>https://arxiv.org/abs/2609.27284</link>
+      <guid>https://arxiv.org/abs/2609.27284#2026-09-24</guid>
+      <pubDate>Thu, 24 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 All modalities are equal, but video is more equal: Closing the Cross-Attention Gap in Joint Video Generation (2026-09-24)</title>
+      <description>Video is a rich representation of a physical event, capturing appearance, geometry, motion, and temporal evolution. Other modalities, such as 3D body motion or audio, encode narrower aspects of the sa...</description>
+      <link>https://arxiv.org/abs/2609.27901</link>
+      <guid>https://arxiv.org/abs/2609.27901#2026-09-24</guid>
+      <pubDate>Thu, 24 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 InternW0: A Foundational Physical World Model for Efficient Real-World Interactions (2026-09-24)</title>
+      <description>Physical intelligence requires more than predicting how the world may evolve: predictions must remain actionable as the world continues to change. We introduce InternW0, the first instantiation of the...</description>
+      <link>https://arxiv.org/abs/2609.27656</link>
+      <guid>https://arxiv.org/abs/2609.27656#2026-09-24</guid>
+      <pubDate>Thu, 24 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Verifiable Hidden Dynamics Play: Generating Agentic RL Environments from Solved Mechanisms (2026-09-24)</title>
+      <description>Language-model agents increasingly face long-horizon tasks with evolving state, interdependent decisions, and delayed outcomes. Scaling their training requires diverse agentic environments, dependable...</description>
+      <link>https://arxiv.org/abs/2609.27321</link>
+      <guid>https://arxiv.org/abs/2609.27321#2026-09-24</guid>
+      <pubDate>Thu, 24 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 On the Diffusibility of High-Dimensional Latents (2026-09-24)</title>
+      <description>Representation Autoencoders (RAEs) enable diffusion models to operate in the feature spaces of pretrained visual encoders. However, many off-the-shelf encoders are not optimized for faithful reconstru...</description>
+      <link>https://arxiv.org/abs/2609.28473</link>
+      <guid>https://arxiv.org/abs/2609.28473#2026-09-24</guid>
+      <pubDate>Thu, 24 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EmbodiedSWE: Coding Agents for Long Horizon Dexterous Robotics (2026-09-24)</title>
+      <description>We study coding agents for long-horizon, dexterous robotics and ask whether their solutions can provide scalable supervision for learning general robot policies. To test this, we develop EMBODIEDSWE-B...</description>
+      <link>https://arxiv.org/abs/2609.27308</link>
+      <guid>https://arxiv.org/abs/2609.27308#2026-09-24</guid>
+      <pubDate>Thu, 24 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 The Tasteful Agent: Measuring and Improving Taste in Long-Horizon Tasks (2026-09-23)</title>
@@ -328,76 +398,6 @@
       <link>https://arxiv.org/abs/2609.19143</link>
       <guid>https://arxiv.org/abs/2609.19143#2026-09-17</guid>
       <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AI for Games in the Foundation Model Era (2026-09-16)</title>
-      <description>Foundation models, alongside advances in learned game-world models, are reshaping AI across the game lifecycle. Beyond playing games, recent systems model players and game dynamics, support design and...</description>
-      <link>https://arxiv.org/abs/2609.16679</link>
-      <guid>https://arxiv.org/abs/2609.16679#2026-09-16</guid>
-      <pubDate>Wed, 16 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ScienceBuddy: Recursive-in-Recursive Self-Improvement for Interactive Scientific Agents (2026-09-16)</title>
-      <description>We introduce and release ScienceBuddy, an interactive scientific research workspace that brings continually improving scientific agents into researchers' everyday workflows. ScienceBuddy supports rese...</description>
-      <link>https://arxiv.org/abs/2609.17523</link>
-      <guid>https://arxiv.org/abs/2609.17523#2026-09-16</guid>
-      <pubDate>Wed, 16 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ToMAS: A Pilot Failure-Grounded Theory-of-Mind Benchmark from Multi-Agent LLM Failures (2026-09-16)</title>
-      <description>LLM-based multi-agent systems can fail even when communication succeeds because agents do not correctly track their peers' roles, knowledge, or intentions. We investigate whether such inter-agent misa...</description>
-      <link>http://arxiv.org/abs/2609.16986v1</link>
-      <guid>http://arxiv.org/abs/2609.16986v1#2026-09-16</guid>
-      <pubDate>Wed, 16 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Modality-Autoregressive World-Action Models (2026-09-16)</title>
-      <description>World-action models (WAMs) jointly model future observations and actions, typically predicting the future as RGB images. Other visual modalities such as depth, pretrained visual features, and point tr...</description>
-      <link>https://arxiv.org/abs/2609.17524</link>
-      <guid>https://arxiv.org/abs/2609.17524#2026-09-16</guid>
-      <pubDate>Wed, 16 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PhysStream: Streaming Physics-Grounded Video Generation with Structured Scene Memory and Fine-Grained Motion Control (2026-09-16)</title>
-      <description>Interactive control for video generation is moving from coarse prompts toward fine-grained, physically meaningful manipulation of dynamic scenes. Yet existing controllable methods either require the f...</description>
-      <link>https://arxiv.org/abs/2609.17521</link>
-      <guid>https://arxiv.org/abs/2609.17521#2026-09-16</guid>
-      <pubDate>Wed, 16 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Decomposition Buys Integrity, Not Yield (2026-09-16)</title>
-      <description>Multi-agent systems split a task across a tree of agents and justify the split with folklore: smaller contexts, cleaner separation, parallelism. We ask what the split does to how much of what the leav...</description>
-      <link>http://arxiv.org/abs/2609.17464v1</link>
-      <guid>http://arxiv.org/abs/2609.17464v1#2026-09-16</guid>
-      <pubDate>Wed, 16 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Self-Emergence Agent Architecture:Behavior-Inertia HMM, Reflexive Metacognition,and Social-Contrastive Self-Modeling (2026-09-16)</title>
-      <description>Large language model (LLM) agents exhibit strong language-generation and problem-solving capabilities, yet suffer from three structural limitations: personality drift, non-evolutionary reflection, and...</description>
-      <link>http://arxiv.org/abs/2609.17331v1</link>
-      <guid>http://arxiv.org/abs/2609.17331v1#2026-09-16</guid>
-      <pubDate>Wed, 16 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Emergence World: Adversarial Stress-Testing of Long-Horizon Multi-Agent Systems (2026-09-16)</title>
-      <description>As AI agents move from bounded tasks to persistent deployments, failures can propagate through memory, tools, other agents, and environmental state long after their interactions. This creates a safety...</description>
-      <link>http://arxiv.org/abs/2609.17320v1</link>
-      <guid>http://arxiv.org/abs/2609.17320v1#2026-09-16</guid>
-      <pubDate>Wed, 16 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Mo' Models, Mo' Problems: How to best select model pools when designing Multi-Agent Systems (2026-09-16)</title>
-      <description>Multi-agent Systems (MAS) combine multiple model outputs to solve complex reasoning tasks. However, despite rapid growth of available open-source models, there is limited research on how to select opt...</description>
-      <link>http://arxiv.org/abs/2609.17306v1</link>
-      <guid>http://arxiv.org/abs/2609.17306v1#2026-09-16</guid>
-      <pubDate>Wed, 16 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Extracting ontology-compliant knowledge from scientific text describing irradiated materials using large language models (2026-09-16)</title>
-      <description>The quest for new materials increasingly relies on predictive models and comprehensive simulations that span scales from atomic to macroscopic levels. However, essential data necessary for these model...</description>
-      <link>http://arxiv.org/abs/2609.17291v1</link>
-      <guid>http://arxiv.org/abs/2609.17291v1#2026-09-16</guid>
-      <pubDate>Wed, 16 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
