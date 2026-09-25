@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Sep 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W39 (2026-09-15 ~ 2026-09-21)</title>
@@ -48,6 +48,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Parts-of-Speech as Emergent Categories in SAE Latent Space (2026-09-25)</title>
+      <description>Sparse AutoEncoders (SAEs) offer a promising way to inspect language model representations, but it is still unclear what kind of linguistic structure their latents expose. We use part-of-speech (PoS) ...</description>
+      <link>https://arxiv.org/abs/2609.29362</link>
+      <guid>https://arxiv.org/abs/2609.29362#2026-09-25</guid>
+      <pubDate>Fri, 25 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Qwen-Planner-Agent: A Closed-Loop AI-for-AI Framework for Real-World Mobile Planner Agents (2026-09-25)</title>
+      <description>The rapid progression of large language models is extending AI from passive content generation into the active workflows of engineering and scientific discovery. This shift raises a compelling questio...</description>
+      <link>https://arxiv.org/abs/2609.29892</link>
+      <guid>https://arxiv.org/abs/2609.29892#2026-09-25</guid>
+      <pubDate>Fri, 25 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 IterSynth: Rethinking Deep Search Agents via Role-Decoupled Iterative Synthesis (2026-09-25)</title>
+      <description>Deep search requires LLM agents to decompose complex queries, search for evidence, and synthesize grounded answers, yet existing ReAct-style agents suffer from two limitations: role coupling, where on...</description>
+      <link>https://arxiv.org/abs/2609.29444</link>
+      <guid>https://arxiv.org/abs/2609.29444#2026-09-25</guid>
+      <pubDate>Fri, 25 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Coding Agents for Generalized Task and Motion Planning Problems (2026-09-25)</title>
+      <description>Task and motion planning (TAMP) problems remain difficult even with full observability and object-centric states because discrete decisions are tightly coupled to geometric, kinematic, and dynamic con...</description>
+      <link>https://arxiv.org/abs/2609.30233</link>
+      <guid>https://arxiv.org/abs/2609.30233#2026-09-25</guid>
+      <pubDate>Fri, 25 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PUBG Ally: A Conversational Embodied Agent as an AI Teammate (2026-09-25)</title>
+      <description>We introduce PUBG Ally, an embodied agent for PUBG: BATTLEGROUNDS that can reason, act autonomously, and play alongside players as a voice-enabled teammate. Building such a teammate requires combining...</description>
+      <link>https://arxiv.org/abs/2609.29837</link>
+      <guid>https://arxiv.org/abs/2609.29837#2026-09-25</guid>
+      <pubDate>Fri, 25 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 World Action Agent: Harnessing VLMs for Robot Manipulation via World Action Rehearsal (2026-09-25)</title>
+      <description>General-purpose vision-language models (VLMs) bring broad knowledge and spatial reasoning to robot manipulation, yet existing systems either use them indirectly, to predict constraints or write progra...</description>
+      <link>https://arxiv.org/abs/2609.29964</link>
+      <guid>https://arxiv.org/abs/2609.29964#2026-09-25</guid>
+      <pubDate>Fri, 25 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WanPE: Towards Cinematic Prompt Enhancement for Modern Text-to-Video Generation (2026-09-25)</title>
+      <description>Video generation begins in text space by authoring a cinematic screenplay, then materializes into pixels. As contemporary video generators scale to 30 seconds and faithfully follow complex conditions,...</description>
+      <link>https://arxiv.org/abs/2609.30221</link>
+      <guid>https://arxiv.org/abs/2609.30221#2026-09-25</guid>
+      <pubDate>Fri, 25 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ExplorationBench: Measuring AI Systems' Exploration in Verifiable Alien Worlds (2026-09-25)</title>
+      <description>Scientific discovery begins where known problems end. There, AI systems must engage in exploration: framing hypotheses, designing experiments, and iterating on the results. However, evaluating this ab...</description>
+      <link>https://arxiv.org/abs/2609.30199</link>
+      <guid>https://arxiv.org/abs/2609.30199#2026-09-25</guid>
+      <pubDate>Fri, 25 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Rufus-Air: An Open LLM Post-Training Recipe (2026-09-25)</title>
+      <description>Rufus-Air is an open and reproducible post-training recipe on GLM-4.5-Air-Base (106B-A12B), organized as a serial pipeline of eight stages: SFT, Reasoning RL, Coding RL, Instruction-Following RL, Gene...</description>
+      <link>https://arxiv.org/abs/2609.29421</link>
+      <guid>https://arxiv.org/abs/2609.29421#2026-09-25</guid>
+      <pubDate>Fri, 25 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ViRDM: Taming Representation Distribution Matching for Few-Step Causal Video Generation (2026-09-25)</title>
+      <description>Few-step autoregressive (AR) video diffusion enables low-latency streaming generation, but existing post-training methods predominantly rely on Distribution Matching Distillation (DMD), requiring both...</description>
+      <link>https://arxiv.org/abs/2609.28923</link>
+      <guid>https://arxiv.org/abs/2609.28923#2026-09-25</guid>
+      <pubDate>Fri, 25 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 The Past Frames the Future: Memory for Autoregressive Video Generation (2026-09-24)</title>
@@ -328,76 +398,6 @@
       <link>https://arxiv.org/abs/2609.20744</link>
       <guid>https://arxiv.org/abs/2609.20744#2026-09-18</guid>
       <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 VABench: Measuring Embodied Spatial Intelligence through Visual Demonstrations, Active Perception, and Metric Control (2026-09-18)</title>
-      <description>Spatial intelligence requires more than describing object locations. Under incomplete observation, models must identify and acquire missing evidence, interpret it in a common spatial frame, and act on...</description>
-      <link>https://arxiv.org/abs/2609.19554</link>
-      <guid>https://arxiv.org/abs/2609.19554#2026-09-18</guid>
-      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 UFO: Chain-of-Evaluation for Omni-Condition Alignment in Multi-Modal Image Generation (2026-09-18)</title>
-      <description>Multi-modal image generation, particularly subject-driven customization, has garnered growing attention in recent years. Despite the rapid advancement of generative models, their evaluation remains la...</description>
-      <link>https://arxiv.org/abs/2609.12397</link>
-      <guid>https://arxiv.org/abs/2609.12397#2026-09-18</guid>
-      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ScienceIDE: Turning World's Scientific Codebase into Agent Learnable Environments (2026-09-17)</title>
-      <description>Scientific code repositories encode decades of human knowledge in executable models, methods, and tools. Yet fragmented toolchains, implicit domain conventions, and specialized correctness criteria ma...</description>
-      <link>https://arxiv.org/abs/2609.19134</link>
-      <guid>https://arxiv.org/abs/2609.19134#2026-09-17</guid>
-      <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ProgramDistill: From Interactive Web Apps to Verifiable Reference-Guided SWE Tasks (2026-09-17)</title>
-      <description>Coding agents are typically evaluated with desired behavior specified through issues or instructions. In practical web development, however, agents may need to infer behavior from working software and...</description>
-      <link>https://arxiv.org/abs/2609.18805</link>
-      <guid>https://arxiv.org/abs/2609.18805#2026-09-17</guid>
-      <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Rethinking Critic Learning in PPO: Understanding and Mitigating Value Flattening (2026-09-17)</title>
-      <description>In reinforcement learning for large language models, Proximal Policy Optimization (PPO) commonly uses a critic to estimate state values and reduce the variance of policy updates. However, we uncover a...</description>
-      <link>https://arxiv.org/abs/2609.18708</link>
-      <guid>https://arxiv.org/abs/2609.18708#2026-09-17</guid>
-      <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ActionPiece: Rethinking Action Tokenization for Autoregressive Vision-Language-Action Models (2026-09-17)</title>
-      <description>Action tokenizers play a central role in autoregressive vision-language-action (VLA) models, determining both the targets for policy training and the executable commands recovered from predicted token...</description>
-      <link>https://arxiv.org/abs/2609.18487</link>
-      <guid>https://arxiv.org/abs/2609.18487#2026-09-17</guid>
-      <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Agora: Git as Shared Memory for Collective AutoResearch (2026-09-17)</title>
-      <description>Autonomous research loops such as AutoResearch show that one coding agent can improve a training setup unattended. Run several of them and each session starts from scratch, so more agents tend to mean...</description>
-      <link>https://arxiv.org/abs/2609.18094</link>
-      <guid>https://arxiv.org/abs/2609.18094#2026-09-17</guid>
-      <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 A Zeroth-Order Paradigm for LLM Preference Alignment (2026-09-17)</title>
-      <description>Direct preference alignment methods are widely used to align large language models (LLMs) with human preferences because of their computational and memory efficiency. However, likelihood displacement ...</description>
-      <link>https://arxiv.org/abs/2609.19144</link>
-      <guid>https://arxiv.org/abs/2609.19144#2026-09-17</guid>
-      <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Gaze as Evidence for Common Grounding: A Cross-Corpus Analysis of MapTask and MUNDEX (2026-09-17)</title>
-      <description>In collaborative tasks with asymmetric information, participants coordinate their understanding through interaction. We ask whether gaze provides evidence about grounding across two such tasks. Workin...</description>
-      <link>https://arxiv.org/abs/2609.18011</link>
-      <guid>https://arxiv.org/abs/2609.18011#2026-09-17</guid>
-      <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PANORAMA: Panoptic Grounded Captioning via Mask Proposal Selection (2026-09-17)</title>
-      <description>Intelligent systems that act in the world require image understanding that is both comprehensive and spatially grounded. Current vision-language models (VLMs) can generate fluent and detailed image ca...</description>
-      <link>https://arxiv.org/abs/2609.19143</link>
-      <guid>https://arxiv.org/abs/2609.19143#2026-09-17</guid>
-      <pubDate>Thu, 17 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
