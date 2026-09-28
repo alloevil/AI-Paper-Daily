@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly roundup 2026-W40 — AI Paper Daily</title>
+<meta name="description" content="Top 15 of the last 7 days, re-ranked by votes, stars and open code">
+<link rel="canonical" href="https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W40.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W40.html">
+<meta property="og:title" content="Weekly roundup 2026-W40 — AI Paper Daily">
+<meta property="og:description" content="Top 15 of the last 7 days, re-ranked by votes, stars and open code">
+<meta property="og:site_name" content="AI Paper Daily">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
+<script>
+  // 首次绘制前定妥主题：auto（默认，交给 prefers-color-scheme）/ light / dark。
+  // 只有显式选择才写 data-theme —— auto 时不写，系统切换就由 CSS 媒体查询实时接管。
+  (function () {
+    try {
+      var t = localStorage.getItem('paperTheme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<style>
+  /* Same token set as docs/template.html: light is the base, dark only under
+     prefers-color-scheme and deliberately not pure black. Every text colour is >=4.5:1 on
+     canvas / surface-1 / surface-2, every non-text colour >=3:1 (WCAG 2.2 SC 1.4.3 / 1.4.11). */
+  :root {
+    color-scheme: light;
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --blue: #2563eb;
+    --ink: #14161c;
+    --ink-muted: #3d4350;
+    --ink-subtle: #565d6a;
+    --ink-tertiary: #666d7a;
+    --canvas: #ffffff;
+    --surface-1: #f8f9fb;
+    --surface-2: #f0f2f7;
+    --hairline: #e4e7ed;
+    --hairline-strong: #cdd3dd;
+    --focus: #4f46e5;
+    --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --primary: #6366f1;
+      --primary-hover: #a5b4fc;
+      --blue: #60a5fa;
+      --ink: #eceef2;
+      --ink-muted: #c3c8d2;
+      --ink-subtle: #9aa2af;
+      --ink-tertiary: #7f8794;
+      --canvas: #0b0d10;
+      --surface-1: #12141a;
+      --surface-2: #191c22;
+      --hairline: #262c36;
+      --hairline-strong: #363d47;
+      --focus: #a5b4fc;
+    }
+  }
+  /* Explicit dark: :root[data-theme] outranks the :root inside the media query, so it wins even
+     when the system is light. These values must match the block above verbatim (tests/test_theme.py
+     asserts it). */
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --primary: #6366f1;
+    --primary-hover: #a5b4fc;
+    --blue: #60a5fa;
+    --ink: #eceef2;
+    --ink-muted: #c3c8d2;
+    --ink-subtle: #9aa2af;
+    --ink-tertiary: #7f8794;
+    --canvas: #0b0d10;
+    --surface-1: #12141a;
+    --surface-2: #191c22;
+    --hairline: #262c36;
+    --hairline-strong: #363d47;
+    --focus: #a5b4fc;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  /* Keyboard focus must be visible (WCAG 2.2 SC 2.4.7). */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  select:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+  body { font-family: var(--font-sans); background: var(--canvas); color: var(--ink);
+         -webkit-font-smoothing: antialiased; line-height: 1.5; }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .masthead { padding: 16px 0 2px; display: flex; align-items: center;
+               flex-wrap: wrap; gap: 8px 16px; }
+  /* Wordmark lives in the utility bar, not as a heading - one title block per page. */
+  .brand-name { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600;
+                 letter-spacing: -0.01em; color: var(--ink); text-decoration: none; }
+  .brand-icon { font-size: 16px; }
+  .brand-name:hover { color: var(--primary-hover); }
+  /* The issue head is the page title: kicker (issue no.), date as H1, meta under it. */
+  .issue-head { padding: 10px 0 4px; }
+  .issue-kicker { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+                   color: var(--ink-tertiary); font-variant-numeric: tabular-nums; }
+  .issue-date { font-size: 32px; font-weight: 700; letter-spacing: -0.7px; line-height: 1.15; margin: 6px 0 8px; }
+  .issue-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px;
+                 flex-wrap: wrap; padding-bottom: 12px; }
+  .issue-meta { font-size: 14px; color: var(--ink-subtle); font-variant-numeric: tabular-nums; }
+  .masthead a { padding: 6px 14px; font-size: 14px; font-weight: 500; color: var(--ink-subtle);
+                 border: 1px solid var(--hairline); border-radius: 8px; text-decoration: none; }
+  .masthead a:hover { color: var(--ink); border-color: var(--hairline-strong); }
+  /* Nav chips are direct children of .nav, so the flex gap has to live here too. */
+  .nav { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .theme-toggle { padding: 5px 12px; font-size: 14px; font-weight: 500; font-family: var(--font-sans);
+                   color: var(--ink-subtle); background: transparent; border: 1px solid var(--hairline);
+                   border-radius: 8px; cursor: pointer; white-space: nowrap; }
+  .theme-toggle:hover { color: var(--ink); border-color: var(--hairline-strong); }
+  .paper-card { display: flex; padding: 18px 0; border-radius: 8px; }
+  .paper-card:hover { background: var(--surface-1); }
+  .paper-card + .paper-card { border-top: 1px solid var(--hairline); }
+  .paper-index { flex-shrink: 0; width: 2.6em; padding-top: 3px; font-size: 14px; font-weight: 600;
+                  font-variant-numeric: tabular-nums; color: var(--ink-tertiary); }
+  .paper-content { flex: 1; min-width: 0; }
+  .paper-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+  .paper-title { font-size: 18px; font-weight: 600; color: var(--ink); text-decoration: none; line-height: 1.4; }
+  .paper-title:hover { color: var(--primary-hover); }
+  .paper-tag { display: inline-block; padding: 1px 8px; font-size: 13px; font-weight: 500;
+                color: var(--ink-muted); background: var(--surface-2); border: 1px solid var(--hairline);
+                border-radius: 10px; white-space: nowrap; flex-shrink: 0; }
+  .paper-abstract { font-size: 16px; color: var(--ink-subtle); margin-bottom: 8px; line-height: 1.65;
+                     max-width: 68ch; padding-left: 12px; border-left: 2px solid var(--hairline); }
+  .paper-links { display: flex; gap: 8px; font-size: 14px; }
+  .paper-links a { display: inline-flex; align-items: center; min-height: 24px;
+                    color: var(--ink-subtle); text-decoration: none; }
+  .paper-links a:hover { color: var(--primary-hover); }
+  .footer { margin-top: 48px; padding: 24px 0; border-top: 1px solid var(--hairline);
+             text-align: center; font-size: 13px; color: var(--ink-tertiary); }
+  .footer a { color: var(--ink-subtle); text-decoration: none; }
+  .footer a:hover { color: var(--ink); }
+  @media (max-width: 640px) {
+    .container { padding: 0 16px; }
+    .paper-header { flex-direction: column; gap: 4px; }
+    .issue-date { font-size: 24px; }
+    .paper-index { width: 2.2em; }
+    .paper-links { flex-wrap: wrap; }
+  }
+    /* 跨页导航的过渡：与首页同一套 View Transition，浏览器不支持时退化为瞬切。
+       日报/周报页只有这一处动效，所以 reduced-motion 一关就完全静止。 */
+    @view-transition { navigation: auto; }
+    ::view-transition-old(root) { animation-duration: .18s; }
+    ::view-transition-new(root) { animation-duration: .22s; }
+
+    /* reduced-motion: the cross-document transition above is the only motion here; switching it
+       off changes no information. */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-delay: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+      }
+      /* View Transition 的伪元素不在 `*` 的匹配范围内，必须单独关掉 */
+      ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) {
+        animation: none !important;
+      }
+    }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Weekly roundup 2026-W40 (2026-09-22 ~ 2026-09-28)",
+  "inLanguage": "en",
+  "url": "https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W40.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "AI Paper Daily",
+    "url": "https://alloevil.github.io/AI-Paper-Daily"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "alloevil",
+    "url": "https://github.com/alloevil"
+  }
+}
+</script>
+</head>
+<body>
+  <div class="container">
+    <header class="masthead">
+      <a class="brand-name" href="./"><span class="brand-icon">📊</span>AI Paper Daily</a>
+      <div class="nav"><a href="./">← Back to the digest</a><button type="button" id="theme-toggle" class="theme-toggle" onclick="cycleTheme()">◐ Auto</button></div>
+    </header>
+    <div class="issue-head">
+      <p class="issue-kicker">Weekly · 2026-W40</p>
+      <h1 class="issue-date">22 Sep – 28 Sep 2026</h1>
+      <div class="issue-foot">
+        <p class="issue-meta">Top 15 · re-ranked by votes, stars and open code</p>
+      </div>
+    </div>
+      <article class="paper-card" data-relevance="3" data-tags="high-votes,code">
+        <span class="paper-index" aria-hidden="true">01</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="https://arxiv.org/abs/2609.31620" target="_blank" rel="noopener">FuseReg: Regularizing Layer Fusion Mitigates the Reconstruction-Generation Gap in Representation Autoencoders</a>
+            <span class="paper-tag">High votes · Code</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Representation autoencoders (RAEs) reuse features from a pretrained visual encoder as reconstruction and diffusion latents, integrating strong visual representations into image generation. However, RA...</blockquote>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.31620" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2609.31620" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="3" data-tags="high-votes,code">
+        <span class="paper-index" aria-hidden="true">02</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="https://arxiv.org/abs/2609.24984" target="_blank" rel="noopener">WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory</a>
+            <span class="paper-tag">High votes · Code</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Video world models enable interactive exploration of dynamic environments, yet struggle to respect prior observations over long horizons and across viewpoints. We present WorldCrafter, a video world m...</blockquote>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.24984" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2609.24984" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="3" data-tags="high-votes,code">
+        <span class="paper-index" aria-hidden="true">03</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="https://arxiv.org/abs/2609.24972" target="_blank" rel="noopener">RRSI: Regularized Recursive Self-Improvement of Agent Harnesses</a>
+            <span class="paper-tag">High votes · Code</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">An LLM agent&#39;s capability is largely magnified by its harness, namely the prompts, control flow, tooling, memory, and context management surrounding the frozen backbone model. Recent methods increasin...</blockquote>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.24972" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2609.24972" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="3" data-tags="high-votes,code">
+        <span class="paper-index" aria-hidden="true">04</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="https://arxiv.org/abs/2609.25001" target="_blank" rel="noopener">GameHorizon Suite: Multi-Horizon Data and Evaluation in Gameplay</a>
+            <span class="paper-tag">High votes · Code</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Modern video games provide a measurable testbed for AI models, combining abilities of visual understanding, instruction decomposition, goal planning, and precise action control over multiple temporal ...</blockquote>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.25001" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2609.25001" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="3" data-tags="high-votes,code">
+        <span class="paper-index" aria-hidden="true">05</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="https://arxiv.org/abs/2609.24220" target="_blank" rel="noopener">Document Retrieval-Aware Chunking (D-RAC): Universal Retrieval-Aware Ingestion of Enterprise Documents via PDF Normalization and Multimodal Markdown Conversion</a>
+            <span class="paper-tag">High votes · Code</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Retrieval-Augmented Generation (RAG) systems over enterprise knowledge bases must ingest heterogeneous document formats -- PDFs, Word documents, presentations, and scans -- whose content is locked ins...</blockquote>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.24220" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2609.24220" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="3" data-tags="high-votes,code">
+        <span class="paper-index" aria-hidden="true">06</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="https://arxiv.org/abs/2609.28466" target="_blank" rel="noopener">The Past Frames the Future: Memory for Autoregressive Video Generation</a>
+            <span class="paper-tag">High votes · Code</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Advances in generative models have improved video fidelity, enabling long-horizon generation, interactive world modeling, and evolving visual environments. Autoregressive (AR) video generation extends...</blockquote>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.28466" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2609.28466" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="3" data-tags="high-votes,code">
+        <span class="paper-index" aria-hidden="true">07</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="https://arxiv.org/abs/2609.24997" target="_blank" rel="noopener">VideoGen-Agent: Reinforcing Video Generation Agents</a>
+            <span class="paper-tag">High votes · Code</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Recent advances in video generative models have enabled high-fidelity, temporally coherent video generation. However, these models often struggle to satisfy prompts requiring specialized knowledge, sp...</blockquote>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.24997" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2609.24997" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="3" data-tags="high-votes,code">
+        <span class="paper-index" aria-hidden="true">08</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="https://arxiv.org/abs/2609.24983" target="_blank" rel="noopener">onPanda: Efficient Annotation of On-Policy Alignment Data for LLMs and Agents via Token-Level Correction</a>
+            <span class="paper-tag">High votes · Code</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">We present onPanda, an interactive tool for efficiently annotating LLM alignment data and agent trajectories. onPanda adopts token-level correction as its core interaction: while reading a model respo...</blockquote>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.24983" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2609.24983" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="3" data-tags="high-votes,code">
+        <span class="paper-index" aria-hidden="true">09</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="https://arxiv.org/abs/2609.25804" target="_blank" rel="noopener">The Tasteful Agent: Measuring and Improving Taste in Long-Horizon Tasks</a>
+            <span class="paper-tag">High votes · Code</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">LLM agents increasingly work on long-horizon tasks, and the decisions they make along the way, such as which hypothesis to test or which implementation to build on, determine the outcome of the whole ...</blockquote>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.25804" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2609.25804" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="3" data-tags="high-votes,code">
+        <span class="paper-index" aria-hidden="true">10</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="https://arxiv.org/abs/2609.31394" target="_blank" rel="noopener">InternW0-Δ: A World Action Model Bridging Predictive Dynamics and Actions with 20K+ Hours of Open Data</a>
+            <span class="paper-tag">High votes · Code</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">World Action Models (WAMs) jointly model visual dynamics and action generation for generalist robot manipulation. A central challenge is to integrate priors from large-scale pretrained models---includ...</blockquote>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.31394" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2609.31394" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="3" data-tags="high-votes,code">
+        <span class="paper-index" aria-hidden="true">11</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="https://arxiv.org/abs/2609.26774" target="_blank" rel="noopener">StableVQ: Practical Guidelines for Stable Vector-Quantized Tokenizer Training</a>
+            <span class="paper-tag">High votes · Code</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Vector Quantization (VQ) is fundamental to discrete visual tokenizers that power modern autoregressive and masked image generation models. While recent shared-projection codebook methods have substant...</blockquote>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.26774" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2609.26774" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="3" data-tags="high-votes,code">
+        <span class="paper-index" aria-hidden="true">12</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="https://arxiv.org/abs/2609.31093" target="_blank" rel="noopener">Block Sparse Attention with Log-Linear Complexity</a>
+            <span class="paper-tag">High votes · Code</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Scaling language models to long contexts is limited by the quadratic cost of self-attention. Block sparse attention offers an efficient alternative, but selecting the retained blocks remains a bottlen...</blockquote>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.31093" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2609.31093" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="3" data-tags="high-votes,code">
+        <span class="paper-index" aria-hidden="true">13</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="https://arxiv.org/abs/2609.27334" target="_blank" rel="noopener">Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents</a>
+            <span class="paper-tag">High votes · Code</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Agentic memory systems reuse past experience to improve future performance, yet most existing designs curate memory at write time: once a task is completed, its trajectory is distilled into a fixed ar...</blockquote>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.27334" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2609.27334" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="3" data-tags="high-votes,code">
+        <span class="paper-index" aria-hidden="true">14</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="https://arxiv.org/abs/2609.26796" target="_blank" rel="noopener">Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Fast, Memory-Efficient Diffusion LLMs</a>
+            <span class="paper-tag">High votes · Code</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Diffusion Large Language Models (dLLMs) have recently emerged as a promising alternative to autoregressive LLMs by enabling non-autoregressive text generation. However, their practical deployment rema...</blockquote>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.26796" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2609.26796" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="3" data-tags="high-votes,code">
+        <span class="paper-index" aria-hidden="true">15</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="https://arxiv.org/abs/2609.24974" target="_blank" rel="noopener">Harness-Zero: Harness Distillation via Agent-as-Harness</a>
+            <span class="paper-tag">High votes · Code</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Agent harnesses, the external systems that mediate model-environment interaction, can substantially improve agent performance, but their gains remain tied to the harness at deployment. Because the bes...</blockquote>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2609.24974" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2609.24974" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+    <footer class="footer">
+      <p class="footer-tagline">AI Paper Daily — daily digest of agent, RAG and knowledge-graph papers</p>
+      <p>Built by <a href="https://github.com/alloevil">alloevil</a> · <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a> · <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a></p>
+    </footer>
+  </div>
+<script>
+// --- 主题：auto（跟随系统）→ light → dark 循环，选择存 localStorage。 ---
+// auto 时不写 data-theme，系统切换由 CSS 媒体查询实时接管；显式选择才写属性覆盖它。
+const THEME_KEY = 'paperTheme';
+const THEME_LABELS = { auto: '◐ Auto', light: '☀ Light', dark: '☾ Dark' };
+
+function currentTheme() {
+  const t = document.documentElement.getAttribute('data-theme');
+  return (t === 'light' || t === 'dark') ? t : 'auto';
+}
+
+// theme-color 跟着走：auto 时交回给两条 media 查询，显式选择时把两条都改成同一个色。
+function syncThemeColor(mode) {
+  const metas = Array.from(document.querySelectorAll('meta[name="theme-color"]'));
+  if (metas.length < 2) return;
+  if (mode === 'auto') {
+    metas[0].setAttribute('media', '(prefers-color-scheme: light)');
+    metas[0].setAttribute('content', '#ffffff');
+    metas[1].setAttribute('media', '(prefers-color-scheme: dark)');
+    metas[1].setAttribute('content', '#0b0d10');
+  } else {
+    metas.forEach(m => { m.removeAttribute('media'); m.setAttribute('content', mode === 'dark' ? '#0b0d10' : '#ffffff'); });
+  }
+}
+
+function renderThemeButton(mode) {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.textContent = THEME_LABELS[mode];
+  btn.title = 'Theme: ' + THEME_LABELS[mode] + ' (click to switch)';
+  btn.setAttribute('aria-label', 'Toggle theme (current: ' + THEME_LABELS[mode] + ')');
+  syncThemeColor(mode);
+}
+
+function cycleTheme() {
+  const order = ['auto', 'light', 'dark'];
+  const next = order[(order.indexOf(currentTheme()) + 1) % order.length];
+  if (next === 'auto') document.documentElement.removeAttribute('data-theme');
+  else document.documentElement.setAttribute('data-theme', next);
+  try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+  renderThemeButton(next);
+}
+
+document.addEventListener('DOMContentLoaded', () => renderThemeButton(currentTheme()));
+</script>
+</body>
+</html>
