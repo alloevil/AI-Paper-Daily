@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Fri, 25 Sep 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W39 (2026-09-15 ~ 2026-09-21)</title>
@@ -48,6 +48,62 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 FuseReg: Regularizing Layer Fusion Mitigates the Reconstruction-Generation Gap in Representation Autoencoders (2026-09-28)</title>
+      <description>Representation autoencoders (RAEs) reuse features from a pretrained visual encoder as reconstruction and diffusion latents, integrating strong visual representations into image generation. However, RA...</description>
+      <link>https://arxiv.org/abs/2609.31620</link>
+      <guid>https://arxiv.org/abs/2609.31620#2026-09-28</guid>
+      <pubDate>Mon, 28 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 InternW0-Δ: A World Action Model Bridging Predictive Dynamics and Actions with 20K+ Hours of Open Data (2026-09-28)</title>
+      <description>World Action Models (WAMs) jointly model visual dynamics and action generation for generalist robot manipulation. A central challenge is to integrate priors from large-scale pretrained models---includ...</description>
+      <link>https://arxiv.org/abs/2609.31394</link>
+      <guid>https://arxiv.org/abs/2609.31394#2026-09-28</guid>
+      <pubDate>Mon, 28 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Block Sparse Attention with Log-Linear Complexity (2026-09-28)</title>
+      <description>Scaling language models to long contexts is limited by the quadratic cost of self-attention. Block sparse attention offers an efficient alternative, but selecting the retained blocks remains a bottlen...</description>
+      <link>https://arxiv.org/abs/2609.31093</link>
+      <guid>https://arxiv.org/abs/2609.31093#2026-09-28</guid>
+      <pubDate>Mon, 28 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Enhancing Photogrammetric Digital Surface Models with Pretrained Diffusion Models and Multimodal Conditioning (2026-09-28)</title>
+      <description>Large-scale Digital Surface Models (DSMs) can be produced cost-effectively from satellite images via stereo-photogrammetry. However, the resulting 3D maps are often contaminated by noise, outliers, an...</description>
+      <link>https://arxiv.org/abs/2609.31199</link>
+      <guid>https://arxiv.org/abs/2609.31199#2026-09-28</guid>
+      <pubDate>Mon, 28 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AgentWorld: Benchmarking Long-Horizon Collaboration of Multi-agent LLMs (2026-09-28)</title>
+      <description>Existing multi-agent benchmarks primarily test in competitive settings, short-horizon interactions under 20 steps, or simply aggregate individual performance, failing to isolate and highlight genuine ...</description>
+      <link>https://arxiv.org/abs/2609.31590</link>
+      <guid>https://arxiv.org/abs/2609.31590#2026-09-28</guid>
+      <pubDate>Mon, 28 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Game Arena: Strategic LLM Evaluation in Competitive Environments (2026-09-28)</title>
+      <description>We introduce Kaggle Game Arena, an open and ever-expanding platform to evaluate large language models (LLMs) through competitive games. Different from static benchmarks, game arena enables models to p...</description>
+      <link>https://arxiv.org/abs/2609.31473</link>
+      <guid>https://arxiv.org/abs/2609.31473#2026-09-28</guid>
+      <pubDate>Mon, 28 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ZooWork-ShopRanker: An Open, Preference-Aligned E-Commerce Reranker (2026-09-28)</title>
+      <description>Open rerankers trained for general web retrieval transfer imperfectly to e-commerce, where ranking decisions depend not only on topical relevance but also on user preferences, product constraints, and...</description>
+      <link>https://arxiv.org/abs/2609.31002</link>
+      <guid>https://arxiv.org/abs/2609.31002#2026-09-28</guid>
+      <pubDate>Mon, 28 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TRACE: Temporal Audit and Condition-aware Evaluation of Streaming Video Understanding (2026-09-28)</title>
+      <description>Streaming video understanding requires models to interpret evidence as it arrives, yet current evaluations often report task scores without specifying when evidence becomes valid, how visual history i...</description>
+      <link>https://arxiv.org/abs/2609.30670</link>
+      <guid>https://arxiv.org/abs/2609.30670#2026-09-28</guid>
+      <pubDate>Mon, 28 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Parts-of-Speech as Emergent Categories in SAE Latent Space (2026-09-25)</title>
@@ -342,62 +398,6 @@
       <link>https://arxiv.org/abs/2609.21465</link>
       <guid>https://arxiv.org/abs/2609.21465#2026-09-21</guid>
       <pubDate>Mon, 21 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression (2026-09-18)</title>
-      <description>The widespread adoption of long-horizon agents has made model workloads increasingly input-heavy. Although prior work has substantially reduced the cost of long-context computation, prefill remains co...</description>
-      <link>https://arxiv.org/abs/2609.19969</link>
-      <guid>https://arxiv.org/abs/2609.19969#2026-09-18</guid>
-      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness (2026-09-18)</title>
-      <description>As coding agents move from supervised code completion to unattended, around-the-clock exploration, their work expands from isolated predictions into long trajectories of reasoning, tool use, and feedb...</description>
-      <link>https://arxiv.org/abs/2609.20519</link>
-      <guid>https://arxiv.org/abs/2609.20519#2026-09-18</guid>
-      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 An Empirical Study of Harness Design for Coding Agents (2026-09-18)</title>
-      <description>Coding harnesses shape how autonomous coding agents translate model capabilities into long-horizon software-engineering performance, yet existing work typically evaluates harnesses as monolithic syste...</description>
-      <link>https://arxiv.org/abs/2609.20804</link>
-      <guid>https://arxiv.org/abs/2609.20804#2026-09-18</guid>
-      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 When EOS Tokens Disagree: Understanding Length Inflation in On-Policy Distillation (2026-09-18)</title>
-      <description>We study length inflation in on-policy distillation (OPD), where student responses can become excessively long and even exhaust the generation budget. We identify termination-token mismatch between ba...</description>
-      <link>https://arxiv.org/abs/2609.20511</link>
-      <guid>https://arxiv.org/abs/2609.20511#2026-09-18</guid>
-      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 JEPA-Anything: Learning Predictive Models across Different Worlds (2026-09-18)</title>
-      <description>World modeling enables intelligence to anticipate consequences, guide interventions, and learn from interaction. Yet predictive models remain domain-specific: can a common learning principle support w...</description>
-      <link>https://arxiv.org/abs/2609.20800</link>
-      <guid>https://arxiv.org/abs/2609.20800#2026-09-18</guid>
-      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RetireOPD: Self-Retiring On-Policy Distillation for Agentic Reinforcement Learning (2026-09-18)</title>
-      <description>Multi-turn agents trained with reinforcement learning (RL) receive a single scalar reward per trajectory, which motivates self on-policy distillation (OPD) to supply dense token-level supervision from...</description>
-      <link>https://arxiv.org/abs/2609.20784</link>
-      <guid>https://arxiv.org/abs/2609.20784#2026-09-18</guid>
-      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 WeVisDoc: From Coverage to Capability for Robust End-to-End Document Parsing (2026-09-18)</title>
-      <description>Document parsing converts document images into structured content and requires reliable performance across diverse layouts and acquisition conditions. Yet training corpora are biased toward common doc...</description>
-      <link>https://arxiv.org/abs/2609.20423</link>
-      <guid>https://arxiv.org/abs/2609.20423#2026-09-18</guid>
-      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Video DeltaNet: A Video-Native Hybrid Attention for Livestream Video Generation (2026-09-18)</title>
-      <description>Video diffusion models repeatedly process long spatiotemporal token sequences during denoising, making attention a major computational bottleneck. Linear attention offers an appealing alternative and ...</description>
-      <link>https://arxiv.org/abs/2609.20744</link>
-      <guid>https://arxiv.org/abs/2609.20744#2026-09-18</guid>
-      <pubDate>Fri, 18 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
