@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Sep 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W40 (2026-09-22 ~ 2026-09-28)</title>
@@ -55,6 +55,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Beyond Teacher Assignment: Domain-Normalized Multi-Teacher On-Policy Distillation (2026-09-29)</title>
+      <description>Reinforcement learning can turn one language model into several specialists, each excellent at a single skill such as mathematics, coding or following instructions, but users need one model with all o...</description>
+      <link>https://arxiv.org/abs/2609.35347</link>
+      <guid>https://arxiv.org/abs/2609.35347#2026-09-29</guid>
+      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 How Far Are We from Removing the Visual Encoder? Scaling Laws for Encoder-Free Multimodal Pretraining (2026-09-29)</title>
+      <description>Most modern multimodal large language models (MLLMs) build on a pretrained visual encoder that provides a strong visual prior. Encoder-free MLLMs instead learn visual representations directly from raw...</description>
+      <link>https://arxiv.org/abs/2609.35457</link>
+      <guid>https://arxiv.org/abs/2609.35457#2026-09-29</guid>
+      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning (2026-09-29)</title>
+      <description>Unified multimodal models can both look at and render images, so in principle they can repair their own generations: diagnose what an image gets wrong, revise it, observe the result, and diagnose agai...</description>
+      <link>https://arxiv.org/abs/2609.35767</link>
+      <guid>https://arxiv.org/abs/2609.35767#2026-09-29</guid>
+      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Knowing When Thinking Is Not Enough: Teaching Small Reasoning Models to Reason Beyond Their Parametric Knowledge (2026-09-29)</title>
+      <description>Scaling test-time computation is a powerful way to improve language-model reasoning, and is particularly appealing for small reasoning models (sRMs) that are cheap to serve. However, is additional thi...</description>
+      <link>https://arxiv.org/abs/2609.34327</link>
+      <guid>https://arxiv.org/abs/2609.34327#2026-09-29</guid>
+      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WorldPlay2: Extending Real-Time Interactive World Models in Control and Horizon (2026-09-29)</title>
+      <description>Interactive world models require responding in real time to versatile controls and maintaining long-horizon consistency. However, modeling heterogeneous controls remains difficult, while explosive con...</description>
+      <link>https://arxiv.org/abs/2609.35560</link>
+      <guid>https://arxiv.org/abs/2609.35560#2026-09-29</guid>
+      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Share-Borne AI Virus: Memory-Hopping Attacks Across LLM Agents (2026-09-29)</title>
+      <description>Large language models are increasingly deployed as stateful assistants that retain information across interactions and use tools to read, modify, and create persistent artifacts. As these artifacts ar...</description>
+      <link>http://arxiv.org/abs/2609.35576v1</link>
+      <guid>http://arxiv.org/abs/2609.35576v1#2026-09-29</guid>
+      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ProofLoom: Proof-Obligation-Driven Theory Construction for Autoformalizing Research-Level Stochastic Optimization (2026-09-29)</title>
+      <description>Formalizing research-level stochastic optimization in Lean requires both an algorithm model and domain theory connecting foundational libraries to convergence proofs. Revising a model to restore prova...</description>
+      <link>http://arxiv.org/abs/2609.34960v1</link>
+      <guid>http://arxiv.org/abs/2609.34960v1#2026-09-29</guid>
+      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 DGF-Bench: A Benchmark for Simulating and Auditing Deception Against Multi-Agent Governance Boards (2026-09-29)</title>
+      <description>Tool-using language-model agents can review enterprise projects as governance boards do: they read the evidence, apply written rules and decide whether the project may proceed. Part of that evidence c...</description>
+      <link>http://arxiv.org/abs/2609.34913v1</link>
+      <guid>http://arxiv.org/abs/2609.34913v1#2026-09-29</guid>
+      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 FromPitch2Board: Benchmarking LLM Agents in Long-Horizon Football Management (2026-09-29)</title>
+      <description>Long-horizon agent benchmarks typically report how far an agent progresses, but do not identify whether its performance comes from the foundation model, scaffold, responsibility scope, match-control g...</description>
+      <link>http://arxiv.org/abs/2609.34710v1</link>
+      <guid>http://arxiv.org/abs/2609.34710v1#2026-09-29</guid>
+      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Certified Multi-Source Integrity for Structured Agent Actions (2026-09-29)</title>
+      <description>LLM agents increasingly take privileged, often irreversible structured actions, such as paying an invoice. They assemble each action from action-critical fields in documents and tool outputs that an a...</description>
+      <link>http://arxiv.org/abs/2609.34245v1</link>
+      <guid>http://arxiv.org/abs/2609.34245v1#2026-09-29</guid>
+      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 FuseReg: Regularizing Layer Fusion Mitigates the Reconstruction-Generation Gap in Representation Autoencoders (2026-09-28)</title>
@@ -335,76 +405,6 @@
       <link>https://arxiv.org/abs/2609.24974</link>
       <guid>https://arxiv.org/abs/2609.24974#2026-09-22</guid>
       <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies (2026-09-22)</title>
-      <description>Vision-Language-Action (VLA) policies achieve strong performance in robotic manipulation but remain brittle once execution deviates from nominal trajectories. We propose CARE (Corrective Atomic Roboti...</description>
-      <link>https://arxiv.org/abs/2609.24118</link>
-      <guid>https://arxiv.org/abs/2609.24118#2026-09-22</guid>
-      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents (2026-09-22)</title>
-      <description>Agentic memory is becoming essential for long-horizon AI agents, yet many existing systems rely on autoregressive LLMs to control how memories are organized, retrieved, and used, placing expensive gen...</description>
-      <link>https://arxiv.org/abs/2609.23986</link>
-      <guid>https://arxiv.org/abs/2609.23986#2026-09-22</guid>
-      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 1% of Tokens Can Be Enough: On Gradient Estimation in On-Policy Distillation (2026-09-22)</title>
-      <description>Sparse on-policy distillation (OPD) allocates teacher supervision to a small subset of tokens in student-generated trajectories. However, useful teacher guidance can yield a noisy update when its grad...</description>
-      <link>https://arxiv.org/abs/2609.24432</link>
-      <guid>https://arxiv.org/abs/2609.24432#2026-09-22</guid>
-      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 CodeMidas: Scaling Agentic Coding RL Environments from Code Itself (2026-09-21)</title>
-      <description>Training capable coding agents via reinforcement learning (RL) requires diverse tasks with reliable verifiers. Open-source codebases offer a rich source of such tasks, while existing methods typically...</description>
-      <link>https://arxiv.org/abs/2609.22068</link>
-      <guid>https://arxiv.org/abs/2609.22068#2026-09-21</guid>
-      <pubDate>Mon, 21 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RecreationWorld: Scalable and Verifiable Environments for Hybrid Computer-Use Agents (2026-09-21)</title>
-      <description>Computer-use agents (CUAs) have advanced along two separate lines: graphical interaction and software development through code and the command line. Real digital work requires both, interleaved rather...</description>
-      <link>https://arxiv.org/abs/2609.22000</link>
-      <guid>https://arxiv.org/abs/2609.22000#2026-09-21</guid>
-      <pubDate>Mon, 21 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 GraphSkillEvo: Evolutionary Optimization of Graph-Structured Agent Skills (2026-09-21)</title>
-      <description>Skills can improve the performance of Large Language Model (LLM) agents by providing task-specific procedural guidance, while skill optimization further improves their effectiveness through iterative ...</description>
-      <link>https://arxiv.org/abs/2609.21749</link>
-      <guid>https://arxiv.org/abs/2609.21749#2026-09-21</guid>
-      <pubDate>Mon, 21 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OmniVBench: A Benchmark and Large-Scale Dataset for Omni Reference-to-Video Generation (2026-09-21)</title>
-      <description>Reference-to-video (R2V) generation is evolving toward increasingly general and versatile reference control, giving rise to the emerging paradigm of omni R2V generation. However, existing benchmarks f...</description>
-      <link>https://arxiv.org/abs/2609.22069</link>
-      <guid>https://arxiv.org/abs/2609.22069#2026-09-21</guid>
-      <pubDate>Mon, 21 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MintAct: A Unified Visual Agent for Digital Environments (2026-09-21)</title>
-      <description>We present MintAct, a family of vision-language models that unifies UI grounding, multi-step navigation across mobile, desktop, and web, and visual tool use, trained at 2B, 4B, and 8B scales. Through ...</description>
-      <link>https://arxiv.org/abs/2609.22083</link>
-      <guid>https://arxiv.org/abs/2609.22083#2026-09-21</guid>
-      <pubDate>Mon, 21 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Calibrating Teacher--Student Discrepancy for On-Policy Distillation (2026-09-21)</title>
-      <description>On-policy distillation (OPD) improves reasoning models by learning the token-level discrepancy between a stronger teacher and an on-policy student. However, this discrepancy does not purely reflect th...</description>
-      <link>https://arxiv.org/abs/2609.21619</link>
-      <guid>https://arxiv.org/abs/2609.21619#2026-09-21</guid>
-      <pubDate>Mon, 21 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OmniVChat: Synthesizing, Benchmarking, and Training for Native Audio-Visual Dialogue (2026-09-21)</title>
-      <description>We define OmniVChat (Omni Video Chat) as the task of native audio-visual dialogue between a user and an omni model. In OmniVChat, omni models directly and simultaneously receive audio and video from a...</description>
-      <link>https://arxiv.org/abs/2609.21465</link>
-      <guid>https://arxiv.org/abs/2609.21465#2026-09-21</guid>
-      <pubDate>Mon, 21 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
