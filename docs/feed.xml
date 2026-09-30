@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Sep 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W40 (2026-09-22 ~ 2026-09-28)</title>
@@ -55,6 +55,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EngiWorld: What Can Frontier Agents Deliver in Professional Engineering Environments? (2026-09-30)</title>
+      <description>Autonomous agents have made rapid progress in general-purpose computer use, but reliable automation of professional industrial engineering remains out of reach, as engineering workflows demand reasoni...</description>
+      <link>https://arxiv.org/abs/2609.37686</link>
+      <guid>https://arxiv.org/abs/2609.37686#2026-09-30</guid>
+      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SoL-Refiner: Speed-of-Light One-Step Refinement for High-Resolution Video (2026-09-30)</title>
+      <description>High-resolution video generation is expensive, as its cost grows rapidly with the number of spatiotemporal tokens. A practical alternative first generates a lower-resolution video and then applies a r...</description>
+      <link>https://arxiv.org/abs/2609.37969</link>
+      <guid>https://arxiv.org/abs/2609.37969#2026-09-30</guid>
+      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 HybridCUA: Learning to Orchestrate GUI and CLI for Computer-Use Agents (2026-09-30)</title>
+      <description>Computer use agents (CUAs) have demonstrated strong capabilities in completing digital tasks. However, existing CUAs either rely solely on graphical user interface (GUI) interactions, which are often ...</description>
+      <link>https://arxiv.org/abs/2609.38008</link>
+      <guid>https://arxiv.org/abs/2609.38008#2026-09-30</guid>
+      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EVO-WAM: Evolving World Action Models through Video-Action Verification (2026-09-30)</title>
+      <description>Improving robot policies on new tasks without collecting additional expert demonstrations remains a central challenge in robot learning. World action models (WAMs) use broad video priors to jointly pr...</description>
+      <link>https://arxiv.org/abs/2609.38057</link>
+      <guid>https://arxiv.org/abs/2609.38057#2026-09-30</guid>
+      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EasyPPO: Stabilizing the Critic Is Key (2026-09-30)</title>
+      <description>A key strength of Proximal Policy Optimization (PPO) is its learned critic, which uses historical trajectories collected during reinforcement learning to estimate expected returns and reduce policy-gr...</description>
+      <link>https://arxiv.org/abs/2609.36802</link>
+      <guid>https://arxiv.org/abs/2609.36802#2026-09-30</guid>
+      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WorldLine: Action-Driven Visual Simulation for Robotic Manipulation (2026-09-30)</title>
+      <description>Real-world robot learning is constrained by the cost of collecting experience and evaluating candidate behaviors. Video generation models offer a scalable foundation for visual simulators that predict...</description>
+      <link>https://arxiv.org/abs/2609.38059</link>
+      <guid>https://arxiv.org/abs/2609.38059#2026-09-30</guid>
+      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AgentBug-Smith: Automatically Reproducing Real-World Harness Bugs in Agentic Systems (2026-09-30)</title>
+      <description>Agent harness bugs exhibit unique characteristics and remain challenging for state-of-the-art software agents to repair. Progress in this area is further hindered by existing benchmarks, which contain...</description>
+      <link>http://arxiv.org/abs/2609.37864v1</link>
+      <guid>http://arxiv.org/abs/2609.37864v1#2026-09-30</guid>
+      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Solver Agent: an Agentic AI Framework for Theoretical Physics Computations Applied to F-theory Uplifts of O3-planes and S-folds (2026-09-30)</title>
+      <description>We introduce Solver Agent, an AI framework based on large language models for calculations and proofs in mathematics and theoretical physics. The solution process is tracked through a persistent ledge...</description>
+      <link>http://arxiv.org/abs/2609.35958v1</link>
+      <guid>http://arxiv.org/abs/2609.35958v1#2026-09-30</guid>
+      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Same Bytes, Different Authority: Reserved-Token Representations in Chat-Template Prompt Injection (2026-09-30)</title>
+      <description>Prompt injection against LLM agents becomes much stronger when the injected instruction is wrapped in the model's own chat template. A forged template marker such as &lt;|im_start|&gt; can reach the model e...</description>
+      <link>http://arxiv.org/abs/2609.35932v1</link>
+      <guid>http://arxiv.org/abs/2609.35932v1#2026-09-30</guid>
+      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 APM-Bench: Benchmarking Cross-session Persistent Memory for Egocentric Streaming Video Assistants (2026-09-30)</title>
+      <description>To serve as real-world personal assistants, streaming video models need persistent memory that retains past experiences for later use. Yet existing streaming benchmarks and methods often focus on indi...</description>
+      <link>https://arxiv.org/abs/2609.37559</link>
+      <guid>https://arxiv.org/abs/2609.37559#2026-09-30</guid>
+      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Beyond Teacher Assignment: Domain-Normalized Multi-Teacher On-Policy Distillation (2026-09-29)</title>
@@ -335,76 +405,6 @@
       <link>https://arxiv.org/abs/2609.26774</link>
       <guid>https://arxiv.org/abs/2609.26774#2026-09-23</guid>
       <pubDate>Wed, 23 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Fast, Memory-Efficient Diffusion LLMs (2026-09-23)</title>
-      <description>Diffusion Large Language Models (dLLMs) have recently emerged as a promising alternative to autoregressive LLMs by enabling non-autoregressive text generation. However, their practical deployment rema...</description>
-      <link>https://arxiv.org/abs/2609.26796</link>
-      <guid>https://arxiv.org/abs/2609.26796#2026-09-23</guid>
-      <pubDate>Wed, 23 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Recursive self-improvement of AI research agents (2026-09-23)</title>
-      <description>AI agents are beginning to automate research and development across the AI stack, from improving training efficiency to optimizing inference. A natural next step is to improve the research efficiency ...</description>
-      <link>https://arxiv.org/abs/2609.26457</link>
-      <guid>https://arxiv.org/abs/2609.26457#2026-09-23</guid>
-      <pubDate>Wed, 23 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Blaming Across the Aisle: Political Contrasting and Blame Attribution in the Danish Parliament (2026-09-23)</title>
-      <description>Political discourse is widely perceived to be growing more hostile, yet robust evidence remains scarce. This study examines blame attribution in the Danish Parliament from 1997 to 2026, combining a pu...</description>
-      <link>https://arxiv.org/abs/2609.26346</link>
-      <guid>https://arxiv.org/abs/2609.26346#2026-09-23</guid>
-      <pubDate>Wed, 23 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory (2026-09-22)</title>
-      <description>Video world models enable interactive exploration of dynamic environments, yet struggle to respect prior observations over long horizons and across viewpoints. We present WorldCrafter, a video world m...</description>
-      <link>https://arxiv.org/abs/2609.24984</link>
-      <guid>https://arxiv.org/abs/2609.24984#2026-09-22</guid>
-      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RRSI: Regularized Recursive Self-Improvement of Agent Harnesses (2026-09-22)</title>
-      <description>An LLM agent's capability is largely magnified by its harness, namely the prompts, control flow, tooling, memory, and context management surrounding the frozen backbone model. Recent methods increasin...</description>
-      <link>https://arxiv.org/abs/2609.24972</link>
-      <guid>https://arxiv.org/abs/2609.24972#2026-09-22</guid>
-      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 GameHorizon Suite: Multi-Horizon Data and Evaluation in Gameplay (2026-09-22)</title>
-      <description>Modern video games provide a measurable testbed for AI models, combining abilities of visual understanding, instruction decomposition, goal planning, and precise action control over multiple temporal ...</description>
-      <link>https://arxiv.org/abs/2609.25001</link>
-      <guid>https://arxiv.org/abs/2609.25001#2026-09-22</guid>
-      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Document Retrieval-Aware Chunking (D-RAC): Universal Retrieval-Aware Ingestion of Enterprise Documents via PDF Normalization and Multimodal Markdown Conversion (2026-09-22)</title>
-      <description>Retrieval-Augmented Generation (RAG) systems over enterprise knowledge bases must ingest heterogeneous document formats -- PDFs, Word documents, presentations, and scans -- whose content is locked ins...</description>
-      <link>https://arxiv.org/abs/2609.24220</link>
-      <guid>https://arxiv.org/abs/2609.24220#2026-09-22</guid>
-      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 VideoGen-Agent: Reinforcing Video Generation Agents (2026-09-22)</title>
-      <description>Recent advances in video generative models have enabled high-fidelity, temporally coherent video generation. However, these models often struggle to satisfy prompts requiring specialized knowledge, sp...</description>
-      <link>https://arxiv.org/abs/2609.24997</link>
-      <guid>https://arxiv.org/abs/2609.24997#2026-09-22</guid>
-      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 onPanda: Efficient Annotation of On-Policy Alignment Data for LLMs and Agents via Token-Level Correction (2026-09-22)</title>
-      <description>We present onPanda, an interactive tool for efficiently annotating LLM alignment data and agent trajectories. onPanda adopts token-level correction as its core interaction: while reading a model respo...</description>
-      <link>https://arxiv.org/abs/2609.24983</link>
-      <guid>https://arxiv.org/abs/2609.24983#2026-09-22</guid>
-      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Harness-Zero: Harness Distillation via Agent-as-Harness (2026-09-22)</title>
-      <description>Agent harnesses, the external systems that mediate model-environment interaction, can substantially improve agent performance, but their gains remain tied to the harness at deployment. Because the bes...</description>
-      <link>https://arxiv.org/abs/2609.24974</link>
-      <guid>https://arxiv.org/abs/2609.24974#2026-09-22</guid>
-      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
