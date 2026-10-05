@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Sat, 03 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W40 (2026-09-22 ~ 2026-09-28)</title>
@@ -55,6 +55,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Scaling Trajectories for Complex Tasks through Recursive Self-Rewrite (2026-10-05)</title>
+      <description>Successful trajectories on difficult tasks provide valuable supervision for model improvement, but specialized harnesses introduce interventions that may be unavailable during deployment. We propose R...</description>
+      <link>https://arxiv.org/abs/2610.02826</link>
+      <guid>https://arxiv.org/abs/2610.02826#2026-10-05</guid>
+      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Native Action-Prior Learning from Videos for World Action Models (2026-10-05)</title>
+      <description>World action models integrate future visual dynamics with robot action prediction, but their scalability remains limited by the need for action-annotated robot trajectories. Observation-only videos co...</description>
+      <link>https://arxiv.org/abs/2610.03391</link>
+      <guid>https://arxiv.org/abs/2610.03391#2026-10-05</guid>
+      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Pivot-SD: Efficient Self-Distillation for Masked Diffusion Language Models (2026-10-05)</title>
+      <description>Masked diffusion language models (dLMs) offer a promising parallel alternative to autoregressive models for complex reasoning. However, they face a distinct credit-assignment challenge, since a few co...</description>
+      <link>https://arxiv.org/abs/2610.03665</link>
+      <guid>https://arxiv.org/abs/2610.03665#2026-10-05</guid>
+      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 HyperBrowseComp: A Multilingual and Multimodal Stress Test for Web-Browsing Agents (2026-10-05)</title>
+      <description>We introduce HyperBrowseComp, a multilingual and multimodal browsing benchmark comprising 423 manually authored and human-validated questions across 13 languages, written by native or highly proficien...</description>
+      <link>https://arxiv.org/abs/2610.03574</link>
+      <guid>https://arxiv.org/abs/2610.03574#2026-10-05</guid>
+      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 World Embedding Benchmark (2026-10-05)</title>
+      <description>Physical fidelity has received increasing attention in world models and video generation, yet how video representations encode physical information remains less understood. We introduce the World Embe...</description>
+      <link>https://arxiv.org/abs/2610.03632</link>
+      <guid>https://arxiv.org/abs/2610.03632#2026-10-05</guid>
+      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Passing the Test You Trained On: Re-evaluating Prompt-Injection Detectors for LLM Agents (2026-10-05)</title>
+      <description>LLM agents increasingly screen tool outputs with small prompt-injection detectors, and teams choose among detectors by their scores on public benchmarks. We ask whether those scores predict how a dete...</description>
+      <link>http://arxiv.org/abs/2610.03448v1</link>
+      <guid>http://arxiv.org/abs/2610.03448v1#2026-10-05</guid>
+      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Benchmarking Literature Retrieval for a Model Organism: A Dictyostelium Case Study (2026-10-05)</title>
+      <description>Biological literature retrieval systems are often developed and evaluated using broad biomedical corpora and general-purpose search tasks. However, many curated knowledge bases operate in narrower mod...</description>
+      <link>http://arxiv.org/abs/2610.03130v1</link>
+      <guid>http://arxiv.org/abs/2610.03130v1#2026-10-05</guid>
+      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ProAR: Learning Prospective Reasoning with Autoregressive Video Models (2026-10-05)</title>
+      <description>Autoregressive (AR) video models excel at causal generation, but their reliance on next-chunk prediction confines them to a short-sighted, reactive paradigm. This limitation is particularly consequent...</description>
+      <link>https://arxiv.org/abs/2610.03664</link>
+      <guid>https://arxiv.org/abs/2610.03664#2026-10-05</guid>
+      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MetaRubric: Learning to Reward for Rubric-Based Reinforcement Learning (2026-10-05)</title>
+      <description>Rubric-based reinforcement learning extends reward-driven optimization to open-ended tasks by assigning partial credit to individual response requirements. However, rubric judges can assign a high cri...</description>
+      <link>https://arxiv.org/abs/2610.02824</link>
+      <guid>https://arxiv.org/abs/2610.02824#2026-10-05</guid>
+      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Efficient Reasoning Training Does Not Always Harm CoT Faithfulness and Monitorability (2026-10-05)</title>
+      <description>Chain-of-thought (CoT) reasoning allows humans to inspect how large language models reach their answers, and oversee model behaviour. This reasoning comes at an increased inference cost, motivating ef...</description>
+      <link>https://arxiv.org/abs/2610.03509</link>
+      <guid>https://arxiv.org/abs/2610.03509#2026-10-05</guid>
+      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards (2026-10-03)</title>
@@ -335,76 +405,6 @@
       <link>https://arxiv.org/abs/2609.35347</link>
       <guid>https://arxiv.org/abs/2609.35347#2026-09-29</guid>
       <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 How Far Are We from Removing the Visual Encoder? Scaling Laws for Encoder-Free Multimodal Pretraining (2026-09-29)</title>
-      <description>Most modern multimodal large language models (MLLMs) build on a pretrained visual encoder that provides a strong visual prior. Encoder-free MLLMs instead learn visual representations directly from raw...</description>
-      <link>https://arxiv.org/abs/2609.35457</link>
-      <guid>https://arxiv.org/abs/2609.35457#2026-09-29</guid>
-      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning (2026-09-29)</title>
-      <description>Unified multimodal models can both look at and render images, so in principle they can repair their own generations: diagnose what an image gets wrong, revise it, observe the result, and diagnose agai...</description>
-      <link>https://arxiv.org/abs/2609.35767</link>
-      <guid>https://arxiv.org/abs/2609.35767#2026-09-29</guid>
-      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Knowing When Thinking Is Not Enough: Teaching Small Reasoning Models to Reason Beyond Their Parametric Knowledge (2026-09-29)</title>
-      <description>Scaling test-time computation is a powerful way to improve language-model reasoning, and is particularly appealing for small reasoning models (sRMs) that are cheap to serve. However, is additional thi...</description>
-      <link>https://arxiv.org/abs/2609.34327</link>
-      <guid>https://arxiv.org/abs/2609.34327#2026-09-29</guid>
-      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 WorldPlay2: Extending Real-Time Interactive World Models in Control and Horizon (2026-09-29)</title>
-      <description>Interactive world models require responding in real time to versatile controls and maintaining long-horizon consistency. However, modeling heterogeneous controls remains difficult, while explosive con...</description>
-      <link>https://arxiv.org/abs/2609.35560</link>
-      <guid>https://arxiv.org/abs/2609.35560#2026-09-29</guid>
-      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Share-Borne AI Virus: Memory-Hopping Attacks Across LLM Agents (2026-09-29)</title>
-      <description>Large language models are increasingly deployed as stateful assistants that retain information across interactions and use tools to read, modify, and create persistent artifacts. As these artifacts ar...</description>
-      <link>http://arxiv.org/abs/2609.35576v1</link>
-      <guid>http://arxiv.org/abs/2609.35576v1#2026-09-29</guid>
-      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ProofLoom: Proof-Obligation-Driven Theory Construction for Autoformalizing Research-Level Stochastic Optimization (2026-09-29)</title>
-      <description>Formalizing research-level stochastic optimization in Lean requires both an algorithm model and domain theory connecting foundational libraries to convergence proofs. Revising a model to restore prova...</description>
-      <link>http://arxiv.org/abs/2609.34960v1</link>
-      <guid>http://arxiv.org/abs/2609.34960v1#2026-09-29</guid>
-      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DGF-Bench: A Benchmark for Simulating and Auditing Deception Against Multi-Agent Governance Boards (2026-09-29)</title>
-      <description>Tool-using language-model agents can review enterprise projects as governance boards do: they read the evidence, apply written rules and decide whether the project may proceed. Part of that evidence c...</description>
-      <link>http://arxiv.org/abs/2609.34913v1</link>
-      <guid>http://arxiv.org/abs/2609.34913v1#2026-09-29</guid>
-      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 FromPitch2Board: Benchmarking LLM Agents in Long-Horizon Football Management (2026-09-29)</title>
-      <description>Long-horizon agent benchmarks typically report how far an agent progresses, but do not identify whether its performance comes from the foundation model, scaffold, responsibility scope, match-control g...</description>
-      <link>http://arxiv.org/abs/2609.34710v1</link>
-      <guid>http://arxiv.org/abs/2609.34710v1#2026-09-29</guid>
-      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Certified Multi-Source Integrity for Structured Agent Actions (2026-09-29)</title>
-      <description>LLM agents increasingly take privileged, often irreversible structured actions, such as paying an invoice. They assemble each action from action-critical fields in documents and tool outputs that an a...</description>
-      <link>http://arxiv.org/abs/2609.34245v1</link>
-      <guid>http://arxiv.org/abs/2609.34245v1#2026-09-29</guid>
-      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 FuseReg: Regularizing Layer Fusion Mitigates the Reconstruction-Generation Gap in Representation Autoencoders (2026-09-28)</title>
-      <description>Representation autoencoders (RAEs) reuse features from a pretrained visual encoder as reconstruction and diffusion latents, integrating strong visual representations into image generation. However, RA...</description>
-      <link>https://arxiv.org/abs/2609.31620</link>
-      <guid>https://arxiv.org/abs/2609.31620#2026-09-28</guid>
-      <pubDate>Mon, 28 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
