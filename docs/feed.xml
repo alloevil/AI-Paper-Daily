@@ -8,6 +8,13 @@
     <lastBuildDate>Mon, 05 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>📊 Weekly roundup 2026-W41 (2026-09-29 ~ 2026-10-05)</title>
+      <description>Top 15 of the last 7 days by heat: UniEvo-VL: An On-policy Self-Distillation Training Recipe for Multimodal Model Self-improvement; False Frontiers: Diagnosing and Mitigating Co-Cheating in Self-Evolving Search Agents; Beyond Teacher Assignment: Domain-Normalized Multi-Teacher On-Policy Distillation; EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery; Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents…</description>
+      <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W41.html</link>
+      <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W41.html</guid>
+      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>📊 Weekly roundup 2026-W40 (2026-09-22 ~ 2026-09-28)</title>
       <description>Top 15 of the last 7 days by heat: FuseReg: Regularizing Layer Fusion Mitigates the Reconstruction-Generation Gap in Representation Autoencoders; WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory; RRSI: Regularized Recursive Self-Improvement of Agent Harnesses; GameHorizon Suite: Multi-Horizon Data and Evaluation in Gameplay; Document Retrieval-Aware Chunking (D-RAC): Universal Retrieval-Aware Ingestion of Enterprise Documents via PDF Normalization and Multimodal Markdown Conversion…</description>
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W40.html</link>
