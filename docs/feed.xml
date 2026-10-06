@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Mon, 05 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W41 (2026-09-29 ~ 2026-10-05)</title>
@@ -62,6 +62,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents (2026-10-06)</title>
+      <description>Memory has become integral to the LLM agent ecosystem, supporting information retention and reuse across interactions. However, most existing agent memory systems construct memory in a query-agnostic ...</description>
+      <link>http://arxiv.org/abs/2610.06830v1</link>
+      <guid>http://arxiv.org/abs/2610.06830v1#2026-10-06</guid>
+      <pubDate>Tue, 06 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 BazaarBench: Delegation Safety in Decentralized C2C Marketplaces Run by LLM Agents (2026-10-06)</title>
+      <description>In decentralized consumer-to-consumer (C2C) marketplaces, people list goods, negotiate with strangers, and rate one another, so trust rests on reputation. Large language model (LLM) agents now act for...</description>
+      <link>http://arxiv.org/abs/2610.06748v1</link>
+      <guid>http://arxiv.org/abs/2610.06748v1#2026-10-06</guid>
+      <pubDate>Tue, 06 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Teaching a Minimalist Machine to Discover Recursive Programs for Arithmetic (2026-10-06)</title>
+      <description>Humans can often acquire and synthesize complex, recursive concepts from minimal experience. Leveraging cognitive insights, we propose the Minimalist Machine, a framework for inductive program synthes...</description>
+      <link>http://arxiv.org/abs/2610.06304v1</link>
+      <guid>http://arxiv.org/abs/2610.06304v1#2026-10-06</guid>
+      <pubDate>Tue, 06 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Curriculum Brain: Constructing Curriculum Knowledge Graphs as a Substrate for Cognitive Diagnosis (2026-10-06)</title>
+      <description>Cognitive Diagnostic Models (CDMs) identify which specific skills a student has and has not mastered, the signal a personalized learning path needs and a single aggregate score cannot give. Yet they a...</description>
+      <link>http://arxiv.org/abs/2610.05860v1</link>
+      <guid>http://arxiv.org/abs/2610.05860v1#2026-10-06</guid>
+      <pubDate>Tue, 06 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ColdDDI: Evaluating Knowledge Utilization in Cold-Start Drug-Drug Interaction Prediction (2026-10-06)</title>
+      <description>Cold-start drug-drug interaction (DDI) prediction tests whether models can identify clinically significant interactions for drugs without training-time interaction history. Existing benchmarks mostly ...</description>
+      <link>http://arxiv.org/abs/2610.05590v1</link>
+      <guid>http://arxiv.org/abs/2610.05590v1#2026-10-06</guid>
+      <pubDate>Tue, 06 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MMPostTrainBench: Benchmarking Autonomous Research for Multimodal Post-Training (2026-10-06)</title>
+      <description>Autonomous research seeks sustained model improvements through iterative experimentation and feedback. LLM agents show promise in automating machine learning and language-model post-training, but thei...</description>
+      <link>http://arxiv.org/abs/2610.05398v1</link>
+      <guid>http://arxiv.org/abs/2610.05398v1#2026-10-06</guid>
+      <pubDate>Tue, 06 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Noise Out, Bias In: Targeted Bias Injection in Diffusion Language Models via Closed-Loop Activation Steering (2026-10-06)</title>
+      <description>Masked diffusion language models (dLLMs) generate text by iteratively denoising masked positions, re-predicting each token multiple times before it is committed. An autoregressive decoder exposes an a...</description>
+      <link>https://arxiv.org/abs/2610.05894</link>
+      <guid>https://arxiv.org/abs/2610.05894#2026-10-06</guid>
+      <pubDate>Tue, 06 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 RealtimeWAM: One-Step Asynchronous World Action Models (2026-10-06)</title>
+      <description>World Action Models (WAMs) incorporate visual representations from video generation backbones to guide action prediction. Recent efficient WAMs adopt Mixture-of-Transformers (MoT) architectures and co...</description>
+      <link>https://arxiv.org/abs/2610.06617</link>
+      <guid>https://arxiv.org/abs/2610.06617#2026-10-06</guid>
+      <pubDate>Tue, 06 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Towards Looped Models Done Right, Part II: Rethinking at Fixed Points (2026-10-06)</title>
+      <description>Every recurrence of a looped language model adds cost in training, decoding, prefill, and reinforcement learning (RL). The closer recurrent states get to fixed points, the less the path to them matter...</description>
+      <link>https://arxiv.org/abs/2610.06833</link>
+      <guid>https://arxiv.org/abs/2610.06833#2026-10-06</guid>
+      <pubDate>Tue, 06 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Certification of Real Images through Calibrated Content Authentication (2026-10-06)</title>
+      <description>Generative models can synthesize high-quality inauthentic multimedia content that is already being misused at scale. We evaluate twenty deepfake detectors against ten generators released in the last f...</description>
+      <link>https://arxiv.org/abs/2610.05870</link>
+      <guid>https://arxiv.org/abs/2610.05870#2026-10-06</guid>
+      <pubDate>Tue, 06 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Scaling Trajectories for Complex Tasks through Recursive Self-Rewrite (2026-10-05)</title>
@@ -342,76 +412,6 @@
       <link>https://arxiv.org/abs/2609.37686</link>
       <guid>https://arxiv.org/abs/2609.37686#2026-09-30</guid>
       <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SoL-Refiner: Speed-of-Light One-Step Refinement for High-Resolution Video (2026-09-30)</title>
-      <description>High-resolution video generation is expensive, as its cost grows rapidly with the number of spatiotemporal tokens. A practical alternative first generates a lower-resolution video and then applies a r...</description>
-      <link>https://arxiv.org/abs/2609.37969</link>
-      <guid>https://arxiv.org/abs/2609.37969#2026-09-30</guid>
-      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 HybridCUA: Learning to Orchestrate GUI and CLI for Computer-Use Agents (2026-09-30)</title>
-      <description>Computer use agents (CUAs) have demonstrated strong capabilities in completing digital tasks. However, existing CUAs either rely solely on graphical user interface (GUI) interactions, which are often ...</description>
-      <link>https://arxiv.org/abs/2609.38008</link>
-      <guid>https://arxiv.org/abs/2609.38008#2026-09-30</guid>
-      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EVO-WAM: Evolving World Action Models through Video-Action Verification (2026-09-30)</title>
-      <description>Improving robot policies on new tasks without collecting additional expert demonstrations remains a central challenge in robot learning. World action models (WAMs) use broad video priors to jointly pr...</description>
-      <link>https://arxiv.org/abs/2609.38057</link>
-      <guid>https://arxiv.org/abs/2609.38057#2026-09-30</guid>
-      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EasyPPO: Stabilizing the Critic Is Key (2026-09-30)</title>
-      <description>A key strength of Proximal Policy Optimization (PPO) is its learned critic, which uses historical trajectories collected during reinforcement learning to estimate expected returns and reduce policy-gr...</description>
-      <link>https://arxiv.org/abs/2609.36802</link>
-      <guid>https://arxiv.org/abs/2609.36802#2026-09-30</guid>
-      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 WorldLine: Action-Driven Visual Simulation for Robotic Manipulation (2026-09-30)</title>
-      <description>Real-world robot learning is constrained by the cost of collecting experience and evaluating candidate behaviors. Video generation models offer a scalable foundation for visual simulators that predict...</description>
-      <link>https://arxiv.org/abs/2609.38059</link>
-      <guid>https://arxiv.org/abs/2609.38059#2026-09-30</guid>
-      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AgentBug-Smith: Automatically Reproducing Real-World Harness Bugs in Agentic Systems (2026-09-30)</title>
-      <description>Agent harness bugs exhibit unique characteristics and remain challenging for state-of-the-art software agents to repair. Progress in this area is further hindered by existing benchmarks, which contain...</description>
-      <link>http://arxiv.org/abs/2609.37864v1</link>
-      <guid>http://arxiv.org/abs/2609.37864v1#2026-09-30</guid>
-      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Solver Agent: an Agentic AI Framework for Theoretical Physics Computations Applied to F-theory Uplifts of O3-planes and S-folds (2026-09-30)</title>
-      <description>We introduce Solver Agent, an AI framework based on large language models for calculations and proofs in mathematics and theoretical physics. The solution process is tracked through a persistent ledge...</description>
-      <link>http://arxiv.org/abs/2609.35958v1</link>
-      <guid>http://arxiv.org/abs/2609.35958v1#2026-09-30</guid>
-      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Same Bytes, Different Authority: Reserved-Token Representations in Chat-Template Prompt Injection (2026-09-30)</title>
-      <description>Prompt injection against LLM agents becomes much stronger when the injected instruction is wrapped in the model's own chat template. A forged template marker such as &lt;|im_start|&gt; can reach the model e...</description>
-      <link>http://arxiv.org/abs/2609.35932v1</link>
-      <guid>http://arxiv.org/abs/2609.35932v1#2026-09-30</guid>
-      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 APM-Bench: Benchmarking Cross-session Persistent Memory for Egocentric Streaming Video Assistants (2026-09-30)</title>
-      <description>To serve as real-world personal assistants, streaming video models need persistent memory that retains past experiences for later use. Yet existing streaming benchmarks and methods often focus on indi...</description>
-      <link>https://arxiv.org/abs/2609.37559</link>
-      <guid>https://arxiv.org/abs/2609.37559#2026-09-30</guid>
-      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Beyond Teacher Assignment: Domain-Normalized Multi-Teacher On-Policy Distillation (2026-09-29)</title>
-      <description>Reinforcement learning can turn one language model into several specialists, each excellent at a single skill such as mathematics, coding or following instructions, but users need one model with all o...</description>
-      <link>https://arxiv.org/abs/2609.35347</link>
-      <guid>https://arxiv.org/abs/2609.35347#2026-09-29</guid>
-      <pubDate>Tue, 29 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
