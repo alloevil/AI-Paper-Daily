@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W41 (2026-09-29 ~ 2026-10-05)</title>
@@ -62,6 +62,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Rethinking Cross-Tokenizer On-Policy Distillation: From Alignment Coverage to Supervision Reliability (2026-10-07)</title>
+      <description>On-Policy Distillation (OPD) trains a student on its own generations using teacher feedback. With different tokenizers, comparing teacher and student predictions requires alignment at both sequence an...</description>
+      <link>https://arxiv.org/abs/2610.08448</link>
+      <guid>https://arxiv.org/abs/2610.08448#2026-10-07</guid>
+      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TRACE: Rollout-Guided Quantization-Aware Training for FP4 Reinforcement Learning of MoE Language Models (2026-10-07)</title>
+      <description>Reinforcement learning (RL) for post-training large language models (LLMs) incurs substantial computation and memory overhead during rollout generation, which motivates low-precision rollout for effic...</description>
+      <link>https://arxiv.org/abs/2610.07767</link>
+      <guid>https://arxiv.org/abs/2610.07767#2026-10-07</guid>
+      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 From Evidence to Action: How Tool-Using Agents Fail (2026-10-07)</title>
+      <description>Tool-using agents make consequential changes to external state, yet correct outcomes do not guarantee that their actions were supported by evidence established beforehand. We study where this evidence...</description>
+      <link>https://arxiv.org/abs/2610.07753</link>
+      <guid>https://arxiv.org/abs/2610.07753#2026-10-07</guid>
+      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 UNREAL: Unifying Retrieval and Long-Context with a Single Model (2026-10-07)</title>
+      <description>Long-context inference and Retrieval-Augmented Generation (RAG) handle evidence selection at vastly different scales, from a single long prompt to an entire corpus. We ask whether a single model-inter...</description>
+      <link>https://arxiv.org/abs/2610.08463</link>
+      <guid>https://arxiv.org/abs/2610.08463#2026-10-07</guid>
+      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Agentic AutoRAG: RAG Pipeline Optimization through Reasoning-Driven Agents (2026-10-07)</title>
+      <description>Retrieval-augmented generation (RAG) is a widely used approach for grounding large language models (LLMs) in external knowledge. However, configuring a pipeline is an expensive hyperparameter optimiza...</description>
+      <link>http://arxiv.org/abs/2610.08452v1</link>
+      <guid>http://arxiv.org/abs/2610.08452v1#2026-10-07</guid>
+      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 DAEDALUS: Bootstrapping Agent Memory from Self-Generated Tasks (2026-10-07)</title>
+      <description>LLM agents often lack the operational knowledge to act reliably in new environments, as they must discover specific tool behaviors or environment conventions on their own. Without memory of past attem...</description>
+      <link>http://arxiv.org/abs/2610.08048v1</link>
+      <guid>http://arxiv.org/abs/2610.08048v1#2026-10-07</guid>
+      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Towards a Unified Misuse Monitoring Benchmark (2026-10-07)</title>
+      <description>LLM agents increasingly act in multi-actor environments, exposing them to misuse from multiple sources: decomposition attacks, where a harmful request is split into innocuous sub-requests, and prompt ...</description>
+      <link>http://arxiv.org/abs/2610.07089v1</link>
+      <guid>http://arxiv.org/abs/2610.07089v1#2026-10-07</guid>
+      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EmbodiedSmith: Scaling Embodied Data through Recursive Self-Improvement Flywheel in Simulation (2026-10-07)</title>
+      <description>Scaling robotic foundation models requires diverse training data and reliable evaluation environments. Simulation offers a scalable solution, yet existing generation pipelines remain constrained by pr...</description>
+      <link>https://arxiv.org/abs/2610.07969</link>
+      <guid>https://arxiv.org/abs/2610.07969#2026-10-07</guid>
+      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 NeMo-DCR: Bit-Exact Delta-Compressed Refit for Scalable Agentic RL at Trillion-Parameter Scale (2026-10-07)</title>
+      <description>Agentic reinforcement learning (RL) disaggregates training from rollout, so each policy update must reach the rollout clusters before the next batch. Transferring a full 1T checkpoint for such weight ...</description>
+      <link>https://arxiv.org/abs/2610.08430</link>
+      <guid>https://arxiv.org/abs/2610.08430#2026-10-07</guid>
+      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Hiding Tool Latency in On-Device Cascaded Voice Agent through Speculative Execution (2026-10-07)</title>
+      <description>Tool-augmented speech assistants typically serialize automatic speech recognition, large language model inference, and external tool execution. As a result, tool latency is incurred only after the use...</description>
+      <link>https://arxiv.org/abs/2610.07641</link>
+      <guid>https://arxiv.org/abs/2610.07641#2026-10-07</guid>
+      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents (2026-10-06)</title>
@@ -342,76 +412,6 @@
       <link>https://arxiv.org/abs/2609.38721</link>
       <guid>https://arxiv.org/abs/2609.38721#2026-10-01</guid>
       <pubDate>Thu, 01 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 False Frontiers: Diagnosing and Mitigating Co-Cheating in Self-Evolving Search Agents (2026-10-01)</title>
-      <description>Self-evolving search agents build their own training curricula by jointly optimizing a proposer that generates questions and a solver that answers them. This closed loop introduces a failure mode we c...</description>
-      <link>https://arxiv.org/abs/2609.39102</link>
-      <guid>https://arxiv.org/abs/2609.39102#2026-10-01</guid>
-      <pubDate>Thu, 01 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery (2026-10-01)</title>
-      <description>Evolutionary search with large language models (LLMs) can stall when progress requires external knowledge the model lacks. Supplying relevant documents helps, but simply adding web search tool can kee...</description>
-      <link>https://arxiv.org/abs/2609.40340</link>
-      <guid>https://arxiv.org/abs/2609.40340#2026-10-01</guid>
-      <pubDate>Thu, 01 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents (2026-10-01)</title>
-      <description>Terminal agents act through stochastic model generations, yet the ability to generate a useful action does not ensure its reliable execution. A poor command (e.g., wrong package install) can change th...</description>
-      <link>https://arxiv.org/abs/2609.39982</link>
-      <guid>https://arxiv.org/abs/2609.39982#2026-10-01</guid>
-      <pubDate>Thu, 01 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 More Choices, Fewer Decisions: Ordinal-Scale Bias in JEV-like Direct-Decision Models (2026-10-01)</title>
-      <description>Direct-decision models turn text into low-latency structured labels and scores, making them attractive for classification and automatic evaluation. Yet reliability requires more than accuracy: a model...</description>
-      <link>https://arxiv.org/abs/2609.38827</link>
-      <guid>https://arxiv.org/abs/2609.38827#2026-10-01</guid>
-      <pubDate>Thu, 01 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RSIGame: Autonomous Agentic Game Development with Recursive Self-improvement (2026-10-01)</title>
-      <description>Recent advances in large language models have made automatic game generation increasingly feasible, yet reliably improving generated games beyond a playable version remains challenging. Naive iterativ...</description>
-      <link>https://arxiv.org/abs/2609.39045</link>
-      <guid>https://arxiv.org/abs/2609.39045#2026-10-01</guid>
-      <pubDate>Thu, 01 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ArchitectureIQ: On the Measure of Training Intuition (2026-10-01)</title>
-      <description>Top researchers have good intuition, but do language models have as good intuition about model training as top AI researchers? To measure model intuition of LLMs and humans, we introduce the Architect...</description>
-      <link>http://arxiv.org/abs/2609.39714v1</link>
-      <guid>http://arxiv.org/abs/2609.39714v1#2026-10-01</guid>
-      <pubDate>Thu, 01 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SkillSeek: Revisiting Agent Skill Retrieval at Marketplace Scale (2026-10-01)</title>
-      <description>Anthropic's Agent Skills package reusable procedural know-how for an LLM agent into SKILL.md directories, and open-source aggregations have grown past 230,000 skills, making selection rather than auth...</description>
-      <link>http://arxiv.org/abs/2609.38822v1</link>
-      <guid>http://arxiv.org/abs/2609.38822v1#2026-10-01</guid>
-      <pubDate>Thu, 01 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EVOKE: Eliciting World Knowledge in Agents for Transferable Decision-Making (2026-10-01)</title>
-      <description>Large language models (LLMs) are increasingly deployed as agents for multi-step decision-making, yet transfer poorly to unseen environments. World-model methods address this by training agents to pred...</description>
-      <link>http://arxiv.org/abs/2609.38334v1</link>
-      <guid>http://arxiv.org/abs/2609.38334v1#2026-10-01</guid>
-      <pubDate>Thu, 01 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks (2026-10-01)</title>
-      <description>We present AREX-2, an effort to advance the self-improving capability of LLM agents, which we define as the ability to iteratively refine a solution at test time. This ability rests on two complementa...</description>
-      <link>http://arxiv.org/abs/2609.38288v1</link>
-      <guid>http://arxiv.org/abs/2609.38288v1#2026-10-01</guid>
-      <pubDate>Thu, 01 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EngiWorld: What Can Frontier Agents Deliver in Professional Engineering Environments? (2026-09-30)</title>
-      <description>Autonomous agents have made rapid progress in general-purpose computer use, but reliable automation of professional industrial engineering remains out of reach, as engineering workflows demand reasoni...</description>
-      <link>https://arxiv.org/abs/2609.37686</link>
-      <guid>https://arxiv.org/abs/2609.37686#2026-09-30</guid>
-      <pubDate>Wed, 30 Sep 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
