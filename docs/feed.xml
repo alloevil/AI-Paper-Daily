@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Wed, 07 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W41 (2026-09-29 ~ 2026-10-05)</title>
@@ -62,6 +62,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Long-WAM: Scaling the Context of World-Action Models (2026-10-08)</title>
+      <description>Real-time robot control demands enough visual history to infer motion and task progress, but processing that history can delay action. We present Long-WAM, a model-system framework for scaling the con...</description>
+      <link>https://arxiv.org/abs/2610.10528</link>
+      <guid>https://arxiv.org/abs/2610.10528#2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 GRACE: Generation-aware latent compression for efficient video generation (2026-10-08)</title>
+      <description>Highly compressed video autoencoders offer an effective way to accelerate video diffusion models, as the Diffusion Transformer (DiT) operates on far fewer tokens. However, such autoencoders are challe...</description>
+      <link>https://arxiv.org/abs/2610.10524</link>
+      <guid>https://arxiv.org/abs/2610.10524#2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SGF+: Decoupling Gradient Flows for Autoregressive Video Generation (2026-10-08)</title>
+      <description>Autoregressive video generation requires denoising the current frames while writing their key-value representations as context for future predictions. However, these two roles typically share paramete...</description>
+      <link>https://arxiv.org/abs/2610.10429</link>
+      <guid>https://arxiv.org/abs/2610.10429#2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Tetris3D: 3D Scene Generation With Objects That Fit Together (2026-10-08)</title>
+      <description>We propose Tetris3D, a generative framework for single-image 3D scene reconstruction that recovers objects which are physically and geometrically coherent as a scene. Existing methods often generate o...</description>
+      <link>https://arxiv.org/abs/2610.10539</link>
+      <guid>https://arxiv.org/abs/2610.10539#2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 RobotWorld: Benchmarking Multimodal Agents for Robot Use Across Diverse Tasks and Embodiments (2026-10-08)</title>
+      <description>General-purpose agents increasingly write code, use tools, and complete complex digital tasks, raising the question of how far these capabilities carry into the physical world. To investigate this, we...</description>
+      <link>https://arxiv.org/abs/2610.10409</link>
+      <guid>https://arxiv.org/abs/2610.10409#2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Mechanics of Long-Context Hybrid Models Part 1.1: From Hybrid Attention to Hybrid Position (2026-10-08)</title>
+      <description>The architectural design of Large Language Models (LLMs) is shifting from traditional full-attention-only models to hybrid models, which combine different attention modules to improve long-context eff...</description>
+      <link>https://arxiv.org/abs/2610.10114</link>
+      <guid>https://arxiv.org/abs/2610.10114#2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SWE-Game: Can Coding Agents Build the Games We Want? (2026-10-08)</title>
+      <description>We introduce SWE-Game, a benchmark of 247 tasks grounded in 41 executable reference Godot games spanning 13 gameplay categories in 2D and 3D. Five task types cover development from a brief, implementa...</description>
+      <link>https://arxiv.org/abs/2609.33678</link>
+      <guid>https://arxiv.org/abs/2609.33678#2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 UltraText Bench: A Comprehensive Bilingual Benchmark for Evaluating Visual Text Rendering in Image Generation (2026-10-08)</title>
+      <description>Dense visual text requires image generators to reproduce long strings across multiple regions with correct placement and legibility. As short-string rendering improves, evaluation must test sustained ...</description>
+      <link>https://arxiv.org/abs/2610.09823</link>
+      <guid>https://arxiv.org/abs/2610.09823#2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AdSpark: A Large-Scale Dataset and Benchmark for Product-Centric Advertisement Video Generation (2026-10-08)</title>
+      <description>Product-centric advertisement video generation aims to create promotional videos that preserve fine-grained product identity while presenting selling points through coherent multi-shot narratives. How...</description>
+      <link>https://arxiv.org/abs/2610.10047</link>
+      <guid>https://arxiv.org/abs/2610.10047#2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Inverting Multi-Vector Visual Document Indices (2026-10-08)</title>
+      <description>Prevailing multi-vector visual document retrievers store each page as about a thousand patch vectors, often in vector databases run by a third party. Since no one can read a page from its vectors, thi...</description>
+      <link>https://arxiv.org/abs/2610.09920</link>
+      <guid>https://arxiv.org/abs/2610.09920#2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Rethinking Cross-Tokenizer On-Policy Distillation: From Alignment Coverage to Supervision Reliability (2026-10-07)</title>
@@ -342,76 +412,6 @@
       <link>https://arxiv.org/abs/2610.02162</link>
       <guid>https://arxiv.org/abs/2610.02162#2026-10-02</guid>
       <pubDate>Fri, 02 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Sharpening Tax in Post-Training (2026-10-02)</title>
-      <description>An emerging hypothesis about reinforcement learning (RL) post-training of large language models (LLMs) is that it merely sharpens existing behaviors of a base model, improving single-shot accuracy at ...</description>
-      <link>https://arxiv.org/abs/2610.01509</link>
-      <guid>https://arxiv.org/abs/2610.01509#2026-10-02</guid>
-      <pubDate>Fri, 02 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OneStreamer: Unifying Perception, Memory, and Proactive Response in Streaming Video Interaction (2026-10-02)</title>
-      <description>Streaming video LLMs must retain evidence before its relevance to future tasks is known and respond when sufficient evidence becomes available. The challenge is to form reusable factual memory without...</description>
-      <link>https://arxiv.org/abs/2610.01762</link>
-      <guid>https://arxiv.org/abs/2610.01762#2026-10-02</guid>
-      <pubDate>Fri, 02 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 4Director: Controlling Video World Models with Rigid 3D Geometry (2026-10-02)</title>
-      <description>Precise control over camera and object motion is essential for professional video production. Existing methods control objects only coarsely, through image-plane cues that are ambiguous in depth and r...</description>
-      <link>https://arxiv.org/abs/2610.02160</link>
-      <guid>https://arxiv.org/abs/2610.02160#2026-10-02</guid>
-      <pubDate>Fri, 02 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RPTune: Learned Context Curation for LLM Catalog Search (2026-10-02)</title>
-      <description>For small merchant businesses (SMBs) whose catalogs fit within a long-context LLM, full-catalog prompting offers a compelling alternative to multi-stage retrieval designed primarily for large marketpl...</description>
-      <link>https://arxiv.org/abs/2610.00964</link>
-      <guid>https://arxiv.org/abs/2610.00964#2026-10-02</guid>
-      <pubDate>Fri, 02 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Fewer Tokens, Better Action: GPT-6 Astra Robot Agents with 14% Higher Success Rate but 65% Fewer Tokens (2026-10-02)</title>
-      <description>Vision language model (VLM) agents can control robots through visual feedback and action primitives, but repeated model invocations and redundant observations incur substantial token overhead. We intr...</description>
-      <link>https://arxiv.org/abs/2610.01939</link>
-      <guid>https://arxiv.org/abs/2610.01939#2026-10-02</guid>
-      <pubDate>Fri, 02 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 InterEvolve: Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation (2026-10-02)</title>
-      <description>We study test-time evolution for humanoid loco-manipulation: solving tasks that a controller was never trained for by repurposing its existing skills, improving from its own attempts, and retaining wh...</description>
-      <link>https://arxiv.org/abs/2610.02196</link>
-      <guid>https://arxiv.org/abs/2610.02196#2026-10-02</guid>
-      <pubDate>Fri, 02 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SILSA: Sliding-Window Slice Latents for Topology-Preserving High-Resolution 3D Generation (2026-10-02)</title>
-      <description>High-resolution 3D generation increasingly relies on voxel latents and multi-stage pipelines that first predict active structure and then synthesize local geometry. While effective, this design fragme...</description>
-      <link>https://arxiv.org/abs/2610.02201</link>
-      <guid>https://arxiv.org/abs/2610.02201#2026-10-02</guid>
-      <pubDate>Fri, 02 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Omni-Embed-Mini: Binding Modalities Without Forgetting via Dense Distillation (2026-10-02)</title>
-      <description>Extending a text embedding model to new modalities typically degrades text retrieval quality, and existing omni-modal embedders compensate with multi-billion parameters. We present Omni-Embed-Mini, a ...</description>
-      <link>https://arxiv.org/abs/2610.02148</link>
-      <guid>https://arxiv.org/abs/2610.02148#2026-10-02</guid>
-      <pubDate>Fri, 02 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AgSpec: Pushing the Limits of Retrieval-Based Speculative Decoding in Coding Agent Pipelines (2026-10-02)</title>
-      <description>Retrieval-based speculative decoding (SD) drafts tokens by copying continuations from existing text, which suits coding agents that repeatedly reproduce code, logs, and earlier attempts. Yet existing ...</description>
-      <link>https://arxiv.org/abs/2610.01108</link>
-      <guid>https://arxiv.org/abs/2610.01108#2026-10-02</guid>
-      <pubDate>Fri, 02 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 UniEvo-VL: An On-policy Self-Distillation Training Recipe for Multimodal Model Self-improvement (2026-10-01)</title>
-      <description>Modern multimodal models bring generation and understanding into a single unified system, which enables them to provide and learn from their own feedback. Motivated by this unified capacity, we introd...</description>
-      <link>https://arxiv.org/abs/2609.38721</link>
-      <guid>https://arxiv.org/abs/2609.38721#2026-10-01</guid>
-      <pubDate>Thu, 01 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
