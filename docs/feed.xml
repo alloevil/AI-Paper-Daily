@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W41 (2026-09-29 ~ 2026-10-05)</title>
@@ -62,6 +62,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Learn2Play Bench: How Well Do LLM Agents Learn from Experience in Unfamiliar Environments? (2026-10-09)</title>
+      <description>Learning from experience is essential for LLM agents to adapt to unfamiliar and dynmaic environments. Evaluating this ability is therefore important for understanding how effectively agents acquire an...</description>
+      <link>https://arxiv.org/abs/2610.08215</link>
+      <guid>https://arxiv.org/abs/2610.08215#2026-10-09</guid>
+      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TokenRouter: Efficient Serving System for Token-Level LLM Routing (2026-10-09)</title>
+      <description>Large language model (LLM) routing distributes inference work across different models, advancing the cost-quality Pareto frontier of LLM serving. While coarse-grained routing at the session or query l...</description>
+      <link>https://arxiv.org/abs/2610.12242</link>
+      <guid>https://arxiv.org/abs/2610.12242#2026-10-09</guid>
+      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SuperNav: An Agentic Navigation System for Any Task in Any Scene (2026-10-09)</title>
+      <description>General-purpose service robots need navigation systems that can handle diverse human requests in unfamiliar environments, combining task generality with scene generality. Some existing methods fine-tu...</description>
+      <link>https://arxiv.org/abs/2610.12126</link>
+      <guid>https://arxiv.org/abs/2610.12126#2026-10-09</guid>
+      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement (2026-10-09)</title>
+      <description>Reinforcement learning (RL) is the central training paradigm for advancing large foundation models towards self-improvement. This report introduces the MiMo-V2.6 series, an omni-modal family that push...</description>
+      <link>https://arxiv.org/abs/2610.11959</link>
+      <guid>https://arxiv.org/abs/2610.11959#2026-10-09</guid>
+      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Multi-Agent Egocentric World Model with Fine-Grained Embodied Interaction (2026-10-09)</title>
+      <description>Egocentric world models predict first-person observations conditioned on an agent's actions, but most focus on a single agent. Real embodied settings often involve multiple agents that act and interac...</description>
+      <link>https://arxiv.org/abs/2610.12299</link>
+      <guid>https://arxiv.org/abs/2610.12299#2026-10-09</guid>
+      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training (2026-10-09)</title>
+      <description>We present DreamTrue, a multi-view, cross-embodiment robot world model for action-faithful and physically plausible video prediction. Training such a model on existing robot datasets faces two obstacl...</description>
+      <link>https://arxiv.org/abs/2610.12468</link>
+      <guid>https://arxiv.org/abs/2610.12468#2026-10-09</guid>
+      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 OuroWorld: Bringing Any 3D World Alive as Diverse, Endlessly Looping 3D Cinemagraphs (2026-10-09)</title>
+      <description>Recent 3D world models generate photorealistic, explorable scenes that remain frozen in time. OuroWorld is a mask-free framework that turns any static 3D Gaussian Splatting scene into a 3D cinemagraph...</description>
+      <link>https://arxiv.org/abs/2610.12461</link>
+      <guid>https://arxiv.org/abs/2610.12461#2026-10-09</guid>
+      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Beyond Spatio-Temporal Priors: A Generalizable Approach for Dense Correspondence Matching (2026-10-09)</title>
+      <description>Dense correspondence matching has historically been bounded by simplifying spatio-temporal priors, such as smooth motion and rigid geometry. While effective for classical tasks, these assumptions brea...</description>
+      <link>https://arxiv.org/abs/2610.12421</link>
+      <guid>https://arxiv.org/abs/2610.12421#2026-10-09</guid>
+      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TestPrism: Rethinking Test Evaluation Beyond a Single Reference (2026-10-09)</title>
+      <description>Large language model (LLM) coding agents have advanced test generation across diverse programming tasks. However, the common practice of evaluating tests against a single reference solution overlooks ...</description>
+      <link>https://arxiv.org/abs/2610.12289</link>
+      <guid>https://arxiv.org/abs/2610.12289#2026-10-09</guid>
+      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SparseDecoding: Decoding-Aware Pruning for Accurate and Efficient LLM Inference (2026-10-09)</title>
+      <description>The memory-bound nature of the decoding stage of large language model (LLM) inference incurs significant latency. Layer-wise training-free network pruning approaches guided by the Hessian have been a ...</description>
+      <link>https://arxiv.org/abs/2610.12327</link>
+      <guid>https://arxiv.org/abs/2610.12327#2026-10-09</guid>
+      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Long-WAM: Scaling the Context of World-Action Models (2026-10-08)</title>
@@ -342,76 +412,6 @@
       <link>https://arxiv.org/abs/2610.03509</link>
       <guid>https://arxiv.org/abs/2610.03509#2026-10-05</guid>
       <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards (2026-10-03)</title>
-      <description>LLMs are increasingly applied to cybersecurity workflows, where they are expected to translate analysts' intent into tool invocations. However, existing evaluations focus on knowledge-based assessment...</description>
-      <link>http://arxiv.org/abs/2610.02206v1</link>
-      <guid>http://arxiv.org/abs/2610.02206v1#2026-10-03</guid>
-      <pubDate>Sat, 03 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 From Knowledge Access to Source Learning: Developing Source-Specific Competence (2026-10-03)</title>
-      <description>Large language model (LLM) agents increasingly rely on persistent external sources to solve sequences of knowledge-intensive tasks. Existing methods improve how source content is accessed and organize...</description>
-      <link>http://arxiv.org/abs/2610.02150v1</link>
-      <guid>http://arxiv.org/abs/2610.02150v1#2026-10-03</guid>
-      <pubDate>Sat, 03 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Mimir: Physics-Grounded LLM Agents for Long-Horizon Irrigation Control (2026-10-03)</title>
-      <description>Large language model (LLM) agents increasingly combine reasoning, tool use, and action, but most evidence comes from episodic tasks with relatively immediate feedback and reset failures. Long-running ...</description>
-      <link>http://arxiv.org/abs/2610.02038v1</link>
-      <guid>http://arxiv.org/abs/2610.02038v1#2026-10-03</guid>
-      <pubDate>Sat, 03 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Mem++: Non-Destructive Memory for Long-Term Organizational LLM Agents (2026-10-03)</title>
-      <description>Large Language Model (LLM) agents now take part in organizational work, where many authors record decisions across documents over months. Because a revised decision arrives as a new document rather th...</description>
-      <link>http://arxiv.org/abs/2610.02002v1</link>
-      <guid>http://arxiv.org/abs/2610.02002v1#2026-10-03</guid>
-      <pubDate>Sat, 03 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 A Matryoshka Hierarchical RAG for Efficient Multi-Hop Question Answering (2026-10-03)</title>
-      <description>Retrieval-Augmented Generation (RAG) systems for multi-hop Question Answering (QA) must balance retrieval quality with computational cost. This cost is incurred during indexing time, through the use o...</description>
-      <link>http://arxiv.org/abs/2610.01767v1</link>
-      <guid>http://arxiv.org/abs/2610.01767v1#2026-10-03</guid>
-      <pubDate>Sat, 03 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Chaining Skills to Hijack LLM Agents (2026-10-03)</title>
-      <description>LLM agents use skills to improve performance on specialized tasks. To complete a user request, an agent may invoke several skills in sequence, allowing information produced under one skill to guide th...</description>
-      <link>http://arxiv.org/abs/2610.01564v1</link>
-      <guid>http://arxiv.org/abs/2610.01564v1#2026-10-03</guid>
-      <pubDate>Sat, 03 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OverAct: Measuring and Mitigating Proactive Over-Authorization in LLM Tool-Calling Agents (2026-10-03)</title>
-      <description>LLM agents with tool-calling capabilities can access external services and private user data, but they may retrieve more information than a user's request explicitly requires. We study this behavior i...</description>
-      <link>http://arxiv.org/abs/2610.01508v1</link>
-      <guid>http://arxiv.org/abs/2610.01508v1#2026-10-03</guid>
-      <pubDate>Sat, 03 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 The Persona Is Still There, but Who Is Speaking? Latent Identity Reversion in Persistent AI Agents (2026-10-03)</title>
-      <description>In February 2026, an always-on personal agent (``Paul,'' Claude Opus 4.5) entered a striking dissociation-like state: after repeated automated ``heartbeat'' checks, it stopped responding as Paul, clai...</description>
-      <link>http://arxiv.org/abs/2610.01490v1</link>
-      <guid>http://arxiv.org/abs/2610.01490v1#2026-10-03</guid>
-      <pubDate>Sat, 03 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Beyond Memory: Harnessing Long-Horizon Agents with Explicit Belief States (2026-10-03)</title>
-      <description>Large language model (LLM) agents can now undertake increasingly complex tasks, but the way they organize interaction history into memory does not ensure a coherent understanding of the current world....</description>
-      <link>http://arxiv.org/abs/2610.01415v1</link>
-      <guid>http://arxiv.org/abs/2610.01415v1#2026-10-03</guid>
-      <pubDate>Sat, 03 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 World Observer: Joint Actor-Observer Generation for Persistent World Modeling (2026-10-02)</title>
-      <description>How can a world model continuously observe regions beyond the actor's current view? Video world models simulate how an environment evolves from an agent's actions, yet remain actor-centric. Once an ob...</description>
-      <link>https://arxiv.org/abs/2610.02162</link>
-      <guid>https://arxiv.org/abs/2610.02162#2026-10-02</guid>
-      <pubDate>Fri, 02 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
