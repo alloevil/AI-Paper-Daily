@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Fri, 09 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W41 (2026-09-29 ~ 2026-10-05)</title>
@@ -62,6 +62,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Caught in the Act: Probes Effectively Detect Sabotage and Catch Unverbalized Deception (2026-10-10)</title>
+      <description>Recent incidents have highlighted the challenge of monitoring LLM agents and the danger of models deceiving people. We show that white-box deception detection via probes can be scaled up to frontier m...</description>
+      <link>http://arxiv.org/abs/2610.12445v1</link>
+      <guid>http://arxiv.org/abs/2610.12445v1#2026-10-10</guid>
+      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Unlocking the Regulatory Genome by ARGUS: An Evidence-Constrained Agentic Framework for Interpreting Single Nucleotide Variants (2026-10-10)</title>
+      <description>Over 90% of disease-associated variants from genome-wide association studies fall in noncoding regulatory regions, yet their functional interpretation remains a central open problem in genomic medicin...</description>
+      <link>http://arxiv.org/abs/2610.12281v1</link>
+      <guid>http://arxiv.org/abs/2610.12281v1#2026-10-10</guid>
+      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Mental-Models for Multi-Agent Systems (2026-10-10)</title>
+      <description>Large foundation models have accelerated progress toward general-purpose agents that interact with humans and other agents through language and multimodal signals. However, robust multi-agent decision...</description>
+      <link>http://arxiv.org/abs/2610.12453v1</link>
+      <guid>http://arxiv.org/abs/2610.12453v1#2026-10-10</guid>
+      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 OnTrack: Real-Time Monitoring and Intervention in LLM Agent Trajectories via Streaming Structure-Aware Optimal Transport (2026-10-10)</title>
+      <description>Agents are deployed in applications from trip planners and stock trading to IT incident triage. In most cases, LLM agents work autonomously with minimal rule-based safeguarding, leading to cost and sa...</description>
+      <link>http://arxiv.org/abs/2610.12375v1</link>
+      <guid>http://arxiv.org/abs/2610.12375v1#2026-10-10</guid>
+      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Accurate but Not Humble: Evaluating Epistemic Humility in LLM Agents under Knowledge Conflict (2026-10-10)</title>
+      <description>When retrieved evidence contradicts an agent's prior beliefs, does it revise its answer, acknowledge uncertainty, or persist with an incorrect conclusion? Existing evaluations of agentic systems focus...</description>
+      <link>http://arxiv.org/abs/2610.12360v1</link>
+      <guid>http://arxiv.org/abs/2610.12360v1#2026-10-10</guid>
+      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 A Closer Look at Agentic BBO: Benchmarking LLM Agents for Black-Box Optimization (2026-10-10)</title>
+      <description>Black-box optimization (BBO) arises in many scientific and engineering problems where objective evaluations are expensive and limited. Recent large language model (LLM) agents offer a new way to appro...</description>
+      <link>http://arxiv.org/abs/2610.12183v1</link>
+      <guid>http://arxiv.org/abs/2610.12183v1#2026-10-10</guid>
+      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Use and Disuse: Intent-Structured Experience Consolidation for Memory and Learning in LLM Agents (2026-10-10)</title>
+      <description>The evolution of Large Language Model agents from single-task execution to long-term autonomous operation highlights the critical challenge of transforming continuous experiences into reusable knowled...</description>
+      <link>http://arxiv.org/abs/2610.12124v1</link>
+      <guid>http://arxiv.org/abs/2610.12124v1#2026-10-10</guid>
+      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ILM: An AI-Powered Storytelling Educational Tool (2026-10-10)</title>
+      <description>Digital technologies have made Islamic narratives more accessible, but existing platforms provide limited support for structured learning and comprehension of these stories, particularly in Arabic and...</description>
+      <link>http://arxiv.org/abs/2610.12064v1</link>
+      <guid>http://arxiv.org/abs/2610.12064v1#2026-10-10</guid>
+      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Memento 3: Model-Based Recursive Self-Improvement through Reflective Rulebooks (2026-10-10)</title>
+      <description>Learning to act in unfamiliar environments requires agents to infer how the world works and revise that understanding as new evidence arrives. Yet limited observations can support multiple world model...</description>
+      <link>http://arxiv.org/abs/2610.11794v1</link>
+      <guid>http://arxiv.org/abs/2610.11794v1#2026-10-10</guid>
+      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Narrow and Deep: An Ontology Tower as the Knowledge of an LLM Agent for an Industrial Equipment System (2026-10-10)</title>
+      <description>Large language model (LLM) agents are beginning to operate industrial energy equipment, and what they get right depends on what they are told about the plant. Established building ontologies name many...</description>
+      <link>http://arxiv.org/abs/2610.11768v1</link>
+      <guid>http://arxiv.org/abs/2610.11768v1#2026-10-10</guid>
+      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Learn2Play Bench: How Well Do LLM Agents Learn from Experience in Unfamiliar Environments? (2026-10-09)</title>
@@ -342,76 +412,6 @@
       <link>https://arxiv.org/abs/2610.05870</link>
       <guid>https://arxiv.org/abs/2610.05870#2026-10-06</guid>
       <pubDate>Tue, 06 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Scaling Trajectories for Complex Tasks through Recursive Self-Rewrite (2026-10-05)</title>
-      <description>Successful trajectories on difficult tasks provide valuable supervision for model improvement, but specialized harnesses introduce interventions that may be unavailable during deployment. We propose R...</description>
-      <link>https://arxiv.org/abs/2610.02826</link>
-      <guid>https://arxiv.org/abs/2610.02826#2026-10-05</guid>
-      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Native Action-Prior Learning from Videos for World Action Models (2026-10-05)</title>
-      <description>World action models integrate future visual dynamics with robot action prediction, but their scalability remains limited by the need for action-annotated robot trajectories. Observation-only videos co...</description>
-      <link>https://arxiv.org/abs/2610.03391</link>
-      <guid>https://arxiv.org/abs/2610.03391#2026-10-05</guid>
-      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Pivot-SD: Efficient Self-Distillation for Masked Diffusion Language Models (2026-10-05)</title>
-      <description>Masked diffusion language models (dLMs) offer a promising parallel alternative to autoregressive models for complex reasoning. However, they face a distinct credit-assignment challenge, since a few co...</description>
-      <link>https://arxiv.org/abs/2610.03665</link>
-      <guid>https://arxiv.org/abs/2610.03665#2026-10-05</guid>
-      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 HyperBrowseComp: A Multilingual and Multimodal Stress Test for Web-Browsing Agents (2026-10-05)</title>
-      <description>We introduce HyperBrowseComp, a multilingual and multimodal browsing benchmark comprising 423 manually authored and human-validated questions across 13 languages, written by native or highly proficien...</description>
-      <link>https://arxiv.org/abs/2610.03574</link>
-      <guid>https://arxiv.org/abs/2610.03574#2026-10-05</guid>
-      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 World Embedding Benchmark (2026-10-05)</title>
-      <description>Physical fidelity has received increasing attention in world models and video generation, yet how video representations encode physical information remains less understood. We introduce the World Embe...</description>
-      <link>https://arxiv.org/abs/2610.03632</link>
-      <guid>https://arxiv.org/abs/2610.03632#2026-10-05</guid>
-      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Passing the Test You Trained On: Re-evaluating Prompt-Injection Detectors for LLM Agents (2026-10-05)</title>
-      <description>LLM agents increasingly screen tool outputs with small prompt-injection detectors, and teams choose among detectors by their scores on public benchmarks. We ask whether those scores predict how a dete...</description>
-      <link>http://arxiv.org/abs/2610.03448v1</link>
-      <guid>http://arxiv.org/abs/2610.03448v1#2026-10-05</guid>
-      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Benchmarking Literature Retrieval for a Model Organism: A Dictyostelium Case Study (2026-10-05)</title>
-      <description>Biological literature retrieval systems are often developed and evaluated using broad biomedical corpora and general-purpose search tasks. However, many curated knowledge bases operate in narrower mod...</description>
-      <link>http://arxiv.org/abs/2610.03130v1</link>
-      <guid>http://arxiv.org/abs/2610.03130v1#2026-10-05</guid>
-      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ProAR: Learning Prospective Reasoning with Autoregressive Video Models (2026-10-05)</title>
-      <description>Autoregressive (AR) video models excel at causal generation, but their reliance on next-chunk prediction confines them to a short-sighted, reactive paradigm. This limitation is particularly consequent...</description>
-      <link>https://arxiv.org/abs/2610.03664</link>
-      <guid>https://arxiv.org/abs/2610.03664#2026-10-05</guid>
-      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MetaRubric: Learning to Reward for Rubric-Based Reinforcement Learning (2026-10-05)</title>
-      <description>Rubric-based reinforcement learning extends reward-driven optimization to open-ended tasks by assigning partial credit to individual response requirements. However, rubric judges can assign a high cri...</description>
-      <link>https://arxiv.org/abs/2610.02824</link>
-      <guid>https://arxiv.org/abs/2610.02824#2026-10-05</guid>
-      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Efficient Reasoning Training Does Not Always Harm CoT Faithfulness and Monitorability (2026-10-05)</title>
-      <description>Chain-of-thought (CoT) reasoning allows humans to inspect how large language models reach their answers, and oversee model behaviour. This reasoning comes at an increased inference cost, motivating ef...</description>
-      <link>https://arxiv.org/abs/2610.03509</link>
-      <guid>https://arxiv.org/abs/2610.03509#2026-10-05</guid>
-      <pubDate>Mon, 05 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
