@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Sat, 10 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W41 (2026-09-29 ~ 2026-10-05)</title>
@@ -62,6 +62,20 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MemTrial: Learning When to Trust Memory in LLM Portfolio Agents (2026-10-11)</title>
+      <description>Large language model (LLM) agents for portfolio management learn from experience: they credit each experience in their memory with the outcome of the decisions that used it. In financial markets, howe...</description>
+      <link>http://arxiv.org/abs/2610.11732v1</link>
+      <guid>http://arxiv.org/abs/2610.11732v1#2026-10-11</guid>
+      <pubDate>Sun, 11 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TRACE: Diagnosing Verifier Brittleness in Agentic Evaluation (2026-10-11)</title>
+      <description>Verifier scores now serve as both benchmark metrics and training rewards for large language model (LLM) agents, and a change in score is routinely read as a change in capability. It may instead reflec...</description>
+      <link>http://arxiv.org/abs/2610.11678v1</link>
+      <guid>http://arxiv.org/abs/2610.11678v1#2026-10-11</guid>
+      <pubDate>Sun, 11 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Caught in the Act: Probes Effectively Detect Sabotage and Catch Unverbalized Deception (2026-10-10)</title>
@@ -397,20 +411,6 @@
       <description>World Action Models (WAMs) incorporate visual representations from video generation backbones to guide action prediction. Recent efficient WAMs adopt Mixture-of-Transformers (MoT) architectures and co...</description>
       <link>https://arxiv.org/abs/2610.06617</link>
       <guid>https://arxiv.org/abs/2610.06617#2026-10-06</guid>
-      <pubDate>Tue, 06 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Towards Looped Models Done Right, Part II: Rethinking at Fixed Points (2026-10-06)</title>
-      <description>Every recurrence of a looped language model adds cost in training, decoding, prefill, and reinforcement learning (RL). The closer recurrent states get to fixed points, the less the path to them matter...</description>
-      <link>https://arxiv.org/abs/2610.06833</link>
-      <guid>https://arxiv.org/abs/2610.06833#2026-10-06</guid>
-      <pubDate>Tue, 06 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Certification of Real Images through Calibrated Content Authentication (2026-10-06)</title>
-      <description>Generative models can synthesize high-quality inauthentic multimedia content that is already being misused at scale. We evaluate twenty deepfake detectors against ten generators released in the last f...</description>
-      <link>https://arxiv.org/abs/2610.05870</link>
-      <guid>https://arxiv.org/abs/2610.05870#2026-10-06</guid>
       <pubDate>Tue, 06 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
