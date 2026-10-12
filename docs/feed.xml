@@ -8,6 +8,13 @@
     <lastBuildDate>Mon, 12 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>📊 Weekly roundup 2026-W42 (2026-10-06 ~ 2026-10-12)</title>
+      <description>Top 15 of the last 7 days by heat: S-Space: Exploring Spatial Workspace in Multimodal Language Models; Rethinking Cross-Tokenizer On-Policy Distillation: From Alignment Coverage to Supervision Reliability; Learn2Play Bench: How Well Do LLM Agents Learn from Experience in Unfamiliar Environments?; TokenRouter: Efficient Serving System for Token-Level LLM Routing; Long-WAM: Scaling the Context of World-Action Models…</description>
+      <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W42.html</link>
+      <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W42.html</guid>
+      <pubDate>Mon, 12 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>📊 Weekly roundup 2026-W41 (2026-09-29 ~ 2026-10-05)</title>
       <description>Top 15 of the last 7 days by heat: UniEvo-VL: An On-policy Self-Distillation Training Recipe for Multimodal Model Self-improvement; False Frontiers: Diagnosing and Mitigating Co-Cheating in Self-Evolving Search Agents; Beyond Teacher Assignment: Domain-Normalized Multi-Teacher On-Policy Distillation; EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery; Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents…</description>
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W41.html</link>
