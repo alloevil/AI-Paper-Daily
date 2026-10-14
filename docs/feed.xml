@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Mon, 12 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W42 (2026-10-06 ~ 2026-10-12)</title>
@@ -69,6 +69,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Urbex: Agentic Spatial Grounding for City-Scale 3D Scenes (2026-10-14)</title>
+      <description>City-scale 3D grounding is commonly formulated as candidate ranking, which requires precomputed instance proposals and becomes inefficient in large outdoor scenes. We propose Urbex, an agentic vision-...</description>
+      <link>https://arxiv.org/abs/2610.18356</link>
+      <guid>https://arxiv.org/abs/2610.18356#2026-10-14</guid>
+      <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Jeva: System One Models from First Principles (2026-10-14)</title>
+      <description>System one models enable direct, low-latency decision-making. Yet recent practice of predicting an answer from serialized text does not, by itself, respect the structure of a decision problem. We argu...</description>
+      <link>https://arxiv.org/abs/2610.18773</link>
+      <guid>https://arxiv.org/abs/2610.18773#2026-10-14</guid>
+      <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 VideoJev: System One Model for Video Understanding and Interaction (2026-10-14)</title>
+      <description>Visual agents must turn video observations into timely decisions to track progress and choose what to do next. Building on the emerging System One paradigm, we introduce VideoJev, a family of models t...</description>
+      <link>https://arxiv.org/abs/2610.18615</link>
+      <guid>https://arxiv.org/abs/2610.18615#2026-10-14</guid>
+      <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Agent-Reflex: Teaching Language Agents to Act Reflectively (2026-10-14)</title>
+      <description>Large language models have evolved from single-turn chatbots into interactive agents capable of long-horizon reasoning. In real deployments, MCP tool services can return noisy feedback and users may i...</description>
+      <link>https://arxiv.org/abs/2610.17953</link>
+      <guid>https://arxiv.org/abs/2610.17953#2026-10-14</guid>
+      <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AesCode: Aesthetic Code Generation with Decoupled Cross-Modal Rewards (2026-10-14)</title>
+      <description>Generating information-rich visual artifacts such as slides, posters, and dashboards as code is appealing because the outputs are structured, editable, and verifiable. Yet code models cannot see how t...</description>
+      <link>https://arxiv.org/abs/2610.18860</link>
+      <guid>https://arxiv.org/abs/2610.18860#2026-10-14</guid>
+      <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Learning How to Remember: Memory Modality Selection for GUI Agents (2026-10-14)</title>
+      <description>Recent advances in vision-language models (VLMs) have substantially improved the capabilities of GUI agents, while memory augmentation has emerged as a promising approach for reusing knowledge from pa...</description>
+      <link>https://arxiv.org/abs/2610.17928</link>
+      <guid>https://arxiv.org/abs/2610.17928#2026-10-14</guid>
+      <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 DeltaTTG: Training Multi-Turn Agents with a Token-to-Go Progress Meter (2026-10-14)</title>
+      <description>Reinforcement learning with verifiable rewards (RLVR) for multi-turn agents relies on sparse terminal rewards that say little about individual steps. Within-group step comparisons depend on reliable s...</description>
+      <link>https://arxiv.org/abs/2610.17666</link>
+      <guid>https://arxiv.org/abs/2610.17666#2026-10-14</guid>
+      <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Open-o3-Video-v2: Seek, Ground, and Reason with Verifiable Spatio-Temporal Evidence (2026-10-14)</title>
+      <description>Reliable video reasoning requires models to produce correct answers and expose supporting visual evidence. Open-o3-Video enables verifiable reasoning by embedding timestamps and object-level bounding ...</description>
+      <link>https://arxiv.org/abs/2610.17656</link>
+      <guid>https://arxiv.org/abs/2610.17656#2026-10-14</guid>
+      <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EgoExplorer: A Vision-Motion-Touch Observatory for Human Loco-Manipulation In Situ (2026-10-14)</title>
+      <description>Learning humanoid loco-manipulation from human demonstrations rests on observing how locomotion, posture, and object interaction evolve together as tasks unfold. Scaling collection across diverse envi...</description>
+      <link>https://arxiv.org/abs/2610.18872</link>
+      <guid>https://arxiv.org/abs/2610.18872#2026-10-14</guid>
+      <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Cepheid: Decoupling Scale from Structure for Cross-Family Motion Completion (2026-10-14)</title>
+      <description>Sparse-to-dense motion completion recovers dense mesh motion from sparse vertex displacements. Residual priors trained on one geometry family frequently fail to beat parameter-free harmonic extension ...</description>
+      <link>https://arxiv.org/abs/2610.18871</link>
+      <guid>https://arxiv.org/abs/2610.18871#2026-10-14</guid>
+      <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 S-Space: Exploring Spatial Workspace in Multimodal Language Models (2026-10-12)</title>
@@ -349,76 +419,6 @@
       <link>https://arxiv.org/abs/2610.09823</link>
       <guid>https://arxiv.org/abs/2610.09823#2026-10-08</guid>
       <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AdSpark: A Large-Scale Dataset and Benchmark for Product-Centric Advertisement Video Generation (2026-10-08)</title>
-      <description>Product-centric advertisement video generation aims to create promotional videos that preserve fine-grained product identity while presenting selling points through coherent multi-shot narratives. How...</description>
-      <link>https://arxiv.org/abs/2610.10047</link>
-      <guid>https://arxiv.org/abs/2610.10047#2026-10-08</guid>
-      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Inverting Multi-Vector Visual Document Indices (2026-10-08)</title>
-      <description>Prevailing multi-vector visual document retrievers store each page as about a thousand patch vectors, often in vector databases run by a third party. Since no one can read a page from its vectors, thi...</description>
-      <link>https://arxiv.org/abs/2610.09920</link>
-      <guid>https://arxiv.org/abs/2610.09920#2026-10-08</guid>
-      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Rethinking Cross-Tokenizer On-Policy Distillation: From Alignment Coverage to Supervision Reliability (2026-10-07)</title>
-      <description>On-Policy Distillation (OPD) trains a student on its own generations using teacher feedback. With different tokenizers, comparing teacher and student predictions requires alignment at both sequence an...</description>
-      <link>https://arxiv.org/abs/2610.08448</link>
-      <guid>https://arxiv.org/abs/2610.08448#2026-10-07</guid>
-      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 TRACE: Rollout-Guided Quantization-Aware Training for FP4 Reinforcement Learning of MoE Language Models (2026-10-07)</title>
-      <description>Reinforcement learning (RL) for post-training large language models (LLMs) incurs substantial computation and memory overhead during rollout generation, which motivates low-precision rollout for effic...</description>
-      <link>https://arxiv.org/abs/2610.07767</link>
-      <guid>https://arxiv.org/abs/2610.07767#2026-10-07</guid>
-      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 From Evidence to Action: How Tool-Using Agents Fail (2026-10-07)</title>
-      <description>Tool-using agents make consequential changes to external state, yet correct outcomes do not guarantee that their actions were supported by evidence established beforehand. We study where this evidence...</description>
-      <link>https://arxiv.org/abs/2610.07753</link>
-      <guid>https://arxiv.org/abs/2610.07753#2026-10-07</guid>
-      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 UNREAL: Unifying Retrieval and Long-Context with a Single Model (2026-10-07)</title>
-      <description>Long-context inference and Retrieval-Augmented Generation (RAG) handle evidence selection at vastly different scales, from a single long prompt to an entire corpus. We ask whether a single model-inter...</description>
-      <link>https://arxiv.org/abs/2610.08463</link>
-      <guid>https://arxiv.org/abs/2610.08463#2026-10-07</guid>
-      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Agentic AutoRAG: RAG Pipeline Optimization through Reasoning-Driven Agents (2026-10-07)</title>
-      <description>Retrieval-augmented generation (RAG) is a widely used approach for grounding large language models (LLMs) in external knowledge. However, configuring a pipeline is an expensive hyperparameter optimiza...</description>
-      <link>http://arxiv.org/abs/2610.08452v1</link>
-      <guid>http://arxiv.org/abs/2610.08452v1#2026-10-07</guid>
-      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DAEDALUS: Bootstrapping Agent Memory from Self-Generated Tasks (2026-10-07)</title>
-      <description>LLM agents often lack the operational knowledge to act reliably in new environments, as they must discover specific tool behaviors or environment conventions on their own. Without memory of past attem...</description>
-      <link>http://arxiv.org/abs/2610.08048v1</link>
-      <guid>http://arxiv.org/abs/2610.08048v1#2026-10-07</guid>
-      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Towards a Unified Misuse Monitoring Benchmark (2026-10-07)</title>
-      <description>LLM agents increasingly act in multi-actor environments, exposing them to misuse from multiple sources: decomposition attacks, where a harmful request is split into innocuous sub-requests, and prompt ...</description>
-      <link>http://arxiv.org/abs/2610.07089v1</link>
-      <guid>http://arxiv.org/abs/2610.07089v1#2026-10-07</guid>
-      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EmbodiedSmith: Scaling Embodied Data through Recursive Self-Improvement Flywheel in Simulation (2026-10-07)</title>
-      <description>Scaling robotic foundation models requires diverse training data and reliable evaluation environments. Simulation offers a scalable solution, yet existing generation pipelines remain constrained by pr...</description>
-      <link>https://arxiv.org/abs/2610.07969</link>
-      <guid>https://arxiv.org/abs/2610.07969#2026-10-07</guid>
-      <pubDate>Wed, 07 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
