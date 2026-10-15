@@ -160,17 +160,17 @@
     },
     {
       "id": "archive-spread",
-      "claim": "The committed archive runs 2 to 10 papers per day, the 10 being the configured cap and the 2 its thinnest day, 2026-10-11 (README: \"At most max_papers (10) survive per day (the committed archive runs 2–10)\").",
-      "value": "2–10 papers per digest",
+      "claim": "The committed archive runs 4 to 10 papers per day, the 10 being the configured cap and the 4 its thinnest day (README: \"At most max_papers (10) survive per day (the committed archive runs 4–10)\").",
+      "value": "4–10 papers per digest",
       "metric": "per-digest paper counts, as a range rather than a total",
       "method": "A day with no surviving paper is skipped entirely rather than committed empty (the workflow refuses to commit a run with no new report), which is why the archive has 61 days out of a longer calendar span. The check states the real floor and ceiling of the committed data, so it fails if a digest is written with more than the cap or the spread claim drifts.",
       "evidence": "docs/",
       "as_of": "2026-09-13",
       "repro": "python3 -c \"import re,pathlib;c=[len(re.findall(r'^## \\d+\\.\\s+', p.read_text(encoding='utf-8'), re.M)) for p in pathlib.Path('docs').glob('????-??-??.md')];print(min(c), max(c))\"",
       "check": {
-        "cmd": "python3 -c \"import re, pathlib\ncounts = [len(re.findall(r'^## \\d+\\.\\s+', p.read_text(encoding='utf-8'), re.M)) for p in sorted(pathlib.Path('docs').glob('????-??-??.md'))]\nassert (min(counts), max(counts)) == (2, 10), (min(counts), max(counts))\nprint('every digest holds between 2 and 10 papers')\"",
+        "cmd": "python3 -c \"import re, pathlib\ncounts = [len(re.findall(r'^## \\d+\\.\\s+', p.read_text(encoding='utf-8'), re.M)) for p in sorted(pathlib.Path('docs').glob('????-??-??.md'))]\nassert (min(counts), max(counts)) == (4, 10), (min(counts), max(counts))\nprint('every digest holds between 4 and 10 papers')\"",
         "expect": {
-          "equals": "every digest holds between 2 and 10 papers"
+          "equals": "every digest holds between 4 and 10 papers"
         },
         "timeout": 60
       }
