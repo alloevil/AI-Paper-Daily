@@ -20,6 +20,11 @@ categories:
 # 每日推送数量上限
 max_papers: 10
 
+# 每期最少篇数：新候选不足时逐步放宽抓取窗口（最长 max_fetch_days 天），
+# 仍不足则当天不发日报
+min_papers: 4
+max_fetch_days: 14
+
 # 推送时间：修改 .github/workflows/daily.yml 中的 cron 表达式
 
 # 摘要语言

@@ -312,6 +312,7 @@ def _jsonld(payload: dict) -> str:
 _TAG_MAP = (
     ("高票", "high-votes", "High votes"),
     ("有代码", "code", "Code"),
+    ("补足", "top-up", "Top-up"),
     ("最新论文", "newest", "Newest"),
     ("最新", "newest", "Newest"),
 )

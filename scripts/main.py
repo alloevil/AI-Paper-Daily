@@ -56,6 +56,60 @@ def get_recent_pushed_ids(days: int = 7) -> set:
     return pushed
 
 
+def fetch_windows(base_days: int, max_days: int) -> list:
+    """候选不足时依次尝试的抓取窗口(天):基础窗口,+3 天,7 天,max_days,去重升序。"""
+    wins = [base_days, base_days + 3, 7, max_days]
+    out = []
+    for d in wins:
+        d = min(d, max_days)
+        if d >= base_days and d not in out:
+            out.append(d)
+    return sorted(out)
+
+
+def collect_candidates(keywords, categories, sources_config, days, recent_pushed) -> list:
+    """抓取 days 天内的论文,多源去重(归一化 ID)并排除近 7 天已推送的。"""
+    all_papers = []
+    if sources_config.get("arxiv", True):
+        try:
+            all_papers.extend(fetch_arxiv(keywords, categories, max_results=100, days=days))
+        except Exception as e:
+            print(f"[arXiv] Failed: {e}")
+    if sources_config.get("huggingface", True):
+        try:
+            all_papers.extend(fetch_huggingface(days=days))
+        except Exception as e:
+            print(f"[HuggingFace] Failed: {e}")
+
+    seen = set()
+    unique = []
+    for p in all_papers:
+        nid = norm_id(p["id"])
+        if not nid or nid in seen:
+            continue
+        seen.add(nid)
+        if nid in recent_pushed:
+            continue
+        unique.append(p)
+    print(f"Total unique papers: {len(unique)} (excluded {len(seen) - len(unique)} already pushed)")
+    return unique
+
+
+def top_up(selected: list, candidates: list, min_papers: int) -> list:
+    """selected 少于 min_papers 时,按热度从未选中的候选里补足(不超过 min_papers)。"""
+    if len(selected) >= min_papers:
+        return selected
+    chosen = {norm_id(p["id"]) for p in selected}
+    rest = [p for p in candidates if norm_id(p["id"]) not in chosen]
+    rest.sort(key=lambda x: x.get("votes", 0) + x.get("stars", 0) + (10 if x.get("has_code") else 0),
+              reverse=True)
+    out = list(selected)
+    for p in rest[: min_papers - len(selected)]:
+        p.setdefault("reason", "补足")
+        out.append(p)
+    return out
+
+
 def main():
     config = load_config()
 
@@ -74,55 +128,34 @@ def main():
     sources_config = config.get("sources", {})
     notify_config = config.get("notify", {})
 
-    # 1. 多源采集
-    # arXiv 周末不发布新论文,周日/周一按需放宽时间窗口,避免空日报
+    min_papers = config.get("min_papers", 4)
+    max_fetch_days = config.get("max_fetch_days", 14)
+
+    # 1+2. 多源采集 + 去重。
+    # arXiv 周末不发布新论文,周日/周一默认窗口更宽;候选不足 min_papers 时逐步放宽窗口
+    # (近 7 天已推送的仍被排除,所以放宽只会补入最近未收录的论文)。
     now_cn = datetime.now(CN_TZ)
-    days = {0: 4, 6: 3}.get(now_cn.weekday(), 2)  # 周一=4天, 周日=3天, 其余=2天
-    print(f"Fetch window: {days} days")
-
-    all_papers = []
-
-    if sources_config.get("arxiv", True):
-        try:
-            arxiv_papers = fetch_arxiv(keywords, categories, max_results=100, days=days)
-            all_papers.extend(arxiv_papers)
-        except Exception as e:
-            print(f"[arXiv] Failed: {e}")
-
-    if sources_config.get("huggingface", True):
-        try:
-            hf_papers = fetch_huggingface(days=days)
-            all_papers.extend(hf_papers)
-        except Exception as e:
-            print(f"[HuggingFace] Failed: {e}")
-
-    if not all_papers:
-        print("No papers found, exiting")
-        return
-
-    # 2. 去重：当天多源去重（归一化 ID，arXiv 带 v1 后缀而 HF 不带）+ 排除近 7 天已推送
+    base_days = {0: 4, 6: 3}.get(now_cn.weekday(), 2)  # 周一=4天, 周日=3天, 其余=2天
     recent_pushed = get_recent_pushed_ids(days=7)
-    seen = set()
     unique_papers = []
-    for p in all_papers:
-        nid = norm_id(p["id"])
-        if not nid or nid in seen:
-            continue
-        seen.add(nid)
-        if nid in recent_pushed:
-            continue
-        unique_papers.append(p)
-    print(f"Total unique papers: {len(unique_papers)} "
-          f"(excluded {len(seen) - len(unique_papers)} already pushed)")
+    for days in fetch_windows(base_days, max_fetch_days):
+        print(f"Fetch window: {days} days")
+        unique_papers = collect_candidates(keywords, categories, sources_config, days, recent_pushed)
+        if len(unique_papers) >= min_papers:
+            break
+        print(f"Only {len(unique_papers)} new candidates (< {min_papers}), widening window")
 
-    if not unique_papers:
-        print("All papers already pushed, exiting")
+    if len(unique_papers) < min_papers:
+        # 宁缺毋滥:不发不足 min_papers 篇的日报(与"空日报不提交"同理)
+        print(f"Only {len(unique_papers)} new candidates within {max_fetch_days} days "
+              f"(< min_papers {min_papers}); skipping today's digest")
         return
 
-    # 3. AI 筛选
+    # 3. AI 筛选;LLM 选得少于 min_papers 时按热度从剩余候选补足
     selected, filter_mode = filter_papers(unique_papers, keywords, max_papers, language)
-    if not selected:
-        print("No papers selected after filtering")
+    selected = top_up(selected, unique_papers, min_papers)
+    if len(selected) < min_papers:
+        print("Not enough papers selected after filtering; skipping today's digest")
         return
 
     # 4. 推送(推送去重靠已提交的日报 md,见 get_recent_pushed_ids;
