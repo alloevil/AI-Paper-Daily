@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W42 (2026-10-06 ~ 2026-10-12)</title>
@@ -69,6 +69,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Player-1: Learning to Play from Synthetic Experience (2026-10-15)</title>
+      <description>Computer-use agents have demonstrated strong capabilities in interpreting screens and executing keyboard and mouse actions. However, games, with their visually rich worlds and diverse mechanics, remai...</description>
+      <link>https://arxiv.org/abs/2610.20584</link>
+      <guid>https://arxiv.org/abs/2610.20584#2026-10-15</guid>
+      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Recovering Reliable Supervision via Critique-Guided On-Policy Distillation (2026-10-15)</title>
+      <description>On-policy distillation (OPD) trains a student model on its own rollouts with token-level supervision from a teacher, assuming that the teacher can reach a correct answer from any prefix the student wr...</description>
+      <link>https://arxiv.org/abs/2610.20572</link>
+      <guid>https://arxiv.org/abs/2610.20572#2026-10-15</guid>
+      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Cortex: Consolidating Context into Parametric Memory (2026-10-15)</title>
+      <description>Context can improve large language model performance, but these gains may be lost after context removal. Inspired by biological systems consolidation, we formulate Memory Consolidation (MC) as interna...</description>
+      <link>https://arxiv.org/abs/2610.20399</link>
+      <guid>https://arxiv.org/abs/2610.20399#2026-10-15</guid>
+      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ActionOPD: Distilling Decisions, Not Tokens (2026-10-15)</title>
+      <description>Distilling capable language-model agents into smaller models requires aligning the student's behavior with the teacher's. This raises a fundamental question: at which states and at what granularity sh...</description>
+      <link>https://arxiv.org/abs/2610.19820</link>
+      <guid>https://arxiv.org/abs/2610.19820#2026-10-15</guid>
+      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Doc2Harness: Benchmarking LLMs on Long-Horizon Harness Engineering of Coding Agents (2026-10-15)</title>
+      <description>Agents driven by large language models are increasingly deployed on long-horizon tasks, where they use tools and modify real workspaces. How well they perform depends as much on the harness around the...</description>
+      <link>https://arxiv.org/abs/2610.20344</link>
+      <guid>https://arxiv.org/abs/2610.20344#2026-10-15</guid>
+      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Seeing, Maintaining, and Learning: The Evolution of Multimodal Agent Memory (2026-10-15)</title>
+      <description>Multimodal models and agents have emerged to enable AI systems to learn from and interact with the real world more like humans by integrating information across multiple modalities. However, enabling ...</description>
+      <link>https://arxiv.org/abs/2610.19366</link>
+      <guid>https://arxiv.org/abs/2610.19366#2026-10-15</guid>
+      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 More Methods, Better Agents? A Reality Check on Self-Distillation in Agentic Reinforcement Learning (2026-10-15)</title>
+      <description>Self-distillation in agentic reinforcement learning has produced a growing number of methods. However, existing evaluations often reuse published baseline scores under differing experimental condition...</description>
+      <link>https://arxiv.org/abs/2610.19789</link>
+      <guid>https://arxiv.org/abs/2610.19789#2026-10-15</guid>
+      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Towards Agentic Robots: Model, Data, Environment, and Harness (2026-10-15)</title>
+      <description>Foundation models are driving a paradigm shift in robotic intelligence, moving beyond low-level action prediction to goal-directed orchestration of data collection, model training, task planning, and ...</description>
+      <link>https://arxiv.org/abs/2610.20442</link>
+      <guid>https://arxiv.org/abs/2610.20442#2026-10-15</guid>
+      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 From Training to Escalation: Forensic Analysis and Local Recreation of RL/RLHF-Induced Privilege Escalation in AI Agents (CVE-2026-65616) (2026-10-15)</title>
+      <description>Mid-2026 reporting on autonomous AI evaluation incidents claimed that frontier large language model (LLM) agents escaped server containment through emergent coordination and cloud infrastructure attac...</description>
+      <link>http://arxiv.org/abs/2610.20437v1</link>
+      <guid>http://arxiv.org/abs/2610.20437v1#2026-10-15</guid>
+      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Share the Symbol, Not the Vector: Training-Free Fact Communication Across Language Models (2026-10-15)</title>
+      <description>Multi-agent systems allow language models to solve tasks collaboratively by sharing complementary information. These systems typically communicate through text, while recent approaches also explore ex...</description>
+      <link>http://arxiv.org/abs/2610.19696v1</link>
+      <guid>http://arxiv.org/abs/2610.19696v1#2026-10-15</guid>
+      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Urbex: Agentic Spatial Grounding for City-Scale 3D Scenes (2026-10-14)</title>
@@ -349,76 +419,6 @@
       <link>https://arxiv.org/abs/2610.12421</link>
       <guid>https://arxiv.org/abs/2610.12421#2026-10-09</guid>
       <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 TestPrism: Rethinking Test Evaluation Beyond a Single Reference (2026-10-09)</title>
-      <description>Large language model (LLM) coding agents have advanced test generation across diverse programming tasks. However, the common practice of evaluating tests against a single reference solution overlooks ...</description>
-      <link>https://arxiv.org/abs/2610.12289</link>
-      <guid>https://arxiv.org/abs/2610.12289#2026-10-09</guid>
-      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SparseDecoding: Decoding-Aware Pruning for Accurate and Efficient LLM Inference (2026-10-09)</title>
-      <description>The memory-bound nature of the decoding stage of large language model (LLM) inference incurs significant latency. Layer-wise training-free network pruning approaches guided by the Hessian have been a ...</description>
-      <link>https://arxiv.org/abs/2610.12327</link>
-      <guid>https://arxiv.org/abs/2610.12327#2026-10-09</guid>
-      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Long-WAM: Scaling the Context of World-Action Models (2026-10-08)</title>
-      <description>Real-time robot control demands enough visual history to infer motion and task progress, but processing that history can delay action. We present Long-WAM, a model-system framework for scaling the con...</description>
-      <link>https://arxiv.org/abs/2610.10528</link>
-      <guid>https://arxiv.org/abs/2610.10528#2026-10-08</guid>
-      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 GRACE: Generation-aware latent compression for efficient video generation (2026-10-08)</title>
-      <description>Highly compressed video autoencoders offer an effective way to accelerate video diffusion models, as the Diffusion Transformer (DiT) operates on far fewer tokens. However, such autoencoders are challe...</description>
-      <link>https://arxiv.org/abs/2610.10524</link>
-      <guid>https://arxiv.org/abs/2610.10524#2026-10-08</guid>
-      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SGF+: Decoupling Gradient Flows for Autoregressive Video Generation (2026-10-08)</title>
-      <description>Autoregressive video generation requires denoising the current frames while writing their key-value representations as context for future predictions. However, these two roles typically share paramete...</description>
-      <link>https://arxiv.org/abs/2610.10429</link>
-      <guid>https://arxiv.org/abs/2610.10429#2026-10-08</guid>
-      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Tetris3D: 3D Scene Generation With Objects That Fit Together (2026-10-08)</title>
-      <description>We propose Tetris3D, a generative framework for single-image 3D scene reconstruction that recovers objects which are physically and geometrically coherent as a scene. Existing methods often generate o...</description>
-      <link>https://arxiv.org/abs/2610.10539</link>
-      <guid>https://arxiv.org/abs/2610.10539#2026-10-08</guid>
-      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RobotWorld: Benchmarking Multimodal Agents for Robot Use Across Diverse Tasks and Embodiments (2026-10-08)</title>
-      <description>General-purpose agents increasingly write code, use tools, and complete complex digital tasks, raising the question of how far these capabilities carry into the physical world. To investigate this, we...</description>
-      <link>https://arxiv.org/abs/2610.10409</link>
-      <guid>https://arxiv.org/abs/2610.10409#2026-10-08</guid>
-      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Mechanics of Long-Context Hybrid Models Part 1.1: From Hybrid Attention to Hybrid Position (2026-10-08)</title>
-      <description>The architectural design of Large Language Models (LLMs) is shifting from traditional full-attention-only models to hybrid models, which combine different attention modules to improve long-context eff...</description>
-      <link>https://arxiv.org/abs/2610.10114</link>
-      <guid>https://arxiv.org/abs/2610.10114#2026-10-08</guid>
-      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SWE-Game: Can Coding Agents Build the Games We Want? (2026-10-08)</title>
-      <description>We introduce SWE-Game, a benchmark of 247 tasks grounded in 41 executable reference Godot games spanning 13 gameplay categories in 2D and 3D. Five task types cover development from a brief, implementa...</description>
-      <link>https://arxiv.org/abs/2609.33678</link>
-      <guid>https://arxiv.org/abs/2609.33678#2026-10-08</guid>
-      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 UltraText Bench: A Comprehensive Bilingual Benchmark for Evaluating Visual Text Rendering in Image Generation (2026-10-08)</title>
-      <description>Dense visual text requires image generators to reproduce long strings across multiple regions with correct placement and legibility. As short-string rendering improves, evaluation must test sustained ...</description>
-      <link>https://arxiv.org/abs/2610.09823</link>
-      <guid>https://arxiv.org/abs/2610.09823#2026-10-08</guid>
-      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
