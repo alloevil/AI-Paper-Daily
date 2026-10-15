@@ -194,7 +194,7 @@ Running it as the intended automation needs no local install at all — fork the
 
 ## When NOT to use it
 
-- You need exhaustive coverage of a field. arXiv candidates must match the configured keyword × category query; HuggingFace entries are chosen by HuggingFace and are not filtered by your keywords or categories, only by their publish window. At most `max_papers` (10) survive per day (the committed archive runs 4–10). This is a sampler, not a literature review.
+- You need exhaustive coverage of a field. arXiv candidates must match the configured keyword × category query; HuggingFace entries are chosen by HuggingFace and are not filtered by your keywords or categories, only by their publish window. At most `max_papers` (10) survive per day (the committed archive runs 2–10). This is a sampler, not a literature review.
 - You want a human-curated newsletter. Selection is one automated pass with no editor — an LLM pass when a key is set, a votes/code ranking otherwise — so a badly worded abstract can sink a good paper.
 - You need the summaries to be authoritative. With a key the one-line reason is LLM-generated from the abstract (in Chinese by default); in the committed archive that line is only the selection tag. Either way it can flatten or misstate a paper's actual contribution — read the linked paper before citing it.
 - You want a database or a query interface. The archive is one Markdown file per day plus one generated HTML page per day; there is no index over papers beyond the site's tag filters, and no API.
