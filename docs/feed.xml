@@ -225,20 +225,6 @@
       <pubDate>Sun, 11 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>📄 AgentGarten: Code Worlds for Evolving Agents (2026-10-11)</title>
-      <description>Interactive virtual worlds allow agents to learn through exploration and interaction. What agents can learn is bounded by the environments they practice in, which must be faithful, with consistent sta...</description>
-      <link>https://arxiv.org/abs/2610.12374</link>
-      <guid>https://arxiv.org/abs/2610.12374#2026-10-11</guid>
-      <pubDate>Sun, 11 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 REMORY: Learning Residual Memory for Context Compaction (2026-10-11)</title>
-      <description>Long-horizon agents compact their history to continue within a finite context window, but a textual summary alone may not support every subsequent decision. We introduce REMORY, a neural memory networ...</description>
-      <link>https://arxiv.org/abs/2610.11287</link>
-      <guid>https://arxiv.org/abs/2610.11287#2026-10-11</guid>
-      <pubDate>Sun, 11 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>📄 Caught in the Act: Probes Effectively Detect Sabotage and Catch Unverbalized Deception (2026-10-10)</title>
       <description>Recent incidents have highlighted the challenge of monitoring LLM agents and the danger of models deceiving people. We show that white-box deception detection via probes can be scaled up to frontier m...</description>
       <link>http://arxiv.org/abs/2610.12445v1</link>
@@ -418,6 +404,20 @@
       <description>The architectural design of Large Language Models (LLMs) is shifting from traditional full-attention-only models to hybrid models, which combine different attention modules to improve long-context eff...</description>
       <link>https://arxiv.org/abs/2610.10114</link>
       <guid>https://arxiv.org/abs/2610.10114#2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SWE-Game: Can Coding Agents Build the Games We Want? (2026-10-08)</title>
+      <description>We introduce SWE-Game, a benchmark of 247 tasks grounded in 41 executable reference Godot games spanning 13 gameplay categories in 2D and 3D. Five task types cover development from a brief, implementa...</description>
+      <link>https://arxiv.org/abs/2609.33678</link>
+      <guid>https://arxiv.org/abs/2609.33678#2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 UltraText Bench: A Comprehensive Bilingual Benchmark for Evaluating Visual Text Rendering in Image Generation (2026-10-08)</title>
+      <description>Dense visual text requires image generators to reproduce long strings across multiple regions with correct placement and legibility. As short-string rendering improves, evaluation must test sustained ...</description>
+      <link>https://arxiv.org/abs/2610.09823</link>
+      <guid>https://arxiv.org/abs/2610.09823#2026-10-08</guid>
       <pubDate>Thu, 08 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
