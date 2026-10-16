@@ -20,7 +20,7 @@ jobs:
     if: github.event.schedule != '0 5 * * 1' && (github.event.inputs.mode || 'daily') == 'daily'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
 
       - name: Set up Python
         uses: actions/setup-python@v7
@@ -95,7 +95,7 @@ jobs:
     if: github.event.schedule == '0 5 * * 1' || github.event.inputs.mode == 'weekly'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
 
       - name: Set up Python
         uses: actions/setup-python@v7
