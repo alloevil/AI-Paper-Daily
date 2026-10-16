@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Thu, 15 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W42 (2026-10-06 ~ 2026-10-12)</title>
@@ -69,6 +69,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Waypoint-OPD: Transferring RL-Induced Policy Shifts via Gated On-Policy Distillation (2026-10-16)</title>
+      <description>Policy-shift distillation reuses the difference between a teacher's log probabilities before and after reinforcement learning (RL) as supervision on student-generated trajectories. However, this endpo...</description>
+      <link>https://arxiv.org/abs/2610.21601</link>
+      <guid>https://arxiv.org/abs/2610.21601#2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 3DCodeVerse: Exploring 3D Worlds as Code (2026-10-16)</title>
+      <description>We introduce 3DCodeVerse, a research ecosystem that enables coding agents to create editable and verifiable 3D content at scale. 3DCodeVerse comprises large-scale, high-quality datasets of executable ...</description>
+      <link>https://arxiv.org/abs/2610.22341</link>
+      <guid>https://arxiv.org/abs/2610.22341#2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Mosaic: Multi-Session Agentic Reinforcement Learning (2026-10-16)</title>
+      <description>Most existing agentic reinforcement learning methods assume single-session trajectories, where interaction proceeds within one continuously accumulated context. However, agentic techniques such as con...</description>
+      <link>https://arxiv.org/abs/2610.22174</link>
+      <guid>https://arxiv.org/abs/2610.22174#2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MJev-Spatial: System One Spatial Intelligence via Native Attention Matching (2026-10-16)</title>
+      <description>Spatial intelligence lets an agent perceive and act in the physical world, and many of its judgments must be made at interaction rates: which spatial relation holds, how far an object is, or where to ...</description>
+      <link>https://arxiv.org/abs/2610.22276</link>
+      <guid>https://arxiv.org/abs/2610.22276#2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 VLA-Δ: Learning Physical State Transition for Vision-Language-Action Models (2026-10-16)</title>
+      <description>Vision-language-action (VLA) models transfer semantic knowledge acquired through vision-language pretraining to robot control, achieving strong performance across various benchmarks. However, most VLA...</description>
+      <link>https://arxiv.org/abs/2610.21306</link>
+      <guid>https://arxiv.org/abs/2610.21306#2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 OpenGCUA: Toward a Fully Open Stack for Generalist Computer Use (2026-10-16)</title>
+      <description>Computer use has reached a turning point: the focus is expanding from GUI-only interaction to systems that complete tasks on users' computers through visual and programmatic interfaces. We define a ge...</description>
+      <link>https://arxiv.org/abs/2610.22200</link>
+      <guid>https://arxiv.org/abs/2610.22200#2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering (2026-10-16)</title>
+      <description>Large language models (LLMs) are expanding from assisting scientific research and engineering to autonomously developing and improving AI systems, advancing AI for AI (AI4AI) as a pathway toward recur...</description>
+      <link>https://arxiv.org/abs/2610.22344</link>
+      <guid>https://arxiv.org/abs/2610.22344#2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 OmniVerifier-C1: Decomposed Graded Verifier for Rule-Governed Generative World Modeling (2026-10-16)</title>
+      <description>Generative visual verifiers play a crucial role in advancing multimodal intelligence. To enhance the robustness of visual verifiers in complex multimodal scenarios involving compositional requirements...</description>
+      <link>https://arxiv.org/abs/2610.22355</link>
+      <guid>https://arxiv.org/abs/2610.22355#2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Routing Policy Optimization for Online Diffusion Reinforcement Learning (2026-10-16)</title>
+      <description>Reinforcement learning can align visual generators with reward signals beyond their pretraining objectives, but existing score-function methods typically introduce stochasticity by perturbing the reve...</description>
+      <link>https://arxiv.org/abs/2610.22282</link>
+      <guid>https://arxiv.org/abs/2610.22282#2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Each Reward to Its Relevant Tokens: Reward-Specific Token-Level Credit Assignment for Multi-Reward RL (2026-10-16)</title>
+      <description>Language models are increasingly trained against several verifiable rewards at once, such as the correctness and the format of a tool call, or the individual constraints of a complex instruction. Rewa...</description>
+      <link>https://arxiv.org/abs/2610.21439</link>
+      <guid>https://arxiv.org/abs/2610.21439#2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Player-1: Learning to Play from Synthetic Experience (2026-10-15)</title>
@@ -349,76 +419,6 @@
       <link>http://arxiv.org/abs/2610.12064v1</link>
       <guid>http://arxiv.org/abs/2610.12064v1#2026-10-10</guid>
       <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Memento 3: Model-Based Recursive Self-Improvement through Reflective Rulebooks (2026-10-10)</title>
-      <description>Learning to act in unfamiliar environments requires agents to infer how the world works and revise that understanding as new evidence arrives. Yet limited observations can support multiple world model...</description>
-      <link>http://arxiv.org/abs/2610.11794v1</link>
-      <guid>http://arxiv.org/abs/2610.11794v1#2026-10-10</guid>
-      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Narrow and Deep: An Ontology Tower as the Knowledge of an LLM Agent for an Industrial Equipment System (2026-10-10)</title>
-      <description>Large language model (LLM) agents are beginning to operate industrial energy equipment, and what they get right depends on what they are told about the plant. Established building ontologies name many...</description>
-      <link>http://arxiv.org/abs/2610.11768v1</link>
-      <guid>http://arxiv.org/abs/2610.11768v1#2026-10-10</guid>
-      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Learn2Play Bench: How Well Do LLM Agents Learn from Experience in Unfamiliar Environments? (2026-10-09)</title>
-      <description>Learning from experience is essential for LLM agents to adapt to unfamiliar and dynmaic environments. Evaluating this ability is therefore important for understanding how effectively agents acquire an...</description>
-      <link>https://arxiv.org/abs/2610.08215</link>
-      <guid>https://arxiv.org/abs/2610.08215#2026-10-09</guid>
-      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 TokenRouter: Efficient Serving System for Token-Level LLM Routing (2026-10-09)</title>
-      <description>Large language model (LLM) routing distributes inference work across different models, advancing the cost-quality Pareto frontier of LLM serving. While coarse-grained routing at the session or query l...</description>
-      <link>https://arxiv.org/abs/2610.12242</link>
-      <guid>https://arxiv.org/abs/2610.12242#2026-10-09</guid>
-      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SuperNav: An Agentic Navigation System for Any Task in Any Scene (2026-10-09)</title>
-      <description>General-purpose service robots need navigation systems that can handle diverse human requests in unfamiliar environments, combining task generality with scene generality. Some existing methods fine-tu...</description>
-      <link>https://arxiv.org/abs/2610.12126</link>
-      <guid>https://arxiv.org/abs/2610.12126#2026-10-09</guid>
-      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement (2026-10-09)</title>
-      <description>Reinforcement learning (RL) is the central training paradigm for advancing large foundation models towards self-improvement. This report introduces the MiMo-V2.6 series, an omni-modal family that push...</description>
-      <link>https://arxiv.org/abs/2610.11959</link>
-      <guid>https://arxiv.org/abs/2610.11959#2026-10-09</guid>
-      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Multi-Agent Egocentric World Model with Fine-Grained Embodied Interaction (2026-10-09)</title>
-      <description>Egocentric world models predict first-person observations conditioned on an agent's actions, but most focus on a single agent. Real embodied settings often involve multiple agents that act and interac...</description>
-      <link>https://arxiv.org/abs/2610.12299</link>
-      <guid>https://arxiv.org/abs/2610.12299#2026-10-09</guid>
-      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training (2026-10-09)</title>
-      <description>We present DreamTrue, a multi-view, cross-embodiment robot world model for action-faithful and physically plausible video prediction. Training such a model on existing robot datasets faces two obstacl...</description>
-      <link>https://arxiv.org/abs/2610.12468</link>
-      <guid>https://arxiv.org/abs/2610.12468#2026-10-09</guid>
-      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OuroWorld: Bringing Any 3D World Alive as Diverse, Endlessly Looping 3D Cinemagraphs (2026-10-09)</title>
-      <description>Recent 3D world models generate photorealistic, explorable scenes that remain frozen in time. OuroWorld is a mask-free framework that turns any static 3D Gaussian Splatting scene into a 3D cinemagraph...</description>
-      <link>https://arxiv.org/abs/2610.12461</link>
-      <guid>https://arxiv.org/abs/2610.12461#2026-10-09</guid>
-      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Beyond Spatio-Temporal Priors: A Generalizable Approach for Dense Correspondence Matching (2026-10-09)</title>
-      <description>Dense correspondence matching has historically been bounded by simplifying spatio-temporal priors, such as smooth motion and rigid geometry. While effective for classical tasks, these assumptions brea...</description>
-      <link>https://arxiv.org/abs/2610.12421</link>
-      <guid>https://arxiv.org/abs/2610.12421#2026-10-09</guid>
-      <pubDate>Fri, 09 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
