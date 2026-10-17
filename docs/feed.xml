@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Fri, 16 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W42 (2026-10-06 ~ 2026-10-12)</title>
@@ -69,6 +69,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AgentPerturb: Evaluating LLM Agent Robustness under Controlled Interaction Perturbations (2026-10-17)</title>
+      <description>Real-world tasks are often complex and noisy, posing substantial challenges for LLM agents. Yet existing evaluations lack a systematic framework for jointly characterizing potential perturbation targe...</description>
+      <link>http://arxiv.org/abs/2610.21624v1</link>
+      <guid>http://arxiv.org/abs/2610.21624v1#2026-10-17</guid>
+      <pubDate>Sat, 17 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Learning Self-Orchestration in Decentralized Agent Swarms (2026-10-17)</title>
+      <description>The capabilities of an agent swarm depend on both its individual members and how they coordinate. Yet existing multi-agent systems often train agents within fixed orchestration structures, separating ...</description>
+      <link>http://arxiv.org/abs/2610.22322v1</link>
+      <guid>http://arxiv.org/abs/2610.22322v1#2026-10-17</guid>
+      <pubDate>Sat, 17 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Learning to Steer LLM Agents and Multi-Agent Systems (2026-10-17)</title>
+      <description>Large language model (LLM)-based agents and multi-agent systems increasingly tackle complex tasks through long-horizon tool use and inter-agent collaboration. However, these systems are prone to devia...</description>
+      <link>http://arxiv.org/abs/2610.22316v1</link>
+      <guid>http://arxiv.org/abs/2610.22316v1#2026-10-17</guid>
+      <pubDate>Sat, 17 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Learning Rational Strategies for Temporal Objectives in Multi-Agent Systems (2026-10-17)</title>
+      <description>We study rational synthesis for stochastic multi-agent systems with unknown dynamics, where each agent is equipped with its own probabilistic temporal objective specified using Probabilistic Linear Te...</description>
+      <link>http://arxiv.org/abs/2610.22287v1</link>
+      <guid>http://arxiv.org/abs/2610.22287v1#2026-10-17</guid>
+      <pubDate>Sat, 17 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries (2026-10-17)</title>
+      <description>Reasoning over long document contexts remains a challenge for large language models (LLMs). Standard retrieval methods are inherently reactive, bottlenecking agents with complex, cross-document reason...</description>
+      <link>http://arxiv.org/abs/2610.22273v1</link>
+      <guid>http://arxiv.org/abs/2610.22273v1#2026-10-17</guid>
+      <pubDate>Sat, 17 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 X-RIC: An Agentic RAN-Intelligent Controller Benchmark for Enhancing Reinforcement Learning (2026-10-17)</title>
+      <description>The O-RAN ALLIANCE introduces architectural flexibility through disaggregation and AI-driven control. While the RAN Intelligent Controller (RIC) enables centralized optimization, current AI approaches...</description>
+      <link>http://arxiv.org/abs/2610.22269v1</link>
+      <guid>http://arxiv.org/abs/2610.22269v1#2026-10-17</guid>
+      <pubDate>Sat, 17 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AutoSFT: An Agentic System for Automated Data Research in Supervised Fine-Tuning (2026-10-17)</title>
+      <description>Language model agents increasingly automate post-training, but when given the full training stack they converge on supervised fine-tuning and spend most effort revising training data. Existing systems...</description>
+      <link>http://arxiv.org/abs/2610.22194v1</link>
+      <guid>http://arxiv.org/abs/2610.22194v1#2026-10-17</guid>
+      <pubDate>Sat, 17 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PROBE: Learning to Audit Policy Compliance in Tool-Using LLM Agents (2026-10-17)</title>
+      <description>Modern agentic systems extend language models with external tools, enabling them to complete complex tasks through multi-turn interactions. As these agents are deployed in consequential settings, they...</description>
+      <link>http://arxiv.org/abs/2610.22124v1</link>
+      <guid>http://arxiv.org/abs/2610.22124v1#2026-10-17</guid>
+      <pubDate>Sat, 17 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 GraphACM: Graph-based Action Consistency Measurement for Uncertainty Quantification in LLM Agents (2026-10-17)</title>
+      <description>Behavioral consistency across repeated executions provides an informative signal for assessing the reliability of large language model (LLM) agents. However, existing approaches typically summarize co...</description>
+      <link>http://arxiv.org/abs/2610.22031v1</link>
+      <guid>http://arxiv.org/abs/2610.22031v1#2026-10-17</guid>
+      <pubDate>Sat, 17 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CARA: Causally Guided Retrieval Agent for Question Answering (2026-10-17)</title>
+      <description>Retrieval-augmented generation over text-rich knowledge graphs requires identifying evidence that contributes to answering a question, rather than merely matching its textual content. Existing agentic...</description>
+      <link>http://arxiv.org/abs/2610.22017v1</link>
+      <guid>http://arxiv.org/abs/2610.22017v1#2026-10-17</guid>
+      <pubDate>Sat, 17 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Waypoint-OPD: Transferring RL-Induced Policy Shifts via Gated On-Policy Distillation (2026-10-16)</title>
@@ -349,76 +419,6 @@
       <link>https://arxiv.org/abs/2610.13181</link>
       <guid>https://arxiv.org/abs/2610.13181#2026-10-12</guid>
       <pubDate>Mon, 12 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MemTrial: Learning When to Trust Memory in LLM Portfolio Agents (2026-10-11)</title>
-      <description>Large language model (LLM) agents for portfolio management learn from experience: they credit each experience in their memory with the outcome of the decisions that used it. In financial markets, howe...</description>
-      <link>http://arxiv.org/abs/2610.11732v1</link>
-      <guid>http://arxiv.org/abs/2610.11732v1#2026-10-11</guid>
-      <pubDate>Sun, 11 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 TRACE: Diagnosing Verifier Brittleness in Agentic Evaluation (2026-10-11)</title>
-      <description>Verifier scores now serve as both benchmark metrics and training rewards for large language model (LLM) agents, and a change in score is routinely read as a change in capability. It may instead reflec...</description>
-      <link>http://arxiv.org/abs/2610.11678v1</link>
-      <guid>http://arxiv.org/abs/2610.11678v1#2026-10-11</guid>
-      <pubDate>Sun, 11 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Caught in the Act: Probes Effectively Detect Sabotage and Catch Unverbalized Deception (2026-10-10)</title>
-      <description>Recent incidents have highlighted the challenge of monitoring LLM agents and the danger of models deceiving people. We show that white-box deception detection via probes can be scaled up to frontier m...</description>
-      <link>http://arxiv.org/abs/2610.12445v1</link>
-      <guid>http://arxiv.org/abs/2610.12445v1#2026-10-10</guid>
-      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Unlocking the Regulatory Genome by ARGUS: An Evidence-Constrained Agentic Framework for Interpreting Single Nucleotide Variants (2026-10-10)</title>
-      <description>Over 90% of disease-associated variants from genome-wide association studies fall in noncoding regulatory regions, yet their functional interpretation remains a central open problem in genomic medicin...</description>
-      <link>http://arxiv.org/abs/2610.12281v1</link>
-      <guid>http://arxiv.org/abs/2610.12281v1#2026-10-10</guid>
-      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Mental-Models for Multi-Agent Systems (2026-10-10)</title>
-      <description>Large foundation models have accelerated progress toward general-purpose agents that interact with humans and other agents through language and multimodal signals. However, robust multi-agent decision...</description>
-      <link>http://arxiv.org/abs/2610.12453v1</link>
-      <guid>http://arxiv.org/abs/2610.12453v1#2026-10-10</guid>
-      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OnTrack: Real-Time Monitoring and Intervention in LLM Agent Trajectories via Streaming Structure-Aware Optimal Transport (2026-10-10)</title>
-      <description>Agents are deployed in applications from trip planners and stock trading to IT incident triage. In most cases, LLM agents work autonomously with minimal rule-based safeguarding, leading to cost and sa...</description>
-      <link>http://arxiv.org/abs/2610.12375v1</link>
-      <guid>http://arxiv.org/abs/2610.12375v1#2026-10-10</guid>
-      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Accurate but Not Humble: Evaluating Epistemic Humility in LLM Agents under Knowledge Conflict (2026-10-10)</title>
-      <description>When retrieved evidence contradicts an agent's prior beliefs, does it revise its answer, acknowledge uncertainty, or persist with an incorrect conclusion? Existing evaluations of agentic systems focus...</description>
-      <link>http://arxiv.org/abs/2610.12360v1</link>
-      <guid>http://arxiv.org/abs/2610.12360v1#2026-10-10</guid>
-      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 A Closer Look at Agentic BBO: Benchmarking LLM Agents for Black-Box Optimization (2026-10-10)</title>
-      <description>Black-box optimization (BBO) arises in many scientific and engineering problems where objective evaluations are expensive and limited. Recent large language model (LLM) agents offer a new way to appro...</description>
-      <link>http://arxiv.org/abs/2610.12183v1</link>
-      <guid>http://arxiv.org/abs/2610.12183v1#2026-10-10</guid>
-      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Use and Disuse: Intent-Structured Experience Consolidation for Memory and Learning in LLM Agents (2026-10-10)</title>
-      <description>The evolution of Large Language Model agents from single-task execution to long-term autonomous operation highlights the critical challenge of transforming continuous experiences into reusable knowled...</description>
-      <link>http://arxiv.org/abs/2610.12124v1</link>
-      <guid>http://arxiv.org/abs/2610.12124v1#2026-10-10</guid>
-      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ILM: An AI-Powered Storytelling Educational Tool (2026-10-10)</title>
-      <description>Digital technologies have made Islamic narratives more accessible, but existing platforms provide limited support for structured learning and comprehension of these stories, particularly in Arabic and...</description>
-      <link>http://arxiv.org/abs/2610.12064v1</link>
-      <guid>http://arxiv.org/abs/2610.12064v1#2026-10-10</guid>
-      <pubDate>Sat, 10 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
