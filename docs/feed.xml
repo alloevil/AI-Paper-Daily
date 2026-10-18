@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Sat, 17 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W42 (2026-10-06 ~ 2026-10-12)</title>
@@ -69,6 +69,55 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Following Delegation Traces to Study Human Oversight in Interaction with Multimodal AI (2026-10-18)</title>
+      <description>As multimodal AI systems are becoming our everyday thought partners, the shift towards studying how users transfer control to these systems becomes especially urgent. In this paper, we report an overv...</description>
+      <link>http://arxiv.org/abs/2610.21948v1</link>
+      <guid>http://arxiv.org/abs/2610.21948v1#2026-10-18</guid>
+      <pubDate>Sun, 18 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 RSIFlow: Adaptive Self-Improvement Workflows with an Evolving Meta-Agent (2026-10-18)</title>
+      <description>Large language model (LLM) agents have demonstrated strong capabilities in complex tasks, including code generation, tool use, and multi-hop question answering. Existing self-improvement methods enhan...</description>
+      <link>http://arxiv.org/abs/2610.21791v1</link>
+      <guid>http://arxiv.org/abs/2610.21791v1#2026-10-18</guid>
+      <pubDate>Sun, 18 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 The Delegation Dilemma: Economies of Scale, Accountability, and Polycentric Governance (2026-10-18)</title>
+      <description>Many collective-action systems are neither fully decentralized nor fully centralized: agents voluntarily organize into institutions that share organizational costs and delegate decisions to representa...</description>
+      <link>http://arxiv.org/abs/2610.21746v1</link>
+      <guid>http://arxiv.org/abs/2610.21746v1#2026-10-18</guid>
+      <pubDate>Sun, 18 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Human Interventions as Labels: Localizing, Steering, and (Sometimes) Editing the Computations Behind LLM Agent Failures (2026-10-18)</title>
+      <description>When an LLM agent misbehaves, a human steps in, and that intervention is usually discarded or replayed as training data. We treat it instead as a measurement: a label pointing at the internal computat...</description>
+      <link>http://arxiv.org/abs/2610.21708v1</link>
+      <guid>http://arxiv.org/abs/2610.21708v1#2026-10-18</guid>
+      <pubDate>Sun, 18 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Rethinking the Role of Tool Graph Memory in Multi-Turn Tool Use (2026-10-18)</title>
+      <description>Large language model (LLM) agents solve complex tasks by calling external tools over multiple turns. Recent work has proposed tool graph memory, which stores past experience as tool transitions to gui...</description>
+      <link>http://arxiv.org/abs/2610.21571v1</link>
+      <guid>http://arxiv.org/abs/2610.21571v1#2026-10-18</guid>
+      <pubDate>Sun, 18 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Independent Data-Integrity Verification for LLM-Driven Functional Coverage Closure in Hardware Design (2026-10-18)</title>
+      <description>LLM agents can write directed tests that close functional coverage, but coverage only shows that a state was reached, not that the data on the way there was correct. This is a long-known point in veri...</description>
+      <link>http://arxiv.org/abs/2610.21570v1</link>
+      <guid>http://arxiv.org/abs/2610.21570v1#2026-10-18</guid>
+      <pubDate>Sun, 18 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Agent Status Protocol (ASP): A Lightweight Specification for State Reporting in Multi-Agent Systems (2026-10-18)</title>
+      <description>The Agent Status Protocol (ASP) defines a lightweight way for heterogeneous AI agents to report their operational state to a status server, and for observers such as dashboards to receive that state a...</description>
+      <link>http://arxiv.org/abs/2610.21538v1</link>
+      <guid>http://arxiv.org/abs/2610.21538v1#2026-10-18</guid>
+      <pubDate>Sun, 18 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 AgentPerturb: Evaluating LLM Agent Robustness under Controlled Interaction Perturbations (2026-10-17)</title>
@@ -369,55 +418,6 @@
       <description>Coding agents are increasingly used to build programs from scratch as software engineers do rather than to resolve issues within a repository or to generate a repository from a given requirements docu...</description>
       <link>https://arxiv.org/abs/2610.13395</link>
       <guid>https://arxiv.org/abs/2610.13395#2026-10-12</guid>
-      <pubDate>Mon, 12 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Work2Skill: Capturing Human GUI Experience for Reusable Agent Skill Induction (2026-10-12)</title>
-      <description>Computer-use agents can perform increasingly complex GUI tasks, yet unfamiliar software and workflows requiring human domain knowledge remain challenging. Human demonstrations convey procedural knowle...</description>
-      <link>https://arxiv.org/abs/2610.12984</link>
-      <guid>https://arxiv.org/abs/2610.12984#2026-10-12</guid>
-      <pubDate>Mon, 12 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Continually Post-training Small Models via Synthetic Self-distillation (2026-10-12)</title>
-      <description>Continual post-training faces a dual challenge of acquisition and retention: models must learn new capabilities while preserving prior knowledge. While Self-Distillation Fine-Tuning (SDFT) mitigates t...</description>
-      <link>https://arxiv.org/abs/2610.13113</link>
-      <guid>https://arxiv.org/abs/2610.13113#2026-10-12</guid>
-      <pubDate>Mon, 12 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RSI-Anything: Unlocking Recursive Self-Improvement with World Models (2026-10-12)</title>
-      <description>Recursive self-improvement (RSI) aims to transform interaction experience into persistent improvements, yet external feedback is costly and world-model predictions may become unreliable as policies ev...</description>
-      <link>https://arxiv.org/abs/2610.13912</link>
-      <guid>https://arxiv.org/abs/2610.13912#2026-10-12</guid>
-      <pubDate>Mon, 12 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Learning Representations to Guide Pixel Diffusion Transformers (2026-10-12)</title>
-      <description>Visual representations are largely developed for understanding, yet what makes them useful for generation remains unclear. We study this question in pixel diffusion transformers and uncover two key in...</description>
-      <link>https://arxiv.org/abs/2610.12978</link>
-      <guid>https://arxiv.org/abs/2610.12978#2026-10-12</guid>
-      <pubDate>Mon, 12 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 InstantFusion: A Shared Latent Interface for Heterogeneous Image Generators (2026-10-12)</title>
-      <description>Diffusion/flow models have emerged as the de facto paradigms for image generation, giving rise to a diverse family of modern generators with increasingly heterogeneous architectures and representation...</description>
-      <link>https://arxiv.org/abs/2610.13944</link>
-      <guid>https://arxiv.org/abs/2610.13944#2026-10-12</guid>
-      <pubDate>Mon, 12 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Towards Physically Grounded Articulated 3D Assets: A Multi-Agent Pipeline and Benchmark (2026-10-12)</title>
-      <description>In this paper, we study physically grounded articulated 3D asset generation---moving the goal from reproducing how objects look to capturing how they move and function. Inspired by the literature on p...</description>
-      <link>https://arxiv.org/abs/2610.13947</link>
-      <guid>https://arxiv.org/abs/2610.13947#2026-10-12</guid>
-      <pubDate>Mon, 12 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MixTok: Adaptive Visual Tokenization with Global 1D Tokens and Sparse 2D Refinement (2026-10-12)</title>
-      <description>Efficient visual tokenization requires balancing representation compactness with the preservation of fine-grained image content. Conventional grid-based tokenizers allocate tokens uniformly across spa...</description>
-      <link>https://arxiv.org/abs/2610.13181</link>
-      <guid>https://arxiv.org/abs/2610.13181#2026-10-12</guid>
       <pubDate>Mon, 12 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
