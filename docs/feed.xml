@@ -8,6 +8,13 @@
     <lastBuildDate>Mon, 19 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>📊 Weekly roundup 2026-W43 (2026-10-13 ~ 2026-10-19)</title>
+      <description>Top 15 of the last 7 days by heat: Waypoint-OPD: Transferring RL-Induced Policy Shifts via Gated On-Policy Distillation; Player-1: Learning to Play from Synthetic Experience; HexaShell: A Thin Harness for Exploring the Limits of VLM Agents as Robot Coding Agents; Urbex: Agentic Spatial Grounding for City-Scale 3D Scenes; 3DCodeVerse: Exploring 3D Worlds as Code…</description>
+      <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W43.html</link>
+      <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W43.html</guid>
+      <pubDate>Mon, 19 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>📊 Weekly roundup 2026-W42 (2026-10-06 ~ 2026-10-12)</title>
       <description>Top 15 of the last 7 days by heat: S-Space: Exploring Spatial Workspace in Multimodal Language Models; Rethinking Cross-Tokenizer On-Policy Distillation: From Alignment Coverage to Supervision Reliability; Learn2Play Bench: How Well Do LLM Agents Learn from Experience in Unfamiliar Environments?; TokenRouter: Efficient Serving System for Token-Level LLM Routing; Long-WAM: Scaling the Context of World-Action Models…</description>
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W42.html</link>
