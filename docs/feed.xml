@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W43 (2026-10-13 ~ 2026-10-19)</title>
@@ -76,6 +76,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MemT-1.0: Towards Memory-Native Evolution (2026-10-20)</title>
+      <description>Memory-native evolution requires making memory an intrinsic capability of foundation models, enabling them to continuously accumulate and utilize information. To this end, we introduce MemT-1.0, a new...</description>
+      <link>https://arxiv.org/abs/2610.26825</link>
+      <guid>https://arxiv.org/abs/2610.26825#2026-10-20</guid>
+      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Learning from Fleet Experience: A Collective Learning Paradigm for Robots (2026-10-20)</title>
+      <description>Experience generated during deployment offers an opportunity for robots to improve policy reliability through learning from their own executions. However, learning through human corrections requires t...</description>
+      <link>https://arxiv.org/abs/2610.25736</link>
+      <guid>https://arxiv.org/abs/2610.25736#2026-10-20</guid>
+      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 OpenVLHarness: Real World Visual Agentic Tool-Use with Multimodal Memory (2026-10-20)</title>
+      <description>Multimodal large language models (MLLMs) have made rapid progress on visual reasoning, yet many tasks require evidence that is difficult to obtain through internal reasoning alone: our controlled stud...</description>
+      <link>https://arxiv.org/abs/2610.26860</link>
+      <guid>https://arxiv.org/abs/2610.26860#2026-10-20</guid>
+      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ScaleNav: Scalable Internet Video Pretraining for Language-Conditioned Local Navigation (2026-10-20)</title>
+      <description>We study language-conditioned local navigation, where a robot must navigate to a text-specified target visible in its initial observation and stop at the described location. End-to-end navigation poli...</description>
+      <link>https://arxiv.org/abs/2610.25690</link>
+      <guid>https://arxiv.org/abs/2610.25690#2026-10-20</guid>
+      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EgoXperience: Learning World-Grounded Egocentric Representations from Human Experience (2026-10-20)</title>
+      <description>Reconstructing human activity from egocentric video requires more than recovering individual 3D components: the observer's motion, surrounding geometry, and hand-object interactions must fit together ...</description>
+      <link>https://arxiv.org/abs/2610.26625</link>
+      <guid>https://arxiv.org/abs/2610.26625#2026-10-20</guid>
+      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Holi-World: Building Holistic World Intelligence from Human-Ego Experience (2026-10-20)</title>
+      <description>Human egocentric experience offers a rich foundation for learning how the world is organized and how it changes through interaction. Realizing this potential at scale requires turning growing volumes ...</description>
+      <link>https://arxiv.org/abs/2610.26549</link>
+      <guid>https://arxiv.org/abs/2610.26549#2026-10-20</guid>
+      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Scaling Parameter-Efficient Fine-Tuning for Brain Encoding (2026-10-20)</title>
+      <description>Brain encoding models aim to predict neural responses to stimuli. The most widely used approach fits readouts from frozen pretrained backbones. Using neural data to train large models from scratch or ...</description>
+      <link>https://arxiv.org/abs/2610.26802</link>
+      <guid>https://arxiv.org/abs/2610.26802#2026-10-20</guid>
+      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 RoAR-VAE: Improving Latent Diffusability through Robust Prediction (2026-10-20)</title>
+      <description>An effective visual tokenizer must preserve image fidelity while producing latents that downstream diffusion models can learn efficiently. Prior work improves latent diffusability through semantic ali...</description>
+      <link>https://arxiv.org/abs/2610.26216</link>
+      <guid>https://arxiv.org/abs/2610.26216#2026-10-20</guid>
+      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SpecMRL: Redesign Matryoshka Representation Learning within Parametric Spectrum (2026-10-20)</title>
+      <description>Matryoshka Representation Learning (MRL) is designed to support flexible representation sizes by jointly optimizing nested prefixes. While effective, this design lacks an explicit constraint to ensure...</description>
+      <link>https://arxiv.org/abs/2610.26824</link>
+      <guid>https://arxiv.org/abs/2610.26824#2026-10-20</guid>
+      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AnyGoal: On World Model Generalization Beyond Expert Rollouts (2026-10-20)</title>
+      <description>The goal of a world model is to capture the dynamics of an environment. This has the great appeal that it allows agents to plan and simulate a course of actions with the help of a world model. For the...</description>
+      <link>https://arxiv.org/abs/2610.26844</link>
+      <guid>https://arxiv.org/abs/2610.26844#2026-10-20</guid>
+      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 HexaShell: A Thin Harness for Exploring the Limits of VLM Agents as Robot Coding Agents (2026-10-19)</title>
@@ -356,76 +426,6 @@
       <link>https://arxiv.org/abs/2610.20399</link>
       <guid>https://arxiv.org/abs/2610.20399#2026-10-15</guid>
       <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ActionOPD: Distilling Decisions, Not Tokens (2026-10-15)</title>
-      <description>Distilling capable language-model agents into smaller models requires aligning the student's behavior with the teacher's. This raises a fundamental question: at which states and at what granularity sh...</description>
-      <link>https://arxiv.org/abs/2610.19820</link>
-      <guid>https://arxiv.org/abs/2610.19820#2026-10-15</guid>
-      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Doc2Harness: Benchmarking LLMs on Long-Horizon Harness Engineering of Coding Agents (2026-10-15)</title>
-      <description>Agents driven by large language models are increasingly deployed on long-horizon tasks, where they use tools and modify real workspaces. How well they perform depends as much on the harness around the...</description>
-      <link>https://arxiv.org/abs/2610.20344</link>
-      <guid>https://arxiv.org/abs/2610.20344#2026-10-15</guid>
-      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Seeing, Maintaining, and Learning: The Evolution of Multimodal Agent Memory (2026-10-15)</title>
-      <description>Multimodal models and agents have emerged to enable AI systems to learn from and interact with the real world more like humans by integrating information across multiple modalities. However, enabling ...</description>
-      <link>https://arxiv.org/abs/2610.19366</link>
-      <guid>https://arxiv.org/abs/2610.19366#2026-10-15</guid>
-      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 More Methods, Better Agents? A Reality Check on Self-Distillation in Agentic Reinforcement Learning (2026-10-15)</title>
-      <description>Self-distillation in agentic reinforcement learning has produced a growing number of methods. However, existing evaluations often reuse published baseline scores under differing experimental condition...</description>
-      <link>https://arxiv.org/abs/2610.19789</link>
-      <guid>https://arxiv.org/abs/2610.19789#2026-10-15</guid>
-      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Towards Agentic Robots: Model, Data, Environment, and Harness (2026-10-15)</title>
-      <description>Foundation models are driving a paradigm shift in robotic intelligence, moving beyond low-level action prediction to goal-directed orchestration of data collection, model training, task planning, and ...</description>
-      <link>https://arxiv.org/abs/2610.20442</link>
-      <guid>https://arxiv.org/abs/2610.20442#2026-10-15</guid>
-      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 From Training to Escalation: Forensic Analysis and Local Recreation of RL/RLHF-Induced Privilege Escalation in AI Agents (CVE-2026-65616) (2026-10-15)</title>
-      <description>Mid-2026 reporting on autonomous AI evaluation incidents claimed that frontier large language model (LLM) agents escaped server containment through emergent coordination and cloud infrastructure attac...</description>
-      <link>http://arxiv.org/abs/2610.20437v1</link>
-      <guid>http://arxiv.org/abs/2610.20437v1#2026-10-15</guid>
-      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Share the Symbol, Not the Vector: Training-Free Fact Communication Across Language Models (2026-10-15)</title>
-      <description>Multi-agent systems allow language models to solve tasks collaboratively by sharing complementary information. These systems typically communicate through text, while recent approaches also explore ex...</description>
-      <link>http://arxiv.org/abs/2610.19696v1</link>
-      <guid>http://arxiv.org/abs/2610.19696v1#2026-10-15</guid>
-      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Urbex: Agentic Spatial Grounding for City-Scale 3D Scenes (2026-10-14)</title>
-      <description>City-scale 3D grounding is commonly formulated as candidate ranking, which requires precomputed instance proposals and becomes inefficient in large outdoor scenes. We propose Urbex, an agentic vision-...</description>
-      <link>https://arxiv.org/abs/2610.18356</link>
-      <guid>https://arxiv.org/abs/2610.18356#2026-10-14</guid>
-      <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Jeva: System One Models from First Principles (2026-10-14)</title>
-      <description>System one models enable direct, low-latency decision-making. Yet recent practice of predicting an answer from serialized text does not, by itself, respect the structure of a decision problem. We argu...</description>
-      <link>https://arxiv.org/abs/2610.18773</link>
-      <guid>https://arxiv.org/abs/2610.18773#2026-10-14</guid>
-      <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 VideoJev: System One Model for Video Understanding and Interaction (2026-10-14)</title>
-      <description>Visual agents must turn video observations into timely decisions to track progress and choose what to do next. Building on the emerging System One paradigm, we introduce VideoJev, a family of models t...</description>
-      <link>https://arxiv.org/abs/2610.18615</link>
-      <guid>https://arxiv.org/abs/2610.18615#2026-10-14</guid>
-      <pubDate>Wed, 14 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
