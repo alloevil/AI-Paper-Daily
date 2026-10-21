@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Tue, 20 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W43 (2026-10-13 ~ 2026-10-19)</title>
@@ -76,6 +76,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PAR: Progress-Aligned Recurrence for Length Generalization in State Tracking (2026-10-21)</title>
+      <description>Looped language models can run more iterations at test time, but additional iterations need not help them solve longer problems. For sequential state tracking, final-answer supervision does not specif...</description>
+      <link>https://arxiv.org/abs/2610.27628</link>
+      <guid>https://arxiv.org/abs/2610.27628#2026-10-21</guid>
+      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Matrix-Game 4.0: Harnessing Video Models for Real-Time Playable Game Worlds (2026-10-21)</title>
+      <description>Moving from controllable videos to genuinely playable worlds requires persistent world state, executable game rules, and low-latency interaction. We outline a roadmap for the next generation of Matrix...</description>
+      <link>https://arxiv.org/abs/2610.27999</link>
+      <guid>https://arxiv.org/abs/2610.27999#2026-10-21</guid>
+      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 S-Agent 2.0: Spatial Reasoning with a General Coding Agent (2026-10-21)</title>
+      <description>Spatial reasoning asks a model to work out where objects are in 3D space, how they relate to one another, and how they move. Agentic VLMs have recently brought large improvements on such tasks by lett...</description>
+      <link>https://arxiv.org/abs/2610.28354</link>
+      <guid>https://arxiv.org/abs/2610.28354#2026-10-21</guid>
+      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition (2026-10-21)</title>
+      <description>In this report, we introduce Sage-A1.5, a 35B Mixture-of-Experts agentic model that builds on A1 to advance long-horizon problem solving through adaptive capability composition. Compared with A1, Sage...</description>
+      <link>https://arxiv.org/abs/2610.28578</link>
+      <guid>https://arxiv.org/abs/2610.28578#2026-10-21</guid>
+      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SolarRenderer: Few-Step Generative Reference Rendering (2026-10-21)</title>
+      <description>Game engines and coding agents can specify the layout, motion, and camera of a scene, yet turning such coarse structure into realistic video requires a renderer that follows the structure and complete...</description>
+      <link>https://arxiv.org/abs/2610.28630</link>
+      <guid>https://arxiv.org/abs/2610.28630#2026-10-21</guid>
+      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Learning the 4D World through Point Trajectory Forecasting (2026-10-21)</title>
+      <description>Reliable multi-view forecasting requires videos from different cameras to describe the same evolving 3D scene. To this end, we introduce Video-Point Model (VPM), a world model that conditions on multi...</description>
+      <link>https://arxiv.org/abs/2610.28594</link>
+      <guid>https://arxiv.org/abs/2610.28594#2026-10-21</guid>
+      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MMEnterprise-Bench: Evaluating Enterprise Agents over Evolving Multimodal Records (2026-10-21)</title>
+      <description>Enterprise agents answer questions over workplace records that evolve through team collaboration. As information is shared, corrected, and revised across documents, chats, and figures, multiple versio...</description>
+      <link>https://arxiv.org/abs/2610.27911</link>
+      <guid>https://arxiv.org/abs/2610.27911#2026-10-21</guid>
+      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Specter: Fast MoE Inference via Quantization-Enabled Multi-Step Speculative Offloading (2026-10-21)</title>
+      <description>Mixture-of-experts (MoE) models often exceed a single accelerator's memory capacity. Offloading experts to host memory creates a severe PCIe I/O bottleneck because data-dependent routing keeps transfe...</description>
+      <link>https://arxiv.org/abs/2511.14102</link>
+      <guid>https://arxiv.org/abs/2511.14102#2026-10-21</guid>
+      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EvaOmni: An Evidence-Grounded Benchmark for Audio-Visual Reasoning (2026-10-21)</title>
+      <description>Omni LLMs can naturally locate key audio and visual evidence and integrate information across modalities for audiovisual reasoning. Existing audio-visual reasoning benchmarks that mainly rely on multi...</description>
+      <link>https://arxiv.org/abs/2610.28444</link>
+      <guid>https://arxiv.org/abs/2610.28444#2026-10-21</guid>
+      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Evolving Agent Interfaces (2026-10-21)</title>
+      <description>Computer-use agents are limited by the interfaces humans give them. An agent may type a spreadsheet cell by cell when a single line of code would do, or print all two thousand lines of a file through ...</description>
+      <link>https://arxiv.org/abs/2610.28601</link>
+      <guid>https://arxiv.org/abs/2610.28601#2026-10-21</guid>
+      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 MemT-1.0: Towards Memory-Native Evolution (2026-10-20)</title>
@@ -356,76 +426,6 @@
       <link>https://arxiv.org/abs/2610.22174</link>
       <guid>https://arxiv.org/abs/2610.22174#2026-10-16</guid>
       <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MJev-Spatial: System One Spatial Intelligence via Native Attention Matching (2026-10-16)</title>
-      <description>Spatial intelligence lets an agent perceive and act in the physical world, and many of its judgments must be made at interaction rates: which spatial relation holds, how far an object is, or where to ...</description>
-      <link>https://arxiv.org/abs/2610.22276</link>
-      <guid>https://arxiv.org/abs/2610.22276#2026-10-16</guid>
-      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 VLA-Δ: Learning Physical State Transition for Vision-Language-Action Models (2026-10-16)</title>
-      <description>Vision-language-action (VLA) models transfer semantic knowledge acquired through vision-language pretraining to robot control, achieving strong performance across various benchmarks. However, most VLA...</description>
-      <link>https://arxiv.org/abs/2610.21306</link>
-      <guid>https://arxiv.org/abs/2610.21306#2026-10-16</guid>
-      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OpenGCUA: Toward a Fully Open Stack for Generalist Computer Use (2026-10-16)</title>
-      <description>Computer use has reached a turning point: the focus is expanding from GUI-only interaction to systems that complete tasks on users' computers through visual and programmatic interfaces. We define a ge...</description>
-      <link>https://arxiv.org/abs/2610.22200</link>
-      <guid>https://arxiv.org/abs/2610.22200#2026-10-16</guid>
-      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering (2026-10-16)</title>
-      <description>Large language models (LLMs) are expanding from assisting scientific research and engineering to autonomously developing and improving AI systems, advancing AI for AI (AI4AI) as a pathway toward recur...</description>
-      <link>https://arxiv.org/abs/2610.22344</link>
-      <guid>https://arxiv.org/abs/2610.22344#2026-10-16</guid>
-      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OmniVerifier-C1: Decomposed Graded Verifier for Rule-Governed Generative World Modeling (2026-10-16)</title>
-      <description>Generative visual verifiers play a crucial role in advancing multimodal intelligence. To enhance the robustness of visual verifiers in complex multimodal scenarios involving compositional requirements...</description>
-      <link>https://arxiv.org/abs/2610.22355</link>
-      <guid>https://arxiv.org/abs/2610.22355#2026-10-16</guid>
-      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Routing Policy Optimization for Online Diffusion Reinforcement Learning (2026-10-16)</title>
-      <description>Reinforcement learning can align visual generators with reward signals beyond their pretraining objectives, but existing score-function methods typically introduce stochasticity by perturbing the reve...</description>
-      <link>https://arxiv.org/abs/2610.22282</link>
-      <guid>https://arxiv.org/abs/2610.22282#2026-10-16</guid>
-      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Each Reward to Its Relevant Tokens: Reward-Specific Token-Level Credit Assignment for Multi-Reward RL (2026-10-16)</title>
-      <description>Language models are increasingly trained against several verifiable rewards at once, such as the correctness and the format of a tool call, or the individual constraints of a complex instruction. Rewa...</description>
-      <link>https://arxiv.org/abs/2610.21439</link>
-      <guid>https://arxiv.org/abs/2610.21439#2026-10-16</guid>
-      <pubDate>Fri, 16 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Player-1: Learning to Play from Synthetic Experience (2026-10-15)</title>
-      <description>Computer-use agents have demonstrated strong capabilities in interpreting screens and executing keyboard and mouse actions. However, games, with their visually rich worlds and diverse mechanics, remai...</description>
-      <link>https://arxiv.org/abs/2610.20584</link>
-      <guid>https://arxiv.org/abs/2610.20584#2026-10-15</guid>
-      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Recovering Reliable Supervision via Critique-Guided On-Policy Distillation (2026-10-15)</title>
-      <description>On-policy distillation (OPD) trains a student model on its own rollouts with token-level supervision from a teacher, assuming that the teacher can reach a correct answer from any prefix the student wr...</description>
-      <link>https://arxiv.org/abs/2610.20572</link>
-      <guid>https://arxiv.org/abs/2610.20572#2026-10-15</guid>
-      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Cortex: Consolidating Context into Parametric Memory (2026-10-15)</title>
-      <description>Context can improve large language model performance, but these gains may be lost after context removal. Inspired by biological systems consolidation, we formulate Memory Consolidation (MC) as interna...</description>
-      <link>https://arxiv.org/abs/2610.20399</link>
-      <guid>https://arxiv.org/abs/2610.20399#2026-10-15</guid>
-      <pubDate>Thu, 15 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
