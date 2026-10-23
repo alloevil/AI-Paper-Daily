@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Thu, 22 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W43 (2026-10-13 ~ 2026-10-19)</title>
@@ -76,6 +76,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Making MLLM Latents Matter: Factor-Aware Predictive Learning for Cinematic Video Generation (2026-10-23)</title>
+      <description>Cinematic video generation requires both temporal inference from limited inputs (i.e., sparse rather than frame-by-frame guidance) and factor-aware control of character, scene, action, and camera. Mul...</description>
+      <link>https://arxiv.org/abs/2610.30926</link>
+      <guid>https://arxiv.org/abs/2610.30926#2026-10-23</guid>
+      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 IQuest-Q1: Advancing Foundation Capabilities for Agentic CLI Systems (2026-10-23)</title>
+      <description>We present IQuest-Q1, a sparse Mixture-of-Experts (MoE) agentic foundation model with 320B total parameters (15B activated). IQuest-Q1 is developed through a three-stage process: (1) stable and effici...</description>
+      <link>https://arxiv.org/abs/2610.30949</link>
+      <guid>https://arxiv.org/abs/2610.30949#2026-10-23</guid>
+      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WeVisOne-VL: Unified Visual Perception from Objects to Pixels (2026-10-23)</title>
+      <description>Existing vision-language models (VLMs) remain unreliable for fine-grained visual perception. In this report, we present WeVisOne-VL (WeChat Vision All-in-One), a powerful VLM that unifies object-level...</description>
+      <link>https://arxiv.org/abs/2610.31329</link>
+      <guid>https://arxiv.org/abs/2610.31329#2026-10-23</guid>
+      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Cola2: Co-Adaptive Hierarchical Language Modeling with Continuous Semantic Compression and Balanced Discrete Generation (2026-10-23)</title>
+      <description>Hierarchical language generation separates continuous semantic modeling from discrete text realization, but its effectiveness depends on what the latent space compresses and how the discrete generator...</description>
+      <link>https://arxiv.org/abs/2610.31305</link>
+      <guid>https://arxiv.org/abs/2610.31305#2026-10-23</guid>
+      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Beyond Watching and Searching: Benchmarking Agents for Video-centered Deep Research Reports (2026-10-23)</title>
+      <description>Deep research agents synthesize open-web evidence into long reports, but current benchmarks do not evaluate research centered on a source video. We introduce Video-Centered Deep Research Report Genera...</description>
+      <link>https://arxiv.org/abs/2610.31158</link>
+      <guid>https://arxiv.org/abs/2610.31158#2026-10-23</guid>
+      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Verus-Insight: Towards Explainable Artifact Detection in AI-Generated Videos (2026-10-23)</title>
+      <description>Recent advances in video generation have made synthetic videos increasingly realistic, placing greater demands on reliable AI-generated video detection. Existing artifact-based detectors typically ide...</description>
+      <link>https://arxiv.org/abs/2610.30866</link>
+      <guid>https://arxiv.org/abs/2610.30866#2026-10-23</guid>
+      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Feedback That Backfires in Games: Do LLM Players Repeat the Move They Just Watched Fail? (2026-10-23)</title>
+      <description>When an LLM agent's move fails, the harness writes the move and the failure message into the transcript and asks again. In tool calling, this record makes small models more likely to repeat the failed...</description>
+      <link>http://arxiv.org/abs/2610.30205v1</link>
+      <guid>http://arxiv.org/abs/2610.30205v1#2026-10-23</guid>
+      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Rethinking Sequence Compression with Test-time Regression (2026-10-23)</title>
+      <description>Sequence compression is a fundamental operation and a critical information bottleneck in efficient language and multimodal models, and yet prevailing approaches based on pooling or learned projections...</description>
+      <link>https://arxiv.org/abs/2610.31574</link>
+      <guid>https://arxiv.org/abs/2610.31574#2026-10-23</guid>
+      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought (2026-10-23)</title>
+      <description>LLM memory is widely used in long-term conversation understanding. Agentic memory systems often use mutation, structural organization, learned retrieval strategies, or other complex operations. Is thi...</description>
+      <link>https://arxiv.org/abs/2610.30755</link>
+      <guid>https://arxiv.org/abs/2610.30755#2026-10-23</guid>
+      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AgentVQA: A Unified Benchmark for Agentic Visual Understanding (2026-10-23)</title>
+      <description>Vision-language models (VLMs) can perform a broad range of tasks across diverse settings, yet their performance in agentic contexts remains poorly understood. Although online evaluations in simulators...</description>
+      <link>https://arxiv.org/abs/2610.31494</link>
+      <guid>https://arxiv.org/abs/2610.31494#2026-10-23</guid>
+      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation (2026-10-22)</title>
@@ -356,76 +426,6 @@
       <link>https://arxiv.org/abs/2610.23036</link>
       <guid>https://arxiv.org/abs/2610.23036#2026-10-19</guid>
       <pubDate>Mon, 19 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Following Delegation Traces to Study Human Oversight in Interaction with Multimodal AI (2026-10-18)</title>
-      <description>As multimodal AI systems are becoming our everyday thought partners, the shift towards studying how users transfer control to these systems becomes especially urgent. In this paper, we report an overv...</description>
-      <link>http://arxiv.org/abs/2610.21948v1</link>
-      <guid>http://arxiv.org/abs/2610.21948v1#2026-10-18</guid>
-      <pubDate>Sun, 18 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RSIFlow: Adaptive Self-Improvement Workflows with an Evolving Meta-Agent (2026-10-18)</title>
-      <description>Large language model (LLM) agents have demonstrated strong capabilities in complex tasks, including code generation, tool use, and multi-hop question answering. Existing self-improvement methods enhan...</description>
-      <link>http://arxiv.org/abs/2610.21791v1</link>
-      <guid>http://arxiv.org/abs/2610.21791v1#2026-10-18</guid>
-      <pubDate>Sun, 18 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 The Delegation Dilemma: Economies of Scale, Accountability, and Polycentric Governance (2026-10-18)</title>
-      <description>Many collective-action systems are neither fully decentralized nor fully centralized: agents voluntarily organize into institutions that share organizational costs and delegate decisions to representa...</description>
-      <link>http://arxiv.org/abs/2610.21746v1</link>
-      <guid>http://arxiv.org/abs/2610.21746v1#2026-10-18</guid>
-      <pubDate>Sun, 18 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Human Interventions as Labels: Localizing, Steering, and (Sometimes) Editing the Computations Behind LLM Agent Failures (2026-10-18)</title>
-      <description>When an LLM agent misbehaves, a human steps in, and that intervention is usually discarded or replayed as training data. We treat it instead as a measurement: a label pointing at the internal computat...</description>
-      <link>http://arxiv.org/abs/2610.21708v1</link>
-      <guid>http://arxiv.org/abs/2610.21708v1#2026-10-18</guid>
-      <pubDate>Sun, 18 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Rethinking the Role of Tool Graph Memory in Multi-Turn Tool Use (2026-10-18)</title>
-      <description>Large language model (LLM) agents solve complex tasks by calling external tools over multiple turns. Recent work has proposed tool graph memory, which stores past experience as tool transitions to gui...</description>
-      <link>http://arxiv.org/abs/2610.21571v1</link>
-      <guid>http://arxiv.org/abs/2610.21571v1#2026-10-18</guid>
-      <pubDate>Sun, 18 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Independent Data-Integrity Verification for LLM-Driven Functional Coverage Closure in Hardware Design (2026-10-18)</title>
-      <description>LLM agents can write directed tests that close functional coverage, but coverage only shows that a state was reached, not that the data on the way there was correct. This is a long-known point in veri...</description>
-      <link>http://arxiv.org/abs/2610.21570v1</link>
-      <guid>http://arxiv.org/abs/2610.21570v1#2026-10-18</guid>
-      <pubDate>Sun, 18 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Agent Status Protocol (ASP): A Lightweight Specification for State Reporting in Multi-Agent Systems (2026-10-18)</title>
-      <description>The Agent Status Protocol (ASP) defines a lightweight way for heterogeneous AI agents to report their operational state to a status server, and for observers such as dashboards to receive that state a...</description>
-      <link>http://arxiv.org/abs/2610.21538v1</link>
-      <guid>http://arxiv.org/abs/2610.21538v1#2026-10-18</guid>
-      <pubDate>Sun, 18 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AgentPerturb: Evaluating LLM Agent Robustness under Controlled Interaction Perturbations (2026-10-17)</title>
-      <description>Real-world tasks are often complex and noisy, posing substantial challenges for LLM agents. Yet existing evaluations lack a systematic framework for jointly characterizing potential perturbation targe...</description>
-      <link>http://arxiv.org/abs/2610.21624v1</link>
-      <guid>http://arxiv.org/abs/2610.21624v1#2026-10-17</guid>
-      <pubDate>Sat, 17 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Learning Self-Orchestration in Decentralized Agent Swarms (2026-10-17)</title>
-      <description>The capabilities of an agent swarm depend on both its individual members and how they coordinate. Yet existing multi-agent systems often train agents within fixed orchestration structures, separating ...</description>
-      <link>http://arxiv.org/abs/2610.22322v1</link>
-      <guid>http://arxiv.org/abs/2610.22322v1#2026-10-17</guid>
-      <pubDate>Sat, 17 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Learning to Steer LLM Agents and Multi-Agent Systems (2026-10-17)</title>
-      <description>Large language model (LLM)-based agents and multi-agent systems increasingly tackle complex tasks through long-horizon tool use and inter-agent collaboration. However, these systems are prone to devia...</description>
-      <link>http://arxiv.org/abs/2610.22316v1</link>
-      <guid>http://arxiv.org/abs/2610.22316v1#2026-10-17</guid>
-      <pubDate>Sat, 17 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
