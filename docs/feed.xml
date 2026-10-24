@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Fri, 23 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W43 (2026-10-13 ~ 2026-10-19)</title>
@@ -76,6 +76,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EpiSEM-Bench: Evaluating Safety and Evidence Recovery in LLM Agents under Missing Evidence (2026-10-24)</title>
+      <description>Tool-using language model agents rely on environmental facts to decide whether an action is permitted. When a tool response omits a safety-relevant fact, an agent may carry out a prohibited action eve...</description>
+      <link>http://arxiv.org/abs/2610.31650v1</link>
+      <guid>http://arxiv.org/abs/2610.31650v1#2026-10-24</guid>
+      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 An Empirical Study of Recent Large Language Models for Knowledge Graph to Text Generation on Standard Benchmarks (2026-10-24)</title>
+      <description>Knowledge graph-to-text (KG-to-text) generation verbalizes a set of knowledge graph triples into fluent natural language. While fine-tuned encoder-decoder models have long been the standard approach, ...</description>
+      <link>http://arxiv.org/abs/2610.31529v1</link>
+      <guid>http://arxiv.org/abs/2610.31529v1#2026-10-24</guid>
+      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Training Small Language Models for Transferable Tool Selection (2026-10-24)</title>
+      <description>As LLM agents operate over corpora of more than ten thousand tools, selecting the right tool for a complex multi-step user instruction becomes a central bottleneck. Tool descriptions cannot all fit in...</description>
+      <link>http://arxiv.org/abs/2610.31483v1</link>
+      <guid>http://arxiv.org/abs/2610.31483v1#2026-10-24</guid>
+      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Certified Execution Harness for Agentic AI: Safe and Least-Intrusive Petri-Net Supervisory Control Between Reasoning and Action (2026-10-24)</title>
+      <description>This paper studies the problem of safe tool execution for large language model (LLM) agents under prompt injection. Using Petri nets, we formalize the execution harness between the LLM and its tools a...</description>
+      <link>http://arxiv.org/abs/2610.31376v1</link>
+      <guid>http://arxiv.org/abs/2610.31376v1#2026-10-24</guid>
+      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AfterDeleteBench: Auditing Post-Deletion Information Persistence in LLM Agents (2026-10-24)</title>
+      <description>Many LLM agents maintain external persistent memory and derive additional state from past interactions, such as summaries. Deleting an original memory record therefore need not remove information carr...</description>
+      <link>http://arxiv.org/abs/2610.31366v1</link>
+      <guid>http://arxiv.org/abs/2610.31366v1#2026-10-24</guid>
+      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Muffin - A Shared Memory Buffer for Asynchronous AI Agents (2026-10-24)</title>
+      <description>The rise of Agentic AI systems has changed the landscape of artificial intelligence by enabling strong reasoning capabilities through specialized multi-agent interaction with structured self-reflectio...</description>
+      <link>http://arxiv.org/abs/2610.31355v1</link>
+      <guid>http://arxiv.org/abs/2610.31355v1#2026-10-24</guid>
+      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Automating Feature Flag Cleanup at Scale with Multi-Agent LLM Systems: An Industrial Experience at DoorDash (2026-10-24)</title>
+      <description>Feature flags are runtime configuration mechanisms used for gradual feature rollouts, experimentation, and kill switches. Once a feature is fully rolled out, the flag and its gated code become technic...</description>
+      <link>http://arxiv.org/abs/2610.31351v1</link>
+      <guid>http://arxiv.org/abs/2610.31351v1#2026-10-24</guid>
+      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Consistent but Biased: Chair Personas Trade Noise for Bias in Multi-Agent Clinical Decisions (2026-10-24)</title>
+      <description>In clinical systems built from several large language model (LLM) agents, one agent often chairs the discussion and makes the final decision. Whether the chair's persona prompt changes that decision, ...</description>
+      <link>http://arxiv.org/abs/2610.31325v1</link>
+      <guid>http://arxiv.org/abs/2610.31325v1#2026-10-24</guid>
+      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SurveyGraph: Generating Academic Surveys via Methods-Entity Knowledge Graphs (2026-10-24)</title>
+      <description>Most automated survey generation systems retrieve papers as flat documents, limiting their ability to capture research structure. We present SurveyGraph, a framework built around a Methods-Entity Know...</description>
+      <link>http://arxiv.org/abs/2610.31317v1</link>
+      <guid>http://arxiv.org/abs/2610.31317v1#2026-10-24</guid>
+      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PointerBench: A Diagnostic Benchmark for Fine-Grained GUI Grounding (2026-10-24)</title>
+      <description>Multimodal Large Language Models have shown promising performance in computer-use tasks, from planning user workflows to grounding natural-language actions to precise UI targets. Existing end-to-end b...</description>
+      <link>http://arxiv.org/abs/2610.31274v1</link>
+      <guid>http://arxiv.org/abs/2610.31274v1#2026-10-24</guid>
+      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Making MLLM Latents Matter: Factor-Aware Predictive Learning for Cinematic Video Generation (2026-10-23)</title>
@@ -356,76 +426,6 @@
       <link>https://arxiv.org/abs/2610.26844</link>
       <guid>https://arxiv.org/abs/2610.26844#2026-10-20</guid>
       <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 HexaShell: A Thin Harness for Exploring the Limits of VLM Agents as Robot Coding Agents (2026-10-19)</title>
-      <description>Agents built on vision language models (VLMs) now compete with learned policies on robot manipulation leaderboards. We ask how far a coding agent can go when it controls a robot instead of a computer,...</description>
-      <link>https://arxiv.org/abs/2610.23479</link>
-      <guid>https://arxiv.org/abs/2610.23479#2026-10-19</guid>
-      <pubDate>Mon, 19 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Scene-Designer: Learning Design Intelligence for Agentic 3D Scene Generation (2026-10-19)</title>
-      <description>Generating complete, coherent, and usable 3D indoor scenes from natural language requires strong design intelligence: the ability to design high-quality scenes and critique their quality. However, exi...</description>
-      <link>https://arxiv.org/abs/2610.23121</link>
-      <guid>https://arxiv.org/abs/2610.23121#2026-10-19</guid>
-      <pubDate>Mon, 19 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Tree-Aware Posterior Distillation for Long-Horizon Agentic Reinforcement Learning (2026-10-19)</title>
-      <description>Reinforcement learning with verifiable rewards has become a scalable post-training paradigm for large language models. However, training agents over long-horizon interactions presents two challenges: ...</description>
-      <link>https://arxiv.org/abs/2610.23181</link>
-      <guid>https://arxiv.org/abs/2610.23181#2026-10-19</guid>
-      <pubDate>Mon, 19 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RAP: A Dataset for Paper-to-Poster Generation via Declarative Markup from Human-Crafted Exemplars (2026-10-19)</title>
-      <description>Making a conference poster is visual coding in miniature: an entire paper must be compressed onto a single page, which exercises summarization, visual design, and code implementation at once, using no...</description>
-      <link>https://arxiv.org/abs/2610.23230</link>
-      <guid>https://arxiv.org/abs/2610.23230#2026-10-19</guid>
-      <pubDate>Mon, 19 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Execution Before Memory: Diagnosing Memory Failures in Video World Models (2026-10-19)</title>
-      <description>A memory test for a video world model should say whether the scene was set, whether the asked change was carried out, and whether the last frame shows the result. Current tests fold these into one num...</description>
-      <link>https://arxiv.org/abs/2610.23542</link>
-      <guid>https://arxiv.org/abs/2610.23542#2026-10-19</guid>
-      <pubDate>Mon, 19 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OfficeTown: Generative Organizations for Evolving Agent Intelligence (2026-10-19)</title>
-      <description>AI agents increasingly use files and software tools to produce professional deliverables. Such work draws on materials, decisions, and feedback accumulated across assignments. We introduce OfficeTown,...</description>
-      <link>https://arxiv.org/abs/2610.23194</link>
-      <guid>https://arxiv.org/abs/2610.23194#2026-10-19</guid>
-      <pubDate>Mon, 19 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MOSS-Image Technical Report (2026-10-19)</title>
-      <description>Recent closed-source image generation systems can produce diverse visual content from simple compositions to information-dense graphics, yet open-weight text-to-image models still struggle with dense ...</description>
-      <link>https://arxiv.org/abs/2610.23374</link>
-      <guid>https://arxiv.org/abs/2610.23374#2026-10-19</guid>
-      <pubDate>Mon, 19 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Xiaomi-Lens-0 Technical Report (2026-10-19)</title>
-      <description>Multimodal large language models (MLLMs) answer questions about whole images well, yet they still struggle with fine-grained region understanding. A key reason is that text-only supervision never spec...</description>
-      <link>https://arxiv.org/abs/2610.23279</link>
-      <guid>https://arxiv.org/abs/2610.23279#2026-10-19</guid>
-      <pubDate>Mon, 19 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 KiranaBench: Can a Language Model Run a Neighbourhood Shop? (2026-10-19)</title>
-      <description>Large language model (LLM) agents are increasingly evaluated on long-horizon tasks, including autonomously running a business. Existing benchmarks for this setting are almost exclusively English-langu...</description>
-      <link>http://arxiv.org/abs/2610.22980v1</link>
-      <guid>http://arxiv.org/abs/2610.22980v1#2026-10-19</guid>
-      <pubDate>Mon, 19 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Towards Looped Models Done Right, Part I: Topology, Input Injection, Recurrent-State Design (2026-10-19)</title>
-      <description>Looped language models reuse physical Transformer blocks across logical depth, but established architectures entangle recurrence placement, input injection, and recurrent state organization. We isolat...</description>
-      <link>https://arxiv.org/abs/2610.23036</link>
-      <guid>https://arxiv.org/abs/2610.23036#2026-10-19</guid>
-      <pubDate>Mon, 19 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
