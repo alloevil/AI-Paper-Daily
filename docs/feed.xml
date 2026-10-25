@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Sat, 24 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W43 (2026-10-13 ~ 2026-10-19)</title>
@@ -76,6 +76,55 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Network topology shapes consensus and vulnerability in LLM populations (2026-10-25)</title>
+      <description>As large language models (LLMs) are deployed in interacting populations, their collective behaviour depends not only on the models but also on who interacts with whom. Studies of convention formation ...</description>
+      <link>http://arxiv.org/abs/2610.31165v1</link>
+      <guid>http://arxiv.org/abs/2610.31165v1#2026-10-25</guid>
+      <pubDate>Sun, 25 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Who Is the Influencer? Consensus Dynamics in Multi-Agent Systems (2026-10-25)</title>
+      <description>Multi-agent LLM systems are increasingly used in practice, but their behavior is complex and hard to understand. We design a simple task to ask which model has the most influence on the final consensu...</description>
+      <link>http://arxiv.org/abs/2610.31105v1</link>
+      <guid>http://arxiv.org/abs/2610.31105v1#2026-10-25</guid>
+      <pubDate>Sun, 25 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SCOPE: Compiling Natural-Language Policies into Neurosymbolic Predicate Programs (2026-10-25)</title>
+      <description>Policy enforcement for LLM agents has shifted from single-turn content moderation to compound, application-specific policies evaluated over multi-turn transcripts and tool-call trajectories. Fine-tune...</description>
+      <link>http://arxiv.org/abs/2610.31062v1</link>
+      <guid>http://arxiv.org/abs/2610.31062v1#2026-10-25</guid>
+      <pubDate>Sun, 25 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Chunk Recomputation under Real Document Revisions: Measuring Update Cost and Retrieval Quality of Fixed, Recursive, and Content-Defined Chunking (2026-10-25)</title>
+      <description>Chunking strategies for retrieval-augmented generation are almost always evaluated on a static snapshot, yet the documents underlying a knowledge base continue to change. Because chunks are embedded i...</description>
+      <link>http://arxiv.org/abs/2610.31019v1</link>
+      <guid>http://arxiv.org/abs/2610.31019v1#2026-10-25</guid>
+      <pubDate>Sun, 25 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Formal-Informal Mathematical Alignment through and beyond Human Annotations (2026-10-25)</title>
+      <description>Formalized mathematics libraries such as Lean's \texttt{mathlib} provide machine-verifiable representations of mathematical knowledge, including definitions, theorems, and their relationships. If effe...</description>
+      <link>http://arxiv.org/abs/2610.31011v1</link>
+      <guid>http://arxiv.org/abs/2610.31011v1#2026-10-25</guid>
+      <pubDate>Sun, 25 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Agri-SCHOLAR: Simulation-Grounded In-Season Rolling Advisories for Agricultural Crops Using LLM-Bounded Optimization (2026-10-25)</title>
+      <description>Existing agricultural advisories to farmers suffer from several limitations: (a) remain largely expert-driven, (b) do not adequately account for in-season weather, and (c) do not scale to individual f...</description>
+      <link>http://arxiv.org/abs/2610.31003v1</link>
+      <guid>http://arxiv.org/abs/2610.31003v1#2026-10-25</guid>
+      <pubDate>Sun, 25 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ColaBench: Evaluating Memory-Guided Knowledge Acquisition in Personal Agents (2026-10-25)</title>
+      <description>Personal agents need to draw on long-term interaction history to retrieve and apply external knowledge suited to a user's current request. Even an answer grounded in relevant documents can be unsuitab...</description>
+      <link>http://arxiv.org/abs/2610.30989v1</link>
+      <guid>http://arxiv.org/abs/2610.30989v1#2026-10-25</guid>
+      <pubDate>Sun, 25 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 EpiSEM-Bench: Evaluating Safety and Evidence Recovery in LLM Agents under Missing Evidence (2026-10-24)</title>
@@ -376,55 +425,6 @@
       <description>Multimodal large language models (MLLMs) have made rapid progress on visual reasoning, yet many tasks require evidence that is difficult to obtain through internal reasoning alone: our controlled stud...</description>
       <link>https://arxiv.org/abs/2610.26860</link>
       <guid>https://arxiv.org/abs/2610.26860#2026-10-20</guid>
-      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ScaleNav: Scalable Internet Video Pretraining for Language-Conditioned Local Navigation (2026-10-20)</title>
-      <description>We study language-conditioned local navigation, where a robot must navigate to a text-specified target visible in its initial observation and stop at the described location. End-to-end navigation poli...</description>
-      <link>https://arxiv.org/abs/2610.25690</link>
-      <guid>https://arxiv.org/abs/2610.25690#2026-10-20</guid>
-      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EgoXperience: Learning World-Grounded Egocentric Representations from Human Experience (2026-10-20)</title>
-      <description>Reconstructing human activity from egocentric video requires more than recovering individual 3D components: the observer's motion, surrounding geometry, and hand-object interactions must fit together ...</description>
-      <link>https://arxiv.org/abs/2610.26625</link>
-      <guid>https://arxiv.org/abs/2610.26625#2026-10-20</guid>
-      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Holi-World: Building Holistic World Intelligence from Human-Ego Experience (2026-10-20)</title>
-      <description>Human egocentric experience offers a rich foundation for learning how the world is organized and how it changes through interaction. Realizing this potential at scale requires turning growing volumes ...</description>
-      <link>https://arxiv.org/abs/2610.26549</link>
-      <guid>https://arxiv.org/abs/2610.26549#2026-10-20</guid>
-      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Scaling Parameter-Efficient Fine-Tuning for Brain Encoding (2026-10-20)</title>
-      <description>Brain encoding models aim to predict neural responses to stimuli. The most widely used approach fits readouts from frozen pretrained backbones. Using neural data to train large models from scratch or ...</description>
-      <link>https://arxiv.org/abs/2610.26802</link>
-      <guid>https://arxiv.org/abs/2610.26802#2026-10-20</guid>
-      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RoAR-VAE: Improving Latent Diffusability through Robust Prediction (2026-10-20)</title>
-      <description>An effective visual tokenizer must preserve image fidelity while producing latents that downstream diffusion models can learn efficiently. Prior work improves latent diffusability through semantic ali...</description>
-      <link>https://arxiv.org/abs/2610.26216</link>
-      <guid>https://arxiv.org/abs/2610.26216#2026-10-20</guid>
-      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SpecMRL: Redesign Matryoshka Representation Learning within Parametric Spectrum (2026-10-20)</title>
-      <description>Matryoshka Representation Learning (MRL) is designed to support flexible representation sizes by jointly optimizing nested prefixes. While effective, this design lacks an explicit constraint to ensure...</description>
-      <link>https://arxiv.org/abs/2610.26824</link>
-      <guid>https://arxiv.org/abs/2610.26824#2026-10-20</guid>
-      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AnyGoal: On World Model Generalization Beyond Expert Rollouts (2026-10-20)</title>
-      <description>The goal of a world model is to capture the dynamics of an environment. This has the great appeal that it allows agents to plan and simulate a course of actions with the help of a world model. For the...</description>
-      <link>https://arxiv.org/abs/2610.26844</link>
-      <guid>https://arxiv.org/abs/2610.26844#2026-10-20</guid>
       <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
