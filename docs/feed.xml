@@ -8,6 +8,13 @@
     <lastBuildDate>Mon, 26 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>📊 Weekly roundup 2026-W44 (2026-10-20 ~ 2026-10-26)</title>
+      <description>Top 15 of the last 7 days by heat: Making MLLM Latents Matter: Factor-Aware Predictive Learning for Cinematic Video Generation; MemT-1.0: Towards Memory-Native Evolution; PAR: Progress-Aligned Recurrence for Length Generalization in State Tracking; Learning from Fleet Experience: A Collective Learning Paradigm for Robots; Matrix-Game 4.0: Harnessing Video Models for Real-Time Playable Game Worlds…</description>
+      <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W44.html</link>
+      <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W44.html</guid>
+      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>📊 Weekly roundup 2026-W43 (2026-10-13 ~ 2026-10-19)</title>
       <description>Top 15 of the last 7 days by heat: Waypoint-OPD: Transferring RL-Induced Policy Shifts via Gated On-Policy Distillation; Player-1: Learning to Play from Synthetic Experience; HexaShell: A Thin Harness for Exploring the Limits of VLM Agents as Robot Coding Agents; Urbex: Agentic Spatial Grounding for City-Scale 3D Scenes; 3DCodeVerse: Exploring 3D Worlds as Code…</description>
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W43.html</link>
