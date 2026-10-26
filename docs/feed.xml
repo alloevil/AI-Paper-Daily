@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Sun, 25 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W43 (2026-10-13 ~ 2026-10-19)</title>
@@ -76,6 +76,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 RSIHub: A Composable Framework for Agent-Evolution Methods (2026-10-26)</title>
+      <description>Agent-evolution methods use execution feedback to improve prompts, skills, tools, and orchestration, but their implementations often rebuild the same experimental machinery. We present RSIHub, an open...</description>
+      <link>https://arxiv.org/abs/2610.32253</link>
+      <guid>https://arxiv.org/abs/2610.32253#2026-10-26</guid>
+      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 RynnUnify: Towards Unified Embodied Brain (2026-10-26)</title>
+      <description>We introduce RynnUnify, a 16B unified embodied model that combines strong embodied understanding with long-horizon visual planning through interleaved video--language reasoning. With capabilities span...</description>
+      <link>https://arxiv.org/abs/2610.32965</link>
+      <guid>https://arxiv.org/abs/2610.32965#2026-10-26</guid>
+      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Every Edge Needs a Quote: Building a Quote-Grounded Knowledge Graph of Healthcare Software Adoption with Language-Model Agents (2026-10-26)</title>
+      <description>Hospitals regularly buy software that clinicians and patients depend on. Because these purchases are costly, hard to reverse and can affect patient care, buyers look for evidence of which peer institu...</description>
+      <link>http://arxiv.org/abs/2610.32781v1</link>
+      <guid>http://arxiv.org/abs/2610.32781v1#2026-10-26</guid>
+      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Tool-Calling LLM Agents Under Realistic MCP Faults: Scale Does Not Purchase Fault Tolerance (2026-10-26)</title>
+      <description>LLM agents increasingly rely on external tools exposed via the Model Context Protocol (MCP), yet current benchmarks assume tools respond correctly and on time, leaving agent resilience to realistic to...</description>
+      <link>http://arxiv.org/abs/2610.32555v1</link>
+      <guid>http://arxiv.org/abs/2610.32555v1#2026-10-26</guid>
+      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Async-RBench: Benchmarking Asynchronous Task Execution in LLM Agents (2026-10-26)</title>
+      <description>Large language model (LLM) agents increasingly execute tasks asynchronously: a main agent continues working while its subagents run, and the task state may change before their results arrive. The main...</description>
+      <link>http://arxiv.org/abs/2610.32429v1</link>
+      <guid>http://arxiv.org/abs/2610.32429v1#2026-10-26</guid>
+      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SkillRep: Characterizing and Understanding the Representation Design Space of Agent Skill Retrieval (2026-10-26)</title>
+      <description>Retrieving the right skill from a large library is essential for LLM agents, yet requests and skills are written for different purposes and in different words. Existing retrievers narrow this request-...</description>
+      <link>http://arxiv.org/abs/2610.32336v1</link>
+      <guid>http://arxiv.org/abs/2610.32336v1#2026-10-26</guid>
+      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Beyond Gain: Measuring Skill Internalization for Agent Skill Retirement (2026-10-26)</title>
+      <description>LLM agents retrieve skills from public hubs that hold up to about 100,000 entries and serve many models. As models improve, a hub must find the skills a given model has internalized, meaning it can do...</description>
+      <link>http://arxiv.org/abs/2610.32322v1</link>
+      <guid>http://arxiv.org/abs/2610.32322v1#2026-10-26</guid>
+      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 DMAIC-Bench: From Self-Reflection to Self-Restraint for Agents in Multi-Stage Analytical Tasks (2026-10-26)</title>
+      <description>Multi-stage analytical tasks require LLM agents to use intermediate evidence to decide whether to continue, redirect or stop. Self-reflection, in which an agent critiques its output, is widely studied...</description>
+      <link>http://arxiv.org/abs/2610.32305v1</link>
+      <guid>http://arxiv.org/abs/2610.32305v1#2026-10-26</guid>
+      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Agentic AI Defense: Decode-Time Provenance Binding for MCP (2026-10-26)</title>
+      <description>Agentic AI systems using the Model Context Protocol (MCP) are vulnerable to indirect prompt injection through untrusted tool outputs. We demonstrate cross-modal trust laundering, in which instructions...</description>
+      <link>http://arxiv.org/abs/2610.31974v1</link>
+      <guid>http://arxiv.org/abs/2610.31974v1#2026-10-26</guid>
+      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 On-Policy Self-Training: Data-Free Self-Improvement in Large Language Models (2026-10-26)</title>
+      <description>On-policy self-distillation enables post-training foundation models without relying on stronger external teachers. However, existing approaches rely on ground-truth question-answer pairs, human-curate...</description>
+      <link>https://arxiv.org/abs/2610.32770</link>
+      <guid>https://arxiv.org/abs/2610.32770#2026-10-26</guid>
+      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Network topology shapes consensus and vulnerability in LLM populations (2026-10-25)</title>
@@ -356,76 +426,6 @@
       <link>https://arxiv.org/abs/2610.28354</link>
       <guid>https://arxiv.org/abs/2610.28354#2026-10-21</guid>
       <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition (2026-10-21)</title>
-      <description>In this report, we introduce Sage-A1.5, a 35B Mixture-of-Experts agentic model that builds on A1 to advance long-horizon problem solving through adaptive capability composition. Compared with A1, Sage...</description>
-      <link>https://arxiv.org/abs/2610.28578</link>
-      <guid>https://arxiv.org/abs/2610.28578#2026-10-21</guid>
-      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SolarRenderer: Few-Step Generative Reference Rendering (2026-10-21)</title>
-      <description>Game engines and coding agents can specify the layout, motion, and camera of a scene, yet turning such coarse structure into realistic video requires a renderer that follows the structure and complete...</description>
-      <link>https://arxiv.org/abs/2610.28630</link>
-      <guid>https://arxiv.org/abs/2610.28630#2026-10-21</guid>
-      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Learning the 4D World through Point Trajectory Forecasting (2026-10-21)</title>
-      <description>Reliable multi-view forecasting requires videos from different cameras to describe the same evolving 3D scene. To this end, we introduce Video-Point Model (VPM), a world model that conditions on multi...</description>
-      <link>https://arxiv.org/abs/2610.28594</link>
-      <guid>https://arxiv.org/abs/2610.28594#2026-10-21</guid>
-      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MMEnterprise-Bench: Evaluating Enterprise Agents over Evolving Multimodal Records (2026-10-21)</title>
-      <description>Enterprise agents answer questions over workplace records that evolve through team collaboration. As information is shared, corrected, and revised across documents, chats, and figures, multiple versio...</description>
-      <link>https://arxiv.org/abs/2610.27911</link>
-      <guid>https://arxiv.org/abs/2610.27911#2026-10-21</guid>
-      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Specter: Fast MoE Inference via Quantization-Enabled Multi-Step Speculative Offloading (2026-10-21)</title>
-      <description>Mixture-of-experts (MoE) models often exceed a single accelerator's memory capacity. Offloading experts to host memory creates a severe PCIe I/O bottleneck because data-dependent routing keeps transfe...</description>
-      <link>https://arxiv.org/abs/2511.14102</link>
-      <guid>https://arxiv.org/abs/2511.14102#2026-10-21</guid>
-      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EvaOmni: An Evidence-Grounded Benchmark for Audio-Visual Reasoning (2026-10-21)</title>
-      <description>Omni LLMs can naturally locate key audio and visual evidence and integrate information across modalities for audiovisual reasoning. Existing audio-visual reasoning benchmarks that mainly rely on multi...</description>
-      <link>https://arxiv.org/abs/2610.28444</link>
-      <guid>https://arxiv.org/abs/2610.28444#2026-10-21</guid>
-      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Evolving Agent Interfaces (2026-10-21)</title>
-      <description>Computer-use agents are limited by the interfaces humans give them. An agent may type a spreadsheet cell by cell when a single line of code would do, or print all two thousand lines of a file through ...</description>
-      <link>https://arxiv.org/abs/2610.28601</link>
-      <guid>https://arxiv.org/abs/2610.28601#2026-10-21</guid>
-      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MemT-1.0: Towards Memory-Native Evolution (2026-10-20)</title>
-      <description>Memory-native evolution requires making memory an intrinsic capability of foundation models, enabling them to continuously accumulate and utilize information. To this end, we introduce MemT-1.0, a new...</description>
-      <link>https://arxiv.org/abs/2610.26825</link>
-      <guid>https://arxiv.org/abs/2610.26825#2026-10-20</guid>
-      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Learning from Fleet Experience: A Collective Learning Paradigm for Robots (2026-10-20)</title>
-      <description>Experience generated during deployment offers an opportunity for robots to improve policy reliability through learning from their own executions. However, learning through human corrections requires t...</description>
-      <link>https://arxiv.org/abs/2610.25736</link>
-      <guid>https://arxiv.org/abs/2610.25736#2026-10-20</guid>
-      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OpenVLHarness: Real World Visual Agentic Tool-Use with Multimodal Memory (2026-10-20)</title>
-      <description>Multimodal large language models (MLLMs) have made rapid progress on visual reasoning, yet many tasks require evidence that is difficult to obtain through internal reasoning alone: our controlled stud...</description>
-      <link>https://arxiv.org/abs/2610.26860</link>
-      <guid>https://arxiv.org/abs/2610.26860#2026-10-20</guid>
-      <pubDate>Tue, 20 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
