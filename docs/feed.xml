@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Mon, 26 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W44 (2026-10-20 ~ 2026-10-26)</title>
@@ -83,6 +83,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 StreamVibe: Proactive Video Agents for Evolving User Intent (2026-10-27)</title>
+      <description>Vision-language models are shifting from offline passive understanding toward online proactive interaction. However, prevailing methods largely rely on explicit requests while miss the implicit user i...</description>
+      <link>https://arxiv.org/abs/2610.34662</link>
+      <guid>https://arxiv.org/abs/2610.34662#2026-10-27</guid>
+      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Work Agents: Systems, Capabilities, and Optimization (2026-10-27)</title>
+      <description>As foundation models evolve from information generation to digital work execution, agents are increasingly capable of completing complex tasks across tools, applications, and workflows. However, exist...</description>
+      <link>https://arxiv.org/abs/2610.35845</link>
+      <guid>https://arxiv.org/abs/2610.35845#2026-10-27</guid>
+      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges (2026-10-27)</title>
+      <description>AI systems built around large models increasingly use experience and feedback to make persistent changes to models, prompts, memories, tools, and workflows. Recursive self-improvement (RSI) extends th...</description>
+      <link>https://arxiv.org/abs/2610.35193</link>
+      <guid>https://arxiv.org/abs/2610.35193#2026-10-27</guid>
+      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 S3AC: Stabilized, Selective, and Scalable Actor-Critic for LLM Reasoning (2026-10-27)</title>
+      <description>Critic-free methods are widely used in reinforcement learning with verifiable rewards (RLVR) for long chain-of-thought (CoT) reasoning, avoiding difficult and costly critic training. Common alternativ...</description>
+      <link>https://arxiv.org/abs/2610.35518</link>
+      <guid>https://arxiv.org/abs/2610.35518#2026-10-27</guid>
+      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Same Story, Different Lens: A Multi-Agent System for Cross-Outlet News Framing Analysis (2026-10-27)</title>
+      <description>News outlets covering the same event differ in what they emphasize and omit. \textit{Same Story, Different Lens} is an experimental research prototype for comparing these choices. It collects world an...</description>
+      <link>http://arxiv.org/abs/2610.35208v1</link>
+      <guid>http://arxiv.org/abs/2610.35208v1#2026-10-27</guid>
+      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EmbodiedLab: Benchmarking Embodied Agents That Act to Know (2026-10-27)</title>
+      <description>Embodied agents are expected to accomplish real-world goals by deciding for themselves how and when to interact with their surroundings. For many such goals, changing the physical state of the world i...</description>
+      <link>https://arxiv.org/abs/2610.35385</link>
+      <guid>https://arxiv.org/abs/2610.35385#2026-10-27</guid>
+      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Skill^{infty}: Recursive Self-Improvement for Agent Skill Optimization (2026-10-27)</title>
+      <description>Recursive self-improvement (RSI), in which a system also improves the way it improves, is a long-standing aspiration on the path to AGI. Language agents increasingly store procedural knowledge in reus...</description>
+      <link>https://arxiv.org/abs/2610.35434</link>
+      <guid>https://arxiv.org/abs/2610.35434#2026-10-27</guid>
+      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 I-HITL: Inalienable Human-in-the-Loop (2026-10-27)</title>
+      <description>Human oversight is a pillar of AI safety. It is often exercised by a human in the loop (HITL) who approves critical actions taken by an AI agent. AI agents' increasing ability to bypass guardrails, th...</description>
+      <link>http://arxiv.org/abs/2610.35835v1</link>
+      <guid>http://arxiv.org/abs/2610.35835v1#2026-10-27</guid>
+      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Reva: Real-Time Vulnerability Detection through Contextual Probing of Large Language Models (2026-10-27)</title>
+      <description>A vulnerability costs more to fix the later it is discovered. As coding agents generate code faster than developers can review it, software needs a first line of defense screening each new function in...</description>
+      <link>http://arxiv.org/abs/2610.35829v1</link>
+      <guid>http://arxiv.org/abs/2610.35829v1#2026-10-27</guid>
+      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 A Unified Arena for LLM Agents across Diverse Eurogame (2026-10-27)</title>
+      <description>Interactive environments offer a practical way to evaluate large language model (LLM) agents, and competitive games extend this evaluation to decisions shaped by competing goals and other agents' choi...</description>
+      <link>http://arxiv.org/abs/2610.35773v1</link>
+      <guid>http://arxiv.org/abs/2610.35773v1#2026-10-27</guid>
+      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 RSIHub: A Composable Framework for Agent-Evolution Methods (2026-10-26)</title>
@@ -363,76 +433,6 @@
       <link>https://arxiv.org/abs/2610.29357</link>
       <guid>https://arxiv.org/abs/2610.29357#2026-10-22</guid>
       <pubDate>Thu, 22 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 TraceForge: Distilling with Your Own Thinking (2026-10-22)</title>
-      <description>Using an LLM to generate training data for another is among the most general ways to train one, and it remains common practice. Some frontier teams have closed that route for their own models: what co...</description>
-      <link>https://arxiv.org/abs/2610.29680</link>
-      <guid>https://arxiv.org/abs/2610.29680#2026-10-22</guid>
-      <pubDate>Thu, 22 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Multimodal Embodied Agents: A Unified Capability-centric Perspective from Computer-Use to Robot-Use (2026-10-22)</title>
-      <description>Multimodal agents (MMAs) sustain interaction through reasoning, memory, tools, and feedback, most visibly as computer-use agents, while robotic systems (RSs) couple sensing and actuation under physica...</description>
-      <link>https://arxiv.org/abs/2610.30108</link>
-      <guid>https://arxiv.org/abs/2610.30108#2026-10-22</guid>
-      <pubDate>Thu, 22 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Sparsity Should Be ALLOTted by Output: Training-Free Allocation of Block-Sparse Attention for Video Diffusion Transformers (2026-10-22)</title>
-      <description>Full 3D attention is costly in video Diffusion Transformers. Block-sparse attention reduces this cost by computing only selected attention blocks. However, existing methods either overlook the potenti...</description>
-      <link>https://arxiv.org/abs/2610.29441</link>
-      <guid>https://arxiv.org/abs/2610.29441#2026-10-22</guid>
-      <pubDate>Thu, 22 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ALPS: Visual State Encoders for World Models (2026-10-22)</title>
-      <description>World models turn visual representations into predictions and actions. We argue that their visual foundation should combine physical-state information, native language alignment, and pixel reconstruct...</description>
-      <link>https://arxiv.org/abs/2610.30120</link>
-      <guid>https://arxiv.org/abs/2610.30120#2026-10-22</guid>
-      <pubDate>Thu, 22 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ToM2Vec: Continuous Theory-of-Mind Tokens for Multi-Agent Coordination (2026-10-22)</title>
-      <description>Forming an accurate theory-of-mind (ToM) is key to successful multi-agent collaboration and requires reasoning under uncertainty to capture multiple possible partner states. This is hard to do in the ...</description>
-      <link>http://arxiv.org/abs/2610.29934v1</link>
-      <guid>http://arxiv.org/abs/2610.29934v1#2026-10-22</guid>
-      <pubDate>Thu, 22 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Local Work, Global Progress: A Convergence Theory of AI Agent Collaboration (2026-10-22)</title>
-      <description>Teams of large language model (LLM) agents are increasingly applied to complex tasks, but their collaboration protocols are mostly designed empirically, without convergence guarantees. We formalize co...</description>
-      <link>http://arxiv.org/abs/2610.28286v1</link>
-      <guid>http://arxiv.org/abs/2610.28286v1#2026-10-22</guid>
-      <pubDate>Thu, 22 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PACE: Periodic and Channel-Aligned Encoding of Four-Bit Recurrent States (2026-10-22)</title>
-      <description>Linear-attention language models keep their context in a recurrent state of fixed size, where an inference system stores one copy of this state for every sequence it decodes at the same time. Storing ...</description>
-      <link>https://arxiv.org/abs/2610.29545</link>
-      <guid>https://arxiv.org/abs/2610.29545#2026-10-22</guid>
-      <pubDate>Thu, 22 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PAR: Progress-Aligned Recurrence for Length Generalization in State Tracking (2026-10-21)</title>
-      <description>Looped language models can run more iterations at test time, but additional iterations need not help them solve longer problems. For sequential state tracking, final-answer supervision does not specif...</description>
-      <link>https://arxiv.org/abs/2610.27628</link>
-      <guid>https://arxiv.org/abs/2610.27628#2026-10-21</guid>
-      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Matrix-Game 4.0: Harnessing Video Models for Real-Time Playable Game Worlds (2026-10-21)</title>
-      <description>Moving from controllable videos to genuinely playable worlds requires persistent world state, executable game rules, and low-latency interaction. We outline a roadmap for the next generation of Matrix...</description>
-      <link>https://arxiv.org/abs/2610.27999</link>
-      <guid>https://arxiv.org/abs/2610.27999#2026-10-21</guid>
-      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 S-Agent 2.0: Spatial Reasoning with a General Coding Agent (2026-10-21)</title>
-      <description>Spatial reasoning asks a model to work out where objects are in 3D space, how they relate to one another, and how they move. Agentic VLMs have recently brought large improvements on such tasks by lett...</description>
-      <link>https://arxiv.org/abs/2610.28354</link>
-      <guid>https://arxiv.org/abs/2610.28354#2026-10-21</guid>
-      <pubDate>Wed, 21 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
