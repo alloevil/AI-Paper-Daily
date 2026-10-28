@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Tue, 27 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W44 (2026-10-20 ~ 2026-10-26)</title>
@@ -83,6 +83,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations (2026-10-28)</title>
+      <description>Vision--Language--Action (VLA) models generate robot actions from visual observations and language instructions, but their understanding of physical dynamics remains limited. Video world models can ca...</description>
+      <link>https://arxiv.org/abs/2610.37381</link>
+      <guid>https://arxiv.org/abs/2610.37381#2026-10-28</guid>
+      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Hy-Nomas: Towards Free-form Interactive World Generation (2026-10-28)</title>
+      <description>Interactive world generation requires models to follow successive commands while preserving relevant history and action consequences. We present Hy-Nomas, a video world model with an 8B diffusion back...</description>
+      <link>https://arxiv.org/abs/2610.36729</link>
+      <guid>https://arxiv.org/abs/2610.36729#2026-10-28</guid>
+      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CodeCap-Bench: Can Code Serve as a Good Video Caption? (2026-10-28)</title>
+      <description>Video captioning aims to preserve visual information through compact descriptions, predominantly using natural language. However, precisely expressing fine-grained spatial structures and temporal dyna...</description>
+      <link>https://arxiv.org/abs/2610.37341</link>
+      <guid>https://arxiv.org/abs/2610.37341#2026-10-28</guid>
+      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning (2026-10-28)</title>
+      <description>Vision-Language-Action (VLA) models have made substantial progress in robotic manipulation, but their generalization remains constrained by the diversity and coverage of action-labeled robot demonstra...</description>
+      <link>https://arxiv.org/abs/2610.37666</link>
+      <guid>https://arxiv.org/abs/2610.37666#2026-10-28</guid>
+      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Can Discrete Tokens Serve as Semantically Lossless Representations of Visual Signals? (2026-10-28)</title>
+      <description>Discrete visual tokens represent vision in a discrete form analogous to language, offering a native interface for multimodal modeling under a shared next-token prediction objective. However, quantizat...</description>
+      <link>https://arxiv.org/abs/2610.37662</link>
+      <guid>https://arxiv.org/abs/2610.37662#2026-10-28</guid>
+      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 LociArt: A Unified Paradigm for Free-Style Local Video Stylization (2026-10-28)</title>
+      <description>Video stylization typically transforms entire scenes, while local artistic editing requires precise region--style association, spatial control, and temporal consistency. We introduce LociArt, a unifie...</description>
+      <link>https://arxiv.org/abs/2610.36456</link>
+      <guid>https://arxiv.org/abs/2610.36456#2026-10-28</guid>
+      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Zooming without Zooming v2: From Seeing Details to Connecting Evidence for Generalizable Multimodal Perception (2026-10-28)</title>
+      <description>Multimodal perception forms the foundation of multimodal intelligence. In particular, spatial perception and multimodal long-context understanding are two pivotal tasks that underpin embodied AI and m...</description>
+      <link>https://arxiv.org/abs/2610.37037</link>
+      <guid>https://arxiv.org/abs/2610.37037#2026-10-28</guid>
+      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 VibeVideoBench: Evaluating Multimodal Agents on Code-Driven Video Generation (2026-10-28)</title>
+      <description>Diffusion video models produce striking clips, but they cannot reliably render an exact formula, a correct chart, a rule-consistent game or narration synchronized to on-screen events. A different rout...</description>
+      <link>https://arxiv.org/abs/2610.35864</link>
+      <guid>https://arxiv.org/abs/2610.35864#2026-10-28</guid>
+      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Channel Selection for Mixture-of-Experts Decoding Needs No Calibration Data (2026-10-28)</title>
+      <description>Mixture-of-Experts (MoE) models are bottlenecked by loading routed-expert weights from memory during interactive decoding at small batch sizes. Because most intermediate channels in a routed expert co...</description>
+      <link>https://arxiv.org/abs/2610.37386</link>
+      <guid>https://arxiv.org/abs/2610.37386#2026-10-28</guid>
+      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Concordat: Typed Sessions for LLM Agents (2026-10-28)</title>
+      <description>Agents built on large language models are increasingly allowed to take consequential actions: cancelling bookings, issuing refunds, changing accounts. The rules that govern those actions, such as &quot;obt...</description>
+      <link>http://arxiv.org/abs/2610.37461v1</link>
+      <guid>http://arxiv.org/abs/2610.37461v1#2026-10-28</guid>
+      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 StreamVibe: Proactive Video Agents for Evolving User Intent (2026-10-27)</title>
@@ -363,76 +433,6 @@
       <link>https://arxiv.org/abs/2610.31329</link>
       <guid>https://arxiv.org/abs/2610.31329#2026-10-23</guid>
       <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Cola2: Co-Adaptive Hierarchical Language Modeling with Continuous Semantic Compression and Balanced Discrete Generation (2026-10-23)</title>
-      <description>Hierarchical language generation separates continuous semantic modeling from discrete text realization, but its effectiveness depends on what the latent space compresses and how the discrete generator...</description>
-      <link>https://arxiv.org/abs/2610.31305</link>
-      <guid>https://arxiv.org/abs/2610.31305#2026-10-23</guid>
-      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Beyond Watching and Searching: Benchmarking Agents for Video-centered Deep Research Reports (2026-10-23)</title>
-      <description>Deep research agents synthesize open-web evidence into long reports, but current benchmarks do not evaluate research centered on a source video. We introduce Video-Centered Deep Research Report Genera...</description>
-      <link>https://arxiv.org/abs/2610.31158</link>
-      <guid>https://arxiv.org/abs/2610.31158#2026-10-23</guid>
-      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Verus-Insight: Towards Explainable Artifact Detection in AI-Generated Videos (2026-10-23)</title>
-      <description>Recent advances in video generation have made synthetic videos increasingly realistic, placing greater demands on reliable AI-generated video detection. Existing artifact-based detectors typically ide...</description>
-      <link>https://arxiv.org/abs/2610.30866</link>
-      <guid>https://arxiv.org/abs/2610.30866#2026-10-23</guid>
-      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Feedback That Backfires in Games: Do LLM Players Repeat the Move They Just Watched Fail? (2026-10-23)</title>
-      <description>When an LLM agent's move fails, the harness writes the move and the failure message into the transcript and asks again. In tool calling, this record makes small models more likely to repeat the failed...</description>
-      <link>http://arxiv.org/abs/2610.30205v1</link>
-      <guid>http://arxiv.org/abs/2610.30205v1#2026-10-23</guid>
-      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Rethinking Sequence Compression with Test-time Regression (2026-10-23)</title>
-      <description>Sequence compression is a fundamental operation and a critical information bottleneck in efficient language and multimodal models, and yet prevailing approaches based on pooling or learned projections...</description>
-      <link>https://arxiv.org/abs/2610.31574</link>
-      <guid>https://arxiv.org/abs/2610.31574#2026-10-23</guid>
-      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Is Complex Agentic Memory Always Needed? Naive RAG Is Stronger Than We Thought (2026-10-23)</title>
-      <description>LLM memory is widely used in long-term conversation understanding. Agentic memory systems often use mutation, structural organization, learned retrieval strategies, or other complex operations. Is thi...</description>
-      <link>https://arxiv.org/abs/2610.30755</link>
-      <guid>https://arxiv.org/abs/2610.30755#2026-10-23</guid>
-      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AgentVQA: A Unified Benchmark for Agentic Visual Understanding (2026-10-23)</title>
-      <description>Vision-language models (VLMs) can perform a broad range of tasks across diverse settings, yet their performance in agentic contexts remains poorly understood. Although online evaluations in simulators...</description>
-      <link>https://arxiv.org/abs/2610.31494</link>
-      <guid>https://arxiv.org/abs/2610.31494#2026-10-23</guid>
-      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation (2026-10-22)</title>
-      <description>Autoregressive video diffusion models generate videos chunk by chunk, yet producing plausible continuations does not guarantee that they capture how scenes evolve. Under teacher forcing, strong tempor...</description>
-      <link>https://arxiv.org/abs/2610.29989</link>
-      <guid>https://arxiv.org/abs/2610.29989#2026-10-22</guid>
-      <pubDate>Thu, 22 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations (2026-10-22)</title>
-      <description>Despite recent progress in dexterous reference tracking, existing models focus primarily on single-hand manipulation and a limited range of interactions, leaving the bimanual dexterous behaviors commo...</description>
-      <link>https://arxiv.org/abs/2610.29997</link>
-      <guid>https://arxiv.org/abs/2610.29997#2026-10-22</guid>
-      <pubDate>Thu, 22 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Memory-Centric Continual Learning for AI Agents (2026-10-22)</title>
-      <description>Autonomous agents powered by foundation models can reason, plan, and use tools, but their fixed weights and context limits hinder sustained learning from experience over long-term deployment. While ex...</description>
-      <link>https://arxiv.org/abs/2610.29357</link>
-      <guid>https://arxiv.org/abs/2610.29357#2026-10-22</guid>
-      <pubDate>Thu, 22 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
