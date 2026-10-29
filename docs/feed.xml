@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W44 (2026-10-20 ~ 2026-10-26)</title>
@@ -83,6 +83,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AutoRSE: Evaluating LLM Agents as Recommendation Engineers for Self-Evolving Recommender Systems (2026-10-29)</title>
+      <description>Recommender Systems Engineer Agents (RSE-Agents), which use LLM-based agents to autonomously improve recommendation algorithms, are emerging as a promising paradigm. However, their capabilities and li...</description>
+      <link>http://arxiv.org/abs/2610.37228v1</link>
+      <guid>http://arxiv.org/abs/2610.37228v1#2026-10-29</guid>
+      <pubDate>Thu, 29 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Attention as Lattice Gauge Theory: Relations Interact Only Through Wilson Loops (2026-10-29)</title>
+      <description>Relations compose through the entity they share - Alice is Bob's mother and Bob is Carol's father, so Alice is Carol's grandmother - and the order matters, since a father's mother is not a mother's fa...</description>
+      <link>http://arxiv.org/abs/2610.37656v1</link>
+      <guid>http://arxiv.org/abs/2610.37656v1#2026-10-29</guid>
+      <pubDate>Thu, 29 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Can LLMs Uncover Hidden Physical Laws through Free Exploration? (2026-10-29)</title>
+      <description>Scientific discovery often begins with an unexpected observation that prompts a new research question. In a world with altered physical laws, can large language models (LLMs) notice unexpected behavio...</description>
+      <link>http://arxiv.org/abs/2610.37649v1</link>
+      <guid>http://arxiv.org/abs/2610.37649v1#2026-10-29</guid>
+      <pubDate>Thu, 29 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Clearing the FoG: Training KG Agents to Retrieve the Evidence Behind Their Answers (2026-10-29)</title>
+      <description>Large language models (LLMs) can answer many factual questions correctly, but a correct answer is not necessarily a supported one. For an LLM agent, a knowledge graph (KG) plays two roles: as a source...</description>
+      <link>http://arxiv.org/abs/2610.37405v1</link>
+      <guid>http://arxiv.org/abs/2610.37405v1#2026-10-29</guid>
+      <pubDate>Thu, 29 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Agent-Conditioned Routing: Diverse Reasoning Paths Within One Frozen Model (2026-10-29)</title>
+      <description>Generating several solutions can expose alternative methods, but additional trajectories often paraphrase one dominant approach. We investigate whether the conditional capacity of a frozen sparse mixt...</description>
+      <link>http://arxiv.org/abs/2610.37375v1</link>
+      <guid>http://arxiv.org/abs/2610.37375v1#2026-10-29</guid>
+      <pubDate>Thu, 29 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Aligning Institutional Power and Operational Ability (2026-10-29)</title>
+      <description>To be socially sustainable, Agentic AI systems require normative designs that align responsibilities with the ability to fulfil them. Identifying incongruences such as unsatisfiable expectations or pr...</description>
+      <link>http://arxiv.org/abs/2610.37342v1</link>
+      <guid>http://arxiv.org/abs/2610.37342v1#2026-10-29</guid>
+      <pubDate>Thu, 29 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AnalogScout: Simulation-Efficient PVT-Aware Analog Sizing with LLM Agents (2026-10-29)</title>
+      <description>Analog device sizing must satisfy all specifications across process, voltage, and temperature (PVT) corners to ensure tape-out success, but simulating every candidate at all corners dominates the sizi...</description>
+      <link>http://arxiv.org/abs/2610.37319v1</link>
+      <guid>http://arxiv.org/abs/2610.37319v1#2026-10-29</guid>
+      <pubDate>Thu, 29 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Grounding LLM Agents in Business Processes: Process-Aware Knowledge Graphs for Reliable Multi-Step Service Invocation (2026-10-29)</title>
+      <description>Large language model (LLM) agents that call enterprise APIs must select the correct endpoints, follow process order, use valid payload keys, and choose coded values from predefined lists. However, cur...</description>
+      <link>http://arxiv.org/abs/2610.37242v1</link>
+      <guid>http://arxiv.org/abs/2610.37242v1#2026-10-29</guid>
+      <pubDate>Thu, 29 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 GraphRAGProv: GraphRAG Meets How-Provenance (2026-10-29)</title>
+      <description>GraphRAG systems often use knowledge graphs to retrieve relevant context for an LLM that produces the final answer. That makes answers more inscrutable and therefore less appealing for domains where t...</description>
+      <link>http://arxiv.org/abs/2610.37237v1</link>
+      <guid>http://arxiv.org/abs/2610.37237v1#2026-10-29</guid>
+      <pubDate>Thu, 29 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Prospector: learning a compact graph traversal policy for scientific reasoning (2026-10-29)</title>
+      <description>Scientific reasoning in specialized engineering fields depends on knowledge scattered across the literature, often proprietary and absent from frontier LLM training data. In such domains, frontier mod...</description>
+      <link>http://arxiv.org/abs/2610.37121v1</link>
+      <guid>http://arxiv.org/abs/2610.37121v1#2026-10-29</guid>
+      <pubDate>Thu, 29 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations (2026-10-28)</title>
@@ -363,76 +433,6 @@
       <link>http://arxiv.org/abs/2610.31483v1</link>
       <guid>http://arxiv.org/abs/2610.31483v1#2026-10-24</guid>
       <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Certified Execution Harness for Agentic AI: Safe and Least-Intrusive Petri-Net Supervisory Control Between Reasoning and Action (2026-10-24)</title>
-      <description>This paper studies the problem of safe tool execution for large language model (LLM) agents under prompt injection. Using Petri nets, we formalize the execution harness between the LLM and its tools a...</description>
-      <link>http://arxiv.org/abs/2610.31376v1</link>
-      <guid>http://arxiv.org/abs/2610.31376v1#2026-10-24</guid>
-      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AfterDeleteBench: Auditing Post-Deletion Information Persistence in LLM Agents (2026-10-24)</title>
-      <description>Many LLM agents maintain external persistent memory and derive additional state from past interactions, such as summaries. Deleting an original memory record therefore need not remove information carr...</description>
-      <link>http://arxiv.org/abs/2610.31366v1</link>
-      <guid>http://arxiv.org/abs/2610.31366v1#2026-10-24</guid>
-      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Muffin - A Shared Memory Buffer for Asynchronous AI Agents (2026-10-24)</title>
-      <description>The rise of Agentic AI systems has changed the landscape of artificial intelligence by enabling strong reasoning capabilities through specialized multi-agent interaction with structured self-reflectio...</description>
-      <link>http://arxiv.org/abs/2610.31355v1</link>
-      <guid>http://arxiv.org/abs/2610.31355v1#2026-10-24</guid>
-      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Automating Feature Flag Cleanup at Scale with Multi-Agent LLM Systems: An Industrial Experience at DoorDash (2026-10-24)</title>
-      <description>Feature flags are runtime configuration mechanisms used for gradual feature rollouts, experimentation, and kill switches. Once a feature is fully rolled out, the flag and its gated code become technic...</description>
-      <link>http://arxiv.org/abs/2610.31351v1</link>
-      <guid>http://arxiv.org/abs/2610.31351v1#2026-10-24</guid>
-      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Consistent but Biased: Chair Personas Trade Noise for Bias in Multi-Agent Clinical Decisions (2026-10-24)</title>
-      <description>In clinical systems built from several large language model (LLM) agents, one agent often chairs the discussion and makes the final decision. Whether the chair's persona prompt changes that decision, ...</description>
-      <link>http://arxiv.org/abs/2610.31325v1</link>
-      <guid>http://arxiv.org/abs/2610.31325v1#2026-10-24</guid>
-      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SurveyGraph: Generating Academic Surveys via Methods-Entity Knowledge Graphs (2026-10-24)</title>
-      <description>Most automated survey generation systems retrieve papers as flat documents, limiting their ability to capture research structure. We present SurveyGraph, a framework built around a Methods-Entity Know...</description>
-      <link>http://arxiv.org/abs/2610.31317v1</link>
-      <guid>http://arxiv.org/abs/2610.31317v1#2026-10-24</guid>
-      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PointerBench: A Diagnostic Benchmark for Fine-Grained GUI Grounding (2026-10-24)</title>
-      <description>Multimodal Large Language Models have shown promising performance in computer-use tasks, from planning user workflows to grounding natural-language actions to precise UI targets. Existing end-to-end b...</description>
-      <link>http://arxiv.org/abs/2610.31274v1</link>
-      <guid>http://arxiv.org/abs/2610.31274v1#2026-10-24</guid>
-      <pubDate>Sat, 24 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Making MLLM Latents Matter: Factor-Aware Predictive Learning for Cinematic Video Generation (2026-10-23)</title>
-      <description>Cinematic video generation requires both temporal inference from limited inputs (i.e., sparse rather than frame-by-frame guidance) and factor-aware control of character, scene, action, and camera. Mul...</description>
-      <link>https://arxiv.org/abs/2610.30926</link>
-      <guid>https://arxiv.org/abs/2610.30926#2026-10-23</guid>
-      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 IQuest-Q1: Advancing Foundation Capabilities for Agentic CLI Systems (2026-10-23)</title>
-      <description>We present IQuest-Q1, a sparse Mixture-of-Experts (MoE) agentic foundation model with 320B total parameters (15B activated). IQuest-Q1 is developed through a three-stage process: (1) stable and effici...</description>
-      <link>https://arxiv.org/abs/2610.30949</link>
-      <guid>https://arxiv.org/abs/2610.30949#2026-10-23</guid>
-      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 WeVisOne-VL: Unified Visual Perception from Objects to Pixels (2026-10-23)</title>
-      <description>Existing vision-language models (VLMs) remain unreliable for fine-grained visual perception. In this report, we present WeVisOne-VL (WeChat Vision All-in-One), a powerful VLM that unifies object-level...</description>
-      <link>https://arxiv.org/abs/2610.31329</link>
-      <guid>https://arxiv.org/abs/2610.31329#2026-10-23</guid>
-      <pubDate>Fri, 23 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

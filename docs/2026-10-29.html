@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily digest 2026-10-29 (Thu) — AI Paper Daily</title>
+<meta name="description" content="2026-10-29 (Thu) · 10 papers: AutoRSE: Evaluating LLM Agents as Recommendation Engineers for Self-Evolving Recommender Systems; Attention as Lattice Gauge Theory: Relations Interact Only Through Wilson Loops; Can LLMs Uncover Hidden Physical Laws through Free Exploration?…">
+<link rel="canonical" href="https://alloevil.github.io/AI-Paper-Daily/2026-10-29.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://alloevil.github.io/AI-Paper-Daily/2026-10-29.html">
+<meta property="og:title" content="Daily digest 2026-10-29 (Thu) — AI Paper Daily">
+<meta property="og:description" content="2026-10-29 (Thu) · 10 papers: AutoRSE: Evaluating LLM Agents as Recommendation Engineers for Self-Evolving Recommender Systems; Attention as Lattice Gauge Theory: Relations Interact Only Through Wilson Loops; Can LLMs Uncover Hidden Physical Laws through Free Exploration?…">
+<meta property="og:site_name" content="AI Paper Daily">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
+<script>
+  // 首次绘制前定妥主题：auto（默认，交给 prefers-color-scheme）/ light / dark。
+  // 只有显式选择才写 data-theme —— auto 时不写，系统切换就由 CSS 媒体查询实时接管。
+  (function () {
+    try {
+      var t = localStorage.getItem('paperTheme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<style>
+  /* Same token set as docs/template.html: light is the base, dark only under
+     prefers-color-scheme and deliberately not pure black. Every text colour is >=4.5:1 on
+     canvas / surface-1 / surface-2, every non-text colour >=3:1 (WCAG 2.2 SC 1.4.3 / 1.4.11). */
+  :root {
+    color-scheme: light;
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --blue: #2563eb;
+    --ink: #14161c;
+    --ink-muted: #3d4350;
+    --ink-subtle: #565d6a;
+    --ink-tertiary: #666d7a;
+    --canvas: #ffffff;
+    --surface-1: #f8f9fb;
+    --surface-2: #f0f2f7;
+    --hairline: #e4e7ed;
+    --hairline-strong: #cdd3dd;
+    --focus: #4f46e5;
+    --font-sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --primary: #6366f1;
+      --primary-hover: #a5b4fc;
+      --blue: #60a5fa;
+      --ink: #eceef2;
+      --ink-muted: #c3c8d2;
+      --ink-subtle: #9aa2af;
+      --ink-tertiary: #7f8794;
+      --canvas: #0b0d10;
+      --surface-1: #12141a;
+      --surface-2: #191c22;
+      --hairline: #262c36;
+      --hairline-strong: #363d47;
+      --focus: #a5b4fc;
+    }
+  }
+  /* Explicit dark: :root[data-theme] outranks the :root inside the media query, so it wins even
+     when the system is light. These values must match the block above verbatim (tests/test_theme.py
+     asserts it). */
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --primary: #6366f1;
+    --primary-hover: #a5b4fc;
+    --blue: #60a5fa;
+    --ink: #eceef2;
+    --ink-muted: #c3c8d2;
+    --ink-subtle: #9aa2af;
+    --ink-tertiary: #7f8794;
+    --canvas: #0b0d10;
+    --surface-1: #12141a;
+    --surface-2: #191c22;
+    --hairline: #262c36;
+    --hairline-strong: #363d47;
+    --focus: #a5b4fc;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  /* Keyboard focus must be visible (WCAG 2.2 SC 2.4.7). */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  select:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+  body { font-family: var(--font-sans); background: var(--canvas); color: var(--ink);
+         -webkit-font-smoothing: antialiased; line-height: 1.5; }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .masthead { padding: 16px 0 2px; display: flex; align-items: center;
+               flex-wrap: wrap; gap: 8px 16px; }
+  /* Wordmark lives in the utility bar, not as a heading - one title block per page. */
+  .brand-name { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600;
+                 letter-spacing: -0.01em; color: var(--ink); text-decoration: none; }
+  .brand-icon { font-size: 16px; }
+  .brand-name:hover { color: var(--primary-hover); }
+  /* The issue head is the page title: kicker (issue no.), date as H1, meta under it. */
+  .issue-head { padding: 10px 0 4px; }
+  .issue-kicker { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+                   color: var(--ink-tertiary); font-variant-numeric: tabular-nums; }
+  .issue-date { font-size: 32px; font-weight: 700; letter-spacing: -0.7px; line-height: 1.15; margin: 6px 0 8px; }
+  .issue-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px;
+                 flex-wrap: wrap; padding-bottom: 12px; }
+  .issue-meta { font-size: 14px; color: var(--ink-subtle); font-variant-numeric: tabular-nums; }
+  .masthead a { padding: 6px 14px; font-size: 14px; font-weight: 500; color: var(--ink-subtle);
+                 border: 1px solid var(--hairline); border-radius: 8px; text-decoration: none; }
+  .masthead a:hover { color: var(--ink); border-color: var(--hairline-strong); }
+  /* Nav chips are direct children of .nav, so the flex gap has to live here too. */
+  .nav { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .theme-toggle { padding: 5px 12px; font-size: 14px; font-weight: 500; font-family: var(--font-sans);
+                   color: var(--ink-subtle); background: transparent; border: 1px solid var(--hairline);
+                   border-radius: 8px; cursor: pointer; white-space: nowrap; }
+  .theme-toggle:hover { color: var(--ink); border-color: var(--hairline-strong); }
+  .paper-card { display: flex; padding: 18px 0; border-radius: 8px; }
+  .paper-card:hover { background: var(--surface-1); }
+  .paper-card + .paper-card { border-top: 1px solid var(--hairline); }
+  .paper-index { flex-shrink: 0; width: 2.6em; padding-top: 3px; font-size: 14px; font-weight: 600;
+                  font-variant-numeric: tabular-nums; color: var(--ink-tertiary); }
+  .paper-content { flex: 1; min-width: 0; }
+  .paper-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+  .paper-title { font-size: 18px; font-weight: 600; color: var(--ink); text-decoration: none; line-height: 1.4; }
+  .paper-title:hover { color: var(--primary-hover); }
+  .paper-tag { display: inline-block; padding: 1px 8px; font-size: 13px; font-weight: 500;
+                color: var(--ink-muted); background: var(--surface-2); border: 1px solid var(--hairline);
+                border-radius: 10px; white-space: nowrap; flex-shrink: 0; }
+  .paper-abstract { font-size: 16px; color: var(--ink-subtle); margin-bottom: 8px; line-height: 1.65;
+                     max-width: 68ch; padding-left: 12px; border-left: 2px solid var(--hairline); }
+  .paper-links { display: flex; gap: 8px; font-size: 14px; }
+  .paper-links a { display: inline-flex; align-items: center; min-height: 24px;
+                    color: var(--ink-subtle); text-decoration: none; }
+  .paper-links a:hover { color: var(--primary-hover); }
+  .footer { margin-top: 48px; padding: 24px 0; border-top: 1px solid var(--hairline);
+             text-align: center; font-size: 13px; color: var(--ink-tertiary); }
+  .footer a { color: var(--ink-subtle); text-decoration: none; }
+  .footer a:hover { color: var(--ink); }
+  @media (max-width: 640px) {
+    .container { padding: 0 16px; }
+    .paper-header { flex-direction: column; gap: 4px; }
+    .issue-date { font-size: 24px; }
+    .paper-index { width: 2.2em; }
+    .paper-links { flex-wrap: wrap; }
+  }
+    /* 跨页导航的过渡：与首页同一套 View Transition，浏览器不支持时退化为瞬切。
+       日报/周报页只有这一处动效，所以 reduced-motion 一关就完全静止。 */
+    @view-transition { navigation: auto; }
+    ::view-transition-old(root) { animation-duration: .18s; }
+    ::view-transition-new(root) { animation-duration: .22s; }
+
+    /* reduced-motion: the cross-document transition above is the only motion here; switching it
+       off changes no information. */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-delay: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+      }
+      /* View Transition 的伪元素不在 `*` 的匹配范围内，必须单独关掉 */
+      ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) {
+        animation: none !important;
+      }
+    }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Daily digest | 2026-10-29 (Thu)",
+  "datePublished": "2026-10-29",
+  "inLanguage": "en",
+  "url": "https://alloevil.github.io/AI-Paper-Daily/2026-10-29.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "AI Paper Daily",
+    "url": "https://alloevil.github.io/AI-Paper-Daily"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "alloevil",
+    "url": "https://github.com/alloevil"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Newest"
+    },
+    {
+      "@type": "Thing",
+      "name": "Code"
+    },
+    {
+      "@type": "Thing",
+      "name": "High votes"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <div class="container">
+    <header class="masthead">
+      <a class="brand-name" href="./"><span class="brand-icon">📊</span>AI Paper Daily</a>
+      <div class="nav"><a href="./">← Back to the digest</a><a href="2026-10-28.html">← Previous day</a><button type="button" id="theme-toggle" class="theme-toggle" onclick="cycleTheme()">◐ Auto</button></div>
+    </header>
+    <div class="issue-head">
+      <p class="issue-kicker">Issue 101</p>
+      <h1 class="issue-date">Thu, 29 Oct 2026</h1>
+      <div class="issue-foot">
+        <p class="issue-meta">10 papers</p>
+      </div>
+    </div>
+      <article class="paper-card" data-relevance="3" data-tags="high-votes,code">
+        <span class="paper-index" aria-hidden="true">01</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="http://arxiv.org/abs/2610.37228v1" target="_blank" rel="noopener">AutoRSE: Evaluating LLM Agents as Recommendation Engineers for Self-Evolving Recommender Systems</a>
+            <span class="paper-tag">High votes · Code</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Recommender Systems Engineer Agents (RSE-Agents), which use LLM-based agents to autonomously improve recommendation algorithms, are emerging as a promising paradigm. However, their capabilities and li...</blockquote>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2610.37228v1" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2610.37228v1" target="_blank" rel="noopener">📥 PDF</a> · <a href="https://github.com/Ray-Tiann/AutoRSE" target="_blank" rel="noopener">💻 Code</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="2" data-tags="newest">
+        <span class="paper-index" aria-hidden="true">02</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="http://arxiv.org/abs/2610.37656v1" target="_blank" rel="noopener">Attention as Lattice Gauge Theory: Relations Interact Only Through Wilson Loops</a>
+            <span class="paper-tag">Newest</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Relations compose through the entity they share - Alice is Bob&#39;s mother and Bob is Carol&#39;s father, so Alice is Carol&#39;s grandmother - and the order matters, since a father&#39;s mother is not a mother&#39;s fa...</blockquote>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2610.37656v1" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2610.37656v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="2" data-tags="newest">
+        <span class="paper-index" aria-hidden="true">03</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="http://arxiv.org/abs/2610.37649v1" target="_blank" rel="noopener">Can LLMs Uncover Hidden Physical Laws through Free Exploration?</a>
+            <span class="paper-tag">Newest</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Scientific discovery often begins with an unexpected observation that prompts a new research question. In a world with altered physical laws, can large language models (LLMs) notice unexpected behavio...</blockquote>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2610.37649v1" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2610.37649v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="2" data-tags="newest">
+        <span class="paper-index" aria-hidden="true">04</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="http://arxiv.org/abs/2610.37405v1" target="_blank" rel="noopener">Clearing the FoG: Training KG Agents to Retrieve the Evidence Behind Their Answers</a>
+            <span class="paper-tag">Newest</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Large language models (LLMs) can answer many factual questions correctly, but a correct answer is not necessarily a supported one. For an LLM agent, a knowledge graph (KG) plays two roles: as a source...</blockquote>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2610.37405v1" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2610.37405v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="2" data-tags="newest">
+        <span class="paper-index" aria-hidden="true">05</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="http://arxiv.org/abs/2610.37375v1" target="_blank" rel="noopener">Agent-Conditioned Routing: Diverse Reasoning Paths Within One Frozen Model</a>
+            <span class="paper-tag">Newest</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Generating several solutions can expose alternative methods, but additional trajectories often paraphrase one dominant approach. We investigate whether the conditional capacity of a frozen sparse mixt...</blockquote>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2610.37375v1" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2610.37375v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="2" data-tags="newest">
+        <span class="paper-index" aria-hidden="true">06</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="http://arxiv.org/abs/2610.37342v1" target="_blank" rel="noopener">Aligning Institutional Power and Operational Ability</a>
+            <span class="paper-tag">Newest</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">To be socially sustainable, Agentic AI systems require normative designs that align responsibilities with the ability to fulfil them. Identifying incongruences such as unsatisfiable expectations or pr...</blockquote>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2610.37342v1" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2610.37342v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="2" data-tags="newest">
+        <span class="paper-index" aria-hidden="true">07</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="http://arxiv.org/abs/2610.37319v1" target="_blank" rel="noopener">AnalogScout: Simulation-Efficient PVT-Aware Analog Sizing with LLM Agents</a>
+            <span class="paper-tag">Newest</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Analog device sizing must satisfy all specifications across process, voltage, and temperature (PVT) corners to ensure tape-out success, but simulating every candidate at all corners dominates the sizi...</blockquote>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2610.37319v1" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2610.37319v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="2" data-tags="newest">
+        <span class="paper-index" aria-hidden="true">08</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="http://arxiv.org/abs/2610.37242v1" target="_blank" rel="noopener">Grounding LLM Agents in Business Processes: Process-Aware Knowledge Graphs for Reliable Multi-Step Service Invocation</a>
+            <span class="paper-tag">Newest</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Large language model (LLM) agents that call enterprise APIs must select the correct endpoints, follow process order, use valid payload keys, and choose coded values from predefined lists. However, cur...</blockquote>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2610.37242v1" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2610.37242v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="2" data-tags="newest">
+        <span class="paper-index" aria-hidden="true">09</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="http://arxiv.org/abs/2610.37237v1" target="_blank" rel="noopener">GraphRAGProv: GraphRAG Meets How-Provenance</a>
+            <span class="paper-tag">Newest</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">GraphRAG systems often use knowledge graphs to retrieve relevant context for an LLM that produces the final answer. That makes answers more inscrutable and therefore less appealing for domains where t...</blockquote>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2610.37237v1" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2610.37237v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+      <article class="paper-card" data-relevance="2" data-tags="newest">
+        <span class="paper-index" aria-hidden="true">10</span>
+        <div class="paper-content">
+          <div class="paper-header">
+            <a class="paper-title" lang="en" href="http://arxiv.org/abs/2610.37121v1" target="_blank" rel="noopener">Prospector: learning a compact graph traversal policy for scientific reasoning</a>
+            <span class="paper-tag">Newest</span>
+          </div>
+          <blockquote class="paper-abstract" lang="en">Scientific reasoning in specialized engineering fields depends on knowledge scattered across the literature, often proprietary and absent from frontier LLM training data. In such domains, frontier mod...</blockquote>
+          <div class="paper-links"><a href="http://arxiv.org/abs/2610.37121v1" target="_blank" rel="noopener">📄 Paper</a> · <a href="https://arxiv.org/pdf/2610.37121v1" target="_blank" rel="noopener">📥 PDF</a></div>
+        </div>
+      </article>
+    <footer class="footer">
+      <p class="footer-tagline">AI Paper Daily — daily digest of agent, RAG and knowledge-graph papers</p>
+      <p>Built by <a href="https://github.com/alloevil">alloevil</a> · <a href="https://github.com/alloevil/AI-Paper-Daily">GitHub</a> · <a href="https://alloevil.github.io/AI-Paper-Daily/feed.xml">RSS</a></p>
+    </footer>
+  </div>
+<script>
+// --- 主题：auto（跟随系统）→ light → dark 循环，选择存 localStorage。 ---
+// auto 时不写 data-theme，系统切换由 CSS 媒体查询实时接管；显式选择才写属性覆盖它。
+const THEME_KEY = 'paperTheme';
+const THEME_LABELS = { auto: '◐ Auto', light: '☀ Light', dark: '☾ Dark' };
+
+function currentTheme() {
+  const t = document.documentElement.getAttribute('data-theme');
+  return (t === 'light' || t === 'dark') ? t : 'auto';
+}
+
+// theme-color 跟着走：auto 时交回给两条 media 查询，显式选择时把两条都改成同一个色。
+function syncThemeColor(mode) {
+  const metas = Array.from(document.querySelectorAll('meta[name="theme-color"]'));
+  if (metas.length < 2) return;
+  if (mode === 'auto') {
+    metas[0].setAttribute('media', '(prefers-color-scheme: light)');
+    metas[0].setAttribute('content', '#ffffff');
+    metas[1].setAttribute('media', '(prefers-color-scheme: dark)');
+    metas[1].setAttribute('content', '#0b0d10');
+  } else {
+    metas.forEach(m => { m.removeAttribute('media'); m.setAttribute('content', mode === 'dark' ? '#0b0d10' : '#ffffff'); });
+  }
+}
+
+function renderThemeButton(mode) {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.textContent = THEME_LABELS[mode];
+  btn.title = 'Theme: ' + THEME_LABELS[mode] + ' (click to switch)';
+  btn.setAttribute('aria-label', 'Toggle theme (current: ' + THEME_LABELS[mode] + ')');
+  syncThemeColor(mode);
+}
+
+function cycleTheme() {
+  const order = ['auto', 'light', 'dark'];
+  const next = order[(order.indexOf(currentTheme()) + 1) % order.length];
+  if (next === 'auto') document.documentElement.removeAttribute('data-theme');
+  else document.documentElement.setAttribute('data-theme', next);
+  try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+  renderThemeButton(next);
+}
+
+document.addEventListener('DOMContentLoaded', () => renderThemeButton(currentTheme()));
+</script>
+</body>
+</html>
