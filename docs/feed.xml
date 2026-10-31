@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W44 (2026-10-20 ~ 2026-10-26)</title>
@@ -83,6 +83,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 From extreme weather to agricultural consequences with agentic AI (2026-10-31)</title>
+      <description>Extreme weather is forecast days ahead, yet its consequences for agriculture remain hard to predict: a forecast says where a storm will strike, not which crops will suffer or how much is at risk, and ...</description>
+      <link>http://arxiv.org/abs/2610.40641v1</link>
+      <guid>http://arxiv.org/abs/2610.40641v1#2026-10-31</guid>
+      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 FIRME: Registry-Anchored Memory Graphs for Evolving, Heterogeneous Investor Knowledge (2026-10-31)</title>
+      <description>Financial AI workflows that reuse investor knowledge need persistent memory that integrates observations across sources and periods without losing identity or provenance. In a knowledge graph, recurri...</description>
+      <link>http://arxiv.org/abs/2610.40482v1</link>
+      <guid>http://arxiv.org/abs/2610.40482v1#2026-10-31</guid>
+      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Agentic LLM reasoning in pediatric diabetes outcome prediction from multimodal medical records (2026-10-31)</title>
+      <description>Large language model (LLM) agents are proposed for clinical prediction but are untested in pediatrics, where cohorts are small and outcomes are uncommon. Using records from 2,489 youth with type 2 dia...</description>
+      <link>http://arxiv.org/abs/2610.40379v1</link>
+      <guid>http://arxiv.org/abs/2610.40379v1#2026-10-31</guid>
+      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 The Athlete as a Scientist of One: Agentic Bayesian Experimental Design for Individualized Physiology from Consumer Wearables (2026-10-31)</title>
+      <description>Large language model (LLM) agents for personal health read wearable data and recommend, but do not learn about the individual in a way that can be audited or falsified. We present EpiCoach, an agentic...</description>
+      <link>http://arxiv.org/abs/2610.40370v1</link>
+      <guid>http://arxiv.org/abs/2610.40370v1#2026-10-31</guid>
+      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MAServeBench: Benchmarking Multi-Agent LLM Serving Systems with Hierarchical Collaboration Workloads (2026-10-31)</title>
+      <description>Large language model (LLM)-based multi-agent systems (MAS) coordinate specialized agents to solve complex tasks, turning each user request into interdependent model and tool operations. Unlike indepen...</description>
+      <link>http://arxiv.org/abs/2610.40293v1</link>
+      <guid>http://arxiv.org/abs/2610.40293v1#2026-10-31</guid>
+      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EpiAgent: Epistemic Self-Play for LLM Agents (2026-10-31)</title>
+      <description>Epistemic game theory explains an agent's strategic behavior via the beliefs it holds about others and how these beliefs are updated as the interactions unfold. Modern LLM-based agents, however, often...</description>
+      <link>http://arxiv.org/abs/2610.40227v1</link>
+      <guid>http://arxiv.org/abs/2610.40227v1#2026-10-31</guid>
+      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Locating and Closing Information Gaps in Multi-Agent Systems (2026-10-31)</title>
+      <description>Multi-step Web tasks often require several LLM agents to gather and combine evidence. The communication graph of a fixed workflow restricts which agents can read each other's outputs: evidence retriev...</description>
+      <link>http://arxiv.org/abs/2610.40186v1</link>
+      <guid>http://arxiv.org/abs/2610.40186v1#2026-10-31</guid>
+      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Learning Calibrated Confidence for Multi-Agent Collaboration (2026-10-31)</title>
+      <description>Complex information seeking on the Web often requires collecting evidence from multiple documents and reasoning across them, as in multi-hop question answering. Multi-agent systems address such tasks ...</description>
+      <link>http://arxiv.org/abs/2610.39927v1</link>
+      <guid>http://arxiv.org/abs/2610.39927v1#2026-10-31</guid>
+      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EvoTeam: Multi-Agent Collaboration via Evolving Teams (2026-10-31)</title>
+      <description>LLM-based multi-agent systems (MAS) rely on collaboration among specialized agents to solve complex tasks. Existing methods improve MAS by refining the prompts, skills, and execution strategies of ind...</description>
+      <link>http://arxiv.org/abs/2610.39813v1</link>
+      <guid>http://arxiv.org/abs/2610.39813v1#2026-10-31</guid>
+      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Finding Is Not Returning, Returning Is Not Reconstructing: A Multi-Dimensional Evaluation of Agent Social Re-entry (2026-10-31)</title>
+      <description>As Large Language Model (LLM) agents increasingly participate in persistent social environments, understanding their long-term social interaction capabilities becomes increasingly important. While exi...</description>
+      <link>http://arxiv.org/abs/2610.39781v1</link>
+      <guid>http://arxiv.org/abs/2610.39781v1#2026-10-31</guid>
+      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Intrinsic Distribution Matching (2026-10-30)</title>
@@ -363,76 +433,6 @@
       <link>http://arxiv.org/abs/2610.35773v1</link>
       <guid>http://arxiv.org/abs/2610.35773v1#2026-10-27</guid>
       <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RSIHub: A Composable Framework for Agent-Evolution Methods (2026-10-26)</title>
-      <description>Agent-evolution methods use execution feedback to improve prompts, skills, tools, and orchestration, but their implementations often rebuild the same experimental machinery. We present RSIHub, an open...</description>
-      <link>https://arxiv.org/abs/2610.32253</link>
-      <guid>https://arxiv.org/abs/2610.32253#2026-10-26</guid>
-      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RynnUnify: Towards Unified Embodied Brain (2026-10-26)</title>
-      <description>We introduce RynnUnify, a 16B unified embodied model that combines strong embodied understanding with long-horizon visual planning through interleaved video--language reasoning. With capabilities span...</description>
-      <link>https://arxiv.org/abs/2610.32965</link>
-      <guid>https://arxiv.org/abs/2610.32965#2026-10-26</guid>
-      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Every Edge Needs a Quote: Building a Quote-Grounded Knowledge Graph of Healthcare Software Adoption with Language-Model Agents (2026-10-26)</title>
-      <description>Hospitals regularly buy software that clinicians and patients depend on. Because these purchases are costly, hard to reverse and can affect patient care, buyers look for evidence of which peer institu...</description>
-      <link>http://arxiv.org/abs/2610.32781v1</link>
-      <guid>http://arxiv.org/abs/2610.32781v1#2026-10-26</guid>
-      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Tool-Calling LLM Agents Under Realistic MCP Faults: Scale Does Not Purchase Fault Tolerance (2026-10-26)</title>
-      <description>LLM agents increasingly rely on external tools exposed via the Model Context Protocol (MCP), yet current benchmarks assume tools respond correctly and on time, leaving agent resilience to realistic to...</description>
-      <link>http://arxiv.org/abs/2610.32555v1</link>
-      <guid>http://arxiv.org/abs/2610.32555v1#2026-10-26</guid>
-      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Async-RBench: Benchmarking Asynchronous Task Execution in LLM Agents (2026-10-26)</title>
-      <description>Large language model (LLM) agents increasingly execute tasks asynchronously: a main agent continues working while its subagents run, and the task state may change before their results arrive. The main...</description>
-      <link>http://arxiv.org/abs/2610.32429v1</link>
-      <guid>http://arxiv.org/abs/2610.32429v1#2026-10-26</guid>
-      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SkillRep: Characterizing and Understanding the Representation Design Space of Agent Skill Retrieval (2026-10-26)</title>
-      <description>Retrieving the right skill from a large library is essential for LLM agents, yet requests and skills are written for different purposes and in different words. Existing retrievers narrow this request-...</description>
-      <link>http://arxiv.org/abs/2610.32336v1</link>
-      <guid>http://arxiv.org/abs/2610.32336v1#2026-10-26</guid>
-      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Beyond Gain: Measuring Skill Internalization for Agent Skill Retirement (2026-10-26)</title>
-      <description>LLM agents retrieve skills from public hubs that hold up to about 100,000 entries and serve many models. As models improve, a hub must find the skills a given model has internalized, meaning it can do...</description>
-      <link>http://arxiv.org/abs/2610.32322v1</link>
-      <guid>http://arxiv.org/abs/2610.32322v1#2026-10-26</guid>
-      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DMAIC-Bench: From Self-Reflection to Self-Restraint for Agents in Multi-Stage Analytical Tasks (2026-10-26)</title>
-      <description>Multi-stage analytical tasks require LLM agents to use intermediate evidence to decide whether to continue, redirect or stop. Self-reflection, in which an agent critiques its output, is widely studied...</description>
-      <link>http://arxiv.org/abs/2610.32305v1</link>
-      <guid>http://arxiv.org/abs/2610.32305v1#2026-10-26</guid>
-      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Agentic AI Defense: Decode-Time Provenance Binding for MCP (2026-10-26)</title>
-      <description>Agentic AI systems using the Model Context Protocol (MCP) are vulnerable to indirect prompt injection through untrusted tool outputs. We demonstrate cross-modal trust laundering, in which instructions...</description>
-      <link>http://arxiv.org/abs/2610.31974v1</link>
-      <guid>http://arxiv.org/abs/2610.31974v1#2026-10-26</guid>
-      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 On-Policy Self-Training: Data-Free Self-Improvement in Large Language Models (2026-10-26)</title>
-      <description>On-policy self-distillation enables post-training foundation models without relying on stronger external teachers. However, existing approaches rely on ground-truth question-answer pairs, human-curate...</description>
-      <link>https://arxiv.org/abs/2610.32770</link>
-      <guid>https://arxiv.org/abs/2610.32770#2026-10-26</guid>
-      <pubDate>Mon, 26 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
