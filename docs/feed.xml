@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Sat, 31 Oct 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W44 (2026-10-20 ~ 2026-10-26)</title>
@@ -83,6 +83,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Latent Reasoning in Continuous Space for Unified Multimodal Models (2026-11-02)</title>
+      <description>Unified Multimodal Models (UMMs) achieve remarkable success on diverse multimodal understanding and generation tasks, yet they still struggle to effectively leverage language-based chain-of-thought re...</description>
+      <link>https://arxiv.org/abs/2610.42149</link>
+      <guid>https://arxiv.org/abs/2610.42149#2026-11-02</guid>
+      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 No Channels Left Behind: Understanding Diffusion Acceleration through Residual Gates (2026-11-02)</title>
+      <description>Training acceleration methods for diffusion transformers, such as REPA and dispersive regularization, are commonly explained by additional supervision, spatial-structure priors, or improved feature ge...</description>
+      <link>https://arxiv.org/abs/2610.40914</link>
+      <guid>https://arxiv.org/abs/2610.40914#2026-11-02</guid>
+      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ReLift: Dense 3D Tracking as Lifted Trajectory Repair (2026-11-02)</title>
+      <description>Dense 3D tracking from monocular video requires establishing point correspondences over time, estimating their depth, and inferring their trajectories during occlusion. Existing methods typically lear...</description>
+      <link>https://arxiv.org/abs/2610.42136</link>
+      <guid>https://arxiv.org/abs/2610.42136#2026-11-02</guid>
+      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Probing Spatial State Representations in Visual Foundation Models (2026-11-02)</title>
+      <description>An observer sees only part of the surrounding world, yet must keep track of what lies beyond the current view. Spatial perception therefore involves more than recognizing individual images: it calls f...</description>
+      <link>https://arxiv.org/abs/2610.40636</link>
+      <guid>https://arxiv.org/abs/2610.40636#2026-11-02</guid>
+      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 REA: A Routed Embodied Agent Runtime for Asynchronous Brain-Cerebellum Control (2026-11-02)</title>
+      <description>Foundation models are becoming remarkably reliable at high-level reasoning, yet they remain too slow and costly to serve as fine-grained controllers. Conversely, fast policies like VLAs and whole-body...</description>
+      <link>https://arxiv.org/abs/2610.42053</link>
+      <guid>https://arxiv.org/abs/2610.42053#2026-11-02</guid>
+      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 In-Model Context Compression with Agentic Soft Tokens for Long-Horizon LLM Agents (2026-11-02)</title>
+      <description>Long-horizon LLM agents play an important role in solving complex and sustained tasks, with ever-growing interaction contexts. However, these accumulated contexts will raise substantial computational ...</description>
+      <link>http://arxiv.org/abs/2610.41291v1</link>
+      <guid>http://arxiv.org/abs/2610.41291v1#2026-11-02</guid>
+      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Consensus Within, Competition Between: Decentralized LLM Teams for Perimeter Defense (2026-11-02)</title>
+      <description>The use of large language models (LLMs) to coordinate multi-agent teams raises a fundamental architectural question: whether task allocation should be centralized in a single LLM controller or distrib...</description>
+      <link>http://arxiv.org/abs/2610.41044v1</link>
+      <guid>http://arxiv.org/abs/2610.41044v1#2026-11-02</guid>
+      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WeFair: Fidelity-Aware Alignment from Human Feedback for Personalized Query Rewriting in Short-Video Search (2026-11-02)</title>
+      <description>Short-video search needs compact query rewriters that recover users' personalized intent from ambiguous queries under strict latency constraints. Existing LLM-based methods have improved rewriting by ...</description>
+      <link>https://arxiv.org/abs/2610.16927</link>
+      <guid>https://arxiv.org/abs/2610.16927#2026-11-02</guid>
+      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory (2026-11-02)</title>
+      <description>Recent work shows that a frozen robot policy performs far better inside an agent harness, where control code decides when to query the policy, consult vision tools, or command the arm directly. Yet to...</description>
+      <link>https://arxiv.org/abs/2610.42141</link>
+      <guid>https://arxiv.org/abs/2610.42141#2026-11-02</guid>
+      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CausalWAM: Learning the Causes of Actions in World Action Models (2026-11-02)</title>
+      <description>World action models (WAMs) learn latent variables from observations and use these to both predict the evolution of the scene and to generate actions. The prediction has to be of the whole scene, where...</description>
+      <link>https://arxiv.org/abs/2610.42096</link>
+      <guid>https://arxiv.org/abs/2610.42096#2026-11-02</guid>
+      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 From extreme weather to agricultural consequences with agentic AI (2026-10-31)</title>
@@ -363,76 +433,6 @@
       <link>http://arxiv.org/abs/2610.37461v1</link>
       <guid>http://arxiv.org/abs/2610.37461v1#2026-10-28</guid>
       <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 StreamVibe: Proactive Video Agents for Evolving User Intent (2026-10-27)</title>
-      <description>Vision-language models are shifting from offline passive understanding toward online proactive interaction. However, prevailing methods largely rely on explicit requests while miss the implicit user i...</description>
-      <link>https://arxiv.org/abs/2610.34662</link>
-      <guid>https://arxiv.org/abs/2610.34662#2026-10-27</guid>
-      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Work Agents: Systems, Capabilities, and Optimization (2026-10-27)</title>
-      <description>As foundation models evolve from information generation to digital work execution, agents are increasingly capable of completing complex tasks across tools, applications, and workflows. However, exist...</description>
-      <link>https://arxiv.org/abs/2610.35845</link>
-      <guid>https://arxiv.org/abs/2610.35845#2026-10-27</guid>
-      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges (2026-10-27)</title>
-      <description>AI systems built around large models increasingly use experience and feedback to make persistent changes to models, prompts, memories, tools, and workflows. Recursive self-improvement (RSI) extends th...</description>
-      <link>https://arxiv.org/abs/2610.35193</link>
-      <guid>https://arxiv.org/abs/2610.35193#2026-10-27</guid>
-      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 S3AC: Stabilized, Selective, and Scalable Actor-Critic for LLM Reasoning (2026-10-27)</title>
-      <description>Critic-free methods are widely used in reinforcement learning with verifiable rewards (RLVR) for long chain-of-thought (CoT) reasoning, avoiding difficult and costly critic training. Common alternativ...</description>
-      <link>https://arxiv.org/abs/2610.35518</link>
-      <guid>https://arxiv.org/abs/2610.35518#2026-10-27</guid>
-      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Same Story, Different Lens: A Multi-Agent System for Cross-Outlet News Framing Analysis (2026-10-27)</title>
-      <description>News outlets covering the same event differ in what they emphasize and omit. \textit{Same Story, Different Lens} is an experimental research prototype for comparing these choices. It collects world an...</description>
-      <link>http://arxiv.org/abs/2610.35208v1</link>
-      <guid>http://arxiv.org/abs/2610.35208v1#2026-10-27</guid>
-      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EmbodiedLab: Benchmarking Embodied Agents That Act to Know (2026-10-27)</title>
-      <description>Embodied agents are expected to accomplish real-world goals by deciding for themselves how and when to interact with their surroundings. For many such goals, changing the physical state of the world i...</description>
-      <link>https://arxiv.org/abs/2610.35385</link>
-      <guid>https://arxiv.org/abs/2610.35385#2026-10-27</guid>
-      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Skill^{infty}: Recursive Self-Improvement for Agent Skill Optimization (2026-10-27)</title>
-      <description>Recursive self-improvement (RSI), in which a system also improves the way it improves, is a long-standing aspiration on the path to AGI. Language agents increasingly store procedural knowledge in reus...</description>
-      <link>https://arxiv.org/abs/2610.35434</link>
-      <guid>https://arxiv.org/abs/2610.35434#2026-10-27</guid>
-      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 I-HITL: Inalienable Human-in-the-Loop (2026-10-27)</title>
-      <description>Human oversight is a pillar of AI safety. It is often exercised by a human in the loop (HITL) who approves critical actions taken by an AI agent. AI agents' increasing ability to bypass guardrails, th...</description>
-      <link>http://arxiv.org/abs/2610.35835v1</link>
-      <guid>http://arxiv.org/abs/2610.35835v1#2026-10-27</guid>
-      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Reva: Real-Time Vulnerability Detection through Contextual Probing of Large Language Models (2026-10-27)</title>
-      <description>A vulnerability costs more to fix the later it is discovered. As coding agents generate code faster than developers can review it, software needs a first line of defense screening each new function in...</description>
-      <link>http://arxiv.org/abs/2610.35829v1</link>
-      <guid>http://arxiv.org/abs/2610.35829v1#2026-10-27</guid>
-      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 A Unified Arena for LLM Agents across Diverse Eurogame (2026-10-27)</title>
-      <description>Interactive environments offer a practical way to evaluate large language model (LLM) agents, and competitive games extend this evaluation to decisions shaped by competing goals and other agents' choi...</description>
-      <link>http://arxiv.org/abs/2610.35773v1</link>
-      <guid>http://arxiv.org/abs/2610.35773v1#2026-10-27</guid>
-      <pubDate>Tue, 27 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
