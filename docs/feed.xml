@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W45 (2026-10-27 ~ 2026-11-02)</title>
@@ -90,6 +90,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CoworkOS:Scaling Agent Coworkers for Real-world Automation (2026-11-03)</title>
+      <description>Rapid advances in cowork agents are shifting human-AI collaboration toward real-world automation, delivering software, designs, and other artifacts. However, such productivity work demands both high-q...</description>
+      <link>https://arxiv.org/abs/2611.03178</link>
+      <guid>https://arxiv.org/abs/2611.03178#2026-11-03</guid>
+      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CUA-Master: Scaling Computer-use Agents through Open-World Recursive Improvements (2026-11-03)</title>
+      <description>Despite recent advances in CUAs, their development remains constrained by the limited diversity, controllability, and reliability of interaction data. Moreover, conventional optimization pipelines lac...</description>
+      <link>https://arxiv.org/abs/2611.03126</link>
+      <guid>https://arxiv.org/abs/2611.03126#2026-11-03</guid>
+      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning (2026-11-03)</title>
+      <description>Multimodal large language models (MLLMs) can generate detailed video captions, yet they may overemphasize minor details while overlooking essential context and key events. We argue that not all visual...</description>
+      <link>https://arxiv.org/abs/2611.03602</link>
+      <guid>https://arxiv.org/abs/2611.03602#2026-11-03</guid>
+      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PhotoGuider: Composition-Aware Cropping and 360^{circ} View Framing with Explainable Photographic Assessments (2026-11-03)</title>
+      <description>Traditional image cropping assumes the photograph already contains the composition worth keeping, and asks only where to crop. A full 360^{circ} scene offers no such guarantee: the viewing direction i...</description>
+      <link>https://arxiv.org/abs/2611.02897</link>
+      <guid>https://arxiv.org/abs/2611.02897#2026-11-03</guid>
+      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Avatar Intelligence: Amplifying Human Agency Through Persistent Personal Agents (2026-11-03)</title>
+      <description>Personal AI agents are increasingly capable of handling long-horizon tasks across applications, yet users often need to invest substantial effort in specifying goals, resolving ambiguity, and verifyin...</description>
+      <link>https://arxiv.org/abs/2611.03092</link>
+      <guid>https://arxiv.org/abs/2611.03092#2026-11-03</guid>
+      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 BLPO: Beyond-Local Policy Optimization for Long-Horizon LLM Agents (2026-11-03)</title>
+      <description>Long-horizon tasks require large language model (LLM) agents to coordinate interdependent actions, a capability central to automating complex workflows. Stepwise group-based reinforcement learning pro...</description>
+      <link>http://arxiv.org/abs/2611.03005v1</link>
+      <guid>http://arxiv.org/abs/2611.03005v1#2026-11-03</guid>
+      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TLAPS-Bench: Formally Proving Correctness of Real-World System Specifications with TLA+ Proof System (2026-11-03)</title>
+      <description>TLAPS-Bench is a benchmark and execution harness for constructing machine-checked proofs for real-world system specifications in TLA+ with agentic AI. Proving correctness of complex system specificati...</description>
+      <link>http://arxiv.org/abs/2611.02849v1</link>
+      <guid>http://arxiv.org/abs/2611.02849v1#2026-11-03</guid>
+      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Benchmark of THReD: Evaluating an LLM Agent and Its Preprocessing Tools for Turning Electronic Health Records into AI-Ready Datasets (2026-11-03)</title>
+      <description>LLM agents are increasingly built into data-analysis software, yet little evidence shows how reliably they preprocess clinical data or whether the tools they invoke give correct, reproducible output. ...</description>
+      <link>http://arxiv.org/abs/2611.02484v1</link>
+      <guid>http://arxiv.org/abs/2611.02484v1#2026-11-03</guid>
+      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ParetoSaddler: Pareto-Guided Optimization of Agent Harnesses for Quality and Cost (2026-11-03)</title>
+      <description>Harness optimization can substantially improve LLM agents without modifying model weights, but existing methods primarily optimize response quality. Extending them to joint quality--cost optimization ...</description>
+      <link>http://arxiv.org/abs/2611.02079v1</link>
+      <guid>http://arxiv.org/abs/2611.02079v1#2026-11-03</guid>
+      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 FLAMIA: FLAsh MIcroscaling Attention for Fast and Causally Safe Training on Blackwell (2026-11-03)</title>
+      <description>Attention remains a substantial computational cost in Transformer training, particularly at long context lengths. NVIDIA Blackwell GPUs provide high-throughput low-precision matrix multiplication, but...</description>
+      <link>https://arxiv.org/abs/2611.03344</link>
+      <guid>https://arxiv.org/abs/2611.03344#2026-11-03</guid>
+      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Latent Reasoning in Continuous Space for Unified Multimodal Models (2026-11-02)</title>
@@ -370,76 +440,6 @@
       <link>http://arxiv.org/abs/2610.37121v1</link>
       <guid>http://arxiv.org/abs/2610.37121v1#2026-10-29</guid>
       <pubDate>Thu, 29 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations (2026-10-28)</title>
-      <description>Vision--Language--Action (VLA) models generate robot actions from visual observations and language instructions, but their understanding of physical dynamics remains limited. Video world models can ca...</description>
-      <link>https://arxiv.org/abs/2610.37381</link>
-      <guid>https://arxiv.org/abs/2610.37381#2026-10-28</guid>
-      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Hy-Nomas: Towards Free-form Interactive World Generation (2026-10-28)</title>
-      <description>Interactive world generation requires models to follow successive commands while preserving relevant history and action consequences. We present Hy-Nomas, a video world model with an 8B diffusion back...</description>
-      <link>https://arxiv.org/abs/2610.36729</link>
-      <guid>https://arxiv.org/abs/2610.36729#2026-10-28</guid>
-      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 CodeCap-Bench: Can Code Serve as a Good Video Caption? (2026-10-28)</title>
-      <description>Video captioning aims to preserve visual information through compact descriptions, predominantly using natural language. However, precisely expressing fine-grained spatial structures and temporal dyna...</description>
-      <link>https://arxiv.org/abs/2610.37341</link>
-      <guid>https://arxiv.org/abs/2610.37341#2026-10-28</guid>
-      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning (2026-10-28)</title>
-      <description>Vision-Language-Action (VLA) models have made substantial progress in robotic manipulation, but their generalization remains constrained by the diversity and coverage of action-labeled robot demonstra...</description>
-      <link>https://arxiv.org/abs/2610.37666</link>
-      <guid>https://arxiv.org/abs/2610.37666#2026-10-28</guid>
-      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Can Discrete Tokens Serve as Semantically Lossless Representations of Visual Signals? (2026-10-28)</title>
-      <description>Discrete visual tokens represent vision in a discrete form analogous to language, offering a native interface for multimodal modeling under a shared next-token prediction objective. However, quantizat...</description>
-      <link>https://arxiv.org/abs/2610.37662</link>
-      <guid>https://arxiv.org/abs/2610.37662#2026-10-28</guid>
-      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 LociArt: A Unified Paradigm for Free-Style Local Video Stylization (2026-10-28)</title>
-      <description>Video stylization typically transforms entire scenes, while local artistic editing requires precise region--style association, spatial control, and temporal consistency. We introduce LociArt, a unifie...</description>
-      <link>https://arxiv.org/abs/2610.36456</link>
-      <guid>https://arxiv.org/abs/2610.36456#2026-10-28</guid>
-      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Zooming without Zooming v2: From Seeing Details to Connecting Evidence for Generalizable Multimodal Perception (2026-10-28)</title>
-      <description>Multimodal perception forms the foundation of multimodal intelligence. In particular, spatial perception and multimodal long-context understanding are two pivotal tasks that underpin embodied AI and m...</description>
-      <link>https://arxiv.org/abs/2610.37037</link>
-      <guid>https://arxiv.org/abs/2610.37037#2026-10-28</guid>
-      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 VibeVideoBench: Evaluating Multimodal Agents on Code-Driven Video Generation (2026-10-28)</title>
-      <description>Diffusion video models produce striking clips, but they cannot reliably render an exact formula, a correct chart, a rule-consistent game or narration synchronized to on-screen events. A different rout...</description>
-      <link>https://arxiv.org/abs/2610.35864</link>
-      <guid>https://arxiv.org/abs/2610.35864#2026-10-28</guid>
-      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Channel Selection for Mixture-of-Experts Decoding Needs No Calibration Data (2026-10-28)</title>
-      <description>Mixture-of-Experts (MoE) models are bottlenecked by loading routed-expert weights from memory during interactive decoding at small batch sizes. Because most intermediate channels in a routed expert co...</description>
-      <link>https://arxiv.org/abs/2610.37386</link>
-      <guid>https://arxiv.org/abs/2610.37386#2026-10-28</guid>
-      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Concordat: Typed Sessions for LLM Agents (2026-10-28)</title>
-      <description>Agents built on large language models are increasingly allowed to take consequential actions: cancelling bookings, issuing refunds, changing accounts. The rules that govern those actions, such as &quot;obt...</description>
-      <link>http://arxiv.org/abs/2610.37461v1</link>
-      <guid>http://arxiv.org/abs/2610.37461v1#2026-10-28</guid>
-      <pubDate>Wed, 28 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
