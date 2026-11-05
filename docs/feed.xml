@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W45 (2026-10-27 ~ 2026-11-02)</title>
@@ -90,6 +90,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Turns Matter: Advancing Streaming Video RL via Turn-Level Credit (2026-11-05)</title>
+      <description>Streaming video understanding requires models to repeatedly decide whether to respond or continue observing. Recently, Group Relative Policy Optimization (GRPO) has been applied to this setting, with ...</description>
+      <link>https://arxiv.org/abs/2611.06728</link>
+      <guid>https://arxiv.org/abs/2611.06728#2026-11-05</guid>
+      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 From Pixels to Actions - Towards Native Vision-Language-Action Policies (2026-11-05)</title>
+      <description>Vision-language-action models are typically built on a simple premise: perception is first compressed by visual encoders, and action reasoning begins only afterwards. Yet manipulation often hinges on ...</description>
+      <link>https://arxiv.org/abs/2611.06918</link>
+      <guid>https://arxiv.org/abs/2611.06918#2026-11-05</guid>
+      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 FrontierPhysics: Evaluating Agents for End-to-End Physics Research (2026-11-05)</title>
+      <description>AI agents are playing an increasingly important role in physics research. However, existing physics benchmarks only evaluate fixed questions, isolated sub-tasks, or paper reproduction with given solut...</description>
+      <link>https://arxiv.org/abs/2611.06910</link>
+      <guid>https://arxiv.org/abs/2611.06910#2026-11-05</guid>
+      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EmoReward: Self-Evolving Reward Calibration for Emotional Video Generation RL (2026-11-05)</title>
+      <description>Group Relative Policy Optimization (GRPO) has advanced generative model post-training in verifiable domains such as code and mathematics, but evaluating video quality, especially emotional expression,...</description>
+      <link>https://arxiv.org/abs/2611.06518</link>
+      <guid>https://arxiv.org/abs/2611.06518#2026-11-05</guid>
+      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 VA-TDM: A Unified View for Improving Few-Step Diffusion Models by Velocity Adversarial Distillation (2026-11-05)</title>
+      <description>Few-step distillation offers efficient generation with diffusion and flow models, but preserving quality with only a few sampling steps remains challenging. Distribution-matching methods via score dis...</description>
+      <link>https://arxiv.org/abs/2611.06796</link>
+      <guid>https://arxiv.org/abs/2611.06796#2026-11-05</guid>
+      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 When Do Summaries Become Instructions? Unsupported Policy in LLM Agents' Self-Written Handoff Summaries (2026-11-05)</title>
+      <description>Long-running LLM agents compact their context, replacing most history with a summary. We ask whether handoff summaries state permissions or requirements the record does not support, whether such sente...</description>
+      <link>http://arxiv.org/abs/2611.06545v1</link>
+      <guid>http://arxiv.org/abs/2611.06545v1#2026-11-05</guid>
+      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 FlyHash for LLM Agent Memory: An Empirical Validation and a New Application (2026-11-05)</title>
+      <description>Large language model (LLM) agents increasingly rely on external memory stores to retain information across conversations, typically via dense vector embeddings searched with approximate nearest-neighb...</description>
+      <link>http://arxiv.org/abs/2611.05791v1</link>
+      <guid>http://arxiv.org/abs/2611.05791v1#2026-11-05</guid>
+      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Toward a Compositional Knowledge Architecture for a Shared Organizational Cortex (2026-11-05)</title>
+      <description>Organizations accumulate evidence in conversations, documents, decisions and relationships, but they act on interpretations: judgements assembled from several observations, resting on assumptions, and...</description>
+      <link>http://arxiv.org/abs/2611.05753v1</link>
+      <guid>http://arxiv.org/abs/2611.05753v1#2026-11-05</guid>
+      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 LoopVQ: Sub 1-bit KV Cache Quantization for Looped Transformers (2026-11-05)</title>
+      <description>Looped transformers are a parameter-efficient alternative to standard transformers for language modeling. By reapplying the same layers across multiple loop steps, recent looped language models match ...</description>
+      <link>https://arxiv.org/abs/2611.05304</link>
+      <guid>https://arxiv.org/abs/2611.05304#2026-11-05</guid>
+      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PyRUA-REAL: Robot Exploration and Adaptive Learning through RSI in the Real World (2026-11-05)</title>
+      <description>Coding agents powered by models such as GPT-6-Astra connect spatial reasoning with executable robot behavior, raising the question of how such agents can produce lasting improvements in robot capabili...</description>
+      <link>https://arxiv.org/abs/2611.06768</link>
+      <guid>https://arxiv.org/abs/2611.06768#2026-11-05</guid>
+      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems (2026-11-04)</title>
@@ -370,76 +440,6 @@
       <link>http://arxiv.org/abs/2610.39781v1</link>
       <guid>http://arxiv.org/abs/2610.39781v1#2026-10-31</guid>
       <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Intrinsic Distribution Matching (2026-10-30)</title>
-      <description>One-step and few-step text-to-image generation must accurately render the details specified in the prompt despite limited opportunities for refinement. Distribution matching distillation (DMD) uses sc...</description>
-      <link>https://arxiv.org/abs/2610.39633</link>
-      <guid>https://arxiv.org/abs/2610.39633#2026-10-30</guid>
-      <pubDate>Fri, 30 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 L3G-World: Real-Time Infinite World Generation with Latent 3D Gaussian Memory (2026-10-30)</title>
-      <description>Interactive world models generate visual content conditioned on user actions, yet maintaining spatial consistency over long-horizon exploration in real time remains challenging. Existing approaches re...</description>
-      <link>https://arxiv.org/abs/2610.40614</link>
-      <guid>https://arxiv.org/abs/2610.40614#2026-10-30</guid>
-      <pubDate>Fri, 30 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 HairDeck: Animation-Ready Stylized Hair Cards from a Single Image (2026-10-30)</title>
-      <description>The hair of stylized characters in games and avatars is built from hair cards: artist-placed ribbons whose geometry is the visible hair, animated by spring bones. Existing image-based methods produce ...</description>
-      <link>https://arxiv.org/abs/2610.40599</link>
-      <guid>https://arxiv.org/abs/2610.40599#2026-10-30</guid>
-      <pubDate>Fri, 30 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PhysInsert: Physically Plausible Object Insertion with Geometric Priors and Bidirectional Object-Scene Interactions (2026-10-30)</title>
-      <description>We present PhysInsert, a framework for physically plausible reference-based object insertion that jointly adapts objects and their surrounding scenes. Existing methods often rely on masked inputs, gen...</description>
-      <link>https://arxiv.org/abs/2610.40453</link>
-      <guid>https://arxiv.org/abs/2610.40453#2026-10-30</guid>
-      <pubDate>Fri, 30 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Don't Lose the Thread: Empowering Long-Horizon LLM Agents with Cognitive Resource Self-Allocation (2026-10-30)</title>
-      <description>Agents powered by large language models (LLMs) have demonstrated remarkable progress in solving complex reasoning tasks. However, LLM agents often falter on long-horizon tasks due to cognitive overloa...</description>
-      <link>http://arxiv.org/abs/2610.40350v1</link>
-      <guid>http://arxiv.org/abs/2610.40350v1#2026-10-30</guid>
-      <pubDate>Fri, 30 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Rebuilding a Field's Open-Problem Catalog from the Literature: A Two-Layer Knowledge Graph, and Why Status Must Stay Proposed (2026-10-30)</title>
-      <description>A research field records its open problems in surveys, keynotes and community reports. Those are prose, written every few years, and nobody can ask them who works on a problem now or whether it was se...</description>
-      <link>http://arxiv.org/abs/2610.39641v1</link>
-      <guid>http://arxiv.org/abs/2610.39641v1#2026-10-30</guid>
-      <pubDate>Fri, 30 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 LLM Agent-Based Design of RISC-V CPUs with FPGA-in-the-Loop Evaluation (2026-10-30)</title>
-      <description>Long-run RTL simulation of CPU candidates can take hours, while short diagnostic runs may miss performance degradation that emerges later in execution. This evaluation cost can delay design decisions ...</description>
-      <link>http://arxiv.org/abs/2610.39570v1</link>
-      <guid>http://arxiv.org/abs/2610.39570v1#2026-10-30</guid>
-      <pubDate>Fri, 30 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AgentHeal: Evaluating Goal-Preserving Resource Recovery of Web Agents under Access Barriers (2026-10-30)</title>
-      <description>Large language model (LLM) agents have demonstrated strong capabilities in automating complex information-seeking and transactional tasks across the open web. However, their real-world reliability rem...</description>
-      <link>http://arxiv.org/abs/2610.39234v1</link>
-      <guid>http://arxiv.org/abs/2610.39234v1#2026-10-30</guid>
-      <pubDate>Fri, 30 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PCM: A Proof-Carrying Message Protocol for Verifiable Multi-Agent Communication (2026-10-30)</title>
-      <description>When one AI agent tells another that &quot;the tests passed&quot; or &quot;a person approved this refund&quot;, the receiver has only the sender's word. A2A and MCP authenticate the channel, but the sender is the party i...</description>
-      <link>http://arxiv.org/abs/2610.39109v1</link>
-      <guid>http://arxiv.org/abs/2610.39109v1#2026-10-30</guid>
-      <pubDate>Fri, 30 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 HERA: Assessing an Autonomous Agent for Quantum Device Measurement (2026-10-30)</title>
-      <description>Large language model agents have begun to carry out laboratory measurements, but their scientific conclusions are useful only if they hold up under scrutiny. Demonstrating this requires controlled stu...</description>
-      <link>http://arxiv.org/abs/2610.39074v1</link>
-      <guid>http://arxiv.org/abs/2610.39074v1#2026-10-30</guid>
-      <pubDate>Fri, 30 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
