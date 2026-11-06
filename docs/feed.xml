@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W45 (2026-10-27 ~ 2026-11-02)</title>
@@ -90,6 +90,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding (2026-11-06)</title>
+      <description>Models for physical AI tasks, such as robotics and autonomous driving, need not reason solely in language. They can use visual plans--points, bounding boxes, and trajectories--to represent spatial goa...</description>
+      <link>https://arxiv.org/abs/2611.08449</link>
+      <guid>https://arxiv.org/abs/2611.08449#2026-11-06</guid>
+      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WeLM-Image: A Unified Image Generation Model towards Visual Intelligence (2026-11-06)</title>
+      <description>We present WeLM-Image, a unified image foundation model that integrates multimodal understanding into text-to-image generation, instruction-guided editing, and multi-reference synthesis. Designed for ...</description>
+      <link>https://arxiv.org/abs/2611.07392</link>
+      <guid>https://arxiv.org/abs/2611.07392#2026-11-06</guid>
+      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SLA: Scaling Spatial-Language-Action Model via Continual Pre-training (2026-11-06)</title>
+      <description>Reliable robotic manipulation requires both semantic understanding and precise control in three-dimensional space. However, vision-language-action (VLA) foundations largely inherit visual representati...</description>
+      <link>https://arxiv.org/abs/2611.08373</link>
+      <guid>https://arxiv.org/abs/2611.08373#2026-11-06</guid>
+      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Towards Foundation Decision Models: Drex (2026-11-06)</title>
+      <description>Autoregressive approaches with large language models, such as long chain-of-thought reasoning, have become the default for new AI applications because they reach higher accuracy on a wide range of tas...</description>
+      <link>https://arxiv.org/abs/2611.07854</link>
+      <guid>https://arxiv.org/abs/2611.07854#2026-11-06</guid>
+      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ChemE-as-Code: An Open-Source Platform for Agentic AI in Chemical Engineering (2026-11-06)</title>
+      <description>ChemE-as-Code provides an open-source environment in which AI agents built on large language models (LLMs) can carry out chemical engineering work and engineers can check it. Its calculation tools ran...</description>
+      <link>http://arxiv.org/abs/2611.07947v1</link>
+      <guid>http://arxiv.org/abs/2611.07947v1#2026-11-06</guid>
+      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AttnSR: Attention Step Reward for Long-Horizon Agentic RL (2026-11-06)</title>
+      <description>Long-horizon LLM agents make multi-step decisions, yet outcome-reward-only reinforcement learning provides little direct supervision for individual steps. We introduce AttnSR, a step-level reward augm...</description>
+      <link>http://arxiv.org/abs/2611.07932v1</link>
+      <guid>http://arxiv.org/abs/2611.07932v1#2026-11-06</guid>
+      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 The Two-Ledger Model: Transaction-Grain Cost Accounting for Multi-Agent AI Systems Across Clouds, Models, and Systems of Record (2026-11-06)</title>
+      <description>Enterprises run business transactions through multi-agent AI systems spanning clouds, large language models (LLMs), orchestration harnesses, and systems of record. Finance receives AI cost only at set...</description>
+      <link>http://arxiv.org/abs/2611.06989v1</link>
+      <guid>http://arxiv.org/abs/2611.06989v1#2026-11-06</guid>
+      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EDGAR: Efficient Diffusion-Driven Gaussian Avatar Refinement via Synthetic Failure (2026-11-06)</title>
+      <description>Recent advances in Gaussian splatting have enabled efficient and photorealistic head avatar reconstruction, yet monocular video-based or image-based methods still suffer from under-constrained geometr...</description>
+      <link>https://arxiv.org/abs/2611.07909</link>
+      <guid>https://arxiv.org/abs/2611.07909#2026-11-06</guid>
+      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SAE Interprets MoE: Sparse AutoEncoders Reveal That MoE Experts Exhibit Human-Interpretable Fine-Grained Specialization (2026-11-06)</title>
+      <description>Mixture-of-Experts (MoE) models route each token to a few of many experts, yet what an individual expert is responsible for remains unsettled. Existing analyses count how often an expert is selected o...</description>
+      <link>https://arxiv.org/abs/2611.08089</link>
+      <guid>https://arxiv.org/abs/2611.08089#2026-11-06</guid>
+      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Towards Real-Time Full-Waveform LiDAR Transformers via Intensity-Guided Token Reduction and Physics-Aware Augmentation (2026-11-06)</title>
+      <description>LiDAR is a critical sensor for autonomous driving and robotics, yet it remains vulnerable to adverse conditions such as fog, rain, transparent objects, and low-reflectance surfaces. Full-waveform LiDA...</description>
+      <link>https://arxiv.org/abs/2611.07613</link>
+      <guid>https://arxiv.org/abs/2611.07613#2026-11-06</guid>
+      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Turns Matter: Advancing Streaming Video RL via Turn-Level Credit (2026-11-05)</title>
@@ -370,76 +440,6 @@
       <link>https://arxiv.org/abs/2610.42096</link>
       <guid>https://arxiv.org/abs/2610.42096#2026-11-02</guid>
       <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 From extreme weather to agricultural consequences with agentic AI (2026-10-31)</title>
-      <description>Extreme weather is forecast days ahead, yet its consequences for agriculture remain hard to predict: a forecast says where a storm will strike, not which crops will suffer or how much is at risk, and ...</description>
-      <link>http://arxiv.org/abs/2610.40641v1</link>
-      <guid>http://arxiv.org/abs/2610.40641v1#2026-10-31</guid>
-      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 FIRME: Registry-Anchored Memory Graphs for Evolving, Heterogeneous Investor Knowledge (2026-10-31)</title>
-      <description>Financial AI workflows that reuse investor knowledge need persistent memory that integrates observations across sources and periods without losing identity or provenance. In a knowledge graph, recurri...</description>
-      <link>http://arxiv.org/abs/2610.40482v1</link>
-      <guid>http://arxiv.org/abs/2610.40482v1#2026-10-31</guid>
-      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Agentic LLM reasoning in pediatric diabetes outcome prediction from multimodal medical records (2026-10-31)</title>
-      <description>Large language model (LLM) agents are proposed for clinical prediction but are untested in pediatrics, where cohorts are small and outcomes are uncommon. Using records from 2,489 youth with type 2 dia...</description>
-      <link>http://arxiv.org/abs/2610.40379v1</link>
-      <guid>http://arxiv.org/abs/2610.40379v1#2026-10-31</guid>
-      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 The Athlete as a Scientist of One: Agentic Bayesian Experimental Design for Individualized Physiology from Consumer Wearables (2026-10-31)</title>
-      <description>Large language model (LLM) agents for personal health read wearable data and recommend, but do not learn about the individual in a way that can be audited or falsified. We present EpiCoach, an agentic...</description>
-      <link>http://arxiv.org/abs/2610.40370v1</link>
-      <guid>http://arxiv.org/abs/2610.40370v1#2026-10-31</guid>
-      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MAServeBench: Benchmarking Multi-Agent LLM Serving Systems with Hierarchical Collaboration Workloads (2026-10-31)</title>
-      <description>Large language model (LLM)-based multi-agent systems (MAS) coordinate specialized agents to solve complex tasks, turning each user request into interdependent model and tool operations. Unlike indepen...</description>
-      <link>http://arxiv.org/abs/2610.40293v1</link>
-      <guid>http://arxiv.org/abs/2610.40293v1#2026-10-31</guid>
-      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EpiAgent: Epistemic Self-Play for LLM Agents (2026-10-31)</title>
-      <description>Epistemic game theory explains an agent's strategic behavior via the beliefs it holds about others and how these beliefs are updated as the interactions unfold. Modern LLM-based agents, however, often...</description>
-      <link>http://arxiv.org/abs/2610.40227v1</link>
-      <guid>http://arxiv.org/abs/2610.40227v1#2026-10-31</guid>
-      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Locating and Closing Information Gaps in Multi-Agent Systems (2026-10-31)</title>
-      <description>Multi-step Web tasks often require several LLM agents to gather and combine evidence. The communication graph of a fixed workflow restricts which agents can read each other's outputs: evidence retriev...</description>
-      <link>http://arxiv.org/abs/2610.40186v1</link>
-      <guid>http://arxiv.org/abs/2610.40186v1#2026-10-31</guid>
-      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Learning Calibrated Confidence for Multi-Agent Collaboration (2026-10-31)</title>
-      <description>Complex information seeking on the Web often requires collecting evidence from multiple documents and reasoning across them, as in multi-hop question answering. Multi-agent systems address such tasks ...</description>
-      <link>http://arxiv.org/abs/2610.39927v1</link>
-      <guid>http://arxiv.org/abs/2610.39927v1#2026-10-31</guid>
-      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EvoTeam: Multi-Agent Collaboration via Evolving Teams (2026-10-31)</title>
-      <description>LLM-based multi-agent systems (MAS) rely on collaboration among specialized agents to solve complex tasks. Existing methods improve MAS by refining the prompts, skills, and execution strategies of ind...</description>
-      <link>http://arxiv.org/abs/2610.39813v1</link>
-      <guid>http://arxiv.org/abs/2610.39813v1#2026-10-31</guid>
-      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Finding Is Not Returning, Returning Is Not Reconstructing: A Multi-Dimensional Evaluation of Agent Social Re-entry (2026-10-31)</title>
-      <description>As Large Language Model (LLM) agents increasingly participate in persistent social environments, understanding their long-term social interaction capabilities becomes increasingly important. While exi...</description>
-      <link>http://arxiv.org/abs/2610.39781v1</link>
-      <guid>http://arxiv.org/abs/2610.39781v1#2026-10-31</guid>
-      <pubDate>Sat, 31 Oct 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
