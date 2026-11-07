@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W45 (2026-10-27 ~ 2026-11-02)</title>
@@ -90,6 +90,48 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling (2026-11-07)</title>
+      <description>Mathematical modeling turns an open-ended real-world problem into assumptions, a model, a solution, and a defended recommendation, and its answers matter only if they are both close to a credible refe...</description>
+      <link>https://arxiv.org/abs/2611.08237</link>
+      <guid>https://arxiv.org/abs/2611.08237#2026-11-07</guid>
+      <pubDate>Sat, 07 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Muir: Linear Attention with Sensitivity-Allocated Gating and Matched-Filter Readout (2026-11-07)</title>
+      <description>Linear attention compresses context into a fixed-size key-value state for linear-time training and constant-memory inference. Gated delta-rule models decay this state and erase its prediction for an i...</description>
+      <link>https://arxiv.org/abs/2611.08376</link>
+      <guid>https://arxiv.org/abs/2611.08376#2026-11-07</guid>
+      <pubDate>Sat, 07 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 SCALE: Real-Time Latent Communication for Cyber-Physical Agents (2026-11-07)</title>
+      <description>Latent communication enables agents to collaborate efficiently by directly exchanging intermediate model representations rather than raw sensor data or text messages. Existing approaches, however, are...</description>
+      <link>http://arxiv.org/abs/2611.08390v1</link>
+      <guid>http://arxiv.org/abs/2611.08390v1#2026-11-07</guid>
+      <pubDate>Sat, 07 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Benchmarking Large Language Models on Heterogeneous Cognitive and Biomedical Knowledge Graphs: The Role of Graph Grounding in Multi-Hop Reasoning and Hallucination Mitigation (2026-11-07)</title>
+      <description>Large language models (LLMs) are increasingly used in biomedical and cognitive neuroscience, but their ability to reason reliably over heterogeneous knowledge graphs (KGs) remains unclear. We benchmar...</description>
+      <link>http://arxiv.org/abs/2611.08315v1</link>
+      <guid>http://arxiv.org/abs/2611.08315v1#2026-11-07</guid>
+      <pubDate>Sat, 07 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PCBRouteAgent: How Close Are LLM Agents to Becoming PCB Routing Engineers? (2026-11-07)</title>
+      <description>Automating printed circuit board (PCB) routing requires coordinating board-level connectivity decisions with geometric execution under strict design rules. Although recent agents can interact with nat...</description>
+      <link>http://arxiv.org/abs/2611.08175v1</link>
+      <guid>http://arxiv.org/abs/2611.08175v1#2026-11-07</guid>
+      <pubDate>Sat, 07 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Generate-then-Rank: Learning Symbolic Goal Interpretation for Embodied Agents (2026-11-07)</title>
+      <description>Goal interpretation is to translate a natural language instruction into a formal symbolic goal that a planner can execute. It is critical for embodied agents because any error here propagates to every...</description>
+      <link>http://arxiv.org/abs/2611.07825v1</link>
+      <guid>http://arxiv.org/abs/2611.07825v1#2026-11-07</guid>
+      <pubDate>Sat, 07 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding (2026-11-06)</title>
@@ -397,48 +439,6 @@
       <description>An observer sees only part of the surrounding world, yet must keep track of what lies beyond the current view. Spatial perception therefore involves more than recognizing individual images: it calls f...</description>
       <link>https://arxiv.org/abs/2610.40636</link>
       <guid>https://arxiv.org/abs/2610.40636#2026-11-02</guid>
-      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 REA: A Routed Embodied Agent Runtime for Asynchronous Brain-Cerebellum Control (2026-11-02)</title>
-      <description>Foundation models are becoming remarkably reliable at high-level reasoning, yet they remain too slow and costly to serve as fine-grained controllers. Conversely, fast policies like VLAs and whole-body...</description>
-      <link>https://arxiv.org/abs/2610.42053</link>
-      <guid>https://arxiv.org/abs/2610.42053#2026-11-02</guid>
-      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 In-Model Context Compression with Agentic Soft Tokens for Long-Horizon LLM Agents (2026-11-02)</title>
-      <description>Long-horizon LLM agents play an important role in solving complex and sustained tasks, with ever-growing interaction contexts. However, these accumulated contexts will raise substantial computational ...</description>
-      <link>http://arxiv.org/abs/2610.41291v1</link>
-      <guid>http://arxiv.org/abs/2610.41291v1#2026-11-02</guid>
-      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Consensus Within, Competition Between: Decentralized LLM Teams for Perimeter Defense (2026-11-02)</title>
-      <description>The use of large language models (LLMs) to coordinate multi-agent teams raises a fundamental architectural question: whether task allocation should be centralized in a single LLM controller or distrib...</description>
-      <link>http://arxiv.org/abs/2610.41044v1</link>
-      <guid>http://arxiv.org/abs/2610.41044v1#2026-11-02</guid>
-      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 WeFair: Fidelity-Aware Alignment from Human Feedback for Personalized Query Rewriting in Short-Video Search (2026-11-02)</title>
-      <description>Short-video search needs compact query rewriters that recover users' personalized intent from ambiguous queries under strict latency constraints. Existing LLM-based methods have improved rewriting by ...</description>
-      <link>https://arxiv.org/abs/2610.16927</link>
-      <guid>https://arxiv.org/abs/2610.16927#2026-11-02</guid>
-      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory (2026-11-02)</title>
-      <description>Recent work shows that a frozen robot policy performs far better inside an agent harness, where control code decides when to query the policy, consult vision tools, or command the arm directly. Yet to...</description>
-      <link>https://arxiv.org/abs/2610.42141</link>
-      <guid>https://arxiv.org/abs/2610.42141#2026-11-02</guid>
-      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 CausalWAM: Learning the Causes of Actions in World Action Models (2026-11-02)</title>
-      <description>World action models (WAMs) learn latent variables from observations and use these to both predict the evolution of the scene and to generate actions. The prediction has to be of the whole scene, where...</description>
-      <link>https://arxiv.org/abs/2610.42096</link>
-      <guid>https://arxiv.org/abs/2610.42096#2026-11-02</guid>
       <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
