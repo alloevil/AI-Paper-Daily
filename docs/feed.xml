@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W45 (2026-10-27 ~ 2026-11-02)</title>
@@ -90,6 +90,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Video-Coder: Reinforcing Agentic Coding for Video Generation (2026-11-09)</title>
+      <description>Recent years have witnessed remarkable progress in video generation in terms of visual quality and temporal consistency. However, generating videos with precise spatial structure, coherent motion dyna...</description>
+      <link>https://arxiv.org/abs/2611.09894</link>
+      <guid>https://arxiv.org/abs/2611.09894#2026-11-09</guid>
+      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Exploring Weight-Space Programming: Capabilities, Generalization, and Limitations (2026-11-09)</title>
+      <description>Weight-Space Programming (WSP) enables reasoning agents to directly inspect and modify neural network parameters, offering an alternative to gradient-based model adaptation. However, its capabilities,...</description>
+      <link>https://arxiv.org/abs/2611.09382</link>
+      <guid>https://arxiv.org/abs/2611.09382#2026-11-09</guid>
+      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Frontier3DBench: Benchmarking Coding Agents for 3D Creation across Objects, Scenes, and Interactive Open Worlds (2026-11-09)</title>
+      <description>Coding agents combine visual understanding with program execution, offering a new route to automated 3D creation. By translating images and instructions into editable programs, they bring reconstructi...</description>
+      <link>https://arxiv.org/abs/2611.09017</link>
+      <guid>https://arxiv.org/abs/2611.09017#2026-11-09</guid>
+      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 OmniLatent: Unified Latent for 3D Part Modeling (2026-11-09)</title>
+      <description>3D part decomposition is a central capability for editable asset creation, yet existing workflows typically segment a completed mesh as a post-processing step, making the result sensitive to geometric...</description>
+      <link>https://arxiv.org/abs/2611.09055</link>
+      <guid>https://arxiv.org/abs/2611.09055#2026-11-09</guid>
+      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Authorization Drift in LLM Agents: Evaluating Boundary Compliance in Multi-Step Tool Use (2026-11-09)</title>
+      <description>LLM agents can exceed their authorization boundaries while pursuing user goals without an adversary. We formalize this phenomenon as authorization drift across data, tool, scope, and time, and introdu...</description>
+      <link>https://arxiv.org/abs/2611.09113</link>
+      <guid>https://arxiv.org/abs/2611.09113#2026-11-09</guid>
+      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Knowing When to Intervene: Causal Evaluation of AI Agents (2026-11-09)</title>
+      <description>Current evaluations of agentic AI systems primarily rely on benchmarks. However, the static nature of benchmarks makes them uninformative about the value of auditing interventions at deployment time. ...</description>
+      <link>http://arxiv.org/abs/2611.09792v1</link>
+      <guid>http://arxiv.org/abs/2611.09792v1#2026-11-09</guid>
+      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Language as Trait, Politeness as Strategy: Controlled Tests of Linguistic Effects in LLM Social-Deduction Agents (2026-11-09)</title>
+      <description>Large language model (LLM) agents coordinate through conversation, and the same message can be phrased in simpler or more complex language, bluntly or politely. We test whether such differences change...</description>
+      <link>http://arxiv.org/abs/2611.09768v1</link>
+      <guid>http://arxiv.org/abs/2611.09768v1#2026-11-09</guid>
+      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 What to Delegate, What to Preserve: Human Preferences for Agentic AI Across Everyday Life and Work (2026-11-09)</title>
+      <description>AI agents can execute multi-step tasks on users' behalf, yet the boundaries of acceptable delegation remain unclear. We report a scenario-based survey of 289 U.S. adults with prior AI experience cover...</description>
+      <link>http://arxiv.org/abs/2611.09730v1</link>
+      <guid>http://arxiv.org/abs/2611.09730v1#2026-11-09</guid>
+      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MemoryDojo: Benchmarking Poisoning Through LLM Agent Memory (2026-11-09)</title>
+      <description>LLM agents benefit from using memory systems to improve performance on long-horizon, multi-session tasks. However, memory introduces a critical attack surface. Malicious instructions encountered in on...</description>
+      <link>http://arxiv.org/abs/2611.09721v1</link>
+      <guid>http://arxiv.org/abs/2611.09721v1#2026-11-09</guid>
+      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Differentially Private GraphRAG: Protecting Relation Connectivity and Semantics (2026-11-09)</title>
+      <description>Graph Retrieval-Augmented Generation (GraphRAG) connects information across documents through entity relationships to support relational reasoning. However, black-box access to GraphRAG systems can en...</description>
+      <link>http://arxiv.org/abs/2611.09658v1</link>
+      <guid>http://arxiv.org/abs/2611.09658v1#2026-11-09</guid>
+      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling (2026-11-07)</title>
@@ -370,76 +440,6 @@
       <link>https://arxiv.org/abs/2611.02897</link>
       <guid>https://arxiv.org/abs/2611.02897#2026-11-03</guid>
       <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Avatar Intelligence: Amplifying Human Agency Through Persistent Personal Agents (2026-11-03)</title>
-      <description>Personal AI agents are increasingly capable of handling long-horizon tasks across applications, yet users often need to invest substantial effort in specifying goals, resolving ambiguity, and verifyin...</description>
-      <link>https://arxiv.org/abs/2611.03092</link>
-      <guid>https://arxiv.org/abs/2611.03092#2026-11-03</guid>
-      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 BLPO: Beyond-Local Policy Optimization for Long-Horizon LLM Agents (2026-11-03)</title>
-      <description>Long-horizon tasks require large language model (LLM) agents to coordinate interdependent actions, a capability central to automating complex workflows. Stepwise group-based reinforcement learning pro...</description>
-      <link>http://arxiv.org/abs/2611.03005v1</link>
-      <guid>http://arxiv.org/abs/2611.03005v1#2026-11-03</guid>
-      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 TLAPS-Bench: Formally Proving Correctness of Real-World System Specifications with TLA+ Proof System (2026-11-03)</title>
-      <description>TLAPS-Bench is a benchmark and execution harness for constructing machine-checked proofs for real-world system specifications in TLA+ with agentic AI. Proving correctness of complex system specificati...</description>
-      <link>http://arxiv.org/abs/2611.02849v1</link>
-      <guid>http://arxiv.org/abs/2611.02849v1#2026-11-03</guid>
-      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Benchmark of THReD: Evaluating an LLM Agent and Its Preprocessing Tools for Turning Electronic Health Records into AI-Ready Datasets (2026-11-03)</title>
-      <description>LLM agents are increasingly built into data-analysis software, yet little evidence shows how reliably they preprocess clinical data or whether the tools they invoke give correct, reproducible output. ...</description>
-      <link>http://arxiv.org/abs/2611.02484v1</link>
-      <guid>http://arxiv.org/abs/2611.02484v1#2026-11-03</guid>
-      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ParetoSaddler: Pareto-Guided Optimization of Agent Harnesses for Quality and Cost (2026-11-03)</title>
-      <description>Harness optimization can substantially improve LLM agents without modifying model weights, but existing methods primarily optimize response quality. Extending them to joint quality--cost optimization ...</description>
-      <link>http://arxiv.org/abs/2611.02079v1</link>
-      <guid>http://arxiv.org/abs/2611.02079v1#2026-11-03</guid>
-      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 FLAMIA: FLAsh MIcroscaling Attention for Fast and Causally Safe Training on Blackwell (2026-11-03)</title>
-      <description>Attention remains a substantial computational cost in Transformer training, particularly at long context lengths. NVIDIA Blackwell GPUs provide high-throughput low-precision matrix multiplication, but...</description>
-      <link>https://arxiv.org/abs/2611.03344</link>
-      <guid>https://arxiv.org/abs/2611.03344#2026-11-03</guid>
-      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Latent Reasoning in Continuous Space for Unified Multimodal Models (2026-11-02)</title>
-      <description>Unified Multimodal Models (UMMs) achieve remarkable success on diverse multimodal understanding and generation tasks, yet they still struggle to effectively leverage language-based chain-of-thought re...</description>
-      <link>https://arxiv.org/abs/2610.42149</link>
-      <guid>https://arxiv.org/abs/2610.42149#2026-11-02</guid>
-      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 No Channels Left Behind: Understanding Diffusion Acceleration through Residual Gates (2026-11-02)</title>
-      <description>Training acceleration methods for diffusion transformers, such as REPA and dispersive regularization, are commonly explained by additional supervision, spatial-structure priors, or improved feature ge...</description>
-      <link>https://arxiv.org/abs/2610.40914</link>
-      <guid>https://arxiv.org/abs/2610.40914#2026-11-02</guid>
-      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ReLift: Dense 3D Tracking as Lifted Trajectory Repair (2026-11-02)</title>
-      <description>Dense 3D tracking from monocular video requires establishing point correspondences over time, estimating their depth, and inferring their trajectories during occlusion. Existing methods typically lear...</description>
-      <link>https://arxiv.org/abs/2610.42136</link>
-      <guid>https://arxiv.org/abs/2610.42136#2026-11-02</guid>
-      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Probing Spatial State Representations in Visual Foundation Models (2026-11-02)</title>
-      <description>An observer sees only part of the surrounding world, yet must keep track of what lies beyond the current view. Spatial perception therefore involves more than recognizing individual images: it calls f...</description>
-      <link>https://arxiv.org/abs/2610.40636</link>
-      <guid>https://arxiv.org/abs/2610.40636#2026-11-02</guid>
-      <pubDate>Mon, 02 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
