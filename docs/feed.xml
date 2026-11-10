@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W46 (2026-11-03 ~ 2026-11-09)</title>
@@ -97,6 +97,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Learning Heterogeneous Tactile Representation for General Dexterous Manipulation (2026-11-10)</title>
+      <description>Tactile sensing is an indispensable modality for contact-rich dexterous manipulation, a capability that hints at the ultimate frontiers of embodied intelligence. However, commercially available tactil...</description>
+      <link>https://arxiv.org/abs/2611.12806</link>
+      <guid>https://arxiv.org/abs/2611.12806#2026-11-10</guid>
+      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Reframe: Observation-Aligned Multi-Teacher On-Policy Distillation for Agentic Visual Reasoning (2026-11-10)</title>
+      <description>Agentic reinforcement learning (RL) and multi-teacher on-policy distillation (MOPD) offer complementary routes to post-training. For visual agents, however, tool use presents two related challenges. M...</description>
+      <link>https://arxiv.org/abs/2611.12886</link>
+      <guid>https://arxiv.org/abs/2611.12886#2026-11-10</guid>
+      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Sage-Taiyi: A Metacognitive Architecture for Scientific Discovery (2026-11-10)</title>
+      <description>We introduce Sage-Taiyi, a metacognition-inspired architecture that uses accumulated scientific understanding to guide what to investigate next and how to investigate it. Through explicit monitoring a...</description>
+      <link>https://arxiv.org/abs/2611.12762</link>
+      <guid>https://arxiv.org/abs/2611.12762#2026-11-10</guid>
+      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Teamknitt: Configuring, Observing and Intervening in LLM-Agent Teams through the Lens of Dynamical-Systems and Human-Team Theory (2026-11-10)</title>
+      <description>Most frameworks for teams of large language model (LLM) agents fix the team's shape inside the software: who talks to whom, how much is passed along, and what a human can do once a run has started. Hu...</description>
+      <link>http://arxiv.org/abs/2611.12545v1</link>
+      <guid>http://arxiv.org/abs/2611.12545v1#2026-11-10</guid>
+      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Detecting Shadow AI: Unsanctioned LLM Agents on Enterprise Endpoints: A Taxonomy, an Open Detector and a Controlled Evaluation (2026-11-10)</title>
+      <description>Shadow IT, the use of technology that the IT organisation has not approved, is a long-standing governance problem. We argue that autonomous AI agents can make it grow much faster: agents make building...</description>
+      <link>http://arxiv.org/abs/2611.12377v1</link>
+      <guid>http://arxiv.org/abs/2611.12377v1#2026-11-10</guid>
+      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MIRIX-2.0: Multi-Agent Memory System (2026-11-10)</title>
+      <description>Long-term memory lets LLM agents personalize, stay consistent, and reuse what worked before. Parametric memories need training, consolidation can lose details for good, and keeping every record leaves...</description>
+      <link>http://arxiv.org/abs/2611.12068v1</link>
+      <guid>http://arxiv.org/abs/2611.12068v1#2026-11-10</guid>
+      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Inside the Trading Loop: Markets, Models, and Moves with LLM Agents (2026-11-10)</title>
+      <description>We built a hybrid multi-agent trading system that combines large language model (LLM) analysts with momentum-based portfolio construction and rule-based execution. Company-news and macroeconomic agent...</description>
+      <link>http://arxiv.org/abs/2611.11657v1</link>
+      <guid>http://arxiv.org/abs/2611.11657v1#2026-11-10</guid>
+      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Treating the Model as an Untrusted Component: Deterministic Policy Enforcement, Human Approval and Taint Tracking Against Prompt Injection in Tool-Using Agents, with Validation on Open-Weights Models (2026-11-10)</title>
+      <description>Tool-using LLM agents act on instructions embedded in the data they read, so prompt injection is a structural rather than a prompt-wording problem. We compare in-prompt defences (hardened prompts, spo...</description>
+      <link>http://arxiv.org/abs/2611.11571v1</link>
+      <guid>http://arxiv.org/abs/2611.11571v1#2026-11-10</guid>
+      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Safeguarding Agentic AI in Radiology Workflows: A Multimodel Evaluation of Rule-based and Large Language Model-based Verification (2026-11-10)</title>
+      <description>Purpose: To estimate how often tool-using large language model (LLM) agents record clinically relevant false or unsupported information in simulated radiology documentation and how much safeguards app...</description>
+      <link>http://arxiv.org/abs/2611.11541v1</link>
+      <guid>http://arxiv.org/abs/2611.11541v1#2026-11-10</guid>
+      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Training Vision Transformers to Focus: Emergence of Spatial Attention Head Specialization (2026-11-10)</title>
+      <description>Self-supervised learning in Vision Transformer models, such as DINO, enables robust visual perception without requiring labeled data by leveraging large-scale image datasets. However, these models lac...</description>
+      <link>https://arxiv.org/abs/2611.11890</link>
+      <guid>https://arxiv.org/abs/2611.11890#2026-11-10</guid>
+      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Video-Coder: Reinforcing Agentic Coding for Video Generation (2026-11-09)</title>
@@ -377,76 +447,6 @@
       <link>https://arxiv.org/abs/2611.04814</link>
       <guid>https://arxiv.org/abs/2611.04814#2026-11-04</guid>
       <pubDate>Wed, 04 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ToolSpace: Scaling Tool-Centric Environment Synthesis for Long-Horizon Agents (2026-11-04)</title>
-      <description>Large language models are deployed as long-horizon agents that compose diverse tools across MCP services into executable workflows. Existing MCP environment-scaling methods are data-centric: they firs...</description>
-      <link>https://arxiv.org/abs/2611.05036</link>
-      <guid>https://arxiv.org/abs/2611.05036#2026-11-04</guid>
-      <pubDate>Wed, 04 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Factorized MLLM Embeddings for Composed Image Retrieval (2026-11-04)</title>
-      <description>Composed Image Retrieval (CIR) aims to retrieve a target image given a reference image and a modification text. Although recent approaches leveraging Multimodal Large Language Models (MLLMs) have show...</description>
-      <link>https://arxiv.org/abs/2611.05193</link>
-      <guid>https://arxiv.org/abs/2611.05193#2026-11-04</guid>
-      <pubDate>Wed, 04 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 YANAMI: A Large-Scale Multimodal Dataset and Benchmark for Multiturn Stateful Interaction (2026-11-04)</title>
-      <description>Unified Multimodal Models (UMMs) integrate visual understanding, generation, and editing within a single unified framework. However, existing unified multimodal datasets and benchmarks remain dominate...</description>
-      <link>https://arxiv.org/abs/2611.05280</link>
-      <guid>https://arxiv.org/abs/2611.05280#2026-11-04</guid>
-      <pubDate>Wed, 04 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 VidUEU-Agent: A Data-Curation Agent for Multimodal Understanding, Editing, and Unified Tasks (2026-11-04)</title>
-      <description>The advancement of multimodal learning is heavily constrained by the scarcity and high annotation cost of high-quality instruction data. While raw videos offer an abundant and dynamic source of visual...</description>
-      <link>https://arxiv.org/abs/2611.04418</link>
-      <guid>https://arxiv.org/abs/2611.04418#2026-11-04</guid>
-      <pubDate>Wed, 04 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PyRUA-DataFarm: LLM Agent as a Cost-Efficient Teleoperator for Real-Ready Robot Data (2026-11-04)</title>
-      <description>Teleoperation remains the default way to collect robot demonstrations, but every episode costs robot and operator time, and every new task starts from scratch. We ask whether a coding agent can take o...</description>
-      <link>http://arxiv.org/abs/2611.05320v1</link>
-      <guid>http://arxiv.org/abs/2611.05320v1#2026-11-04</guid>
-      <pubDate>Wed, 04 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Where Is the Truth When AI Agents Disagree? Dependence-Aware Belief Propagation for Unsupervised Truth Discovery (Extended Version) (2026-11-04)</title>
-      <description>LLM agents often give conflicting answers to the same question, and many deployed agents are variants of one base model, so their errors are correlated. We study truth discovery among such agents: inf...</description>
-      <link>http://arxiv.org/abs/2611.04805v1</link>
-      <guid>http://arxiv.org/abs/2611.04805v1#2026-11-04</guid>
-      <pubDate>Wed, 04 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 CoworkOS:Scaling Agent Coworkers for Real-world Automation (2026-11-03)</title>
-      <description>Rapid advances in cowork agents are shifting human-AI collaboration toward real-world automation, delivering software, designs, and other artifacts. However, such productivity work demands both high-q...</description>
-      <link>https://arxiv.org/abs/2611.03178</link>
-      <guid>https://arxiv.org/abs/2611.03178#2026-11-03</guid>
-      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 CUA-Master: Scaling Computer-use Agents through Open-World Recursive Improvements (2026-11-03)</title>
-      <description>Despite recent advances in CUAs, their development remains constrained by the limited diversity, controllability, and reliability of interaction data. Moreover, conventional optimization pipelines lac...</description>
-      <link>https://arxiv.org/abs/2611.03126</link>
-      <guid>https://arxiv.org/abs/2611.03126#2026-11-03</guid>
-      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning (2026-11-03)</title>
-      <description>Multimodal large language models (MLLMs) can generate detailed video captions, yet they may overemphasize minor details while overlooking essential context and key events. We argue that not all visual...</description>
-      <link>https://arxiv.org/abs/2611.03602</link>
-      <guid>https://arxiv.org/abs/2611.03602#2026-11-03</guid>
-      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PhotoGuider: Composition-Aware Cropping and 360^{circ} View Framing with Explainable Photographic Assessments (2026-11-03)</title>
-      <description>Traditional image cropping assumes the photograph already contains the composition worth keeping, and asks only where to crop. A full 360^{circ} scene offers no such guarantee: the viewing direction i...</description>
-      <link>https://arxiv.org/abs/2611.02897</link>
-      <guid>https://arxiv.org/abs/2611.02897#2026-11-03</guid>
-      <pubDate>Tue, 03 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
