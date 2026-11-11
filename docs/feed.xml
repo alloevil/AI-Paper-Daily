@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W46 (2026-11-03 ~ 2026-11-09)</title>
@@ -97,6 +97,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Tree-Ising: Repairing Language Models with Bit-Level Ising Edits (2026-11-11)</title>
+      <description>Weight-space programming, introduced in recent MIT work by Takehi et al., enables a frontier LLM agent to read a network's weights and write a repair. Their GPT-6 Astra agent corrected the reasoning l...</description>
+      <link>https://arxiv.org/abs/2611.14210</link>
+      <guid>https://arxiv.org/abs/2611.14210#2026-11-11</guid>
+      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Few-Step Streaming Video Generation via Condition Shifting (2026-11-11)</title>
+      <description>Few-step sampling reduces the cost of streaming video generation. Distribution Matching Distillation (DMD) supervises few-step generators with a separate fake-score network, which adds training memory...</description>
+      <link>https://arxiv.org/abs/2611.14033</link>
+      <guid>https://arxiv.org/abs/2611.14033#2026-11-11</guid>
+      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MMDM: Measuring Massive Multitask Decision Making (2026-11-11)</title>
+      <description>System-1 Decision Models directly make structured probabilistic decisions over query-specified options given a state in a single forward pass, without autoregressively generating reasoning trajectorie...</description>
+      <link>https://arxiv.org/abs/2611.14309</link>
+      <guid>https://arxiv.org/abs/2611.14309#2026-11-11</guid>
+      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight (2026-11-11)</title>
+      <description>Dexterous manipulation requires rich spatial foresight over both the surrounding scene and the robot hand. Existing world-action models often acquire such predictive knowledge through explicit future ...</description>
+      <link>https://arxiv.org/abs/2611.11166</link>
+      <guid>https://arxiv.org/abs/2611.11166#2026-11-11</guid>
+      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Verifiable Agentic Traffic Class: A Policed Quality-of-Service Mechanism for Agentic AI Traffic, Evaluated from Simulation to Real-Kernel Adversarial Testing (2026-11-11)</title>
+      <description>Software agents built on large language models generate traffic unlike human web traffic, yet routers have no class for it and cannot verify a sender's claim to be an agent. This paper proposes the Ve...</description>
+      <link>http://arxiv.org/abs/2611.14211v1</link>
+      <guid>http://arxiv.org/abs/2611.14211v1#2026-11-11</guid>
+      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Controlled Knowledge Engineering for Taxonomy Induction with Tool-Grounded LLM Agents and Runtime-Adaptive Policies (2026-11-11)</title>
+      <description>Taxonomies are structured knowledge representations that support semantic search, recommendation, product catalog organization, and retrieval-augmented generation. Their automated construction from a ...</description>
+      <link>http://arxiv.org/abs/2611.13966v1</link>
+      <guid>http://arxiv.org/abs/2611.13966v1#2026-11-11</guid>
+      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Is Your Robot's Memory Just a Clock? Temporal Shortcuts in Memory-Augmented VLA Policies (2026-11-11)</title>
+      <description>Memory-augmented vision-language-action (VLA) policies are meant to remember what happened. Many of them, however, fill memory by time: they sample frames uniformly across the episode and stamp each f...</description>
+      <link>https://arxiv.org/abs/2611.14488</link>
+      <guid>https://arxiv.org/abs/2611.14488#2026-11-11</guid>
+      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Market-Conditioned JEPA: Learning from Unpredictable Market Shocks (2026-11-11)</title>
+      <description>Much of the variation in financial time series is driven by market-wide shocks that cannot be predicted from an asset's own history. Per-asset self-supervised learning treats this variation as irreduc...</description>
+      <link>https://arxiv.org/abs/2611.13572</link>
+      <guid>https://arxiv.org/abs/2611.13572#2026-11-11</guid>
+      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ExRL: Sample-Efficient Online Adaptation of Long-Chunk Policies via Execution Length Control (2026-11-11)</title>
+      <description>Predicting long action chunks, often spanning dozens of timesteps, has become a key ingredient in increasingly capable robot policies. In this paper, we find that adapting these long-chunk policies wi...</description>
+      <link>https://arxiv.org/abs/2611.13482</link>
+      <guid>https://arxiv.org/abs/2611.13482#2026-11-11</guid>
+      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Are Dense Rewards Worth Their Tokens in GRPO? (2026-11-11)</title>
+      <description>RLVR trains language models to reason by rewarding correct final answers. A widely used algorithm, group-relative policy optimization (GRPO), gives every token of a solution the same credit, so dense ...</description>
+      <link>https://arxiv.org/abs/2611.13560</link>
+      <guid>https://arxiv.org/abs/2611.13560#2026-11-11</guid>
+      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Learning Heterogeneous Tactile Representation for General Dexterous Manipulation (2026-11-10)</title>
@@ -377,76 +447,6 @@
       <link>https://arxiv.org/abs/2611.06518</link>
       <guid>https://arxiv.org/abs/2611.06518#2026-11-05</guid>
       <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 VA-TDM: A Unified View for Improving Few-Step Diffusion Models by Velocity Adversarial Distillation (2026-11-05)</title>
-      <description>Few-step distillation offers efficient generation with diffusion and flow models, but preserving quality with only a few sampling steps remains challenging. Distribution-matching methods via score dis...</description>
-      <link>https://arxiv.org/abs/2611.06796</link>
-      <guid>https://arxiv.org/abs/2611.06796#2026-11-05</guid>
-      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 When Do Summaries Become Instructions? Unsupported Policy in LLM Agents' Self-Written Handoff Summaries (2026-11-05)</title>
-      <description>Long-running LLM agents compact their context, replacing most history with a summary. We ask whether handoff summaries state permissions or requirements the record does not support, whether such sente...</description>
-      <link>http://arxiv.org/abs/2611.06545v1</link>
-      <guid>http://arxiv.org/abs/2611.06545v1#2026-11-05</guid>
-      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 FlyHash for LLM Agent Memory: An Empirical Validation and a New Application (2026-11-05)</title>
-      <description>Large language model (LLM) agents increasingly rely on external memory stores to retain information across conversations, typically via dense vector embeddings searched with approximate nearest-neighb...</description>
-      <link>http://arxiv.org/abs/2611.05791v1</link>
-      <guid>http://arxiv.org/abs/2611.05791v1#2026-11-05</guid>
-      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Toward a Compositional Knowledge Architecture for a Shared Organizational Cortex (2026-11-05)</title>
-      <description>Organizations accumulate evidence in conversations, documents, decisions and relationships, but they act on interpretations: judgements assembled from several observations, resting on assumptions, and...</description>
-      <link>http://arxiv.org/abs/2611.05753v1</link>
-      <guid>http://arxiv.org/abs/2611.05753v1#2026-11-05</guid>
-      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 LoopVQ: Sub 1-bit KV Cache Quantization for Looped Transformers (2026-11-05)</title>
-      <description>Looped transformers are a parameter-efficient alternative to standard transformers for language modeling. By reapplying the same layers across multiple loop steps, recent looped language models match ...</description>
-      <link>https://arxiv.org/abs/2611.05304</link>
-      <guid>https://arxiv.org/abs/2611.05304#2026-11-05</guid>
-      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PyRUA-REAL: Robot Exploration and Adaptive Learning through RSI in the Real World (2026-11-05)</title>
-      <description>Coding agents powered by models such as GPT-6-Astra connect spatial reasoning with executable robot behavior, raising the question of how such agents can produce lasting improvements in robot capabili...</description>
-      <link>https://arxiv.org/abs/2611.06768</link>
-      <guid>https://arxiv.org/abs/2611.06768#2026-11-05</guid>
-      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems (2026-11-04)</title>
-      <description>Artificial general intelligence (AGI) requires a method that can understand, generate, reason, and act across diverse domains and modalities. Rather than relying on a single model to master every capa...</description>
-      <link>https://arxiv.org/abs/2611.05275</link>
-      <guid>https://arxiv.org/abs/2611.05275#2026-11-04</guid>
-      <pubDate>Wed, 04 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Behind Video Generation: Observations and Insights on Multimodal Understanding from Kling (2026-11-04)</title>
-      <description>Video generation has progressed from isolated clips to coherent short-form audiovisual sequences, and the bottleneck is shifting from rendering to semantic control. This report summarizes the observat...</description>
-      <link>https://arxiv.org/abs/2611.04916</link>
-      <guid>https://arxiv.org/abs/2611.04916#2026-11-04</guid>
-      <pubDate>Wed, 04 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DreamX: Video Diffusion Model is a Universal Latent Action Learner (2026-11-04)</title>
-      <description>Learning a universal action representation from video requires modeling dynamics that are consistent across different executions of the same action yet invariant to changes in embodiment and appearanc...</description>
-      <link>https://arxiv.org/abs/2611.05377</link>
-      <guid>https://arxiv.org/abs/2611.05377#2026-11-04</guid>
-      <pubDate>Wed, 04 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Think Less, Locally: Local Preference Learning for Reasoning Compression (2026-11-04)</title>
-      <description>Large reasoning models achieve strong performance on challenging tasks, but their long chain-of-thought often incurs substantial inference costs by continuing to deliberate after sufficient informatio...</description>
-      <link>https://arxiv.org/abs/2611.04814</link>
-      <guid>https://arxiv.org/abs/2611.04814#2026-11-04</guid>
-      <pubDate>Wed, 04 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
