@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W46 (2026-11-03 ~ 2026-11-09)</title>
@@ -97,6 +97,62 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Contrastive Discovery: Open-Ended Scientific Discovery over Competing Explanations (2026-11-12)</title>
+      <description>LLM agents are increasingly used for open-ended, data-driven scientific discovery, yet most of them evaluate hypotheses pointwise, testing an empirical claim $h$ only against its complement $\neg h$. ...</description>
+      <link>http://arxiv.org/abs/2611.14514v1</link>
+      <guid>http://arxiv.org/abs/2611.14514v1#2026-11-12</guid>
+      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows (2026-11-12)</title>
+      <description>Business process automation runs the same Standard Operating Procedure (SOP) again and again on new inputs. Large Language Model (LLM) agents can follow an SOP written in natural language, but they ca...</description>
+      <link>http://arxiv.org/abs/2611.14492v1</link>
+      <guid>http://arxiv.org/abs/2611.14492v1#2026-11-12</guid>
+      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 When Should Agents Remember? Falsification-Gated Self-Evolution for LLM Agents (2026-11-12)</title>
+      <description>LLM agents increasingly operate in long-horizon, verifier-rich environments, but current self-improvement mechanisms often write episode-derived lessons directly into memory, making local success an u...</description>
+      <link>http://arxiv.org/abs/2611.14326v1</link>
+      <guid>http://arxiv.org/abs/2611.14326v1#2026-11-12</guid>
+      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Don't Just Trust Your Memory: Evidence-Linked Memory Reduces Memory-Induced Degradation in LLM Agents (2026-11-12)</title>
+      <description>External memory enables LLM agents to improve from experience by distilling trajectories of past tasks into concise lessons for new tasks. However, memory can also lead to memory-induced degradation, ...</description>
+      <link>http://arxiv.org/abs/2611.14320v1</link>
+      <guid>http://arxiv.org/abs/2611.14320v1#2026-11-12</guid>
+      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PARLEY: Evaluating LLM Collaboration Through Cooperative Asymmetric Puzzles (2026-11-12)</title>
+      <description>As large language models power autonomous agents, understanding how they collaborate and where they fail becomes critical. We introduce PARLEY, an extensible platform for studying LLM agent collaborat...</description>
+      <link>http://arxiv.org/abs/2611.14242v1</link>
+      <guid>http://arxiv.org/abs/2611.14242v1#2026-11-12</guid>
+      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Ontology-Guided Knowledge Graph Construction and Robust Evidence Retrieval for Indian Knowledge Systems (2026-11-12)</title>
+      <description>Retrieving evidence from Indian Knowledge Systems is complicated by transliteration variants, ambiguous names, and relations distributed across passages. We present an ontology-guided knowledge graph ...</description>
+      <link>http://arxiv.org/abs/2611.14050v1</link>
+      <guid>http://arxiv.org/abs/2611.14050v1#2026-11-12</guid>
+      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 From Show Programs to Linked Data (2026-11-12)</title>
+      <description>Many heritage institutions hold extensive collections of show programs. Too numerous to be cataloged individually, they remain difficult to access and are still largely undigitized. This paper present...</description>
+      <link>http://arxiv.org/abs/2611.14037v1</link>
+      <guid>http://arxiv.org/abs/2611.14037v1#2026-11-12</guid>
+      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Program-Aided Patchable Skill Evolution (2026-11-12)</title>
+      <description>Agent skills have emerged as an effective means of enabling LLM agents to solve complex, interactive tasks by encoding reusable knowledge without modifying model parameters. Recent approaches further ...</description>
+      <link>http://arxiv.org/abs/2611.14019v1</link>
+      <guid>http://arxiv.org/abs/2611.14019v1#2026-11-12</guid>
+      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Tree-Ising: Repairing Language Models with Bit-Level Ising Edits (2026-11-11)</title>
@@ -391,62 +447,6 @@
       <link>http://arxiv.org/abs/2611.07932v1</link>
       <guid>http://arxiv.org/abs/2611.07932v1#2026-11-06</guid>
       <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 The Two-Ledger Model: Transaction-Grain Cost Accounting for Multi-Agent AI Systems Across Clouds, Models, and Systems of Record (2026-11-06)</title>
-      <description>Enterprises run business transactions through multi-agent AI systems spanning clouds, large language models (LLMs), orchestration harnesses, and systems of record. Finance receives AI cost only at set...</description>
-      <link>http://arxiv.org/abs/2611.06989v1</link>
-      <guid>http://arxiv.org/abs/2611.06989v1#2026-11-06</guid>
-      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EDGAR: Efficient Diffusion-Driven Gaussian Avatar Refinement via Synthetic Failure (2026-11-06)</title>
-      <description>Recent advances in Gaussian splatting have enabled efficient and photorealistic head avatar reconstruction, yet monocular video-based or image-based methods still suffer from under-constrained geometr...</description>
-      <link>https://arxiv.org/abs/2611.07909</link>
-      <guid>https://arxiv.org/abs/2611.07909#2026-11-06</guid>
-      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SAE Interprets MoE: Sparse AutoEncoders Reveal That MoE Experts Exhibit Human-Interpretable Fine-Grained Specialization (2026-11-06)</title>
-      <description>Mixture-of-Experts (MoE) models route each token to a few of many experts, yet what an individual expert is responsible for remains unsettled. Existing analyses count how often an expert is selected o...</description>
-      <link>https://arxiv.org/abs/2611.08089</link>
-      <guid>https://arxiv.org/abs/2611.08089#2026-11-06</guid>
-      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Towards Real-Time Full-Waveform LiDAR Transformers via Intensity-Guided Token Reduction and Physics-Aware Augmentation (2026-11-06)</title>
-      <description>LiDAR is a critical sensor for autonomous driving and robotics, yet it remains vulnerable to adverse conditions such as fog, rain, transparent objects, and low-reflectance surfaces. Full-waveform LiDA...</description>
-      <link>https://arxiv.org/abs/2611.07613</link>
-      <guid>https://arxiv.org/abs/2611.07613#2026-11-06</guid>
-      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Turns Matter: Advancing Streaming Video RL via Turn-Level Credit (2026-11-05)</title>
-      <description>Streaming video understanding requires models to repeatedly decide whether to respond or continue observing. Recently, Group Relative Policy Optimization (GRPO) has been applied to this setting, with ...</description>
-      <link>https://arxiv.org/abs/2611.06728</link>
-      <guid>https://arxiv.org/abs/2611.06728#2026-11-05</guid>
-      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 From Pixels to Actions - Towards Native Vision-Language-Action Policies (2026-11-05)</title>
-      <description>Vision-language-action models are typically built on a simple premise: perception is first compressed by visual encoders, and action reasoning begins only afterwards. Yet manipulation often hinges on ...</description>
-      <link>https://arxiv.org/abs/2611.06918</link>
-      <guid>https://arxiv.org/abs/2611.06918#2026-11-05</guid>
-      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 FrontierPhysics: Evaluating Agents for End-to-End Physics Research (2026-11-05)</title>
-      <description>AI agents are playing an increasingly important role in physics research. However, existing physics benchmarks only evaluate fixed questions, isolated sub-tasks, or paper reproduction with given solut...</description>
-      <link>https://arxiv.org/abs/2611.06910</link>
-      <guid>https://arxiv.org/abs/2611.06910#2026-11-05</guid>
-      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EmoReward: Self-Evolving Reward Calibration for Emotional Video Generation RL (2026-11-05)</title>
-      <description>Group Relative Policy Optimization (GRPO) has advanced generative model post-training in verifiable domains such as code and mathematics, but evaluating video quality, especially emotional expression,...</description>
-      <link>https://arxiv.org/abs/2611.06518</link>
-      <guid>https://arxiv.org/abs/2611.06518#2026-11-05</guid>
-      <pubDate>Thu, 05 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
