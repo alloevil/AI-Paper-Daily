@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W46 (2026-11-03 ~ 2026-11-09)</title>
@@ -97,6 +97,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PhysLoop: Harnessing LLMs' Physics Awareness for Self-Improving Video Generation Models (2026-11-13)</title>
+      <description>Video generation models produce visually realistic videos but still struggle with physical dynamics and causal consistency. Learning from generated videos requires fine-grained physical supervision, y...</description>
+      <link>https://arxiv.org/abs/2611.16748</link>
+      <guid>https://arxiv.org/abs/2611.16748#2026-11-13</guid>
+      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents (2026-11-13)</title>
+      <description>Decision models answer a question with a typed output, such as a choice among options with a probability for each, so one model can choose an agent's actions, evaluate actions already taken, or score ...</description>
+      <link>https://arxiv.org/abs/2611.17167</link>
+      <guid>https://arxiv.org/abs/2611.17167#2026-11-13</guid>
+      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TTB: Test-time Baking for Efficient Rendering of Decoder-only View Synthesis Models (2026-11-13)</title>
+      <description>Decoder-only Large View Synthesis Models (LVSMs) with KV-cache have recently achieved state-of-the-art quality by regressing novel views from neural networks without reconstructing 3D geometry, while ...</description>
+      <link>https://arxiv.org/abs/2611.17331</link>
+      <guid>https://arxiv.org/abs/2611.17331#2026-11-13</guid>
+      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Ropedia Xperience 2: A Gold Standard for Scaling Physical AI Environments and Behaviors (2026-11-13)</title>
+      <description>Large foundation models such as GPT-6 Astra and Claude Fable 5.1 have recently been shown to control robots directly from visual observations. They nevertheless remain brittle on long-horizon, contact...</description>
+      <link>https://arxiv.org/abs/2611.17060</link>
+      <guid>https://arxiv.org/abs/2611.17060#2026-11-13</guid>
+      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WorldDraft: If Code Builds the World, Can Video Models Just Render It? (2026-11-13)</title>
+      <description>Multimodal coding agents decouple 4D world construction from visual generation, repurposing video models from world generators toward generative renderers. This division of labor raises a fundamental ...</description>
+      <link>https://arxiv.org/abs/2611.16217</link>
+      <guid>https://arxiv.org/abs/2611.16217#2026-11-13</guid>
+      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Factored One-sided Adam-Moment for Practical and Scalable SOAP (2026-11-13)</title>
+      <description>Second-order optimizers (e.g., Shampoo, SOAP) have emerged as compelling alternatives to Adam/AdamW and promise faster per-step convergence than AdamW in transformer training. However, they still rema...</description>
+      <link>https://arxiv.org/abs/2611.16905</link>
+      <guid>https://arxiv.org/abs/2611.16905#2026-11-13</guid>
+      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Guided Generation of Linux Kernel Semantic Patches with Small Local Language Models (2026-11-13)</title>
+      <description>When a Linux kernel API changes, hundreds of drivers are converted by hand over months, and the earlier conversions are reviewed examples for the later ones. We ask whether small open language models ...</description>
+      <link>http://arxiv.org/abs/2611.16215v1</link>
+      <guid>http://arxiv.org/abs/2611.16215v1#2026-11-13</guid>
+      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Spec-Driven PBT: Deriving Semantic Invariants from Code Specifications for Agentic Property-based Testing (2026-11-13)</title>
+      <description>Software is increasingly written by AI agents that produce an implementation from a natural language specification, a practice known as agentic coding. Code is now produced faster than it can be revie...</description>
+      <link>http://arxiv.org/abs/2611.15920v1</link>
+      <guid>http://arxiv.org/abs/2611.15920v1#2026-11-13</guid>
+      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 UniSpark: Exploring Hybrid Attention for Multimodal Understanding and Generation (2026-11-13)</title>
+      <description>We present UniSpark-9B, a unified multimodal model that investigates hybrid attention for visual understanding and generation. Built on a Mixture-of-Transformer-Experts backbone with approximately 9B ...</description>
+      <link>https://arxiv.org/abs/2611.16517</link>
+      <guid>https://arxiv.org/abs/2611.16517#2026-11-13</guid>
+      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 DeepStress: Stress-Testing Deep Search Agents (2026-11-13)</title>
+      <description>While search agents demonstrate impressive capabilities in multi-step question answering, their robustness to poor-quality evidence remains under-explored. Such evidence is rare in benchmark corpora, ...</description>
+      <link>https://arxiv.org/abs/2607.13920</link>
+      <guid>https://arxiv.org/abs/2607.13920#2026-11-13</guid>
+      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Contrastive Discovery: Open-Ended Scientific Discovery over Competing Explanations (2026-11-12)</title>
@@ -377,76 +447,6 @@
       <link>https://arxiv.org/abs/2611.08376</link>
       <guid>https://arxiv.org/abs/2611.08376#2026-11-07</guid>
       <pubDate>Sat, 07 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SCALE: Real-Time Latent Communication for Cyber-Physical Agents (2026-11-07)</title>
-      <description>Latent communication enables agents to collaborate efficiently by directly exchanging intermediate model representations rather than raw sensor data or text messages. Existing approaches, however, are...</description>
-      <link>http://arxiv.org/abs/2611.08390v1</link>
-      <guid>http://arxiv.org/abs/2611.08390v1#2026-11-07</guid>
-      <pubDate>Sat, 07 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Benchmarking Large Language Models on Heterogeneous Cognitive and Biomedical Knowledge Graphs: The Role of Graph Grounding in Multi-Hop Reasoning and Hallucination Mitigation (2026-11-07)</title>
-      <description>Large language models (LLMs) are increasingly used in biomedical and cognitive neuroscience, but their ability to reason reliably over heterogeneous knowledge graphs (KGs) remains unclear. We benchmar...</description>
-      <link>http://arxiv.org/abs/2611.08315v1</link>
-      <guid>http://arxiv.org/abs/2611.08315v1#2026-11-07</guid>
-      <pubDate>Sat, 07 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PCBRouteAgent: How Close Are LLM Agents to Becoming PCB Routing Engineers? (2026-11-07)</title>
-      <description>Automating printed circuit board (PCB) routing requires coordinating board-level connectivity decisions with geometric execution under strict design rules. Although recent agents can interact with nat...</description>
-      <link>http://arxiv.org/abs/2611.08175v1</link>
-      <guid>http://arxiv.org/abs/2611.08175v1#2026-11-07</guid>
-      <pubDate>Sat, 07 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Generate-then-Rank: Learning Symbolic Goal Interpretation for Embodied Agents (2026-11-07)</title>
-      <description>Goal interpretation is to translate a natural language instruction into a formal symbolic goal that a planner can execute. It is critical for embodied agents because any error here propagates to every...</description>
-      <link>http://arxiv.org/abs/2611.07825v1</link>
-      <guid>http://arxiv.org/abs/2611.07825v1#2026-11-07</guid>
-      <pubDate>Sat, 07 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding (2026-11-06)</title>
-      <description>Models for physical AI tasks, such as robotics and autonomous driving, need not reason solely in language. They can use visual plans--points, bounding boxes, and trajectories--to represent spatial goa...</description>
-      <link>https://arxiv.org/abs/2611.08449</link>
-      <guid>https://arxiv.org/abs/2611.08449#2026-11-06</guid>
-      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 WeLM-Image: A Unified Image Generation Model towards Visual Intelligence (2026-11-06)</title>
-      <description>We present WeLM-Image, a unified image foundation model that integrates multimodal understanding into text-to-image generation, instruction-guided editing, and multi-reference synthesis. Designed for ...</description>
-      <link>https://arxiv.org/abs/2611.07392</link>
-      <guid>https://arxiv.org/abs/2611.07392#2026-11-06</guid>
-      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 SLA: Scaling Spatial-Language-Action Model via Continual Pre-training (2026-11-06)</title>
-      <description>Reliable robotic manipulation requires both semantic understanding and precise control in three-dimensional space. However, vision-language-action (VLA) foundations largely inherit visual representati...</description>
-      <link>https://arxiv.org/abs/2611.08373</link>
-      <guid>https://arxiv.org/abs/2611.08373#2026-11-06</guid>
-      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Towards Foundation Decision Models: Drex (2026-11-06)</title>
-      <description>Autoregressive approaches with large language models, such as long chain-of-thought reasoning, have become the default for new AI applications because they reach higher accuracy on a wide range of tas...</description>
-      <link>https://arxiv.org/abs/2611.07854</link>
-      <guid>https://arxiv.org/abs/2611.07854#2026-11-06</guid>
-      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ChemE-as-Code: An Open-Source Platform for Agentic AI in Chemical Engineering (2026-11-06)</title>
-      <description>ChemE-as-Code provides an open-source environment in which AI agents built on large language models (LLMs) can carry out chemical engineering work and engineers can check it. Its calculation tools ran...</description>
-      <link>http://arxiv.org/abs/2611.07947v1</link>
-      <guid>http://arxiv.org/abs/2611.07947v1#2026-11-06</guid>
-      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AttnSR: Attention Step Reward for Long-Horizon Agentic RL (2026-11-06)</title>
-      <description>Long-horizon LLM agents make multi-step decisions, yet outcome-reward-only reinforcement learning provides little direct supervision for individual steps. We introduce AttnSR, a step-level reward augm...</description>
-      <link>http://arxiv.org/abs/2611.07932v1</link>
-      <guid>http://arxiv.org/abs/2611.07932v1#2026-11-06</guid>
-      <pubDate>Fri, 06 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
