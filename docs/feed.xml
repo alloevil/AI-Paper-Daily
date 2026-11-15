@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W46 (2026-11-03 ~ 2026-11-09)</title>
@@ -97,6 +97,48 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 LiveGeo: Benchmarking Geographic Agents in Continuously Evolving Worlds (2026-11-15)</title>
+      <description>We introduce GeoWorld, a controllable and continuously evolving geographic environment platform for LLM agents, and LiveGeo, a benchmark for evaluating reliable decision-making in real-world geographi...</description>
+      <link>http://arxiv.org/abs/2611.17267v1</link>
+      <guid>http://arxiv.org/abs/2611.17267v1#2026-11-15</guid>
+      <pubDate>Sun, 15 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Skill Adapter: Personalized Modification and Online Routing of General-Purpose Skills (2026-11-15)</title>
+      <description>Large language model (LLM) agents use external skills to reuse task procedures and experience with tools. General-purpose skills describe shared execution procedures, while specific tool choices, oper...</description>
+      <link>http://arxiv.org/abs/2611.17007v1</link>
+      <guid>http://arxiv.org/abs/2611.17007v1#2026-11-15</guid>
+      <pubDate>Sun, 15 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Primer: An AI Framework for Instructor-Centered Educational Simulation Creation (2026-11-15)</title>
+      <description>Educational simulations are a well-established pedagogical technique that gives learners opportunities to apply knowledge, respond to challenges, and reflect on their performance. High-quality simulat...</description>
+      <link>http://arxiv.org/abs/2611.16986v1</link>
+      <guid>http://arxiv.org/abs/2611.16986v1#2026-11-15</guid>
+      <pubDate>Sun, 15 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 S1-Evo: Experience-Guided Evidence Competition Attacks on Typed System-1 Decision Models (2026-11-15)</title>
+      <description>Typed System-1 (S1) decision models are increasingly deployed in LLM agents for routing, moderation, and authorization to cut inference cost, yet untrusted context can still manipulate typed outputs a...</description>
+      <link>http://arxiv.org/abs/2611.16937v1</link>
+      <guid>http://arxiv.org/abs/2611.16937v1#2026-11-15</guid>
+      <pubDate>Sun, 15 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Outcome-Mass Alignment: Controlling Length-Dependent Trajectory Influence in Multi-Turn LLM Agent Reinforcement Learning (2026-11-15)</title>
+      <description>To keep long interaction contexts tractable, stepwise group-relative training for multi-turn LLM agents materializes each source trajectory into multiple response rows and valid tokens. This expansion...</description>
+      <link>http://arxiv.org/abs/2611.16816v1</link>
+      <guid>http://arxiv.org/abs/2611.16816v1#2026-11-15</guid>
+      <pubDate>Sun, 15 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 From Data to Wisdom: Rethinking AI Through an Epistemic Lens (2026-11-15)</title>
+      <description>This paper proposes the Data-to-Wisdom Epistemic Architecture for AI (EAAI), a conceptual framework treating Data, Information, Knowledge, Understanding and Wisdom as five distinct but recursively int...</description>
+      <link>http://arxiv.org/abs/2611.16726v1</link>
+      <guid>http://arxiv.org/abs/2611.16726v1#2026-11-15</guid>
+      <pubDate>Sun, 15 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 PhysLoop: Harnessing LLMs' Physics Awareness for Self-Improving Video Generation Models (2026-11-13)</title>
@@ -405,48 +447,6 @@
       <link>http://arxiv.org/abs/2611.09792v1</link>
       <guid>http://arxiv.org/abs/2611.09792v1#2026-11-09</guid>
       <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Language as Trait, Politeness as Strategy: Controlled Tests of Linguistic Effects in LLM Social-Deduction Agents (2026-11-09)</title>
-      <description>Large language model (LLM) agents coordinate through conversation, and the same message can be phrased in simpler or more complex language, bluntly or politely. We test whether such differences change...</description>
-      <link>http://arxiv.org/abs/2611.09768v1</link>
-      <guid>http://arxiv.org/abs/2611.09768v1#2026-11-09</guid>
-      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 What to Delegate, What to Preserve: Human Preferences for Agentic AI Across Everyday Life and Work (2026-11-09)</title>
-      <description>AI agents can execute multi-step tasks on users' behalf, yet the boundaries of acceptable delegation remain unclear. We report a scenario-based survey of 289 U.S. adults with prior AI experience cover...</description>
-      <link>http://arxiv.org/abs/2611.09730v1</link>
-      <guid>http://arxiv.org/abs/2611.09730v1#2026-11-09</guid>
-      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MemoryDojo: Benchmarking Poisoning Through LLM Agent Memory (2026-11-09)</title>
-      <description>LLM agents benefit from using memory systems to improve performance on long-horizon, multi-session tasks. However, memory introduces a critical attack surface. Malicious instructions encountered in on...</description>
-      <link>http://arxiv.org/abs/2611.09721v1</link>
-      <guid>http://arxiv.org/abs/2611.09721v1#2026-11-09</guid>
-      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Differentially Private GraphRAG: Protecting Relation Connectivity and Semantics (2026-11-09)</title>
-      <description>Graph Retrieval-Augmented Generation (GraphRAG) connects information across documents through entity relationships to support relational reasoning. However, black-box access to GraphRAG systems can en...</description>
-      <link>http://arxiv.org/abs/2611.09658v1</link>
-      <guid>http://arxiv.org/abs/2611.09658v1#2026-11-09</guid>
-      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling (2026-11-07)</title>
-      <description>Mathematical modeling turns an open-ended real-world problem into assumptions, a model, a solution, and a defended recommendation, and its answers matter only if they are both close to a credible refe...</description>
-      <link>https://arxiv.org/abs/2611.08237</link>
-      <guid>https://arxiv.org/abs/2611.08237#2026-11-07</guid>
-      <pubDate>Sat, 07 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Muir: Linear Attention with Sensitivity-Allocated Gating and Matched-Filter Readout (2026-11-07)</title>
-      <description>Linear attention compresses context into a fixed-size key-value state for linear-time training and constant-memory inference. Gated delta-rule models decay this state and erase its prediction for an i...</description>
-      <link>https://arxiv.org/abs/2611.08376</link>
-      <guid>https://arxiv.org/abs/2611.08376#2026-11-07</guid>
-      <pubDate>Sat, 07 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
