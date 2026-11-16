@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W46 (2026-11-03 ~ 2026-11-09)</title>
@@ -97,6 +97,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Envisioning Agentic Robotics: A New Era of Robotic Systems (2026-11-16)</title>
+      <description>The release of GPT-6 Astra marks the emergence of a new paradigm in robotics: agentic robotics. Within weeks, frontier models with agentic harnesses matched or exceeded task-specific policies on many ...</description>
+      <link>https://arxiv.org/abs/2611.18359</link>
+      <guid>https://arxiv.org/abs/2611.18359#2026-11-16</guid>
+      <pubDate>Mon, 16 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Gamer: A Generalist Vision-Language-Action Foundation Model for Long-Horizon Real-Time Game Agent (2026-11-16)</title>
+      <description>We introduce Gamer, a generalist agent framework built for long-horizon tasks in complex interactive environments. Its end-to-end architecture combines perception, memory management, and multi-step re...</description>
+      <link>https://arxiv.org/abs/2611.18397</link>
+      <guid>https://arxiv.org/abs/2611.18397#2026-11-16</guid>
+      <pubDate>Mon, 16 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MMFlash: Faster Speculative Decoding for Vision-Language Models (2026-11-16)</title>
+      <description>Speculative decoding accelerates generation by letting a lightweight drafter propose tokens for parallel verification by a target model. Diffusion drafters such as DFlash propose an entire token block...</description>
+      <link>https://arxiv.org/abs/2611.18482</link>
+      <guid>https://arxiv.org/abs/2611.18482#2026-11-16</guid>
+      <pubDate>Mon, 16 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 V-JEPA-LM: Video-Language Models That Read Dynamics Beyond Static, Text-Aligned Representations (2026-11-16)</title>
+      <description>World-model video encoders such as V-JEPA learn how scenes change (direction, speed, order, state) from video alone. To answer questions, they are joined to a language model trained on captions and qu...</description>
+      <link>https://arxiv.org/abs/2611.17831</link>
+      <guid>https://arxiv.org/abs/2611.17831#2026-11-16</guid>
+      <pubDate>Mon, 16 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 G-CAST: Governed Continual Self-Training for E-Commerce Agents under Evolving Demands (2026-11-16)</title>
+      <description>With the rapid advancement of Large Language Models (LLMs), an increasing number of users are turning to LLM-powered agents for conversational shopping in e-commerce. However, the user needs continue ...</description>
+      <link>https://arxiv.org/abs/2611.17814</link>
+      <guid>https://arxiv.org/abs/2611.17814#2026-11-16</guid>
+      <pubDate>Mon, 16 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 JVT: Just Video Transformer makes pixel-space video diffusion simple (2026-11-16)</title>
+      <description>Direct diffusion modeling of high-dimensional raw video data is challenging, and existing pixel-space methods often rely on specialized architectures. We introduce JVT (Just Video Transformer), a simp...</description>
+      <link>https://arxiv.org/abs/2611.18549</link>
+      <guid>https://arxiv.org/abs/2611.18549#2026-11-16</guid>
+      <pubDate>Mon, 16 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MEM-SQL: Memory-Empowered Text-to-SQL (2026-11-16)</title>
+      <description>Text-to-SQL systems translate natural language questions into SQL queries over increasingly complex databases. However, widely used benchmarks evaluate questions independently, overlooking settings wh...</description>
+      <link>https://arxiv.org/abs/2611.18338</link>
+      <guid>https://arxiv.org/abs/2611.18338#2026-11-16</guid>
+      <pubDate>Mon, 16 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 More Agents, More Samples, or More Thinking? Untangling Coordination, Ensembling, and Test-Time Compute in Multi-Agent LLMs (2026-11-16)</title>
+      <description>Evaluations of multi-agent language models often compare communicating architectures against a single greedy pass. This practice confounds coordination with sample multiplicity and inference compute. ...</description>
+      <link>http://arxiv.org/abs/2611.17610v1</link>
+      <guid>http://arxiv.org/abs/2611.17610v1#2026-11-16</guid>
+      <pubDate>Mon, 16 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Do Underwater Image Quality Metrics Agree with Human Perception? A Benchmark with Human Choices, Simple Edits and Generative Drift (2026-11-16)</title>
+      <description>Underwater image enhancement is challenging to evaluate due to the lack of clean reference images, so researchers rely on no-reference image quality assessment (NR-IQA) metrics. However, it remains un...</description>
+      <link>https://arxiv.org/abs/2611.18429</link>
+      <guid>https://arxiv.org/abs/2611.18429#2026-11-16</guid>
+      <pubDate>Mon, 16 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CANTraj: Recovering Vehicle Trajectories from CAN Signals in Naturalistic Driving (2026-11-16)</title>
+      <description>Open driving releases and usage-based insurance programs often claim to prevent privacy breaches by omitting GPS records when sharing or collecting vehicle data. However, removing GPS coordinates from...</description>
+      <link>https://arxiv.org/abs/2611.18442</link>
+      <guid>https://arxiv.org/abs/2611.18442#2026-11-16</guid>
+      <pubDate>Mon, 16 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 LiveGeo: Benchmarking Geographic Agents in Continuously Evolving Worlds (2026-11-15)</title>
@@ -377,76 +447,6 @@
       <link>http://arxiv.org/abs/2611.12068v1</link>
       <guid>http://arxiv.org/abs/2611.12068v1#2026-11-10</guid>
       <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Inside the Trading Loop: Markets, Models, and Moves with LLM Agents (2026-11-10)</title>
-      <description>We built a hybrid multi-agent trading system that combines large language model (LLM) analysts with momentum-based portfolio construction and rule-based execution. Company-news and macroeconomic agent...</description>
-      <link>http://arxiv.org/abs/2611.11657v1</link>
-      <guid>http://arxiv.org/abs/2611.11657v1#2026-11-10</guid>
-      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Treating the Model as an Untrusted Component: Deterministic Policy Enforcement, Human Approval and Taint Tracking Against Prompt Injection in Tool-Using Agents, with Validation on Open-Weights Models (2026-11-10)</title>
-      <description>Tool-using LLM agents act on instructions embedded in the data they read, so prompt injection is a structural rather than a prompt-wording problem. We compare in-prompt defences (hardened prompts, spo...</description>
-      <link>http://arxiv.org/abs/2611.11571v1</link>
-      <guid>http://arxiv.org/abs/2611.11571v1#2026-11-10</guid>
-      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Safeguarding Agentic AI in Radiology Workflows: A Multimodel Evaluation of Rule-based and Large Language Model-based Verification (2026-11-10)</title>
-      <description>Purpose: To estimate how often tool-using large language model (LLM) agents record clinically relevant false or unsupported information in simulated radiology documentation and how much safeguards app...</description>
-      <link>http://arxiv.org/abs/2611.11541v1</link>
-      <guid>http://arxiv.org/abs/2611.11541v1#2026-11-10</guid>
-      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Training Vision Transformers to Focus: Emergence of Spatial Attention Head Specialization (2026-11-10)</title>
-      <description>Self-supervised learning in Vision Transformer models, such as DINO, enables robust visual perception without requiring labeled data by leveraging large-scale image datasets. However, these models lac...</description>
-      <link>https://arxiv.org/abs/2611.11890</link>
-      <guid>https://arxiv.org/abs/2611.11890#2026-11-10</guid>
-      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Video-Coder: Reinforcing Agentic Coding for Video Generation (2026-11-09)</title>
-      <description>Recent years have witnessed remarkable progress in video generation in terms of visual quality and temporal consistency. However, generating videos with precise spatial structure, coherent motion dyna...</description>
-      <link>https://arxiv.org/abs/2611.09894</link>
-      <guid>https://arxiv.org/abs/2611.09894#2026-11-09</guid>
-      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Exploring Weight-Space Programming: Capabilities, Generalization, and Limitations (2026-11-09)</title>
-      <description>Weight-Space Programming (WSP) enables reasoning agents to directly inspect and modify neural network parameters, offering an alternative to gradient-based model adaptation. However, its capabilities,...</description>
-      <link>https://arxiv.org/abs/2611.09382</link>
-      <guid>https://arxiv.org/abs/2611.09382#2026-11-09</guid>
-      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Frontier3DBench: Benchmarking Coding Agents for 3D Creation across Objects, Scenes, and Interactive Open Worlds (2026-11-09)</title>
-      <description>Coding agents combine visual understanding with program execution, offering a new route to automated 3D creation. By translating images and instructions into editable programs, they bring reconstructi...</description>
-      <link>https://arxiv.org/abs/2611.09017</link>
-      <guid>https://arxiv.org/abs/2611.09017#2026-11-09</guid>
-      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 OmniLatent: Unified Latent for 3D Part Modeling (2026-11-09)</title>
-      <description>3D part decomposition is a central capability for editable asset creation, yet existing workflows typically segment a completed mesh as a post-processing step, making the result sensitive to geometric...</description>
-      <link>https://arxiv.org/abs/2611.09055</link>
-      <guid>https://arxiv.org/abs/2611.09055#2026-11-09</guid>
-      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Authorization Drift in LLM Agents: Evaluating Boundary Compliance in Multi-Step Tool Use (2026-11-09)</title>
-      <description>LLM agents can exceed their authorization boundaries while pursuing user goals without an adversary. We formalize this phenomenon as authorization drift across data, tool, scope, and time, and introdu...</description>
-      <link>https://arxiv.org/abs/2611.09113</link>
-      <guid>https://arxiv.org/abs/2611.09113#2026-11-09</guid>
-      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Knowing When to Intervene: Causal Evaluation of AI Agents (2026-11-09)</title>
-      <description>Current evaluations of agentic AI systems primarily rely on benchmarks. However, the static nature of benchmarks makes them uninformative about the value of auditing interventions at deployment time. ...</description>
-      <link>http://arxiv.org/abs/2611.09792v1</link>
-      <guid>http://arxiv.org/abs/2611.09792v1#2026-11-09</guid>
-      <pubDate>Mon, 09 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
