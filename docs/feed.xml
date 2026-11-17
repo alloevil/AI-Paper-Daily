@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W47 (2026-11-10 ~ 2026-11-16)</title>
@@ -104,6 +104,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 K2-Horizon: A Frontier Fleet of Open Source Language Models (2026-11-17)</title>
+      <description>We present K2-Horizon, a fleet of six fully open language models, from a 0.9B dense model to a 375B-A23B MoE, built for general-purpose reasoning and agentic work across math and science, software eng...</description>
+      <link>https://arxiv.org/abs/2611.21003</link>
+      <guid>https://arxiv.org/abs/2611.21003#2026-11-17</guid>
+      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 InclusionMed: Benchmarking AI for Inclusive Healthcare (2026-11-17)</title>
+      <description>Advancing medical AI for inclusive healthcare requires evaluation across diverse healthcare roles, tasks, and care settings, but benchmark coverage remains uneven. We introduce InclusionMed, an open m...</description>
+      <link>https://arxiv.org/abs/2611.21218</link>
+      <guid>https://arxiv.org/abs/2611.21218#2026-11-17</guid>
+      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Sage S2.1 Flash Technical Report (2026-11-17)</title>
+      <description>We introduce Sage S1.5 Flash, a 320-billion-parameter general-purpose mixture-of-experts model designed to reason over scientific evidence and act in interactive environments. Sage Sci-Perception uses...</description>
+      <link>https://arxiv.org/abs/2611.21072</link>
+      <guid>https://arxiv.org/abs/2611.21072#2026-11-17</guid>
+      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ScaleVLA: Scaling Vision-Language-Action Models to 552 Billion Parameters (2026-11-17)</title>
+      <description>Frontier Vision-Language Models (VLMs) such as GPT-6 Astra have demonstrated remarkable capabilities in robot control, suggesting that broad pretraining provides knowledge valuable for physical action...</description>
+      <link>https://arxiv.org/abs/2611.21607</link>
+      <guid>https://arxiv.org/abs/2611.21607#2026-11-17</guid>
+      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Accelerate Bench: Evaluating Agents for Application-Level Program Optimization (2026-11-17)</title>
+      <description>Application optimization requires coding agents to discover useful changes and coordinate them across a complete program while preserving the required computation. We introduce Accelerate Bench, a ben...</description>
+      <link>https://arxiv.org/abs/2611.20882</link>
+      <guid>https://arxiv.org/abs/2611.20882#2026-11-17</guid>
+      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Calpha: Toward Native Biomolecular Intelligence in a General-Purpose Language Model (2026-11-17)</title>
+      <description>Biomolecular foundation models predict the structures of proteins and their complexes accurately, and large language models (LLMs) reason in natural language, but the two remain separate: the abilitie...</description>
+      <link>https://arxiv.org/abs/2611.20986</link>
+      <guid>https://arxiv.org/abs/2611.20986#2026-11-17</guid>
+      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Stream of Belief: Eliciting Collective Intelligence through Latent Belief Dynamics (2026-11-17)</title>
+      <description>In this work, we view multi-agent reasoning as a process of seeking a collective equilibrium of implicit belief dynamics and introduce Stream of Belief (SoB), where agents maintain continuous latent b...</description>
+      <link>http://arxiv.org/abs/2611.21250v1</link>
+      <guid>http://arxiv.org/abs/2611.21250v1#2026-11-17</guid>
+      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Edit Recommendation: Can LLMs Anticipate Edit Requests from Users, and When? (2026-11-17)</title>
+      <description>After a large language model (LLM) agent generates an artifact, users often send edit requests for it. This paper studies whether an LLM can anticipate these requests before they are sent. Such antici...</description>
+      <link>http://arxiv.org/abs/2611.21155v1</link>
+      <guid>http://arxiv.org/abs/2611.21155v1#2026-11-17</guid>
+      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 System 1 agents: a method for local, reliable and fast agentic AI (2026-11-17)</title>
+      <description>Agentic artificial intelligence could automate analyses of sensitive clinical data, but current agents depend on large language models (LLMs). Cloud LLMs expose patient data. Local LLMs hallucinate, a...</description>
+      <link>http://arxiv.org/abs/2611.21053v1</link>
+      <guid>http://arxiv.org/abs/2611.21053v1#2026-11-17</guid>
+      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Invariant-Aware Harness Enforcement to Protect LLM Agents from Silent API Failures (2026-11-17)</title>
+      <description>LLM agents answer questions by calling APIs and trusting the results. An API can fail silently. It ignores part of a request, such as a misnamed filter, yet returns HTTP 200 and a plausible but wrong ...</description>
+      <link>http://arxiv.org/abs/2611.20595v1</link>
+      <guid>http://arxiv.org/abs/2611.20595v1#2026-11-17</guid>
+      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Envisioning Agentic Robotics: A New Era of Robotic Systems (2026-11-16)</title>
@@ -384,76 +454,6 @@
       <link>http://arxiv.org/abs/2611.13966v1</link>
       <guid>http://arxiv.org/abs/2611.13966v1#2026-11-11</guid>
       <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Is Your Robot's Memory Just a Clock? Temporal Shortcuts in Memory-Augmented VLA Policies (2026-11-11)</title>
-      <description>Memory-augmented vision-language-action (VLA) policies are meant to remember what happened. Many of them, however, fill memory by time: they sample frames uniformly across the episode and stamp each f...</description>
-      <link>https://arxiv.org/abs/2611.14488</link>
-      <guid>https://arxiv.org/abs/2611.14488#2026-11-11</guid>
-      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Market-Conditioned JEPA: Learning from Unpredictable Market Shocks (2026-11-11)</title>
-      <description>Much of the variation in financial time series is driven by market-wide shocks that cannot be predicted from an asset's own history. Per-asset self-supervised learning treats this variation as irreduc...</description>
-      <link>https://arxiv.org/abs/2611.13572</link>
-      <guid>https://arxiv.org/abs/2611.13572#2026-11-11</guid>
-      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ExRL: Sample-Efficient Online Adaptation of Long-Chunk Policies via Execution Length Control (2026-11-11)</title>
-      <description>Predicting long action chunks, often spanning dozens of timesteps, has become a key ingredient in increasingly capable robot policies. In this paper, we find that adapting these long-chunk policies wi...</description>
-      <link>https://arxiv.org/abs/2611.13482</link>
-      <guid>https://arxiv.org/abs/2611.13482#2026-11-11</guid>
-      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Are Dense Rewards Worth Their Tokens in GRPO? (2026-11-11)</title>
-      <description>RLVR trains language models to reason by rewarding correct final answers. A widely used algorithm, group-relative policy optimization (GRPO), gives every token of a solution the same credit, so dense ...</description>
-      <link>https://arxiv.org/abs/2611.13560</link>
-      <guid>https://arxiv.org/abs/2611.13560#2026-11-11</guid>
-      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Learning Heterogeneous Tactile Representation for General Dexterous Manipulation (2026-11-10)</title>
-      <description>Tactile sensing is an indispensable modality for contact-rich dexterous manipulation, a capability that hints at the ultimate frontiers of embodied intelligence. However, commercially available tactil...</description>
-      <link>https://arxiv.org/abs/2611.12806</link>
-      <guid>https://arxiv.org/abs/2611.12806#2026-11-10</guid>
-      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Reframe: Observation-Aligned Multi-Teacher On-Policy Distillation for Agentic Visual Reasoning (2026-11-10)</title>
-      <description>Agentic reinforcement learning (RL) and multi-teacher on-policy distillation (MOPD) offer complementary routes to post-training. For visual agents, however, tool use presents two related challenges. M...</description>
-      <link>https://arxiv.org/abs/2611.12886</link>
-      <guid>https://arxiv.org/abs/2611.12886#2026-11-10</guid>
-      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Sage-Taiyi: A Metacognitive Architecture for Scientific Discovery (2026-11-10)</title>
-      <description>We introduce Sage-Taiyi, a metacognition-inspired architecture that uses accumulated scientific understanding to guide what to investigate next and how to investigate it. Through explicit monitoring a...</description>
-      <link>https://arxiv.org/abs/2611.12762</link>
-      <guid>https://arxiv.org/abs/2611.12762#2026-11-10</guid>
-      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Teamknitt: Configuring, Observing and Intervening in LLM-Agent Teams through the Lens of Dynamical-Systems and Human-Team Theory (2026-11-10)</title>
-      <description>Most frameworks for teams of large language model (LLM) agents fix the team's shape inside the software: who talks to whom, how much is passed along, and what a human can do once a run has started. Hu...</description>
-      <link>http://arxiv.org/abs/2611.12545v1</link>
-      <guid>http://arxiv.org/abs/2611.12545v1#2026-11-10</guid>
-      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Detecting Shadow AI: Unsanctioned LLM Agents on Enterprise Endpoints: A Taxonomy, an Open Detector and a Controlled Evaluation (2026-11-10)</title>
-      <description>Shadow IT, the use of technology that the IT organisation has not approved, is a long-standing governance problem. We argue that autonomous AI agents can make it grow much faster: agents make building...</description>
-      <link>http://arxiv.org/abs/2611.12377v1</link>
-      <guid>http://arxiv.org/abs/2611.12377v1#2026-11-10</guid>
-      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MIRIX-2.0: Multi-Agent Memory System (2026-11-10)</title>
-      <description>Long-term memory lets LLM agents personalize, stay consistent, and reuse what worked before. Parametric memories need training, consolidation can lose details for good, and keeping every record leaves...</description>
-      <link>http://arxiv.org/abs/2611.12068v1</link>
-      <guid>http://arxiv.org/abs/2611.12068v1#2026-11-10</guid>
-      <pubDate>Tue, 10 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
