@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W47 (2026-11-10 ~ 2026-11-16)</title>
@@ -104,6 +104,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TeleChat to Xing4: Advancing Frontier Agentic Models on Domestic Chips and Frameworks (2026-11-18)</title>
+      <description>We present Xing 4, a series of large language models that extends the TeleChat lineage through coordinated advances in model architecture and training infrastructure on Ascend. This report describes t...</description>
+      <link>https://arxiv.org/abs/2611.22115</link>
+      <guid>https://arxiv.org/abs/2611.22115#2026-11-18</guid>
+      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Weight-Space Programming Doesn't Need Transformers (2026-11-18)</title>
+      <description>Standard neural architectures such as the Transformer were chosen because they train well with gradient descent and run fast on GPUs. In weight-space programming, a large language model (LLM) writes t...</description>
+      <link>https://arxiv.org/abs/2611.22055</link>
+      <guid>https://arxiv.org/abs/2611.22055#2026-11-18</guid>
+      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TCP4D: A Unified Tool-Center-Point Tracking and Generation Model for Robot Manipulation (2026-11-18)</title>
+      <description>Robot manipulation videos provide a rich visual experience, yet recovering robot action and gripper-state annotations from RGB observations still remains challenging. Using the embodiment-agnostic too...</description>
+      <link>https://arxiv.org/abs/2611.23143</link>
+      <guid>https://arxiv.org/abs/2611.23143#2026-11-18</guid>
+      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 FastFrames: Video Generation at Interactive Latency (2026-11-18)</title>
+      <description>Autoregressive video diffusion models generate frames based on new observations and inputs, making them a promising medium for interactive visual experiences. However, existing models are orders of ma...</description>
+      <link>https://arxiv.org/abs/2611.23226</link>
+      <guid>https://arxiv.org/abs/2611.23226#2026-11-18</guid>
+      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Heave-Ho: Decentralized Long-Horizon Multi-Humanoid Collaboration (2026-11-18)</title>
+      <description>Collaboration promises to extend humanoid capabilities beyond what individual robots can achieve. However, realizing this potential requires coordinated whole-body interactions, coherent long-horizon ...</description>
+      <link>https://arxiv.org/abs/2611.22275</link>
+      <guid>https://arxiv.org/abs/2611.22275#2026-11-18</guid>
+      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 π^4: A Foundation Model for 4D Scene Geometry and Motion (2026-11-18)</title>
+      <description>π^4 is a unified foundation model for 4D scene perception. From diverse, uncalibrated RGB observations in the wild---a single image, an unordered collection, or a video sequence---it recovers dense ge...</description>
+      <link>https://arxiv.org/abs/2611.23144</link>
+      <guid>https://arxiv.org/abs/2611.23144#2026-11-18</guid>
+      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 FMT: Lossless Image Compression in a Fixed Number of Parallel Steps (2026-11-18)</title>
+      <description>Learned lossless codecs make smaller files than common classical codecs, yet the images we archive and train on still use classical codecs. A main reason is time: a learned codec takes seconds to deco...</description>
+      <link>https://arxiv.org/abs/2611.23108</link>
+      <guid>https://arxiv.org/abs/2611.23108#2026-11-18</guid>
+      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 From Repositories to Training Environments: Scaling Long-Horizon Coding Agents with Environment Evolution Loop (2026-11-18)</title>
+      <description>Training coding agents for long-horizon tasks requires environments with verifiable feedback. Existing pipelines often follow a linear process that ends with validation, establishing usability but pro...</description>
+      <link>https://arxiv.org/abs/2611.21152</link>
+      <guid>https://arxiv.org/abs/2611.21152#2026-11-18</guid>
+      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 M3OPD-Reasoner: An Open Recipe for Post-Training Multimodal Reasoning with Multi-Teacher On-Policy Distillation (2026-11-18)</title>
+      <description>Multi-Teacher On-Policy Distillation (MOPD) enables a single student to absorb the skills of several domain teachers by learning from its own generated responses. We present Multimodal Model Multi-Tea...</description>
+      <link>https://arxiv.org/abs/2611.23034</link>
+      <guid>https://arxiv.org/abs/2611.23034#2026-11-18</guid>
+      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Do LLM Agents Still Need to Be Told How to Self-Improve? (2026-11-18)</title>
+      <description>LLM agents increasingly drive their own learning. Self-improvement methods delegate various components of model optimization to the models themselves. As models become more capable, this motivates a b...</description>
+      <link>http://arxiv.org/abs/2611.23219v1</link>
+      <guid>http://arxiv.org/abs/2611.23219v1#2026-11-18</guid>
+      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 K2-Horizon: A Frontier Fleet of Open Source Language Models (2026-11-17)</title>
@@ -384,76 +454,6 @@
       <link>http://arxiv.org/abs/2611.14320v1</link>
       <guid>http://arxiv.org/abs/2611.14320v1#2026-11-12</guid>
       <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PARLEY: Evaluating LLM Collaboration Through Cooperative Asymmetric Puzzles (2026-11-12)</title>
-      <description>As large language models power autonomous agents, understanding how they collaborate and where they fail becomes critical. We introduce PARLEY, an extensible platform for studying LLM agent collaborat...</description>
-      <link>http://arxiv.org/abs/2611.14242v1</link>
-      <guid>http://arxiv.org/abs/2611.14242v1#2026-11-12</guid>
-      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Ontology-Guided Knowledge Graph Construction and Robust Evidence Retrieval for Indian Knowledge Systems (2026-11-12)</title>
-      <description>Retrieving evidence from Indian Knowledge Systems is complicated by transliteration variants, ambiguous names, and relations distributed across passages. We present an ontology-guided knowledge graph ...</description>
-      <link>http://arxiv.org/abs/2611.14050v1</link>
-      <guid>http://arxiv.org/abs/2611.14050v1#2026-11-12</guid>
-      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 From Show Programs to Linked Data (2026-11-12)</title>
-      <description>Many heritage institutions hold extensive collections of show programs. Too numerous to be cataloged individually, they remain difficult to access and are still largely undigitized. This paper present...</description>
-      <link>http://arxiv.org/abs/2611.14037v1</link>
-      <guid>http://arxiv.org/abs/2611.14037v1#2026-11-12</guid>
-      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Program-Aided Patchable Skill Evolution (2026-11-12)</title>
-      <description>Agent skills have emerged as an effective means of enabling LLM agents to solve complex, interactive tasks by encoding reusable knowledge without modifying model parameters. Recent approaches further ...</description>
-      <link>http://arxiv.org/abs/2611.14019v1</link>
-      <guid>http://arxiv.org/abs/2611.14019v1#2026-11-12</guid>
-      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Tree-Ising: Repairing Language Models with Bit-Level Ising Edits (2026-11-11)</title>
-      <description>Weight-space programming, introduced in recent MIT work by Takehi et al., enables a frontier LLM agent to read a network's weights and write a repair. Their GPT-6 Astra agent corrected the reasoning l...</description>
-      <link>https://arxiv.org/abs/2611.14210</link>
-      <guid>https://arxiv.org/abs/2611.14210#2026-11-11</guid>
-      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Few-Step Streaming Video Generation via Condition Shifting (2026-11-11)</title>
-      <description>Few-step sampling reduces the cost of streaming video generation. Distribution Matching Distillation (DMD) supervises few-step generators with a separate fake-score network, which adds training memory...</description>
-      <link>https://arxiv.org/abs/2611.14033</link>
-      <guid>https://arxiv.org/abs/2611.14033#2026-11-11</guid>
-      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 MMDM: Measuring Massive Multitask Decision Making (2026-11-11)</title>
-      <description>System-1 Decision Models directly make structured probabilistic decisions over query-specified options given a state in a single forward pass, without autoregressively generating reasoning trajectorie...</description>
-      <link>https://arxiv.org/abs/2611.14309</link>
-      <guid>https://arxiv.org/abs/2611.14309#2026-11-11</guid>
-      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight (2026-11-11)</title>
-      <description>Dexterous manipulation requires rich spatial foresight over both the surrounding scene and the robot hand. Existing world-action models often acquire such predictive knowledge through explicit future ...</description>
-      <link>https://arxiv.org/abs/2611.11166</link>
-      <guid>https://arxiv.org/abs/2611.11166#2026-11-11</guid>
-      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Verifiable Agentic Traffic Class: A Policed Quality-of-Service Mechanism for Agentic AI Traffic, Evaluated from Simulation to Real-Kernel Adversarial Testing (2026-11-11)</title>
-      <description>Software agents built on large language models generate traffic unlike human web traffic, yet routers have no class for it and cannot verify a sender's claim to be an agent. This paper proposes the Ve...</description>
-      <link>http://arxiv.org/abs/2611.14211v1</link>
-      <guid>http://arxiv.org/abs/2611.14211v1#2026-11-11</guid>
-      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Controlled Knowledge Engineering for Taxonomy Induction with Tool-Grounded LLM Agents and Runtime-Adaptive Policies (2026-11-11)</title>
-      <description>Taxonomies are structured knowledge representations that support semantic search, recommendation, product catalog organization, and retrieval-augmented generation. Their automated construction from a ...</description>
-      <link>http://arxiv.org/abs/2611.13966v1</link>
-      <guid>http://arxiv.org/abs/2611.13966v1#2026-11-11</guid>
-      <pubDate>Wed, 11 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
