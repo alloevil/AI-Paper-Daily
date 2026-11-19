@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W47 (2026-11-10 ~ 2026-11-16)</title>
@@ -104,6 +104,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Jeveration: System One Models Now Generate (2026-11-19)</title>
+      <description>System One models such as Jev return decisions through fast, parallel prediction. In this paper, we introduce Jeveration, showing that the same decision paradigm can also generate high-quality images ...</description>
+      <link>https://arxiv.org/abs/2611.24738</link>
+      <guid>https://arxiv.org/abs/2611.24738#2026-11-19</guid>
+      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Game2Player: Scaling Gameplay Experience for Visual Agents through Environment-Player Co-Development (2026-11-19)</title>
+      <description>Games are a rich testbed for visual agents, demanding perception, long-horizon planning, and precise control. However, collecting human gameplay is costly, and learning from gameplay videos requires i...</description>
+      <link>https://arxiv.org/abs/2611.24154</link>
+      <guid>https://arxiv.org/abs/2611.24154#2026-11-19</guid>
+      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CurvDelta: Low-Curvature Delta Modeling For Surgical Learning and Unlearning (2026-11-19)</title>
+      <description>A central challenge in adapting large language models (LLMs) is capability preservation: an adaptation can achieve its target while degrading general capabilities. We introduce CurvDelta, a scalable f...</description>
+      <link>https://arxiv.org/abs/2611.24654</link>
+      <guid>https://arxiv.org/abs/2611.24654#2026-11-19</guid>
+      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 HINT-WAM: Hindsight-Informed Training for World Action Models (2026-11-19)</title>
+      <description>World action models (WAMs) have shown promising generalization and data efficiency in robot manipulation by coupling action generation with predictions of future visual dynamics. Translating these cap...</description>
+      <link>https://arxiv.org/abs/2611.24789</link>
+      <guid>https://arxiv.org/abs/2611.24789#2026-11-19</guid>
+      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WorldRuler: Interactive World Modeling under Configurable Rules (2026-11-19)</title>
+      <description>Rules govern how player actions change interactive worlds. Different rules create distinct gameplay experiences within similar scenes and action spaces. For customizable gameplay, generative world mod...</description>
+      <link>https://arxiv.org/abs/2611.24869</link>
+      <guid>https://arxiv.org/abs/2611.24869#2026-11-19</guid>
+      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AutoPI: Taxonomy-Guided Adaptive Red Teaming for Prompt Injection in LLM Agents (2026-11-19)</title>
+      <description>Prompt injection is the dominant unsolved security risk for LLM agents, and the community now agrees that robustness must be measured against adaptive attackers rather than fixed benchmark injections....</description>
+      <link>http://arxiv.org/abs/2611.24313v1</link>
+      <guid>http://arxiv.org/abs/2611.24313v1#2026-11-19</guid>
+      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Intent Contracts: Taking Tools Away from Agents (2026-11-19)</title>
+      <description>Intent contracts are an authorization interface for tool-using LLM agents in which the planning model holds no tools. For each step it submits a short logged contract: a goal, a verbatim quotation of ...</description>
+      <link>http://arxiv.org/abs/2611.24025v1</link>
+      <guid>http://arxiv.org/abs/2611.24025v1#2026-11-19</guid>
+      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Evaluating Governed LLM-Driven ML Experimentation: Lifecycle, Provenance, and Failure Metrics (2026-11-19)</title>
+      <description>Autonomous agents that run ML experiments are usually judged by the best score they reach. That score says nothing about how it was reached: whether the agent stayed within the files it was allowed to...</description>
+      <link>http://arxiv.org/abs/2611.23678v1</link>
+      <guid>http://arxiv.org/abs/2611.23678v1#2026-11-19</guid>
+      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an LLM Agent Skips Another's Message (2026-11-19)</title>
+      <description>In multi-agent systems, a receiver agent often waits for a helper agent's message (text or its latent KV cache), which can improve performance but adds latency. We study when a receiver agent can skip...</description>
+      <link>http://arxiv.org/abs/2611.23570v1</link>
+      <guid>http://arxiv.org/abs/2611.23570v1#2026-11-19</guid>
+      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 StrideWorld: Benchmarking Scene Rigidity and Action Consistency in Interactive Video World Model (2026-11-19)</title>
+      <description>Interactive video world models turn user commands into the exploration of a generated scene, which requires the scene to keep its 3D structure as the camera moves and each action to keep a stable effe...</description>
+      <link>https://arxiv.org/abs/2611.24408</link>
+      <guid>https://arxiv.org/abs/2611.24408#2026-11-19</guid>
+      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 TeleChat to Xing4: Advancing Frontier Agentic Models on Domestic Chips and Frameworks (2026-11-18)</title>
@@ -384,76 +454,6 @@
       <link>https://arxiv.org/abs/2611.17060</link>
       <guid>https://arxiv.org/abs/2611.17060#2026-11-13</guid>
       <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 WorldDraft: If Code Builds the World, Can Video Models Just Render It? (2026-11-13)</title>
-      <description>Multimodal coding agents decouple 4D world construction from visual generation, repurposing video models from world generators toward generative renderers. This division of labor raises a fundamental ...</description>
-      <link>https://arxiv.org/abs/2611.16217</link>
-      <guid>https://arxiv.org/abs/2611.16217#2026-11-13</guid>
-      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Factored One-sided Adam-Moment for Practical and Scalable SOAP (2026-11-13)</title>
-      <description>Second-order optimizers (e.g., Shampoo, SOAP) have emerged as compelling alternatives to Adam/AdamW and promise faster per-step convergence than AdamW in transformer training. However, they still rema...</description>
-      <link>https://arxiv.org/abs/2611.16905</link>
-      <guid>https://arxiv.org/abs/2611.16905#2026-11-13</guid>
-      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Guided Generation of Linux Kernel Semantic Patches with Small Local Language Models (2026-11-13)</title>
-      <description>When a Linux kernel API changes, hundreds of drivers are converted by hand over months, and the earlier conversions are reviewed examples for the later ones. We ask whether small open language models ...</description>
-      <link>http://arxiv.org/abs/2611.16215v1</link>
-      <guid>http://arxiv.org/abs/2611.16215v1#2026-11-13</guid>
-      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Spec-Driven PBT: Deriving Semantic Invariants from Code Specifications for Agentic Property-based Testing (2026-11-13)</title>
-      <description>Software is increasingly written by AI agents that produce an implementation from a natural language specification, a practice known as agentic coding. Code is now produced faster than it can be revie...</description>
-      <link>http://arxiv.org/abs/2611.15920v1</link>
-      <guid>http://arxiv.org/abs/2611.15920v1#2026-11-13</guid>
-      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 UniSpark: Exploring Hybrid Attention for Multimodal Understanding and Generation (2026-11-13)</title>
-      <description>We present UniSpark-9B, a unified multimodal model that investigates hybrid attention for visual understanding and generation. Built on a Mixture-of-Transformer-Experts backbone with approximately 9B ...</description>
-      <link>https://arxiv.org/abs/2611.16517</link>
-      <guid>https://arxiv.org/abs/2611.16517#2026-11-13</guid>
-      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 DeepStress: Stress-Testing Deep Search Agents (2026-11-13)</title>
-      <description>While search agents demonstrate impressive capabilities in multi-step question answering, their robustness to poor-quality evidence remains under-explored. Such evidence is rare in benchmark corpora, ...</description>
-      <link>https://arxiv.org/abs/2607.13920</link>
-      <guid>https://arxiv.org/abs/2607.13920#2026-11-13</guid>
-      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Contrastive Discovery: Open-Ended Scientific Discovery over Competing Explanations (2026-11-12)</title>
-      <description>LLM agents are increasingly used for open-ended, data-driven scientific discovery, yet most of them evaluate hypotheses pointwise, testing an empirical claim $h$ only against its complement $\neg h$. ...</description>
-      <link>http://arxiv.org/abs/2611.14514v1</link>
-      <guid>http://arxiv.org/abs/2611.14514v1#2026-11-12</guid>
-      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows (2026-11-12)</title>
-      <description>Business process automation runs the same Standard Operating Procedure (SOP) again and again on new inputs. Large Language Model (LLM) agents can follow an SOP written in natural language, but they ca...</description>
-      <link>http://arxiv.org/abs/2611.14492v1</link>
-      <guid>http://arxiv.org/abs/2611.14492v1#2026-11-12</guid>
-      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 When Should Agents Remember? Falsification-Gated Self-Evolution for LLM Agents (2026-11-12)</title>
-      <description>LLM agents increasingly operate in long-horizon, verifier-rich environments, but current self-improvement mechanisms often write episode-derived lessons directly into memory, making local success an u...</description>
-      <link>http://arxiv.org/abs/2611.14326v1</link>
-      <guid>http://arxiv.org/abs/2611.14326v1#2026-11-12</guid>
-      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Don't Just Trust Your Memory: Evidence-Linked Memory Reduces Memory-Induced Degradation in LLM Agents (2026-11-12)</title>
-      <description>External memory enables LLM agents to improve from experience by distilling trajectories of past tasks into concise lessons for new tasks. However, memory can also lead to memory-induced degradation, ...</description>
-      <link>http://arxiv.org/abs/2611.14320v1</link>
-      <guid>http://arxiv.org/abs/2611.14320v1#2026-11-12</guid>
-      <pubDate>Thu, 12 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
