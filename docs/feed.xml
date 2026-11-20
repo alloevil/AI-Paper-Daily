@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W47 (2026-11-10 ~ 2026-11-16)</title>
@@ -104,6 +104,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation (2026-11-20)</title>
+      <description>Embodied intelligence aims to let robots perform complex physical tasks with human-like adaptability and reliability, which requires three complementary capabilities: history-based cognitive reasoning...</description>
+      <link>https://arxiv.org/abs/2611.26444</link>
+      <guid>https://arxiv.org/abs/2611.26444#2026-11-20</guid>
+      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding (2026-11-20)</title>
+      <description>Video understanding, particularly with accompanying audio, remains a central challenge in multimodal intelligence. In this report, we introduce WeMM-Video, a family of Chinese-English bilingual omni-m...</description>
+      <link>https://arxiv.org/abs/2611.26409</link>
+      <guid>https://arxiv.org/abs/2611.26409#2026-11-20</guid>
+      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Coda-DaVinci: Reimagining Video Generation with Code2Video (2026-11-20)</title>
+      <description>Code2Video uses agent-authored 3D proxies to guide video generation, enabling explicit control over structure and dynamics. However, how to construct proxies and prompts for optimal downstream quality...</description>
+      <link>https://arxiv.org/abs/2611.26595</link>
+      <guid>https://arxiv.org/abs/2611.26595#2026-11-20</guid>
+      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 HiUni: Harmonizing Understanding and Generation in Shared Visual Space (2026-11-20)</title>
+      <description>Unified multimodal models aim to support visual understanding and generation within a single framework. However, prevailing approaches often separate their visual representations or backbone computati...</description>
+      <link>https://arxiv.org/abs/2611.26107</link>
+      <guid>https://arxiv.org/abs/2611.26107#2026-11-20</guid>
+      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Probing the &quot;Conscious&quot; Mind: Selective Access and Global Workspace in Vision-Language Models (2026-11-20)</title>
+      <description>Vision-language models (VLMs) integrate visual and textual information, but their outputs do not reveal internal concept representations. Global workspace theory (GWT) proposes that information is sel...</description>
+      <link>https://arxiv.org/abs/2611.26590</link>
+      <guid>https://arxiv.org/abs/2611.26590#2026-11-20</guid>
+      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EgoCaptioner: Towards Comprehensive and Fine-Grained Egocentric Video Captioning (2026-11-20)</title>
+      <description>Egocentric video captioning requires fine-grained detail and accurate timing, yet current multimodal large language models (MLLMs) often miss brief actions, confuse their order, or misinterpret the we...</description>
+      <link>https://arxiv.org/abs/2611.26380</link>
+      <guid>https://arxiv.org/abs/2611.26380#2026-11-20</guid>
+      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TuringSpace: Grounding Spatial Intelligence in Action with Interactive CAPTCHAs (2026-11-20)</title>
+      <description>Humans act in the visual world by inferring the 3D layout behind a 2D view, predicting how an action changes it, and correcting themselves after seeing the result. Can multimodal large language models...</description>
+      <link>https://arxiv.org/abs/2611.25387</link>
+      <guid>https://arxiv.org/abs/2611.25387#2026-11-20</guid>
+      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ZeroVLN: Learning to Navigate without Supervised Fine-Tuning of the VLM Brain (2026-11-20)</title>
+      <description>Representative vision-language navigation (VLN) methods typically couple a vision-language model (VLM) brain with a learnable action head and fine-tune the VLM brain on navigation-domain data to predi...</description>
+      <link>https://arxiv.org/abs/2611.26414</link>
+      <guid>https://arxiv.org/abs/2611.26414#2026-11-20</guid>
+      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Posterior Matching Distillation (2026-11-20)</title>
+      <description>Diffusion distillation accelerates image and video generation by compressing a pretrained teacher's iterative sampling process into a few network evaluations. Distribution-based methods achieve this b...</description>
+      <link>https://arxiv.org/abs/2611.26629</link>
+      <guid>https://arxiv.org/abs/2611.26629#2026-11-20</guid>
+      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Depth Pro 2: Sharp and Temporally Consistent Metric Monocular Depth (2026-11-20)</title>
+      <description>We present Depth Pro 2, an approach to estimating dense metric depth for images and video at full resolution. By analyzing prior methods for monocular depth estimation, we find that they commonly trad...</description>
+      <link>https://arxiv.org/abs/2611.26603</link>
+      <guid>https://arxiv.org/abs/2611.26603#2026-11-20</guid>
+      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Jeveration: System One Models Now Generate (2026-11-19)</title>
@@ -384,76 +454,6 @@
       <link>https://arxiv.org/abs/2611.18442</link>
       <guid>https://arxiv.org/abs/2611.18442#2026-11-16</guid>
       <pubDate>Mon, 16 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 LiveGeo: Benchmarking Geographic Agents in Continuously Evolving Worlds (2026-11-15)</title>
-      <description>We introduce GeoWorld, a controllable and continuously evolving geographic environment platform for LLM agents, and LiveGeo, a benchmark for evaluating reliable decision-making in real-world geographi...</description>
-      <link>http://arxiv.org/abs/2611.17267v1</link>
-      <guid>http://arxiv.org/abs/2611.17267v1#2026-11-15</guid>
-      <pubDate>Sun, 15 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Skill Adapter: Personalized Modification and Online Routing of General-Purpose Skills (2026-11-15)</title>
-      <description>Large language model (LLM) agents use external skills to reuse task procedures and experience with tools. General-purpose skills describe shared execution procedures, while specific tool choices, oper...</description>
-      <link>http://arxiv.org/abs/2611.17007v1</link>
-      <guid>http://arxiv.org/abs/2611.17007v1#2026-11-15</guid>
-      <pubDate>Sun, 15 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Primer: An AI Framework for Instructor-Centered Educational Simulation Creation (2026-11-15)</title>
-      <description>Educational simulations are a well-established pedagogical technique that gives learners opportunities to apply knowledge, respond to challenges, and reflect on their performance. High-quality simulat...</description>
-      <link>http://arxiv.org/abs/2611.16986v1</link>
-      <guid>http://arxiv.org/abs/2611.16986v1#2026-11-15</guid>
-      <pubDate>Sun, 15 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 S1-Evo: Experience-Guided Evidence Competition Attacks on Typed System-1 Decision Models (2026-11-15)</title>
-      <description>Typed System-1 (S1) decision models are increasingly deployed in LLM agents for routing, moderation, and authorization to cut inference cost, yet untrusted context can still manipulate typed outputs a...</description>
-      <link>http://arxiv.org/abs/2611.16937v1</link>
-      <guid>http://arxiv.org/abs/2611.16937v1#2026-11-15</guid>
-      <pubDate>Sun, 15 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Outcome-Mass Alignment: Controlling Length-Dependent Trajectory Influence in Multi-Turn LLM Agent Reinforcement Learning (2026-11-15)</title>
-      <description>To keep long interaction contexts tractable, stepwise group-relative training for multi-turn LLM agents materializes each source trajectory into multiple response rows and valid tokens. This expansion...</description>
-      <link>http://arxiv.org/abs/2611.16816v1</link>
-      <guid>http://arxiv.org/abs/2611.16816v1#2026-11-15</guid>
-      <pubDate>Sun, 15 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 From Data to Wisdom: Rethinking AI Through an Epistemic Lens (2026-11-15)</title>
-      <description>This paper proposes the Data-to-Wisdom Epistemic Architecture for AI (EAAI), a conceptual framework treating Data, Information, Knowledge, Understanding and Wisdom as five distinct but recursively int...</description>
-      <link>http://arxiv.org/abs/2611.16726v1</link>
-      <guid>http://arxiv.org/abs/2611.16726v1#2026-11-15</guid>
-      <pubDate>Sun, 15 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 PhysLoop: Harnessing LLMs' Physics Awareness for Self-Improving Video Generation Models (2026-11-13)</title>
-      <description>Video generation models produce visually realistic videos but still struggle with physical dynamics and causal consistency. Learning from generated videos requires fine-grained physical supervision, y...</description>
-      <link>https://arxiv.org/abs/2611.16748</link>
-      <guid>https://arxiv.org/abs/2611.16748#2026-11-13</guid>
-      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents (2026-11-13)</title>
-      <description>Decision models answer a question with a typed output, such as a choice among options with a probability for each, so one model can choose an agent's actions, evaluate actions already taken, or score ...</description>
-      <link>https://arxiv.org/abs/2611.17167</link>
-      <guid>https://arxiv.org/abs/2611.17167#2026-11-13</guid>
-      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 TTB: Test-time Baking for Efficient Rendering of Decoder-only View Synthesis Models (2026-11-13)</title>
-      <description>Decoder-only Large View Synthesis Models (LVSMs) with KV-cache have recently achieved state-of-the-art quality by regressing novel views from neural networks without reconstructing 3D geometry, while ...</description>
-      <link>https://arxiv.org/abs/2611.17331</link>
-      <guid>https://arxiv.org/abs/2611.17331#2026-11-13</guid>
-      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Ropedia Xperience 2: A Gold Standard for Scaling Physical AI Environments and Behaviors (2026-11-13)</title>
-      <description>Large foundation models such as GPT-6 Astra and Claude Fable 5.1 have recently been shown to control robots directly from visual observations. They nevertheless remain brittle on long-horizon, contact...</description>
-      <link>https://arxiv.org/abs/2611.17060</link>
-      <guid>https://arxiv.org/abs/2611.17060#2026-11-13</guid>
-      <pubDate>Fri, 13 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
