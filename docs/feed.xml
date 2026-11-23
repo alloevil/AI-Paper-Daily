@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Sat, 21 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W47 (2026-11-10 ~ 2026-11-16)</title>
@@ -104,6 +104,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 cmHC: Balancing Stream Mixing in Hyper-Connections via Geometric Contraction (2026-11-23)</title>
+      <description>Manifold-constrained Hyper-Connections (mHC) extends residual connections to multiple streams and stabilizes residual propagation by constraining stream-mixing residual matrices to the Birkhoff polyto...</description>
+      <link>https://arxiv.org/abs/2611.27193</link>
+      <guid>https://arxiv.org/abs/2611.27193#2026-11-23</guid>
+      <pubDate>Mon, 23 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Non-penetrating World Models (2026-11-23)</title>
+      <description>We study a new problem of preventing object penetration in interactive video world models. To understand how existing models handle this, we introduce NoPeBench, a benchmark that evaluates how world m...</description>
+      <link>https://arxiv.org/abs/2611.27963</link>
+      <guid>https://arxiv.org/abs/2611.27963#2026-11-23</guid>
+      <pubDate>Mon, 23 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MemOnce: A Scalable Memory Architecture for Large Language Models (2026-11-23)</title>
+      <description>Deploying large language models (LLMs) in long-horizon and continual interactions requires maintaining reusable memory states for future inference, posing challenges for existing architectures. Standa...</description>
+      <link>https://arxiv.org/abs/2611.27973</link>
+      <guid>https://arxiv.org/abs/2611.27973#2026-11-23</guid>
+      <pubDate>Mon, 23 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Observed, Curated, Reused: Observation Bias in Clinical AI Evaluation (2026-11-23)</title>
+      <description>Clinical AI evaluations are vulnerable to observation bias embedded in routine medical documentation, which captures only what clinicians notice, test, and record rather than a complete clinical pictu...</description>
+      <link>http://arxiv.org/abs/2611.27301v1</link>
+      <guid>http://arxiv.org/abs/2611.27301v1#2026-11-23</guid>
+      <pubDate>Mon, 23 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 CoEvoBench: Can LLMs Drive Recursive Co-Evolution of Agentic Systems? (2026-11-23)</title>
+      <description>The performance of an LLM agent depends on both its model and its harness, the code that mediates its interaction with tools and environments. Can LLM researchers drive this co-evolution as a recursiv...</description>
+      <link>http://arxiv.org/abs/2611.27116v1</link>
+      <guid>http://arxiv.org/abs/2611.27116v1#2026-11-23</guid>
+      <pubDate>Mon, 23 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Separating Automation Gains from Agent Contributions in AI-Assisted Model Validation (2026-11-23)</title>
+      <description>LLM agents are being proposed for bank model validation, yet evaluations that compare agent-assisted work with manual practice credit the agent with gains that come from digitized evidence and determi...</description>
+      <link>http://arxiv.org/abs/2611.27094v1</link>
+      <guid>http://arxiv.org/abs/2611.27094v1#2026-11-23</guid>
+      <pubDate>Mon, 23 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TOUMAII: A 4.5M-Pair Tool-Calling Preference Dataset and Its Source-Agnostic Generator (2026-11-23)</title>
+      <description>To autonomously execute multi-step tasks, enterprise agents must reliably interact with tools, call APIs, or query databases, making tool-calling a fundamental capability of AI models. Supervised fine...</description>
+      <link>http://arxiv.org/abs/2611.26722v1</link>
+      <guid>http://arxiv.org/abs/2611.26722v1#2026-11-23</guid>
+      <pubDate>Mon, 23 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 StereoVLM: Binocular Vision-Language Models for Metric 3D Spatial Reasoning (2026-11-23)</title>
+      <description>Vision-language models (VLMs) exhibit strong semantic understanding but remain limited in their ability to reason about metric 3D space in the physical world. Existing VLMs typically infer 3D scene st...</description>
+      <link>https://arxiv.org/abs/2611.27915</link>
+      <guid>https://arxiv.org/abs/2611.27915#2026-11-23</guid>
+      <pubDate>Mon, 23 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Prune to Expand: Training Prompt Enhancers with Less to Imitate (2026-11-23)</title>
+      <description>Prompt enhancement (PE) refines concise user prompts into detailed descriptions to improve the compositional aesthetics of generated images while preserving user intent. A common practice constructs s...</description>
+      <link>https://arxiv.org/abs/2611.27229</link>
+      <guid>https://arxiv.org/abs/2611.27229#2026-11-23</guid>
+      <pubDate>Mon, 23 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Taking Apart and Putting Together: Tracking Objects Through Physical Transformations (2026-11-23)</title>
+      <description>We introduce Transformation Tracking and Understanding (TTU), extending video object tracking to environments where objects undergo physical assemblies and disassemblies. TTU requires continuously tra...</description>
+      <link>https://arxiv.org/abs/2611.27398</link>
+      <guid>https://arxiv.org/abs/2611.27398#2026-11-23</guid>
+      <pubDate>Mon, 23 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 AutoMaster: Autonomous Post-Training by Making the Same Model a Better Teacher (2026-11-21)</title>
@@ -384,76 +454,6 @@
       <link>http://arxiv.org/abs/2611.23219v1</link>
       <guid>http://arxiv.org/abs/2611.23219v1#2026-11-18</guid>
       <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 K2-Horizon: A Frontier Fleet of Open Source Language Models (2026-11-17)</title>
-      <description>We present K2-Horizon, a fleet of six fully open language models, from a 0.9B dense model to a 375B-A23B MoE, built for general-purpose reasoning and agentic work across math and science, software eng...</description>
-      <link>https://arxiv.org/abs/2611.21003</link>
-      <guid>https://arxiv.org/abs/2611.21003#2026-11-17</guid>
-      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 InclusionMed: Benchmarking AI for Inclusive Healthcare (2026-11-17)</title>
-      <description>Advancing medical AI for inclusive healthcare requires evaluation across diverse healthcare roles, tasks, and care settings, but benchmark coverage remains uneven. We introduce InclusionMed, an open m...</description>
-      <link>https://arxiv.org/abs/2611.21218</link>
-      <guid>https://arxiv.org/abs/2611.21218#2026-11-17</guid>
-      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Sage S2.1 Flash Technical Report (2026-11-17)</title>
-      <description>We introduce Sage S1.5 Flash, a 320-billion-parameter general-purpose mixture-of-experts model designed to reason over scientific evidence and act in interactive environments. Sage Sci-Perception uses...</description>
-      <link>https://arxiv.org/abs/2611.21072</link>
-      <guid>https://arxiv.org/abs/2611.21072#2026-11-17</guid>
-      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ScaleVLA: Scaling Vision-Language-Action Models to 552 Billion Parameters (2026-11-17)</title>
-      <description>Frontier Vision-Language Models (VLMs) such as GPT-6 Astra have demonstrated remarkable capabilities in robot control, suggesting that broad pretraining provides knowledge valuable for physical action...</description>
-      <link>https://arxiv.org/abs/2611.21607</link>
-      <guid>https://arxiv.org/abs/2611.21607#2026-11-17</guid>
-      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Accelerate Bench: Evaluating Agents for Application-Level Program Optimization (2026-11-17)</title>
-      <description>Application optimization requires coding agents to discover useful changes and coordinate them across a complete program while preserving the required computation. We introduce Accelerate Bench, a ben...</description>
-      <link>https://arxiv.org/abs/2611.20882</link>
-      <guid>https://arxiv.org/abs/2611.20882#2026-11-17</guid>
-      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Calpha: Toward Native Biomolecular Intelligence in a General-Purpose Language Model (2026-11-17)</title>
-      <description>Biomolecular foundation models predict the structures of proteins and their complexes accurately, and large language models (LLMs) reason in natural language, but the two remain separate: the abilitie...</description>
-      <link>https://arxiv.org/abs/2611.20986</link>
-      <guid>https://arxiv.org/abs/2611.20986#2026-11-17</guid>
-      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Stream of Belief: Eliciting Collective Intelligence through Latent Belief Dynamics (2026-11-17)</title>
-      <description>In this work, we view multi-agent reasoning as a process of seeking a collective equilibrium of implicit belief dynamics and introduce Stream of Belief (SoB), where agents maintain continuous latent b...</description>
-      <link>http://arxiv.org/abs/2611.21250v1</link>
-      <guid>http://arxiv.org/abs/2611.21250v1#2026-11-17</guid>
-      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Edit Recommendation: Can LLMs Anticipate Edit Requests from Users, and When? (2026-11-17)</title>
-      <description>After a large language model (LLM) agent generates an artifact, users often send edit requests for it. This paper studies whether an LLM can anticipate these requests before they are sent. Such antici...</description>
-      <link>http://arxiv.org/abs/2611.21155v1</link>
-      <guid>http://arxiv.org/abs/2611.21155v1#2026-11-17</guid>
-      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 System 1 agents: a method for local, reliable and fast agentic AI (2026-11-17)</title>
-      <description>Agentic artificial intelligence could automate analyses of sensitive clinical data, but current agents depend on large language models (LLMs). Cloud LLMs expose patient data. Local LLMs hallucinate, a...</description>
-      <link>http://arxiv.org/abs/2611.21053v1</link>
-      <guid>http://arxiv.org/abs/2611.21053v1#2026-11-17</guid>
-      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Invariant-Aware Harness Enforcement to Protect LLM Agents from Silent API Failures (2026-11-17)</title>
-      <description>LLM agents answer questions by calling APIs and trusting the results. An API can fail silently. It ignores part of a request, such as a misnamed filter, yet returns HTTP 200 and a plausible but wrong ...</description>
-      <link>http://arxiv.org/abs/2611.20595v1</link>
-      <guid>http://arxiv.org/abs/2611.20595v1#2026-11-17</guid>
-      <pubDate>Tue, 17 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
