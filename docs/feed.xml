@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W48 (2026-11-17 ~ 2026-11-23)</title>
@@ -111,6 +111,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Motion Mamba 2.0: Autoregressive Diffusion Mamba for Long-Horizon Humanoid Control (2026-11-24)</title>
+      <description>Long-horizon, real-time controllable motion generation is essential for interactive animation and humanoid robotics, where an agent must respond to changing instructions and spatial goals while moving...</description>
+      <link>https://arxiv.org/abs/2611.29897</link>
+      <guid>https://arxiv.org/abs/2611.29897#2026-11-24</guid>
+      <pubDate>Tue, 24 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness (2026-11-24)</title>
+      <description>Frontier multimodal models exhibit extraordinary generalization in generating robot actions from observations and instructions, enabling a new paradigm in which they serve directly as policies within ...</description>
+      <link>https://arxiv.org/abs/2611.31201</link>
+      <guid>https://arxiv.org/abs/2611.31201#2026-11-24</guid>
+      <pubDate>Tue, 24 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WorldLeague: Benchmarking Physical Agency (2026-11-24)</title>
+      <description>AI systems can now operate Blender, follow instructions in complex video games, and manipulate objects with robot arms. What range of physical goals can today's AI systems achieve autonomously? Answer...</description>
+      <link>https://arxiv.org/abs/2611.30989</link>
+      <guid>https://arxiv.org/abs/2611.30989#2026-11-24</guid>
+      <pubDate>Tue, 24 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 3AGameFactory-Motion: Agentic Rigging and Reliable Complex Motion Generation for Diverse 3D Assets (2026-11-24)</title>
+      <description>Animating arbitrary 3D assets from instructions requires both structural inference and motion control, yet existing motion benchmarks mostly cover conventional human or animal skeletons with simple in...</description>
+      <link>https://arxiv.org/abs/2611.30013</link>
+      <guid>https://arxiv.org/abs/2611.30013#2026-11-24</guid>
+      <pubDate>Tue, 24 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 WeMM-Ecom: Advancing Multimodal Content Understanding for WeChat E-Commerce (2026-11-24)</title>
+      <description>We present WeMM-Ecom, a family of multimodal large language models that deliver frontier e-commerce capabilities while achieving state-of-the-art general-purpose performance at their respective scales...</description>
+      <link>https://arxiv.org/abs/2611.30662</link>
+      <guid>https://arxiv.org/abs/2611.30662#2026-11-24</guid>
+      <pubDate>Tue, 24 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 World Models as Native Latent Action Models (2026-11-24)</title>
+      <description>Large and diverse video sources, such as egocentric human video and heterogeneous robot recordings, carry rich dynamics but come either without actions or without a shared action space. Latent action ...</description>
+      <link>https://arxiv.org/abs/2611.30898</link>
+      <guid>https://arxiv.org/abs/2611.30898#2026-11-24</guid>
+      <pubDate>Tue, 24 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 RUIBench: What Makes a Good Robot-Use Interface? (2026-11-24)</title>
+      <description>Foundation models can reason about complex physical tasks, yet translating this intelligence into reliable robot execution remains challenging. We argue that a critical, often overlooked factor is the...</description>
+      <link>https://arxiv.org/abs/2611.31115</link>
+      <guid>https://arxiv.org/abs/2611.31115#2026-11-24</guid>
+      <pubDate>Tue, 24 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ViDiHand2: Unifying Video Diffusion Priors and Hand Geometry for 3D Hand Motion Reconstruction in the Wild (2026-11-24)</title>
+      <description>Learning robot manipulation from egocentric human videos requires accurate metric 3D hand motion. Recent methods leverage pretrained video diffusion model (VDM) priors to recover occluded hands direct...</description>
+      <link>https://arxiv.org/abs/2611.30597</link>
+      <guid>https://arxiv.org/abs/2611.30597#2026-11-24</guid>
+      <pubDate>Tue, 24 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 UUBench: Understanding the Unspoken toward Full-Duplex Multimodal Interaction (2026-11-24)</title>
+      <description>Effective real-time, full-duplex multimodal interaction requires systems to understand not only what users say, but also the communicative needs conveyed through prosody, facial expressions, gestures,...</description>
+      <link>https://arxiv.org/abs/2611.30157</link>
+      <guid>https://arxiv.org/abs/2611.30157#2026-11-24</guid>
+      <pubDate>Tue, 24 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Intent-Conditioned Argument Mediation for Tool-Using LLM Agents: Blocking Trusted-but-Unauthorized Arguments (2026-11-24)</title>
+      <description>LLM agents turn a user's request and retrieved content into tool calls, and a call can reach the wrong recipient, endpoint, file or participant. Argument-level provenance blocks such values when they ...</description>
+      <link>http://arxiv.org/abs/2611.30745v1</link>
+      <guid>http://arxiv.org/abs/2611.30745v1#2026-11-24</guid>
+      <pubDate>Tue, 24 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 cmHC: Balancing Stream Mixing in Hyper-Connections via Geometric Contraction (2026-11-23)</title>
@@ -391,76 +461,6 @@
       <link>https://arxiv.org/abs/2611.24408</link>
       <guid>https://arxiv.org/abs/2611.24408#2026-11-19</guid>
       <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 TeleChat to Xing4: Advancing Frontier Agentic Models on Domestic Chips and Frameworks (2026-11-18)</title>
-      <description>We present Xing 4, a series of large language models that extends the TeleChat lineage through coordinated advances in model architecture and training infrastructure on Ascend. This report describes t...</description>
-      <link>https://arxiv.org/abs/2611.22115</link>
-      <guid>https://arxiv.org/abs/2611.22115#2026-11-18</guid>
-      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Weight-Space Programming Doesn't Need Transformers (2026-11-18)</title>
-      <description>Standard neural architectures such as the Transformer were chosen because they train well with gradient descent and run fast on GPUs. In weight-space programming, a large language model (LLM) writes t...</description>
-      <link>https://arxiv.org/abs/2611.22055</link>
-      <guid>https://arxiv.org/abs/2611.22055#2026-11-18</guid>
-      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 TCP4D: A Unified Tool-Center-Point Tracking and Generation Model for Robot Manipulation (2026-11-18)</title>
-      <description>Robot manipulation videos provide a rich visual experience, yet recovering robot action and gripper-state annotations from RGB observations still remains challenging. Using the embodiment-agnostic too...</description>
-      <link>https://arxiv.org/abs/2611.23143</link>
-      <guid>https://arxiv.org/abs/2611.23143#2026-11-18</guid>
-      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 FastFrames: Video Generation at Interactive Latency (2026-11-18)</title>
-      <description>Autoregressive video diffusion models generate frames based on new observations and inputs, making them a promising medium for interactive visual experiences. However, existing models are orders of ma...</description>
-      <link>https://arxiv.org/abs/2611.23226</link>
-      <guid>https://arxiv.org/abs/2611.23226#2026-11-18</guid>
-      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Heave-Ho: Decentralized Long-Horizon Multi-Humanoid Collaboration (2026-11-18)</title>
-      <description>Collaboration promises to extend humanoid capabilities beyond what individual robots can achieve. However, realizing this potential requires coordinated whole-body interactions, coherent long-horizon ...</description>
-      <link>https://arxiv.org/abs/2611.22275</link>
-      <guid>https://arxiv.org/abs/2611.22275#2026-11-18</guid>
-      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 π^4: A Foundation Model for 4D Scene Geometry and Motion (2026-11-18)</title>
-      <description>π^4 is a unified foundation model for 4D scene perception. From diverse, uncalibrated RGB observations in the wild---a single image, an unordered collection, or a video sequence---it recovers dense ge...</description>
-      <link>https://arxiv.org/abs/2611.23144</link>
-      <guid>https://arxiv.org/abs/2611.23144#2026-11-18</guid>
-      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 FMT: Lossless Image Compression in a Fixed Number of Parallel Steps (2026-11-18)</title>
-      <description>Learned lossless codecs make smaller files than common classical codecs, yet the images we archive and train on still use classical codecs. A main reason is time: a learned codec takes seconds to deco...</description>
-      <link>https://arxiv.org/abs/2611.23108</link>
-      <guid>https://arxiv.org/abs/2611.23108#2026-11-18</guid>
-      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 From Repositories to Training Environments: Scaling Long-Horizon Coding Agents with Environment Evolution Loop (2026-11-18)</title>
-      <description>Training coding agents for long-horizon tasks requires environments with verifiable feedback. Existing pipelines often follow a linear process that ends with validation, establishing usability but pro...</description>
-      <link>https://arxiv.org/abs/2611.21152</link>
-      <guid>https://arxiv.org/abs/2611.21152#2026-11-18</guid>
-      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 M3OPD-Reasoner: An Open Recipe for Post-Training Multimodal Reasoning with Multi-Teacher On-Policy Distillation (2026-11-18)</title>
-      <description>Multi-Teacher On-Policy Distillation (MOPD) enables a single student to absorb the skills of several domain teachers by learning from its own generated responses. We present Multimodal Model Multi-Tea...</description>
-      <link>https://arxiv.org/abs/2611.23034</link>
-      <guid>https://arxiv.org/abs/2611.23034#2026-11-18</guid>
-      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Do LLM Agents Still Need to Be Told How to Self-Improve? (2026-11-18)</title>
-      <description>LLM agents increasingly drive their own learning. Self-improvement methods delegate various components of model optimization to the models themselves. As models become more capable, this motivates a b...</description>
-      <link>http://arxiv.org/abs/2611.23219v1</link>
-      <guid>http://arxiv.org/abs/2611.23219v1#2026-11-18</guid>
-      <pubDate>Wed, 18 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
