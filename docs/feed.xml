@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W48 (2026-11-17 ~ 2026-11-23)</title>
@@ -111,6 +111,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Lazy Agents Answer Against Their Own Beliefs: Reinforcement Learning with Verifiable Beliefs Teaches Them to Act on What They Believe (2026-11-25)</title>
+      <description>AI agents working on long tasks often commit to an answer before they have enough evidence, a behavior called laziness. In our evaluations, they frequently commit even while their stated belief still ...</description>
+      <link>https://arxiv.org/abs/2611.32884</link>
+      <guid>https://arxiv.org/abs/2611.32884#2026-11-25</guid>
+      <pubDate>Wed, 25 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 PartAgent: Agentic 3D Part Segmentation via Expert Integration and Closed-Loop Refinement (2026-11-25)</title>
+      <description>Segmenting a 3D object into semantically meaningful parts requires joint reasoning about geometric structure and semantic context. Pretrained 3D experts provide spatially grounded region proposals, wh...</description>
+      <link>https://arxiv.org/abs/2611.32554</link>
+      <guid>https://arxiv.org/abs/2611.32554#2026-11-25</guid>
+      <pubDate>Wed, 25 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Embodied AI Fails the Mirror Test: How a Simple Mirror Breaks Robot Policies (2026-11-25)</title>
+      <description>Can a simple mirror expose the limitations of today's robotic manipulation policies? Inspired by the mirror self-recognition test in animal cognition, we investigate whether robot policies can reliabl...</description>
+      <link>https://arxiv.org/abs/2611.33010</link>
+      <guid>https://arxiv.org/abs/2611.33010#2026-11-25</guid>
+      <pubDate>Wed, 25 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ThinkMorph-SSL: Scaling Interleaved Multimodal Reasoning with Pretext Tasks (2026-11-25)</title>
+      <description>People reason with pictures as well as words. Interleaved multimodal reasoning gives models a similar way to solve problems by creating intermediate images and using them to guide further reasoning. T...</description>
+      <link>https://arxiv.org/abs/2611.32183</link>
+      <guid>https://arxiv.org/abs/2611.32183#2026-11-25</guid>
+      <pubDate>Wed, 25 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 ICLWorld: Benchmarking In-Context Learning of Agents from Digital to Physical Worlds (2026-11-25)</title>
+      <description>In-context learning (ICL) lets agents acquire new rules from context and adapt to user-specific requirements at inference time. The same frontier agents now operate both computers and robots, yet thei...</description>
+      <link>https://arxiv.org/abs/2611.32649</link>
+      <guid>https://arxiv.org/abs/2611.32649#2026-11-25</guid>
+      <pubDate>Wed, 25 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Qwen-Image-HD: Autoregressive Diffusion for High Definition Image Generation (2026-11-25)</title>
+      <description>Fine-tuning a generator on a complete high-resolution canvas requires long image sequences and substantial computation, yet local regions can still exhibit unnatural repetitive stripes when training r...</description>
+      <link>https://arxiv.org/abs/2611.32736</link>
+      <guid>https://arxiv.org/abs/2611.32736#2026-11-25</guid>
+      <pubDate>Wed, 25 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Reinforcing Diffusion Models by Instantaneous Trajectory Distribution Matching (2026-11-25)</title>
+      <description>Forward diffusion reinforcement learning (RL)---enabling deterministic ODE sampling without trajectory backpropagation---has grown increasingly popular for efficiently aligning diffusion models. Howev...</description>
+      <link>https://arxiv.org/abs/2611.30986</link>
+      <guid>https://arxiv.org/abs/2611.30986#2026-11-25</guid>
+      <pubDate>Wed, 25 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 MAGPIE: Agentic Multi-Reference Image Generation via Executable Scene Construction (2026-11-25)</title>
+      <description>Multi-reference image generation requires a model to preserve the appearance of selected subjects while arranging them according to an instruction. Despite recent progress in reference-based generatio...</description>
+      <link>https://arxiv.org/abs/2611.32462</link>
+      <guid>https://arxiv.org/abs/2611.32462#2026-11-25</guid>
+      <pubDate>Wed, 25 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TimeTravelContainer: A Live Forking Sandbox for Stateful Agent Exploration (2026-11-25)</title>
+      <description>LLM agents that drive stateful tools (e.g., interactive shells, design environments, simulation engines) frequently need to clone, backtrack, and parallelize live sessions to support exploration. Howe...</description>
+      <link>http://arxiv.org/abs/2611.32255v1</link>
+      <guid>http://arxiv.org/abs/2611.32255v1#2026-11-25</guid>
+      <pubDate>Wed, 25 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Agent Recovery Gone Wrong: Measuring Harm Beyond Duplicate Calls (2026-11-25)</title>
+      <description>Code-executing LLM agents submit blocks of code that issue several API writes. If a block fails after some of its writes have taken effect, the agent rewrites the block and continues. It is unknown ho...</description>
+      <link>http://arxiv.org/abs/2611.31554v1</link>
+      <guid>http://arxiv.org/abs/2611.31554v1#2026-11-25</guid>
+      <pubDate>Wed, 25 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Motion Mamba 2.0: Autoregressive Diffusion Mamba for Long-Horizon Humanoid Control (2026-11-24)</title>
@@ -391,76 +461,6 @@
       <link>https://arxiv.org/abs/2611.26603</link>
       <guid>https://arxiv.org/abs/2611.26603#2026-11-20</guid>
       <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Jeveration: System One Models Now Generate (2026-11-19)</title>
-      <description>System One models such as Jev return decisions through fast, parallel prediction. In this paper, we introduce Jeveration, showing that the same decision paradigm can also generate high-quality images ...</description>
-      <link>https://arxiv.org/abs/2611.24738</link>
-      <guid>https://arxiv.org/abs/2611.24738#2026-11-19</guid>
-      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Game2Player: Scaling Gameplay Experience for Visual Agents through Environment-Player Co-Development (2026-11-19)</title>
-      <description>Games are a rich testbed for visual agents, demanding perception, long-horizon planning, and precise control. However, collecting human gameplay is costly, and learning from gameplay videos requires i...</description>
-      <link>https://arxiv.org/abs/2611.24154</link>
-      <guid>https://arxiv.org/abs/2611.24154#2026-11-19</guid>
-      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 CurvDelta: Low-Curvature Delta Modeling For Surgical Learning and Unlearning (2026-11-19)</title>
-      <description>A central challenge in adapting large language models (LLMs) is capability preservation: an adaptation can achieve its target while degrading general capabilities. We introduce CurvDelta, a scalable f...</description>
-      <link>https://arxiv.org/abs/2611.24654</link>
-      <guid>https://arxiv.org/abs/2611.24654#2026-11-19</guid>
-      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 HINT-WAM: Hindsight-Informed Training for World Action Models (2026-11-19)</title>
-      <description>World action models (WAMs) have shown promising generalization and data efficiency in robot manipulation by coupling action generation with predictions of future visual dynamics. Translating these cap...</description>
-      <link>https://arxiv.org/abs/2611.24789</link>
-      <guid>https://arxiv.org/abs/2611.24789#2026-11-19</guid>
-      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 WorldRuler: Interactive World Modeling under Configurable Rules (2026-11-19)</title>
-      <description>Rules govern how player actions change interactive worlds. Different rules create distinct gameplay experiences within similar scenes and action spaces. For customizable gameplay, generative world mod...</description>
-      <link>https://arxiv.org/abs/2611.24869</link>
-      <guid>https://arxiv.org/abs/2611.24869#2026-11-19</guid>
-      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 AutoPI: Taxonomy-Guided Adaptive Red Teaming for Prompt Injection in LLM Agents (2026-11-19)</title>
-      <description>Prompt injection is the dominant unsolved security risk for LLM agents, and the community now agrees that robustness must be measured against adaptive attackers rather than fixed benchmark injections....</description>
-      <link>http://arxiv.org/abs/2611.24313v1</link>
-      <guid>http://arxiv.org/abs/2611.24313v1#2026-11-19</guid>
-      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Intent Contracts: Taking Tools Away from Agents (2026-11-19)</title>
-      <description>Intent contracts are an authorization interface for tool-using LLM agents in which the planning model holds no tools. For each step it submits a short logged contract: a goal, a verbatim quotation of ...</description>
-      <link>http://arxiv.org/abs/2611.24025v1</link>
-      <guid>http://arxiv.org/abs/2611.24025v1#2026-11-19</guid>
-      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Evaluating Governed LLM-Driven ML Experimentation: Lifecycle, Provenance, and Failure Metrics (2026-11-19)</title>
-      <description>Autonomous agents that run ML experiments are usually judged by the best score they reach. That score says nothing about how it was reached: whether the agent stayed within the files it was allowed to...</description>
-      <link>http://arxiv.org/abs/2611.23678v1</link>
-      <guid>http://arxiv.org/abs/2611.23678v1#2026-11-19</guid>
-      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an LLM Agent Skips Another's Message (2026-11-19)</title>
-      <description>In multi-agent systems, a receiver agent often waits for a helper agent's message (text or its latent KV cache), which can improve performance but adds latency. We study when a receiver agent can skip...</description>
-      <link>http://arxiv.org/abs/2611.23570v1</link>
-      <guid>http://arxiv.org/abs/2611.23570v1#2026-11-19</guid>
-      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 StrideWorld: Benchmarking Scene Rigidity and Action Consistency in Interactive Video World Model (2026-11-19)</title>
-      <description>Interactive video world models turn user commands into the exploration of a generated scene, which requires the scene to keep its 3D structure as the camera moves and each action to keep a stable effe...</description>
-      <link>https://arxiv.org/abs/2611.24408</link>
-      <guid>https://arxiv.org/abs/2611.24408#2026-11-19</guid>
-      <pubDate>Thu, 19 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
