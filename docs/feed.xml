@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W48 (2026-11-17 ~ 2026-11-23)</title>
@@ -111,6 +111,76 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Real2SimLab: A Unified Platform for Real-to-Simulation Transfer (2026-11-26)</title>
+      <description>Real-to-simulation transfer, which builds simulations from real-world observations, has long been studied in research and industry. Recently, coding agents have become capable of generating simulation...</description>
+      <link>https://arxiv.org/abs/2611.34849</link>
+      <guid>https://arxiv.org/abs/2611.34849#2026-11-26</guid>
+      <pubDate>Thu, 26 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Sage-Med: Scaling Medical Multimodal Intelligence (2026-11-26)</title>
+      <description>Establishing effective scaling laws for medical multimodal large language models (MLLMs) remains a persistent and fundamental challenge. Our systematic evaluation shows that existing medical MLLMs ten...</description>
+      <link>https://arxiv.org/abs/2611.34575</link>
+      <guid>https://arxiv.org/abs/2611.34575#2026-11-26</guid>
+      <pubDate>Thu, 26 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Mixture-of-Loops Transformer (2026-11-26)</title>
+      <description>Looped Transformers boost expressivity by reusing shared layers across loops, yet at the cost of efficiency. Pushing their expressivity-efficiency frontier requires rethinking the core mechanism conne...</description>
+      <link>https://arxiv.org/abs/2611.34923</link>
+      <guid>https://arxiv.org/abs/2611.34923#2026-11-26</guid>
+      <pubDate>Thu, 26 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 VibeVideoAgent: Closing the Perceptual Loop for Code-Driven Video Generation (2026-11-26)</title>
+      <description>Code-driven video generation asks a coding agent to write and run rendering programs. This gives exact control over typography, data visualizations, synchronized audio, and multi-shot scenes, and it l...</description>
+      <link>https://arxiv.org/abs/2611.34237</link>
+      <guid>https://arxiv.org/abs/2611.34237#2026-11-26</guid>
+      <pubDate>Thu, 26 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Improving and Expanding Video Editing Capabilities Without Videos (2026-11-26)</title>
+      <description>Image editing models can follow a wide range of instructions, but video editing models still lag behind, limited in part by the difficulty of collecting paired source and edited videos. Is it possible...</description>
+      <link>https://arxiv.org/abs/2611.34941</link>
+      <guid>https://arxiv.org/abs/2611.34941#2026-11-26</guid>
+      <pubDate>Thu, 26 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 DocSEAM: Bidirectional Cross-Page Encoding for Multi-Page Document Understanding (2026-11-26)</title>
+      <description>Multi-page document vision-language models encode each page independently, creating a feature-level discontinuity at page boundaries: visual tokens are formed without access to content on adjacent pag...</description>
+      <link>https://arxiv.org/abs/2611.34420</link>
+      <guid>https://arxiv.org/abs/2611.34420#2026-11-26</guid>
+      <pubDate>Thu, 26 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 HOG-WAM: Improving Visual Robustness through Future Gradient Prediction (2026-11-26)</title>
+      <description>World-action models jointly predict future observations and actions, yet visual corruption can disrupt the resulting policies. We introduce HOG-WAM, which adds future Histograms of Oriented Gradients ...</description>
+      <link>https://arxiv.org/abs/2611.34811</link>
+      <guid>https://arxiv.org/abs/2611.34811#2026-11-26</guid>
+      <pubDate>Thu, 26 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 DexEngine: Scaling Human Demonstrations into Physically Executable Whole-Robot Data (2026-11-26)</title>
+      <description>A growing body of recent work addresses the retargeting of human hand-object demonstrations to robotic hands. To train whole-robot policies, however, the retargeted motions must be kinematically feasi...</description>
+      <link>https://arxiv.org/abs/2611.33579</link>
+      <guid>https://arxiv.org/abs/2611.33579#2026-11-26</guid>
+      <pubDate>Thu, 26 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 AIRIS: Benchmarking Social Embodied Intelligence in Egocentric Streaming Videos (2026-11-26)</title>
+      <description>Embodied agents operating around people must not only recognize social cues, but also decide when the available evidence is sufficient, whether to intervene, and how to respond without violating socia...</description>
+      <link>https://arxiv.org/abs/2611.34347</link>
+      <guid>https://arxiv.org/abs/2611.34347#2026-11-26</guid>
+      <pubDate>Thu, 26 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EgoUseBench: Benchmarking Computer-Use Agents under Evolving First-Person Contexts (2026-11-26)</title>
+      <description>AI wearables, such as smart glasses, extend the context available to agents beyond digital environments to users' physical surroundings. With these devices, computer tasks can originate from users' on...</description>
+      <link>https://arxiv.org/abs/2611.34466</link>
+      <guid>https://arxiv.org/abs/2611.34466#2026-11-26</guid>
+      <pubDate>Thu, 26 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Lazy Agents Answer Against Their Own Beliefs: Reinforcement Learning with Verifiable Beliefs Teaches Them to Act on What They Believe (2026-11-25)</title>
@@ -391,76 +461,6 @@
       <link>http://arxiv.org/abs/2611.26171v1</link>
       <guid>http://arxiv.org/abs/2611.26171v1#2026-11-21</guid>
       <pubDate>Sat, 21 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation (2026-11-20)</title>
-      <description>Embodied intelligence aims to let robots perform complex physical tasks with human-like adaptability and reliability, which requires three complementary capabilities: history-based cognitive reasoning...</description>
-      <link>https://arxiv.org/abs/2611.26444</link>
-      <guid>https://arxiv.org/abs/2611.26444#2026-11-20</guid>
-      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding (2026-11-20)</title>
-      <description>Video understanding, particularly with accompanying audio, remains a central challenge in multimodal intelligence. In this report, we introduce WeMM-Video, a family of Chinese-English bilingual omni-m...</description>
-      <link>https://arxiv.org/abs/2611.26409</link>
-      <guid>https://arxiv.org/abs/2611.26409#2026-11-20</guid>
-      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Coda-DaVinci: Reimagining Video Generation with Code2Video (2026-11-20)</title>
-      <description>Code2Video uses agent-authored 3D proxies to guide video generation, enabling explicit control over structure and dynamics. However, how to construct proxies and prompts for optimal downstream quality...</description>
-      <link>https://arxiv.org/abs/2611.26595</link>
-      <guid>https://arxiv.org/abs/2611.26595#2026-11-20</guid>
-      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 HiUni: Harmonizing Understanding and Generation in Shared Visual Space (2026-11-20)</title>
-      <description>Unified multimodal models aim to support visual understanding and generation within a single framework. However, prevailing approaches often separate their visual representations or backbone computati...</description>
-      <link>https://arxiv.org/abs/2611.26107</link>
-      <guid>https://arxiv.org/abs/2611.26107#2026-11-20</guid>
-      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Probing the &quot;Conscious&quot; Mind: Selective Access and Global Workspace in Vision-Language Models (2026-11-20)</title>
-      <description>Vision-language models (VLMs) integrate visual and textual information, but their outputs do not reveal internal concept representations. Global workspace theory (GWT) proposes that information is sel...</description>
-      <link>https://arxiv.org/abs/2611.26590</link>
-      <guid>https://arxiv.org/abs/2611.26590#2026-11-20</guid>
-      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 EgoCaptioner: Towards Comprehensive and Fine-Grained Egocentric Video Captioning (2026-11-20)</title>
-      <description>Egocentric video captioning requires fine-grained detail and accurate timing, yet current multimodal large language models (MLLMs) often miss brief actions, confuse their order, or misinterpret the we...</description>
-      <link>https://arxiv.org/abs/2611.26380</link>
-      <guid>https://arxiv.org/abs/2611.26380#2026-11-20</guid>
-      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 TuringSpace: Grounding Spatial Intelligence in Action with Interactive CAPTCHAs (2026-11-20)</title>
-      <description>Humans act in the visual world by inferring the 3D layout behind a 2D view, predicting how an action changes it, and correcting themselves after seeing the result. Can multimodal large language models...</description>
-      <link>https://arxiv.org/abs/2611.25387</link>
-      <guid>https://arxiv.org/abs/2611.25387#2026-11-20</guid>
-      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 ZeroVLN: Learning to Navigate without Supervised Fine-Tuning of the VLM Brain (2026-11-20)</title>
-      <description>Representative vision-language navigation (VLN) methods typically couple a vision-language model (VLM) brain with a learnable action head and fine-tune the VLM brain on navigation-domain data to predi...</description>
-      <link>https://arxiv.org/abs/2611.26414</link>
-      <guid>https://arxiv.org/abs/2611.26414#2026-11-20</guid>
-      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Posterior Matching Distillation (2026-11-20)</title>
-      <description>Diffusion distillation accelerates image and video generation by compressing a pretrained teacher's iterative sampling process into a few network evaluations. Distribution-based methods achieve this b...</description>
-      <link>https://arxiv.org/abs/2611.26629</link>
-      <guid>https://arxiv.org/abs/2611.26629#2026-11-20</guid>
-      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Depth Pro 2: Sharp and Temporally Consistent Metric Monocular Depth (2026-11-20)</title>
-      <description>We present Depth Pro 2, an approach to estimating dense metric depth for images and video at full resolution. By analyzing prior methods for monocular depth estimation, we find that they commonly trad...</description>
-      <link>https://arxiv.org/abs/2611.26603</link>
-      <guid>https://arxiv.org/abs/2611.26603#2026-11-20</guid>
-      <pubDate>Fri, 20 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
