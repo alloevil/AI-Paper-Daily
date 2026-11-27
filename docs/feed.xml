@@ -5,7 +5,7 @@
     <description>Daily AI paper digest · Agents / RAG / Knowledge graphs</description>
     <link>https://alloevil.github.io/AI-Paper-Daily</link>
     <language>en</language>
-    <lastBuildDate>Thu, 26 Nov 2026 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 18:00:00 +0000</lastBuildDate>
     <atom:link href="https://alloevil.github.io/AI-Paper-Daily/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📊 Weekly roundup 2026-W48 (2026-11-17 ~ 2026-11-23)</title>
@@ -111,6 +111,55 @@
       <link>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</link>
       <guid>https://alloevil.github.io/AI-Paper-Daily/weekly-2026-W34.html</guid>
       <pubDate>Thu, 20 Aug 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Shape-Aware Three-Way Merge for RDF Knowledge Graphs: The schema defines the conflict: an implementation and evaluation (2026-11-27)</title>
+      <description>Merging RDF serializations creates ordering conflicts and misses semantic ones. We describe and evaluate a three-way merge in which the schema defines a conflict: set algebra combines canonical triple...</description>
+      <link>http://arxiv.org/abs/2611.34870v1</link>
+      <guid>http://arxiv.org/abs/2611.34870v1#2026-11-27</guid>
+      <pubDate>Fri, 27 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Knowledge-Base Gradient Descent: Self-Structuring Learning through Question Answering (2026-11-27)</title>
+      <description>We consider the problem of constructing knowledge bases for applications based on large language models, in which the structure of a knowledge base determines how an application can retrieve and conne...</description>
+      <link>http://arxiv.org/abs/2611.34841v1</link>
+      <guid>http://arxiv.org/abs/2611.34841v1#2026-11-27</guid>
+      <pubDate>Fri, 27 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 TASK Memory: Beyond Text-Only Memory with Activation Steering and Knowledge Editing against Memory Hallucination (2026-11-27)</title>
+      <description>LLM agents increasingly rely on external memory, yet they still hallucinate about what they remember. Often the correct memory is retrieved and placed in the prompt, but the answer contradicts it or t...</description>
+      <link>http://arxiv.org/abs/2611.34762v1</link>
+      <guid>http://arxiv.org/abs/2611.34762v1#2026-11-27</guid>
+      <pubDate>Fri, 27 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 From Shared Patterns to Individual Evidence: Two-Stage Reasoning for Emerging Entities in Temporal Knowledge Graphs (2026-11-27)</title>
+      <description>Temporal knowledge graphs (TKGs) continually introduce emerging entities whose interaction histories evolve from zero-shot debuts into sparse, bursty few-shot trajectories. However, current paradigms ...</description>
+      <link>http://arxiv.org/abs/2611.34708v1</link>
+      <guid>http://arxiv.org/abs/2611.34708v1#2026-11-27</guid>
+      <pubDate>Fri, 27 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Find the Clue, Not the Scene: Rethinking Reasoning for Entity Recognition in Vision-Language Models (2026-11-27)</title>
+      <description>Answering a knowledge-based visual question requires first recognizing the entity in the image and then recalling knowledge about it. Thinking vision-language models (VLMs) reason for thousands of tok...</description>
+      <link>http://arxiv.org/abs/2611.34681v1</link>
+      <guid>http://arxiv.org/abs/2611.34681v1#2026-11-27</guid>
+      <pubDate>Fri, 27 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 Grounding User Preferences in Shared Multimodal Concepts for Recommendation (2026-11-27)</title>
+      <description>Multimodal recommendation has substantially advanced item understanding by incorporating rich visual and textual content. Yet user preferences are still commonly encoded as implicit signals tied to in...</description>
+      <link>http://arxiv.org/abs/2611.34436v1</link>
+      <guid>http://arxiv.org/abs/2611.34436v1#2026-11-27</guid>
+      <pubDate>Fri, 27 Nov 2026 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>📄 EvoLink-Bench: A Benchmark for Evaluating Self-Evolving Agents in Long-Horizon Interdependent Task Streams (2026-11-27)</title>
+      <description>Large language model (LLM) agents are evolving from passive chatbots into autonomous systems that operate continuously in dynamic environments. Such agents need not only solve current tasks but also l...</description>
+      <link>http://arxiv.org/abs/2611.34400v1</link>
+      <guid>http://arxiv.org/abs/2611.34400v1#2026-11-27</guid>
+      <pubDate>Fri, 27 Nov 2026 18:00:00 +0000</pubDate>
     </item>
     <item>
       <title>📄 Real2SimLab: A Unified Platform for Real-to-Simulation Transfer (2026-11-26)</title>
@@ -411,55 +460,6 @@
       <description>AI agents are increasingly expected to act as AI scientists, which requires three increasingly open abilities: carrying out a given computational workflow correctly, choosing the next measurements fro...</description>
       <link>http://arxiv.org/abs/2611.26248v1</link>
       <guid>http://arxiv.org/abs/2611.26248v1#2026-11-21</guid>
-      <pubDate>Sat, 21 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 GenSPARQL: A Generative Extension of SPARQL for Incomplete Knowledge Graphs (2026-11-21)</title>
-      <description>Knowledge graphs on the Web are incomplete, and SPARQL answers a query only from the stored triples. Large language models (LLMs) can predict missing facts, but an LLM returns names instead of IRIs an...</description>
-      <link>http://arxiv.org/abs/2611.26062v1</link>
-      <guid>http://arxiv.org/abs/2611.26062v1#2026-11-21</guid>
-      <pubDate>Sat, 21 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Cost-Aware Agentic Feature Optimization System for Fleet-Scale Ranking Models (2026-11-21)</title>
-      <description>Large Web platforms operate large fleets of ranking models, each selecting features from a shared pool of tens of thousands. We present an end-to-end agentic system that optimizes features across the ...</description>
-      <link>http://arxiv.org/abs/2611.26531v1</link>
-      <guid>http://arxiv.org/abs/2611.26531v1#2026-11-21</guid>
-      <pubDate>Sat, 21 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Democratizing Cross-Project Knowledge for Transforming Water Governance and Climate Resilience: an Agentic AI Ecosystem (2026-11-21)</title>
-      <description>EU-funded projects produce extensive evidence in the form of deliverables, reports, and case studies. However, this knowledge is typically scattered across projects and document structures, making it ...</description>
-      <link>http://arxiv.org/abs/2611.26398v1</link>
-      <guid>http://arxiv.org/abs/2611.26398v1#2026-11-21</guid>
-      <pubDate>Sat, 21 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 How Much Should an Agent Remember? Deployment Lessons from Self-Distilled Memory for LLM Agents (2026-11-21)</title>
-      <description>LLM agents on long-horizon tasks fail in recurring, procedural ways. They mis-paginate an API, resolve the wrong entity, or answer when no answer was asked. We built a pipeline that lets an agent lear...</description>
-      <link>http://arxiv.org/abs/2611.26361v1</link>
-      <guid>http://arxiv.org/abs/2611.26361v1#2026-11-21</guid>
-      <pubDate>Sat, 21 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Similarity-based OSF Logic for Flexible SPARQL Query Answering (2026-11-21)</title>
-      <description>We present an updated version of fosf, a reasoner for fuzzy order-sorted feature (OSF) logic, with support for flexible SPARQL query answering over RDF knowledge graphs. Fuzzy OSF logic is a knowledge...</description>
-      <link>http://arxiv.org/abs/2611.26261v1</link>
-      <guid>http://arxiv.org/abs/2611.26261v1#2026-11-21</guid>
-      <pubDate>Sat, 21 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 Sightline: Calibrated Data-Flow Summaries for LLM-Integrated Applications (2026-11-21)</title>
-      <description>Programs increasingly call large language models (LLMs), filling prompt placeholders with program values and consuming the output. Such a call crosses the boundary between natural language and program...</description>
-      <link>http://arxiv.org/abs/2611.26221v1</link>
-      <guid>http://arxiv.org/abs/2611.26221v1#2026-11-21</guid>
-      <pubDate>Sat, 21 Nov 2026 18:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>📄 The FrontierOR Challenge: Agentic Algorithm Design for Operations Research (2026-11-21)</title>
-      <description>Operations research (OR) relies on algorithms that experts tailor to each problem: a new routing, scheduling or network design problem can take weeks of specialist work before it is solved well at sca...</description>
-      <link>http://arxiv.org/abs/2611.26171v1</link>
-      <guid>http://arxiv.org/abs/2611.26171v1#2026-11-21</guid>
       <pubDate>Sat, 21 Nov 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
